@@ -1,0 +1,3794 @@
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2">
+    <exchange/>
+    <payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ElaboratedDataPublication"
+                        lang="nob">
+        <publicationTime>2021-06-10T13:00:53.933+02:00</publicationTime>
+        <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+        </headerInformation>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100353" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>75.94</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100352" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>75.94</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100355" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>960.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.925</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100354" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>960.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.925</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100357" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>150.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>150.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>84.04317</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100356" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>150.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>150.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>94.47097</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100361" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>243.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>228.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>65.2</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100363" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>increasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>123.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>87.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>51.365852</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100362" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>228.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>228.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>76.660866</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100365" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>237.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>237.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>92.80001</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100364" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>164.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>87.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>40.91707</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100367" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>273.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>70.958244</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100366" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>453.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>237.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>36.031788</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100368" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>273.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>74.08352</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100371" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>298.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>41.32752</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100375" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>629.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>598.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>99.821304</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100377" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>614.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>614.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>107.51096</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100376" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>638.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>638.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>103.71683</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100379" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>658.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>607.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>101.91611</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100378" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>601.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>601.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>112.54315</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100381" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>404.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>404.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>104.07519</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100380" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>623.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>623.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>111.24179</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100383" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>286.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>286.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>89.38285</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100382" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>403.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>403.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>106.60258</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100385" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>increasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>243.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>199.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>72.207405</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100384" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>increasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>421.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>350.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>59.977192</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100386" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>225.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>222.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>86.624</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100389" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>482.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>457.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.126144</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100390" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>457.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>457.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>108.377144</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100071" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>424.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>46.54528</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100080" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>52.675198</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100085" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>512.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>479.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>66.58594</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100084" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>523.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>477.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>64.89636</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100087" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>386.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>355.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>64.38031</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100086" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>509.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>355.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>48.469154</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100097" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>decreasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>511.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>318.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>42.65753</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100096" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>478.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>318.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>45.33138</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100098" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>164.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>160.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>86.70732</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100101" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>166.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>163.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>85.445786</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100103" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>275.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>275.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>81.721344</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100104" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>274.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>274.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>84.21776</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100109" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>160.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>160.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.65</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100108" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>181.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>153.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.36575</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100111" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>182.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>153.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>66.87692</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100110" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>176.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>158.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>72.40909</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100113" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>increasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>352.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>184.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>36.685226</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100114" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>194.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>184.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>66.19176</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100117" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>339.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>339.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>104.175</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100116" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>364.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>339.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>96.240654</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100119" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>340.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>312.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>101.29764</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100118" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>325.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>312.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>105.984</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100121" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>370.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>35.309193</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100120" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>260.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>50.19231</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100123" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>240.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>64.304085</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100122" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>240.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>70.26</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100125" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>75.49999</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100124" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>74.79212</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100129" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>53.0</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100128" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>76.46239</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100131" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>59.216946</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100130" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>52.0875</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100133" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>49.783787</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100132" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>57.31826</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100135" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>240.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>77.24874</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100134" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>133.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>49.66917</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100137" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>77.72307</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100136" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>240.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.510345</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100139" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>30.9</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100138" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>123.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>73.87317</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100141" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>160.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>160.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>72.543396</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100140" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>28.950003</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100143" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>269.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>256.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>62.35093</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100142" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>160.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>160.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>73.516975</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100147" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>48.456</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100146" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>256.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>256.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>68.5317</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100148" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>145.3901</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100151" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>434.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>407.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>89.668205</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100153" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>122.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>70.49508</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100152" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>638.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>326.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>40.88088</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100157" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>90.45926</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100156" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.16698</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100159" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>200.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>198.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>86.90399</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100158" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>93.371185</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100161" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>216.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>191.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.13335</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100160" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>208.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>194.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>73.869225</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100162" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>216.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>216.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>87.138</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100167" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>87.49649</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100169" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>164.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>164.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>73.3275</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100168" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>84.21762</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100171" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>191.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>191.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.63422</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100170" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>200.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>191.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.176</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100173" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>200.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.268</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100172" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>increasing</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>255.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>164.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>45.93882</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100177" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>326.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>326.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>87.99324</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100176" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>180.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>64.08408</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100178" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>437.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>404.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>89.1762</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100181" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>317.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>51.6265</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100183" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>54.45</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100182" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>84.95277</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100184" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>360.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.09204</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100186" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>75.43095</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100189" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>232.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>228.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>94.546555</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100188" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>263.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>228.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>83.36122</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100193" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>585.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>573.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>78.510765</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100192" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>586.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>573.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>78.37065</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100197" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>437.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>52.92906</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100196" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>55.865376</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100199" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>720.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>100.238625</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100198" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>720.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>98.11893</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100203" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>507.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>507.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>80.3709</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100202" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>410.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>388.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>50.78634</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100205" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>403.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>388.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>51.65062</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100204" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>507.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>507.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>80.8722</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100209" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>74.34</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100208" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>150.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>60.984</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100211" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>68.535</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100210" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.335</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100223" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>403.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>45.862034</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100222" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>55.25</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100229" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>41.468575</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100228" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>40.98</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100231" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>47.70909</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100230" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>30.708</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100235" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>481.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>98.09813</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100234" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>105.79642</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100237" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>610.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.135086</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100236" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1144.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1140.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>94.43392</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100239" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1158.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1080.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>93.37306</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100238" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>618.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>78.18641</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100241" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1080.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1080.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>100.26717</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100240" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1080.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1080.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>104.19074</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100243" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>600.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>110.61127</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100242" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>618.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>101.528145</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100245" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>345.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>345.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>106.769615</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100244" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>730.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>730.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>110.807335</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100247" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>730.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>730.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>104.40519</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100246" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>345.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>345.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>103.63804</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100249" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>53.339565</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100248" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>315.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>47.337143</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100251" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>360.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>61.11273</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100250" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>360.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.25251</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100253" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>213.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>202.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>86.53521</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100252" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>208.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>202.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>88.44231</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100255" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>162.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>162.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>90.55385</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100254" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>189.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>166.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>68.47619</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100257" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>258.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>258.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>72.70588</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100256" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>243.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>242.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>69.28889</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100259" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>75.78191</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100258" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>61.19234</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100261" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>248.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>248.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>90.49554</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100260" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>234.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>234.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>89.50345</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100263" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>232.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>232.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>95.541016</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100262" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>260.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>248.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>85.956924</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100265" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>647.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>495.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>58.072952</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100264" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>545.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>497.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>68.80294</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100267" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>558.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>99.896774</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100266" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>558.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>99.96129</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100269" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>167.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>98.859886</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100268" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>167.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>99.18323</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100271" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>107.59201</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100270" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>107.748</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100273" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>1260.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>94.16</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100272" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>1260.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>94.2</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100275" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>121.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.26943</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100274" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>121.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>61.824795</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100277" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>128.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>58.3875</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100276" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>128.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>63.7875</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100279" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>180.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.60116</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100278" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>300.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>80.69377</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100280" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>196.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>49.812244</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100283" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>635.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>635.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>88.85884</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100285" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>277.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>277.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.043953</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100284" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>635.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.94834</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100287" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>441.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>425.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>42.83265</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100286" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>306.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>277.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>49.729416</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100289" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>76.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>73.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>38.41579</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100288" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>425.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>425.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>47.7843</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100291" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>328.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>324.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>77.21342</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100290" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>73.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>73.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>47.575386</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100293" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>446.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>72.573105</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100292" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>372.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>334.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>71.632256</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100294" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>408.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>408.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>78.88657</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100311" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>52.26581</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100313" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>55.393547</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100312" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.878323</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100315" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>64.104</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100314" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>120.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>120.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.254944</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100317" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>720.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>59.64991</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100316" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>720.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>720.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>55.871525</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100319" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.5575</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100318" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>66.232925</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100321" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>481.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>461.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>88.3684</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100320" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>459.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>459.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>97.70483</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100323" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>54.84857</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100322" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>420.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>420.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>68.25176</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100327" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>56.01</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100326" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>600.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>55.416</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100329" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>63.319996</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100328" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>106.28</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100331" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>52.119995</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100330" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>180.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>106.66</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100333" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>480.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>53.328815</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100332" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>500.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>50.270397</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100335" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>200.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>200.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>57.31055</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100334" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>239.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>235.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>50.02343</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100337" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>240.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>240.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>69.10553</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100336" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>206.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>206.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>77.92584</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100339" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>539.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>500.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>61.33358</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100338" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>524.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>500.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>62.292362</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100341" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1758.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1680.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>60.640953</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100340" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>1680.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>1680.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>67.00616</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100343" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>285.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>285.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>69.63392</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100342" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>285.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>285.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>78.76744</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100345" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>581.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>581.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>62.4</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100344" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>291.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>291.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.97561</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100347" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>291.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>291.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>79.14566</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100346" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>581.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>581.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>60.640606</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100349" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>23.136</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100348" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>347.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>300.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>24.152163</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100351" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>31.330002</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100350" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>360.0</duration>
+                </freeFlowTravelTime>
+                <freeFlowSpeed>
+                    <speed>30.099998</speed>
+                </freeFlowSpeed>
+            </basicData>
+        </elaboratedData>
+    </payloadPublication>
+</d2LogicalModel>

@@ -1,0 +1,63 @@
+name: Publish packages
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "modules/**"
+      - "plugins/**"
+      - "!**/*.md"
+  workflow_dispatch:
+    inputs:
+      include_all:
+        description: Let this be 'true' to publish all packages.
+        required: false
+        default: 'true'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  RELEASE_VERSION: ${{ github.run_number }}
+jobs:
+  find-module-changes:
+    name: Find module changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Find module changes
+        id: find-module-changes
+        uses: svvsaga/github-actions-public/find-gradle-module-changes@main
+        with:
+          include_all: ${{ github.event.inputs.include_all }}
+          ignore_modules: ./example,.
+
+    outputs:
+      matrix: ${{ steps.find-module-changes.outputs.matrix }}
+      has_results: ${{ steps.find-module-changes.outputs.has_results }}
+
+  publish-packages:
+    name: Publish packages
+    needs: find-module-changes
+    runs-on: ubuntu-latest
+    if: needs.find-module-changes.outputs.has_results == 'true'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.find-module-changes.outputs.matrix) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Publish packages
+        run: ./gradlew publish -PreleaseVersion=$RELEASE_VERSION
+        working-directory: ${{ matrix.path }}

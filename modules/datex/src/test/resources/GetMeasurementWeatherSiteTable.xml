@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d2LogicalModel modelBaseVersion="2" xmlns="http://datex2.eu/schema/2/2_0">
+    <exchange>
+        <supplierIdentification>
+            <country>no</country>
+            <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+        </supplierIdentification>
+    </exchange>
+    <payloadPublication xsi:type="MeasurementSiteTablePublication" lang="nob"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <publicationTime>2017-10-22T22:57:53.347+02:00</publicationTime>
+        <publicationCreator>
+            <country>no</country>
+            <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+        </publicationCreator>
+        <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+        </headerInformation>
+        <measurementSiteTable id="WOST" version="20171022224823000">
+            <measurementSiteTableIdentification>WEATHER_OBSERVATION_STATION_TABLE</measurementSiteTableIdentification>
+            <measurementSiteRecord id="205" version="10">
+                <measurementSiteName>
+                    <values>
+                        <value lang="nob">E6 Rosten</value>
+                    </values>
+                </measurementSiteName>
+                <measurementSpecificCharacteristics index="801">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>roadSurfaceConditionInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="301">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>temperatureInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="201">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>humidityInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="101">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>temperatureInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="2501">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>precipitationInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="2201">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>precipitationInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSpecificCharacteristics index="1401">
+                    <measurementSpecificCharacteristics>
+                        <specificMeasurementValueType>precipitationInformation</specificMeasurementValueType>
+                    </measurementSpecificCharacteristics>
+                </measurementSpecificCharacteristics>
+                <measurementSiteLocation xsi:type="Point">
+                    <pointByCoordinates>
+                        <pointCoordinates>
+                            <latitude>61.878395</latitude>
+                            <longitude>9.41545</longitude>
+                        </pointCoordinates>
+                    </pointByCoordinates>
+                </measurementSiteLocation>
+            </measurementSiteRecord>
+        </measurementSiteTable>
+    </payloadPublication>
+</d2LogicalModel>

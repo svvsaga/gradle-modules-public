@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d2LogicalModel modelBaseVersion="2" xmlns="http://datex2.eu/schema/2/2_0">
+    <exchange>
+        <supplierIdentification>
+            <country>no</country>
+            <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+        </supplierIdentification>
+    </exchange>
+    <payloadPublication xsi:type="ElaboratedDataPublication" lang="nob"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <publicationTime>2017-10-23T08:45:54+02:00</publicationTime>
+        <publicationCreator>
+            <country>no</country>
+            <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+        </publicationCreator>
+        <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+        </headerInformation>
+        <elaboratedData>
+            <source>
+                <sourceCountry>no</sourceCountry>
+                <sourceIdentification>SVV</sourceIdentification>
+            </source>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100193" version="1"/>
+                </pertinentLocation>
+                <travelTimeTrendType>stable</travelTimeTrendType>
+                <travelTimeType>estimated</travelTimeType>
+                <travelTime>
+                    <duration>573.0</duration>
+                </travelTime>
+                <freeFlowTravelTime>
+                    <duration>573.0</duration>
+                </freeFlowTravelTime>
+            </basicData>
+        </elaboratedData>
+        <elaboratedData>
+            <source>
+                <sourceCountry>no</sourceCountry>
+                <sourceIdentification>SVV</sourceIdentification>
+            </source>
+            <basicData xsi:type="TravelTimeData">
+                <pertinentLocation xsi:type="LocationByReference">
+                    <predefinedLocationReference targetClass="PredefinedLocation" id="100197" version="1"/>
+                </pertinentLocation>
+                <freeFlowTravelTime>
+                    <duration>480.0</duration>
+                </freeFlowTravelTime>
+            </basicData>
+        </elaboratedData>
+    </payloadPublication>
+</d2LogicalModel>

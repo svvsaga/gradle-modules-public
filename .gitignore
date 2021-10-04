@@ -1,0 +1,27 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+.terraform
+sa-key_*.json
+.DS_Store
+.java-version
+node_modules
+.vscode
+.gradle
+build/
+
+*.orig
+*.generated.tf
+*.generated
+
+gng.cfg
+
+# Terraform auto generated variables, used in CI and locally
+*.auto.tfvars.json
+
+# Makes upgrading terraform impossible on CI
+.terraform.lock.hcl

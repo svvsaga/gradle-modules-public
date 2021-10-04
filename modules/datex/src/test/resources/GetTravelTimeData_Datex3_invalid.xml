@@ -1,0 +1,18 @@
+<ns2:messageContainer
+    xmlns="http://datex2.eu/schema/3/common"
+    xmlns:ns2="http://datex2.eu/schema/3/messageContainer"
+    xmlns:ns3="http://datex2.eu/schema/3/exchangeInformation"
+    xmlns:ns4="http://datex2.eu/schema/3/informationManagement"
+    xmlns:ns5="http://datex2.eu/schema/3/roadTrafficData"
+    xmlns:ns6="http://datex2.eu/schema/3/vms"
+    xmlns:ns7="http://datex2.eu/schema/3/dataDictionaryExtension"
+    xmlns:ns8="http://datex2.eu/schema/3/cctvExtension"
+    xmlns:ns9="http://datex2.eu/schema/3/locationReferencing"
+    xmlns:ns10="http://datex2.eu/schema/3/alertCLocationCodeTableExtension"
+    xmlns:ns11="http://datex2.eu/schema/3/extension"
+    xmlns:ns12="http://datex2.eu/schema/3/situation" modelBaseVersion="3">
+    <ns2:payload
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns9:PredefinedLocationsPublication" lang="no" modelBaseVersion="3">
+        <invalidAttribute>5</invalidAttribute>
+    </ns2:payload>
+</ns2:messageContainer>

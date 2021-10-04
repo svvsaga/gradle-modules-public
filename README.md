@@ -38,7 +38,7 @@ plugins {
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.0.0")
+    implementation("no.vegvesen.saga.modules:shared:1.3.5")
 }
 ```
 
@@ -59,7 +59,7 @@ repositories {
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.0.0")
+    implementation("no.vegvesen.saga.modules:shared:1.3.5")
 }
 ```
 
@@ -80,7 +80,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("saga") {
-            from("no.vegvesen.saga.modules:modules:1.1.12")
+            from("no.vegvesen.saga.modules:modules:1.3.5")
         }
     }
 }

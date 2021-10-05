@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.5.31"
-    id("saga-build") version "1.1.5"
+    id("saga-build") version "1.3.10"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 

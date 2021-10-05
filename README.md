@@ -2,6 +2,10 @@
 
 Common Gradle modules for SVV Saga projects.
 
+## Publications
+
+All plugins and modules will be published both to GitHub Packages and to Google Artifact Registry. The list of packages can be found either at [GitHub Packages](https://github.com/orgs/svvsaga/packages?repo_name=gradle-modules-public) or at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (requires login with any Google account).
+
 ## Development
 
 - Run `setup.sh` to install precommit hooks for ensuring secrets are not checked in, and other checks.
@@ -24,7 +28,7 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven {
-            url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
     }
 }
@@ -34,11 +38,11 @@ In `build.gradle.kts`:
 
 ```kotlin
 plugins {
-    id("saga-build") version "1.1.5"
+    id("saga-build") version "1.3.10"
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.3.5")
+    implementation("no.vegvesen.saga.modules:shared:1.3.9")
 }
 ```
 
@@ -53,13 +57,12 @@ repositories {
     maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
     maven("https://jitpack.io")
     maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
     }
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.3.5")
+    implementation("no.vegvesen.saga.modules:shared:1.3.9")
 }
 ```
 
@@ -75,12 +78,12 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
     }
     versionCatalogs {
         create("saga") {
-            from("no.vegvesen.saga.modules:modules:1.3.5")
+            from("no.vegvesen.saga.modules:modules:1.3.9")
         }
     }
 }

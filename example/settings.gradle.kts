@@ -5,8 +5,7 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
     }
 }
@@ -16,13 +15,12 @@ enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
     }
     versionCatalogs {
         create("saga") {
-            from("no.vegvesen.saga.modules:modules:1.3.5")
+            from("no.vegvesen.saga.modules:modules:1.3.9")
         }
     }
 }

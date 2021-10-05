@@ -1,6 +1,7 @@
 plugins {
     `kotlin-dsl`
     `maven-publish`
+    id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.4"
 }
 
 group = "no.vegvesen.saga"
@@ -28,6 +29,10 @@ publishing {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
                 password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
             }
+        }
+        maven {
+            name = "GoogleArtifacts"
+            url = uri("artifactregistry://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
     }
 }

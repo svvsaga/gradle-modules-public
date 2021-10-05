@@ -12,8 +12,8 @@ class SagaBuildPlugin : Plugin<Project> {
                 maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
                 maven("https://jitpack.io")
                 maven {
-                    name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
+                    name = "GoogleArtifactRegistry"
+                    url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
                 }
             }
         }

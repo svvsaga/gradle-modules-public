@@ -6,6 +6,7 @@ plugins {
     `maven-publish`
     `version-catalog`
     id("com.github.jk1.dependency-license-report") version "2.0"
+    id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.4"
 }
 
 val kotlinVersion = "1.5.31"
@@ -28,6 +29,7 @@ allprojects {
     version = modulesVersion
 
     apply(plugin = "maven-publish")
+    apply(plugin = "com.google.cloud.artifactregistry.gradle-plugin")
 
     publishing {
         repositories {
@@ -38,6 +40,10 @@ allprojects {
                     username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
                     password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
                 }
+            }
+            maven {
+                name = "GoogleArtifacts"
+                url = uri("artifactregistry://europe-maven.pkg.dev/saga-artifacts/maven-public")
             }
         }
     }

@@ -25,6 +25,7 @@ import java.time.format.DateTimeParseException
 import java.util.Base64
 import java.util.Date
 
+
 data class DatexResponse(val document: XmlString, val publicationTime: Instant, val lastModified: Instant?)
 
 data class DatexSettings(val datexUrl: String, val username: String, val password: String)

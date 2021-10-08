@@ -119,6 +119,10 @@ subprojects {
             println("Publishing ${publication.groupId}:${publication.artifactId}:${publication.version} to ${repository.url}")
         }
     }
+    java {
+        withJavadocJar()
+        withSourcesJar()
+    }
     publishing {
         publications {
             register<MavenPublication>(project.name) {

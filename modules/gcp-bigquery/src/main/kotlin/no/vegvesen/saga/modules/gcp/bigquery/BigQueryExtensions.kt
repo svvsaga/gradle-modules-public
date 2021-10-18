@@ -123,7 +123,12 @@ suspend fun <T> BigQuery.streamDocuments(
             getInsertId(document) to Json.encodeToJsonElement(serializer, document) as JsonObject
         }
             .map { (insertId, json) -> insertId to json.withoutNulls().replacePrimitives() }
-            .map { (insertId, json) -> InsertAllRequest.RowToInsert.of(insertId, json) }
+            .map { (insertId, json) ->
+                when (insertId) {
+                    null -> InsertAllRequest.RowToInsert.of(json)
+                    else -> InsertAllRequest.RowToInsert.of(insertId, json)
+                }
+            }
             .chunked(chunkSize)
             .parTraverse(Dispatchers.IO) { rows ->
                 val request = InsertAllRequest.newBuilder(tableId, rows).build()

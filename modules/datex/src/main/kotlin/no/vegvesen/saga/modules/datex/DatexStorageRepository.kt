@@ -42,12 +42,12 @@ class DatexStorageRepository(
         publicationTime: Instant,
         gzipped: Boolean,
         contentType: ContentType
-    ): Either<DatexStorageError, Unit> =
-        storage.saveFile(
+    ): Either<DatexStorageError, Boolean> =
+        storage.saveFileIfNotExisting(
             StoragePath(datexDataBucketName, filePath(publicationTime)),
             data.value,
             contentType,
-            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime, noOverwrite = true)
+            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime)
         )
             .mapLeft { ex -> DatexStorageError.Exception(ex.toString(), ex) }
 
@@ -79,10 +79,12 @@ class DatexStorageRepository(
                     else -> DatexStorageError.UnknownError("KVStore failed with unknown error", it)
                 }
             }
+
+    companion object {
+        fun lastModifiedTimeToString(date: Instant): String = date.toString()
+
+        fun stringToLastModifiedTime(data: String): Instant? = runCatching {
+            Instant.parse(data)
+        }.getOrNull()
+    }
 }
-
-internal fun lastModifiedTimeToString(date: Instant): String = date.toString()
-
-internal fun stringToLastModifiedTime(data: String): Instant? = runCatching {
-    Instant.parse(data)
-}.getOrNull()

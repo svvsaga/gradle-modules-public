@@ -48,7 +48,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
                 any(),
                 ContentType.Xml
             )
-        } returns Unit.right()
+        } returns true.right()
         coEvery { datexStorageRepositoryMock.saveLastModifiedTime(testLastModifiedTime) } returns Unit.right()
     }
 
@@ -154,7 +154,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
                 any(),
                 ContentType.Xml
             )
-        } returns Unit.right()
+        } returns true.right()
 
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(Either.Right(null))
         coEvery { datexStorageRepositoryMock.saveLastModifiedTime(any()) } returns testException.left()

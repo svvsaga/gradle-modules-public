@@ -9,7 +9,6 @@ import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import io.kotest.matchers.string.shouldEndWith
-import io.kotest.matchers.string.shouldStartWith
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
@@ -65,7 +64,8 @@ fun testDatexIngestProcessor(datexSettings: DatexSettings, ingestBucket: String,
                 file.customTime.shouldNotBeNull()
                 val storagePath = StoragePath(ingestBucket, file.fileName)
                 blobStorage.loadFileAsString(storagePath) shouldBeRight {
-                    it shouldStartWith "<d2LogicalModel"
+                    // Optimization to avoid OutOfMemoryError
+                    it.substring(0, 15) shouldBe "<d2LogicalModel"
                 }
             }
         }

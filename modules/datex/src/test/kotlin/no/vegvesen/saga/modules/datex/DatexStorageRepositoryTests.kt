@@ -9,6 +9,8 @@ import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
+import no.vegvesen.saga.modules.datex.DatexStorageRepository.Companion.lastModifiedTimeToString
+import no.vegvesen.saga.modules.datex.DatexStorageRepository.Companion.stringToLastModifiedTime
 import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorage
@@ -51,12 +53,20 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
     suspend fun `not saving as gzip if not instructed`() {
         val pubTime = ZonedDateTime.parse("2020-05-03T14:21:41+02:00").toInstant()
 
-        coEvery { testBlobStorage.saveFile(any(), any(), ContentType.Xml, any(), any()) } returns Unit.right()
+        coEvery {
+            testBlobStorage.saveFileIfNotExisting(
+                any(),
+                any(),
+                ContentType.Xml,
+                any(),
+                any()
+            )
+        } returns true.right()
 
         repository.saveObject(testData, pubTime, false, ContentType.Xml)
 
         coVerify {
-            testBlobStorage.saveFile(
+            testBlobStorage.saveFileIfNotExisting(
                 any(),
                 testData.value,
                 ContentType.Xml,
@@ -69,12 +79,20 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
     suspend fun `saving as gzip does not change content type`() {
         val pubTime = ZonedDateTime.parse("2020-05-03T14:21:41+02:00").toInstant()
 
-        coEvery { testBlobStorage.saveFile(any(), any(), ContentType.Xml, any(), any()) } returns Unit.right()
+        coEvery {
+            testBlobStorage.saveFileIfNotExisting(
+                any(),
+                any(),
+                ContentType.Xml,
+                any(),
+                any()
+            )
+        } returns true.right()
 
         repository.saveObject(testData, pubTime, true, ContentType.Xml)
 
         coVerify {
-            testBlobStorage.saveFile(
+            testBlobStorage.saveFileIfNotExisting(
                 any(),
                 testData.value,
                 ContentType.Xml,
@@ -86,12 +104,20 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
     @Test
     suspend fun `should not overwrite files`() {
         val pubTime = ZonedDateTime.parse("2020-05-03T14:21:41+02:00").toInstant()
-        coEvery { testBlobStorage.saveFile(any(), any(), ContentType(any()), any(), any()) } returns Unit.right()
+        coEvery {
+            testBlobStorage.saveFileIfNotExisting(
+                any(),
+                any(),
+                ContentType(any()),
+                any(),
+                any()
+            )
+        } returns true.right()
 
         repository.saveObject(testData, pubTime, true, ContentType.Xml).shouldBeRight()
 
         coVerify {
-            testBlobStorage.saveFile(any(), any(), ContentType(any()), match { it.noOverwrite }, any())
+            testBlobStorage.saveFileIfNotExisting(any(), any(), ContentType(any()), any(), any())
         }
     }
 }

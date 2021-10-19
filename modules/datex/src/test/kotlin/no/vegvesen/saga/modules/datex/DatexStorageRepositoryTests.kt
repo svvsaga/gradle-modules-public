@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
 import arrow.core.right
+import io.kotest.assertions.arrow.either.shouldBeRight
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.nulls.shouldBeNull
@@ -79,6 +80,18 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 ContentType.Xml,
                 withArg { it.gzipContent shouldBe true }
             )
+        }
+    }
+
+    @Test
+    suspend fun `should not overwrite files`() {
+        val pubTime = ZonedDateTime.parse("2020-05-03T14:21:41+02:00").toInstant()
+        coEvery { testBlobStorage.saveFile(any(), any(), ContentType(any()), any(), any()) } returns Unit.right()
+
+        repository.saveObject(testData, pubTime, true, ContentType.Xml).shouldBeRight()
+
+        coVerify {
+            testBlobStorage.saveFile(any(), any(), ContentType(any()), match { it.noOverwrite }, any())
         }
     }
 }

@@ -47,7 +47,7 @@ class DatexStorageRepository(
             StoragePath(datexDataBucketName, filePath(publicationTime)),
             data.value,
             contentType,
-            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime)
+            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime, noOverwrite = true)
         )
             .mapLeft { ex -> DatexStorageError.Exception(ex.toString(), ex) }
 

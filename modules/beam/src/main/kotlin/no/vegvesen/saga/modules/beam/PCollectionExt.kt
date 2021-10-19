@@ -146,40 +146,41 @@ inline fun <reified K, reified V> PCollection<KV<K, V>>.groupByKey(name: String?
 inline fun <reified T, reified K> PCollection<T>.groupBy(name: String?, noinline f: (T) -> K): PCollection<KV<K, Iterable<T>>> =
     this.keyBy("groupBy" + name?.let { ": $it" }, f).groupByKey(name)
 
-fun PCollection<String>.matchAndReadFiles(
-    emptyMatchTreatment: EmptyMatchTreatment = EmptyMatchTreatment.ALLOW_IF_WILDCARD,
-    compression: Compression = Compression.AUTO
-): PCollection<FileIO.ReadableFile> {
-    return apply(
-        "Find files in bucket",
-        FileIO.matchAll().withEmptyMatchTreatment(emptyMatchTreatment)
-    ).apply("Read files from bucket", FileIO.readMatches().withCompression(compression))
-}
-
-inline fun <I, reified O1, reified O2> PCollection<I>.parFlatSplitInto(name: String?, crossinline fn: (I) -> Pair<Iterable<O1>, Iterable<O2>>):
-    Pair<PCollection<O1>, PCollection<O2>> {
-    val tag1 = object : TupleTag<O1>() {}
-    val tag2 = object : TupleTag<O2>() {}
-
-    return apply(
-        name ?: "Split",
-        ParDo.of(
-            object : DoFn<I, O1>() {
-                @ProcessElement
-                fun processElement(context: ProcessContext) {
-                    val pair = fn(context.element())
-
-                    pair.first.forEach { context.output(tag1, it) }
-                    pair.second.forEach { context.output(tag2, it) }
-                }
-            }
-        ).withOutputTags(tag1, TupleTagList.of(tag2))
-    ).let { it.get(tag1) to it.get(tag2) }
-}
-
-inline fun <I, reified O1, reified O2> PCollection<I>.splitInto(name: String?, crossinline fn: (I) -> Pair<O1, O2>):
-    Pair<PCollection<O1>, PCollection<O2>> = this.parFlatSplitInto(name) {
-    fn(it).let { pair ->
-        Pair(listOf(pair.first), listOf(pair.second))
+    fun PCollection<String>.matchAndReadFiles(
+        emptyMatchTreatment: EmptyMatchTreatment = EmptyMatchTreatment.ALLOW_IF_WILDCARD,
+        compression: Compression = Compression.AUTO
+    ): PCollection<FileIO.ReadableFile> {
+        return apply(
+            "Find files in bucket",
+            FileIO.matchAll().withEmptyMatchTreatment(emptyMatchTreatment)
+        ).apply("Read files from bucket", FileIO.readMatches().withCompression(compression))
     }
-}
+
+    inline fun <I, reified O1, reified O2> PCollection<I>.parFlatSplitInto(name: String?, crossinline fn: (I) -> Pair<Iterable<O1>, Iterable<O2>>):
+        Pair<PCollection<O1>, PCollection<O2>> {
+        val tag1 = object : TupleTag<O1>() {}
+        val tag2 = object : TupleTag<O2>() {}
+
+        return apply(
+            name ?: "Split",
+            ParDo.of(
+                object : DoFn<I, O1>() {
+                    @ProcessElement
+                    fun processElement(context: ProcessContext) {
+                        val pair = fn(context.element())
+
+                        pair.first.forEach { context.output(tag1, it) }
+                        pair.second.forEach { context.output(tag2, it) }
+                    }
+                }
+            ).withOutputTags(tag1, TupleTagList.of(tag2))
+        ).let { it.get(tag1) to it.get(tag2) }
+    }
+
+    inline fun <I, reified O1, reified O2> PCollection<I>.splitInto(name: String?, crossinline fn: (I) -> Pair<O1, O2>):
+        Pair<PCollection<O1>, PCollection<O2>> = this.parFlatSplitInto(name) {
+        fn(it).let { pair ->
+            Pair(listOf(pair.first), listOf(pair.second))
+        }
+    }
+    

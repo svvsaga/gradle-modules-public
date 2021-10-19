@@ -22,16 +22,11 @@ import no.vegvesen.saga.modules.shared.functions.SimpleFunctionError
 import no.vegvesen.saga.modules.shared.kvstore.InMemoryKVStore
 import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
 
-fun testDatexIngestProcessor(projectId: String, datexUrl: String, ingestBucket: String, deadLetterBucket: String) =
+fun testDatexIngestProcessor(datexSettings: DatexSettings, ingestBucket: String, deadLetterBucket: String) =
     stringSpec {
         var kvStore = InMemoryKVStore()
         val storage = StorageOptions.getDefaultInstance().service
         val blobStorage = GcpBlobStorage.create()
-        val datexSettings = DatexSettings(
-            datexUrl,
-            SecretManagerUtils.fetchSecretString(projectId, "datex_username_prod"),
-            SecretManagerUtils.fetchSecretString(projectId, "datex_password_prod")
-        )
 
         fun createDatexClient(): DatexClient = DatexClient(
             createApacheHttpClient(),
@@ -127,3 +122,10 @@ fun testDatexIngestProcessor(projectId: String, datexUrl: String, ingestBucket: 
             String(storage.readAllBytes(file.blobId)) shouldBe "aResponse"
         }
     }
+
+fun testDatexIngestProcessor(projectId: String, datexUrl: String, ingestBucket: String, deadLetterBucket: String) =
+    DatexSettings(
+        datexUrl,
+        SecretManagerUtils.fetchSecretString(projectId, "datex_username_prod"),
+        SecretManagerUtils.fetchSecretString(projectId, "datex_password_prod")
+    ).let { datexSettings -> testDatexIngestProcessor(datexSettings, ingestBucket, deadLetterBucket) }

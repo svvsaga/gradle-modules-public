@@ -17,9 +17,11 @@ gradlePlugin {
         }
     }
 }
+
 repositories {
     mavenCentral()
 }
+
 publishing {
     repositories {
         maven {

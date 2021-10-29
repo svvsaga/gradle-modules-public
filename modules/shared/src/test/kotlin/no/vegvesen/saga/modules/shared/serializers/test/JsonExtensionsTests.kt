@@ -22,6 +22,9 @@ private data class Person(
     val addresses: List<Address>
 )
 
+@Serializable
+private data class Product(val id: String)
+
 class JsonExtensionsTests : StringSpec({
     val person = Person("Ola", "Normann", middleName = null, addresses = listOf(Address("Norgesvegen", null)))
     val encoded = Json.encodeToJsonElement(Person.serializer(), person)
@@ -36,6 +39,14 @@ class JsonExtensionsTests : StringSpec({
             "firstName" to "Ola",
             "lastName" to "Normann",
             "addresses" to listOf(mapOf("street" to "Norgesvegen"))
+        )
+    }
+
+    "will not coerce string numbers to number" {
+        val encodedProduct = Json.encodeToJsonElement(Product.serializer(), Product("01234"))
+
+        encodedProduct.replacePrimitive() shouldBe mapOf(
+            "id" to "01234"
         )
     }
 })

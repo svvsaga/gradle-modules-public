@@ -20,7 +20,9 @@ fun <T : JsonElement> T.withoutNulls(): T = when (this) {
 fun JsonElement.replacePrimitive(): Any = when (this) {
     is JsonObject -> replacePrimitives()
     is JsonArray -> replacePrimitives()
-    is JsonPrimitive ->
+    is JsonPrimitive -> if (isString) contentOrNull
+        ?: throw Exception("Unsupported JsonPrimitive: $this")
+    else
         booleanOrNull ?: doubleOrNull ?: longOrNull ?: contentOrNull
             ?: throw Exception("Unsupported JsonPrimitive: $this")
 }

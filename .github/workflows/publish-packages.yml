@@ -48,7 +48,6 @@ jobs:
 
       - name: Cache Gradle packages
         uses: actions/cache@v2
-        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         with:
           path: |
             ~/.gradle/caches
@@ -59,14 +58,12 @@ jobs:
 
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@master
-        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         with:
           version: latest
           service_account_key: ${{ secrets.GCP_SA_ARTIFACT_PUBLISHER }}
           export_default_credentials: true
 
       - name: Publish packages
-        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         run: ./gradlew test publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
         working-directory: ${{ matrix.path }}
 

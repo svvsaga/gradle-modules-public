@@ -64,7 +64,7 @@ jobs:
           export_default_credentials: true
 
       - name: Publish packages
-        run: ./gradlew test publish -PreleaseVersion=${{ needs.find-module-changes.outputs.version }}
+        run: ./gradlew test publish -PreleaseVersion=${{ needs.find-module-changes.outputs.version }} --parallel
         working-directory: ${{ matrix.path }}
 
   push-tag:

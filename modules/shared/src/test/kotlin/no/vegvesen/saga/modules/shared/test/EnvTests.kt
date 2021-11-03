@@ -53,7 +53,7 @@ class EnvTests : FunSpec({
         envToValidatedNel("invalid1")
             .zip(envToValidatedNel("invalid2"), envToValidatedNel("invalid3")) { a, b, c ->
                 a + b + c
-        } shouldBeInvalid {
+            } shouldBeInvalid {
             it.value shouldHaveSize 3
             it.value.toString().shouldContain("invalid1")
             it.value.toString().shouldContain("invalid3")
@@ -63,7 +63,7 @@ class EnvTests : FunSpec({
     test("envToValidatedNel can fetch multiple variables") {
         envToValidatedNel("PATH").zip(envToValidatedNel("HOME")) { path, home ->
             Pair(path, home)
-            } shouldBeValid {
+        } shouldBeValid {
             it.value.first shouldHaveMinLength 1
             it.value.second shouldHaveMinLength 1
         }

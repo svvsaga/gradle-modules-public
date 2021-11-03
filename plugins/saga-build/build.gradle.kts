@@ -6,7 +6,8 @@ plugins {
 
 group = "no.vegvesen.saga"
 version =
-    "1.3.${(if (project.hasProperty("releaseVersion")) project.property("releaseVersion") else null) ?: "0-SNAPSHOT"}"
+    (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)
+        ?: "1.0.0-SNAPSHOT"
 
 gradlePlugin {
     plugins {

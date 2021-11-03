@@ -22,7 +22,7 @@ val gcpLibrariesBomVersion = "20.6.0"
 val xmlBindVersion = "2.3.1"
 
 val modulesVersion =
-    "1.3.${(if (project.hasProperty("releaseVersion")) project.property("releaseVersion") else null) ?: "0-SNAPSHOT"}"
+    "1.4.${(if (project.hasProperty("releaseVersion")) project.property("releaseVersion") else null) ?: "0-SNAPSHOT"}"
 
 allprojects {
     group = "no.vegvesen.saga.modules"

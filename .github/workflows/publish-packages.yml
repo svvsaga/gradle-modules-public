@@ -42,8 +42,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Bump semantic version
+        uses: svvsaga/github-actions-public/bump-semver-tag@v3.9.0
+        id: bump-semver-tag
+
       - name: Cache Gradle packages
         uses: actions/cache@v2
+        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         with:
           path: |
             ~/.gradle/caches
@@ -54,17 +59,14 @@ jobs:
 
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@master
+        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         with:
           version: latest
           service_account_key: ${{ secrets.GCP_SA_ARTIFACT_PUBLISHER }}
           export_default_credentials: true
 
-      - name: Bump semantic version
-        uses: svvsaga/github-actions-public/bump-semver-tag@v3.9.0
-        id: bump-semver-tag
-
       - name: Publish packages
-        if: ${{ steps.bump-semver-tag.outputs.version != '' }}
+        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         run: ./gradlew publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
         working-directory: ${{ matrix.path }}
 

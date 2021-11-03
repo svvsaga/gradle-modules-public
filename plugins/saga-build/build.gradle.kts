@@ -39,6 +39,7 @@ publishing {
         }
     }
 }
+
 tasks.withType<PublishToMavenRepository> {
     doFirst {
         println("Publishing ${publication.groupId}:${publication.artifactId}:${publication.version} to ${repository.url}")

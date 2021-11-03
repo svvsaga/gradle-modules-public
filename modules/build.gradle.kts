@@ -104,7 +104,6 @@ subprojects {
             implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jsr310", jacksonVersion)
 
             implementation("io.ktor", "ktor-client-mock-jvm", ktorVersion)
-
             api("io.ktor", "ktor-client-mock-jvm", ktorVersion)
 
             implementation("com.google.cloud.functions", "functions-framework-api", functionsVersion)

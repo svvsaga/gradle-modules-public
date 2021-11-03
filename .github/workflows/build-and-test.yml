@@ -1,14 +1,6 @@
-name: Build and test on PR and merge to main
+name: Build and test on PR
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "**/*.kts"
-      - "**/*.kt"
-      - "**/*.java"
-      - "**/*.gradle"
   pull_request:
     paths:
       - "**/*.kts"

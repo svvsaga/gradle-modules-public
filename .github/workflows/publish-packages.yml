@@ -67,7 +67,7 @@ jobs:
 
       - name: Publish packages
         if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
-        run: ./gradlew publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
+        run: ./gradlew test publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
         working-directory: ${{ matrix.path }}
 
   push-tag:

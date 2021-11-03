@@ -1,4 +1,4 @@
-// Touch to trigger build.
+// Touch to trigger build
 
 plugins {
     `kotlin-dsl`

@@ -4,31 +4,48 @@ Common Gradle modules for SVV Saga projects.
 
 ## Publications
 
-All plugins and modules will be published both to GitHub Packages and to Google Artifact Registry. The list of packages can be found either at [GitHub Packages](https://github.com/orgs/svvsaga/packages?repo_name=gradle-modules-public) or at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (requires login with any Google account).
+All plugins and modules will be published both to GitHub Packages and to Google Artifact Registry. The list of packages
+can be found either at [GitHub Packages](https://github.com/orgs/svvsaga/packages?repo_name=gradle-modules-public) or
+at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (
+requires login with any Google account).
 
 ## Publishing new versions
 
 This is done through the "Publish packages" GitHub action found in `.github/workflows/publish-packages.yml`
 
+We follow semantic versioning when publishing new versions.
+
+A new version will automatically be published when a push or PR merge is done with a commit msg tag.
+
+1. If any commit in the push has a commit message containing `#major`, a major version will be published.
+1. If any commit in the push has a commit message containing `#minor`, a minor version will be published.
+1. If any commit in the push has a commit message containing `#patch`, a patch version will be published.
+1. Otherwise, no new tag is created.
+
 ## Development
 
 ### Setup
+
 - Run `setup.sh` to install precommit hooks for ensuring secrets are not checked in, and other checks.
 - After opening a folder or subfolder in IntelliJ IDEA, run `setup-ktlint.sh` to configure IntelliJ with
   the [ktlint](https://ktlint.github.io/) code style.
 
 ### Use modules in development from branches:
-  - Run "publishToMavenLocal" Gradle target in "modules" or "plugins/saga-build/" (for plugins) directory.
-    This will build snapshot versions of modules to local maven repository given by `version` line in build.gradle.kts (e.g. `1.3.0-SNAPSHOT`)
-  - From another project where code is to be tested, add temporary  `mavenLocal()` to `repositories` section in build.gradle.kts
-    and set version to the snapshot version:
+
+- Run "publishToMavenLocal" Gradle target in "modules" or "plugins/saga-build/" (for plugins) directory. This will build
+  snapshot versions of modules to local maven repository given by `version` line in build.gradle.kts (
+  e.g. `1.3.0-SNAPSHOT`)
+- From another project where code is to be tested, add temporary  `mavenLocal()` to `repositories` section in
+  build.gradle.kts and set version to the snapshot version:
+
 ```kotlin
 // Temporary just to test new snapshot releases
 repositories {
     mavenLocal()
 }
 ```
-  - `mavenLocal()` also works with version of Gradle version catalog in settings.gradle.kts:
+
+- `mavenLocal()` also works with version of Gradle version catalog in settings.gradle.kts:
 
 ```kotlin
 val modulesVersion = "1.3.0-SNAPSHOT" // Temporary while testing
@@ -50,11 +67,13 @@ dependencyResolutionManagement {
 
 This is useful when wanting to test modules before merging and releasing a new version.
 
-It looks like it is currently not possible to combine includeBuild (composite build) with snapshot version of version catalog.
+It looks like it is currently not possible to combine includeBuild (composite build) with snapshot version of version
+catalog.
 
 ### Integration tests
 
-To run integration tests, you must set the `SAGA_INT_TEST_PROJECT_ID` environment variable to a GCP project ID used for integration testing.
+To run integration tests, you must set the `SAGA_INT_TEST_PROJECT_ID` environment variable to a GCP project ID used for
+integration testing.
 
 ## Use packages with `saga-build`-plugin
 

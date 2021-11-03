@@ -3,14 +3,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "modules/**"
-      - "plugins/**"
-      - "!**/*.md"
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  RELEASE_VERSION: ${{ github.run_number }}
 jobs:
   find-module-changes:
     name: Find module changes
@@ -18,6 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Bump semantic version
         uses: svvsaga/github-actions-public/bump-semver-tag@v3.9.0
@@ -87,4 +84,5 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git tag ${{ needs.find-module-changes.outputs.tag }}
           git push origin ${{ needs.find-module-changes.outputs.tag }}

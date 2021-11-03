@@ -64,7 +64,7 @@ jobs:
           export_default_credentials: true
 
       - name: Publish packages
-        run: ./gradlew test publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
+        run: ./gradlew test publish -PreleaseVersion=${{ needs.find-module-changes.outputs.version }}
         working-directory: ${{ matrix.path }}
 
   push-tag:

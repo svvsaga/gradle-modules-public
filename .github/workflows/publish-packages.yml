@@ -19,8 +19,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Bump semantic version
+        uses: svvsaga/github-actions-public/bump-semver-tag@v3.9.0
+        id: bump-semver-tag
+
       - name: Find module changes
         id: find-module-changes
+        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
         uses: svvsaga/github-actions-public/find-gradle-module-changes@main
         with:
           include_all: ${{ github.event.inputs.include_all }}
@@ -29,6 +34,8 @@ jobs:
     outputs:
       matrix: ${{ steps.find-module-changes.outputs.matrix }}
       has_results: ${{ steps.find-module-changes.outputs.has_results }}
+      tag: ${{ steps.bump-semver-tag.outputs.tag }}
+      version: ${{ steps.bump-semver-tag.outputs.version }}
 
   publish-packages:
     name: Publish packages
@@ -41,10 +48,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Bump semantic version
-        uses: svvsaga/github-actions-public/bump-semver-tag@v3.9.0
-        id: bump-semver-tag
 
       - name: Cache Gradle packages
         uses: actions/cache@v2
@@ -70,9 +73,18 @@ jobs:
         run: ./gradlew publish -PreleaseVersion=${{ steps.bump-semver-tag.outputs.version }}
         working-directory: ${{ matrix.path }}
 
+  push-tag:
+    name: Push tag
+    needs: [ find-module-changes, publish-packages ]
+    runs-on: ubuntu-latest
+    if: needs.find-module-changes.outputs.has_results == 'true'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Push tag
-        if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
+        if: ${{ needs.find-module-changes.outputs.tag != '' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git push origin ${{ steps.bump-semver-tag.outputs.tag }}
+          git push origin ${{ needs.find-module-changes.outputs.tag }}

@@ -48,3 +48,11 @@ fun Project.useIntegrationTests() {
         }
     }
 }
+
+fun Project.useJvmTarget(version: String) {
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = version
+        }
+    }
+}

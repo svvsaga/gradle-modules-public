@@ -31,6 +31,8 @@ allprojects {
     group = "no.vegvesen.saga.modules"
     version = modulesVersion
 
+    useJvmTarget("11")
+
     apply(plugin = "maven-publish")
     apply(plugin = "com.google.cloud.artifactregistry.gradle-plugin")
 

@@ -16,6 +16,7 @@ class SagaBuildPlugin : Plugin<Project> {
                     url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
                 }
             }
+            useJvmTarget("11")
         }
     }
 }

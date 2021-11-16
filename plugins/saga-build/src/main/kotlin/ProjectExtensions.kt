@@ -24,6 +24,10 @@ fun Project.useReproducibleBuilds() {
     }
 }
 
+fun Project.useAppVersion() {
+    version = (if (project.hasProperty("appVersion")) project.property("appVersion") else null) ?: "1.0-SNAPSHOT"
+}
+
 fun Project.useIntegrationTests() {
     tasks.named<Test>("test") {
         useJUnitPlatform {

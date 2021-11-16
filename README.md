@@ -5,8 +5,7 @@ Common Gradle modules for SVV Saga projects.
 ## Publications
 
 All plugins and modules will be published both to GitHub Packages and to Google Artifact Registry. The list of packages
-can be found either at [GitHub Packages](https://github.com/orgs/svvsaga/packages?repo_name=gradle-modules-public) or
-at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (
+can be found at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (
 requires login with any Google account).
 
 ## Publishing new versions

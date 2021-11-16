@@ -34,14 +34,6 @@ repositories {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/svvsaga/gradle-modules-public")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
-            }
-        }
-        maven {
             name = "GoogleArtifacts"
             url = uri("artifactregistry://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }

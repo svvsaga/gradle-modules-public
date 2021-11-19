@@ -38,7 +38,10 @@ fun v(key: String, value: Any): StructuredArgument {
     return StructuredArguments.v(key, value)
 }
 
-suspend fun <T> withMappedDiagnosticContext(vararg loggedProperties: Pair<String, String>, func: suspend () -> T): T =
+inline fun <T> withMappedDiagnosticContext(
+    vararg loggedProperties: Pair<String, String>,
+    func: () -> T
+): T =
     try {
         loggedProperties.forEach {
             MDC.put(it.first, it.second)

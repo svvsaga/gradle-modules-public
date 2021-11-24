@@ -11,7 +11,8 @@ object SerializationObjectMapper {
      */
     @OptIn(ExperimentalSerializationApi::class)
     fun <A, B> mapObject(fromSerializer: SerializationStrategy<A>, toDeserializer: DeserializationStrategy<B>, from: A): B =
-        Properties.decodeFromMap(toDeserializer,
+        Properties.decodeFromMap(
+            toDeserializer,
             Properties.encodeToMap(fromSerializer, from)
         )
 }

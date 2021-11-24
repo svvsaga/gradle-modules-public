@@ -69,7 +69,7 @@ jobs:
 
   push-tag:
     name: Push tag
-    needs: [ find-module-changes, publish-packages ]
+    needs: find-module-changes
     runs-on: ubuntu-latest
     if: needs.find-module-changes.outputs.has_results == 'true'
     steps:

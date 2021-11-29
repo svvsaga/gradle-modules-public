@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.shared
 
 import io.ktor.util.date.GMTDate
+import kotlinx.datetime.toKotlinInstant
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneId
@@ -28,6 +29,10 @@ fun XMLGregorianCalendar.toOffsetDateTime(): OffsetDateTime {
 
 fun XMLGregorianCalendar.toInstant(): Instant {
     return this.toGregorianCalendar().toInstant()
+}
+
+fun XMLGregorianCalendar.toKotlinInstant(): kotlinx.datetime.Instant {
+    return this.toInstant().toKotlinInstant()
 }
 
 fun ZonedDateTime?.toIsoStringOrNull(): String? {

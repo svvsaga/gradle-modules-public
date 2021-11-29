@@ -1,5 +1,6 @@
 package no.vegvesen.saga.modules.shared
 
+import java.util.Locale
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract
 
@@ -16,3 +17,7 @@ fun requireNotEmpty(value: String?): String {
     }
     return value
 }
+
+fun String.capitalized(): String = if (firstOrNull()?.isLowerCase() == true) this.replaceFirstChar {
+    it.titlecase(Locale.getDefault())
+} else this

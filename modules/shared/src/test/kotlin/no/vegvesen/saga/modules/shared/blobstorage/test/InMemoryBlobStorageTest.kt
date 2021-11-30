@@ -8,14 +8,11 @@ import no.vegvesen.saga.modules.testing.IntegrationTest
 
 /**
  * Technically an integration test, but only depending on other than Kotlin/Java APIs
- * Marking as such anyway because not all tests pass
- *
- * Lacks a bit of implementation for all tests to pass, e.g. passing which buckets should be pre existing
  */
 
 @Tags(IntegrationTest)
 class InMemoryBlobStorageTest : FunSpec({
     val testSubject = InMemoryBlobStorage()
 
-    include(blobStorageIntegrationTests(testSubject, "testbucket"))
+    include(blobStorageIntegrationTests(testSubject, "testbucket", "testbucket2"))
 })

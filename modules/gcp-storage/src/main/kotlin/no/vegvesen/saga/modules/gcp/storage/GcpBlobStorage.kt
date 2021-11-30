@@ -180,4 +180,17 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             customTime = blob.customTime?.let(Instant::ofEpochMilli),
             contentEncoding = blob.contentEncoding
         )
+
+    override suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath> =
+        storage[from.toBlobId()].rightIfNotNull { BlobStorageError.BlobNotFound(from) }
+            .flatMap { fromBlob ->
+                Either.catch {
+                    fromBlob.copyTo(to.toBlobId()).result.let { toBlob ->
+                        StoragePath(
+                            toBlob.bucket,
+                            toBlob.name
+                        )
+                    }
+                }.mapLeft { BlobStorageError.BlobException("Failed to copy file '$from' to '$to'", it) }
+            }
 }

@@ -28,6 +28,7 @@ import java.time.temporal.ChronoUnit
 import java.util.zip.ZipException
 
 private val testBucket = "${SagaIntTestProject}_gcp_blob-storage"
+private val testBucket2 = "${SagaIntTestProject}_gcp_blob-storage-2"
 
 @Tags(IntegrationTest)
 class GcpBlobStorageIntegrationTests : FunSpec({
@@ -37,11 +38,12 @@ class GcpBlobStorageIntegrationTests : FunSpec({
     val loremIpsumStart = "Lorem ipsum dolor sit amet"
 
     beforeEach {
-        // @TODO: extract to e.g. GCS utility, or implement and call in factory
-        StorageOptions.getDefaultInstance().service.list(testBucket).iterateAll().forEach { it.delete() }
+        val storage = StorageOptions.getDefaultInstance().service
+        storage.deleteAllFilesInBucket(testBucket)
+        storage.deleteAllFilesInBucket(testBucket2)
     }
 
-    include(blobStorageIntegrationTests(testSubject, testBucket))
+    include(blobStorageIntegrationTests(testSubject, testBucket, testBucket2))
     include(blobStorageBrowserIntegrationTests(testSubject, testBucket))
 
     test("can rewrite file and preserve metadata") {

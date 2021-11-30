@@ -115,7 +115,7 @@ fun <T> blobStorageBrowserIntegrationTests(
     }
 }
 
-fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String) = funSpec {
+fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, testBucket2: String) = funSpec {
     val storagePath = createStoragePath(testBucket)
 
     test("can save file to storage and load it") {
@@ -171,5 +171,34 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String) = 
 
         testSubject.checkIfFileExists(StoragePath(testBucket, "existing_file")) shouldBeRight true
         testSubject.checkIfFileExists(StoragePath(testBucket, "non_existing_file")) shouldBeRight false
+    }
+
+    test("can copy file with contents") {
+        val fromPath = StoragePath(testBucket, "hello.txt")
+        val toPath = StoragePath(testBucket2, "hello.txt")
+        testSubject.saveFile(fromPath, "Hello", ContentType.Txt).shouldBeRight()
+
+        testSubject.copyFile(fromPath, toPath) shouldBeRight {
+            it shouldBe toPath
+        }
+
+        testSubject.loadFileAsString(toPath) shouldBeRight {
+            it shouldBe "Hello"
+        }
+    }
+
+    test("copying file will overwrite") {
+        val fromPath = StoragePath(testBucket, "hello.txt")
+        val toPath = StoragePath(testBucket2, "hello.txt")
+        testSubject.saveFile(fromPath, "Hello", ContentType.Txt).shouldBeRight()
+        testSubject.saveFile(toPath, "Existing", ContentType.Txt).shouldBeRight()
+
+        testSubject.copyFile(fromPath, toPath) shouldBeRight {
+            it shouldBe toPath
+        }
+
+        testSubject.loadFileAsString(toPath) shouldBeRight {
+            it shouldBe "Hello"
+        }
     }
 }

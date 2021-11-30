@@ -53,15 +53,18 @@ class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
     override suspend fun loadFile(
         storagePath: StoragePath,
         options: LoadFileOptions
-    ): Either<BlobStorageError, ByteArray> {
-        return files[storagePath]?.bytes.rightIfNotNull { BlobStorageError.BlobNotFound(storagePath) }
-    }
+    ): Either<BlobStorageError, ByteArray> =
+        files[storagePath]?.bytes.rightIfNotNull { BlobStorageError.BlobNotFound(storagePath) }
 
     override suspend fun rewriteFile(storagePath: StoragePath): Either<BlobStorageError, Unit> =
         files[storagePath].rightIfNotNull { BlobStorageError.BlobNotFound(storagePath) }.map { }
 
     override suspend fun checkIfFileExists(storagePath: StoragePath): Either<Throwable, Boolean> =
         files.containsKey(storagePath).right()
+
+    override suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath> =
+        files[from].rightIfNotNull { BlobStorageError.BlobNotFound(from) }
+            .map { files[to] = File(it.bytes.clone(), it.metadata); to }
 
     override suspend fun listFiles(bucket: String): Either<Throwable, List<FileMetadata>> =
         files.values.map { it.metadata }.right()

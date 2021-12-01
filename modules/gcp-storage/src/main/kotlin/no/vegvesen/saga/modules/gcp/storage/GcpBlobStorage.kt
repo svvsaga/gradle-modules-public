@@ -193,4 +193,8 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
                     }
                 }.mapLeft { BlobStorageError.BlobException("Failed to copy file '$from' to '$to'", it) }
             }
+
+    override suspend fun deleteFile(storagePath: StoragePath): Either<Throwable, Boolean> = Either.catch {
+        storage.delete(storagePath.toBlobId())
+    }
 }

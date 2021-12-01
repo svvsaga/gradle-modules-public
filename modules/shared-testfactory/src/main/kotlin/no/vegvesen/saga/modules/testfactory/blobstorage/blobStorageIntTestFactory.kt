@@ -201,4 +201,17 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
             it shouldBe "Hello"
         }
     }
+
+    test("deleting file returns true if it existed and was deleted") {
+        val path = StoragePath(testBucket, "hello.txt")
+        testSubject.saveFile(path, "Hello", ContentType.Txt).shouldBeRight()
+
+        testSubject.deleteFile(path) shouldBeRight { it shouldBe true }
+    }
+
+    test("deleting file returns false if it did not exist") {
+        val path = StoragePath(testBucket, "hello.txt")
+
+        testSubject.deleteFile(path) shouldBeRight { it shouldBe false }
+    }
 }

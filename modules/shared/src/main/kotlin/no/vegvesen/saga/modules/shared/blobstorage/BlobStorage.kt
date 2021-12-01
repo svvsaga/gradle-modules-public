@@ -104,6 +104,7 @@ interface BlobStorage {
 
     suspend fun checkIfFileExists(storagePath: StoragePath): Either<Throwable, Boolean>
     suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath>
+    suspend fun deleteFile(storagePath: StoragePath): Either<Throwable, Boolean>
 }
 
 fun Either<BlobStorageError, ByteArray>.mapBlobStorageErrorToThrowable(path: StoragePath) = this.mapLeft {

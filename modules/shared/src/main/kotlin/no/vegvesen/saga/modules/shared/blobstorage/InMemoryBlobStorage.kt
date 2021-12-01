@@ -11,6 +11,9 @@ class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
 
     val files = mutableMapOf<StoragePath, File>()
 
+    override suspend fun deleteFile(storagePath: StoragePath): Either<Throwable, Boolean> =
+        (files.remove(storagePath) != null).right()
+
     override suspend fun saveFile(
         storagePath: StoragePath,
         fileContent: ByteArray,

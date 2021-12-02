@@ -1,6 +1,6 @@
 package no.vegvesen.saga.modules.shared.kvstore.test
 
-import io.kotest.assertions.arrow.either.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeLeft
 import io.kotest.core.spec.style.FunSpec
 import no.vegvesen.saga.modules.shared.kvstore.InMemoryKVStore
 import no.vegvesen.saga.modules.shared.kvstore.KVStoreError

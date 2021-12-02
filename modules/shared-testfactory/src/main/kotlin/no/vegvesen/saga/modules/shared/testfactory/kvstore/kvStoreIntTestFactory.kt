@@ -1,8 +1,8 @@
 package no.vegvesen.saga.modules.shared.testfactory.kvstore
 
 import arrow.core.flatMap
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.funSpec
 import io.kotest.property.Arb
 import io.kotest.property.arbitrary.default

@@ -1,7 +1,3 @@
-plugins {
-    id("com.github.ben-manes.versions") version ("0.38.0")
-}
-
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("ch.qos.logback:logback-classic:1.2.3")

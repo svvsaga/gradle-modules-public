@@ -3,7 +3,7 @@ package no.vegvesen.saga.modules.datex
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import io.kotest.assertions.arrow.either.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeLeft
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.AnnotationSpec
 import io.mockk.coEvery

@@ -1,7 +1,6 @@
 package no.vegvesen.saga.modules.shared.test
 
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.string.shouldStartWith
 import kotlinx.datetime.LocalDate
@@ -9,6 +8,7 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import no.vegvesen.saga.modules.shared.functions.parseJsonParameters
 import no.vegvesen.saga.modules.shared.functions.parseQueryParameters
+import no.vegvesen.saga.modules.testing.shouldBeLeftAnd
 
 @ExperimentalSerializationApi
 class ParameterHelpersTests : FunSpec({
@@ -29,7 +29,7 @@ class ParameterHelpersTests : FunSpec({
     test("parsing query parameters fails if any parameters are missing") {
         val result = parseQueryParameters(MyParams.serializer(), mapOf("anInt" to listOf("3")))
 
-        result shouldBeLeft { it.message shouldStartWith "Fields [aString, aDate, aBool] are required" }
+        result shouldBeLeftAnd { it.message shouldStartWith "Fields [aString, aDate, aBool] are required" }
     }
 
     test("parsing query parameters fails if any parameters are duplicate") {
@@ -43,7 +43,7 @@ class ParameterHelpersTests : FunSpec({
             )
         )
 
-        result shouldBeLeft { it.message shouldStartWith "More than one query parameter" }
+        result shouldBeLeftAnd { it.message shouldStartWith "More than one query parameter" }
     }
 
     test("nullable params are optional") {
@@ -54,7 +54,10 @@ class ParameterHelpersTests : FunSpec({
 
     test("can parse json parameters") {
         val result =
-            parseJsonParameters(MyParams.serializer(), """{"anInt":1,"aString":"a","aDate":"2021-01-01","aBool":true}""")
+            parseJsonParameters(
+                MyParams.serializer(),
+                """{"anInt":1,"aString":"a","aDate":"2021-01-01","aBool":true}"""
+            )
 
         result shouldBeRight MyParams(1, "a", LocalDate(2021, 1, 1), true)
     }

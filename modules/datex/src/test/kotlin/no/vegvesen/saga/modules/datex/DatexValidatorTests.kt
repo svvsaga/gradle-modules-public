@@ -1,7 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.StringSpec
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.toXmlString
@@ -50,7 +50,10 @@ class DatexValidatorTests : StringSpec({
     }
 
     "reisetid Datex 3 file with missing modelBaseVersion on exchangeInformation is validated successfully" {
-        fileIsValid("/GetTravelTimeData_Datex3_without_modelBaseVersion_on_exchangeInformation.xml", DatexVersion.DATEX_3_1)
+        fileIsValid(
+            "/GetTravelTimeData_Datex3_without_modelBaseVersion_on_exchangeInformation.xml",
+            DatexVersion.DATEX_3_1
+        )
     }
 
     "valid maaledata Datex 2 file is validated successfully" {

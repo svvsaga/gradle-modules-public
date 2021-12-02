@@ -6,7 +6,7 @@ import com.google.cloud.datastore.KeyFactory
 import com.google.cloud.datastore.Query
 import com.google.cloud.datastore.QueryResults
 import com.google.cloud.datastore.StructuredQuery.PropertyFilter.eq
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.matchers.collections.shouldContainExactly
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.gcp.datastore.DatastoreDeduplicationStorage
@@ -59,8 +59,6 @@ class DatastoreDeduplicationStorageIntegrationTests {
 
         val result = testSubject.fetchDuplicateIds(listOf("3", "4"))
 
-        result.shouldBeRight {
-            it.shouldContainExactly("3")
-        }
+        result.shouldBeRight().shouldContainExactly("3")
     }
 }

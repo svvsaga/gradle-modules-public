@@ -3,7 +3,7 @@ package no.vegvesen.saga.modules.datex
 import arrow.core.left
 import arrow.core.right
 import ch.qos.logback.classic.Level
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.collections.shouldHaveSingleElement
 import io.mockk.coEvery

@@ -1,6 +1,6 @@
 package no.vegvesen.saga.modules.gcp.redis
 
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.DeduplicationStorage

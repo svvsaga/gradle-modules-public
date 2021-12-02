@@ -1,8 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
 import com.google.cloud.storage.StorageOptions
-import io.kotest.assertions.arrow.either.shouldBeLeftOfType
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.stringSpec
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
@@ -20,6 +19,8 @@ import no.vegvesen.saga.modules.shared.blobstorage.StoragePath
 import no.vegvesen.saga.modules.shared.functions.SimpleFunctionError
 import no.vegvesen.saga.modules.shared.kvstore.InMemoryKVStore
 import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
+import no.vegvesen.saga.modules.testing.shouldBeLeftOfType
+import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 
 fun testDatexIngestProcessor(datexSettings: DatexSettings, ingestBucket: String, deadLetterBucket: String) =
     stringSpec {
@@ -56,14 +57,14 @@ fun testDatexIngestProcessor(datexSettings: DatexSettings, ingestBucket: String,
             val result = createProcessor(createDatexClient()).process()
 
             result.shouldBeRight()
-            blobStorage.listFiles(ingestBucket).shouldBeRight { files ->
+            blobStorage.listFiles(ingestBucket).shouldBeRightAnd { files ->
                 files.shouldHaveSize(1)
                 val file = files[0]
                 file.contentType shouldBe ContentType.Xml
                 file.contentEncoding shouldBe "gzip"
                 file.customTime.shouldNotBeNull()
                 val storagePath = StoragePath(ingestBucket, file.fileName)
-                blobStorage.loadFileAsString(storagePath) shouldBeRight {
+                blobStorage.loadFileAsString(storagePath) shouldBeRightAnd {
                     // Optimization to avoid OutOfMemoryError
                     it.substring(0, 15) shouldBe "<d2LogicalModel"
                 }

@@ -9,13 +9,14 @@ plugins {
     `version-catalog`
     id("com.github.jk1.dependency-license-report") version "2.0"
     id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.4"
+    id("com.github.ben-manes.versions") version "0.39.0"
 }
 
 val kotlinVersion = "1.5.31"
 val kotlinxCoroutinesVersion = "1.5.1"
 val kotlinxDateTimeVersion = "0.2.1"
 val ktorVersion = "1.6.0"
-val arrowVersion = "0.12.1"
+val arrowVersion = "1.0.1"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
 val serializationVersion = "1.2.1"

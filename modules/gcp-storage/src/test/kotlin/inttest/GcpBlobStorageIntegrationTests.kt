@@ -1,8 +1,8 @@
 package inttest
 
 import com.google.cloud.storage.StorageOptions
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
@@ -23,6 +23,8 @@ import no.vegvesen.saga.modules.testfactory.blobstorage.blobStorageIntegrationTe
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.SagaIntTestProject
 import no.vegvesen.saga.modules.testing.loadStringResourceOrThrow
+import no.vegvesen.saga.modules.testing.shouldBeLeftAnd
+import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.zip.ZipException
@@ -82,8 +84,8 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         testSubject.saveFile(storageFilename1, zippedFile, ContentType.Gzip)
         testSubject.saveFile(storageFilename2, textFile, ContentType.Txt, SaveFileOptions(gzipContent = true))
 
-        testSubject.loadFile(storageFilename1) shouldBeRight { String(it) shouldStartWith loremIpsumStart }
-        testSubject.loadFile(storageFilename2) shouldBeRight { String(it) shouldStartWith loremIpsumStart }
+        testSubject.loadFile(storageFilename1) shouldBeRightAnd { String(it) shouldStartWith loremIpsumStart }
+        testSubject.loadFile(storageFilename2) shouldBeRightAnd { String(it) shouldStartWith loremIpsumStart }
     }
 
     test("loadFile, with gzipDecompressionBehaviour set to YES, fails if file is not compressed") {
@@ -93,7 +95,7 @@ class GcpBlobStorageIntegrationTests : FunSpec({
 
         val options = LoadFileOptions(gzipDecompressionBehaviour = GzipDecompressionBehaviour.YES)
         val result = testSubject.loadFile(storageFilename, options)
-        result.shouldBeLeft {
+        result.shouldBeLeftAnd {
             it.shouldBeTypeOf<BlobStorageError.BlobException>()
             it.cause.shouldBeTypeOf<ZipException>()
             it.cause.localizedMessage shouldBe "Not in GZIP format"
@@ -110,11 +112,11 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         testSubject.loadFile(
             storageFilename1,
             options
-        ) shouldBeRight { String(it) shouldNotStartWith loremIpsumStart }
+        ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
         testSubject.loadFile(
             storageFilename2,
             options
-        ) shouldBeRight { String(it) shouldNotStartWith loremIpsumStart }
+        ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
     }
 
     test("AUTO decompresses if file ends with .gz or .gzip or has content encoding gzip") {
@@ -126,8 +128,8 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         testSubject.saveFile(storageFilename3, zippedFile, ContentType.Gzip)
 
         listOf(storageFilename1, storageFilename2, storageFilename3).forEach { storagePath ->
-            testSubject.loadFile(storagePath) shouldBeRight { String(it) shouldStartWith loremIpsumStart }
-            testSubject.loadFileAsString(storagePath) shouldBeRight { it shouldStartWith loremIpsumStart }
+            testSubject.loadFile(storagePath) shouldBeRightAnd { String(it) shouldStartWith loremIpsumStart }
+            testSubject.loadFileAsString(storagePath) shouldBeRightAnd { it shouldStartWith loremIpsumStart }
         }
     }
 
@@ -143,11 +145,9 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         val resultBytes = testSubject.loadFile(storageFilename, options)
         val resultString = testSubject.loadFileAsString(storageFilename, options)
 
-        resultBytes.shouldBeRight {
+        resultBytes shouldBeRightAnd {
             String(it).shouldStartWith(loremIpsumStart)
         }
-        resultString.shouldBeRight {
-            it.shouldStartWith(loremIpsumStart)
-        }
+        resultString.shouldBeRight().shouldStartWith(loremIpsumStart)
     }
 })

@@ -1,7 +1,7 @@
 package no.vegvesen.saga.modules.testfactory.blobstorage
 
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.funSpec
 import io.kotest.matchers.collections.shouldContain
 import io.kotest.matchers.nulls.shouldNotBeNull
@@ -14,6 +14,7 @@ import no.vegvesen.saga.modules.shared.blobstorage.FileMetadata
 import no.vegvesen.saga.modules.shared.blobstorage.SaveFileOptions
 import no.vegvesen.saga.modules.shared.blobstorage.StoragePath
 import no.vegvesen.saga.modules.testing.SagaIntTestProject
+import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
 import kotlin.random.Random
 
@@ -37,9 +38,8 @@ fun <T> blobStorageBrowserIntegrationTests(
         val blobTestContent = "Testcontent"
 
         testSubject.saveFile(storagePath, blobTestContent, ContentType.Txt).shouldBeRight()
-        testSubject.listFiles(testBucket).shouldBeRight { results ->
-            results.shouldContain(FileMetadata(storagePath.fileName, ContentType.Txt))
-        }
+        testSubject.listFiles(testBucket).shouldBeRight()
+            .shouldContain(FileMetadata(storagePath.fileName, ContentType.Txt))
     }
 
     test("getFileMetadata returns correct data") {
@@ -56,9 +56,7 @@ fun <T> blobStorageBrowserIntegrationTests(
             ContentType.Txt
         )
 
-        testSubject.getFileMetadata(storagePath).shouldBeRight { metadata ->
-            metadata.contentType.shouldBe(ContentType.Txt)
-        }
+        testSubject.getFileMetadata(storagePath).shouldBeRight().contentType.shouldBe(ContentType.Txt)
     }
 
     test("Saving blob with custom time sets custom time") {
@@ -71,33 +69,33 @@ fun <T> blobStorageBrowserIntegrationTests(
             SaveFileOptions(customTime = testCustomTime)
         )
 
-        testSubject.getFileMetadata(storagePath).shouldBeRight { metadata ->
-            metadata.customTime.shouldNotBeNull().toEpochMilli() shouldBe testCustomTime.toEpochMilli()
-        }
+        testSubject.getFileMetadata(storagePath)
+            .shouldBeRight().customTime
+            .shouldNotBeNull()
+            .toEpochMilli() shouldBe testCustomTime.toEpochMilli()
     }
 
     test("Saving blob gzipped will set encoding and original content type") {
         testSubject.saveFile(storagePath, "Testcontent", ContentType.Txt, SaveFileOptions(gzipContent = true))
 
-        testSubject.getFileMetadata(storagePath).shouldBeRight {
+        testSubject.getFileMetadata(storagePath).shouldBeRightAnd {
             it.contentType shouldBe ContentType.Txt
             it.contentEncoding shouldBe "gzip"
         }
-        testSubject.loadFileAsString(storagePath) shouldBeRight {
-            it shouldBe "Testcontent"
-        }
+        testSubject.loadFileAsString(storagePath) shouldBeRight "Testcontent"
     }
 
     context("Non existing bucket gives correct error") {
         val invalidStoragePath = StoragePath(aNonExistingBucket, "someBlob")
 
         test("for loadFile") {
-            testSubject.loadFile(invalidStoragePath).shouldBeLeft(BlobStorageError.BlobNotFound(invalidStoragePath))
+            testSubject.loadFile(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(invalidStoragePath)
         }
 
         test("for getFileMetadata") {
-            testSubject.getFileMetadata(invalidStoragePath)
-                .shouldBeLeft(BlobStorageError.BlobNotFound(invalidStoragePath))
+            testSubject.getFileMetadata(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(
+                invalidStoragePath
+            )
         }
     }
 
@@ -105,12 +103,13 @@ fun <T> blobStorageBrowserIntegrationTests(
         val invalidStoragePath = StoragePath(testBucket, "someNonExistingBucketObject")
 
         test("for loadFile") {
-            testSubject.loadFile(invalidStoragePath).shouldBeLeft(BlobStorageError.BlobNotFound(invalidStoragePath))
+            testSubject.loadFile(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(invalidStoragePath)
         }
 
         test("for getFileMetadata") {
-            testSubject.getFileMetadata(invalidStoragePath)
-                .shouldBeLeft(BlobStorageError.BlobNotFound(invalidStoragePath))
+            testSubject.getFileMetadata(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(
+                invalidStoragePath
+            )
         }
     }
 }
@@ -137,8 +136,8 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
     test("saveFileIfNotExisting gives correct return value") {
         val blobTestContent = "Testing saveFileIfNotExisting"
 
-        testSubject.saveFileIfNotExisting(storagePath, blobTestContent, ContentType.Txt).shouldBeRight(true)
-        testSubject.saveFileIfNotExisting(storagePath, blobTestContent, ContentType.Txt).shouldBeRight(false)
+        testSubject.saveFileIfNotExisting(storagePath, blobTestContent, ContentType.Txt) shouldBeRight true
+        testSubject.saveFileIfNotExisting(storagePath, blobTestContent, ContentType.Txt) shouldBeRight false
     }
 
     test("saveFileIfNotExisting does not overwrite with new data") {
@@ -149,13 +148,13 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
         val blobNewContent = "Testing saveFileIfNotExisting with new content: ${Random.nextInt()}"
         testSubject.saveFileIfNotExisting(storagePath, blobNewContent, ContentType.Txt)
 
-        testSubject.loadFileAsString(storagePath).shouldBeRight(blobTestContent)
+        testSubject.loadFileAsString(storagePath) shouldBeRight blobTestContent
     }
 
     test("Loading GCS folder with content fails") {
         testSubject.saveFile(storagePath, "content", ContentType.Txt)
         val justPathStoragePath = storagePath.copy(fileName = "testFolder/")
-        testSubject.loadFile(justPathStoragePath).shouldBeLeft(BlobStorageError.BlobNotFound(justPathStoragePath))
+        testSubject.loadFile(justPathStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(justPathStoragePath)
     }
 
     test("Loading empty folder gives 0 byte object") {
@@ -163,7 +162,7 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
         val emptyFolderStoragePath = StoragePath(testBucket, "testEmptyFolder/")
 
         testSubject.saveFile(emptyFolderStoragePath, "", ContentType.Txt)
-        testSubject.loadFileAsString(emptyFolderStoragePath).shouldBeRight("")
+        testSubject.loadFileAsString(emptyFolderStoragePath) shouldBeRight ""
     }
 
     test("checkIfFileExists returns true if file exists, false otherwise") {
@@ -178,13 +177,9 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
         val toPath = StoragePath(testBucket2, "hello.txt")
         testSubject.saveFile(fromPath, "Hello", ContentType.Txt).shouldBeRight()
 
-        testSubject.copyFile(fromPath, toPath) shouldBeRight {
-            it shouldBe toPath
-        }
+        testSubject.copyFile(fromPath, toPath) shouldBeRight toPath
 
-        testSubject.loadFileAsString(toPath) shouldBeRight {
-            it shouldBe "Hello"
-        }
+        testSubject.loadFileAsString(toPath) shouldBeRight "Hello"
     }
 
     test("copying file will overwrite") {
@@ -193,25 +188,21 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
         testSubject.saveFile(fromPath, "Hello", ContentType.Txt).shouldBeRight()
         testSubject.saveFile(toPath, "Existing", ContentType.Txt).shouldBeRight()
 
-        testSubject.copyFile(fromPath, toPath) shouldBeRight {
-            it shouldBe toPath
-        }
+        testSubject.copyFile(fromPath, toPath) shouldBeRight toPath
 
-        testSubject.loadFileAsString(toPath) shouldBeRight {
-            it shouldBe "Hello"
-        }
+        testSubject.loadFileAsString(toPath) shouldBeRight "Hello"
     }
 
     test("deleting file returns true if it existed and was deleted") {
         val path = StoragePath(testBucket, "hello.txt")
         testSubject.saveFile(path, "Hello", ContentType.Txt).shouldBeRight()
 
-        testSubject.deleteFile(path) shouldBeRight { it shouldBe true }
+        testSubject.deleteFile(path) shouldBeRight true
     }
 
     test("deleting file returns false if it did not exist") {
         val path = StoragePath(testBucket, "hello.txt")
 
-        testSubject.deleteFile(path) shouldBeRight { it shouldBe false }
+        testSubject.deleteFile(path) shouldBeRight false
     }
 }

@@ -1,8 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
 import arrow.core.right
-import io.kotest.assertions.arrow.either.shouldBeLeft
-import io.kotest.assertions.arrow.either.shouldBeRight
+import io.kotest.assertions.arrow.core.shouldBeLeft
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
@@ -21,6 +20,7 @@ import io.mockk.mockk
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.toGMTDate
 import no.vegvesen.saga.modules.shared.toHttpDateString
+import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Base64
@@ -76,7 +76,7 @@ class DatexClientTests : AnnotationSpec() {
         )
         val result = repository.read()
 
-        result shouldBeRight {
+        result shouldBeRightAnd {
             it.document shouldBe testDatexDocument
         }
     }
@@ -90,9 +90,7 @@ class DatexClientTests : AnnotationSpec() {
         )
         val result = repository.read()
 
-        result shouldBeLeft {
-            it.shouldBeTypeOf<DatexError.AuthError>()
-        }
+        result.shouldBeLeft().shouldBeTypeOf<DatexError.AuthError>()
     }
 
     @Test
@@ -106,9 +104,7 @@ class DatexClientTests : AnnotationSpec() {
         )
             .read(testDate)
 
-        result shouldBeLeft {
-            it.shouldBeTypeOf<DatexError.NoNewDataAvailable>()
-        }
+        result.shouldBeLeft().shouldBeTypeOf<DatexError.NoNewDataAvailable>()
     }
 
     @Test
@@ -122,7 +118,7 @@ class DatexClientTests : AnnotationSpec() {
         )
             .read(testDate)
 
-        result shouldBeRight {
+        result shouldBeRightAnd {
             it.document shouldBe testDatexDocument
         }
     }
@@ -135,7 +131,7 @@ class DatexClientTests : AnnotationSpec() {
             datexValidator
         ).read()
 
-        result shouldBeRight {
+        result shouldBeRightAnd {
             it.lastModified shouldBe testDateLastModified
         }
     }

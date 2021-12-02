@@ -35,7 +35,9 @@ class DatastoreDeduplicationStorage(
                 .map(keyFactory::newKey)
                 .map(this::toKeyFilter)
                 .map(this::toFilteredQuery)
-                .parTraverseN(concurrentDatastoreRequests, datastore::run)
+                .parTraverseN(concurrentDatastoreRequests) {
+                    datastore.run(it)
+                }
                 .filter { it.hasNext() }
                 .map { it.next().name }
                 .toSet()

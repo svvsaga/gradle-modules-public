@@ -49,3 +49,16 @@ inline fun <reified T : Serializable> Pipeline.readBQTable(
             .withCoder(SerializableCoder.of(T::class.java))
             .from(inputTable)
     )
+
+inline fun <reified T : Serializable> Pipeline.readBQView(
+    inputView: String,
+    crossinline parseFn: (TableSchema, GenericRecord) -> T
+): PCollection<T> =
+    this.apply(
+        "Read from BQ view $inputView",
+        BigQueryIO
+            .read { schemaAndRecord -> parseFn(schemaAndRecord.tableSchema, schemaAndRecord.record) }
+            .withCoder(SerializableCoder.of(T::class.java))
+            .fromQuery("SELECT * FROM `${inputView.replace(':', '.')}`")
+            .usingStandardSql()
+    )

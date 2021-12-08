@@ -21,7 +21,7 @@ val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
 val serializationVersion = "1.2.1"
 val functionsVersion = "1.0.4"
-val gcpLibrariesBomVersion = "20.6.0"
+val gcpLibrariesBomVersion = "24.0.0"
 val xmlBindVersion = "2.3.1"
 
 val modulesVersion =

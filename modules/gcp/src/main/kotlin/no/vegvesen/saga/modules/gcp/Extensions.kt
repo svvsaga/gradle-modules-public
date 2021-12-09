@@ -1,6 +1,6 @@
 package no.vegvesen.saga.modules.gcp
 
-import com.google.cloud.Timestamp
 import java.time.Instant
 
-fun Timestamp.toInstant(): Instant = Instant.ofEpochSecond(this.seconds, this.nanos.toLong())
+fun com.google.cloud.Timestamp.toInstant(): Instant = Instant.ofEpochSecond(seconds, nanos.toLong())
+fun com.google.protobuf.Timestamp.toInstant(): Instant = Instant.ofEpochSecond(seconds, nanos.toLong())

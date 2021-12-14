@@ -10,7 +10,6 @@ group = "no.vegvesen.saga"
 version =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)
         ?: "1.0.0-SNAPSHOT"
-
 gradlePlugin {
     plugins {
         register("SagaBuild") {
@@ -21,7 +20,13 @@ gradlePlugin {
     }
 }
 
-val kotlinVersion = "1.5.31"
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+val kotlinVersion = "1.6.10"
 
 dependencies {
     implementation("org.jetbrains.kotlin", "kotlin-gradle-plugin", kotlinVersion)
@@ -39,7 +44,6 @@ publishing {
         }
     }
 }
-
 tasks.withType<PublishToMavenRepository> {
     doFirst {
         println("Publishing ${publication.groupId}:${publication.artifactId}:${publication.version} to ${repository.url}")

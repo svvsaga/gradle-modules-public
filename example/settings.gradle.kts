@@ -12,6 +12,8 @@ pluginManagement {
 
 enableFeaturePreview("VERSION_CATALOGS")
 
+val modulesVersion = "7.0.0"
+
 dependencyResolutionManagement {
     repositories {
         maven {
@@ -20,7 +22,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("saga") {
-            from("no.vegvesen.saga.modules:modules:1.3.9")
+            from("no.vegvesen.saga.modules:modules:$modulesVersion")
         }
     }
 }

@@ -19,7 +19,7 @@ import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 @ExperimentalSerializationApi
 abstract class GcpAuthenticatedHttpFunctionWithParams<T>(
     private val deserializer: DeserializationStrategy<T>,
-    private val requestVerifier: RequestVerifier
+    private val authenticator: GoogleUserAuthenticator
 ) : HttpFunction, Logging {
     private val functionName = javaClass.simpleName
 
@@ -30,11 +30,11 @@ abstract class GcpAuthenticatedHttpFunctionWithParams<T>(
     abstract suspend fun process(params: T, user: UserInfo): Either<Throwable, Unit>
 
     override fun service(request: HttpRequest, response: HttpResponse) = runBlocking {
-        log().request(request)
+        log().httpRequest(request)
 
         either<Throwable, Unit> {
             val params = parseParameters(request, deserializer).bind()
-            val userInfo = requestVerifier.verifyUserInfo(request).bind()
+            val userInfo = authenticator.getAuthenticatedUserInfo(request).bind()
             Either.catchAndFlatten {
                 process(params, userInfo)
             }.bind()

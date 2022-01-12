@@ -25,7 +25,7 @@ abstract class GcpHttpFunctionWithParams<T>(
     }
 
     override fun service(request: HttpRequest, response: HttpResponse) = runBlocking {
-        log().request(request)
+        log().httpRequest(request)
 
         parseParameters(request, deserializer).flatMap { params ->
             Either.catchAndFlatten {

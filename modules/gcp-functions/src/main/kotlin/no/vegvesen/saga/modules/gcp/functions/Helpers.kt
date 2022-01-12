@@ -23,7 +23,7 @@ fun <T> parseParameters(
         ValidationException(it)
     }
 
-fun Logger.request(request: HttpRequest) {
+fun Logger.httpRequest(request: HttpRequest) {
     info(
         "Incoming request:",
         kv("method", request.method),

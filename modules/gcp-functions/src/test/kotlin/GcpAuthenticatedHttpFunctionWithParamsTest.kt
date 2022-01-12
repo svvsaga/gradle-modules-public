@@ -20,7 +20,7 @@ import kotlinx.serialization.Serializable
 import no.vegvesen.saga.modules.gcp.functions.AuthenticationException
 import no.vegvesen.saga.modules.gcp.functions.AuthorizationException
 import no.vegvesen.saga.modules.gcp.functions.GcpAuthenticatedHttpFunctionWithParams
-import no.vegvesen.saga.modules.gcp.functions.RequestVerifier
+import no.vegvesen.saga.modules.gcp.functions.GoogleUserAuthenticator
 import no.vegvesen.saga.modules.gcp.functions.UserInfo
 import no.vegvesen.saga.modules.testing.TestLogger
 
@@ -41,7 +41,7 @@ class GcpAuthenticatedHttpFunctionWithParamsTest : FunSpec({
     val testLogger = TestLogger()
 
     fun createFunction(
-        requestVerifier: RequestVerifier,
+        requestVerifier: GoogleUserAuthenticator,
         process: suspend (params: MyParams, userInfo: UserInfo) -> Either<Throwable, Unit>
     ) =
         object : GcpAuthenticatedHttpFunctionWithParams<MyParams>(MyParams.serializer(), requestVerifier) {
@@ -49,17 +49,17 @@ class GcpAuthenticatedHttpFunctionWithParamsTest : FunSpec({
                 process(params, user)
         }
 
-    fun createSuccessFunction(requestVerifier: RequestVerifier) =
+    fun createSuccessFunction(requestVerifier: GoogleUserAuthenticator) =
         createFunction(requestVerifier) { _, _ -> Unit.right() }
 
-    fun createRequestVerifier(result: Either<AuthenticationException, UserInfo>) = mockk<RequestVerifier> {
-        every { verifyUserInfo(any()) } returns result
+    fun createAuthenticator(result: Either<AuthenticationException, UserInfo>) = mockk<GoogleUserAuthenticator> {
+        every { getAuthenticatedUserInfo(any()) } returns result
     }
 
     val userInfo = UserInfo("userId", "user@example.com")
 
     test("returns HTTP 200 on valid token") {
-        val requestVerifier = createRequestVerifier(userInfo.right())
+        val requestVerifier = createAuthenticator(userInfo.right())
         val function = createSuccessFunction(requestVerifier)
 
         function.service(request, response)
@@ -68,7 +68,7 @@ class GcpAuthenticatedHttpFunctionWithParamsTest : FunSpec({
     }
 
     test("logs warning and returns HTTP 401 on invalid token") {
-        val requestVerifier = createRequestVerifier(AuthenticationException("oops").left())
+        val requestVerifier = createAuthenticator(AuthenticationException("oops").left())
         val function = createSuccessFunction(requestVerifier)
 
         function.service(request, response)
@@ -78,7 +78,7 @@ class GcpAuthenticatedHttpFunctionWithParamsTest : FunSpec({
     }
 
     test("logs warning and returns HTTP 403 on AuthorizationException") {
-        val requestVerifier = createRequestVerifier(userInfo.right())
+        val requestVerifier = createAuthenticator(userInfo.right())
         val function = createFunction(requestVerifier) { _, _ -> AuthorizationException("nope").left() }
 
         function.service(request, response)

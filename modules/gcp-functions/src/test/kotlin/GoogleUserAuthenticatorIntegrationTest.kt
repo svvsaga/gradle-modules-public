@@ -9,7 +9,7 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.string.shouldNotBeBlank
 import io.mockk.every
 import io.mockk.mockk
-import no.vegvesen.saga.modules.gcp.functions.RequestVerifier
+import no.vegvesen.saga.modules.gcp.functions.GoogleUserAuthenticator
 import no.vegvesen.saga.modules.gcp.functions.TokenParser
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.shouldBeRightAnd
@@ -17,9 +17,9 @@ import java.util.Optional
 
 // NOTE: Requires having logged in with a user as GOOGLE_APPLICATION_CREDENTIALS (or `gcloud auth application-default login`)
 @Tags(IntegrationTest)
-class RequestVerifierIntegrationTest : FunSpec({
+class GoogleUserAuthenticatorIntegrationTest : FunSpec({
     val testSubject =
-        RequestVerifier(
+        GoogleUserAuthenticator(
             TokenParser(),
             GoogleIdTokenVerifier.Builder(GoogleNetHttpTransport.newTrustedTransport(), GsonFactory())
                 .setIssuer("https://accounts.google.com")
@@ -39,7 +39,7 @@ class RequestVerifierIntegrationTest : FunSpec({
             every { getFirstHeader("Authorization") } returns Optional.of("Bearer ${idToken.tokenValue}")
         }
 
-        testSubject.verifyUserInfo(request) shouldBeRightAnd {
+        testSubject.getAuthenticatedUserInfo(request) shouldBeRightAnd {
             it.email.shouldNotBeBlank()
             it.userId.shouldNotBeBlank()
         }

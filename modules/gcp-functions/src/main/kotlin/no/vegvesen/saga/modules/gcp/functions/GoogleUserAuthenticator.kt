@@ -8,7 +8,7 @@ import com.google.api.client.auth.openidconnect.IdToken
 import com.google.api.client.auth.openidconnect.IdTokenVerifier
 import com.google.cloud.functions.HttpRequest
 
-class RequestVerifier(
+class GoogleUserAuthenticator(
     private val tokenParser: TokenParser,
     private val tokenVerifier: IdTokenVerifier
 ) {
@@ -35,7 +35,7 @@ class RequestVerifier(
         }
     }
 
-    fun verifyUserInfo(request: HttpRequest) = verifyIdToken(request).flatMap {
+    fun getAuthenticatedUserInfo(request: HttpRequest) = verifyIdToken(request).flatMap {
         val userId = it.payload.subject
 
         when (val email = it.payload["email"]) {

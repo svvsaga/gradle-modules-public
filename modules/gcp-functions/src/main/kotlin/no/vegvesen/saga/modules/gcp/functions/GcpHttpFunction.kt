@@ -23,7 +23,7 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
         val projectId by lazy { envOrThrow("GCP_PROJECT") }
     }
 
-    val name = this::class.java.simpleName.toString()
+    private val functionName = javaClass.simpleName
 
     override fun service(request: HttpRequest, response: HttpResponse) = runBlocking {
         logger.info(
@@ -41,17 +41,17 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
             ifLeft = { err ->
                 when (err) {
                     is SimpleFunctionError.Exception -> logger.error(
-                        "Failed with exception during run of HTTP function $name",
+                        "Failed with exception during run of HTTP function $functionName",
                         err.exception
                     )
                     is SimpleFunctionError.UnexpectedError -> logger.error(
-                        "Failed with unexpected error during run of HTTP function $name",
+                        "Failed with unexpected error during run of HTTP function $functionName",
                         kv("msg", err.msg),
                         kv("error", err.obj)
                     )
                 }
                 response.setStatusCode(HttpURLConnection.HTTP_INTERNAL_ERROR)
-                response.writer.write("$name: Failed.")
+                response.writer.write("$functionName: Failed.")
                 response.writer.flush()
             },
             ifRight = {

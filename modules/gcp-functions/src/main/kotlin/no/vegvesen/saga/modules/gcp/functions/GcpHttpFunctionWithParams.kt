@@ -8,12 +8,8 @@ import com.google.cloud.functions.HttpResponse
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
-import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.envOrThrow
-import no.vegvesen.saga.modules.shared.functions.parseJsonParameters
-import no.vegvesen.saga.modules.shared.functions.parseQueryParameters
-import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
 import java.net.HttpURLConnection
 
@@ -28,24 +24,10 @@ abstract class GcpHttpFunctionWithParams<T>(
         val projectId by lazy { envOrThrow("GCP_PROJECT") }
     }
 
-    class ValidationException(override val cause: Throwable?) : Exception("Input validation failed", cause)
-
     override fun service(request: HttpRequest, response: HttpResponse) = runBlocking {
-        log().info(
-            "Incoming request:",
-            kv("method", request.method),
-            kv("uri", request.uri),
-            kv("path", request.path),
-            kv("params", request.queryParameters)
-        )
+        log().request(request)
 
-        if (request.contentType.isPresent && request.contentType.get() == ContentType.Json.value) {
-            parseJsonParameters(deserializer, request.reader.readText())
-        } else {
-            parseQueryParameters(deserializer, request.queryParameters)
-        }.mapLeft {
-            ValidationException(it)
-        }.flatMap { params ->
+        parseParameters(request, deserializer).flatMap { params ->
             Either.catchAndFlatten {
                 process(params)
             }

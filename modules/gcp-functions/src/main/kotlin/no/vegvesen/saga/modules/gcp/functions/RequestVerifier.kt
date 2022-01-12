@@ -35,8 +35,12 @@ class RequestVerifier(
         }
     }
 
-    fun verifyUserInfo(request: HttpRequest) = verifyIdToken(request).map {
-        val userId = it.payload.authorizedParty
-        UserInfo(userId)
+    fun verifyUserInfo(request: HttpRequest) = verifyIdToken(request).flatMap {
+        val userId = it.payload.subject
+
+        when (val email = it.payload["email"]) {
+            is String -> UserInfo(userId, email).right()
+            else -> Exception("ID Token does not have 'email' field").left()
+        }
     }
 }

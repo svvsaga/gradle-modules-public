@@ -1,5 +1,6 @@
 package no.vegvesen.saga.modules.gcp.functions
 
 data class UserInfo(
-    val userId: String
+    val userId: String,
+    val email: String
 )

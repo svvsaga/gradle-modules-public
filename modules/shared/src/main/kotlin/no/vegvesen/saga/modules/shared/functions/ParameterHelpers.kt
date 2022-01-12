@@ -9,7 +9,6 @@ import kotlinx.serialization.properties.Properties
 val lenientJson = Json { isLenient = true }
 
 @ExperimentalSerializationApi
-@Suppress("UNCHECKED_CAST")
 fun <T> parseQueryParameters(
     deserializer: DeserializationStrategy<T>,
     queryParameters: Map<String, List<String>>

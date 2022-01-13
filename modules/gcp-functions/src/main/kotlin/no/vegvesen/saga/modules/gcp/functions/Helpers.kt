@@ -20,7 +20,7 @@ fun <T> parseParameters(
     } else {
         parseQueryParameters(deserializer, request.queryParameters)
     }.mapLeft {
-        ValidationException(it)
+        ValidationException(cause = it)
     }
 
 fun Logger.httpRequest(request: HttpRequest) {

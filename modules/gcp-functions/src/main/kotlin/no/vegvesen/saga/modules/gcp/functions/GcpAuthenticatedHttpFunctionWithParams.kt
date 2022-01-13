@@ -10,6 +10,7 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.envOrThrow
+import no.vegvesen.saga.modules.shared.functions.UserInfo
 import no.vegvesen.saga.modules.shared.log
 import java.net.HttpURLConnection.HTTP_BAD_REQUEST
 import java.net.HttpURLConnection.HTTP_FORBIDDEN

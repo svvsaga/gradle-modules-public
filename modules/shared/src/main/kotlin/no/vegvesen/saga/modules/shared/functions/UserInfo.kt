@@ -1,4 +1,4 @@
-package no.vegvesen.saga.modules.gcp.functions
+package no.vegvesen.saga.modules.shared.functions
 
 data class UserInfo(
     val userId: String,

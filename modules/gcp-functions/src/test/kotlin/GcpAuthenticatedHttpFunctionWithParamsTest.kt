@@ -21,7 +21,7 @@ import no.vegvesen.saga.modules.gcp.functions.AuthenticationException
 import no.vegvesen.saga.modules.gcp.functions.AuthorizationException
 import no.vegvesen.saga.modules.gcp.functions.GcpAuthenticatedHttpFunctionWithParams
 import no.vegvesen.saga.modules.gcp.functions.GoogleUserAuthenticator
-import no.vegvesen.saga.modules.gcp.functions.UserInfo
+import no.vegvesen.saga.modules.shared.functions.UserInfo
 import no.vegvesen.saga.modules.testing.TestLogger
 
 @ExperimentalSerializationApi

@@ -6,6 +6,7 @@ import arrow.core.left
 import arrow.core.right
 import com.google.api.client.auth.openidconnect.IdToken
 import com.google.cloud.functions.HttpRequest
+import no.vegvesen.saga.modules.shared.functions.UserInfo
 
 class GoogleUserAuthenticator(
     private val tokenProcessor: GoogleIdTokenProcessor = GoogleIdTokenProcessor()

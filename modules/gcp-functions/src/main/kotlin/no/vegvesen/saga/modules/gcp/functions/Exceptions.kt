@@ -1,7 +1,9 @@
 package no.vegvesen.saga.modules.gcp.functions
 
-class AuthenticationException(override val message: String?) : Exception(message)
+class AuthenticationException(override val message: String? = null, override val cause: Throwable? = null) :
+    Exception(message, cause)
 
-class AuthorizationException(override val message: String?) : Exception(message)
+class AuthorizationException(override val message: String? = null, override val cause: Throwable? = null) :
+    Exception(message, cause)
 
 class ValidationException(override val cause: Throwable?) : Exception("Input validation failed", cause)

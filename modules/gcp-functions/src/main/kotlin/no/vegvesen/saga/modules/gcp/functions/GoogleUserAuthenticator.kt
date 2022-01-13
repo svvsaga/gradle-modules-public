@@ -8,7 +8,7 @@ import com.google.api.client.auth.openidconnect.IdToken
 import com.google.cloud.functions.HttpRequest
 
 class GoogleUserAuthenticator(
-    private val tokenProcessor: GoogleIdTokenProcessor
+    private val tokenProcessor: GoogleIdTokenProcessor = GoogleIdTokenProcessor()
 ) {
     private fun verifyIdToken(request: HttpRequest): Either<AuthenticationException, IdToken> {
         val maybeAuthHeader = request.getFirstHeader("Authorization")

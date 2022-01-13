@@ -6,7 +6,6 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.string.shouldNotBeBlank
 import io.mockk.every
 import io.mockk.mockk
-import no.vegvesen.saga.modules.gcp.functions.GoogleIdTokenProcessor
 import no.vegvesen.saga.modules.gcp.functions.GoogleUserAuthenticator
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.shouldBeRightAnd
@@ -15,7 +14,7 @@ import java.util.Optional
 // NOTE: Requires having logged in with a user as GOOGLE_APPLICATION_CREDENTIALS (or `gcloud auth application-default login`)
 @Tags(IntegrationTest)
 class GoogleUserAuthenticatorIntegrationTest : FunSpec({
-    val testSubject = GoogleUserAuthenticator(GoogleIdTokenProcessor())
+    val testSubject = GoogleUserAuthenticator()
 
     val credentials = GoogleCredentials.getApplicationDefault()
 

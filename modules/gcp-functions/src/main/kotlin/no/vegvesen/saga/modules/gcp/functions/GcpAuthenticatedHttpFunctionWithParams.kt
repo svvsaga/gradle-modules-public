@@ -19,7 +19,7 @@ import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 @ExperimentalSerializationApi
 abstract class GcpAuthenticatedHttpFunctionWithParams<T>(
     private val deserializer: DeserializationStrategy<T>,
-    private val authenticator: GoogleUserAuthenticator
+    private val authenticator: GoogleUserAuthenticator = GoogleUserAuthenticator()
 ) : HttpFunction, Logging {
     private val functionName = javaClass.simpleName
 

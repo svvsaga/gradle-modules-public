@@ -5,7 +5,8 @@ Common Gradle modules for SVV Saga projects.
 ## Publications
 
 All plugins and modules will be published both to GitHub Packages and to Google Artifact Registry. The list of packages
-can be found at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (
+can be found
+at [GCP Artifact Registry](https://console.cloud.google.com/artifacts/maven/saga-artifacts/europe/maven-public?project=saga-artifacts) (
 requires login with any Google account).
 
 ## Publishing new versions
@@ -83,11 +84,11 @@ In `settings.gradle.kts`:
 ```kotlin
 pluginManagement {
     repositories {
-        mavenCentral()
-        gradlePluginPortal()
         maven {
             url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 ```
@@ -110,13 +111,13 @@ In `build.gradle.kts`:
 
 ```kotlin
 repositories {
+    maven {
+        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+    }
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
     maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
     maven("https://jitpack.io")
-    maven {
-        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-    }
 }
 
 dependencies {

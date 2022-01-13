@@ -17,4 +17,12 @@ include("shared-testfactory")
 
 pluginManagement {
     includeBuild("../plugins/saga-build")
+
+    repositories {
+        maven {
+            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
 }

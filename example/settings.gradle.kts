@@ -2,11 +2,11 @@ rootProject.name = "example"
 
 pluginManagement {
     repositories {
-        mavenCentral()
-        gradlePluginPortal()
         maven {
             url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 

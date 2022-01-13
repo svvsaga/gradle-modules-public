@@ -5,12 +5,10 @@ import arrow.core.flatMap
 import arrow.core.left
 import arrow.core.right
 import com.google.api.client.auth.openidconnect.IdToken
-import com.google.api.client.auth.openidconnect.IdTokenVerifier
 import com.google.cloud.functions.HttpRequest
 
 class GoogleUserAuthenticator(
-    private val tokenParser: TokenParser,
-    private val tokenVerifier: IdTokenVerifier
+    private val tokenProcessor: GoogleIdTokenProcessor
 ) {
     private fun verifyIdToken(request: HttpRequest): Either<AuthenticationException, IdToken> {
         val maybeAuthHeader = request.getFirstHeader("Authorization")
@@ -18,15 +16,7 @@ class GoogleUserAuthenticator(
         return if (maybeAuthHeader.isPresent) {
             val header = maybeAuthHeader.get()
             if (header.startsWith("bearer ", true)) {
-                tokenParser.parse(header.substring(7))
-                    .mapLeft { AuthenticationException("Failed to parse ID token") }
-                    .flatMap { token ->
-                        if (tokenVerifier.verify(token)) {
-                            token.right()
-                        } else {
-                            AuthenticationException("Could not verify ID token").left()
-                        }
-                    }
+                tokenProcessor.parseAndVerify(header.substring(7))
             } else {
                 AuthenticationException("Unexpected Authorization header format").left()
             }

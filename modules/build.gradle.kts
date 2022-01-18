@@ -13,7 +13,7 @@ plugins {
 }
 
 val kotlinVersion = "1.6.10"
-val kotlinxCoroutinesVersion = "1.5.2"
+val kotlinxCoroutinesVersion = "1.6.0"
 val kotlinxDateTimeVersion = "0.2.1"
 val ktorVersion = "1.6.5"
 val arrowVersion = "1.0.1"

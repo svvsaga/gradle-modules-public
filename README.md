@@ -11,7 +11,7 @@ requires login with any Google account).
 
 ## Publishing new versions
 
-This is done through the "Publish packages" GitHub action found in `.github/workflows/publish-packages.yml`
+This is done through the "Publish packages" GitHub action found in `.github/workflows/publish-packages.yml`.
 
 We follow semantic versioning when publishing new versions.
 

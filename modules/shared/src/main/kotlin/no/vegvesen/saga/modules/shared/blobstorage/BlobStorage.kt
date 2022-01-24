@@ -9,7 +9,7 @@ import java.time.Instant
 /**
  *
  * Note: this file must NOT reference any GCP/GCS types, as the interface should be possible to implement
- * without GCP dependency, e.g. for testing and also shield the clients for changes to GCS types/APIs
+ * without GCP dependency, e.g. for testing and also shield the clients for changes to GCS types/APIs.
  *
  */
 data class StoragePath(val bucketName: String, val fileName: String) {

@@ -69,6 +69,10 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             blobInfoBuilder.setCustomTime(it.toEpochMilli())
         }
 
+        options.customMetadata?.also {
+            blobInfoBuilder.setMetadata(it)
+        }
+
         return Either.catch {
             storage.create(
                 blobInfoBuilder.build(),
@@ -178,7 +182,8 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             fileName = blob.name,
             contentType = ContentType(blob.contentType),
             customTime = blob.customTime?.let(Instant::ofEpochMilli),
-            contentEncoding = blob.contentEncoding
+            contentEncoding = blob.contentEncoding,
+            customMetadata = blob.metadata
         )
 
     override suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath> =

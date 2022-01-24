@@ -52,11 +52,16 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         val blob = loadStringResourceOrThrow("blobTest.txt")
         val storagePath = StoragePath(testBucket, "blobTest.txt")
         val customTime = Instant.now().truncatedTo(ChronoUnit.MILLIS)
+        val customMetadata = mapOf("customKey" to "customValue")
         testSubject.saveFile(
             storagePath,
             blob,
             ContentType.Txt,
-            SaveFileOptions(gzipContent = true, customTime = customTime)
+            SaveFileOptions(
+                gzipContent = true,
+                customTime = customTime,
+                customMetadata = customMetadata
+            )
         ).shouldBeRight()
 
         testSubject.rewriteFile(storagePath).shouldBeRight()
@@ -66,7 +71,8 @@ class GcpBlobStorageIntegrationTests : FunSpec({
             "blobTest.txt",
             ContentType.Txt,
             customTime,
-            "gzip"
+            "gzip",
+            customMetadata
         )
     }
 

@@ -29,7 +29,7 @@ import java.time.Instant
 
 /**
 TODO: Consider adding stream-oriented methods,
-such that one does not have to keep entire ByteArrays in memory
+such that one does not have to keep entire ByteArrays in memory.
 
 NOTE: Tests for this class is in no/vegvesen/saga/modules/gcp/integrationtests/GcpBlobStorageIntegrationTests.kt
  */

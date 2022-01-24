@@ -35,7 +35,8 @@ class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
         storagePath.fileName,
         contentType,
         options.customTime,
-        if (options.gzipContent) "gzip" else null
+        if (options.gzipContent) "gzip" else null,
+        options.customMetadata
     )
 
     override suspend fun saveFileIfNotExisting(

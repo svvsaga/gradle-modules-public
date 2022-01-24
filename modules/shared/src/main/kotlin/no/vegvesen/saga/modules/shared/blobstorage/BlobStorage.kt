@@ -19,7 +19,8 @@ data class StoragePath(val bucketName: String, val fileName: String) {
 data class SaveFileOptions(
     val gzipContent: Boolean = false,
     val noOverwrite: Boolean = false,
-    val customTime: Instant? = null
+    val customTime: Instant? = null,
+    val customMetadata: Map<String, String>? = null
 )
 
 enum class GzipDecompressionBehaviour {
@@ -38,7 +39,8 @@ data class FileMetadata(
     val fileName: String,
     val contentType: ContentType,
     val customTime: Instant? = null,
-    val contentEncoding: String? = null
+    val contentEncoding: String? = null,
+    val customMetadata: Map<String, String>? = null
 )
 
 interface BlobStorageBrowser {

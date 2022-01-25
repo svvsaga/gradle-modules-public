@@ -10,7 +10,6 @@ jobs:
     name: Run all Gradle integration tests and report errors to Slack channel
     uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v7.1.0
     with:
-      ignore_modules_regex: "" # TODO
-      ignore_modules: "" # TODO
+      ignore_modules: "./example,./plugins/saga-build"
     secrets:
-      slack_webhook_url: ${{ secrets.SLACK_INTEGRATION_TEST_FAILED_WEBHOOK_URL }}
+      slack_webhook_url: ${{ secrets.SLACK_INTEGRATION_TEST_FAILED_YGGDRASIL_WEBHOOK_URL }}

@@ -1,0 +1,16 @@
+name: Run all integration tests nightly
+
+on:
+  schedule:
+    - cron: '37 2 * * *' # 02:37 every night
+  workflow_dispatch:
+
+jobs:
+  run-all-gradle-integration-tests-and-report-to-slack:
+    name: Run all Gradle integration tests and report errors to Slack channel
+    uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v7.1.0
+    with:
+      ignore_modules_regex: "" # TODO
+      ignore_modules: "" # TODO
+    secrets:
+      slack_webhook_url: ${{ secrets.SLACK_INTEGRATION_TEST_FAILED_WEBHOOK_URL }}

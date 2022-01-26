@@ -8,8 +8,9 @@ on:
 jobs:
   run-all-gradle-integration-tests-and-report-to-slack:
     name: Run all Gradle integration tests and report errors to Slack channel
-    uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v7.1.0
+    uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v7.2.0
     with:
-      ignore_modules: "./example,./plugins/saga-build"
+      ignore_modules: ./example,./plugins/saga-build
+      build_and_inttest_cmd: SAGA_INT_TEST_PROJECT_ID="saga-int-testing-stm-cmzf" ./gradlew inttest
     secrets:
       slack_webhook_url: ${{ secrets.SLACK_INTEGRATION_TEST_FAILED_YGGDRASIL_WEBHOOK_URL }}

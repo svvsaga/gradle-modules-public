@@ -19,7 +19,7 @@ class GoogleUserAuthenticatorIntegrationTest : FunSpec({
     val credentials = GoogleCredentials.getApplicationDefault()
 
     if (credentials !is IdTokenProvider) {
-        throw Exception("Must be IdTokenProvider")
+        throw Exception("Must be IdTokenProvider, application default credentials is: ${credentials.javaClass.name}")
     }
 
     credentials.refreshIfExpired()

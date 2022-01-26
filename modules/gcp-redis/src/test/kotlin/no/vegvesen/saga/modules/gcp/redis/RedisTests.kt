@@ -4,6 +4,7 @@ import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.DeduplicationStorage
+import no.vegvesen.saga.modules.testing.ExternalTest
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import org.junit.Ignore
 import org.junit.jupiter.api.Tag
@@ -46,6 +47,7 @@ fun testInsert(storage: DeduplicationStorage<Long>) {
 
 @ExperimentalTime
 @Tag(IntegrationTest)
+@Tag(ExternalTest)
 class RedisTests {
     private val testSubject = RedisDeduplicationStorage(Jedis("localhost"))
 

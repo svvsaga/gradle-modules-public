@@ -101,6 +101,14 @@ fun BigQuery.fetchRowCount(dataset: String, table: String) =
     )
         .values.first()[0].longValue
 
+fun BigQuery.fetchRowCount(tableId: TableId) =
+    this.query(
+        QueryJobConfiguration.of(
+            "SELECT COUNT(*) FROM `${if (tableId.project == null) "" else "${tableId.project}."}${tableId.dataset}.${tableId.table}`"
+        )
+    )
+        .values.first()[0].longValue
+
 fun BigQuery.fetchScalar(query: String) = query(QueryJobConfiguration.of(query)).values.first()[0].longValue
 
 fun BigQuery.queryOf(query: String): TableResult = query(QueryJobConfiguration.of(query))

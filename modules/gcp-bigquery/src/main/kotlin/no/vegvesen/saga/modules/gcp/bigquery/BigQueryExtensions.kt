@@ -159,3 +159,13 @@ suspend fun <T> BigQuery.streamDocuments(
         Unit.right()
     }
 }
+
+private val bigQueryRegex =
+    Regex("//bigquery\\.googleapis\\.com/projects/(?<project>.+)/datasets/(?<dataset>.+)/tables/(?<table>.+)")
+
+fun tryParseTableIdFromResource(resourceId: String): TableId? = bigQueryRegex.matchEntire(resourceId)?.let {
+    val project = it.groups["project"]!!.value
+    val dataset = it.groups["dataset"]!!.value
+    val table = it.groups["table"]!!.value
+    TableId.of(project, dataset, table)
+}

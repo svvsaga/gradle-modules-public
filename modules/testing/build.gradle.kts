@@ -1,7 +1,7 @@
-val kotestVersion = "4.6.3"
-val kotestExtensionsVersion = "1.2.0"
-val mockkVersion = "1.11.0"
-val jUnitVersion = "5.7.0"
+val kotestVersion = "5.1.0"
+val kotestExtensionsVersion = "1.2.2"
+val mockkVersion = "1.12.2"
+val jUnitVersion = "5.8.2"
 val slf4jVersion = "1.7.30"
 val logbackVersion = "1.2.3"
 

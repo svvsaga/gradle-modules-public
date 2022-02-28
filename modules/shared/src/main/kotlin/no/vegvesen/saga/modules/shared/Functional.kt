@@ -33,20 +33,6 @@ suspend inline fun <T> tryFlatWithContext(
         fn()
     }
 
-inline fun <A, B> Either<A, B>.tapLeft(tap: (left: A) -> Unit): Either<A, B> {
-    return this.mapLeft {
-        tap(it)
-        it
-    }
-}
-
-inline fun <A, B> Either<A, B>.tap(tap: (right: B) -> Unit): Either<A, B> {
-    return this.map {
-        tap(it)
-        it
-    }
-}
-
 inline fun <A, B, F> Either<F, A>.flatTap(f: (A) -> Either<F, B>): Either<F, A> =
     flatMap { a -> f(a).map { a } }
 

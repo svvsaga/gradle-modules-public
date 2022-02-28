@@ -11,7 +11,6 @@ import no.vegvesen.saga.modules.shared.functions.PubSubFunction
 import no.vegvesen.saga.modules.shared.functions.logOrThrow
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
-import no.vegvesen.saga.modules.shared.tapLeft
 import java.time.Instant
 import java.time.format.DateTimeParseException
 import java.util.Base64

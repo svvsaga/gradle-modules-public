@@ -55,6 +55,9 @@ tasks.register<Delete>("cleanDatex") {
 
 tasks.getByName("jaxb") {
     dependsOn("cleanDatex")
+}
+
+tasks.getByName("jaxbJavaGenDatex3") {
     finalizedBy("addRootElement")
 }
 

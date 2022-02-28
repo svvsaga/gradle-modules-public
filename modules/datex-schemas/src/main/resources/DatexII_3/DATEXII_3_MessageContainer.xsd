@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:con="http://datex2.eu/schema/3/messageContainer" version="1"
+           targetNamespace="http://datex2.eu/schema/3/messageContainer"
+           xmlns:ex="http://datex2.eu/schema/3/exchangeInformation" xmlns:cis="http://datex2.eu/schema/3/cisInformation"
+           xmlns:com="http://datex2.eu/schema/3/common"
+           xmlns:inf="http://datex2.eu/schema/3/informationManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/informationManagement"
+             schemaLocation="DATEXII_3_InformationManagement.xsd"/>
+  <xs:import namespace="http://datex2.eu/schema/3/d2Payload" schemaLocation="DATEXII_3_D2Payload.xsd"/>
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd"/>
+  <xs:import namespace="http://datex2.eu/schema/3/cisInformation" schemaLocation="DATEXII_3_CISInformation.xsd"/>
+  <xs:import namespace="http://datex2.eu/schema/3/exchangeInformation"
+             schemaLocation="DATEXII_3_ExchangeInformation.xsd"/>
+  <xs:element name="exchangeInformation" type="ex:ExchangeInformation">
+    <xs:unique name="_exchangeInformationServiceRequestConstraint">
+      <xs:selector xpath=".//cis:serviceRequest"/>
+      <xs:field xpath="@id"/>
+      <xs:field xpath="@version"/>
+    </xs:unique>
+  </xs:element>
+  <xs:element name="messageContainer" type="con:MessageContainer">
+    <xs:unique name="_messageContainerServiceRequestConstraint">
+      <xs:selector xpath=".//cis:serviceRequest"/>
+      <xs:field xpath="@id"/>
+      <xs:field xpath="@version"/>
+    </xs:unique>
+  </xs:element>
+  <xs:complexType name="MessageContainer">
+    <xs:sequence>
+      <xs:element name="payload" type="com:PayloadPublication" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="cisInformation" type="cis:CISInformation" minOccurs="0"/>
+      <xs:element name="exchangeInformation" type="ex:ExchangeInformation"/>
+      <xs:element name="informationManagement" type="inf:InformationManagement" minOccurs="0"/>
+      <xs:element name="_messageContainerExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="modelBaseVersion" type="xs:string" use="required" fixed="3"/>
+    <xs:attribute name="extensionName" type="xs:string" default="Exchange 2018"/>
+    <xs:attribute name="extensionVersion" type="xs:string" default="1"/>
+    <xs:attribute name="profileName" type="xs:string"/>
+    <xs:attribute name="profileVersion" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>

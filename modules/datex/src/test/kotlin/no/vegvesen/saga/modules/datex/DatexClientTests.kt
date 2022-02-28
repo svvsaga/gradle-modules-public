@@ -37,7 +37,7 @@ class DatexClientTests : AnnotationSpec() {
         XmlString("Datex document<publicationTime>2021-01-01T00:00:00+02:00</publicationTime>")
 
     private val datexValidator = mockk<DatexValidator> {
-        every { validateDatexDoc(XmlString(any())) } returns DatexVersion.DATEX_2_3.right()
+        every { validateDatexDoc(XmlString(any())) } returns DatexVersion.DATEX_2.right()
     }
 
     private val ktorTestHttpClient = HttpClient(MockEngine) {

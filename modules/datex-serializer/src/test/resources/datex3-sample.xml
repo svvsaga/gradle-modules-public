@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/situation" xmlns:ns9="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns10="http://datex2.eu/schema/3/vms" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+  <ns11:payload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns8:SituationPublication" lang="no" modelBaseVersion="3">
+    <ns2:feedType>FULL</ns2:feedType>
+    <ns2:publicationTime>2022-02-23T15:26:42+01:00</ns2:publicationTime>
+    <ns2:publicationCreator>
+      <ns2:country>no</ns2:country>
+      <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
+    </ns2:publicationCreator>
+    <ns8:situation id="NPRA_HBT_30-08-2021.06">
+      <ns8:overallSeverity>low</ns8:overallSeverity>
+      <ns8:headerInformation>
+        <ns2:confidentiality>noRestriction</ns2:confidentiality>
+        <ns2:informationStatus>real</ns2:informationStatus>
+      </ns8:headerInformation>
+      <ns8:situationRecord xsi:type="ns8:MaintenanceWorks" id="534737a7-f27b-437d-813e-0f9fd784d77a_1" version="1">
+        <ns8:situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordCreationTime>
+        <ns8:situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordVersionTime>
+        <ns8:probabilityOfOccurrence>certain</ns8:probabilityOfOccurrence>
+        <ns8:severity>low</ns8:severity>
+        <ns8:source>
+          <ns2:sourceCountry>no</ns2:sourceCountry>
+          <ns2:sourceIdentification>971032081-HBT-PROD</ns2:sourceIdentification>
+          <ns2:sourceName>
+            <ns2:values>
+              <ns2:value lang="no">NPRA</ns2:value>
+            </ns2:values>
+          </ns2:sourceName>
+          <ns2:sourceType>roadAuthorities</ns2:sourceType>
+        </ns8:source>
+        <ns8:validity>
+          <ns2:validityStatus>definedByValidityTimeSpec</ns2:validityStatus>
+          <ns2:validityTimeSpecification>
+            <ns2:overallStartTime>2021-08-30T10:16:21+02:00</ns2:overallStartTime>
+            <ns2:overallEndTime>2022-08-20T19:00:00+02:00</ns2:overallEndTime>
+          </ns2:validityTimeSpecification>
+        </ns8:validity>
+        <ns8:impact>
+          <ns8:numberOfLanesRestricted>0</ns8:numberOfLanesRestricted>
+        </ns8:impact>
+        <ns8:generalPublicComment>
+          <ns8:comment>
+            <ns2:values>
+              <ns2:value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</ns2:value>
+            </ns2:values>
+          </ns8:comment>
+          <ns8:commentType>dataProcessingNote</ns8:commentType>
+        </ns8:generalPublicComment>
+        <ns8:locationReference xsi:type="ns5:LocationGroupByList">
+          <ns5:locationContainedInGroup xsi:type="ns5:LinearLocation">
+            <ns5:coordinatesForDisplay>
+              <ns5:latitude>61.145523</ns5:latitude>
+              <ns5:longitude>8.710909</ns5:longitude>
+            </ns5:coordinatesForDisplay>
+            <ns5:supplementaryPositionalDescription>
+              <ns5:lengthAffected>640.0</ns5:lengthAffected>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadName>Tyinvegen</ns5:roadName>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:gmlLineString srsName="25833">
+              <ns5:posList>161458.229 6795347.916 161465.763 6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</ns5:posList>
+            </ns5:gmlLineString>
+          </ns5:locationContainedInGroup>
+          <ns5:locationContainedInGroup xsi:type="ns5:SingleRoadLinearLocation">
+            <ns5:supplementaryPositionalDescription>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:alertCLinear xsi:type="ns5:AlertCMethod4Linear">
+              <ns5:alertCLocationCountryCode>F</ns5:alertCLocationCountryCode>
+              <ns5:alertCLocationTableNumber>49</ns5:alertCLocationTableNumber>
+              <ns5:alertCLocationTableVersion>7.2</ns5:alertCLocationTableVersion>
+              <ns5:alertCDirection>
+                <ns5:alertCDirectionCoded>positive</ns5:alertCDirectionCoded>
+                <ns5:alertCAffectedDirection>both</ns5:alertCAffectedDirection>
+              </ns5:alertCDirection>
+              <ns5:alertCMethod4PrimaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsing bru</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>22768</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>865</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4PrimaryPointLocation>
+              <ns5:alertCMethod4SecondaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsingnesset</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>21414</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>2635</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4SecondaryPointLocation>
+            </ns5:alertCLinear>
+          </ns5:locationContainedInGroup>
+        </ns8:locationReference>
+        <ns8:roadMaintenanceType>roadworks</ns8:roadMaintenanceType>
+      </ns8:situationRecord>
+      <ns8:situationRecord xsi:type="ns8:GeneralNetworkManagement" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_2" version="1">
+        <ns8:situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordCreationTime>
+        <ns8:situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordVersionTime>
+        <ns8:probabilityOfOccurrence>certain</ns8:probabilityOfOccurrence>
+        <ns8:severity>low</ns8:severity>
+        <ns8:source>
+          <ns2:sourceCountry>no</ns2:sourceCountry>
+          <ns2:sourceIdentification>971032081-HBT-PROD</ns2:sourceIdentification>
+          <ns2:sourceName>
+            <ns2:values>
+              <ns2:value lang="no">NPRA</ns2:value>
+            </ns2:values>
+          </ns2:sourceName>
+          <ns2:sourceType>roadAuthorities</ns2:sourceType>
+        </ns8:source>
+        <ns8:validity>
+          <ns2:validityStatus>definedByValidityTimeSpec</ns2:validityStatus>
+          <ns2:validityTimeSpecification>
+            <ns2:overallStartTime>2021-08-30T10:16:21+02:00</ns2:overallStartTime>
+            <ns2:overallEndTime>2022-08-20T19:00:00+02:00</ns2:overallEndTime>
+          </ns2:validityTimeSpecification>
+        </ns8:validity>
+        <ns8:impact>
+          <ns8:numberOfLanesRestricted>0</ns8:numberOfLanesRestricted>
+        </ns8:impact>
+        <ns8:cause>
+          <ns8:managedCause>
+            <ns8:objectReference targetClass="ns13:SituationRecord" id="534737a7-f27b-437d-813e-0f9fd784d77a_1"/>
+          </ns8:managedCause>
+        </ns8:cause>
+        <ns8:generalPublicComment>
+          <ns8:comment>
+            <ns2:values>
+              <ns2:value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</ns2:value>
+            </ns2:values>
+          </ns8:comment>
+          <ns8:commentType>dataProcessingNote</ns8:commentType>
+        </ns8:generalPublicComment>
+        <ns8:locationReference xsi:type="ns5:LocationGroupByList">
+          <ns5:locationContainedInGroup xsi:type="ns5:LinearLocation">
+            <ns5:coordinatesForDisplay>
+              <ns5:latitude>61.145523</ns5:latitude>
+              <ns5:longitude>8.710909</ns5:longitude>
+            </ns5:coordinatesForDisplay>
+            <ns5:supplementaryPositionalDescription>
+              <ns5:lengthAffected>640.0</ns5:lengthAffected>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadName>Tyinvegen</ns5:roadName>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:gmlLineString srsName="25833">
+              <ns5:posList>161458.229 6795347.916 161465.763 6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</ns5:posList>
+            </ns5:gmlLineString>
+          </ns5:locationContainedInGroup>
+          <ns5:locationContainedInGroup xsi:type="ns5:SingleRoadLinearLocation">
+            <ns5:supplementaryPositionalDescription>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:alertCLinear xsi:type="ns5:AlertCMethod4Linear">
+              <ns5:alertCLocationCountryCode>F</ns5:alertCLocationCountryCode>
+              <ns5:alertCLocationTableNumber>49</ns5:alertCLocationTableNumber>
+              <ns5:alertCLocationTableVersion>7.2</ns5:alertCLocationTableVersion>
+              <ns5:alertCDirection>
+                <ns5:alertCDirectionCoded>positive</ns5:alertCDirectionCoded>
+                <ns5:alertCAffectedDirection>both</ns5:alertCAffectedDirection>
+              </ns5:alertCDirection>
+              <ns5:alertCMethod4PrimaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsing bru</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>22768</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>865</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4PrimaryPointLocation>
+              <ns5:alertCMethod4SecondaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsingnesset</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>21414</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>2635</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4SecondaryPointLocation>
+            </ns5:alertCLinear>
+          </ns5:locationContainedInGroup>
+        </ns8:locationReference>
+        <ns8:complianceOption>mandatory</ns8:complianceOption>
+        <ns8:generalNetworkManagementType>temporaryTrafficLights</ns8:generalNetworkManagementType>
+      </ns8:situationRecord>
+      <ns8:situationRecord xsi:type="ns8:GeneralNetworkManagement" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_3" version="1">
+        <ns8:situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordCreationTime>
+        <ns8:situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</ns8:situationRecordVersionTime>
+        <ns8:probabilityOfOccurrence>certain</ns8:probabilityOfOccurrence>
+        <ns8:severity>low</ns8:severity>
+        <ns8:source>
+          <ns2:sourceCountry>no</ns2:sourceCountry>
+          <ns2:sourceIdentification>971032081-HBT-PROD</ns2:sourceIdentification>
+          <ns2:sourceName>
+            <ns2:values>
+              <ns2:value lang="no">NPRA</ns2:value>
+            </ns2:values>
+          </ns2:sourceName>
+          <ns2:sourceType>roadAuthorities</ns2:sourceType>
+        </ns8:source>
+        <ns8:validity>
+          <ns2:validityStatus>definedByValidityTimeSpec</ns2:validityStatus>
+          <ns2:validityTimeSpecification>
+            <ns2:overallStartTime>2021-08-30T10:16:21+02:00</ns2:overallStartTime>
+            <ns2:overallEndTime>2022-08-20T19:00:00+02:00</ns2:overallEndTime>
+          </ns2:validityTimeSpecification>
+        </ns8:validity>
+        <ns8:impact>
+          <ns8:numberOfLanesRestricted>0</ns8:numberOfLanesRestricted>
+        </ns8:impact>
+        <ns8:cause>
+          <ns8:managedCause>
+            <ns8:objectReference targetClass="ns13:SituationRecord" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_2"/>
+          </ns8:managedCause>
+        </ns8:cause>
+        <ns8:generalPublicComment>
+          <ns8:comment>
+            <ns2:values>
+              <ns2:value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</ns2:value>
+            </ns2:values>
+          </ns8:comment>
+          <ns8:commentType>dataProcessingNote</ns8:commentType>
+        </ns8:generalPublicComment>
+        <ns8:locationReference xsi:type="ns5:LocationGroupByList">
+          <ns5:locationContainedInGroup xsi:type="ns5:LinearLocation">
+            <ns5:coordinatesForDisplay>
+              <ns5:latitude>61.145523</ns5:latitude>
+              <ns5:longitude>8.710909</ns5:longitude>
+            </ns5:coordinatesForDisplay>
+            <ns5:supplementaryPositionalDescription>
+              <ns5:lengthAffected>640.0</ns5:lengthAffected>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadName>Tyinvegen</ns5:roadName>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:gmlLineString srsName="25833">
+              <ns5:posList>161458.229 6795347.916 161465.763 6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</ns5:posList>
+            </ns5:gmlLineString>
+          </ns5:locationContainedInGroup>
+          <ns5:locationContainedInGroup xsi:type="ns5:SingleRoadLinearLocation">
+            <ns5:supplementaryPositionalDescription>
+              <ns5:locationDescription>
+                <ns2:values>
+                  <ns2:value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</ns2:value>
+                </ns2:values>
+              </ns5:locationDescription>
+              <ns5:carriageway>
+                <ns5:carriageway>mainCarriageway</ns5:carriageway>
+                <ns5:originalNumberOfLanes>2</ns5:originalNumberOfLanes>
+              </ns5:carriageway>
+              <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+                <ns5:areaName>
+                  <ns2:values>
+                    <ns2:value lang="no">Innlandet</ns2:value>
+                  </ns2:values>
+                </ns5:areaName>
+                <ns5:country>no</ns5:country>
+                <ns5:subdivisionType>county</ns5:subdivisionType>
+                <ns5:subdivisionCode>34</ns5:subdivisionCode>
+              </ns5:namedArea>
+              <ns5:roadInformation>
+                <ns5:roadNumber>E16</ns5:roadNumber>
+              </ns5:roadInformation>
+            </ns5:supplementaryPositionalDescription>
+            <ns5:alertCLinear xsi:type="ns5:AlertCMethod4Linear">
+              <ns5:alertCLocationCountryCode>F</ns5:alertCLocationCountryCode>
+              <ns5:alertCLocationTableNumber>49</ns5:alertCLocationTableNumber>
+              <ns5:alertCLocationTableVersion>7.2</ns5:alertCLocationTableVersion>
+              <ns5:alertCDirection>
+                <ns5:alertCDirectionCoded>positive</ns5:alertCDirectionCoded>
+                <ns5:alertCAffectedDirection>both</ns5:alertCAffectedDirection>
+              </ns5:alertCDirection>
+              <ns5:alertCMethod4PrimaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsing bru</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>22768</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>865</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4PrimaryPointLocation>
+              <ns5:alertCMethod4SecondaryPointLocation>
+                <ns5:alertCLocation>
+                  <ns5:alertCLocationName>
+                    <ns2:values>
+                      <ns2:value lang="no">Hemsingnesset</ns2:value>
+                    </ns2:values>
+                  </ns5:alertCLocationName>
+                  <ns5:specificLocation>21414</ns5:specificLocation>
+                </ns5:alertCLocation>
+                <ns5:offsetDistance>
+                  <ns5:offsetDistance>2635</ns5:offsetDistance>
+                </ns5:offsetDistance>
+              </ns5:alertCMethod4SecondaryPointLocation>
+            </ns5:alertCLinear>
+          </ns5:locationContainedInGroup>
+        </ns8:locationReference>
+        <ns8:complianceOption>mandatory</ns8:complianceOption>
+        <ns8:generalNetworkManagementType>trafficBeingManuallyDirected</ns8:generalNetworkManagementType>
+      </ns8:situationRecord>
+      <ns8:informationManager>
+        <ns2:country>no</ns2:country>
+        <ns2:nationalIdentifier>Norwegian Public Roads Administration</ns2:nationalIdentifier>
+      </ns8:informationManager>
+    </ns8:situation>
+  </ns11:payload>
+  <ns11:exchangeInformation modelBaseVersion="3">
+    <messageType>payloadDelivery</messageType>
+    <exchangeContext>
+      <codedExchangeProtocol>snapshotPull</codedExchangeProtocol>
+      <exchangeSpecificationVersion>3</exchangeSpecificationVersion>
+      <supplierOrCisRequester>
+        <internationalIdentifier>
+          <ns2:country>no</ns2:country>
+          <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
+        </internationalIdentifier>
+      </supplierOrCisRequester>
+    </exchangeContext>
+    <dynamicInformation>
+      <exchangeStatus>undefined</exchangeStatus>
+      <messageGenerationTimestamp>2022-02-23T15:26:42+01:00</messageGenerationTimestamp>
+    </dynamicInformation>
+  </ns11:exchangeInformation>
+</ns11:messageContainer>

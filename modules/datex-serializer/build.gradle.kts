@@ -46,6 +46,11 @@ tasks.register("addRootElement") {
     }
 }
 
+// Handle duplicate ServiceRequestCondition.java
+tasks.withType<Jar> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 tasks.register<Delete>("cleanDatex") {
     group = "datex"
     delete(

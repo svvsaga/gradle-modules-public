@@ -14,7 +14,6 @@ import no.vegvesen.saga.modules.shared.functions.PubSubError
 import no.vegvesen.saga.modules.shared.functions.logOrThrow
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
-import no.vegvesen.saga.modules.shared.tapLeft
 import java.util.Base64
 
 @ExperimentalSerializationApi

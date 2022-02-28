@@ -96,22 +96,27 @@ open class DatexClient(
         }
     }
 
-    private fun getPublicationTime(document: XmlString): Either<DatexError.MissingPublicationTimeError, Instant> =
-        Regex("<publicationTime>(.*)</publicationTime>").find(document.value)?.groups?.last()?.value
-            .rightIfNotNull {
-                DatexError.MissingPublicationTimeError(
-                    "The Datex message did not have any <publicationTime> element.",
-                    document
-                )
-            }
-            .flatMap {
-                try {
-                    ZonedDateTime.parse(it).toInstant().right()
-                } catch (exception: DateTimeParseException) {
+    companion object {
+        private val publicationTimeRegex =
+            Regex("<(\\w*?:)?publicationTime>(?<publicationTime>.*)</(\\w*?):?publicationTime>")
+
+        fun getPublicationTime(document: XmlString): Either<DatexError.MissingPublicationTimeError, Instant> =
+            publicationTimeRegex.find(document.value)?.groups?.get("publicationTime")?.value
+                .rightIfNotNull {
                     DatexError.MissingPublicationTimeError(
-                        "The Datex message had an invalid <publicationTime> element.",
+                        "The Datex message did not have any <publicationTime> element.",
                         document
-                    ).left()
+                    )
                 }
-            }
+                .flatMap {
+                    try {
+                        ZonedDateTime.parse(it).toInstant().right()
+                    } catch (exception: DateTimeParseException) {
+                        DatexError.MissingPublicationTimeError(
+                            "The Datex message had an invalid <publicationTime> element.",
+                            document
+                        ).left()
+                    }
+                }
+    }
 }

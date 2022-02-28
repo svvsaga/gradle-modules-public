@@ -2,6 +2,7 @@ package no.vegvesen.saga.modules.datex
 
 import arrow.core.right
 import io.kotest.assertions.arrow.core.shouldBeLeft
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
@@ -20,8 +21,10 @@ import io.mockk.mockk
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.toGMTDate
 import no.vegvesen.saga.modules.shared.toHttpDateString
+import no.vegvesen.saga.modules.shared.toXmlString
 import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
+import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import java.util.Base64
 
@@ -157,5 +160,19 @@ class DatexClientTests : AnnotationSpec() {
         val result = testSubject.read()
 
         result shouldBeLeft DatexError.DeliveryBreak
+    }
+
+    @Test
+    fun `can read publication time from Datex 3 publication`() {
+        DatexClient.getPublicationTime(
+            """<?xml version="1.0"?>
+<ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/situation" xmlns:ns9="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns10="http://datex2.eu/schema/3/vms" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+  <ns11:payload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns8:SituationPublication" lang="no" modelBaseVersion="3">
+    <ns2:feedType>FULL</ns2:feedType>
+    <ns2:publicationTime>2022-02-23T15:26:42+01:00</ns2:publicationTime>
+    <ns2:publicationCreator>
+      <ns2:country>no</ns2:country>
+      <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>""".toXmlString()
+        ) shouldBeRight ZonedDateTime.parse("2022-02-23T15:26:42+01:00").toInstant()
     }
 }

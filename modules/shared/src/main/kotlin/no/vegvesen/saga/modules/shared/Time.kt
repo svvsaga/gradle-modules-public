@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.shared
 
 import io.ktor.util.date.GMTDate
+import kotlinx.datetime.toJavaInstant
 import kotlinx.datetime.toKotlinInstant
 import java.time.Instant
 import java.time.OffsetDateTime
@@ -53,3 +54,7 @@ private val httpDateFormat: DateTimeFormatter = DateTimeFormatter
     .ofPattern("EEE, dd MMM yyyy HH:mm:ss z")
     .withLocale(Locale.US)
     .withZone(GreenwichMeanTime)!!
+
+fun kotlinx.datetime.Instant.toHttpDateString(): String = this.toJavaInstant().toHttpDateString()
+
+fun kotlinx.datetime.Instant.toGMTDate() = GMTDate(this.toEpochMilliseconds())

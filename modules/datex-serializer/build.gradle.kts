@@ -71,6 +71,7 @@ dependencies {
     implementation("jakarta.xml.bind", "jakarta.xml.bind-api", jaxbVersion)
     implementation("com.sun.xml.bind", "jaxb-impl", jaxbVersion)
 
+    implementation(project(":datex-schemas"))
     implementation(project(":shared"))
     testImplementation(project(":testing"))
 }

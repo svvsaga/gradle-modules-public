@@ -5,6 +5,7 @@ plugins {
 
 val jaxbVersion = "3.0.1"
 
+// binding.xjb needed to avoid name collision between extensions with underscores when generating POJO from XSD.
 jaxb {
     javaGen {
         register("Datex3") {

@@ -21,27 +21,29 @@ class DatexSerializer {
 
         fun deserialize(stream: InputStream): Either<Throwable, DatexResult> = Either.catchAndFlatten {
 
-            val buffered = BufferedInputStream(stream)
-            val bytesToPeek = 1024
-            buffered.mark(bytesToPeek)
-            val firstBytes = buffered.readNBytes(bytesToPeek)
-            buffered.reset()
+            val (bufferedStream, firstBytes) = bufferAndPeek(stream)
             val xml = XmlString(firstBytes.toString(Charsets.UTF_8).trim())
 
             findDatexVersion(xml).map {
                 when (it) {
-                    DatexVersion.DATEX_2 -> Datex2Result(
-                        (
-                            datex2JAXBContext.createUnmarshaller()
-                                .unmarshal(buffered) as JAXBElement<*>
-                            ).value as D2LogicalModel
-                    )
+                    DatexVersion.DATEX_2 -> {
+                        val result = datex2JAXBContext.createUnmarshaller().unmarshal(bufferedStream) as JAXBElement<*>
+                        Datex2Result(result.value as D2LogicalModel)
+                    }
                     DatexVersion.DATEX_3 -> {
-                        val result = datex3JAXBContext.createUnmarshaller().unmarshal(buffered)
+                        val result = datex3JAXBContext.createUnmarshaller().unmarshal(bufferedStream)
                         Datex3Result(result as MessageContainer)
                     }
                 }
             }
+        }
+
+        private fun bufferAndPeek(stream: InputStream, bytesToPeek: Int = 1024): Pair<BufferedInputStream, ByteArray> {
+            val buffered = BufferedInputStream(stream)
+            buffered.mark(bytesToPeek)
+            val firstBytes = buffered.readNBytes(bytesToPeek)
+            buffered.reset()
+            return Pair(buffered, firstBytes)
         }
 
         fun findDatexVersion(xml: XmlString): Either<Throwable, DatexVersion> =

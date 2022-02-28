@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^16.10.2",
-    "node-modules-public": "svvsaga/node-modules-public#v0.2.2"
+    "@types/node": "^17.0.21",
+    "node-modules-public": "svvsaga/node-modules-public#v0.3.0"
   }
 }

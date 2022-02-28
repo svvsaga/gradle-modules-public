@@ -26,3 +26,5 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+include("datex-serializer")
+include("datex-schemas")

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:ex="http://datex2.eu/schema/3/exchangeInformation" version="1"
+           targetNamespace="http://datex2.eu/schema/3/exchangeInformation" xmlns:com="http://datex2.eu/schema/3/common"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd"/>
+  <xs:complexType name="_ExchangeReturnEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:ExchangeReturnEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ExchangeStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:ExchangeStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_InvalidityReasonEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:InvalidityReasonEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_MessageTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:MessageTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_OperatingModeEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:OperatingModeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ProtocolTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:ProtocolTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_UpdateMethodEnum">
+    <xs:simpleContent>
+      <xs:extension base="ex:UpdateMethodEnum">
+        <xs:attribute name="_extendedValue" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="Agent">
+    <xs:sequence>
+      <xs:element name="address" type="com:String" minOccurs="0"/>
+      <xs:element name="name" type="com:String" minOccurs="0"/>
+      <xs:element name="referenceID" type="com:String" minOccurs="0"/>
+      <xs:element name="serviceURL" type="com:String" minOccurs="0"/>
+      <xs:element name="internationalIdentifier" type="com:InternationalIdentifier" minOccurs="0"/>
+      <xs:element name="_agentExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DynamicInformation">
+    <xs:sequence>
+      <xs:element name="exchangeStatus" type="ex:_ExchangeStatusEnum"/>
+      <xs:element name="exchangeStatusDescription" type="com:MultilingualString" minOccurs="0"/>
+      <xs:element name="completedPaylod" type="com:Boolean" minOccurs="0"/>
+      <xs:element name="messageSequencingNumber" type="com:NonNegativeInteger" minOccurs="0"/>
+      <xs:element name="messageGenerationTimestamp" type="com:DateTime"/>
+      <xs:element name="returnInformation" type="ex:ReturnInformation" minOccurs="0"/>
+      <xs:element name="sessionInformation" type="ex:SessionInformation" minOccurs="0"/>
+      <xs:element name="_dynamicInformationExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangeContext">
+    <xs:sequence>
+      <xs:element name="codedExchangeProtocol" type="ex:_ProtocolTypeEnum"/>
+      <xs:element name="exchangeSpecificationVersion" type="com:String"/>
+      <xs:element name="operatingMode" type="ex:_OperatingModeEnum" minOccurs="0"/>
+      <xs:element name="updateMethod" type="ex:_UpdateMethodEnum" minOccurs="0"/>
+      <xs:element name="nonCodedExchangeProtocol" type="com:String" minOccurs="0"/>
+      <xs:element name="supplierOrCisRequester" type="ex:Agent"/>
+      <xs:element name="clientOrCisProvider" type="ex:Agent" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subscription" type="ex:Subscription" minOccurs="0"/>
+      <xs:element name="_exchangeContextExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangeInformation">
+    <xs:sequence>
+      <xs:element name="messageType" type="ex:_MessageTypeEnum" minOccurs="0"/>
+      <xs:element name="exchangeContext" type="ex:ExchangeContext"/>
+      <xs:element name="dynamicInformation" type="ex:DynamicInformation"/>
+      <xs:element name="_exchangeInformationExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="modelBaseVersion" type="xs:string" use="required" fixed="3"/>
+    <xs:attribute name="extensionName" type="xs:string" default="Exchange 2018"/>
+    <xs:attribute name="extensionVersion" type="xs:string" default="1"/>
+    <xs:attribute name="profileName" type="xs:string"/>
+    <xs:attribute name="profileVersion" type="xs:string"/>
+  </xs:complexType>
+  <xs:simpleType name="ExchangeReturnEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ack"/>
+      <xs:enumeration value="closeSessionRequest"/>
+      <xs:enumeration value="fail"/>
+      <xs:enumeration value="snapshotSynchronisationRequest"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExchangeStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="closingSession"/>
+      <xs:enumeration value="offline"/>
+      <xs:enumeration value="online"/>
+      <xs:enumeration value="openingSession"/>
+      <xs:enumeration value="resuming"/>
+      <xs:enumeration value="undefined"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InvalidityReasonEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="invalidCISInformation"/>
+      <xs:enumeration value="invalidExchangeContext"/>
+      <xs:enumeration value="invalidInformationManagement"/>
+      <xs:enumeration value="invalidMessage"/>
+      <xs:enumeration value="invalidPayload"/>
+      <xs:enumeration value="invalidSequencingNumber"/>
+      <xs:enumeration value="invalidSession"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value="invalidClient"/>
+      <xs:enumeration value="invalidSupplier"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MessageTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="payloadDelivery"/>
+      <xs:enumeration value="openSession"/>
+      <xs:enumeration value="keepAlive"/>
+      <xs:enumeration value="closeSession"/>
+      <xs:enumeration value="return"/>
+      <xs:enumeration value="CISServiceRequest"/>
+      <xs:enumeration value="CISFeedback"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OperatingModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="conditionTriggered"/>
+      <xs:enumeration value="onOccurrence"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value="periodic"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProtocolTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="deltaPull"/>
+      <xs:enumeration value="deltaPush"/>
+      <xs:enumeration value="simpleCIS"/>
+      <xs:enumeration value="simplePush"/>
+      <xs:enumeration value="snapshotPull"/>
+      <xs:enumeration value="snapshotPush"/>
+      <xs:enumeration value="statefulCIS"/>
+      <xs:enumeration value="statefulPush"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ReturnInformation">
+    <xs:sequence>
+      <xs:element name="returnStatus" type="ex:_ExchangeReturnEnum"/>
+      <xs:element name="returnStatusReason" type="com:MultilingualString" minOccurs="0"/>
+      <xs:element name="codedInvalidityReason" type="ex:_InvalidityReasonEnum" minOccurs="0"
+                  maxOccurs="unbounded"/>
+      <xs:element name="_returnInformationExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SessionInformation">
+    <xs:sequence>
+      <xs:element name="sessionID" type="com:String"/>
+      <xs:element name="startSession" type="com:DateTime" minOccurs="0"/>
+      <xs:element name="_sessionInformationExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Subscription">
+    <xs:sequence>
+      <xs:element name="name" type="com:String" minOccurs="0"/>
+      <xs:element name="referenceID" type="com:Reference" minOccurs="0"/>
+      <xs:element name="subscriptionStart" type="com:DateTime" minOccurs="0"/>
+      <xs:element name="subscriptionEnd" type="com:DateTime" minOccurs="0"/>
+      <xs:element name="deliveyFrequency" type="com:NonNegativeInteger" minOccurs="0"/>
+      <xs:element name="validity" type="com:Validity" minOccurs="0"/>
+      <xs:element name="_subscriptionExtension" type="com:_ExtensionType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="UpdateMethodEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="allElementUpdate"/>
+      <xs:enumeration value="allInformationUpdate"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value="singleElementUpdate"/>
+      <xs:enumeration value="snapshot"/>
+      <xs:enumeration value="_extended"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

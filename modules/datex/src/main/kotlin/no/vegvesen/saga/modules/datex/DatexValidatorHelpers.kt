@@ -13,7 +13,7 @@ fun validDatex2OrThrowable(bytes: ByteArray, datexValidator: DatexValidator): Ei
     datexValidator.validateDatexDoc(XmlString(bytes.toString(Charsets.UTF_8)))
         .mapLeft { Exception("Document did not pass Datex Validation: ${it.message}") }
         .flatMap {
-            if (it == DatexVersion.DATEX_2_3) bytes.right()
+            if (it == DatexVersion.DATEX_2) bytes.right()
             else WrongDatexVersionException("Only DatexII 2.3 is supported, but got: $it").left()
         }
 

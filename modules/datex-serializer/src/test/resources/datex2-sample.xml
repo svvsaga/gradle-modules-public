@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2">
+  <exchange>
+    <supplierIdentification>
+      <country>no</country>
+      <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+    </supplierIdentification>
+  </exchange>
+  <payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SituationPublication" lang="nob">
+    <publicationTime>2022-02-23T15:27:53+01:00</publicationTime>
+    <publicationCreator>
+      <country>no</country>
+      <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+    </publicationCreator>
+    <situation id="NPRA_HBT_30-08-2021.06" version="1">
+      <overallSeverity>low</overallSeverity>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord xsi:type="GeneralNetworkManagement" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_2" version="1">
+        <situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-08-30T10:16:21+02:00</overallStartTime>
+            <overallEndTime>2022-08-20T19:00:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <cause xsi:type="ManagedCause">
+          <managedCause targetClass="SituationRecord" id="534737a7-f27b-437d-813e-0f9fd784d77a_1" version="0"/>
+        </cause>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>61.145523</latitude>
+              <longitude>8.710909</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E16</roadNumber>
+                <countyNumber>34</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>640.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>161458.229,6795347.916 161465.763,6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <complianceOption>mandatory</complianceOption>
+        <generalNetworkManagementType>temporaryTrafficLights</generalNetworkManagementType>
+      </situationRecord>
+      <situationRecord xsi:type="GeneralNetworkManagement" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_3" version="1">
+        <situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-08-30T10:16:21+02:00</overallStartTime>
+            <overallEndTime>2022-08-20T19:00:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <cause xsi:type="ManagedCause">
+          <managedCause targetClass="SituationRecord" id="b372fe1c-5e5a-47c7-8039-fa4a59b63006_2" version="0"/>
+        </cause>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>61.145523</latitude>
+              <longitude>8.710909</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E16</roadNumber>
+                <countyNumber>34</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>640.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>161458.229,6795347.916 161465.763,6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <complianceOption>mandatory</complianceOption>
+        <generalNetworkManagementType>trafficBeingManuallyDirected</generalNetworkManagementType>
+      </situationRecord>
+      <situationRecord xsi:type="MaintenanceWorks" id="534737a7-f27b-437d-813e-0f9fd784d77a_1" version="1">
+        <situationRecordCreationTime>2021-11-09T14:23:12.392862+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-09T14:23:12.392862+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-08-30T10:16:21+02:00</overallStartTime>
+            <overallEndTime>2022-08-20T19:00:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid.|Lysregulering, manuell dirigering.</value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 16 Øylo i Vang, Innlandet - Ev 16 Vestheim i Vang, Innlandet, i begge retninger</value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>61.145523</latitude>
+              <longitude>8.710909</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E16</roadNumber>
+                <countyNumber>34</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>640.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>161458.229,6795347.916 161465.763,6795346.761 161481.955 6795344.342 161498.445 6795342.321 161518.455 6795340.388 161533.603 6795338.925 161551.014 6795336.815 161568.455 6795335.558 161584.73 6795333.986 161601.004 6795332.415 161613.655 6795330.765 161624.065 6795328.905 161634.884 6795327.005 161643.359 6795324.905 161652.193 6795322.769 161662.377 6795319.648 161672.623 6795316.094 161685.92 6795310.963 161695.716 6795307.025 161702.87 6795304.624 161714.263 6795300.104 161722.974 6795296.698 161734.049 6795292.637 161745.739 6795288.516 161747.755 6795287.466 161757.592 6795283.952 161771.769 6795278.309 161786.447 6795273.045 161795.414 6795269.614 161805.302 6795266.095 161823.778 6795260.037 161832.203 6795257.942 161839.695 6795256.363 161845.601 6795254.939 161853.493 6795253.749 161860.402 6795253.083 161865.623 6795252.579 161880.71 6795251.551 161894.344 6795251.517 161908.561 6795252.711 161921.181 6795254.485 161932.573 6795256.379 161947.638 6795260.482 161961.67 6795265.113 161974.843 6795269.4 161995.66 6795276.369 162015.761 6795283.407 162036.026 6795290.002 162052.534 6795295.677 162063.946 6795298.851 162076.33 6795301.931 162080.854 6795302.777</coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <maintenanceVehicles/>
+        <roadMaintenanceType>roadworks</roadMaintenanceType>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>

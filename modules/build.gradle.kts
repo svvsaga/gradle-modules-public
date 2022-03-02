@@ -22,7 +22,6 @@ val jUnitVersion = "5.7.1"
 val serializationVersion = "1.3.1"
 val functionsVersion = "1.0.4"
 val gcpLibrariesBomVersion = "24.0.0"
-val xmlBindVersion = "2.3.1"
 
 val modulesVersion =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)
@@ -92,8 +91,6 @@ subprojects {
             api("io.ktor", "ktor-client-encoding", ktorVersion)
             api("io.ktor", "ktor-client-apache", ktorVersion)
             api("io.ktor", "ktor-client-cio", ktorVersion) // TODO: Phase out
-
-            implementation("javax.xml.bind", "jaxb-api", xmlBindVersion)
 
             implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", jacksonVersion)
             implementation("com.fasterxml.jackson.core", "jackson-databind", jacksonVersion)

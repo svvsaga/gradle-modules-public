@@ -3,8 +3,6 @@ plugins {
     id("com.intershop.gradle.jaxb") version "5.1.0"
 }
 
-val jaxbVersion = "3.0.1"
-
 // binding.xjb needed to avoid name collision between extensions with underscores when generating POJO from XSD.
 jaxb {
     javaGen {
@@ -15,6 +13,7 @@ jaxb {
             binding = file("binding.xjb")
             outputDir = file("src/main/java")
             header = false
+            args = listOf("-npa")
         }
         register("Datex2") {
             schema = file(
@@ -23,6 +22,7 @@ jaxb {
             binding = file("binding.xjb")
             outputDir = file("src/main/java")
             header = false
+            args = listOf("-npa")
         }
     }
 }
@@ -68,8 +68,8 @@ tasks.getByName("jaxbJavaGenDatex3") {
 }
 
 dependencies {
-    implementation("jakarta.xml.bind", "jakarta.xml.bind-api", jaxbVersion)
-    implementation("com.sun.xml.bind", "jaxb-impl", jaxbVersion)
+    implementation("jakarta.xml.bind", "jakarta.xml.bind-api", "3.0.1")
+    implementation("org.glassfish.jaxb", "jaxb-runtime", "3.0.2")
 
     implementation(project(":datex-schemas"))
     implementation(project(":shared"))

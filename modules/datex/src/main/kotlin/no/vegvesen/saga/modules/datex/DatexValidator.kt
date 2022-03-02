@@ -5,7 +5,6 @@ import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorContentOfExchangeElementNotComplete
-import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorLineStringExtensionNotInSchema
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorNewStrekningerHasModelBaseVersion3
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorExchangeInformationElementsLacksBaseVersion
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorTargetClassOfObjectReferenceIsNotValid
@@ -18,10 +17,6 @@ import javax.xml.validation.Schema
 import javax.xml.validation.SchemaFactory
 
 object RecoverableDatex2ValidationExceptions {
-    // Hack because strekninger uses linear line string extension which does not match schema
-    const val errorLineStringExtensionNotInSchema =
-        "cvc-complex-type.2.4.a: Invalid content was found starting with element '{\"http://datex2.eu/schema/2/2_0\":linearLineStringExtension}'. One of '{\"http://datex2.eu/schema/2/2_0\":openlrExtendedLinear, WC[##other:\"http://datex2.eu/schema/2/2_0\"]}' is expected."
-
     // New strekninger for some reason have modelBaseVersion="3"
     const val errorNewStrekningerHasModelBaseVersion3 =
         "cvc-complex-type.3.1: Value '3' of attribute 'modelBaseVersion' of element 'd2LogicalModel' is not valid with respect to the corresponding attribute use. Attribute 'modelBaseVersion' has a fixed value of '2'."
@@ -45,7 +40,7 @@ class DatexValidator : Logging {
     companion object {
         // Schema is thread safe, validator is not
         private val datex2Schema: Schema = SchemaFactory.newDefaultInstance()
-            .newSchema(Companion::class.java.getResource("/DATEXIISchema_2_2_3.xsd"))
+            .newSchema(Companion::class.java.getResource("/DATEXIISchema_2_2_0.xsd"))
 
         private val datex3Schema: Schema =
             SchemaFactory.newDefaultInstance().newSchema(fetchDatex3SchemaFiles())
@@ -82,7 +77,6 @@ class DatexValidator : Logging {
 private fun handleDatex2ValidationExceptions(doc: XmlString, exception: Throwable) =
     when (exception) {
         is SAXParseException -> when {
-            exception.localizedMessage.startsWith(errorLineStringExtensionNotInSchema) -> DatexVersion.DATEX_2.right()
             exception.localizedMessage.startsWith(errorNewStrekningerHasModelBaseVersion3) -> DatexVersion.DATEX_2.right()
             exception.localizedMessage.startsWith(errorContentOfExchangeElementNotComplete) -> DatexVersion.DATEX_2.right()
             else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_2)

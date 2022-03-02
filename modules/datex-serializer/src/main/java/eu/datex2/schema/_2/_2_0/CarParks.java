@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CarParks", propOrder = {
+@XmlType(name = "CarParks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "carParkConfiguration",
     "carParkIdentity",
     "carParkOccupancy",
@@ -56,25 +56,35 @@ public class CarParks
     extends NonRoadEventInformation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CarParkConfigurationEnum carParkConfiguration;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String carParkIdentity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float carParkOccupancy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CarParkStatusEnum carParkStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger exitRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger fillRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVacantParkingSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger occupiedSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float queuingTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalCapacity;
-    protected _ExtensionType carParksExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType carParksExtension;
 
     /**
      * Gets the value of the carParkConfiguration property.
@@ -321,10 +331,10 @@ public class CarParks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCarParksExtension() {
+    public ExtensionType getCarParksExtension() {
         return carParksExtension;
     }
 
@@ -333,10 +343,10 @@ public class CarParks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCarParksExtension(_ExtensionType value) {
+    public void setCarParksExtension(ExtensionType value) {
         this.carParksExtension = value;
     }
 

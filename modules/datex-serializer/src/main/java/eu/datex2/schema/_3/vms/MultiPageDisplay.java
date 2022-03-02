@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,20 +37,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MultiPageDisplay", propOrder = {
+@XmlType(name = "MultiPageDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "sequenceGroupNumber",
     "displayAreaSettings",
-    "_MultiPageDisplayExtension"
+    "multiPageDisplayExtension"
 })
 public class MultiPageDisplay
     extends DisplayAreaSettings
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequenceGroupNumber;
-    protected List<_MultiPageDisplayPageNumberDisplayAreaSettings> displayAreaSettings;
-    @XmlElement(name = "_multiPageDisplayExtension")
-    protected _ExtensionType _MultiPageDisplayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<MultiPageDisplayPageNumberDisplayAreaSettings> displayAreaSettings;
+    @XmlElement(name = "_multiPageDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType multiPageDisplayExtension;
 
     /**
      * Gets the value of the sequenceGroupNumber property.
@@ -94,39 +96,39 @@ public class MultiPageDisplay
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MultiPageDisplayPageNumberDisplayAreaSettings }
+     * {@link MultiPageDisplayPageNumberDisplayAreaSettings }
      * 
      * 
      */
-    public List<_MultiPageDisplayPageNumberDisplayAreaSettings> getDisplayAreaSettings() {
+    public List<MultiPageDisplayPageNumberDisplayAreaSettings> getDisplayAreaSettings() {
         if (displayAreaSettings == null) {
-            displayAreaSettings = new ArrayList<_MultiPageDisplayPageNumberDisplayAreaSettings>();
+            displayAreaSettings = new ArrayList<MultiPageDisplayPageNumberDisplayAreaSettings>();
         }
         return this.displayAreaSettings;
     }
 
     /**
-     * Gets the value of the _MultiPageDisplayExtension property.
+     * Gets the value of the multiPageDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MultiPageDisplayExtension() {
-        return _MultiPageDisplayExtension;
+    public ExtensionType getMultiPageDisplayExtension() {
+        return multiPageDisplayExtension;
     }
 
     /**
-     * Sets the value of the _MultiPageDisplayExtension property.
+     * Sets the value of the multiPageDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MultiPageDisplayExtension(_ExtensionType value) {
-        this._MultiPageDisplayExtension = value;
+    public void setMultiPageDisplayExtension(ExtensionType value) {
+        this.multiPageDisplayExtension = value;
     }
 
 }

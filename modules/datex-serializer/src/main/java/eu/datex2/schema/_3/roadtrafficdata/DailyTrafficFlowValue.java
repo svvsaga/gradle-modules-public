@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,19 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DailyTrafficFlowValue", propOrder = {
+@XmlType(name = "DailyTrafficFlowValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "vehicleFlowRate",
-    "_DailyTrafficFlowValueExtension"
+    "dailyTrafficFlowValueExtension"
 })
 public class DailyTrafficFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
-    @XmlElement(name = "_dailyTrafficFlowValueExtension")
-    protected _ExtensionType _DailyTrafficFlowValueExtension;
+    @XmlElement(name = "_dailyTrafficFlowValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType dailyTrafficFlowValueExtension;
 
     /**
      * Gets the value of the vehicleFlowRate property.
@@ -73,27 +73,27 @@ public class DailyTrafficFlowValue
     }
 
     /**
-     * Gets the value of the _DailyTrafficFlowValueExtension property.
+     * Gets the value of the dailyTrafficFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DailyTrafficFlowValueExtension() {
-        return _DailyTrafficFlowValueExtension;
+    public ExtensionType getDailyTrafficFlowValueExtension() {
+        return dailyTrafficFlowValueExtension;
     }
 
     /**
-     * Sets the value of the _DailyTrafficFlowValueExtension property.
+     * Sets the value of the dailyTrafficFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DailyTrafficFlowValueExtension(_ExtensionType value) {
-        this._DailyTrafficFlowValueExtension = value;
+    public void setDailyTrafficFlowValueExtension(ExtensionType value) {
+        this.dailyTrafficFlowValueExtension = value;
     }
 
 }

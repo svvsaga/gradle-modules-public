@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PoorEnvironmentConditions", propOrder = {
+@XmlType(name = "PoorEnvironmentConditions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "poorEnvironmentType",
     "precipitationDetail",
     "visibility",
@@ -51,16 +51,23 @@ public class PoorEnvironmentConditions
     extends Conditions
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PrecipitationDetail precipitationDetail;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Visibility visibility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Pollution pollution;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Temperature temperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Wind wind;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Humidity humidity;
-    protected _ExtensionType poorEnvironmentConditionsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType poorEnvironmentConditionsExtension;
 
     /**
      * Gets the value of the poorEnvironmentType property.
@@ -240,10 +247,10 @@ public class PoorEnvironmentConditions
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPoorEnvironmentConditionsExtension() {
+    public ExtensionType getPoorEnvironmentConditionsExtension() {
         return poorEnvironmentConditionsExtension;
     }
 
@@ -252,10 +259,10 @@ public class PoorEnvironmentConditions
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPoorEnvironmentConditionsExtension(_ExtensionType value) {
+    public void setPoorEnvironmentConditionsExtension(ExtensionType value) {
         this.poorEnvironmentConditionsExtension = value;
     }
 

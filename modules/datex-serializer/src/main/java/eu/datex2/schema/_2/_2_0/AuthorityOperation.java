@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AuthorityOperation", propOrder = {
+@XmlType(name = "AuthorityOperation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "authorityOperationType",
     "authorityOperationExtension"
 })
@@ -37,10 +37,11 @@ public class AuthorityOperation
     extends Activity
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected AuthorityOperationTypeEnum authorityOperationType;
-    protected _ExtensionType authorityOperationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType authorityOperationExtension;
 
     /**
      * Gets the value of the authorityOperationType property.
@@ -71,10 +72,10 @@ public class AuthorityOperation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAuthorityOperationExtension() {
+    public ExtensionType getAuthorityOperationExtension() {
         return authorityOperationExtension;
     }
 
@@ -83,10 +84,10 @@ public class AuthorityOperation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAuthorityOperationExtension(_ExtensionType value) {
+    public void setAuthorityOperationExtension(ExtensionType value) {
         this.authorityOperationExtension = value;
     }
 

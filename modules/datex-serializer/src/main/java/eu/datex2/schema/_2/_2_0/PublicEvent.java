@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicEvent", propOrder = {
+@XmlType(name = "PublicEvent", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "publicEventType",
     "publicEventExtension"
 })
@@ -37,10 +37,11 @@ public class PublicEvent
     extends Activity
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected PublicEventTypeEnum publicEventType;
-    protected _ExtensionType publicEventExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType publicEventExtension;
 
     /**
      * Gets the value of the publicEventType property.
@@ -71,10 +72,10 @@ public class PublicEvent
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPublicEventExtension() {
+    public ExtensionType getPublicEventExtension() {
         return publicEventExtension;
     }
 
@@ -83,10 +84,10 @@ public class PublicEvent
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPublicEventExtension(_ExtensionType value) {
+    public void setPublicEventExtension(ExtensionType value) {
         this.publicEventExtension = value;
     }
 

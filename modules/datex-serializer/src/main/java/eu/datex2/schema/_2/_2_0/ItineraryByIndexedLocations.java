@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItineraryByIndexedLocations", propOrder = {
+@XmlType(name = "ItineraryByIndexedLocations", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "locationContainedInItinerary",
     "itineraryByIndexedLocationsExtension"
 })
@@ -37,8 +38,10 @@ public class ItineraryByIndexedLocations
     extends Itinerary
 {
 
-    protected List<_LocationContainedInItinerary> locationContainedInItinerary;
-    protected _ExtensionType itineraryByIndexedLocationsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<LocationContainedInItinerary> locationContainedInItinerary;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType itineraryByIndexedLocationsExtension;
 
     /**
      * Gets the value of the locationContainedInItinerary property.
@@ -58,13 +61,13 @@ public class ItineraryByIndexedLocations
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _LocationContainedInItinerary }
+     * {@link LocationContainedInItinerary }
      * 
      * 
      */
-    public List<_LocationContainedInItinerary> getLocationContainedInItinerary() {
+    public List<LocationContainedInItinerary> getLocationContainedInItinerary() {
         if (locationContainedInItinerary == null) {
-            locationContainedInItinerary = new ArrayList<_LocationContainedInItinerary>();
+            locationContainedInItinerary = new ArrayList<LocationContainedInItinerary>();
         }
         return this.locationContainedInItinerary;
     }
@@ -74,10 +77,10 @@ public class ItineraryByIndexedLocations
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getItineraryByIndexedLocationsExtension() {
+    public ExtensionType getItineraryByIndexedLocationsExtension() {
         return itineraryByIndexedLocationsExtension;
     }
 
@@ -86,10 +89,10 @@ public class ItineraryByIndexedLocations
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setItineraryByIndexedLocationsExtension(_ExtensionType value) {
+    public void setItineraryByIndexedLocationsExtension(ExtensionType value) {
         this.itineraryByIndexedLocationsExtension = value;
     }
 

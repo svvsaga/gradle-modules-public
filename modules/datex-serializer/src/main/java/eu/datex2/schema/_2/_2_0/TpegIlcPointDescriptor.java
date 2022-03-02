@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegIlcPointDescriptor", propOrder = {
+@XmlType(name = "TpegIlcPointDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegIlcPointDescriptorType",
     "tpegIlcPointDescriptorExtension"
 })
@@ -37,10 +37,11 @@ public class TpegIlcPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03IlcPointDescriptorSubtypeEnum tpegIlcPointDescriptorType;
-    protected _ExtensionType tpegIlcPointDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegIlcPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegIlcPointDescriptorType property.
@@ -71,10 +72,10 @@ public class TpegIlcPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegIlcPointDescriptorExtension() {
+    public ExtensionType getTpegIlcPointDescriptorExtension() {
         return tpegIlcPointDescriptorExtension;
     }
 
@@ -83,10 +84,10 @@ public class TpegIlcPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegIlcPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegIlcPointDescriptorExtension(ExtensionType value) {
         this.tpegIlcPointDescriptorExtension = value;
     }
 

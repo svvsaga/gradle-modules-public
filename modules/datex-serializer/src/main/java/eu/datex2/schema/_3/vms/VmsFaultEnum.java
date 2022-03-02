@@ -1,97 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for VmsFaultEnum.
+ * <p>Java class for _VmsFaultEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="VmsFaultEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="incorrectMessageDisplayed"/&gt;
- *     &lt;enumeration value="incorrectPictogramDisplayed"/&gt;
- *     &lt;enumeration value="outOfService"/&gt;
- *     &lt;enumeration value="unableToClearDown"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_VmsFaultEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;VmsFaultEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "VmsFaultEnum")
-@XmlEnum
-public enum VmsFaultEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_VmsFaultEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class VmsFaultEnum {
 
-
-    /**
-     * Incorrect message is being displayed.
-     * 
-     */
-    @XmlEnumValue("incorrectMessageDisplayed")
-    INCORRECT_MESSAGE_DISPLAYED("incorrectMessageDisplayed"),
-
-    /**
-     * Incorrect pictogram is being displayed.
-     * 
-     */
-    @XmlEnumValue("incorrectPictogramDisplayed")
-    INCORRECT_PICTOGRAM_DISPLAYED("incorrectPictogramDisplayed"),
+    @XmlValue
+    protected VmsFaultEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Not currently in service (e.g. intentionally disconnected or switched off during
-     *             roadworks).
-     *           
+     * Types of variable message sign faults.
      * 
+     * @return
+     *     possible object is
+     *     {@link VmsFaultEnum2 }
+     *     
      */
-    @XmlEnumValue("outOfService")
-    OUT_OF_SERVICE("outOfService"),
-
-    /**
-     * Unable to clear down information displayed on VMS.
-     * 
-     */
-    @XmlEnumValue("unableToClearDown")
-    UNABLE_TO_CLEAR_DOWN("unableToClearDown"),
-
-    /**
-     * Unknown VMS fault.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    VmsFaultEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public VmsFaultEnum2 getValue() {
         return value;
     }
 
-    public static VmsFaultEnum fromValue(String v) {
-        for (VmsFaultEnum c: VmsFaultEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VmsFaultEnum2 }
+     *     
+     */
+    public void setValue(VmsFaultEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -28,15 +28,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogueReference", propOrder = {
+@XmlType(name = "CatalogueReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "keyCatalogueReference",
     "catalogueReferenceExtension"
 })
 public class CatalogueReference {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String keyCatalogueReference;
-    protected _ExtensionType catalogueReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType catalogueReferenceExtension;
 
     /**
      * Gets the value of the keyCatalogueReference property.
@@ -67,10 +68,10 @@ public class CatalogueReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCatalogueReferenceExtension() {
+    public ExtensionType getCatalogueReferenceExtension() {
         return catalogueReferenceExtension;
     }
 
@@ -79,10 +80,10 @@ public class CatalogueReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCatalogueReferenceExtension(_ExtensionType value) {
+    public void setCatalogueReferenceExtension(ExtensionType value) {
         this.catalogueReferenceExtension = value;
     }
 

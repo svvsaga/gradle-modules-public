@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -43,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsPictogramDisplayCharacteristics", propOrder = {
+@XmlType(name = "VmsPictogramDisplayCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "pictogramLanternsPresent",
     "pictogramSequencingCapable",
     "pictogramPixelsAcross",
@@ -63,29 +64,45 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsPictogramDisplayCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean pictogramLanternsPresent;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean pictogramSequencingCapable;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramPixelsAcross;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramPixelsDown;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float pictogramDisplayHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float pictogramDisplayWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String pictogramCodeListIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxPictogramLuminanceLevel;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramNumberOfColours;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfSequentialPictograms;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PositionAbsoluteEnum pictogramPositionAbsolute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float pictogramPositionX;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float pictogramPositionY;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PositionRelativeEnum pictogramPositionRelativeToText;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsSupplementaryPanelCharacteristics vmsSupplementaryPanelCharacteristics;
-    protected _ExtensionType vmsPictogramDisplayCharacteristicsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsPictogramDisplayCharacteristicsExtension;
 
     /**
      * Gets the value of the pictogramLanternsPresent property.
@@ -452,10 +469,10 @@ public class VmsPictogramDisplayCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsPictogramDisplayCharacteristicsExtension() {
+    public ExtensionType getVmsPictogramDisplayCharacteristicsExtension() {
         return vmsPictogramDisplayCharacteristicsExtension;
     }
 
@@ -464,10 +481,10 @@ public class VmsPictogramDisplayCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsPictogramDisplayCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsPictogramDisplayCharacteristicsExtension(ExtensionType value) {
         this.vmsPictogramDisplayCharacteristicsExtension = value;
     }
 

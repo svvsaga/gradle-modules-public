@@ -4,8 +4,8 @@ package eu.datex2.schema._3.messagecontainer;
 import java.util.ArrayList;
 import java.util.List;
 import eu.datex2.schema._3.cisinformation.CISInformation;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PayloadPublication;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.exchangeinformation.ExchangeInformation;
 import eu.datex2.schema._3.informationmanagement.InformationManagement;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -44,22 +44,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MessageContainer", propOrder = {
+@XmlType(name = "MessageContainer", namespace = "http://datex2.eu/schema/3/messageContainer", propOrder = {
     "payload",
     "cisInformation",
     "exchangeInformation",
     "informationManagement",
-    "_MessageContainerExtension"
+    "messageContainerExtension"
 })
 @jakarta.xml.bind.annotation.XmlRootElement public class MessageContainer {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected List<PayloadPublication> payload;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected CISInformation cisInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer", required = true)
     protected ExchangeInformation exchangeInformation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected InformationManagement informationManagement;
-    @XmlElement(name = "_messageContainerExtension")
-    protected _ExtensionType _MessageContainerExtension;
+    @XmlElement(name = "_messageContainerExtension", namespace = "http://datex2.eu/schema/3/messageContainer")
+    protected ExtensionType messageContainerExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;
     @XmlAttribute(name = "extensionName")
@@ -173,27 +176,27 @@ import jakarta.xml.bind.annotation.XmlType;
     }
 
     /**
-     * Gets the value of the _MessageContainerExtension property.
+     * Gets the value of the messageContainerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MessageContainerExtension() {
-        return _MessageContainerExtension;
+    public ExtensionType getMessageContainerExtension() {
+        return messageContainerExtension;
     }
 
     /**
-     * Sets the value of the _MessageContainerExtension property.
+     * Sets the value of the messageContainerExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MessageContainerExtension(_ExtensionType value) {
-        this._MessageContainerExtension = value;
+    public void setMessageContainerExtension(ExtensionType value) {
+        this.messageContainerExtension = value;
     }
 
     /**

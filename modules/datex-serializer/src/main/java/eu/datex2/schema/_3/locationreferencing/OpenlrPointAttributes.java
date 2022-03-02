@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,27 +33,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointAttributes", propOrder = {
+@XmlType(name = "OpenlrPointAttributes", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
-    "_OpenlrPointAttributesExtension"
+    "openlrPointAttributesExtension"
 })
 public class OpenlrPointAttributes {
 
-    protected _OpenlrSideOfRoadEnum openlrSideOfRoad;
-    protected _OpenlrOrientationEnum openlrOrientation;
-    @XmlElement(name = "_openlrPointAttributesExtension")
-    protected _ExtensionType _OpenlrPointAttributesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected OpenlrSideOfRoadEnum openlrSideOfRoad;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected OpenlrOrientationEnum openlrOrientation;
+    @XmlElement(name = "_openlrPointAttributesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrPointAttributesExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
      * 
      * @return
      *     possible object is
-     *     {@link _OpenlrSideOfRoadEnum }
+     *     {@link OpenlrSideOfRoadEnum }
      *     
      */
-    public _OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
+    public OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
         return openlrSideOfRoad;
     }
 
@@ -62,10 +64,10 @@ public class OpenlrPointAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _OpenlrSideOfRoadEnum }
+     *     {@link OpenlrSideOfRoadEnum }
      *     
      */
-    public void setOpenlrSideOfRoad(_OpenlrSideOfRoadEnum value) {
+    public void setOpenlrSideOfRoad(OpenlrSideOfRoadEnum value) {
         this.openlrSideOfRoad = value;
     }
 
@@ -74,10 +76,10 @@ public class OpenlrPointAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link _OpenlrOrientationEnum }
+     *     {@link OpenlrOrientationEnum }
      *     
      */
-    public _OpenlrOrientationEnum getOpenlrOrientation() {
+    public OpenlrOrientationEnum getOpenlrOrientation() {
         return openlrOrientation;
     }
 
@@ -86,35 +88,35 @@ public class OpenlrPointAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _OpenlrOrientationEnum }
+     *     {@link OpenlrOrientationEnum }
      *     
      */
-    public void setOpenlrOrientation(_OpenlrOrientationEnum value) {
+    public void setOpenlrOrientation(OpenlrOrientationEnum value) {
         this.openlrOrientation = value;
     }
 
     /**
-     * Gets the value of the _OpenlrPointAttributesExtension property.
+     * Gets the value of the openlrPointAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrPointAttributesExtension() {
-        return _OpenlrPointAttributesExtension;
+    public ExtensionType getOpenlrPointAttributesExtension() {
+        return openlrPointAttributesExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrPointAttributesExtension property.
+     * Sets the value of the openlrPointAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrPointAttributesExtension(_ExtensionType value) {
-        this._OpenlrPointAttributesExtension = value;
+    public void setOpenlrPointAttributesExtension(ExtensionType value) {
+        this.openlrPointAttributesExtension = value;
     }
 
 }

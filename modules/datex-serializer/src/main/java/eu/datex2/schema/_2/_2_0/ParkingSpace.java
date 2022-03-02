@@ -1,29 +1,27 @@
 
 package eu.datex2.schema._2._2_0;
 
-import java.util.ArrayList;
-import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ParkingSpace complex type.
+ * <p>Java class for _ParkingSpace complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ParkingSpace"&gt;
+ * &lt;complexType name="_ParkingSpace"&gt;
  *   &lt;complexContent&gt;
- *     &lt;extension base="{http://datex2.eu/schema/2/2_0}ParkingSpaceBasics"&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="identicalToParkingSpace" type="{http://datex2.eu/schema/2/2_0}IndexReference" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="location" type="{http://datex2.eu/schema/2/2_0}Location" minOccurs="0"/&gt;
- *         &lt;element name="parkingSpaceDimension" type="{http://datex2.eu/schema/2/2_0}Dimension" minOccurs="0"/&gt;
- *         &lt;element name="parkingSpaceExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="parkingSpaceBasics" type="{http://datex2.eu/schema/2/2_0}ParkingSpaceBasics"/&gt;
  *       &lt;/sequence&gt;
- *     &lt;/extension&gt;
+ *       &lt;attribute name="parkingSpaceIndex" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
@@ -31,120 +29,54 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSpace", propOrder = {
-    "identicalToParkingSpace",
-    "location",
-    "parkingSpaceDimension",
-    "parkingSpaceExtension"
+@XmlType(name = "_ParkingSpace", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+    "parkingSpaceBasics"
 })
-public class ParkingSpace
-    extends ParkingSpaceBasics
-{
+public class ParkingSpace {
 
-    protected List<String> identicalToParkingSpace;
-    protected Location location;
-    protected Dimension parkingSpaceDimension;
-    protected _ExtensionType parkingSpaceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingSpaceBasics parkingSpaceBasics;
+    @XmlAttribute(name = "parkingSpaceIndex", required = true)
+    protected int parkingSpaceIndex;
 
     /**
-     * Gets the value of the identicalToParkingSpace property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a <CODE>set</CODE> method for the identicalToParkingSpace property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getIdenticalToParkingSpace().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getIdenticalToParkingSpace() {
-        if (identicalToParkingSpace == null) {
-            identicalToParkingSpace = new ArrayList<String>();
-        }
-        return this.identicalToParkingSpace;
-    }
-
-    /**
-     * Gets the value of the location property.
+     * Gets the value of the parkingSpaceBasics property.
      * 
      * @return
      *     possible object is
-     *     {@link Location }
+     *     {@link ParkingSpaceBasics }
      *     
      */
-    public Location getLocation() {
-        return location;
+    public ParkingSpaceBasics getParkingSpaceBasics() {
+        return parkingSpaceBasics;
     }
 
     /**
-     * Sets the value of the location property.
+     * Sets the value of the parkingSpaceBasics property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Location }
+     *     {@link ParkingSpaceBasics }
      *     
      */
-    public void setLocation(Location value) {
-        this.location = value;
+    public void setParkingSpaceBasics(ParkingSpaceBasics value) {
+        this.parkingSpaceBasics = value;
     }
 
     /**
-     * Gets the value of the parkingSpaceDimension property.
+     * Gets the value of the parkingSpaceIndex property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Dimension }
-     *     
      */
-    public Dimension getParkingSpaceDimension() {
-        return parkingSpaceDimension;
+    public int getParkingSpaceIndex() {
+        return parkingSpaceIndex;
     }
 
     /**
-     * Sets the value of the parkingSpaceDimension property.
+     * Sets the value of the parkingSpaceIndex property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Dimension }
-     *     
      */
-    public void setParkingSpaceDimension(Dimension value) {
-        this.parkingSpaceDimension = value;
-    }
-
-    /**
-     * Gets the value of the parkingSpaceExtension property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link _ExtensionType }
-     *     
-     */
-    public _ExtensionType getParkingSpaceExtension() {
-        return parkingSpaceExtension;
-    }
-
-    /**
-     * Sets the value of the parkingSpaceExtension property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link _ExtensionType }
-     *     
-     */
-    public void setParkingSpaceExtension(_ExtensionType value) {
-        this.parkingSpaceExtension = value;
+    public void setParkingSpaceIndex(int value) {
+        this.parkingSpaceIndex = value;
     }
 
 }

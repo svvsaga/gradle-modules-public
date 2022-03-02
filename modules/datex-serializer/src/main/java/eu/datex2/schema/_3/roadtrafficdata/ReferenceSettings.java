@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,28 +35,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceSettings", propOrder = {
+@XmlType(name = "ReferenceSettings", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "predefinedLocationGroupReference",
     "trafficStatusDefault",
-    "_ReferenceSettingsExtension"
+    "referenceSettingsExtension"
 })
 public class ReferenceSettings {
 
-    @XmlElement(required = true)
-    protected _PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
-    protected _TrafficStatusEnum trafficStatusDefault;
-    @XmlElement(name = "_referenceSettingsExtension")
-    protected _ExtensionType _ReferenceSettingsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    protected PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected TrafficStatusEnum trafficStatusDefault;
+    @XmlElement(name = "_referenceSettingsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType referenceSettingsExtension;
 
     /**
      * Gets the value of the predefinedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedLocationGroupVersionedReference }
+     *     {@link PredefinedLocationGroupVersionedReference }
      *     
      */
-    public _PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
+    public PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
         return predefinedLocationGroupReference;
     }
 
@@ -65,10 +66,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedLocationGroupVersionedReference }
+     *     {@link PredefinedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedLocationGroupReference(_PredefinedLocationGroupVersionedReference value) {
+    public void setPredefinedLocationGroupReference(PredefinedLocationGroupVersionedReference value) {
         this.predefinedLocationGroupReference = value;
     }
 
@@ -77,10 +78,10 @@ public class ReferenceSettings {
      * 
      * @return
      *     possible object is
-     *     {@link _TrafficStatusEnum }
+     *     {@link TrafficStatusEnum }
      *     
      */
-    public _TrafficStatusEnum getTrafficStatusDefault() {
+    public TrafficStatusEnum getTrafficStatusDefault() {
         return trafficStatusDefault;
     }
 
@@ -89,35 +90,35 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link _TrafficStatusEnum }
+     *     {@link TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatusDefault(_TrafficStatusEnum value) {
+    public void setTrafficStatusDefault(TrafficStatusEnum value) {
         this.trafficStatusDefault = value;
     }
 
     /**
-     * Gets the value of the _ReferenceSettingsExtension property.
+     * Gets the value of the referenceSettingsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ReferenceSettingsExtension() {
-        return _ReferenceSettingsExtension;
+    public ExtensionType getReferenceSettingsExtension() {
+        return referenceSettingsExtension;
     }
 
     /**
-     * Sets the value of the _ReferenceSettingsExtension property.
+     * Sets the value of the referenceSettingsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ReferenceSettingsExtension(_ExtensionType value) {
-        this._ReferenceSettingsExtension = value;
+    public void setReferenceSettingsExtension(ExtensionType value) {
+        this.referenceSettingsExtension = value;
     }
 
 }

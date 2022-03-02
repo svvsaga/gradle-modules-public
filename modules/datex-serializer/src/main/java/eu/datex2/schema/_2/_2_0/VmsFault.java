@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsFault", propOrder = {
+@XmlType(name = "VmsFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsFault",
     "vmsFaultExtension"
 })
@@ -37,10 +37,11 @@ public class VmsFault
     extends Fault
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected VmsFaultEnum vmsFault;
-    protected _ExtensionType vmsFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsFaultExtension;
 
     /**
      * Gets the value of the vmsFault property.
@@ -71,10 +72,10 @@ public class VmsFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsFaultExtension() {
+    public ExtensionType getVmsFaultExtension() {
         return vmsFaultExtension;
     }
 
@@ -83,10 +84,10 @@ public class VmsFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsFaultExtension(_ExtensionType value) {
+    public void setVmsFaultExtension(ExtensionType value) {
         this.vmsFaultExtension = value;
     }
 

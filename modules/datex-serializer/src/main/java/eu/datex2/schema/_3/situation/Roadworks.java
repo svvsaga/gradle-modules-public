@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Roadworks", propOrder = {
+@XmlType(name = "Roadworks", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "publicTransportAlternative",
     "roadworksDurationClassification",
     "roadworksIdentifier",
@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "mobility",
     "subjects",
     "maintenanceVehicles",
-    "_RoadworksExtension"
+    "roadworksExtension"
 })
 @XmlSeeAlso({
     ConstructionWorks.class,
@@ -63,17 +63,26 @@ public abstract class Roadworks
     extends OperatorAction
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString publicTransportAlternative;
-    protected _RoadworksDurationEnum roadworksDurationClassification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected RoadworksDurationEnum roadworksDurationClassification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String roadworksIdentifier;
-    protected _RoadworksScaleEnum roadworksScale;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected RoadworksScaleEnum roadworksScale;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean underTraffic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean urgentRoadworks;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobility;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Subjects subjects;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MaintenanceVehicles maintenanceVehicles;
-    @XmlElement(name = "_roadworksExtension")
-    protected _ExtensionType _RoadworksExtension;
+    @XmlElement(name = "_roadworksExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType roadworksExtension;
 
     /**
      * Gets the value of the publicTransportAlternative property.
@@ -104,10 +113,10 @@ public abstract class Roadworks
      * 
      * @return
      *     possible object is
-     *     {@link _RoadworksDurationEnum }
+     *     {@link RoadworksDurationEnum }
      *     
      */
-    public _RoadworksDurationEnum getRoadworksDurationClassification() {
+    public RoadworksDurationEnum getRoadworksDurationClassification() {
         return roadworksDurationClassification;
     }
 
@@ -116,10 +125,10 @@ public abstract class Roadworks
      * 
      * @param value
      *     allowed object is
-     *     {@link _RoadworksDurationEnum }
+     *     {@link RoadworksDurationEnum }
      *     
      */
-    public void setRoadworksDurationClassification(_RoadworksDurationEnum value) {
+    public void setRoadworksDurationClassification(RoadworksDurationEnum value) {
         this.roadworksDurationClassification = value;
     }
 
@@ -152,10 +161,10 @@ public abstract class Roadworks
      * 
      * @return
      *     possible object is
-     *     {@link _RoadworksScaleEnum }
+     *     {@link RoadworksScaleEnum }
      *     
      */
-    public _RoadworksScaleEnum getRoadworksScale() {
+    public RoadworksScaleEnum getRoadworksScale() {
         return roadworksScale;
     }
 
@@ -164,10 +173,10 @@ public abstract class Roadworks
      * 
      * @param value
      *     allowed object is
-     *     {@link _RoadworksScaleEnum }
+     *     {@link RoadworksScaleEnum }
      *     
      */
-    public void setRoadworksScale(_RoadworksScaleEnum value) {
+    public void setRoadworksScale(RoadworksScaleEnum value) {
         this.roadworksScale = value;
     }
 
@@ -292,27 +301,27 @@ public abstract class Roadworks
     }
 
     /**
-     * Gets the value of the _RoadworksExtension property.
+     * Gets the value of the roadworksExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadworksExtension() {
-        return _RoadworksExtension;
+    public ExtensionType getRoadworksExtension() {
+        return roadworksExtension;
     }
 
     /**
-     * Sets the value of the _RoadworksExtension property.
+     * Sets the value of the roadworksExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadworksExtension(_ExtensionType value) {
-        this._RoadworksExtension = value;
+    public void setRoadworksExtension(ExtensionType value) {
+        this.roadworksExtension = value;
     }
 
 }

@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfLocations", propOrder = {
+@XmlType(name = "GroupOfLocations", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "groupOfLocationsExtension"
 })
 @XmlSeeAlso({
@@ -37,17 +38,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class GroupOfLocations {
 
-    protected _ExtensionType groupOfLocationsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType groupOfLocationsExtension;
 
     /**
      * Gets the value of the groupOfLocationsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfLocationsExtension() {
+    public ExtensionType getGroupOfLocationsExtension() {
         return groupOfLocationsExtension;
     }
 
@@ -56,10 +58,10 @@ public abstract class GroupOfLocations {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfLocationsExtension(_ExtensionType value) {
+    public void setGroupOfLocationsExtension(ExtensionType value) {
         this.groupOfLocationsExtension = value;
     }
 

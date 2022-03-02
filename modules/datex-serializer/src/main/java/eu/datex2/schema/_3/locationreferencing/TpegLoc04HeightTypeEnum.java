@@ -1,143 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TpegLoc04HeightTypeEnum.
+ * <p>Java class for _TpegLoc04HeightTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TpegLoc04HeightTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="above"/&gt;
- *     &lt;enumeration value="aboveSeaLevel"/&gt;
- *     &lt;enumeration value="aboveStreetLevel"/&gt;
- *     &lt;enumeration value="at"/&gt;
- *     &lt;enumeration value="atSeaLevel"/&gt;
- *     &lt;enumeration value="atStreetLevel"/&gt;
- *     &lt;enumeration value="below"/&gt;
- *     &lt;enumeration value="belowSeaLevel"/&gt;
- *     &lt;enumeration value="belowStreetLevel"/&gt;
- *     &lt;enumeration value="undefined"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TpegLoc04HeightTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;TpegLoc04HeightTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TpegLoc04HeightTypeEnum")
-@XmlEnum
-public enum TpegLoc04HeightTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TpegLoc04HeightTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class TpegLoc04HeightTypeEnum {
 
-
-    /**
-     * Height above specified location.
-     * 
-     */
-    @XmlEnumValue("above")
-    ABOVE("above"),
-
-    /**
-     * Height above mean sea high water level.
-     * 
-     */
-    @XmlEnumValue("aboveSeaLevel")
-    ABOVE_SEA_LEVEL("aboveSeaLevel"),
+    @XmlValue
+    protected TpegLoc04HeightTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Height above street level.
+     * Types of height.
      * 
+     * @return
+     *     possible object is
+     *     {@link TpegLoc04HeightTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("aboveStreetLevel")
-    ABOVE_STREET_LEVEL("aboveStreetLevel"),
-
-    /**
-     * At height of specified location.
-     * 
-     */
-    @XmlEnumValue("at")
-    AT("at"),
-
-    /**
-     * At mean sea high water level.
-     * 
-     */
-    @XmlEnumValue("atSeaLevel")
-    AT_SEA_LEVEL("atSeaLevel"),
-
-    /**
-     * At street level.
-     * 
-     */
-    @XmlEnumValue("atStreetLevel")
-    AT_STREET_LEVEL("atStreetLevel"),
-
-    /**
-     * Height below specified location.
-     * 
-     */
-    @XmlEnumValue("below")
-    BELOW("below"),
-
-    /**
-     * Height below mean sea high water level.
-     * 
-     */
-    @XmlEnumValue("belowSeaLevel")
-    BELOW_SEA_LEVEL("belowSeaLevel"),
-
-    /**
-     * Height below street level.
-     * 
-     */
-    @XmlEnumValue("belowStreetLevel")
-    BELOW_STREET_LEVEL("belowStreetLevel"),
-
-    /**
-     * Undefined height reference.
-     * 
-     */
-    @XmlEnumValue("undefined")
-    UNDEFINED("undefined"),
-
-    /**
-     * Unknown height reference.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TpegLoc04HeightTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TpegLoc04HeightTypeEnum2 getValue() {
         return value;
     }
 
-    public static TpegLoc04HeightTypeEnum fromValue(String v) {
-        for (TpegLoc04HeightTypeEnum c: TpegLoc04HeightTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TpegLoc04HeightTypeEnum2 }
+     *     
+     */
+    public void setValue(TpegLoc04HeightTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

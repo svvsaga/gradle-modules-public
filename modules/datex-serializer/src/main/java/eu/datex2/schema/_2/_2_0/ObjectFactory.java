@@ -50,403 +50,403 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _AreaExtensionType }
+     * Create an instance of {@link AreaExtensionType }
      * 
      */
-    public _AreaExtensionType create_AreaExtensionType() {
-        return new _AreaExtensionType();
+    public AreaExtensionType createAreaExtensionType() {
+        return new AreaExtensionType();
     }
 
     /**
-     * Create an instance of {@link _ChargeBandVersionedReference }
+     * Create an instance of {@link ChargeBandVersionedReference }
      * 
      */
-    public _ChargeBandVersionedReference create_ChargeBandVersionedReference() {
-        return new _ChargeBandVersionedReference();
+    public ChargeBandVersionedReference createChargeBandVersionedReference() {
+        return new ChargeBandVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ContactDetailsVersionedReference }
+     * Create an instance of {@link ContactDetailsVersionedReference }
      * 
      */
-    public _ContactDetailsVersionedReference create_ContactDetailsVersionedReference() {
-        return new _ContactDetailsVersionedReference();
+    public ContactDetailsVersionedReference createContactDetailsVersionedReference() {
+        return new ContactDetailsVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ExtensionType }
+     * Create an instance of {@link ExtensionType }
      * 
      */
-    public _ExtensionType create_ExtensionType() {
-        return new _ExtensionType();
+    public ExtensionType createExtensionType() {
+        return new ExtensionType();
     }
 
     /**
-     * Create an instance of {@link _GenericPublicationExtensionType }
+     * Create an instance of {@link GenericPublicationExtensionType }
      * 
      */
-    public _GenericPublicationExtensionType create_GenericPublicationExtensionType() {
-        return new _GenericPublicationExtensionType();
+    public GenericPublicationExtensionType createGenericPublicationExtensionType() {
+        return new GenericPublicationExtensionType();
     }
 
     /**
-     * Create an instance of {@link _GroupOfParkingSpaces }
+     * Create an instance of {@link GroupOfParkingSpaces }
      * 
      */
-    public _GroupOfParkingSpaces create_GroupOfParkingSpaces() {
-        return new _GroupOfParkingSpaces();
+    public GroupOfParkingSpaces createGroupOfParkingSpaces() {
+        return new GroupOfParkingSpaces();
     }
 
     /**
-     * Create an instance of {@link _GroupOfParkingSpacesParkingSpaceIndexParkingSpace }
+     * Create an instance of {@link GroupOfParkingSpacesParkingSpaceIndexParkingSpace }
      * 
      */
-    public _GroupOfParkingSpacesParkingSpaceIndexParkingSpace create_GroupOfParkingSpacesParkingSpaceIndexParkingSpace() {
-        return new _GroupOfParkingSpacesParkingSpaceIndexParkingSpace();
+    public GroupOfParkingSpacesParkingSpaceIndexParkingSpace createGroupOfParkingSpacesParkingSpaceIndexParkingSpace() {
+        return new GroupOfParkingSpacesParkingSpaceIndexParkingSpace();
     }
 
     /**
-     * Create an instance of {@link _IntermediatePointOnLinearElement }
+     * Create an instance of {@link IntermediatePointOnLinearElement }
      * 
      */
-    public _IntermediatePointOnLinearElement create_IntermediatePointOnLinearElement() {
-        return new _IntermediatePointOnLinearElement();
+    public IntermediatePointOnLinearElement createIntermediatePointOnLinearElement() {
+        return new IntermediatePointOnLinearElement();
     }
 
     /**
-     * Create an instance of {@link _LinearExtensionType }
+     * Create an instance of {@link LinearExtensionType }
      * 
      */
-    public _LinearExtensionType create_LinearExtensionType() {
-        return new _LinearExtensionType();
+    public LinearExtensionType createLinearExtensionType() {
+        return new LinearExtensionType();
     }
 
     /**
-     * Create an instance of {@link _LocationContainedInItinerary }
+     * Create an instance of {@link LocationContainedInItinerary }
      * 
      */
-    public _LocationContainedInItinerary create_LocationContainedInItinerary() {
-        return new _LocationContainedInItinerary();
+    public LocationContainedInItinerary createLocationContainedInItinerary() {
+        return new LocationContainedInItinerary();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
+     * Create an instance of {@link MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
      * 
      */
-    public _MeasurementSiteRecordIndexMeasurementSpecificCharacteristics create_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics() {
-        return new _MeasurementSiteRecordIndexMeasurementSpecificCharacteristics();
+    public MeasurementSiteRecordIndexMeasurementSpecificCharacteristics createMeasurementSiteRecordIndexMeasurementSpecificCharacteristics() {
+        return new MeasurementSiteRecordIndexMeasurementSpecificCharacteristics();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteRecordVersionedReference }
+     * Create an instance of {@link MeasurementSiteRecordVersionedReference }
      * 
      */
-    public _MeasurementSiteRecordVersionedReference create_MeasurementSiteRecordVersionedReference() {
-        return new _MeasurementSiteRecordVersionedReference();
+    public MeasurementSiteRecordVersionedReference createMeasurementSiteRecordVersionedReference() {
+        return new MeasurementSiteRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteTableVersionedReference }
+     * Create an instance of {@link MeasurementSiteTableVersionedReference }
      * 
      */
-    public _MeasurementSiteTableVersionedReference create_MeasurementSiteTableVersionedReference() {
-        return new _MeasurementSiteTableVersionedReference();
+    public MeasurementSiteTableVersionedReference createMeasurementSiteTableVersionedReference() {
+        return new MeasurementSiteTableVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ParkingAccessReference }
+     * Create an instance of {@link ParkingAccessReference }
      * 
      */
-    public _ParkingAccessReference create_ParkingAccessReference() {
-        return new _ParkingAccessReference();
+    public ParkingAccessReference createParkingAccessReference() {
+        return new ParkingAccessReference();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
+     * Create an instance of {@link ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
      * 
      */
-    public _ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility create_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
-        return new _ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
+    public ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility createParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
+        return new ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus }
+     * Create an instance of {@link ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus }
      * 
      */
-    public _ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus create_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus() {
-        return new _ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus();
+    public ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus createParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus() {
+        return new ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus }
+     * Create an instance of {@link ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus }
      * 
      */
-    public _ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus create_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus() {
-        return new _ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus();
+    public ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus createParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus() {
+        return new ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus }
+     * Create an instance of {@link ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus }
      * 
      */
-    public _ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus create_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus() {
-        return new _ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus();
+    public ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus createParkingRecordStatusParkingSpaceIndexParkingSpaceStatus() {
+        return new ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus }
+     * Create an instance of {@link ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus }
      * 
      */
-    public _ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus create_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus() {
-        return new _ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus();
+    public ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus createParkingRecordStatusScenarioIndexParkingUsageScenarioStatus() {
+        return new ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus();
     }
 
     /**
-     * Create an instance of {@link _ParkingRecordVersionedReference }
+     * Create an instance of {@link ParkingRecordVersionedReference }
      * 
      */
-    public _ParkingRecordVersionedReference create_ParkingRecordVersionedReference() {
-        return new _ParkingRecordVersionedReference();
+    public ParkingRecordVersionedReference createParkingRecordVersionedReference() {
+        return new ParkingRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ParkingRouteDetailsVersionedReference }
+     * Create an instance of {@link ParkingRouteDetailsVersionedReference }
      * 
      */
-    public _ParkingRouteDetailsVersionedReference create_ParkingRouteDetailsVersionedReference() {
-        return new _ParkingRouteDetailsVersionedReference();
+    public ParkingRouteDetailsVersionedReference createParkingRouteDetailsVersionedReference() {
+        return new ParkingRouteDetailsVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ParkingSiteScenarioIndexParkingUsageScenario }
+     * Create an instance of {@link ParkingSiteScenarioIndexParkingUsageScenario }
      * 
      */
-    public _ParkingSiteScenarioIndexParkingUsageScenario create_ParkingSiteScenarioIndexParkingUsageScenario() {
-        return new _ParkingSiteScenarioIndexParkingUsageScenario();
+    public ParkingSiteScenarioIndexParkingUsageScenario createParkingSiteScenarioIndexParkingUsageScenario() {
+        return new ParkingSiteScenarioIndexParkingUsageScenario();
     }
 
     /**
-     * Create an instance of {@link _ParkingSpace }
+     * Create an instance of {@link ParkingSpace }
      * 
      */
-    public _ParkingSpace create_ParkingSpace() {
-        return new _ParkingSpace();
+    public ParkingSpace createParkingSpace() {
+        return new ParkingSpace();
     }
 
     /**
-     * Create an instance of {@link _ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
+     * Create an instance of {@link ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
      * 
      */
-    public _ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility create_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
-        return new _ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
+    public ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility createParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
+        return new ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
     }
 
     /**
-     * Create an instance of {@link _ParkingSpaceBasicsScenarioIndexParkingUsageScenario }
+     * Create an instance of {@link ParkingSpaceBasicsScenarioIndexParkingUsageScenario }
      * 
      */
-    public _ParkingSpaceBasicsScenarioIndexParkingUsageScenario create_ParkingSpaceBasicsScenarioIndexParkingUsageScenario() {
-        return new _ParkingSpaceBasicsScenarioIndexParkingUsageScenario();
+    public ParkingSpaceBasicsScenarioIndexParkingUsageScenario createParkingSpaceBasicsScenarioIndexParkingUsageScenario() {
+        return new ParkingSpaceBasicsScenarioIndexParkingUsageScenario();
     }
 
     /**
-     * Create an instance of {@link _ParkingTableVersionedReference }
+     * Create an instance of {@link ParkingTableVersionedReference }
      * 
      */
-    public _ParkingTableVersionedReference create_ParkingTableVersionedReference() {
-        return new _ParkingTableVersionedReference();
+    public ParkingTableVersionedReference createParkingTableVersionedReference() {
+        return new ParkingTableVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PeriodExtensionType }
+     * Create an instance of {@link PeriodExtensionType }
      * 
      */
-    public _PeriodExtensionType create_PeriodExtensionType() {
-        return new _PeriodExtensionType();
+    public PeriodExtensionType createPeriodExtensionType() {
+        return new PeriodExtensionType();
     }
 
     /**
-     * Create an instance of {@link _PointExtensionType }
+     * Create an instance of {@link PointExtensionType }
      * 
      */
-    public _PointExtensionType create_PointExtensionType() {
-        return new _PointExtensionType();
+    public PointExtensionType createPointExtensionType() {
+        return new PointExtensionType();
     }
 
     /**
-     * Create an instance of {@link _PolygonAreaIndexPointCoordinates }
+     * Create an instance of {@link PolygonAreaIndexPointCoordinates }
      * 
      */
-    public _PolygonAreaIndexPointCoordinates create_PolygonAreaIndexPointCoordinates() {
-        return new _PolygonAreaIndexPointCoordinates();
+    public PolygonAreaIndexPointCoordinates createPolygonAreaIndexPointCoordinates() {
+        return new PolygonAreaIndexPointCoordinates();
     }
 
     /**
-     * Create an instance of {@link _PredefinedItineraryIndexPredefinedLocation }
+     * Create an instance of {@link PredefinedItineraryIndexPredefinedLocation }
      * 
      */
-    public _PredefinedItineraryIndexPredefinedLocation create_PredefinedItineraryIndexPredefinedLocation() {
-        return new _PredefinedItineraryIndexPredefinedLocation();
+    public PredefinedItineraryIndexPredefinedLocation createPredefinedItineraryIndexPredefinedLocation() {
+        return new PredefinedItineraryIndexPredefinedLocation();
     }
 
     /**
-     * Create an instance of {@link _PredefinedItineraryVersionedReference }
+     * Create an instance of {@link PredefinedItineraryVersionedReference }
      * 
      */
-    public _PredefinedItineraryVersionedReference create_PredefinedItineraryVersionedReference() {
-        return new _PredefinedItineraryVersionedReference();
+    public PredefinedItineraryVersionedReference createPredefinedItineraryVersionedReference() {
+        return new PredefinedItineraryVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PredefinedLocationVersionedReference }
+     * Create an instance of {@link PredefinedLocationVersionedReference }
      * 
      */
-    public _PredefinedLocationVersionedReference create_PredefinedLocationVersionedReference() {
-        return new _PredefinedLocationVersionedReference();
+    public PredefinedLocationVersionedReference createPredefinedLocationVersionedReference() {
+        return new PredefinedLocationVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     * Create an instance of {@link PredefinedNonOrderedLocationGroupVersionedReference }
      * 
      */
-    public _PredefinedNonOrderedLocationGroupVersionedReference create_PredefinedNonOrderedLocationGroupVersionedReference() {
-        return new _PredefinedNonOrderedLocationGroupVersionedReference();
+    public PredefinedNonOrderedLocationGroupVersionedReference createPredefinedNonOrderedLocationGroupVersionedReference() {
+        return new PredefinedNonOrderedLocationGroupVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _SiteMeasurementsIndexMeasuredValue }
+     * Create an instance of {@link SiteMeasurementsIndexMeasuredValue }
      * 
      */
-    public _SiteMeasurementsIndexMeasuredValue create_SiteMeasurementsIndexMeasuredValue() {
-        return new _SiteMeasurementsIndexMeasuredValue();
+    public SiteMeasurementsIndexMeasuredValue createSiteMeasurementsIndexMeasuredValue() {
+        return new SiteMeasurementsIndexMeasuredValue();
     }
 
     /**
-     * Create an instance of {@link _SituationRecordExtensionType }
+     * Create an instance of {@link SituationRecordExtensionType }
      * 
      */
-    public _SituationRecordExtensionType create_SituationRecordExtensionType() {
-        return new _SituationRecordExtensionType();
+    public SituationRecordExtensionType createSituationRecordExtensionType() {
+        return new SituationRecordExtensionType();
     }
 
     /**
-     * Create an instance of {@link _SituationRecordVersionedReference }
+     * Create an instance of {@link SituationRecordVersionedReference }
      * 
      */
-    public _SituationRecordVersionedReference create_SituationRecordVersionedReference() {
-        return new _SituationRecordVersionedReference();
+    public SituationRecordVersionedReference createSituationRecordVersionedReference() {
+        return new SituationRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _SituationVersionedReference }
+     * Create an instance of {@link SituationVersionedReference }
      * 
      */
-    public _SituationVersionedReference create_SituationVersionedReference() {
-        return new _SituationVersionedReference();
+    public SituationVersionedReference createSituationVersionedReference() {
+        return new SituationVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _TextPage }
+     * Create an instance of {@link TextPage }
      * 
      */
-    public _TextPage create_TextPage() {
-        return new _TextPage();
+    public TextPage createTextPage() {
+        return new TextPage();
     }
 
     /**
-     * Create an instance of {@link _VehicleCharacteristicsExtensionType }
+     * Create an instance of {@link VehicleCharacteristicsExtensionType }
      * 
      */
-    public _VehicleCharacteristicsExtensionType create_VehicleCharacteristicsExtensionType() {
-        return new _VehicleCharacteristicsExtensionType();
+    public VehicleCharacteristicsExtensionType createVehicleCharacteristicsExtensionType() {
+        return new VehicleCharacteristicsExtensionType();
     }
 
     /**
-     * Create an instance of {@link _VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * Create an instance of {@link VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      */
-    public _VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics create_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics() {
-        return new _VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics();
+    public VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics createVmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics() {
+        return new VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics();
     }
 
     /**
-     * Create an instance of {@link _VmsMessageIndexVmsMessage }
+     * Create an instance of {@link VmsMessageIndexVmsMessage }
      * 
      */
-    public _VmsMessageIndexVmsMessage create_VmsMessageIndexVmsMessage() {
-        return new _VmsMessageIndexVmsMessage();
+    public VmsMessageIndexVmsMessage createVmsMessageIndexVmsMessage() {
+        return new VmsMessageIndexVmsMessage();
     }
 
     /**
-     * Create an instance of {@link _VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
+     * Create an instance of {@link VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
      * 
      */
-    public _VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea create_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea() {
-        return new _VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea();
+    public VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea createVmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea() {
+        return new VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea();
     }
 
     /**
-     * Create an instance of {@link _VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
+     * Create an instance of {@link VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
      * 
      */
-    public _VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings create_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings() {
-        return new _VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings();
+    public VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings createVmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings() {
+        return new VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings();
     }
 
     /**
-     * Create an instance of {@link _VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
+     * Create an instance of {@link VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
      * 
      */
-    public _VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram create_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram() {
-        return new _VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram();
+    public VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram createVmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram() {
+        return new VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram();
     }
 
     /**
-     * Create an instance of {@link _VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * Create an instance of {@link VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      */
-    public _VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics create_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics() {
-        return new _VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics();
+    public VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics createVmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics() {
+        return new VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics();
     }
 
     /**
-     * Create an instance of {@link _VmsTextLineIndexVmsTextLine }
+     * Create an instance of {@link VmsTextLineIndexVmsTextLine }
      * 
      */
-    public _VmsTextLineIndexVmsTextLine create_VmsTextLineIndexVmsTextLine() {
-        return new _VmsTextLineIndexVmsTextLine();
+    public VmsTextLineIndexVmsTextLine createVmsTextLineIndexVmsTextLine() {
+        return new VmsTextLineIndexVmsTextLine();
     }
 
     /**
-     * Create an instance of {@link _VmsUnitRecordVersionedReference }
+     * Create an instance of {@link VmsUnitRecordVersionedReference }
      * 
      */
-    public _VmsUnitRecordVersionedReference create_VmsUnitRecordVersionedReference() {
-        return new _VmsUnitRecordVersionedReference();
+    public VmsUnitRecordVersionedReference createVmsUnitRecordVersionedReference() {
+        return new VmsUnitRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _VmsUnitRecordVmsIndexVmsRecord }
+     * Create an instance of {@link VmsUnitRecordVmsIndexVmsRecord }
      * 
      */
-    public _VmsUnitRecordVmsIndexVmsRecord create_VmsUnitRecordVmsIndexVmsRecord() {
-        return new _VmsUnitRecordVmsIndexVmsRecord();
+    public VmsUnitRecordVmsIndexVmsRecord createVmsUnitRecordVmsIndexVmsRecord() {
+        return new VmsUnitRecordVmsIndexVmsRecord();
     }
 
     /**
-     * Create an instance of {@link _VmsUnitTableVersionedReference }
+     * Create an instance of {@link VmsUnitTableVersionedReference }
      * 
      */
-    public _VmsUnitTableVersionedReference create_VmsUnitTableVersionedReference() {
-        return new _VmsUnitTableVersionedReference();
+    public VmsUnitTableVersionedReference createVmsUnitTableVersionedReference() {
+        return new VmsUnitTableVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _VmsUnitVmsIndexVms }
+     * Create an instance of {@link VmsUnitVmsIndexVms }
      * 
      */
-    public _VmsUnitVmsIndexVms create_VmsUnitVmsIndexVms() {
-        return new _VmsUnitVmsIndexVms();
+    public VmsUnitVmsIndexVms createVmsUnitVmsIndexVms() {
+        return new VmsUnitVmsIndexVms();
     }
 
     /**
@@ -994,11 +994,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GroupOfParkingSpaces }
+     * Create an instance of {@link GroupOfParkingSpaces2 }
      * 
      */
-    public GroupOfParkingSpaces createGroupOfParkingSpaces() {
-        return new GroupOfParkingSpaces();
+    public GroupOfParkingSpaces2 createGroupOfParkingSpaces2() {
+        return new GroupOfParkingSpaces2();
     }
 
     /**
@@ -1698,11 +1698,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ParkingSpace }
+     * Create an instance of {@link ParkingSpace2 }
      * 
      */
-    public ParkingSpace createParkingSpace() {
-        return new ParkingSpace();
+    public ParkingSpace2 createParkingSpace2() {
+        return new ParkingSpace2();
     }
 
     /**

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,23 +39,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointCoordinates", propOrder = {
+@XmlType(name = "PointCoordinates", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "latitude",
     "longitude",
     "heightCoordinate",
     "positionConfidenceEllipse",
     "horizontalPositionAccuracy",
-    "_PointCoordinatesExtension"
+    "pointCoordinatesExtension"
 })
 public class PointCoordinates {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float latitude;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float longitude;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<HeightCoordinate> heightCoordinate;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionConfidenceEllipse positionConfidenceEllipse;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionAccuracy horizontalPositionAccuracy;
-    @XmlElement(name = "_pointCoordinatesExtension")
-    protected _ExtensionType _PointCoordinatesExtension;
+    @XmlElement(name = "_pointCoordinatesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType pointCoordinatesExtension;
 
     /**
      * Gets the value of the latitude property.
@@ -167,27 +172,27 @@ public class PointCoordinates {
     }
 
     /**
-     * Gets the value of the _PointCoordinatesExtension property.
+     * Gets the value of the pointCoordinatesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PointCoordinatesExtension() {
-        return _PointCoordinatesExtension;
+    public ExtensionType getPointCoordinatesExtension() {
+        return pointCoordinatesExtension;
     }
 
     /**
-     * Sets the value of the _PointCoordinatesExtension property.
+     * Sets the value of the pointCoordinatesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PointCoordinatesExtension(_ExtensionType value) {
-        this._PointCoordinatesExtension = value;
+    public void setPointCoordinatesExtension(ExtensionType value) {
+        this.pointCoordinatesExtension = value;
     }
 
 }

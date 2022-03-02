@@ -3,8 +3,8 @@ package eu.datex2.schema._3.exchangeinformation;
 
 import java.math.BigInteger;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DynamicInformation", propOrder = {
+@XmlType(name = "DynamicInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "exchangeStatus",
     "exchangeStatusDescription",
     "completedPaylod",
@@ -47,33 +47,38 @@ import jakarta.xml.bind.annotation.XmlType;
     "messageGenerationTimestamp",
     "returnInformation",
     "sessionInformation",
-    "_DynamicInformationExtension"
+    "dynamicInformationExtension"
 })
 public class DynamicInformation {
 
-    @XmlElement(required = true)
-    protected _ExchangeStatusEnum exchangeStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    protected ExchangeStatusEnum exchangeStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected MultilingualString exchangeStatusDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Boolean completedPaylod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger messageSequencingNumber;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar messageGenerationTimestamp;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected ReturnInformation returnInformation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected SessionInformation sessionInformation;
-    @XmlElement(name = "_dynamicInformationExtension")
-    protected _ExtensionType _DynamicInformationExtension;
+    @XmlElement(name = "_dynamicInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType dynamicInformationExtension;
 
     /**
      * Gets the value of the exchangeStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExchangeStatusEnum }
+     *     {@link ExchangeStatusEnum }
      *     
      */
-    public _ExchangeStatusEnum getExchangeStatus() {
+    public ExchangeStatusEnum getExchangeStatus() {
         return exchangeStatus;
     }
 
@@ -82,10 +87,10 @@ public class DynamicInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExchangeStatusEnum }
+     *     {@link ExchangeStatusEnum }
      *     
      */
-    public void setExchangeStatus(_ExchangeStatusEnum value) {
+    public void setExchangeStatus(ExchangeStatusEnum value) {
         this.exchangeStatus = value;
     }
 
@@ -234,27 +239,27 @@ public class DynamicInformation {
     }
 
     /**
-     * Gets the value of the _DynamicInformationExtension property.
+     * Gets the value of the dynamicInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DynamicInformationExtension() {
-        return _DynamicInformationExtension;
+    public ExtensionType getDynamicInformationExtension() {
+        return dynamicInformationExtension;
     }
 
     /**
-     * Sets the value of the _DynamicInformationExtension property.
+     * Sets the value of the dynamicInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DynamicInformationExtension(_ExtensionType value) {
-        this._DynamicInformationExtension = value;
+    public void setDynamicInformationExtension(ExtensionType value) {
+        this.dynamicInformationExtension = value;
     }
 
 }

@@ -33,31 +33,35 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationDetail", propOrder = {
+@XmlType(name = "PrecipitationDetail", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "precipitationType",
     "precipitationIntensityGrade",
     "precipitationIntensity",
     "depositionDepth",
-    "_PrecipitationDetailExtension"
+    "precipitationDetailExtension"
 })
 public class PrecipitationDetail {
 
-    protected _PrecipitationTypeEnum precipitationType;
-    protected _PrecipitationIntensityEnum precipitationIntensityGrade;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected PrecipitationTypeEnum precipitationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected PrecipitationIntensityEnum precipitationIntensityGrade;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PrecipitationIntensityValue precipitationIntensity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue depositionDepth;
-    @XmlElement(name = "_precipitationDetailExtension")
-    protected _ExtensionType _PrecipitationDetailExtension;
+    @XmlElement(name = "_precipitationDetailExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType precipitationDetailExtension;
 
     /**
      * Gets the value of the precipitationType property.
      * 
      * @return
      *     possible object is
-     *     {@link _PrecipitationTypeEnum }
+     *     {@link PrecipitationTypeEnum }
      *     
      */
-    public _PrecipitationTypeEnum getPrecipitationType() {
+    public PrecipitationTypeEnum getPrecipitationType() {
         return precipitationType;
     }
 
@@ -66,10 +70,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PrecipitationTypeEnum }
+     *     {@link PrecipitationTypeEnum }
      *     
      */
-    public void setPrecipitationType(_PrecipitationTypeEnum value) {
+    public void setPrecipitationType(PrecipitationTypeEnum value) {
         this.precipitationType = value;
     }
 
@@ -78,10 +82,10 @@ public class PrecipitationDetail {
      * 
      * @return
      *     possible object is
-     *     {@link _PrecipitationIntensityEnum }
+     *     {@link PrecipitationIntensityEnum }
      *     
      */
-    public _PrecipitationIntensityEnum getPrecipitationIntensityGrade() {
+    public PrecipitationIntensityEnum getPrecipitationIntensityGrade() {
         return precipitationIntensityGrade;
     }
 
@@ -90,10 +94,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PrecipitationIntensityEnum }
+     *     {@link PrecipitationIntensityEnum }
      *     
      */
-    public void setPrecipitationIntensityGrade(_PrecipitationIntensityEnum value) {
+    public void setPrecipitationIntensityGrade(PrecipitationIntensityEnum value) {
         this.precipitationIntensityGrade = value;
     }
 
@@ -146,27 +150,27 @@ public class PrecipitationDetail {
     }
 
     /**
-     * Gets the value of the _PrecipitationDetailExtension property.
+     * Gets the value of the precipitationDetailExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PrecipitationDetailExtension() {
-        return _PrecipitationDetailExtension;
+    public ExtensionType getPrecipitationDetailExtension() {
+        return precipitationDetailExtension;
     }
 
     /**
-     * Sets the value of the _PrecipitationDetailExtension property.
+     * Sets the value of the precipitationDetailExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PrecipitationDetailExtension(_ExtensionType value) {
-        this._PrecipitationDetailExtension = value;
+    public void setPrecipitationDetailExtension(ExtensionType value) {
+        this.precipitationDetailExtension = value;
     }
 
 }

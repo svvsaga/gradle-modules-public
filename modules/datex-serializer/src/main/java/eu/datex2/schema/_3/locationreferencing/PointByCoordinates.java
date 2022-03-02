@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,19 +34,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointByCoordinates", propOrder = {
+@XmlType(name = "PointByCoordinates", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "bearing",
     "pointCoordinates",
-    "_PointByCoordinatesExtension"
+    "pointByCoordinatesExtension"
 })
 public class PointByCoordinates {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected Integer bearing;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates pointCoordinates;
-    @XmlElement(name = "_pointByCoordinatesExtension")
-    protected _ExtensionType _PointByCoordinatesExtension;
+    @XmlElement(name = "_pointByCoordinatesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType pointByCoordinatesExtension;
 
     /**
      * Gets the value of the bearing property.
@@ -97,27 +98,27 @@ public class PointByCoordinates {
     }
 
     /**
-     * Gets the value of the _PointByCoordinatesExtension property.
+     * Gets the value of the pointByCoordinatesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PointByCoordinatesExtension() {
-        return _PointByCoordinatesExtension;
+    public ExtensionType getPointByCoordinatesExtension() {
+        return pointByCoordinatesExtension;
     }
 
     /**
-     * Sets the value of the _PointByCoordinatesExtension property.
+     * Sets the value of the pointByCoordinatesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PointByCoordinatesExtension(_ExtensionType value) {
-        this._PointByCoordinatesExtension = value;
+    public void setPointByCoordinatesExtension(ExtensionType value) {
+        this.pointByCoordinatesExtension = value;
     }
 
 }

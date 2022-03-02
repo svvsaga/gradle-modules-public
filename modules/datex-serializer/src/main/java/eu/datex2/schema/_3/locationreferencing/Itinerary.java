@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,9 +36,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Itinerary", propOrder = {
+@XmlType(name = "Itinerary", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "routeDestination",
-    "_ItineraryExtension"
+    "itineraryExtension"
 })
 @XmlSeeAlso({
     ItineraryByIndexedLocations.class,
@@ -48,9 +48,10 @@ public abstract class Itinerary
     extends LocationReference
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<Destination> routeDestination;
-    @XmlElement(name = "_itineraryExtension")
-    protected _ExtensionType _ItineraryExtension;
+    @XmlElement(name = "_itineraryExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType itineraryExtension;
 
     /**
      * Gets the value of the routeDestination property.
@@ -82,27 +83,27 @@ public abstract class Itinerary
     }
 
     /**
-     * Gets the value of the _ItineraryExtension property.
+     * Gets the value of the itineraryExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ItineraryExtension() {
-        return _ItineraryExtension;
+    public ExtensionType getItineraryExtension() {
+        return itineraryExtension;
     }
 
     /**
-     * Sets the value of the _ItineraryExtension property.
+     * Sets the value of the itineraryExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ItineraryExtension(_ExtensionType value) {
-        this._ItineraryExtension = value;
+    public void setItineraryExtension(ExtensionType value) {
+        this.itineraryExtension = value;
     }
 
 }

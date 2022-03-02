@@ -1,63 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ComplianceOptionEnum.
+ * <p>Java class for _ComplianceOptionEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ComplianceOptionEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="advisory"/&gt;
- *     &lt;enumeration value="mandatory"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ComplianceOptionEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;ComplianceOptionEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ComplianceOptionEnum")
-@XmlEnum
-public enum ComplianceOptionEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ComplianceOptionEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class ComplianceOptionEnum {
 
+    @XmlValue
+    protected ComplianceOptionEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Advisory compliance.
+     * Types of compliance.
      * 
+     * @return
+     *     possible object is
+     *     {@link ComplianceOptionEnum2 }
+     *     
      */
-    @XmlEnumValue("advisory")
-    ADVISORY("advisory"),
-
-    /**
-     * Mandatory compliance.
-     * 
-     */
-    @XmlEnumValue("mandatory")
-    MANDATORY("mandatory"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ComplianceOptionEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ComplianceOptionEnum2 getValue() {
         return value;
     }
 
-    public static ComplianceOptionEnum fromValue(String v) {
-        for (ComplianceOptionEnum c: ComplianceOptionEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ComplianceOptionEnum2 }
+     *     
+     */
+    public void setValue(ComplianceOptionEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WeatherData", propOrder = {
+@XmlType(name = "WeatherData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "weatherDataExtension"
 })
 @XmlSeeAlso({
@@ -43,17 +44,18 @@ public abstract class WeatherData
     extends BasicData
 {
 
-    protected _ExtensionType weatherDataExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType weatherDataExtension;
 
     /**
      * Gets the value of the weatherDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWeatherDataExtension() {
+    public ExtensionType getWeatherDataExtension() {
         return weatherDataExtension;
     }
 
@@ -62,10 +64,10 @@ public abstract class WeatherData
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWeatherDataExtension(_ExtensionType value) {
+    public void setWeatherDataExtension(ExtensionType value) {
         this.weatherDataExtension = value;
     }
 

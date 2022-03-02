@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingPermit", propOrder = {
+@XmlType(name = "ParkingPermit", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingPermitType",
     "parkingPermitScheme",
     "parkingPermitIdentifier",
@@ -39,12 +39,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingPermit {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected PermitTypeEnum parkingPermitType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingPermitScheme;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingPermitIdentifier;
-    protected _ExtensionType parkingPermitExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingPermitExtension;
 
     /**
      * Gets the value of the parkingPermitType property.
@@ -123,10 +126,10 @@ public class ParkingPermit {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingPermitExtension() {
+    public ExtensionType getParkingPermitExtension() {
         return parkingPermitExtension;
     }
 
@@ -135,10 +138,10 @@ public class ParkingPermit {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingPermitExtension(_ExtensionType value) {
+    public void setParkingPermitExtension(ExtensionType value) {
         this.parkingPermitExtension = value;
     }
 

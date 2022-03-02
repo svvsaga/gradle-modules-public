@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegAreaLocation", propOrder = {
+@XmlType(name = "TpegAreaLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegAreaLocationType",
     "tpegHeight",
     "tpegAreaLocationExtension"
@@ -42,11 +42,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegAreaLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01AreaLocationSubtypeEnum tpegAreaLocationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegHeight tpegHeight;
-    protected _ExtensionType tpegAreaLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegAreaLocationExtension;
 
     /**
      * Gets the value of the tpegAreaLocationType property.
@@ -101,10 +103,10 @@ public abstract class TpegAreaLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegAreaLocationExtension() {
+    public ExtensionType getTpegAreaLocationExtension() {
         return tpegAreaLocationExtension;
     }
 
@@ -113,10 +115,10 @@ public abstract class TpegAreaLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegAreaLocationExtension(_ExtensionType value) {
+    public void setTpegAreaLocationExtension(ExtensionType value) {
         this.tpegAreaLocationExtension = value;
     }
 

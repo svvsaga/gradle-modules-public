@@ -1,111 +1,88 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for PhysicalSupportEnum.
+ * <p>Java class for _PhysicalSupportEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="PhysicalSupportEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="centralReservationMounted"/&gt;
- *     &lt;enumeration value="gantryMounted"/&gt;
- *     &lt;enumeration value="overheadBridgeMounted"/&gt;
- *     &lt;enumeration value="roadsideCantileverMounted"/&gt;
- *     &lt;enumeration value="roadsideMounted"/&gt;
- *     &lt;enumeration value="trailerMounted"/&gt;
- *     &lt;enumeration value="tunnelEntranceMounted"/&gt;
- *     &lt;enumeration value="vehicleMounted"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_PhysicalSupportEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;PhysicalSupportEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "PhysicalSupportEnum")
-@XmlEnum
-public enum PhysicalSupportEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_PhysicalSupportEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class PhysicalSupportEnum {
 
-
-    /**
-     * Equipment mounted in the central reservation.
-     * 
-     */
-    @XmlEnumValue("centralReservationMounted")
-    CENTRAL_RESERVATION_MOUNTED("centralReservationMounted"),
-
-    /**
-     * Equipment mounted on an overhead gantry across the carriageway.
-     * 
-     */
-    @XmlEnumValue("gantryMounted")
-    GANTRY_MOUNTED("gantryMounted"),
+    @XmlValue
+    protected PhysicalSupportEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Equipment mounted overhead on a bridge structure.
+     * The ways in which equipments such as VMS are mounted or deployed on the road.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link PhysicalSupportEnum2 }
+     *     
      */
-    @XmlEnumValue("overheadBridgeMounted")
-    OVERHEAD_BRIDGE_MOUNTED("overheadBridgeMounted"),
-
-    /**
-     * Equipment mounted on a cantilever from the roadside.
-     * 
-     */
-    @XmlEnumValue("roadsideCantileverMounted")
-    ROADSIDE_CANTILEVER_MOUNTED("roadsideCantileverMounted"),
-
-    /**
-     * Equipment mounted at the roadside.
-     * 
-     */
-    @XmlEnumValue("roadsideMounted")
-    ROADSIDE_MOUNTED("roadsideMounted"),
-
-    /**
-     * Equipment mounted on a movable trailer.
-     * 
-     */
-    @XmlEnumValue("trailerMounted")
-    TRAILER_MOUNTED("trailerMounted"),
-
-    /**
-     * Equipment mounted on the entrance to a tunnel.
-     * 
-     */
-    @XmlEnumValue("tunnelEntranceMounted")
-    TUNNEL_ENTRANCE_MOUNTED("tunnelEntranceMounted"),
-
-    /**
-     * Equipment mounted on a vehicle.
-     * 
-     */
-    @XmlEnumValue("vehicleMounted")
-    VEHICLE_MOUNTED("vehicleMounted"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    PhysicalSupportEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public PhysicalSupportEnum2 getValue() {
         return value;
     }
 
-    public static PhysicalSupportEnum fromValue(String v) {
-        for (PhysicalSupportEnum c: PhysicalSupportEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PhysicalSupportEnum2 }
+     *     
+     */
+    public void setValue(PhysicalSupportEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLinearByCode", propOrder = {
+@XmlType(name = "AlertCLinearByCode", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCDirection",
     "locationCodeForLinearLocation",
     "alertCLinearByCodeExtension"
@@ -38,11 +38,12 @@ public class AlertCLinearByCode
     extends AlertCLinear
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCLocation locationCodeForLinearLocation;
-    protected _ExtensionType alertCLinearByCodeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCLinearByCodeExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -97,10 +98,10 @@ public class AlertCLinearByCode
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLinearByCodeExtension() {
+    public ExtensionType getAlertCLinearByCodeExtension() {
         return alertCLinearByCodeExtension;
     }
 
@@ -109,10 +110,10 @@ public class AlertCLinearByCode
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLinearByCodeExtension(_ExtensionType value) {
+    public void setAlertCLinearByCodeExtension(ExtensionType value) {
         this.alertCLinearByCodeExtension = value;
     }
 

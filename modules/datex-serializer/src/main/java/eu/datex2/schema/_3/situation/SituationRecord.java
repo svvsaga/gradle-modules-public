@@ -4,12 +4,12 @@ package eu.datex2.schema._3.situation;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ConfidentialityValueEnum;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.Source;
 import eu.datex2.schema._3.common.UrlLink;
 import eu.datex2.schema._3.common.Validity;
-import eu.datex2.schema._3.common._ConfidentialityValueEnum;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -64,7 +64,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationRecord", propOrder = {
+@XmlType(name = "SituationRecord", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "situationRecordCreationReference",
     "situationRecordCreationTime",
     "situationRecordObservationTime",
@@ -84,7 +84,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "locationReference",
     "informationManagerOverride",
     "impactOnOppositeDirection",
-    "_SituationRecordExtension"
+    "situationRecordExtension"
 })
 @XmlSeeAlso({
     GenericSituationRecord.class,
@@ -94,36 +94,50 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class SituationRecord {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String situationRecordCreationReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordCreationTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordObservationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordVersionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordFirstSupplierVersionTime;
-    protected _ConfidentialityValueEnum confidentialityOverride;
-    @XmlElement(required = true)
-    protected _ProbabilityOfOccurrenceEnum probabilityOfOccurrence;
-    protected _SeverityEnum severity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected ConfidentialityValueEnum confidentialityOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected ProbabilityOfOccurrenceEnum probabilityOfOccurrence;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected SeverityEnum severity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean safetyRelatedMessage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Source source;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected Validity validity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Impact impact;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Cause cause;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Comment> generalPublicComment;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Comment> nonGeneralPublicComment;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<UrlLink> urlLink;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected LocationReference locationReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InternationalIdentifier informationManagerOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Impact impactOnOppositeDirection;
-    @XmlElement(name = "_situationRecordExtension")
-    protected _ExtensionType _SituationRecordExtension;
+    @XmlElement(name = "_situationRecordExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType situationRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -254,10 +268,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ConfidentialityValueEnum }
+     *     {@link ConfidentialityValueEnum }
      *     
      */
-    public _ConfidentialityValueEnum getConfidentialityOverride() {
+    public ConfidentialityValueEnum getConfidentialityOverride() {
         return confidentialityOverride;
     }
 
@@ -266,10 +280,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ConfidentialityValueEnum }
+     *     {@link ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentialityOverride(_ConfidentialityValueEnum value) {
+    public void setConfidentialityOverride(ConfidentialityValueEnum value) {
         this.confidentialityOverride = value;
     }
 
@@ -278,10 +292,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ProbabilityOfOccurrenceEnum }
+     *     {@link ProbabilityOfOccurrenceEnum }
      *     
      */
-    public _ProbabilityOfOccurrenceEnum getProbabilityOfOccurrence() {
+    public ProbabilityOfOccurrenceEnum getProbabilityOfOccurrence() {
         return probabilityOfOccurrence;
     }
 
@@ -290,10 +304,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ProbabilityOfOccurrenceEnum }
+     *     {@link ProbabilityOfOccurrenceEnum }
      *     
      */
-    public void setProbabilityOfOccurrence(_ProbabilityOfOccurrenceEnum value) {
+    public void setProbabilityOfOccurrence(ProbabilityOfOccurrenceEnum value) {
         this.probabilityOfOccurrence = value;
     }
 
@@ -302,10 +316,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _SeverityEnum }
+     *     {@link SeverityEnum }
      *     
      */
-    public _SeverityEnum getSeverity() {
+    public SeverityEnum getSeverity() {
         return severity;
     }
 
@@ -314,10 +328,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _SeverityEnum }
+     *     {@link SeverityEnum }
      *     
      */
-    public void setSeverity(_SeverityEnum value) {
+    public void setSeverity(SeverityEnum value) {
         this.severity = value;
     }
 
@@ -601,27 +615,27 @@ public abstract class SituationRecord {
     }
 
     /**
-     * Gets the value of the _SituationRecordExtension property.
+     * Gets the value of the situationRecordExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SituationRecordExtension() {
-        return _SituationRecordExtension;
+    public ExtensionType getSituationRecordExtension() {
+        return situationRecordExtension;
     }
 
     /**
-     * Sets the value of the _SituationRecordExtension property.
+     * Sets the value of the situationRecordExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SituationRecordExtension(_ExtensionType value) {
-        this._SituationRecordExtension = value;
+    public void setSituationRecordExtension(ExtensionType value) {
+        this.situationRecordExtension = value;
     }
 
     /**

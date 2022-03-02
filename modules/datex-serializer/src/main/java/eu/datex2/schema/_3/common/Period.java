@@ -41,27 +41,33 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Period", propOrder = {
+@XmlType(name = "Period", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "startOfPeriod",
     "endOfPeriod",
     "periodName",
     "recurringTimePeriodOfDay",
     "recurringDayWeekMonthPeriod",
     "recurringSpecialDay",
-    "_PeriodExtension"
+    "periodExtension"
 })
 public class Period {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startOfPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endOfPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString periodName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<TimePeriodOfDay> recurringTimePeriodOfDay;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<SpecialDay> recurringSpecialDay;
-    @XmlElement(name = "_periodExtension")
-    protected _ExtensionType _PeriodExtension;
+    @XmlElement(name = "_periodExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType periodExtension;
 
     /**
      * Gets the value of the startOfPeriod property.
@@ -223,27 +229,27 @@ public class Period {
     }
 
     /**
-     * Gets the value of the _PeriodExtension property.
+     * Gets the value of the periodExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PeriodExtension() {
-        return _PeriodExtension;
+    public ExtensionType getPeriodExtension() {
+        return periodExtension;
     }
 
     /**
-     * Sets the value of the _PeriodExtension property.
+     * Sets the value of the periodExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PeriodExtension(_ExtensionType value) {
-        this._PeriodExtension = value;
+    public void setPeriodExtension(ExtensionType value) {
+        this.periodExtension = value;
     }
 
 }

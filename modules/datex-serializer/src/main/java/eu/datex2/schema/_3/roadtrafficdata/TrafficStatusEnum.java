@@ -1,121 +1,87 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TrafficStatusEnum.
+ * <p>Java class for _TrafficStatusEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TrafficStatusEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="stationary"/&gt;
- *     &lt;enumeration value="queuing"/&gt;
- *     &lt;enumeration value="slow"/&gt;
- *     &lt;enumeration value="heavy"/&gt;
- *     &lt;enumeration value="unspecifiedAbnormal"/&gt;
- *     &lt;enumeration value="freeFlow"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TrafficStatusEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/roadTrafficData&gt;TrafficStatusEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TrafficStatusEnum")
-@XmlEnum
-public enum TrafficStatusEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TrafficStatusEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+    "value"
+})
+public class TrafficStatusEnum {
 
-
-    /**
-     * Traffic is stationary, or very near stationary, at the specified location (i.e.
-     *             average speed is less than 10% of its free-flow level).
-     *           
-     * 
-     */
-    @XmlEnumValue("stationary")
-    STATIONARY("stationary"),
+    @XmlValue
+    protected TrafficStatusEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Traffic is queuing at the specified location, although there is still some traffic
-     *             movement (i.e. average speed is between 10% and 25% of its free-flow level).
-     *           
+     * List of terms used to describe traffic conditions.
      * 
+     * @return
+     *     possible object is
+     *     {@link TrafficStatusEnum2 }
+     *     
      */
-    @XmlEnumValue("queuing")
-    QUEUING("queuing"),
-
-    /**
-     * Traffic is slow moving at the specified location, but not yet forming queues (i.e.
-     *             average speed is between 25% and 75% of its free-flow level).
-     *           
-     * 
-     */
-    @XmlEnumValue("slow")
-    SLOW("slow"),
-
-    /**
-     * Traffic in the specified direction is heavier than usual making driving conditions
-     *             more difficult than normal.
-     *           
-     * 
-     */
-    @XmlEnumValue("heavy")
-    HEAVY("heavy"),
-
-    /**
-     * There are abnormal traffic conditions of an unspecified nature at the specified
-     *             location.
-     *           
-     * 
-     */
-    @XmlEnumValue("unspecifiedAbnormal")
-    UNSPECIFIED_ABNORMAL("unspecifiedAbnormal"),
-
-    /**
-     * Traffic at the specified location is free-flowing.
-     * 
-     */
-    @XmlEnumValue("freeFlow")
-    FREE_FLOW("freeFlow"),
-
-    /**
-     * Traffic conditions are unknown.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TrafficStatusEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TrafficStatusEnum2 getValue() {
         return value;
     }
 
-    public static TrafficStatusEnum fromValue(String v) {
-        for (TrafficStatusEnum c: TrafficStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TrafficStatusEnum2 }
+     *     
+     */
+    public void setValue(TrafficStatusEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

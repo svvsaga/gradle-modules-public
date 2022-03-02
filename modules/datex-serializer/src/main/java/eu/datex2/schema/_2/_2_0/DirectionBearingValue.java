@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DirectionBearingValue", propOrder = {
+@XmlType(name = "DirectionBearingValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "directionBearing",
     "directionBearingValueExtension"
 })
@@ -38,10 +38,11 @@ public class DirectionBearingValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger directionBearing;
-    protected _ExtensionType directionBearingValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType directionBearingValueExtension;
 
     /**
      * Gets the value of the directionBearing property.
@@ -72,10 +73,10 @@ public class DirectionBearingValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDirectionBearingValueExtension() {
+    public ExtensionType getDirectionBearingValueExtension() {
         return directionBearingValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class DirectionBearingValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDirectionBearingValueExtension(_ExtensionType value) {
+    public void setDirectionBearingValueExtension(ExtensionType value) {
         this.directionBearingValueExtension = value;
     }
 

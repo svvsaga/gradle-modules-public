@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointDestination", propOrder = {
+@XmlType(name = "PointDestination", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "pointLocation",
-    "_PointDestinationExtension"
+    "pointDestinationExtension"
 })
 public class PointDestination
     extends Destination
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointLocation pointLocation;
-    @XmlElement(name = "_pointDestinationExtension")
-    protected _ExtensionType _PointDestinationExtension;
+    @XmlElement(name = "_pointDestinationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType pointDestinationExtension;
 
     /**
      * Gets the value of the pointLocation property.
@@ -70,27 +70,27 @@ public class PointDestination
     }
 
     /**
-     * Gets the value of the _PointDestinationExtension property.
+     * Gets the value of the pointDestinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PointDestinationExtension() {
-        return _PointDestinationExtension;
+    public ExtensionType getPointDestinationExtension() {
+        return pointDestinationExtension;
     }
 
     /**
-     * Sets the value of the _PointDestinationExtension property.
+     * Sets the value of the pointDestinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PointDestinationExtension(_ExtensionType value) {
-        this._PointDestinationExtension = value;
+    public void setPointDestinationExtension(ExtensionType value) {
+        this.pointDestinationExtension = value;
     }
 
 }

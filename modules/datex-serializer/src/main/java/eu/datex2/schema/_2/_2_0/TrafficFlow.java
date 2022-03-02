@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficFlow", propOrder = {
+@XmlType(name = "TrafficFlow", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "axleFlow",
     "pcuFlow",
     "percentageLongVehicles",
@@ -41,11 +42,16 @@ public class TrafficFlow
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected AxleFlowValue axleFlow;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PcuFlowValue pcuFlow;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PercentageValue percentageLongVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue vehicleFlow;
-    protected _ExtensionType trafficFlowExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficFlowExtension;
 
     /**
      * Gets the value of the axleFlow property.
@@ -148,10 +154,10 @@ public class TrafficFlow
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficFlowExtension() {
+    public ExtensionType getTrafficFlowExtension() {
         return trafficFlowExtension;
     }
 
@@ -160,10 +166,10 @@ public class TrafficFlow
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficFlowExtension(_ExtensionType value) {
+    public void setTrafficFlowExtension(ExtensionType value) {
         this.trafficFlowExtension = value;
     }
 

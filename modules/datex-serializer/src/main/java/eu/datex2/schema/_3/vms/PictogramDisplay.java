@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,27 +38,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictogramDisplay", propOrder = {
+@XmlType(name = "PictogramDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "isPrimaryPictogram",
     "pictogramDisplayUrl",
     "pictogram",
     "supplementaryInformationDisplay",
     "image",
-    "_PictogramDisplayExtension"
+    "pictogramDisplayExtension"
 })
 public class PictogramDisplay
     extends DisplayAreaSettings
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isPrimaryPictogram;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String pictogramDisplayUrl;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected Pictogram pictogram;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected SupplementaryInformationDisplay supplementaryInformationDisplay;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Image image;
-    @XmlElement(name = "_pictogramDisplayExtension")
-    protected _ExtensionType _PictogramDisplayExtension;
+    @XmlElement(name = "_pictogramDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType pictogramDisplayExtension;
 
     /**
      * Gets the value of the isPrimaryPictogram property.
@@ -181,27 +185,27 @@ public class PictogramDisplay
     }
 
     /**
-     * Gets the value of the _PictogramDisplayExtension property.
+     * Gets the value of the pictogramDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PictogramDisplayExtension() {
-        return _PictogramDisplayExtension;
+    public ExtensionType getPictogramDisplayExtension() {
+        return pictogramDisplayExtension;
     }
 
     /**
-     * Sets the value of the _PictogramDisplayExtension property.
+     * Sets the value of the pictogramDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PictogramDisplayExtension(_ExtensionType value) {
-        this._PictogramDisplayExtension = value;
+    public void setPictogramDisplayExtension(ExtensionType value) {
+        this.pictogramDisplayExtension = value;
     }
 
 }

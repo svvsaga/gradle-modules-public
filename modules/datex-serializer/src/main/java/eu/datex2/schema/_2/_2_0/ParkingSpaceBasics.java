@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -48,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSpaceBasics", propOrder = {
+@XmlType(name = "ParkingSpaceBasics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingSpaceOrGroupIdentifier",
     "parkingFloorOrLevel",
     "accessibility",
@@ -69,37 +70,55 @@ import jakarta.xml.bind.annotation.XmlType;
     "parkingSpaceBasicsExtension"
 })
 @XmlSeeAlso({
-    GroupOfParkingSpaces.class,
-    ParkingSpace.class
+    GroupOfParkingSpaces2 .class,
+    ParkingSpace2 .class
 })
 public abstract class ParkingSpaceBasics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingSpaceOrGroupIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BigInteger parkingFloorOrLevel;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<AccessibilityEnum> accessibility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSpaceAccessibilityEnum> parkingSpaceAccessibility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSpacePhysicsEnum> parkingSpacePhysics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingModeEnum parkingMode;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ReservationTypeEnum parkingReservation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumParkingDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromPrimaryRoad;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<OccupancyDetectionTypeEnum> parkingOccupanyDetectionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSecurityEnum> parkingSecurity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<DedicatedAccess> dedicatedAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment onlyAssignedParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment assignedParkingAmongOthers;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment prohibitedParking;
-    protected List<_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> parkingEquipmentOrServiceFacility;
-    protected List<_ParkingSpaceBasicsScenarioIndexParkingUsageScenario> parkingUsageScenario;
-    protected _ExtensionType parkingSpaceBasicsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> parkingEquipmentOrServiceFacility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingSpaceBasicsScenarioIndexParkingUsageScenario> parkingUsageScenario;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingSpaceBasicsExtension;
 
     /**
      * Gets the value of the parkingSpaceOrGroupIdentifier property.
@@ -509,13 +528,13 @@ public abstract class ParkingSpaceBasics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
+     * {@link ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
      * 
      * 
      */
-    public List<_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> getParkingEquipmentOrServiceFacility() {
+    public List<ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> getParkingEquipmentOrServiceFacility() {
         if (parkingEquipmentOrServiceFacility == null) {
-            parkingEquipmentOrServiceFacility = new ArrayList<_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility>();
+            parkingEquipmentOrServiceFacility = new ArrayList<ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility>();
         }
         return this.parkingEquipmentOrServiceFacility;
     }
@@ -538,13 +557,13 @@ public abstract class ParkingSpaceBasics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingSpaceBasicsScenarioIndexParkingUsageScenario }
+     * {@link ParkingSpaceBasicsScenarioIndexParkingUsageScenario }
      * 
      * 
      */
-    public List<_ParkingSpaceBasicsScenarioIndexParkingUsageScenario> getParkingUsageScenario() {
+    public List<ParkingSpaceBasicsScenarioIndexParkingUsageScenario> getParkingUsageScenario() {
         if (parkingUsageScenario == null) {
-            parkingUsageScenario = new ArrayList<_ParkingSpaceBasicsScenarioIndexParkingUsageScenario>();
+            parkingUsageScenario = new ArrayList<ParkingSpaceBasicsScenarioIndexParkingUsageScenario>();
         }
         return this.parkingUsageScenario;
     }
@@ -554,10 +573,10 @@ public abstract class ParkingSpaceBasics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingSpaceBasicsExtension() {
+    public ExtensionType getParkingSpaceBasicsExtension() {
         return parkingSpaceBasicsExtension;
     }
 
@@ -566,10 +585,10 @@ public abstract class ParkingSpaceBasics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingSpaceBasicsExtension(_ExtensionType value) {
+    public void setParkingSpaceBasicsExtension(ExtensionType value) {
         this.parkingSpaceBasicsExtension = value;
     }
 

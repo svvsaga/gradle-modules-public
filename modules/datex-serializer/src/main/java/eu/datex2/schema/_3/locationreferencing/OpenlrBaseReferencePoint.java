@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,10 +33,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrBaseReferencePoint", propOrder = {
+@XmlType(name = "OpenlrBaseReferencePoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrCoordinates",
     "openlrLineAttributes",
-    "_OpenlrBaseReferencePointExtension"
+    "openlrBaseReferencePointExtension"
 })
 @XmlSeeAlso({
     OpenlrLastLocationReferencePoint.class,
@@ -44,12 +44,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class OpenlrBaseReferencePoint {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates openlrCoordinates;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrLineAttributes openlrLineAttributes;
-    @XmlElement(name = "_openlrBaseReferencePointExtension")
-    protected _ExtensionType _OpenlrBaseReferencePointExtension;
+    @XmlElement(name = "_openlrBaseReferencePointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrBaseReferencePointExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -100,27 +100,27 @@ public abstract class OpenlrBaseReferencePoint {
     }
 
     /**
-     * Gets the value of the _OpenlrBaseReferencePointExtension property.
+     * Gets the value of the openlrBaseReferencePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrBaseReferencePointExtension() {
-        return _OpenlrBaseReferencePointExtension;
+    public ExtensionType getOpenlrBaseReferencePointExtension() {
+        return openlrBaseReferencePointExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrBaseReferencePointExtension property.
+     * Sets the value of the openlrBaseReferencePointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrBaseReferencePointExtension(_ExtensionType value) {
-        this._OpenlrBaseReferencePointExtension = value;
+    public void setOpenlrBaseReferencePointExtension(ExtensionType value) {
+        this.openlrBaseReferencePointExtension = value;
     }
 
 }

@@ -1,95 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for InjuryStatusTypeEnum.
+ * <p>Java class for _InjuryStatusTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="InjuryStatusTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="dead"/&gt;
- *     &lt;enumeration value="injured"/&gt;
- *     &lt;enumeration value="seriouslyInjured"/&gt;
- *     &lt;enumeration value="slightlyInjured"/&gt;
- *     &lt;enumeration value="uninjured"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_InjuryStatusTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;InjuryStatusTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "InjuryStatusTypeEnum")
-@XmlEnum
-public enum InjuryStatusTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_InjuryStatusTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class InjuryStatusTypeEnum {
 
-
-    /**
-     * Dead.
-     * 
-     */
-    @XmlEnumValue("dead")
-    DEAD("dead"),
-
-    /**
-     * Injured requiring medical treatment.
-     * 
-     */
-    @XmlEnumValue("injured")
-    INJURED("injured"),
+    @XmlValue
+    protected InjuryStatusTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Seriously injured requiring urgent hospital treatment.
+     * Types of injury status of people.
      * 
+     * @return
+     *     possible object is
+     *     {@link InjuryStatusTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("seriouslyInjured")
-    SERIOUSLY_INJURED("seriouslyInjured"),
-
-    /**
-     * Slightly injured requiring medical treatment.
-     * 
-     */
-    @XmlEnumValue("slightlyInjured")
-    SLIGHTLY_INJURED("slightlyInjured"),
-
-    /**
-     * Uninjured.
-     * 
-     */
-    @XmlEnumValue("uninjured")
-    UNINJURED("uninjured"),
-
-    /**
-     * Injury status unknown.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    InjuryStatusTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public InjuryStatusTypeEnum2 getValue() {
         return value;
     }
 
-    public static InjuryStatusTypeEnum fromValue(String v) {
-        for (InjuryStatusTypeEnum c: InjuryStatusTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InjuryStatusTypeEnum2 }
+     *     
+     */
+    public void setValue(InjuryStatusTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

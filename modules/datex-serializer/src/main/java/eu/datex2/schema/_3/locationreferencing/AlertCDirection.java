@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,31 +35,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCDirection", propOrder = {
+@XmlType(name = "AlertCDirection", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCDirectionCoded",
     "alertCDirectionNamed",
     "alertCAffectedDirection",
-    "_AlertCDirectionExtension"
+    "alertCDirectionExtension"
 })
 public class AlertCDirection {
 
-    @XmlElement(required = true)
-    protected _AlertCDirectionEnum alertCDirectionCoded;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected AlertCDirectionEnum alertCDirectionCoded;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString alertCDirectionNamed;
-    @XmlElement(required = true)
-    protected _LinearDirectionEnum alertCAffectedDirection;
-    @XmlElement(name = "_alertCDirectionExtension")
-    protected _ExtensionType _AlertCDirectionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected LinearDirectionEnum alertCAffectedDirection;
+    @XmlElement(name = "_alertCDirectionExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCDirectionExtension;
 
     /**
      * Gets the value of the alertCDirectionCoded property.
      * 
      * @return
      *     possible object is
-     *     {@link _AlertCDirectionEnum }
+     *     {@link AlertCDirectionEnum }
      *     
      */
-    public _AlertCDirectionEnum getAlertCDirectionCoded() {
+    public AlertCDirectionEnum getAlertCDirectionCoded() {
         return alertCDirectionCoded;
     }
 
@@ -68,10 +69,10 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link _AlertCDirectionEnum }
+     *     {@link AlertCDirectionEnum }
      *     
      */
-    public void setAlertCDirectionCoded(_AlertCDirectionEnum value) {
+    public void setAlertCDirectionCoded(AlertCDirectionEnum value) {
         this.alertCDirectionCoded = value;
     }
 
@@ -104,10 +105,10 @@ public class AlertCDirection {
      * 
      * @return
      *     possible object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public _LinearDirectionEnum getAlertCAffectedDirection() {
+    public LinearDirectionEnum getAlertCAffectedDirection() {
         return alertCAffectedDirection;
     }
 
@@ -116,35 +117,35 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public void setAlertCAffectedDirection(_LinearDirectionEnum value) {
+    public void setAlertCAffectedDirection(LinearDirectionEnum value) {
         this.alertCAffectedDirection = value;
     }
 
     /**
-     * Gets the value of the _AlertCDirectionExtension property.
+     * Gets the value of the alertCDirectionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCDirectionExtension() {
-        return _AlertCDirectionExtension;
+    public ExtensionType getAlertCDirectionExtension() {
+        return alertCDirectionExtension;
     }
 
     /**
-     * Sets the value of the _AlertCDirectionExtension property.
+     * Sets the value of the alertCDirectionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCDirectionExtension(_ExtensionType value) {
-        this._AlertCDirectionExtension = value;
+    public void setAlertCDirectionExtension(ExtensionType value) {
+        this.alertCDirectionExtension = value;
     }
 
 }

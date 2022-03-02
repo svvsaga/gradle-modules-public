@@ -30,15 +30,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPolygonCorners", propOrder = {
+@XmlType(name = "OpenlrPolygonCorners", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrCoordinate",
     "openlrPolygonCornersExtension"
 })
 public class OpenlrPolygonCorners {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<PointCoordinates> openlrCoordinate;
-    protected _ExtensionType openlrPolygonCornersExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrPolygonCornersExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -74,10 +75,10 @@ public class OpenlrPolygonCorners {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPolygonCornersExtension() {
+    public ExtensionType getOpenlrPolygonCornersExtension() {
         return openlrPolygonCornersExtension;
     }
 
@@ -86,10 +87,10 @@ public class OpenlrPolygonCorners {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPolygonCornersExtension(_ExtensionType value) {
+    public void setOpenlrPolygonCornersExtension(ExtensionType value) {
         this.openlrPolygonCornersExtension = value;
     }
 

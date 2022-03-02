@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLinear", propOrder = {
+@XmlType(name = "AlertCLinear", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
@@ -44,13 +44,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class AlertCLinear {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationTableVersion;
-    protected _ExtensionType alertCLinearExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCLinearExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -129,10 +130,10 @@ public abstract class AlertCLinear {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLinearExtension() {
+    public ExtensionType getAlertCLinearExtension() {
         return alertCLinearExtension;
     }
 
@@ -141,10 +142,10 @@ public abstract class AlertCLinear {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLinearExtension(_ExtensionType value) {
+    public void setAlertCLinearExtension(ExtensionType value) {
         this.alertCLinearExtension = value;
     }
 

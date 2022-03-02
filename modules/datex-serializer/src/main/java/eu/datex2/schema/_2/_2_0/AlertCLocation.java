@@ -31,18 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLocation", propOrder = {
+@XmlType(name = "AlertCLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocationName",
     "specificLocation",
     "alertCLocationExtension"
 })
 public class AlertCLocation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString alertCLocationName;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger specificLocation;
-    protected _ExtensionType alertCLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCLocationExtension;
 
     /**
      * Gets the value of the alertCLocationName property.
@@ -97,10 +99,10 @@ public class AlertCLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLocationExtension() {
+    public ExtensionType getAlertCLocationExtension() {
         return alertCLocationExtension;
     }
 
@@ -109,10 +111,10 @@ public class AlertCLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLocationExtension(_ExtensionType value) {
+    public void setAlertCLocationExtension(ExtensionType value) {
         this.alertCLocationExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,18 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPoiWithAccessPoint", propOrder = {
+@XmlType(name = "OpenlrPoiWithAccessPoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrCoordinates",
-    "_OpenlrPoiWithAccessPointExtension"
+    "openlrPoiWithAccessPointExtension"
 })
 public class OpenlrPoiWithAccessPoint
     extends OpenlrBasePointLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates openlrCoordinates;
-    @XmlElement(name = "_openlrPoiWithAccessPointExtension")
-    protected _ExtensionType _OpenlrPoiWithAccessPointExtension;
+    @XmlElement(name = "_openlrPoiWithAccessPointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrPoiWithAccessPointExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -72,27 +72,27 @@ public class OpenlrPoiWithAccessPoint
     }
 
     /**
-     * Gets the value of the _OpenlrPoiWithAccessPointExtension property.
+     * Gets the value of the openlrPoiWithAccessPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrPoiWithAccessPointExtension() {
-        return _OpenlrPoiWithAccessPointExtension;
+    public ExtensionType getOpenlrPoiWithAccessPointExtension() {
+        return openlrPoiWithAccessPointExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrPoiWithAccessPointExtension property.
+     * Sets the value of the openlrPoiWithAccessPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrPoiWithAccessPointExtension(_ExtensionType value) {
-        this._OpenlrPoiWithAccessPointExtension = value;
+    public void setOpenlrPoiWithAccessPointExtension(ExtensionType value) {
+        this.openlrPoiWithAccessPointExtension = value;
     }
 
 }

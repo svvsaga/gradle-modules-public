@@ -3,7 +3,7 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,18 +35,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceDisruption", propOrder = {
+@XmlType(name = "ServiceDisruption", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "serviceDisruptionType",
-    "_ServiceDisruptionExtension"
+    "serviceDisruptionExtension"
 })
 public class ServiceDisruption
     extends ServiceInformation
 {
 
-    @XmlElement(required = true)
-    protected List<_ServiceDisruptionTypeEnum> serviceDisruptionType;
-    @XmlElement(name = "_serviceDisruptionExtension")
-    protected _ExtensionType _ServiceDisruptionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected List<ServiceDisruptionTypeEnum> serviceDisruptionType;
+    @XmlElement(name = "_serviceDisruptionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType serviceDisruptionExtension;
 
     /**
      * Gets the value of the serviceDisruptionType property.
@@ -66,39 +66,39 @@ public class ServiceDisruption
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ServiceDisruptionTypeEnum }
+     * {@link ServiceDisruptionTypeEnum }
      * 
      * 
      */
-    public List<_ServiceDisruptionTypeEnum> getServiceDisruptionType() {
+    public List<ServiceDisruptionTypeEnum> getServiceDisruptionType() {
         if (serviceDisruptionType == null) {
-            serviceDisruptionType = new ArrayList<_ServiceDisruptionTypeEnum>();
+            serviceDisruptionType = new ArrayList<ServiceDisruptionTypeEnum>();
         }
         return this.serviceDisruptionType;
     }
 
     /**
-     * Gets the value of the _ServiceDisruptionExtension property.
+     * Gets the value of the serviceDisruptionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ServiceDisruptionExtension() {
-        return _ServiceDisruptionExtension;
+    public ExtensionType getServiceDisruptionExtension() {
+        return serviceDisruptionExtension;
     }
 
     /**
-     * Sets the value of the _ServiceDisruptionExtension property.
+     * Sets the value of the serviceDisruptionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ServiceDisruptionExtension(_ExtensionType value) {
-        this._ServiceDisruptionExtension = value;
+    public void setServiceDisruptionExtension(ExtensionType value) {
+        this.serviceDisruptionExtension = value;
     }
 
 }

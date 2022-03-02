@@ -1,82 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TrafficTrendTypeEnum.
+ * <p>Java class for _TrafficTrendTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TrafficTrendTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="trafficBuildingUp"/&gt;
- *     &lt;enumeration value="trafficEasing"/&gt;
- *     &lt;enumeration value="trafficStable"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TrafficTrendTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;TrafficTrendTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TrafficTrendTypeEnum")
-@XmlEnum
-public enum TrafficTrendTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TrafficTrendTypeEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class TrafficTrendTypeEnum {
 
-
-    /**
-     * Traffic conditions are changing from free-flow to heavy or slow service levels.
-     *             Queues may also be expected.
-     *           
-     * 
-     */
-    @XmlEnumValue("trafficBuildingUp")
-    TRAFFIC_BUILDING_UP("trafficBuildingUp"),
+    @XmlValue
+    protected TrafficTrendTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Traffic conditions are changing from heavy or slow service levels to free-flow.
-     *           
+     * List of terms used to describe the trend in traffic conditions.
      * 
+     * @return
+     *     possible object is
+     *     {@link TrafficTrendTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("trafficEasing")
-    TRAFFIC_EASING("trafficEasing"),
-
-    /**
-     * Traffic conditions are currently stable.
-     * 
-     */
-    @XmlEnumValue("trafficStable")
-    TRAFFIC_STABLE("trafficStable"),
-
-    /**
-     * The trend of traffic conditions is currently unknown.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TrafficTrendTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TrafficTrendTypeEnum2 getValue() {
         return value;
     }
 
-    public static TrafficTrendTypeEnum fromValue(String v) {
-        for (TrafficTrendTypeEnum c: TrafficTrendTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TrafficTrendTypeEnum2 }
+     *     
+     */
+    public void setValue(TrafficTrendTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

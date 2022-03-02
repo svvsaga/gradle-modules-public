@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCharacteristicsExtended", propOrder = {
+@XmlType(name = "VehicleCharacteristicsExtended", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "emissionClassification",
     "operationFreeOfEmission",
     "loadType2",
@@ -44,14 +45,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCharacteristicsExtended {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> emissionClassification;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean operationFreeOfEmission;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LoadType2Enum loadType2;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VehicleType2Enum vehicleType2;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected FuelType2Enum fuelType2;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VehicleUsage2Enum vehicleUsage2;
 

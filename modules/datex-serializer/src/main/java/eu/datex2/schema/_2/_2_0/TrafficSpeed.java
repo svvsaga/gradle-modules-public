@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficSpeed", propOrder = {
+@XmlType(name = "TrafficSpeed", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "averageVehicleSpeed",
     "speedPercentile",
     "trafficSpeedExtension"
@@ -37,9 +38,12 @@ public class TrafficSpeed
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected SpeedValue averageVehicleSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected SpeedPercentile speedPercentile;
-    protected _ExtensionType trafficSpeedExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficSpeedExtension;
 
     /**
      * Gets the value of the averageVehicleSpeed property.
@@ -94,10 +98,10 @@ public class TrafficSpeed
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficSpeedExtension() {
+    public ExtensionType getTrafficSpeedExtension() {
         return trafficSpeedExtension;
     }
 
@@ -106,10 +110,10 @@ public class TrafficSpeed
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficSpeedExtension(_ExtensionType value) {
+    public void setTrafficSpeedExtension(ExtensionType value) {
         this.trafficSpeedExtension = value;
     }
 

@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fault", propOrder = {
+@XmlType(name = "Fault", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "faultIdentifier",
     "faultDescription",
     "faultCreationTime",
@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "faultImpactSeverity",
     "faultUrgencyToRectify",
     "manufacturerFaultCode",
-    "_FaultExtension"
+    "faultExtension"
 })
 @XmlSeeAlso({
     VmsControllerFault.class,
@@ -60,18 +60,24 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Fault {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String faultIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString faultDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultCreationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultLastUpdateTime;
-    protected _FaultSeverityEnum faultImpactSeverity;
-    protected _FaultUrgencyEnum faultUrgencyToRectify;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected FaultSeverityEnum faultImpactSeverity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected FaultUrgencyEnum faultUrgencyToRectify;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String manufacturerFaultCode;
-    @XmlElement(name = "_faultExtension")
-    protected _ExtensionType _FaultExtension;
+    @XmlElement(name = "_faultExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType faultExtension;
 
     /**
      * Gets the value of the faultIdentifier property.
@@ -174,10 +180,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link _FaultSeverityEnum }
+     *     {@link FaultSeverityEnum }
      *     
      */
-    public _FaultSeverityEnum getFaultImpactSeverity() {
+    public FaultSeverityEnum getFaultImpactSeverity() {
         return faultImpactSeverity;
     }
 
@@ -186,10 +192,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link _FaultSeverityEnum }
+     *     {@link FaultSeverityEnum }
      *     
      */
-    public void setFaultImpactSeverity(_FaultSeverityEnum value) {
+    public void setFaultImpactSeverity(FaultSeverityEnum value) {
         this.faultImpactSeverity = value;
     }
 
@@ -198,10 +204,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link _FaultUrgencyEnum }
+     *     {@link FaultUrgencyEnum }
      *     
      */
-    public _FaultUrgencyEnum getFaultUrgencyToRectify() {
+    public FaultUrgencyEnum getFaultUrgencyToRectify() {
         return faultUrgencyToRectify;
     }
 
@@ -210,10 +216,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link _FaultUrgencyEnum }
+     *     {@link FaultUrgencyEnum }
      *     
      */
-    public void setFaultUrgencyToRectify(_FaultUrgencyEnum value) {
+    public void setFaultUrgencyToRectify(FaultUrgencyEnum value) {
         this.faultUrgencyToRectify = value;
     }
 
@@ -242,27 +248,27 @@ public class Fault {
     }
 
     /**
-     * Gets the value of the _FaultExtension property.
+     * Gets the value of the faultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_FaultExtension() {
-        return _FaultExtension;
+    public ExtensionType getFaultExtension() {
+        return faultExtension;
     }
 
     /**
-     * Sets the value of the _FaultExtension property.
+     * Sets the value of the faultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_FaultExtension(_ExtensionType value) {
-        this._FaultExtension = value;
+    public void setFaultExtension(ExtensionType value) {
+        this.faultExtension = value;
     }
 
 }

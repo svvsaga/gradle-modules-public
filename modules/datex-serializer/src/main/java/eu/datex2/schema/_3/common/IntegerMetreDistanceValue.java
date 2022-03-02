@@ -32,19 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IntegerMetreDistanceValue", propOrder = {
+@XmlType(name = "IntegerMetreDistanceValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "integerMetreDistance",
-    "_IntegerMetreDistanceValueExtension"
+    "integerMetreDistanceValueExtension"
 })
 public class IntegerMetreDistanceValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger integerMetreDistance;
-    @XmlElement(name = "_integerMetreDistanceValueExtension")
-    protected _ExtensionType _IntegerMetreDistanceValueExtension;
+    @XmlElement(name = "_integerMetreDistanceValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType integerMetreDistanceValueExtension;
 
     /**
      * Gets the value of the integerMetreDistance property.
@@ -71,27 +71,27 @@ public class IntegerMetreDistanceValue
     }
 
     /**
-     * Gets the value of the _IntegerMetreDistanceValueExtension property.
+     * Gets the value of the integerMetreDistanceValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_IntegerMetreDistanceValueExtension() {
-        return _IntegerMetreDistanceValueExtension;
+    public ExtensionType getIntegerMetreDistanceValueExtension() {
+        return integerMetreDistanceValueExtension;
     }
 
     /**
-     * Sets the value of the _IntegerMetreDistanceValueExtension property.
+     * Sets the value of the integerMetreDistanceValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_IntegerMetreDistanceValueExtension(_ExtensionType value) {
-        this._IntegerMetreDistanceValueExtension = value;
+    public void setIntegerMetreDistanceValueExtension(ExtensionType value) {
+        this.integerMetreDistanceValueExtension = value;
     }
 
 }

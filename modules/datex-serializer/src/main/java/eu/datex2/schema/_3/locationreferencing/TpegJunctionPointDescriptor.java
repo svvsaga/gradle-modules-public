@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,28 +31,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunctionPointDescriptor", propOrder = {
+@XmlType(name = "TpegJunctionPointDescriptor", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "tpegJunctionPointDescriptorType",
-    "_TpegJunctionPointDescriptorExtension"
+    "tpegJunctionPointDescriptorExtension"
 })
 public class TpegJunctionPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(required = true)
-    protected _TpegLoc03JunctionPointDescriptorSubtypeEnum tpegJunctionPointDescriptorType;
-    @XmlElement(name = "_tpegJunctionPointDescriptorExtension")
-    protected _ExtensionType _TpegJunctionPointDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected TpegLoc03JunctionPointDescriptorSubtypeEnum tpegJunctionPointDescriptorType;
+    @XmlElement(name = "_tpegJunctionPointDescriptorExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegJunctionPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegJunctionPointDescriptorType property.
      * 
      * @return
      *     possible object is
-     *     {@link _TpegLoc03JunctionPointDescriptorSubtypeEnum }
+     *     {@link TpegLoc03JunctionPointDescriptorSubtypeEnum }
      *     
      */
-    public _TpegLoc03JunctionPointDescriptorSubtypeEnum getTpegJunctionPointDescriptorType() {
+    public TpegLoc03JunctionPointDescriptorSubtypeEnum getTpegJunctionPointDescriptorType() {
         return tpegJunctionPointDescriptorType;
     }
 
@@ -61,35 +61,35 @@ public class TpegJunctionPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _TpegLoc03JunctionPointDescriptorSubtypeEnum }
+     *     {@link TpegLoc03JunctionPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegJunctionPointDescriptorType(_TpegLoc03JunctionPointDescriptorSubtypeEnum value) {
+    public void setTpegJunctionPointDescriptorType(TpegLoc03JunctionPointDescriptorSubtypeEnum value) {
         this.tpegJunctionPointDescriptorType = value;
     }
 
     /**
-     * Gets the value of the _TpegJunctionPointDescriptorExtension property.
+     * Gets the value of the tpegJunctionPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegJunctionPointDescriptorExtension() {
-        return _TpegJunctionPointDescriptorExtension;
+    public ExtensionType getTpegJunctionPointDescriptorExtension() {
+        return tpegJunctionPointDescriptorExtension;
     }
 
     /**
-     * Sets the value of the _TpegJunctionPointDescriptorExtension property.
+     * Sets the value of the tpegJunctionPointDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegJunctionPointDescriptorExtension(_ExtensionType value) {
-        this._TpegJunctionPointDescriptorExtension = value;
+    public void setTpegJunctionPointDescriptorExtension(ExtensionType value) {
+        this.tpegJunctionPointDescriptorExtension = value;
     }
 
 }

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbnormalTraffic", propOrder = {
+@XmlType(name = "AbnormalTraffic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "abnormalTrafficType",
     "numberOfVehiclesWaiting",
     "queueLength",
@@ -47,19 +48,26 @@ public class AbnormalTraffic
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected AbnormalTrafficTypeEnum abnormalTrafficType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehiclesWaiting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger queueLength;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RelativeTrafficFlowEnum relativeTrafficFlow;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TrafficFlowCharacteristicsEnum trafficFlowCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TrafficTrendTypeEnum trafficTrendType;
-    protected _ExtensionType abnormalTrafficExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType abnormalTrafficExtension;
 
     /**
      * Gets the value of the abnormalTrafficType property.
@@ -210,10 +218,10 @@ public class AbnormalTraffic
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAbnormalTrafficExtension() {
+    public ExtensionType getAbnormalTrafficExtension() {
         return abnormalTrafficExtension;
     }
 
@@ -222,10 +230,10 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAbnormalTrafficExtension(_ExtensionType value) {
+    public void setAbnormalTrafficExtension(ExtensionType value) {
         this.abnormalTrafficExtension = value;
     }
 

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingEquipmentOrServiceFacilityStatus", propOrder = {
+@XmlType(name = "ParkingEquipmentOrServiceFacilityStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfEquipmentOrServiceFacilityOverride",
     "numberOfSubitemsOverride",
     "vacantEquipmentOrServiceFacilitySubitems",
@@ -43,17 +44,23 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingEquipmentOrServiceFacilityStatus {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfEquipmentOrServiceFacilityOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubitemsOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vacantEquipmentOrServiceFacilitySubitems;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum serviceFacilityOpeningStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OperationStatusEnum equipmentOperationStatus;
-    protected _ExtensionType parkingEquipmentOrServiceFacilityStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingEquipmentOrServiceFacilityStatusExtension;
 
     /**
      * Gets the value of the numberOfEquipmentOrServiceFacilityOverride property.
@@ -180,10 +187,10 @@ public class ParkingEquipmentOrServiceFacilityStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingEquipmentOrServiceFacilityStatusExtension() {
+    public ExtensionType getParkingEquipmentOrServiceFacilityStatusExtension() {
         return parkingEquipmentOrServiceFacilityStatusExtension;
     }
 
@@ -192,10 +199,10 @@ public class ParkingEquipmentOrServiceFacilityStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingEquipmentOrServiceFacilityStatusExtension(_ExtensionType value) {
+    public void setParkingEquipmentOrServiceFacilityStatusExtension(ExtensionType value) {
         this.parkingEquipmentOrServiceFacilityStatusExtension = value;
     }
 

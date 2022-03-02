@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Junction", propOrder = {
+@XmlType(name = "Junction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "junctionClassification",
     "junctionName",
     "junctionNumber",
@@ -45,14 +45,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Junction {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected JunctionClassificationEnum junctionClassification;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected MultilingualString junctionName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String junctionNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Road motorway;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Road> destinationMotorway;
-    protected _ExtensionType junctionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType junctionExtension;
 
     /**
      * Gets the value of the junctionClassification property.
@@ -184,10 +189,10 @@ public class Junction {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getJunctionExtension() {
+    public ExtensionType getJunctionExtension() {
         return junctionExtension;
     }
 
@@ -196,10 +201,10 @@ public class Junction {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setJunctionExtension(_ExtensionType value) {
+    public void setJunctionExtension(ExtensionType value) {
         this.junctionExtension = value;
     }
 

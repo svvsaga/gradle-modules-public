@@ -1,140 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for NonWeatherRelatedRoadConditionTypeEnum.
+ * <p>Java class for _NonWeatherRelatedRoadConditionTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="NonWeatherRelatedRoadConditionTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="dieselOnRoad"/&gt;
- *     &lt;enumeration value="leavesOnRoad"/&gt;
- *     &lt;enumeration value="looseChippings"/&gt;
- *     &lt;enumeration value="looseSandOnRoad"/&gt;
- *     &lt;enumeration value="mudOnRoad"/&gt;
- *     &lt;enumeration value="oilOnRoad"/&gt;
- *     &lt;enumeration value="petrolOnRoad"/&gt;
- *     &lt;enumeration value="roadMarkingNotPresent"/&gt;
- *     &lt;enumeration value="roadSurfaceInPoorCondition"/&gt;
- *     &lt;enumeration value="slipperyRoad"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_NonWeatherRelatedRoadConditionTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;NonWeatherRelatedRoadConditionTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "NonWeatherRelatedRoadConditionTypeEnum")
-@XmlEnum
-public enum NonWeatherRelatedRoadConditionTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_NonWeatherRelatedRoadConditionTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class NonWeatherRelatedRoadConditionTypeEnum {
 
-
-    /**
-     * Increased skid risk due to diesel on the road.
-     * 
-     */
-    @XmlEnumValue("dieselOnRoad")
-    DIESEL_ON_ROAD("dieselOnRoad"),
-
-    /**
-     * Increased skid risk due to leaves on road.
-     * 
-     */
-    @XmlEnumValue("leavesOnRoad")
-    LEAVES_ON_ROAD("leavesOnRoad"),
+    @XmlValue
+    protected NonWeatherRelatedRoadConditionTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Increased skid risk and injury risk due to loose chippings on road.
-     *           
+     * Types of road surface conditions which are not related to the weather.
      * 
+     * @return
+     *     possible object is
+     *     {@link NonWeatherRelatedRoadConditionTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("looseChippings")
-    LOOSE_CHIPPINGS("looseChippings"),
-
-    /**
-     * Increased skid risk due to loose sand on road.
-     * 
-     */
-    @XmlEnumValue("looseSandOnRoad")
-    LOOSE_SAND_ON_ROAD("looseSandOnRoad"),
-
-    /**
-     * Increased skid risk due to mud on road.
-     * 
-     */
-    @XmlEnumValue("mudOnRoad")
-    MUD_ON_ROAD("mudOnRoad"),
-
-    /**
-     * Increased skid risk due to oil on road.
-     * 
-     */
-    @XmlEnumValue("oilOnRoad")
-    OIL_ON_ROAD("oilOnRoad"),
-
-    /**
-     * Increased skid risk due to petrol on road.
-     * 
-     */
-    @XmlEnumValue("petrolOnRoad")
-    PETROL_ON_ROAD("petrolOnRoad"),
-
-    /**
-     * Road markings are not present due to maintenance works in progress
-     *           
-     * 
-     */
-    @XmlEnumValue("roadMarkingNotPresent")
-    ROAD_MARKING_NOT_PRESENT("roadMarkingNotPresent"),
-
-    /**
-     * The road surface is damaged, severely rutted or potholed (i.e. it is in a poor
-     *             state of repair).
-     *           
-     * 
-     */
-    @XmlEnumValue("roadSurfaceInPoorCondition")
-    ROAD_SURFACE_IN_POOR_CONDITION("roadSurfaceInPoorCondition"),
-
-    /**
-     * The road surface is slippery due to an unspecified non-weather related cause.
-     *           
-     * 
-     */
-    @XmlEnumValue("slipperyRoad")
-    SLIPPERY_ROAD("slipperyRoad"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    NonWeatherRelatedRoadConditionTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public NonWeatherRelatedRoadConditionTypeEnum2 getValue() {
         return value;
     }
 
-    public static NonWeatherRelatedRoadConditionTypeEnum fromValue(String v) {
-        for (NonWeatherRelatedRoadConditionTypeEnum c: NonWeatherRelatedRoadConditionTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NonWeatherRelatedRoadConditionTypeEnum2 }
+     *     
+     */
+    public void setValue(NonWeatherRelatedRoadConditionTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

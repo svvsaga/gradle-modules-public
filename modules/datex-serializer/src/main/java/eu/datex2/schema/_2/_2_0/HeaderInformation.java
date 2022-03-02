@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaderInformation", propOrder = {
+@XmlType(name = "HeaderInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "areaOfInterest",
     "confidentiality",
     "informationStatus",
@@ -41,17 +41,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class HeaderInformation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected AreaOfInterestEnum areaOfInterest;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ConfidentialityValueEnum confidentiality;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected InformationStatusEnum informationStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected UrgencyEnum urgency;
-    protected _ExtensionType headerInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType headerInformationExtension;
 
     /**
      * Gets the value of the areaOfInterest property.
@@ -154,10 +157,10 @@ public class HeaderInformation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHeaderInformationExtension() {
+    public ExtensionType getHeaderInformationExtension() {
         return headerInformationExtension;
     }
 
@@ -166,10 +169,10 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHeaderInformationExtension(_ExtensionType value) {
+    public void setHeaderInformationExtension(ExtensionType value) {
         this.headerInformationExtension = value;
     }
 

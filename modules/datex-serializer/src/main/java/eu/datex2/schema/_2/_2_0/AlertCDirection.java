@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCDirection", propOrder = {
+@XmlType(name = "AlertCDirection", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCDirectionCoded",
     "alertCDirectionNamed",
     "alertCDirectionSense",
@@ -39,12 +39,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AlertCDirection {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected AlertCDirectionEnum alertCDirectionCoded;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString alertCDirectionNamed;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean alertCDirectionSense;
-    protected _ExtensionType alertCDirectionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCDirectionExtension;
 
     /**
      * Gets the value of the alertCDirectionCoded property.
@@ -123,10 +126,10 @@ public class AlertCDirection {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCDirectionExtension() {
+    public ExtensionType getAlertCDirectionExtension() {
         return alertCDirectionExtension;
     }
 
@@ -135,10 +138,10 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCDirectionExtension(_ExtensionType value) {
+    public void setAlertCDirectionExtension(ExtensionType value) {
         this.alertCDirectionExtension = value;
     }
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -37,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vms", propOrder = {
+@XmlType(name = "Vms", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsWorking",
     "vmsMessageSequencingInterval",
     "vmsMessage",
@@ -51,16 +52,26 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Vms {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean vmsWorking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsMessageSequencingInterval;
-    protected List<_VmsMessageIndexVmsMessage> vmsMessage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsMessageIndexVmsMessage> vmsMessage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TextDisplayAreaSettings textDisplayAreaSettings;
-    protected List<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> pictogramDisplayAreaSettings;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> pictogramDisplayAreaSettings;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location vmsLocationOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsManagedLogicalLocation managedLogicalLocationOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsDynamicCharacteristics vmsDynamicCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsFault> vmsFault;
-    protected _ExtensionType vmsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsExtension;
 
     /**
      * Gets the value of the vmsWorking property.
@@ -120,13 +131,13 @@ public class Vms {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsMessageIndexVmsMessage }
+     * {@link VmsMessageIndexVmsMessage }
      * 
      * 
      */
-    public List<_VmsMessageIndexVmsMessage> getVmsMessage() {
+    public List<VmsMessageIndexVmsMessage> getVmsMessage() {
         if (vmsMessage == null) {
-            vmsMessage = new ArrayList<_VmsMessageIndexVmsMessage>();
+            vmsMessage = new ArrayList<VmsMessageIndexVmsMessage>();
         }
         return this.vmsMessage;
     }
@@ -173,13 +184,13 @@ public class Vms {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
+     * {@link VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
      * 
      * 
      */
-    public List<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> getPictogramDisplayAreaSettings() {
+    public List<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> getPictogramDisplayAreaSettings() {
         if (pictogramDisplayAreaSettings == null) {
-            pictogramDisplayAreaSettings = new ArrayList<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings>();
+            pictogramDisplayAreaSettings = new ArrayList<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings>();
         }
         return this.pictogramDisplayAreaSettings;
     }
@@ -290,10 +301,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsExtension() {
+    public ExtensionType getVmsExtension() {
         return vmsExtension;
     }
 
@@ -302,10 +313,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsExtension(_ExtensionType value) {
+    public void setVmsExtension(ExtensionType value) {
         this.vmsExtension = value;
     }
 

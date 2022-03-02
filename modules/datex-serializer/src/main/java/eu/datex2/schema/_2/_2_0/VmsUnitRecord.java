@@ -7,6 +7,7 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -38,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsUnitRecord", propOrder = {
+@XmlType(name = "VmsUnitRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfVms",
     "vmsUnitIdentifier",
     "vmsUnitIPAddress",
@@ -48,13 +49,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsUnitRecord {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVms;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitIPAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitElectronicAddress;
-    protected List<_VmsUnitRecordVmsIndexVmsRecord> vmsRecord;
-    protected _ExtensionType vmsUnitRecordExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsUnitRecordVmsIndexVmsRecord> vmsRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsUnitRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -174,13 +181,13 @@ public class VmsUnitRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsUnitRecordVmsIndexVmsRecord }
+     * {@link VmsUnitRecordVmsIndexVmsRecord }
      * 
      * 
      */
-    public List<_VmsUnitRecordVmsIndexVmsRecord> getVmsRecord() {
+    public List<VmsUnitRecordVmsIndexVmsRecord> getVmsRecord() {
         if (vmsRecord == null) {
-            vmsRecord = new ArrayList<_VmsUnitRecordVmsIndexVmsRecord>();
+            vmsRecord = new ArrayList<VmsUnitRecordVmsIndexVmsRecord>();
         }
         return this.vmsRecord;
     }
@@ -190,10 +197,10 @@ public class VmsUnitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsUnitRecordExtension() {
+    public ExtensionType getVmsUnitRecordExtension() {
         return vmsUnitRecordExtension;
     }
 
@@ -202,10 +209,10 @@ public class VmsUnitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsUnitRecordExtension(_ExtensionType value) {
+    public void setVmsUnitRecordExtension(ExtensionType value) {
         this.vmsUnitRecordExtension = value;
     }
 

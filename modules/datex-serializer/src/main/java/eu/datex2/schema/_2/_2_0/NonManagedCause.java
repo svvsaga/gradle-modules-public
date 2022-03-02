@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NonManagedCause", propOrder = {
+@XmlType(name = "NonManagedCause", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "causeDescription",
     "causeType",
     "nonManagedCauseExtension"
@@ -38,10 +39,13 @@ public class NonManagedCause
     extends Cause
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString causeDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CauseTypeEnum causeType;
-    protected _ExtensionType nonManagedCauseExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType nonManagedCauseExtension;
 
     /**
      * Gets the value of the causeDescription property.
@@ -96,10 +100,10 @@ public class NonManagedCause
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNonManagedCauseExtension() {
+    public ExtensionType getNonManagedCauseExtension() {
         return nonManagedCauseExtension;
     }
 
@@ -108,10 +112,10 @@ public class NonManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNonManagedCauseExtension(_ExtensionType value) {
+    public void setNonManagedCauseExtension(ExtensionType value) {
         this.nonManagedCauseExtension = value;
     }
 

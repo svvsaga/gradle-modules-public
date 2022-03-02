@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,21 +34,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLinearByCode", propOrder = {
+@XmlType(name = "AlertCLinearByCode", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCDirection",
     "locationCodeForLinearLocation",
-    "_AlertCLinearByCodeExtension"
+    "alertCLinearByCodeExtension"
 })
 public class AlertCLinearByCode
     extends AlertCLinear
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCLocation locationCodeForLinearLocation;
-    @XmlElement(name = "_alertCLinearByCodeExtension")
-    protected _ExtensionType _AlertCLinearByCodeExtension;
+    @XmlElement(name = "_alertCLinearByCodeExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCLinearByCodeExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -99,27 +99,27 @@ public class AlertCLinearByCode
     }
 
     /**
-     * Gets the value of the _AlertCLinearByCodeExtension property.
+     * Gets the value of the alertCLinearByCodeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCLinearByCodeExtension() {
-        return _AlertCLinearByCodeExtension;
+    public ExtensionType getAlertCLinearByCodeExtension() {
+        return alertCLinearByCodeExtension;
     }
 
     /**
-     * Sets the value of the _AlertCLinearByCodeExtension property.
+     * Sets the value of the alertCLinearByCodeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCLinearByCodeExtension(_ExtensionType value) {
-        this._AlertCLinearByCodeExtension = value;
+    public void setAlertCLinearByCodeExtension(ExtensionType value) {
+        this.alertCLinearByCodeExtension = value;
     }
 
 }

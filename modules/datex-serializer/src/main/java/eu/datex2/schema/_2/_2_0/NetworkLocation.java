@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkLocation", propOrder = {
+@XmlType(name = "NetworkLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "supplementaryPositionalDescription",
     "destination",
     "networkLocationExtension"
@@ -42,9 +43,12 @@ public abstract class NetworkLocation
     extends Location
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected SupplementaryPositionalDescription supplementaryPositionalDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Destination destination;
-    protected _ExtensionType networkLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType networkLocationExtension;
 
     /**
      * Gets the value of the supplementaryPositionalDescription property.
@@ -99,10 +103,10 @@ public abstract class NetworkLocation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNetworkLocationExtension() {
+    public ExtensionType getNetworkLocationExtension() {
         return networkLocationExtension;
     }
 
@@ -111,10 +115,10 @@ public abstract class NetworkLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNetworkLocationExtension(_ExtensionType value) {
+    public void setNetworkLocationExtension(ExtensionType value) {
         this.networkLocationExtension = value;
     }
 

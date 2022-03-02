@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContactByReference", propOrder = {
+@XmlType(name = "ContactByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "contactReference",
     "contactByReferenceExtension"
 })
@@ -36,19 +36,20 @@ public class ContactByReference
     extends Contact
 {
 
-    @XmlElement(required = true)
-    protected _ContactDetailsVersionedReference contactReference;
-    protected _ExtensionType contactByReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ContactDetailsVersionedReference contactReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType contactByReferenceExtension;
 
     /**
      * Gets the value of the contactReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ContactDetailsVersionedReference }
+     *     {@link ContactDetailsVersionedReference }
      *     
      */
-    public _ContactDetailsVersionedReference getContactReference() {
+    public ContactDetailsVersionedReference getContactReference() {
         return contactReference;
     }
 
@@ -57,10 +58,10 @@ public class ContactByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ContactDetailsVersionedReference }
+     *     {@link ContactDetailsVersionedReference }
      *     
      */
-    public void setContactReference(_ContactDetailsVersionedReference value) {
+    public void setContactReference(ContactDetailsVersionedReference value) {
         this.contactReference = value;
     }
 
@@ -69,10 +70,10 @@ public class ContactByReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getContactByReferenceExtension() {
+    public ExtensionType getContactByReferenceExtension() {
         return contactByReferenceExtension;
     }
 
@@ -81,10 +82,10 @@ public class ContactByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setContactByReferenceExtension(_ExtensionType value) {
+    public void setContactByReferenceExtension(ExtensionType value) {
         this.contactByReferenceExtension = value;
     }
 

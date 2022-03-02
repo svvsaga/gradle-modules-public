@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericSituationRecord", propOrder = {
+@XmlType(name = "GenericSituationRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "genericSituationRecordName",
     "genericSituationRecordExtension"
 })
@@ -36,9 +36,10 @@ public abstract class GenericSituationRecord
     extends SituationRecord
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String genericSituationRecordName;
-    protected _ExtensionType genericSituationRecordExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType genericSituationRecordExtension;
 
     /**
      * Gets the value of the genericSituationRecordName property.
@@ -69,10 +70,10 @@ public abstract class GenericSituationRecord
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGenericSituationRecordExtension() {
+    public ExtensionType getGenericSituationRecordExtension() {
         return genericSituationRecordExtension;
     }
 
@@ -81,10 +82,10 @@ public abstract class GenericSituationRecord
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGenericSituationRecordExtension(_ExtensionType value) {
+    public void setGenericSituationRecordExtension(ExtensionType value) {
         this.genericSituationRecordExtension = value;
     }
 

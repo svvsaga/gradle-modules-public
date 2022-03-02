@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PollutionInformation", propOrder = {
+@XmlType(name = "PollutionInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "pollution",
     "pollutionInformationExtension"
 })
@@ -38,9 +38,10 @@ public class PollutionInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<Pollution> pollution;
-    protected _ExtensionType pollutionInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType pollutionInformationExtension;
 
     /**
      * Gets the value of the pollution property.
@@ -76,10 +77,10 @@ public class PollutionInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPollutionInformationExtension() {
+    public ExtensionType getPollutionInformationExtension() {
         return pollutionInformationExtension;
     }
 
@@ -88,10 +89,10 @@ public class PollutionInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPollutionInformationExtension(_ExtensionType value) {
+    public void setPollutionInformationExtension(ExtensionType value) {
         this.pollutionInformationExtension = value;
     }
 

@@ -3,8 +3,8 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,20 +41,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsControllerTable", propOrder = {
+@XmlType(name = "VmsControllerTable", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "vmsControllerTableIdentification",
     "informationManager",
     "vmsController",
-    "_VmsControllerTableExtension"
+    "vmsControllerTableExtension"
 })
 public class VmsControllerTable {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String vmsControllerTableIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected InternationalIdentifier informationManager;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected List<VmsController> vmsController;
-    @XmlElement(name = "_vmsControllerTableExtension")
-    protected _ExtensionType _VmsControllerTableExtension;
+    @XmlElement(name = "_vmsControllerTableExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsControllerTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -138,27 +140,27 @@ public class VmsControllerTable {
     }
 
     /**
-     * Gets the value of the _VmsControllerTableExtension property.
+     * Gets the value of the vmsControllerTableExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsControllerTableExtension() {
-        return _VmsControllerTableExtension;
+    public ExtensionType getVmsControllerTableExtension() {
+        return vmsControllerTableExtension;
     }
 
     /**
-     * Sets the value of the _VmsControllerTableExtension property.
+     * Sets the value of the vmsControllerTableExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsControllerTableExtension(_ExtensionType value) {
-        this._VmsControllerTableExtension = value;
+    public void setVmsControllerTableExtension(ExtensionType value) {
+        this.vmsControllerTableExtension = value;
     }
 
     /**

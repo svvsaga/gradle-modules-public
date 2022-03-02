@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationsPublication", propOrder = {
+@XmlType(name = "PredefinedLocationsPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "headerInformation",
     "predefinedLocationContainer",
     "predefinedLocationsPublicationExtension"
@@ -40,11 +40,12 @@ public class PredefinedLocationsPublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<PredefinedLocationContainer> predefinedLocationContainer;
-    protected _ExtensionType predefinedLocationsPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType predefinedLocationsPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +105,10 @@ public class PredefinedLocationsPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedLocationsPublicationExtension() {
+    public ExtensionType getPredefinedLocationsPublicationExtension() {
         return predefinedLocationsPublicationExtension;
     }
 
@@ -116,10 +117,10 @@ public class PredefinedLocationsPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationsPublicationExtension(_ExtensionType value) {
+    public void setPredefinedLocationsPublicationExtension(ExtensionType value) {
         this.predefinedLocationsPublicationExtension = value;
     }
 

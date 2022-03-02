@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,17 +33,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SinglePhysicalQuantity", propOrder = {
+@XmlType(name = "SinglePhysicalQuantity", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "basicData",
-    "_SinglePhysicalQuantityExtension"
+    "singlePhysicalQuantityExtension"
 })
 public class SinglePhysicalQuantity
     extends PhysicalQuantity
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected BasicData basicData;
-    @XmlElement(name = "_singlePhysicalQuantityExtension")
-    protected _ExtensionType _SinglePhysicalQuantityExtension;
+    @XmlElement(name = "_singlePhysicalQuantityExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType singlePhysicalQuantityExtension;
 
     /**
      * Gets the value of the basicData property.
@@ -70,27 +71,27 @@ public class SinglePhysicalQuantity
     }
 
     /**
-     * Gets the value of the _SinglePhysicalQuantityExtension property.
+     * Gets the value of the singlePhysicalQuantityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SinglePhysicalQuantityExtension() {
-        return _SinglePhysicalQuantityExtension;
+    public ExtensionType getSinglePhysicalQuantityExtension() {
+        return singlePhysicalQuantityExtension;
     }
 
     /**
-     * Sets the value of the _SinglePhysicalQuantityExtension property.
+     * Sets the value of the singlePhysicalQuantityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SinglePhysicalQuantityExtension(_ExtensionType value) {
-        this._SinglePhysicalQuantityExtension = value;
+    public void setSinglePhysicalQuantityExtension(ExtensionType value) {
+        this.singlePhysicalQuantityExtension = value;
     }
 
 }

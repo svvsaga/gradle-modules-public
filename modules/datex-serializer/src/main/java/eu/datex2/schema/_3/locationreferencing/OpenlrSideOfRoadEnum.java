@@ -1,79 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for OpenlrSideOfRoadEnum.
+ * <p>Java class for _OpenlrSideOfRoadEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="OpenlrSideOfRoadEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="onRoadOrUnknown"/&gt;
- *     &lt;enumeration value="right"/&gt;
- *     &lt;enumeration value="left"/&gt;
- *     &lt;enumeration value="both"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_OpenlrSideOfRoadEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;OpenlrSideOfRoadEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "OpenlrSideOfRoadEnum")
-@XmlEnum
-public enum OpenlrSideOfRoadEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_OpenlrSideOfRoadEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class OpenlrSideOfRoadEnum {
 
-
-    /**
-     * On road or unknown
-     * 
-     */
-    @XmlEnumValue("onRoadOrUnknown")
-    ON_ROAD_OR_UNKNOWN("onRoadOrUnknown"),
-
-    /**
-     * On the right side of the road.
-     * 
-     */
-    @XmlEnumValue("right")
-    RIGHT("right"),
+    @XmlValue
+    protected OpenlrSideOfRoadEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * On the left side of the road.
+     * Enumeration of side of road
      * 
+     * @return
+     *     possible object is
+     *     {@link OpenlrSideOfRoadEnum2 }
+     *     
      */
-    @XmlEnumValue("left")
-    LEFT("left"),
-
-    /**
-     * On both sides of the road.
-     * 
-     */
-    @XmlEnumValue("both")
-    BOTH("both"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    OpenlrSideOfRoadEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public OpenlrSideOfRoadEnum2 getValue() {
         return value;
     }
 
-    public static OpenlrSideOfRoadEnum fromValue(String v) {
-        for (OpenlrSideOfRoadEnum c: OpenlrSideOfRoadEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link OpenlrSideOfRoadEnum2 }
+     *     
+     */
+    public void setValue(OpenlrSideOfRoadEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

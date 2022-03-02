@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.informationmanagement;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Reference;
 import eu.datex2.schema._3.common.VersionedReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,30 +33,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElementReference", propOrder = {
+@XmlType(name = "ElementReference", namespace = "http://datex2.eu/schema/3/informationManagement", propOrder = {
     "managementStatus",
     "reference",
     "versionedReference",
-    "_ElementReferenceExtension"
+    "elementReferenceExtension"
 })
 public class ElementReference {
 
-    @XmlElement(required = true)
-    protected _ManagementTypeEnum managementStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement", required = true)
+    protected ManagementTypeEnum managementStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement")
     protected Reference reference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement")
     protected VersionedReference versionedReference;
-    @XmlElement(name = "_elementReferenceExtension")
-    protected _ExtensionType _ElementReferenceExtension;
+    @XmlElement(name = "_elementReferenceExtension", namespace = "http://datex2.eu/schema/3/informationManagement")
+    protected ExtensionType elementReferenceExtension;
 
     /**
      * Gets the value of the managementStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link _ManagementTypeEnum }
+     *     {@link ManagementTypeEnum }
      *     
      */
-    public _ManagementTypeEnum getManagementStatus() {
+    public ManagementTypeEnum getManagementStatus() {
         return managementStatus;
     }
 
@@ -65,10 +67,10 @@ public class ElementReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ManagementTypeEnum }
+     *     {@link ManagementTypeEnum }
      *     
      */
-    public void setManagementStatus(_ManagementTypeEnum value) {
+    public void setManagementStatus(ManagementTypeEnum value) {
         this.managementStatus = value;
     }
 
@@ -121,27 +123,27 @@ public class ElementReference {
     }
 
     /**
-     * Gets the value of the _ElementReferenceExtension property.
+     * Gets the value of the elementReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ElementReferenceExtension() {
-        return _ElementReferenceExtension;
+    public ExtensionType getElementReferenceExtension() {
+        return elementReferenceExtension;
     }
 
     /**
-     * Sets the value of the _ElementReferenceExtension property.
+     * Sets the value of the elementReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ElementReferenceExtension(_ExtensionType value) {
-        this._ElementReferenceExtension = value;
+    public void setElementReferenceExtension(ExtensionType value) {
+        this.elementReferenceExtension = value;
     }
 
 }

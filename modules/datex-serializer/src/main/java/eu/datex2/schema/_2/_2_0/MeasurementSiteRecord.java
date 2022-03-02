@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteRecord", propOrder = {
+@XmlType(name = "MeasurementSiteRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementSiteRecordVersionTime",
     "computationMethod",
     "measurementEquipmentReference",
@@ -60,22 +60,32 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSiteRecord {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementSiteRecordVersionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ComputationMethodEnum computationMethod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String measurementEquipmentReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString measurementEquipmentTypeUsed;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString measurementSiteName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measurementSiteNumberOfLanes;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String measurementSiteIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DirectionEnum measurementSide;
-    protected List<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected GroupOfLocations measurementSiteLocation;
-    protected _ExtensionType measurementSiteRecordExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType measurementSiteRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -291,13 +301,13 @@ public class MeasurementSiteRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
+     * {@link MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
      * 
      * 
      */
-    public List<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
+    public List<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
         if (measurementSpecificCharacteristics == null) {
-            measurementSpecificCharacteristics = new ArrayList<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics>();
+            measurementSpecificCharacteristics = new ArrayList<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics>();
         }
         return this.measurementSpecificCharacteristics;
     }
@@ -331,10 +341,10 @@ public class MeasurementSiteRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementSiteRecordExtension() {
+    public ExtensionType getMeasurementSiteRecordExtension() {
         return measurementSiteRecordExtension;
     }
 
@@ -343,10 +353,10 @@ public class MeasurementSiteRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSiteRecordExtension(_ExtensionType value) {
+    public void setMeasurementSiteRecordExtension(ExtensionType value) {
         this.measurementSiteRecordExtension = value;
     }
 

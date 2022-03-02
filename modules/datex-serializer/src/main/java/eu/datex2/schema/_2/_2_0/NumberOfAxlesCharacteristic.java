@@ -31,20 +31,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NumberOfAxlesCharacteristic", propOrder = {
+@XmlType(name = "NumberOfAxlesCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comparisonOperator",
     "numberOfAxles",
     "numberOfAxlesCharacteristicExtension"
 })
 public class NumberOfAxlesCharacteristic {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfAxles;
-    protected _ExtensionType numberOfAxlesCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType numberOfAxlesCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -99,10 +100,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNumberOfAxlesCharacteristicExtension() {
+    public ExtensionType getNumberOfAxlesCharacteristicExtension() {
         return numberOfAxlesCharacteristicExtension;
     }
 
@@ -111,10 +112,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNumberOfAxlesCharacteristicExtension(_ExtensionType value) {
+    public void setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
         this.numberOfAxlesCharacteristicExtension = value;
     }
 

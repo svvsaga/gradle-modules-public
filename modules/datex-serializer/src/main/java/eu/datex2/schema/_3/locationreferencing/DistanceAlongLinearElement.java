@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,8 +34,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceAlongLinearElement", propOrder = {
-    "_DistanceAlongLinearElementExtension"
+@XmlType(name = "DistanceAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "distanceAlongLinearElementExtension"
 })
 @XmlSeeAlso({
     DistanceFromLinearElementReferent.class,
@@ -44,31 +44,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DistanceAlongLinearElement {
 
-    @XmlElement(name = "_distanceAlongLinearElementExtension")
-    protected _ExtensionType _DistanceAlongLinearElementExtension;
+    @XmlElement(name = "_distanceAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType distanceAlongLinearElementExtension;
 
     /**
-     * Gets the value of the _DistanceAlongLinearElementExtension property.
+     * Gets the value of the distanceAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DistanceAlongLinearElementExtension() {
-        return _DistanceAlongLinearElementExtension;
+    public ExtensionType getDistanceAlongLinearElementExtension() {
+        return distanceAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the _DistanceAlongLinearElementExtension property.
+     * Sets the value of the distanceAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DistanceAlongLinearElementExtension(_ExtensionType value) {
-        this._DistanceAlongLinearElementExtension = value;
+    public void setDistanceAlongLinearElementExtension(ExtensionType value) {
+        this.distanceAlongLinearElementExtension = value;
     }
 
 }

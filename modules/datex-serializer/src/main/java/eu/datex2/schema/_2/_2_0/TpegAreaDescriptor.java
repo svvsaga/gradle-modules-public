@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegAreaDescriptor", propOrder = {
+@XmlType(name = "TpegAreaDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegAreaDescriptorType",
     "tpegAreaDescriptorExtension"
 })
@@ -37,10 +37,11 @@ public class TpegAreaDescriptor
     extends TpegDescriptor
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03AreaDescriptorSubtypeEnum tpegAreaDescriptorType;
-    protected _ExtensionType tpegAreaDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegAreaDescriptorExtension;
 
     /**
      * Gets the value of the tpegAreaDescriptorType property.
@@ -71,10 +72,10 @@ public class TpegAreaDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegAreaDescriptorExtension() {
+    public ExtensionType getTpegAreaDescriptorExtension() {
         return tpegAreaDescriptorExtension;
     }
 
@@ -83,10 +84,10 @@ public class TpegAreaDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegAreaDescriptorExtension(_ExtensionType value) {
+    public void setTpegAreaDescriptorExtension(ExtensionType value) {
         this.tpegAreaDescriptorExtension = value;
     }
 

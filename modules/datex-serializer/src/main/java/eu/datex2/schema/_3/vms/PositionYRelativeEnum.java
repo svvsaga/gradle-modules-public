@@ -1,89 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for PositionYRelativeEnum.
+ * <p>Java class for _PositionYRelativeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="PositionYRelativeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="above"/&gt;
- *     &lt;enumeration value="alignedOnTheTopSide"/&gt;
- *     &lt;enumeration value="centred"/&gt;
- *     &lt;enumeration value="alignedOnTheBottomSide"/&gt;
- *     &lt;enumeration value="below"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_PositionYRelativeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;PositionYRelativeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "PositionYRelativeEnum")
-@XmlEnum
-public enum PositionYRelativeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_PositionYRelativeEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class PositionYRelativeEnum {
 
-
-    /**
-     * Positioned above relative item.
-     * 
-     */
-    @XmlEnumValue("above")
-    ABOVE("above"),
-
-    /**
-     * The top side of the area is aligned on the top side of the relative area.
-     *           
-     * 
-     */
-    @XmlEnumValue("alignedOnTheTopSide")
-    ALIGNED_ON_THE_TOP_SIDE("alignedOnTheTopSide"),
+    @XmlValue
+    protected PositionYRelativeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The area is horizontally centred on the relative area.
+     * Relative vertical positions of one item to another.
      * 
+     * @return
+     *     possible object is
+     *     {@link PositionYRelativeEnum2 }
+     *     
      */
-    @XmlEnumValue("centred")
-    CENTRED("centred"),
-
-    /**
-     * The bottom side of the area is aligned on the bottom side of the relative area.
-     *           
-     * 
-     */
-    @XmlEnumValue("alignedOnTheBottomSide")
-    ALIGNED_ON_THE_BOTTOM_SIDE("alignedOnTheBottomSide"),
-
-    /**
-     * Positioned below relative item.
-     * 
-     */
-    @XmlEnumValue("below")
-    BELOW("below"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    PositionYRelativeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public PositionYRelativeEnum2 getValue() {
         return value;
     }
 
-    public static PositionYRelativeEnum fromValue(String v) {
-        for (PositionYRelativeEnum c: PositionYRelativeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PositionYRelativeEnum2 }
+     *     
+     */
+    public void setValue(PositionYRelativeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

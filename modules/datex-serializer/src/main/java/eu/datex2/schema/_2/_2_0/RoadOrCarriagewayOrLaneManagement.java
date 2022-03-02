@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadOrCarriagewayOrLaneManagement", propOrder = {
+@XmlType(name = "RoadOrCarriagewayOrLaneManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "roadOrCarriagewayOrLaneManagementType",
     "minimumCarOccupancy",
     "roadOrCarriagewayOrLaneManagementExtension"
@@ -40,12 +40,14 @@ public class RoadOrCarriagewayOrLaneManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minimumCarOccupancy;
-    protected _ExtensionType roadOrCarriagewayOrLaneManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType roadOrCarriagewayOrLaneManagementExtension;
 
     /**
      * Gets the value of the roadOrCarriagewayOrLaneManagementType property.
@@ -100,10 +102,10 @@ public class RoadOrCarriagewayOrLaneManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadOrCarriagewayOrLaneManagementExtension() {
+    public ExtensionType getRoadOrCarriagewayOrLaneManagementExtension() {
         return roadOrCarriagewayOrLaneManagementExtension;
     }
 
@@ -112,10 +114,10 @@ public class RoadOrCarriagewayOrLaneManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadOrCarriagewayOrLaneManagementExtension(_ExtensionType value) {
+    public void setRoadOrCarriagewayOrLaneManagementExtension(ExtensionType value) {
         this.roadOrCarriagewayOrLaneManagementExtension = value;
     }
 

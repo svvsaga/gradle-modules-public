@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsStatus", propOrder = {
+@XmlType(name = "VmsStatus", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "flashingLightsOn",
     "remainingPowerCapacity",
     "statusUpdateTime",
@@ -58,23 +58,33 @@ import jakarta.xml.bind.annotation.XmlType;
     "vmsLocationOverride",
     "managedLogicalLocationOverride",
     "vmsFault",
-    "_VmsStatusExtension"
+    "vmsStatusExtension"
 })
 public class VmsStatus {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean flashingLightsOn;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float remainingPowerCapacity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar statusUpdateTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float sequencingInterval;
-    protected _WorkingStatusEnum workingStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected WorkingStatusEnum workingStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected VmsConfiguration vmsDynamicConfiguration;
-    protected List<_VmsStatusMessageIndexVmsMessage> vmsMessage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<VmsStatusMessageIndexVmsMessage> vmsMessage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location vmsLocationOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected ManagedLogicalLocation managedLogicalLocationOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsFault> vmsFault;
-    @XmlElement(name = "_vmsStatusExtension")
-    protected _ExtensionType _VmsStatusExtension;
+    @XmlElement(name = "_vmsStatusExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsStatusExtension;
 
     /**
      * Gets the value of the flashingLightsOn property.
@@ -177,10 +187,10 @@ public class VmsStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _WorkingStatusEnum }
+     *     {@link WorkingStatusEnum }
      *     
      */
-    public _WorkingStatusEnum getWorkingStatus() {
+    public WorkingStatusEnum getWorkingStatus() {
         return workingStatus;
     }
 
@@ -189,10 +199,10 @@ public class VmsStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _WorkingStatusEnum }
+     *     {@link WorkingStatusEnum }
      *     
      */
-    public void setWorkingStatus(_WorkingStatusEnum value) {
+    public void setWorkingStatus(WorkingStatusEnum value) {
         this.workingStatus = value;
     }
 
@@ -238,13 +248,13 @@ public class VmsStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsStatusMessageIndexVmsMessage }
+     * {@link VmsStatusMessageIndexVmsMessage }
      * 
      * 
      */
-    public List<_VmsStatusMessageIndexVmsMessage> getVmsMessage() {
+    public List<VmsStatusMessageIndexVmsMessage> getVmsMessage() {
         if (vmsMessage == null) {
-            vmsMessage = new ArrayList<_VmsStatusMessageIndexVmsMessage>();
+            vmsMessage = new ArrayList<VmsStatusMessageIndexVmsMessage>();
         }
         return this.vmsMessage;
     }
@@ -327,27 +337,27 @@ public class VmsStatus {
     }
 
     /**
-     * Gets the value of the _VmsStatusExtension property.
+     * Gets the value of the vmsStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsStatusExtension() {
-        return _VmsStatusExtension;
+    public ExtensionType getVmsStatusExtension() {
+        return vmsStatusExtension;
     }
 
     /**
-     * Sets the value of the _VmsStatusExtension property.
+     * Sets the value of the vmsStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsStatusExtension(_ExtensionType value) {
-        this._VmsStatusExtension = value;
+    public void setVmsStatusExtension(ExtensionType value) {
+        this.vmsStatusExtension = value;
     }
 
 }

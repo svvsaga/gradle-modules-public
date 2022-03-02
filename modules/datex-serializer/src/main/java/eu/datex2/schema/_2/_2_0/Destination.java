@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Destination", propOrder = {
+@XmlType(name = "Destination", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "destinationExtension"
 })
 @XmlSeeAlso({
@@ -36,17 +37,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Destination {
 
-    protected _ExtensionType destinationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType destinationExtension;
 
     /**
      * Gets the value of the destinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDestinationExtension() {
+    public ExtensionType getDestinationExtension() {
         return destinationExtension;
     }
 
@@ -55,10 +57,10 @@ public abstract class Destination {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDestinationExtension(_ExtensionType value) {
+    public void setDestinationExtension(ExtensionType value) {
         this.destinationExtension = value;
     }
 

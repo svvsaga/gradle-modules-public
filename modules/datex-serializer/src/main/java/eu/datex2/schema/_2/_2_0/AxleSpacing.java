@@ -31,18 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleSpacing", propOrder = {
+@XmlType(name = "AxleSpacing", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "axleSpacing",
     "axleSpacingSequenceIdentifier",
     "axleSpacingExtension"
 })
 public class AxleSpacing {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float axleSpacing;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleSpacingSequenceIdentifier;
-    protected _ExtensionType axleSpacingExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType axleSpacingExtension;
 
     /**
      * Gets the value of the axleSpacing property.
@@ -89,10 +91,10 @@ public class AxleSpacing {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleSpacingExtension() {
+    public ExtensionType getAxleSpacingExtension() {
         return axleSpacingExtension;
     }
 
@@ -101,10 +103,10 @@ public class AxleSpacing {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleSpacingExtension(_ExtensionType value) {
+    public void setAxleSpacingExtension(ExtensionType value) {
         this.axleSpacingExtension = value;
     }
 

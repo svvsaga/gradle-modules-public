@@ -30,19 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InternationalIdentifier", propOrder = {
+@XmlType(name = "InternationalIdentifier", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "country",
     "nationalIdentifier",
     "internationalIdentifierExtension"
 })
 public class InternationalIdentifier {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected CountryEnum country;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String nationalIdentifier;
-    protected _ExtensionType internationalIdentifierExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType internationalIdentifierExtension;
 
     /**
      * Gets the value of the country property.
@@ -97,10 +98,10 @@ public class InternationalIdentifier {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getInternationalIdentifierExtension() {
+    public ExtensionType getInternationalIdentifierExtension() {
         return internationalIdentifierExtension;
     }
 
@@ -109,10 +110,10 @@ public class InternationalIdentifier {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setInternationalIdentifierExtension(_ExtensionType value) {
+    public void setInternationalIdentifierExtension(ExtensionType value) {
         this.internationalIdentifierExtension = value;
     }
 

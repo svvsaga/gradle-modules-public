@@ -1,59 +1,87 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for OperatingModeEnum.
+ * <p>Java class for _OperatingModeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="OperatingModeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="conditionTriggered"/&gt;
- *     &lt;enumeration value="onOccurrence"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="periodic"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_OperatingModeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/exchangeInformation&gt;OperatingModeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "OperatingModeEnum")
-@XmlEnum
-public enum OperatingModeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_OperatingModeEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+    "value"
+})
+public class OperatingModeEnum {
 
-    @XmlEnumValue("conditionTriggered")
-    CONDITION_TRIGGERED("conditionTriggered"),
-    @XmlEnumValue("onOccurrence")
-    ON_OCCURRENCE("onOccurrence"),
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("periodic")
-    PERIODIC("periodic"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
+    @XmlValue
+    protected OperatingModeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
-    OperatingModeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    /**
+     * Gets the value of the value property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link OperatingModeEnum2 }
+     *     
+     */
+    public OperatingModeEnum2 getValue() {
         return value;
     }
 
-    public static OperatingModeEnum fromValue(String v) {
-        for (OperatingModeEnum c: OperatingModeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link OperatingModeEnum2 }
+     *     
+     */
+    public void setValue(OperatingModeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

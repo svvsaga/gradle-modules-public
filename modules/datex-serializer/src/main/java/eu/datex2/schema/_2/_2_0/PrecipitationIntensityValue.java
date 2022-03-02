@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationIntensityValue", propOrder = {
+@XmlType(name = "PrecipitationIntensityValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "millimetresPerHourIntensity",
     "precipitationIntensityValueExtension"
 })
@@ -35,8 +36,10 @@ public class PrecipitationIntensityValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float millimetresPerHourIntensity;
-    protected _ExtensionType precipitationIntensityValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType precipitationIntensityValueExtension;
 
     /**
      * Gets the value of the millimetresPerHourIntensity property.
@@ -59,10 +62,10 @@ public class PrecipitationIntensityValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPrecipitationIntensityValueExtension() {
+    public ExtensionType getPrecipitationIntensityValueExtension() {
         return precipitationIntensityValueExtension;
     }
 
@@ -71,10 +74,10 @@ public class PrecipitationIntensityValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationIntensityValueExtension(_ExtensionType value) {
+    public void setPrecipitationIntensityValueExtension(ExtensionType value) {
         this.precipitationIntensityValueExtension = value;
     }
 

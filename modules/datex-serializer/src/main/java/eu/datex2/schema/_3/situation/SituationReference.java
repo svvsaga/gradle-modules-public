@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GlobalReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,28 +32,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationReference", propOrder = {
+@XmlType(name = "SituationReference", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "objectReference",
-    "_SituationReferenceExtension"
+    "situationReferenceExtension"
 })
 public class SituationReference
     extends GlobalReference
 {
 
-    @XmlElement(required = true)
-    protected _SituationVersionedReference objectReference;
-    @XmlElement(name = "_situationReferenceExtension")
-    protected _ExtensionType _SituationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected SituationVersionedReference objectReference;
+    @XmlElement(name = "_situationReferenceExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType situationReferenceExtension;
 
     /**
      * Gets the value of the objectReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _SituationVersionedReference }
+     *     {@link SituationVersionedReference }
      *     
      */
-    public _SituationVersionedReference getObjectReference() {
+    public SituationVersionedReference getObjectReference() {
         return objectReference;
     }
 
@@ -62,35 +62,35 @@ public class SituationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _SituationVersionedReference }
+     *     {@link SituationVersionedReference }
      *     
      */
-    public void setObjectReference(_SituationVersionedReference value) {
+    public void setObjectReference(SituationVersionedReference value) {
         this.objectReference = value;
     }
 
     /**
-     * Gets the value of the _SituationReferenceExtension property.
+     * Gets the value of the situationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SituationReferenceExtension() {
-        return _SituationReferenceExtension;
+    public ExtensionType getSituationReferenceExtension() {
+        return situationReferenceExtension;
     }
 
     /**
-     * Sets the value of the _SituationReferenceExtension property.
+     * Sets the value of the situationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SituationReferenceExtension(_ExtensionType value) {
-        this._SituationReferenceExtension = value;
+    public void setSituationReferenceExtension(ExtensionType value) {
+        this.situationReferenceExtension = value;
     }
 
 }

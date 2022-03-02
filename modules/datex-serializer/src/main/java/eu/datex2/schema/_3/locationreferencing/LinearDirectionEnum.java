@@ -1,89 +1,89 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for LinearDirectionEnum.
+ * <p>Java class for _LinearDirectionEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="LinearDirectionEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="both"/&gt;
- *     &lt;enumeration value="opposite"/&gt;
- *     &lt;enumeration value="aligned"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_LinearDirectionEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;LinearDirectionEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "LinearDirectionEnum")
-@XmlEnum
-public enum LinearDirectionEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_LinearDirectionEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class LinearDirectionEnum {
 
-
-    /**
-     * Indicates that both directions of traffic flow are affected by the situation or
-     *             relate to the traffic data.
-     *           
-     * 
-     */
-    @XmlEnumValue("both")
-    BOTH("both"),
+    @XmlValue
+    protected LinearDirectionEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is in the opposite sense to the direction in which the linear element is
-     *             defined.
-     *           
+     * Directions of traffic flow relative to the direction in which the linear element is
+     *         defined.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link LinearDirectionEnum2 }
+     *     
      */
-    @XmlEnumValue("opposite")
-    OPPOSITE("opposite"),
-
-    /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is in the same sense as the direction in which the linear element is
-     *             defined.
-     *           
-     * 
-     */
-    @XmlEnumValue("aligned")
-    ALIGNED("aligned"),
-
-    /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is unknown.
-     *           
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    LinearDirectionEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public LinearDirectionEnum2 getValue() {
         return value;
     }
 
-    public static LinearDirectionEnum fromValue(String v) {
-        for (LinearDirectionEnum c: LinearDirectionEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LinearDirectionEnum2 }
+     *     
+     */
+    public void setValue(LinearDirectionEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

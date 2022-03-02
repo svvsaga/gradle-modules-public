@@ -1,65 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for LowEmissionLevelEnum.
+ * <p>Java class for _LowEmissionLevelEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="LowEmissionLevelEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="lowLevelEmission"/&gt;
- *     &lt;enumeration value="freeOfEmission"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_LowEmissionLevelEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;LowEmissionLevelEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "LowEmissionLevelEnum")
-@XmlEnum
-public enum LowEmissionLevelEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_LowEmissionLevelEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class LowEmissionLevelEnum {
 
+    @XmlValue
+    protected LowEmissionLevelEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Vehicles with low level emission.
+     * The emission level of a vehicle.
      * 
+     * @return
+     *     possible object is
+     *     {@link LowEmissionLevelEnum2 }
+     *     
      */
-    @XmlEnumValue("lowLevelEmission")
-    LOW_LEVEL_EMISSION("lowLevelEmission"),
-
-    /**
-     * Only vehicles that do not produce emissions (e.g. electric driven). Hybrid driven
-     *             cars are allowed, when they switch to emission free mode within the considered situation.
-     *           
-     * 
-     */
-    @XmlEnumValue("freeOfEmission")
-    FREE_OF_EMISSION("freeOfEmission"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    LowEmissionLevelEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public LowEmissionLevelEnum2 getValue() {
         return value;
     }
 
-    public static LowEmissionLevelEnum fromValue(String v) {
-        for (LowEmissionLevelEnum c: LowEmissionLevelEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LowEmissionLevelEnum2 }
+     *     
+     */
+    public void setValue(LowEmissionLevelEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

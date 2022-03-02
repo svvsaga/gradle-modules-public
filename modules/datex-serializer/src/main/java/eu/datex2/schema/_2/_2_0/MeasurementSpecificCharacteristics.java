@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSpecificCharacteristics", propOrder = {
+@XmlType(name = "MeasurementSpecificCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "accuracy",
     "period",
     "smoothingFactor",
@@ -45,16 +45,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSpecificCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float accuracy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float period;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float smoothingFactor;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LaneEnum specificLane;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics specificVehicleCharacteristics;
-    protected _ExtensionType measurementSpecificCharacteristicsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType measurementSpecificCharacteristicsExtension;
 
     /**
      * Gets the value of the accuracy property.
@@ -205,10 +211,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementSpecificCharacteristicsExtension() {
+    public ExtensionType getMeasurementSpecificCharacteristicsExtension() {
         return measurementSpecificCharacteristicsExtension;
     }
 
@@ -217,10 +223,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSpecificCharacteristicsExtension(_ExtensionType value) {
+    public void setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
         this.measurementSpecificCharacteristicsExtension = value;
     }
 

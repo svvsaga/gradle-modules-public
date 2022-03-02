@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicHoliday", propOrder = {
+@XmlType(name = "PublicHoliday", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "country",
     "countrySubdivision",
     "region",
@@ -43,16 +43,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PublicHoliday {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected CountryEnum country;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String countrySubdivision;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString region;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected PublicHolidayTypeEnum publicHolidayType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString publicHolidayName;
-    protected _ExtensionType publicHolidayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType publicHolidayExtension;
 
     /**
      * Gets the value of the country property.
@@ -179,10 +183,10 @@ public class PublicHoliday {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPublicHolidayExtension() {
+    public ExtensionType getPublicHolidayExtension() {
         return publicHolidayExtension;
     }
 
@@ -191,10 +195,10 @@ public class PublicHoliday {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPublicHolidayExtension(_ExtensionType value) {
+    public void setPublicHolidayExtension(ExtensionType value) {
         this.publicHolidayExtension = value;
     }
 

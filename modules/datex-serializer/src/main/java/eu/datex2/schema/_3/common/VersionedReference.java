@@ -1,12 +1,12 @@
 
 package eu.datex2.schema._3.common;
 
-import eu.datex2.schema._3.locationreferencing._PredefinedItineraryVersionedReference;
-import eu.datex2.schema._3.locationreferencing._PredefinedLocationVersionedReference;
-import eu.datex2.schema._3.roadtrafficdata._MeasurementSiteTableVersionedReference;
-import eu.datex2.schema._3.roadtrafficdata._MeasurementSiteVersionedReference;
-import eu.datex2.schema._3.vms._VmsControllerTableVersionedReference;
-import eu.datex2.schema._3.vms._VmsControllerVersionedReference;
+import eu.datex2.schema._3.locationreferencing.PredefinedItineraryVersionedReference;
+import eu.datex2.schema._3.locationreferencing.PredefinedLocationVersionedReference;
+import eu.datex2.schema._3.roadtrafficdata.MeasurementSiteTableVersionedReference;
+import eu.datex2.schema._3.roadtrafficdata.MeasurementSiteVersionedReference;
+import eu.datex2.schema._3.vms.VmsControllerTableVersionedReference;
+import eu.datex2.schema._3.vms.VmsControllerVersionedReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -33,20 +33,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VersionedReference")
+@XmlType(name = "VersionedReference", namespace = "http://datex2.eu/schema/3/common")
 @XmlSeeAlso({
-    eu.datex2.schema._3.vms._SituationRecordVersionedReference.class,
-    eu.datex2.schema._3.vms._SituationVersionedReference.class,
-    _VmsControllerTableVersionedReference.class,
-    _VmsControllerVersionedReference.class,
-    _PredefinedItineraryVersionedReference.class,
-    eu.datex2.schema._3.locationreferencing._PredefinedLocationGroupVersionedReference.class,
-    _PredefinedLocationVersionedReference.class,
-    eu.datex2.schema._3.situation._SituationRecordVersionedReference.class,
-    eu.datex2.schema._3.situation._SituationVersionedReference.class,
-    _MeasurementSiteTableVersionedReference.class,
-    _MeasurementSiteVersionedReference.class,
-    eu.datex2.schema._3.roadtrafficdata._PredefinedLocationGroupVersionedReference.class
+    eu.datex2.schema._3.vms.SituationRecordVersionedReference.class,
+    eu.datex2.schema._3.vms.SituationVersionedReference.class,
+    VmsControllerTableVersionedReference.class,
+    VmsControllerVersionedReference.class,
+    PredefinedItineraryVersionedReference.class,
+    eu.datex2.schema._3.locationreferencing.PredefinedLocationGroupVersionedReference.class,
+    PredefinedLocationVersionedReference.class,
+    eu.datex2.schema._3.situation.SituationRecordVersionedReference.class,
+    eu.datex2.schema._3.situation.SituationVersionedReference.class,
+    MeasurementSiteTableVersionedReference.class,
+    MeasurementSiteVersionedReference.class,
+    eu.datex2.schema._3.roadtrafficdata.PredefinedLocationGroupVersionedReference.class
 })
 public class VersionedReference {
 

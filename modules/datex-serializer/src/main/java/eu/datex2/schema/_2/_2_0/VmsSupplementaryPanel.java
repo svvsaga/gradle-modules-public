@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsSupplementaryPanel", propOrder = {
+@XmlType(name = "VmsSupplementaryPanel", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "supplementaryMessageDescription",
     "vmsSupplementaryPictogram",
     "vmsSupplementaryText",
@@ -37,10 +38,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsSupplementaryPanel {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString supplementaryMessageDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsSupplementaryPictogram vmsSupplementaryPictogram;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextLine vmsSupplementaryText;
-    protected _ExtensionType vmsSupplementaryPanelExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsSupplementaryPanelExtension;
 
     /**
      * Gets the value of the supplementaryMessageDescription property.
@@ -119,10 +124,10 @@ public class VmsSupplementaryPanel {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSupplementaryPanelExtension() {
+    public ExtensionType getVmsSupplementaryPanelExtension() {
         return vmsSupplementaryPanelExtension;
     }
 
@@ -131,10 +136,10 @@ public class VmsSupplementaryPanel {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPanelExtension(_ExtensionType value) {
+    public void setVmsSupplementaryPanelExtension(ExtensionType value) {
         this.vmsSupplementaryPanelExtension = value;
     }
 

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCountWithinInterval", propOrder = {
+@XmlType(name = "VehicleCountWithinInterval", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementOrCalcualtionTime",
     "measurementInterval",
     "numberOfIncomingVehicles",
@@ -45,14 +46,21 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCountWithinInterval {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementOrCalcualtionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float measurementInterval;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCountValue numberOfIncomingVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCountValue numberOfOutgoingVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OccupancyChangeValue changeOfOccupiedSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics countedVehicles;
-    protected _ExtensionType vehicleCountWithinIntervalExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleCountWithinIntervalExtension;
 
     /**
      * Gets the value of the measurementOrCalcualtionTime property.
@@ -195,10 +203,10 @@ public class VehicleCountWithinInterval {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleCountWithinIntervalExtension() {
+    public ExtensionType getVehicleCountWithinIntervalExtension() {
         return vehicleCountWithinIntervalExtension;
     }
 
@@ -207,10 +215,10 @@ public class VehicleCountWithinInterval {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleCountWithinIntervalExtension(_ExtensionType value) {
+    public void setVehicleCountWithinIntervalExtension(ExtensionType value) {
         this.vehicleCountWithinIntervalExtension = value;
     }
 

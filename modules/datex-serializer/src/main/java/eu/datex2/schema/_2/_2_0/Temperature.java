@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Temperature", propOrder = {
+@XmlType(name = "Temperature", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "airTemperature",
     "dewPointTemperature",
     "maximumTemperature",
@@ -39,11 +40,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Temperature {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue airTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue dewPointTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue maximumTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue minimumTemperature;
-    protected _ExtensionType temperatureExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType temperatureExtension;
 
     /**
      * Gets the value of the airTemperature property.
@@ -146,10 +152,10 @@ public class Temperature {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTemperatureExtension() {
+    public ExtensionType getTemperatureExtension() {
         return temperatureExtension;
     }
 
@@ -158,10 +164,10 @@ public class Temperature {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTemperatureExtension(_ExtensionType value) {
+    public void setTemperatureExtension(ExtensionType value) {
         this.temperatureExtension = value;
     }
 

@@ -1,116 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for CollisionTypeEnum.
+ * <p>Java class for _CollisionTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="CollisionTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="collisionWithAnimal"/&gt;
- *     &lt;enumeration value="collisionWithObstacle"/&gt;
- *     &lt;enumeration value="collisionWithPerson"/&gt;
- *     &lt;enumeration value="headOnCollision"/&gt;
- *     &lt;enumeration value="headOnOrSideCollision"/&gt;
- *     &lt;enumeration value="multipleVehicleCollision"/&gt;
- *     &lt;enumeration value="rearCollision"/&gt;
- *     &lt;enumeration value="sideCollision"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_CollisionTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;CollisionTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "CollisionTypeEnum")
-@XmlEnum
-public enum CollisionTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_CollisionTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class CollisionTypeEnum {
 
-
-    /**
-     * Collision of vehicle with one or more animals.
-     * 
-     */
-    @XmlEnumValue("collisionWithAnimal")
-    COLLISION_WITH_ANIMAL("collisionWithAnimal"),
-
-    /**
-     * Collision of vehicle with an object of a stationary nature.
-     * 
-     */
-    @XmlEnumValue("collisionWithObstacle")
-    COLLISION_WITH_OBSTACLE("collisionWithObstacle"),
+    @XmlValue
+    protected CollisionTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Collision of vehicle with one or more pedestrians.
+     * Identifies a type of collision
      * 
+     * @return
+     *     possible object is
+     *     {@link CollisionTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("collisionWithPerson")
-    COLLISION_WITH_PERSON("collisionWithPerson"),
-
-    /**
-     * Collision of vehicle with another vehicle head on.
-     * 
-     */
-    @XmlEnumValue("headOnCollision")
-    HEAD_ON_COLLISION("headOnCollision"),
-
-    /**
-     * Collision of vehicle with another vehicle either head on or sideways.
-     *           
-     * 
-     */
-    @XmlEnumValue("headOnOrSideCollision")
-    HEAD_ON_OR_SIDE_COLLISION("headOnOrSideCollision"),
-
-    /**
-     * Collision involving multiple vehicles
-     * 
-     */
-    @XmlEnumValue("multipleVehicleCollision")
-    MULTIPLE_VEHICLE_COLLISION("multipleVehicleCollision"),
-
-    /**
-     * Includes all accidents where one or more vehicles have collided with the rear of
-     *             one or more other vehicles.
-     *           
-     * 
-     */
-    @XmlEnumValue("rearCollision")
-    REAR_COLLISION("rearCollision"),
-
-    /**
-     * Includes all accidents where one or more vehicles have collided with the side of
-     *             one or more other vehicles.
-     *           
-     * 
-     */
-    @XmlEnumValue("sideCollision")
-    SIDE_COLLISION("sideCollision"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    CollisionTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public CollisionTypeEnum2 getValue() {
         return value;
     }
 
-    public static CollisionTypeEnum fromValue(String v) {
-        for (CollisionTypeEnum c: CollisionTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CollisionTypeEnum2 }
+     *     
+     */
+    public void setValue(CollisionTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

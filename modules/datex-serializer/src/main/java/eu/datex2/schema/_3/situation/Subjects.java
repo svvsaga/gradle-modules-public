@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,29 +34,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subjects", propOrder = {
+@XmlType(name = "Subjects", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "subjectTypeOfWorks",
     "numberOfSubjects",
-    "_SubjectsExtension"
+    "subjectsExtension"
 })
 public class Subjects {
 
-    @XmlElement(required = true)
-    protected _SubjectTypeOfWorksEnum subjectTypeOfWorks;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected SubjectTypeOfWorksEnum subjectTypeOfWorks;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubjects;
-    @XmlElement(name = "_subjectsExtension")
-    protected _ExtensionType _SubjectsExtension;
+    @XmlElement(name = "_subjectsExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType subjectsExtension;
 
     /**
      * Gets the value of the subjectTypeOfWorks property.
      * 
      * @return
      *     possible object is
-     *     {@link _SubjectTypeOfWorksEnum }
+     *     {@link SubjectTypeOfWorksEnum }
      *     
      */
-    public _SubjectTypeOfWorksEnum getSubjectTypeOfWorks() {
+    public SubjectTypeOfWorksEnum getSubjectTypeOfWorks() {
         return subjectTypeOfWorks;
     }
 
@@ -65,10 +66,10 @@ public class Subjects {
      * 
      * @param value
      *     allowed object is
-     *     {@link _SubjectTypeOfWorksEnum }
+     *     {@link SubjectTypeOfWorksEnum }
      *     
      */
-    public void setSubjectTypeOfWorks(_SubjectTypeOfWorksEnum value) {
+    public void setSubjectTypeOfWorks(SubjectTypeOfWorksEnum value) {
         this.subjectTypeOfWorks = value;
     }
 
@@ -97,27 +98,27 @@ public class Subjects {
     }
 
     /**
-     * Gets the value of the _SubjectsExtension property.
+     * Gets the value of the subjectsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SubjectsExtension() {
-        return _SubjectsExtension;
+    public ExtensionType getSubjectsExtension() {
+        return subjectsExtension;
     }
 
     /**
-     * Sets the value of the _SubjectsExtension property.
+     * Sets the value of the subjectsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SubjectsExtension(_ExtensionType value) {
-        this._SubjectsExtension = value;
+    public void setSubjectsExtension(ExtensionType value) {
+        this.subjectsExtension = value;
     }
 
 }

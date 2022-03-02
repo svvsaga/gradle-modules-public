@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PayloadPublication", propOrder = {
+@XmlType(name = "PayloadPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "feedDescription",
     "feedType",
     "publicationTime",
@@ -58,14 +58,17 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public abstract class PayloadPublication {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString feedDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String feedType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar publicationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected InternationalIdentifier publicationCreator;
-    protected _ExtensionType payloadPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType payloadPublicationExtension;
     @XmlAttribute(name = "lang", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lang;
@@ -171,10 +174,10 @@ public abstract class PayloadPublication {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPayloadPublicationExtension() {
+    public ExtensionType getPayloadPublicationExtension() {
         return payloadPublicationExtension;
     }
 
@@ -183,10 +186,10 @@ public abstract class PayloadPublication {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPayloadPublicationExtension(_ExtensionType value) {
+    public void setPayloadPublicationExtension(ExtensionType value) {
         this.payloadPublicationExtension = value;
     }
 

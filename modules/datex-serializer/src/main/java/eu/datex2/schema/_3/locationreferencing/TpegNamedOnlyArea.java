@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,18 +33,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegNamedOnlyArea", propOrder = {
+@XmlType(name = "TpegNamedOnlyArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "name",
-    "_TpegNamedOnlyAreaExtension"
+    "tpegNamedOnlyAreaExtension"
 })
 public class TpegNamedOnlyArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<TpegAreaDescriptor> name;
-    @XmlElement(name = "_tpegNamedOnlyAreaExtension")
-    protected _ExtensionType _TpegNamedOnlyAreaExtension;
+    @XmlElement(name = "_tpegNamedOnlyAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegNamedOnlyAreaExtension;
 
     /**
      * Gets the value of the name property.
@@ -76,27 +76,27 @@ public class TpegNamedOnlyArea
     }
 
     /**
-     * Gets the value of the _TpegNamedOnlyAreaExtension property.
+     * Gets the value of the tpegNamedOnlyAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegNamedOnlyAreaExtension() {
-        return _TpegNamedOnlyAreaExtension;
+    public ExtensionType getTpegNamedOnlyAreaExtension() {
+        return tpegNamedOnlyAreaExtension;
     }
 
     /**
-     * Sets the value of the _TpegNamedOnlyAreaExtension property.
+     * Sets the value of the tpegNamedOnlyAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegNamedOnlyAreaExtension(_ExtensionType value) {
-        this._TpegNamedOnlyAreaExtension = value;
+    public void setTpegNamedOnlyAreaExtension(ExtensionType value) {
+        this.tpegNamedOnlyAreaExtension = value;
     }
 
 }

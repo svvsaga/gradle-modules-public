@@ -30,14 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingTablePublication", propOrder = {
+@XmlType(name = "ParkingTablePublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "headerInformation",
     "parkingTable"
 })
 public class ParkingTablePublication {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<ParkingTable> parkingTable;
 
     /**

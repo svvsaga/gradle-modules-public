@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearWithinLinearElement", propOrder = {
+@XmlType(name = "LinearWithinLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "administrativeAreaOfLinearSection",
     "directionOnLinearSection",
     "directionRelativeOnLinearSection",
@@ -48,22 +48,26 @@ import jakarta.xml.bind.annotation.XmlType;
     "linearElement",
     "fromPoint",
     "toPoint",
-    "_LinearWithinLinearElementExtension"
+    "linearWithinLinearElementExtension"
 })
 public class LinearWithinLinearElement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString administrativeAreaOfLinearSection;
-    protected _DirectionEnum directionOnLinearSection;
-    protected _LinearDirectionEnum directionRelativeOnLinearSection;
-    protected _HeightGradeEnum heightGradeOfLinearSection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected DirectionEnum directionOnLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected LinearDirectionEnum directionRelativeOnLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected HeightGradeEnum heightGradeOfLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected LinearElement linearElement;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected DistanceAlongLinearElement fromPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected DistanceAlongLinearElement toPoint;
-    @XmlElement(name = "_linearWithinLinearElementExtension")
-    protected _ExtensionType _LinearWithinLinearElementExtension;
+    @XmlElement(name = "_linearWithinLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType linearWithinLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfLinearSection property.
@@ -94,10 +98,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public _DirectionEnum getDirectionOnLinearSection() {
+    public DirectionEnum getDirectionOnLinearSection() {
         return directionOnLinearSection;
     }
 
@@ -106,10 +110,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public void setDirectionOnLinearSection(_DirectionEnum value) {
+    public void setDirectionOnLinearSection(DirectionEnum value) {
         this.directionOnLinearSection = value;
     }
 
@@ -118,10 +122,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public _LinearDirectionEnum getDirectionRelativeOnLinearSection() {
+    public LinearDirectionEnum getDirectionRelativeOnLinearSection() {
         return directionRelativeOnLinearSection;
     }
 
@@ -130,10 +134,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public void setDirectionRelativeOnLinearSection(_LinearDirectionEnum value) {
+    public void setDirectionRelativeOnLinearSection(LinearDirectionEnum value) {
         this.directionRelativeOnLinearSection = value;
     }
 
@@ -142,10 +146,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _HeightGradeEnum }
+     *     {@link HeightGradeEnum }
      *     
      */
-    public _HeightGradeEnum getHeightGradeOfLinearSection() {
+    public HeightGradeEnum getHeightGradeOfLinearSection() {
         return heightGradeOfLinearSection;
     }
 
@@ -154,10 +158,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _HeightGradeEnum }
+     *     {@link HeightGradeEnum }
      *     
      */
-    public void setHeightGradeOfLinearSection(_HeightGradeEnum value) {
+    public void setHeightGradeOfLinearSection(HeightGradeEnum value) {
         this.heightGradeOfLinearSection = value;
     }
 
@@ -234,27 +238,27 @@ public class LinearWithinLinearElement {
     }
 
     /**
-     * Gets the value of the _LinearWithinLinearElementExtension property.
+     * Gets the value of the linearWithinLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LinearWithinLinearElementExtension() {
-        return _LinearWithinLinearElementExtension;
+    public ExtensionType getLinearWithinLinearElementExtension() {
+        return linearWithinLinearElementExtension;
     }
 
     /**
-     * Sets the value of the _LinearWithinLinearElementExtension property.
+     * Sets the value of the linearWithinLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LinearWithinLinearElementExtension(_ExtensionType value) {
-        this._LinearWithinLinearElementExtension = value;
+    public void setLinearWithinLinearElementExtension(ExtensionType value) {
+        this.linearWithinLinearElementExtension = value;
     }
 
 }

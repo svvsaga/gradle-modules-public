@@ -40,24 +40,27 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OverallPeriod", propOrder = {
+@XmlType(name = "OverallPeriod", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "overallStartTime",
     "overallEndTime",
     "validPeriod",
     "exceptionPeriod",
-    "_OverallPeriodExtension"
+    "overallPeriodExtension"
 })
 public class OverallPeriod {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallStartTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallEndTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<Period> validPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<Period> exceptionPeriod;
-    @XmlElement(name = "_overallPeriodExtension")
-    protected _ExtensionType _OverallPeriodExtension;
+    @XmlElement(name = "_overallPeriodExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType overallPeriodExtension;
 
     /**
      * Gets the value of the overallStartTime property.
@@ -166,27 +169,27 @@ public class OverallPeriod {
     }
 
     /**
-     * Gets the value of the _OverallPeriodExtension property.
+     * Gets the value of the overallPeriodExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OverallPeriodExtension() {
-        return _OverallPeriodExtension;
+    public ExtensionType getOverallPeriodExtension() {
+        return overallPeriodExtension;
     }
 
     /**
-     * Sets the value of the _OverallPeriodExtension property.
+     * Sets the value of the overallPeriodExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OverallPeriodExtension(_ExtensionType value) {
-        this._OverallPeriodExtension = value;
+    public void setOverallPeriodExtension(ExtensionType value) {
+        this.overallPeriodExtension = value;
     }
 
 }

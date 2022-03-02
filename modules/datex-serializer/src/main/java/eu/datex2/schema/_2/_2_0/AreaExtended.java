@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,13 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AreaExtended", propOrder = {
+@XmlType(name = "AreaExtended", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "namedArea",
     "polygonArea"
 })
 public class AreaExtended {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected NamedArea namedArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<PolygonArea> polygonArea;
 
     /**

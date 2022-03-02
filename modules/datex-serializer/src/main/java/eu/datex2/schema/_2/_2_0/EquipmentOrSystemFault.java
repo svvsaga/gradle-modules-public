@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EquipmentOrSystemFault", propOrder = {
+@XmlType(name = "EquipmentOrSystemFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "equipmentOrSystemFaultType",
     "faultyEquipmentOrSystemType",
     "equipmentOrSystemFaultExtension"
@@ -39,13 +39,14 @@ public class EquipmentOrSystemFault
     extends TrafficElement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
-    protected _ExtensionType equipmentOrSystemFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType equipmentOrSystemFaultExtension;
 
     /**
      * Gets the value of the equipmentOrSystemFaultType property.
@@ -100,10 +101,10 @@ public class EquipmentOrSystemFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getEquipmentOrSystemFaultExtension() {
+    public ExtensionType getEquipmentOrSystemFaultExtension() {
         return equipmentOrSystemFaultExtension;
     }
 
@@ -112,10 +113,10 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setEquipmentOrSystemFaultExtension(_ExtensionType value) {
+    public void setEquipmentOrSystemFaultExtension(ExtensionType value) {
         this.equipmentOrSystemFaultExtension = value;
     }
 

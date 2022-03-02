@@ -1,79 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for GeographicCharacteristicEnum.
+ * <p>Java class for _GeographicCharacteristicEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="GeographicCharacteristicEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="aroundABendInRoad"/&gt;
- *     &lt;enumeration value="onBorder"/&gt;
- *     &lt;enumeration value="onPass"/&gt;
- *     &lt;enumeration value="overCrestOfHill"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_GeographicCharacteristicEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;GeographicCharacteristicEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "GeographicCharacteristicEnum")
-@XmlEnum
-public enum GeographicCharacteristicEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_GeographicCharacteristicEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class GeographicCharacteristicEnum {
 
-
-    /**
-     * Around a bend in the road.
-     * 
-     */
-    @XmlEnumValue("aroundABendInRoad")
-    AROUND_A_BEND_IN_ROAD("aroundABendInRoad"),
-
-    /**
-     * On border crossing.
-     * 
-     */
-    @XmlEnumValue("onBorder")
-    ON_BORDER("onBorder"),
+    @XmlValue
+    protected GeographicCharacteristicEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * On mountain pass.
+     * Descriptor to help to identify a specific location.
      * 
+     * @return
+     *     possible object is
+     *     {@link GeographicCharacteristicEnum2 }
+     *     
      */
-    @XmlEnumValue("onPass")
-    ON_PASS("onPass"),
-
-    /**
-     * Over the crest of a hill.
-     * 
-     */
-    @XmlEnumValue("overCrestOfHill")
-    OVER_CREST_OF_HILL("overCrestOfHill"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    GeographicCharacteristicEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public GeographicCharacteristicEnum2 getValue() {
         return value;
     }
 
-    public static GeographicCharacteristicEnum fromValue(String v) {
-        for (GeographicCharacteristicEnum c: GeographicCharacteristicEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link GeographicCharacteristicEnum2 }
+     *     
+     */
+    public void setValue(GeographicCharacteristicEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

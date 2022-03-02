@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,18 +33,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrGeoCoordinate", propOrder = {
+@XmlType(name = "OpenlrGeoCoordinate", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrCoordinates",
-    "_OpenlrGeoCoordinateExtension"
+    "openlrGeoCoordinateExtension"
 })
 public class OpenlrGeoCoordinate
     extends OpenlrPointLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates openlrCoordinates;
-    @XmlElement(name = "_openlrGeoCoordinateExtension")
-    protected _ExtensionType _OpenlrGeoCoordinateExtension;
+    @XmlElement(name = "_openlrGeoCoordinateExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrGeoCoordinateExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -71,27 +71,27 @@ public class OpenlrGeoCoordinate
     }
 
     /**
-     * Gets the value of the _OpenlrGeoCoordinateExtension property.
+     * Gets the value of the openlrGeoCoordinateExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrGeoCoordinateExtension() {
-        return _OpenlrGeoCoordinateExtension;
+    public ExtensionType getOpenlrGeoCoordinateExtension() {
+        return openlrGeoCoordinateExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrGeoCoordinateExtension property.
+     * Sets the value of the openlrGeoCoordinateExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrGeoCoordinateExtension(_ExtensionType value) {
-        this._OpenlrGeoCoordinateExtension = value;
+    public void setOpenlrGeoCoordinateExtension(ExtensionType value) {
+        this.openlrGeoCoordinateExtension = value;
     }
 
 }

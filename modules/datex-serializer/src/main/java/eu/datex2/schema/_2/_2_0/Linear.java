@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Linear", propOrder = {
+@XmlType(name = "Linear", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegLinearLocation",
     "alertCLinear",
     "linearWithinLinearElement",
@@ -39,10 +40,14 @@ public class Linear
     extends NetworkLocation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegLinearLocation tpegLinearLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected AlertCLinear alertCLinear;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected LinearWithinLinearElement linearWithinLinearElement;
-    protected _LinearExtensionType linearExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected LinearExtensionType linearExtension;
 
     /**
      * Gets the value of the tpegLinearLocation property.
@@ -121,10 +126,10 @@ public class Linear
      * 
      * @return
      *     possible object is
-     *     {@link _LinearExtensionType }
+     *     {@link LinearExtensionType }
      *     
      */
-    public _LinearExtensionType getLinearExtension() {
+    public LinearExtensionType getLinearExtension() {
         return linearExtension;
     }
 
@@ -133,10 +138,10 @@ public class Linear
      * 
      * @param value
      *     allowed object is
-     *     {@link _LinearExtensionType }
+     *     {@link LinearExtensionType }
      *     
      */
-    public void setLinearExtension(_LinearExtensionType value) {
+    public void setLinearExtension(LinearExtensionType value) {
         this.linearExtension = value;
     }
 

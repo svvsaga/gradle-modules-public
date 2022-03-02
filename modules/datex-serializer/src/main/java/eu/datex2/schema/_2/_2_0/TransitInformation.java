@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TransitInformation", propOrder = {
+@XmlType(name = "TransitInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "journeyDestination",
     "journeyOrigin",
     "journeyReference",
@@ -48,18 +48,23 @@ public class TransitInformation
     extends NonRoadEventInformation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString journeyDestination;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString journeyOrigin;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String journeyReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TransitServiceInformationEnum transitServiceInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TransitServiceTypeEnum transitServiceType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar scheduledDepartureTime;
-    protected _ExtensionType transitInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType transitInformationExtension;
 
     /**
      * Gets the value of the journeyDestination property.
@@ -210,10 +215,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTransitInformationExtension() {
+    public ExtensionType getTransitInformationExtension() {
         return transitInformationExtension;
     }
 
@@ -222,10 +227,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTransitInformationExtension(_ExtensionType value) {
+    public void setTransitInformationExtension(ExtensionType value) {
         this.transitInformationExtension = value;
     }
 

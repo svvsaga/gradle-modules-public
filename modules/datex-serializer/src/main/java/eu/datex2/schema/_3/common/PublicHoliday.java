@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicHoliday", propOrder = {
+@XmlType(name = "PublicHoliday", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "publicHolidayName",
-    "_PublicHolidayExtension"
+    "publicHolidayExtension"
 })
 public class PublicHoliday
     extends SpecialDay
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected MultilingualString publicHolidayName;
-    @XmlElement(name = "_publicHolidayExtension")
-    protected _ExtensionType _PublicHolidayExtension;
+    @XmlElement(name = "_publicHolidayExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType publicHolidayExtension;
 
     /**
      * Gets the value of the publicHolidayName property.
@@ -70,27 +70,27 @@ public class PublicHoliday
     }
 
     /**
-     * Gets the value of the _PublicHolidayExtension property.
+     * Gets the value of the publicHolidayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PublicHolidayExtension() {
-        return _PublicHolidayExtension;
+    public ExtensionType getPublicHolidayExtension() {
+        return publicHolidayExtension;
     }
 
     /**
-     * Sets the value of the _PublicHolidayExtension property.
+     * Sets the value of the publicHolidayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PublicHolidayExtension(_ExtensionType value) {
-        this._PublicHolidayExtension = value;
+    public void setPublicHolidayExtension(ExtensionType value) {
+        this.publicHolidayExtension = value;
     }
 
 }

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pictogram", propOrder = {
+@XmlType(name = "Pictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "customPictogramCode",
     "additionalDescription",
     "pictogramFlashing",
@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "viennaConventionCompliant",
     "pictogramInformationType",
     "gddStructure",
-    "_PictogramExtension"
+    "pictogramExtension"
 })
 @XmlSeeAlso({
     CompositePictogram.class,
@@ -57,15 +57,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Pictogram {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String customPictogramCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString additionalDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramFlashing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramInInverseColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean viennaConventionCompliant;
-    protected _InformationTypeEnum pictogramInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected InformationTypeEnum pictogramInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected GddStructure gddStructure;
-    @XmlElement(name = "_pictogramExtension")
-    protected _ExtensionType _PictogramExtension;
+    @XmlElement(name = "_pictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType pictogramExtension;
 
     /**
      * Gets the value of the customPictogramCode property.
@@ -192,10 +199,10 @@ public abstract class Pictogram {
      * 
      * @return
      *     possible object is
-     *     {@link _InformationTypeEnum }
+     *     {@link InformationTypeEnum }
      *     
      */
-    public _InformationTypeEnum getPictogramInformationType() {
+    public InformationTypeEnum getPictogramInformationType() {
         return pictogramInformationType;
     }
 
@@ -204,10 +211,10 @@ public abstract class Pictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link _InformationTypeEnum }
+     *     {@link InformationTypeEnum }
      *     
      */
-    public void setPictogramInformationType(_InformationTypeEnum value) {
+    public void setPictogramInformationType(InformationTypeEnum value) {
         this.pictogramInformationType = value;
     }
 
@@ -236,27 +243,27 @@ public abstract class Pictogram {
     }
 
     /**
-     * Gets the value of the _PictogramExtension property.
+     * Gets the value of the pictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PictogramExtension() {
-        return _PictogramExtension;
+    public ExtensionType getPictogramExtension() {
+        return pictogramExtension;
     }
 
     /**
-     * Sets the value of the _PictogramExtension property.
+     * Sets the value of the pictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PictogramExtension(_ExtensionType value) {
-        this._PictogramExtension = value;
+    public void setPictogramExtension(ExtensionType value) {
+        this.pictogramExtension = value;
     }
 
 }

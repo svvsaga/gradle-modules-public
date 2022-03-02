@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KilogramsConcentrationValue", propOrder = {
+@XmlType(name = "KilogramsConcentrationValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "kilogramsConcentration",
     "kilogramsConcentrationValueExtension"
 })
@@ -35,8 +36,10 @@ public class KilogramsConcentrationValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float kilogramsConcentration;
-    protected _ExtensionType kilogramsConcentrationValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType kilogramsConcentrationValueExtension;
 
     /**
      * Gets the value of the kilogramsConcentration property.
@@ -59,10 +62,10 @@ public class KilogramsConcentrationValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getKilogramsConcentrationValueExtension() {
+    public ExtensionType getKilogramsConcentrationValueExtension() {
         return kilogramsConcentrationValueExtension;
     }
 
@@ -71,10 +74,10 @@ public class KilogramsConcentrationValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setKilogramsConcentrationValueExtension(_ExtensionType value) {
+    public void setKilogramsConcentrationValueExtension(ExtensionType value) {
         this.kilogramsConcentrationValueExtension = value;
     }
 

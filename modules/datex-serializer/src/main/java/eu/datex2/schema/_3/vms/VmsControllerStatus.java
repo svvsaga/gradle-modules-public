@@ -4,8 +4,8 @@ package eu.datex2.schema._3.vms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,38 +41,42 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsControllerStatus", propOrder = {
+@XmlType(name = "VmsControllerStatus", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "vmsControllerTableReference",
     "vmsControllerReference",
     "statusUpdateTime",
     "informationManagerOverride",
     "vmsStatus",
     "vmsControllerFault",
-    "_VmsControllerStatusExtension"
+    "vmsControllerStatusExtension"
 })
 public class VmsControllerStatus {
 
-    @XmlElement(required = true)
-    protected _VmsControllerTableVersionedReference vmsControllerTableReference;
-    @XmlElement(required = true)
-    protected _VmsControllerVersionedReference vmsControllerReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected VmsControllerTableVersionedReference vmsControllerTableReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected VmsControllerVersionedReference vmsControllerReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar statusUpdateTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected InternationalIdentifier informationManagerOverride;
-    protected List<_VmsControllerStatusVmsIndexVmsStatus> vmsStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<VmsControllerStatusVmsIndexVmsStatus> vmsStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsControllerFault> vmsControllerFault;
-    @XmlElement(name = "_vmsControllerStatusExtension")
-    protected _ExtensionType _VmsControllerStatusExtension;
+    @XmlElement(name = "_vmsControllerStatusExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsControllerStatusExtension;
 
     /**
      * Gets the value of the vmsControllerTableReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _VmsControllerTableVersionedReference }
+     *     {@link VmsControllerTableVersionedReference }
      *     
      */
-    public _VmsControllerTableVersionedReference getVmsControllerTableReference() {
+    public VmsControllerTableVersionedReference getVmsControllerTableReference() {
         return vmsControllerTableReference;
     }
 
@@ -81,10 +85,10 @@ public class VmsControllerStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsControllerTableVersionedReference }
+     *     {@link VmsControllerTableVersionedReference }
      *     
      */
-    public void setVmsControllerTableReference(_VmsControllerTableVersionedReference value) {
+    public void setVmsControllerTableReference(VmsControllerTableVersionedReference value) {
         this.vmsControllerTableReference = value;
     }
 
@@ -93,10 +97,10 @@ public class VmsControllerStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _VmsControllerVersionedReference }
+     *     {@link VmsControllerVersionedReference }
      *     
      */
-    public _VmsControllerVersionedReference getVmsControllerReference() {
+    public VmsControllerVersionedReference getVmsControllerReference() {
         return vmsControllerReference;
     }
 
@@ -105,10 +109,10 @@ public class VmsControllerStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsControllerVersionedReference }
+     *     {@link VmsControllerVersionedReference }
      *     
      */
-    public void setVmsControllerReference(_VmsControllerVersionedReference value) {
+    public void setVmsControllerReference(VmsControllerVersionedReference value) {
         this.vmsControllerReference = value;
     }
 
@@ -178,13 +182,13 @@ public class VmsControllerStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsControllerStatusVmsIndexVmsStatus }
+     * {@link VmsControllerStatusVmsIndexVmsStatus }
      * 
      * 
      */
-    public List<_VmsControllerStatusVmsIndexVmsStatus> getVmsStatus() {
+    public List<VmsControllerStatusVmsIndexVmsStatus> getVmsStatus() {
         if (vmsStatus == null) {
-            vmsStatus = new ArrayList<_VmsControllerStatusVmsIndexVmsStatus>();
+            vmsStatus = new ArrayList<VmsControllerStatusVmsIndexVmsStatus>();
         }
         return this.vmsStatus;
     }
@@ -219,27 +223,27 @@ public class VmsControllerStatus {
     }
 
     /**
-     * Gets the value of the _VmsControllerStatusExtension property.
+     * Gets the value of the vmsControllerStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsControllerStatusExtension() {
-        return _VmsControllerStatusExtension;
+    public ExtensionType getVmsControllerStatusExtension() {
+        return vmsControllerStatusExtension;
     }
 
     /**
-     * Sets the value of the _VmsControllerStatusExtension property.
+     * Sets the value of the vmsControllerStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsControllerStatusExtension(_ExtensionType value) {
-        this._VmsControllerStatusExtension = value;
+    public void setVmsControllerStatusExtension(ExtensionType value) {
+        this.vmsControllerStatusExtension = value;
     }
 
 }

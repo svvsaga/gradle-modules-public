@@ -34,17 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteTable", propOrder = {
+@XmlType(name = "MeasurementSiteTable", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementSiteTableIdentification",
     "measurementSiteRecord",
     "measurementSiteTableExtension"
 })
 public class MeasurementSiteTable {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String measurementSiteTableIdentification;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<MeasurementSiteRecord> measurementSiteRecord;
-    protected _ExtensionType measurementSiteTableExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType measurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -108,10 +110,10 @@ public class MeasurementSiteTable {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementSiteTableExtension() {
+    public ExtensionType getMeasurementSiteTableExtension() {
         return measurementSiteTableExtension;
     }
 
@@ -120,10 +122,10 @@ public class MeasurementSiteTable {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSiteTableExtension(_ExtensionType value) {
+    public void setMeasurementSiteTableExtension(ExtensionType value) {
         this.measurementSiteTableExtension = value;
     }
 

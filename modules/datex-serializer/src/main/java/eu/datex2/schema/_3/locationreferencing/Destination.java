@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Destination", propOrder = {
-    "_DestinationExtension"
+@XmlType(name = "Destination", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "destinationExtension"
 })
 @XmlSeeAlso({
     AreaDestination.class,
@@ -42,31 +42,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Destination {
 
-    @XmlElement(name = "_destinationExtension")
-    protected _ExtensionType _DestinationExtension;
+    @XmlElement(name = "_destinationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType destinationExtension;
 
     /**
-     * Gets the value of the _DestinationExtension property.
+     * Gets the value of the destinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DestinationExtension() {
-        return _DestinationExtension;
+    public ExtensionType getDestinationExtension() {
+        return destinationExtension;
     }
 
     /**
-     * Sets the value of the _DestinationExtension property.
+     * Sets the value of the destinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DestinationExtension(_ExtensionType value) {
-        this._DestinationExtension = value;
+    public void setDestinationExtension(ExtensionType value) {
+        this.destinationExtension = value;
     }
 
 }

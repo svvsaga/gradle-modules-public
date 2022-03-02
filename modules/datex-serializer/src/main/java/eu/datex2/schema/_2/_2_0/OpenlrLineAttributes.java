@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLineAttributes", propOrder = {
+@XmlType(name = "OpenlrLineAttributes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrFunctionalRoadClass",
     "openlrFormOfWay",
     "openlrBearing",
@@ -40,16 +40,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpenlrLineAttributes {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrFunctionalRoadClassEnum openlrFunctionalRoadClass;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrFormOfWayEnum openlrFormOfWay;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrBearing;
-    protected _ExtensionType openlrLineAttributesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrLineAttributesExtension;
 
     /**
      * Gets the value of the openlrFunctionalRoadClass property.
@@ -128,10 +129,10 @@ public class OpenlrLineAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLineAttributesExtension() {
+    public ExtensionType getOpenlrLineAttributesExtension() {
         return openlrLineAttributesExtension;
     }
 
@@ -140,10 +141,10 @@ public class OpenlrLineAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLineAttributesExtension(_ExtensionType value) {
+    public void setOpenlrLineAttributesExtension(ExtensionType value) {
         this.openlrLineAttributesExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,20 +32,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AnimalPresenceObstruction", propOrder = {
+@XmlType(name = "AnimalPresenceObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "alive",
     "animalPresenceType",
-    "_AnimalPresenceObstructionExtension"
+    "animalPresenceObstructionExtension"
 })
 public class AnimalPresenceObstruction
     extends Obstruction
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean alive;
-    @XmlElement(required = true)
-    protected _AnimalPresenceTypeEnum animalPresenceType;
-    @XmlElement(name = "_animalPresenceObstructionExtension")
-    protected _ExtensionType _AnimalPresenceObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected AnimalPresenceTypeEnum animalPresenceType;
+    @XmlElement(name = "_animalPresenceObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType animalPresenceObstructionExtension;
 
     /**
      * Gets the value of the alive property.
@@ -76,10 +77,10 @@ public class AnimalPresenceObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _AnimalPresenceTypeEnum }
+     *     {@link AnimalPresenceTypeEnum }
      *     
      */
-    public _AnimalPresenceTypeEnum getAnimalPresenceType() {
+    public AnimalPresenceTypeEnum getAnimalPresenceType() {
         return animalPresenceType;
     }
 
@@ -88,35 +89,35 @@ public class AnimalPresenceObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _AnimalPresenceTypeEnum }
+     *     {@link AnimalPresenceTypeEnum }
      *     
      */
-    public void setAnimalPresenceType(_AnimalPresenceTypeEnum value) {
+    public void setAnimalPresenceType(AnimalPresenceTypeEnum value) {
         this.animalPresenceType = value;
     }
 
     /**
-     * Gets the value of the _AnimalPresenceObstructionExtension property.
+     * Gets the value of the animalPresenceObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AnimalPresenceObstructionExtension() {
-        return _AnimalPresenceObstructionExtension;
+    public ExtensionType getAnimalPresenceObstructionExtension() {
+        return animalPresenceObstructionExtension;
     }
 
     /**
-     * Sets the value of the _AnimalPresenceObstructionExtension property.
+     * Sets the value of the animalPresenceObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AnimalPresenceObstructionExtension(_ExtensionType value) {
-        this._AnimalPresenceObstructionExtension = value;
+    public void setAnimalPresenceObstructionExtension(ExtensionType value) {
+        this.animalPresenceObstructionExtension = value;
     }
 
 }

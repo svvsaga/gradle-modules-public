@@ -30,18 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericPublication", propOrder = {
+@XmlType(name = "GenericPublication", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "genericPublicationName",
-    "_GenericPublicationExtension"
+    "genericPublicationExtension"
 })
 public class GenericPublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected String genericPublicationName;
-    @XmlElement(name = "_genericPublicationExtension")
-    protected _ExtensionType _GenericPublicationExtension;
+    @XmlElement(name = "_genericPublicationExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType genericPublicationExtension;
 
     /**
      * Gets the value of the genericPublicationName property.
@@ -68,27 +68,27 @@ public class GenericPublication
     }
 
     /**
-     * Gets the value of the _GenericPublicationExtension property.
+     * Gets the value of the genericPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GenericPublicationExtension() {
-        return _GenericPublicationExtension;
+    public ExtensionType getGenericPublicationExtension() {
+        return genericPublicationExtension;
     }
 
     /**
-     * Sets the value of the _GenericPublicationExtension property.
+     * Sets the value of the genericPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GenericPublicationExtension(_ExtensionType value) {
-        this._GenericPublicationExtension = value;
+    public void setGenericPublicationExtension(ExtensionType value) {
+        this.genericPublicationExtension = value;
     }
 
 }

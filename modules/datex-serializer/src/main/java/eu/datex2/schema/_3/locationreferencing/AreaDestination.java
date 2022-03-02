@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AreaDestination", propOrder = {
+@XmlType(name = "AreaDestination", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "areaLocation",
-    "_AreaDestinationExtension"
+    "areaDestinationExtension"
 })
 public class AreaDestination
     extends Destination
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AreaLocation areaLocation;
-    @XmlElement(name = "_areaDestinationExtension")
-    protected _ExtensionType _AreaDestinationExtension;
+    @XmlElement(name = "_areaDestinationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType areaDestinationExtension;
 
     /**
      * Gets the value of the areaLocation property.
@@ -70,27 +70,27 @@ public class AreaDestination
     }
 
     /**
-     * Gets the value of the _AreaDestinationExtension property.
+     * Gets the value of the areaDestinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AreaDestinationExtension() {
-        return _AreaDestinationExtension;
+    public ExtensionType getAreaDestinationExtension() {
+        return areaDestinationExtension;
     }
 
     /**
-     * Sets the value of the _AreaDestinationExtension property.
+     * Sets the value of the areaDestinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AreaDestinationExtension(_ExtensionType value) {
-        this._AreaDestinationExtension = value;
+    public void setAreaDestinationExtension(ExtensionType value) {
+        this.areaDestinationExtension = value;
     }
 
 }

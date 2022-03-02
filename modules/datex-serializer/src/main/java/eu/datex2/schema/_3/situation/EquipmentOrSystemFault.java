@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,31 +34,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EquipmentOrSystemFault", propOrder = {
+@XmlType(name = "EquipmentOrSystemFault", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "equipmentOrSystemFaultType",
     "faultyEquipmentOrSystemType",
-    "_EquipmentOrSystemFaultExtension"
+    "equipmentOrSystemFaultExtension"
 })
 public class EquipmentOrSystemFault
     extends TrafficElement
 {
 
-    @XmlElement(required = true)
-    protected _EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
-    @XmlElement(required = true)
-    protected _EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
-    @XmlElement(name = "_equipmentOrSystemFaultExtension")
-    protected _ExtensionType _EquipmentOrSystemFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
+    @XmlElement(name = "_equipmentOrSystemFaultExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType equipmentOrSystemFaultExtension;
 
     /**
      * Gets the value of the equipmentOrSystemFaultType property.
      * 
      * @return
      *     possible object is
-     *     {@link _EquipmentOrSystemFaultTypeEnum }
+     *     {@link EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public _EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
+    public EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
         return equipmentOrSystemFaultType;
     }
 
@@ -67,10 +67,10 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _EquipmentOrSystemFaultTypeEnum }
+     *     {@link EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public void setEquipmentOrSystemFaultType(_EquipmentOrSystemFaultTypeEnum value) {
+    public void setEquipmentOrSystemFaultType(EquipmentOrSystemFaultTypeEnum value) {
         this.equipmentOrSystemFaultType = value;
     }
 
@@ -79,10 +79,10 @@ public class EquipmentOrSystemFault
      * 
      * @return
      *     possible object is
-     *     {@link _EquipmentOrSystemTypeEnum }
+     *     {@link EquipmentOrSystemTypeEnum }
      *     
      */
-    public _EquipmentOrSystemTypeEnum getFaultyEquipmentOrSystemType() {
+    public EquipmentOrSystemTypeEnum getFaultyEquipmentOrSystemType() {
         return faultyEquipmentOrSystemType;
     }
 
@@ -91,35 +91,35 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _EquipmentOrSystemTypeEnum }
+     *     {@link EquipmentOrSystemTypeEnum }
      *     
      */
-    public void setFaultyEquipmentOrSystemType(_EquipmentOrSystemTypeEnum value) {
+    public void setFaultyEquipmentOrSystemType(EquipmentOrSystemTypeEnum value) {
         this.faultyEquipmentOrSystemType = value;
     }
 
     /**
-     * Gets the value of the _EquipmentOrSystemFaultExtension property.
+     * Gets the value of the equipmentOrSystemFaultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_EquipmentOrSystemFaultExtension() {
-        return _EquipmentOrSystemFaultExtension;
+    public ExtensionType getEquipmentOrSystemFaultExtension() {
+        return equipmentOrSystemFaultExtension;
     }
 
     /**
-     * Sets the value of the _EquipmentOrSystemFaultExtension property.
+     * Sets the value of the equipmentOrSystemFaultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_EquipmentOrSystemFaultExtension(_ExtensionType value) {
-        this._EquipmentOrSystemFaultExtension = value;
+    public void setEquipmentOrSystemFaultExtension(ExtensionType value) {
+        this.equipmentOrSystemFaultExtension = value;
     }
 
 }

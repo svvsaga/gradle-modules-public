@@ -1,111 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for InvolvementRolesEnum.
+ * <p>Java class for _InvolvementRolesEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="InvolvementRolesEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="cyclist"/&gt;
- *     &lt;enumeration value="motorcyclist"/&gt;
- *     &lt;enumeration value="pedestrian"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="vehicleDriver"/&gt;
- *     &lt;enumeration value="vehicleOccupant"/&gt;
- *     &lt;enumeration value="vehiclePassenger"/&gt;
- *     &lt;enumeration value="witness"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_InvolvementRolesEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;InvolvementRolesEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "InvolvementRolesEnum")
-@XmlEnum
-public enum InvolvementRolesEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_InvolvementRolesEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class InvolvementRolesEnum {
 
-
-    /**
-     * Cyclist.
-     * 
-     */
-    @XmlEnumValue("cyclist")
-    CYCLIST("cyclist"),
-
-    /**
-     * Motorcyclist
-     * 
-     */
-    @XmlEnumValue("motorcyclist")
-    MOTORCYCLIST("motorcyclist"),
+    @XmlValue
+    protected InvolvementRolesEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Pedestrian.
+     * Involvement role of a person in event.
      * 
+     * @return
+     *     possible object is
+     *     {@link InvolvementRolesEnum2 }
+     *     
      */
-    @XmlEnumValue("pedestrian")
-    PEDESTRIAN("pedestrian"),
-
-    /**
-     * Involvement role is unknown.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-
-    /**
-     * Vehicle driver.
-     * 
-     */
-    @XmlEnumValue("vehicleDriver")
-    VEHICLE_DRIVER("vehicleDriver"),
-
-    /**
-     * Vehicle occupant (driver or passenger not specified).
-     * 
-     */
-    @XmlEnumValue("vehicleOccupant")
-    VEHICLE_OCCUPANT("vehicleOccupant"),
-
-    /**
-     * Vehicle passenger.
-     * 
-     */
-    @XmlEnumValue("vehiclePassenger")
-    VEHICLE_PASSENGER("vehiclePassenger"),
-
-    /**
-     * Witness.
-     * 
-     */
-    @XmlEnumValue("witness")
-    WITNESS("witness"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    InvolvementRolesEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public InvolvementRolesEnum2 getValue() {
         return value;
     }
 
-    public static InvolvementRolesEnum fromValue(String v) {
-        for (InvolvementRolesEnum c: InvolvementRolesEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InvolvementRolesEnum2 }
+     *     
+     */
+    public void setValue(InvolvementRolesEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

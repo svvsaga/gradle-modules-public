@@ -30,28 +30,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DirectionCompassValue", propOrder = {
+@XmlType(name = "DirectionCompassValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "directionCompass",
-    "_DirectionCompassValueExtension"
+    "directionCompassValueExtension"
 })
 public class DirectionCompassValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
-    protected _DirectionCompassEnum directionCompass;
-    @XmlElement(name = "_directionCompassValueExtension")
-    protected _ExtensionType _DirectionCompassValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected DirectionCompassEnum directionCompass;
+    @XmlElement(name = "_directionCompassValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType directionCompassValueExtension;
 
     /**
      * Gets the value of the directionCompass property.
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionCompassEnum }
+     *     {@link DirectionCompassEnum }
      *     
      */
-    public _DirectionCompassEnum getDirectionCompass() {
+    public DirectionCompassEnum getDirectionCompass() {
         return directionCompass;
     }
 
@@ -60,35 +60,35 @@ public class DirectionCompassValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionCompassEnum }
+     *     {@link DirectionCompassEnum }
      *     
      */
-    public void setDirectionCompass(_DirectionCompassEnum value) {
+    public void setDirectionCompass(DirectionCompassEnum value) {
         this.directionCompass = value;
     }
 
     /**
-     * Gets the value of the _DirectionCompassValueExtension property.
+     * Gets the value of the directionCompassValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DirectionCompassValueExtension() {
-        return _DirectionCompassValueExtension;
+    public ExtensionType getDirectionCompassValueExtension() {
+        return directionCompassValueExtension;
     }
 
     /**
-     * Sets the value of the _DirectionCompassValueExtension property.
+     * Sets the value of the directionCompassValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DirectionCompassValueExtension(_ExtensionType value) {
-        this._DirectionCompassValueExtension = value;
+    public void setDirectionCompassValueExtension(ExtensionType value) {
+        this.directionCompassValueExtension = value;
     }
 
 }

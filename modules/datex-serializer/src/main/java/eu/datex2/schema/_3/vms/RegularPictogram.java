@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,21 +35,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RegularPictogram", propOrder = {
+@XmlType(name = "RegularPictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "pictogramDescription",
     "presenceOfRedTriangle",
     "displayedNumericalInformation",
-    "_RegularPictogramExtension"
+    "regularPictogramExtension"
 })
 public class RegularPictogram
     extends Pictogram
 {
 
-    protected List<_PictogramEnum> pictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<PictogramEnum> pictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean presenceOfRedTriangle;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<DisplayedNumericalInformation> displayedNumericalInformation;
-    @XmlElement(name = "_regularPictogramExtension")
-    protected _ExtensionType _RegularPictogramExtension;
+    @XmlElement(name = "_regularPictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType regularPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
@@ -69,13 +72,13 @@ public class RegularPictogram
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PictogramEnum }
+     * {@link PictogramEnum }
      * 
      * 
      */
-    public List<_PictogramEnum> getPictogramDescription() {
+    public List<PictogramEnum> getPictogramDescription() {
         if (pictogramDescription == null) {
-            pictogramDescription = new ArrayList<_PictogramEnum>();
+            pictogramDescription = new ArrayList<PictogramEnum>();
         }
         return this.pictogramDescription;
     }
@@ -134,27 +137,27 @@ public class RegularPictogram
     }
 
     /**
-     * Gets the value of the _RegularPictogramExtension property.
+     * Gets the value of the regularPictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RegularPictogramExtension() {
-        return _RegularPictogramExtension;
+    public ExtensionType getRegularPictogramExtension() {
+        return regularPictogramExtension;
     }
 
     /**
-     * Sets the value of the _RegularPictogramExtension property.
+     * Sets the value of the regularPictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RegularPictogramExtension(_ExtensionType value) {
-        this._RegularPictogramExtension = value;
+    public void setRegularPictogramExtension(ExtensionType value) {
+        this.regularPictogramExtension = value;
     }
 
 }

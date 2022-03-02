@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,21 +35,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Cause", propOrder = {
+@XmlType(name = "Cause", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "causeDescription",
     "causeType",
     "detailedCauseType",
     "managedCause",
-    "_CauseExtension"
+    "causeExtension"
 })
 public class Cause {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString causeDescription;
-    protected _CauseTypeEnum causeType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected CauseTypeEnum causeType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DetailedCauseType detailedCauseType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SituationRecordReference managedCause;
-    @XmlElement(name = "_causeExtension")
-    protected _ExtensionType _CauseExtension;
+    @XmlElement(name = "_causeExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType causeExtension;
 
     /**
      * Gets the value of the causeDescription property.
@@ -80,10 +84,10 @@ public class Cause {
      * 
      * @return
      *     possible object is
-     *     {@link _CauseTypeEnum }
+     *     {@link CauseTypeEnum }
      *     
      */
-    public _CauseTypeEnum getCauseType() {
+    public CauseTypeEnum getCauseType() {
         return causeType;
     }
 
@@ -92,10 +96,10 @@ public class Cause {
      * 
      * @param value
      *     allowed object is
-     *     {@link _CauseTypeEnum }
+     *     {@link CauseTypeEnum }
      *     
      */
-    public void setCauseType(_CauseTypeEnum value) {
+    public void setCauseType(CauseTypeEnum value) {
         this.causeType = value;
     }
 
@@ -148,27 +152,27 @@ public class Cause {
     }
 
     /**
-     * Gets the value of the _CauseExtension property.
+     * Gets the value of the causeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_CauseExtension() {
-        return _CauseExtension;
+    public ExtensionType getCauseExtension() {
+        return causeExtension;
     }
 
     /**
-     * Sets the value of the _CauseExtension property.
+     * Sets the value of the causeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_CauseExtension(_ExtensionType value) {
-        this._CauseExtension = value;
+    public void setCauseExtension(ExtensionType value) {
+        this.causeExtension = value;
     }
 
 }

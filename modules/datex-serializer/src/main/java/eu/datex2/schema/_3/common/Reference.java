@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Reference")
+@XmlType(name = "Reference", namespace = "http://datex2.eu/schema/3/common")
 public class Reference {
 
     @XmlAttribute(name = "id", required = true)

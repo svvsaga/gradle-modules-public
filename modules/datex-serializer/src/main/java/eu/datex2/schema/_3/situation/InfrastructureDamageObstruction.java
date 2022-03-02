@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InfrastructureDamageObstruction", propOrder = {
+@XmlType(name = "InfrastructureDamageObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "infrastructureDamageType",
-    "_InfrastructureDamageObstructionExtension"
+    "infrastructureDamageObstructionExtension"
 })
 public class InfrastructureDamageObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
-    protected _InfrastructureDamageTypeEnum infrastructureDamageType;
-    @XmlElement(name = "_infrastructureDamageObstructionExtension")
-    protected _ExtensionType _InfrastructureDamageObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected InfrastructureDamageTypeEnum infrastructureDamageType;
+    @XmlElement(name = "_infrastructureDamageObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType infrastructureDamageObstructionExtension;
 
     /**
      * Gets the value of the infrastructureDamageType property.
      * 
      * @return
      *     possible object is
-     *     {@link _InfrastructureDamageTypeEnum }
+     *     {@link InfrastructureDamageTypeEnum }
      *     
      */
-    public _InfrastructureDamageTypeEnum getInfrastructureDamageType() {
+    public InfrastructureDamageTypeEnum getInfrastructureDamageType() {
         return infrastructureDamageType;
     }
 
@@ -63,35 +63,35 @@ public class InfrastructureDamageObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _InfrastructureDamageTypeEnum }
+     *     {@link InfrastructureDamageTypeEnum }
      *     
      */
-    public void setInfrastructureDamageType(_InfrastructureDamageTypeEnum value) {
+    public void setInfrastructureDamageType(InfrastructureDamageTypeEnum value) {
         this.infrastructureDamageType = value;
     }
 
     /**
-     * Gets the value of the _InfrastructureDamageObstructionExtension property.
+     * Gets the value of the infrastructureDamageObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_InfrastructureDamageObstructionExtension() {
-        return _InfrastructureDamageObstructionExtension;
+    public ExtensionType getInfrastructureDamageObstructionExtension() {
+        return infrastructureDamageObstructionExtension;
     }
 
     /**
-     * Sets the value of the _InfrastructureDamageObstructionExtension property.
+     * Sets the value of the infrastructureDamageObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_InfrastructureDamageObstructionExtension(_ExtensionType value) {
-        this._InfrastructureDamageObstructionExtension = value;
+    public void setInfrastructureDamageObstructionExtension(ExtensionType value) {
+        this.infrastructureDamageObstructionExtension = value;
     }
 
 }

@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedDataPublication", propOrder = {
+@XmlType(name = "ElaboratedDataPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "forecastDefault",
     "periodDefault",
     "timeDefault",
@@ -50,16 +50,21 @@ public class ElaboratedDataPublication
     extends PayloadPublication
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean forecastDefault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float periodDefault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeDefault;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected HeaderInformation headerInformation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ReferenceSettings referenceSettings;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<ElaboratedData> elaboratedData;
-    protected _ExtensionType elaboratedDataPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType elaboratedDataPublicationExtension;
 
     /**
      * Gets the value of the forecastDefault property.
@@ -215,10 +220,10 @@ public class ElaboratedDataPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataPublicationExtension() {
+    public ExtensionType getElaboratedDataPublicationExtension() {
         return elaboratedDataPublicationExtension;
     }
 
@@ -227,10 +232,10 @@ public class ElaboratedDataPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataPublicationExtension(_ExtensionType value) {
+    public void setElaboratedDataPublicationExtension(ExtensionType value) {
         this.elaboratedDataPublicationExtension = value;
     }
 

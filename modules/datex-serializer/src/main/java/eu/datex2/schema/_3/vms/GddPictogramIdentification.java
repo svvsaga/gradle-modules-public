@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,23 +37,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GddPictogramIdentification", propOrder = {
+@XmlType(name = "GddPictogramIdentification", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "country",
     "serviceCategory",
     "pictogramCategoryCode",
-    "_GddPictogramIdentificationExtension"
+    "gddPictogramIdentificationExtension"
 })
 public class GddPictogramIdentification {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected String country;
-    @XmlElement(required = true)
-    protected _GddServiceCategoryEnum serviceCategory;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected GddServiceCategoryEnum serviceCategory;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger pictogramCategoryCode;
-    @XmlElement(name = "_gddPictogramIdentificationExtension")
-    protected _ExtensionType _GddPictogramIdentificationExtension;
+    @XmlElement(name = "_gddPictogramIdentificationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType gddPictogramIdentificationExtension;
 
     /**
      * Gets the value of the country property.
@@ -84,10 +84,10 @@ public class GddPictogramIdentification {
      * 
      * @return
      *     possible object is
-     *     {@link _GddServiceCategoryEnum }
+     *     {@link GddServiceCategoryEnum }
      *     
      */
-    public _GddServiceCategoryEnum getServiceCategory() {
+    public GddServiceCategoryEnum getServiceCategory() {
         return serviceCategory;
     }
 
@@ -96,10 +96,10 @@ public class GddPictogramIdentification {
      * 
      * @param value
      *     allowed object is
-     *     {@link _GddServiceCategoryEnum }
+     *     {@link GddServiceCategoryEnum }
      *     
      */
-    public void setServiceCategory(_GddServiceCategoryEnum value) {
+    public void setServiceCategory(GddServiceCategoryEnum value) {
         this.serviceCategory = value;
     }
 
@@ -128,27 +128,27 @@ public class GddPictogramIdentification {
     }
 
     /**
-     * Gets the value of the _GddPictogramIdentificationExtension property.
+     * Gets the value of the gddPictogramIdentificationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GddPictogramIdentificationExtension() {
-        return _GddPictogramIdentificationExtension;
+    public ExtensionType getGddPictogramIdentificationExtension() {
+        return gddPictogramIdentificationExtension;
     }
 
     /**
-     * Sets the value of the _GddPictogramIdentificationExtension property.
+     * Sets the value of the gddPictogramIdentificationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GddPictogramIdentificationExtension(_ExtensionType value) {
-        this._GddPictogramIdentificationExtension = value;
+    public void setGddPictogramIdentificationExtension(ExtensionType value) {
+        this.gddPictogramIdentificationExtension = value;
     }
 
 }

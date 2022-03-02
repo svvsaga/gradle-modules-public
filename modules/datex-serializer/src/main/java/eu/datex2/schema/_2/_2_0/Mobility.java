@@ -29,16 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Mobility", propOrder = {
+@XmlType(name = "Mobility", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "mobilityType",
     "mobilityExtension"
 })
 public class Mobility {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected MobilityEnum mobilityType;
-    protected _ExtensionType mobilityExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType mobilityExtension;
 
     /**
      * Gets the value of the mobilityType property.
@@ -69,10 +70,10 @@ public class Mobility {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMobilityExtension() {
+    public ExtensionType getMobilityExtension() {
         return mobilityExtension;
     }
 
@@ -81,10 +82,10 @@ public class Mobility {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMobilityExtension(_ExtensionType value) {
+    public void setMobilityExtension(ExtensionType value) {
         this.mobilityExtension = value;
     }
 

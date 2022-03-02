@@ -28,14 +28,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrExtendedLinear", propOrder = {
+@XmlType(name = "OpenlrExtendedLinear", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "firstDirection",
     "oppositeDirection"
 })
 public class OpenlrExtendedLinear {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLineLocationReference firstDirection;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrLineLocationReference oppositeDirection;
 
     /**

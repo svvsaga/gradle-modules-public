@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSiteStatus", propOrder = {
+@XmlType(name = "ParkingSiteStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingSiteStatus",
     "parkingSiteOpeningStatus",
     "parkingSiteOvercrowdingStatus",
@@ -45,14 +46,19 @@ public class ParkingSiteStatus
     extends ParkingRecordStatus
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingSiteStatusEnum parkingSiteStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum parkingSiteOpeningStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingSiteOvercrowdingStatusEnum parkingSiteOvercrowdingStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<BigInteger> parkingSiteFullAtFloor;
-    protected _ExtensionType parkingSiteStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingSiteStatusExtension;
 
     /**
      * Gets the value of the parkingSiteStatus property.
@@ -160,10 +166,10 @@ public class ParkingSiteStatus
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingSiteStatusExtension() {
+    public ExtensionType getParkingSiteStatusExtension() {
         return parkingSiteStatusExtension;
     }
 
@@ -172,10 +178,10 @@ public class ParkingSiteStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingSiteStatusExtension(_ExtensionType value) {
+    public void setParkingSiteStatusExtension(ExtensionType value) {
         this.parkingSiteStatusExtension = value;
     }
 

@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", propOrder = {
+@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "generalInstructionToRoadUsersType",
     "generalMessageToRoadUsers",
     "generalInstructionOrMessageToRoadUsersExtension"
@@ -38,10 +39,13 @@ public class GeneralInstructionOrMessageToRoadUsers
     extends NetworkManagement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString generalMessageToRoadUsers;
-    protected _ExtensionType generalInstructionOrMessageToRoadUsersExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType generalInstructionOrMessageToRoadUsersExtension;
 
     /**
      * Gets the value of the generalInstructionToRoadUsersType property.
@@ -96,10 +100,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
+    public ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
         return generalInstructionOrMessageToRoadUsersExtension;
     }
 
@@ -108,10 +112,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGeneralInstructionOrMessageToRoadUsersExtension(_ExtensionType value) {
+    public void setGeneralInstructionOrMessageToRoadUsersExtension(ExtensionType value) {
         this.generalInstructionOrMessageToRoadUsersExtension = value;
     }
 

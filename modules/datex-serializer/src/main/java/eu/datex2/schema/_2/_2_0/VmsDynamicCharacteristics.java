@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsDynamicCharacteristics", propOrder = {
+@XmlType(name = "VmsDynamicCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfPictogramDisplayAreas",
     "vmsTextDisplayCharacteristics",
     "vmsPictogramDisplayCharacteristics",
@@ -41,11 +42,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsDynamicCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPictogramDisplayAreas;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    protected List<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
-    protected _ExtensionType vmsDynamicCharacteristicsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsDynamicCharacteristicsExtension;
 
     /**
      * Gets the value of the numberOfPictogramDisplayAreas property.
@@ -113,13 +118,13 @@ public class VmsDynamicCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * {@link VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      * 
      */
-    public List<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
+    public List<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
         if (vmsPictogramDisplayCharacteristics == null) {
-            vmsPictogramDisplayCharacteristics = new ArrayList<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
+            vmsPictogramDisplayCharacteristics = new ArrayList<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
         }
         return this.vmsPictogramDisplayCharacteristics;
     }
@@ -129,10 +134,10 @@ public class VmsDynamicCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsDynamicCharacteristicsExtension() {
+    public ExtensionType getVmsDynamicCharacteristicsExtension() {
         return vmsDynamicCharacteristicsExtension;
     }
 
@@ -141,10 +146,10 @@ public class VmsDynamicCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsDynamicCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsDynamicCharacteristicsExtension(ExtensionType value) {
         this.vmsDynamicCharacteristicsExtension = value;
     }
 

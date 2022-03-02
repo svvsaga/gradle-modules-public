@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPolygonLocationReference", propOrder = {
+@XmlType(name = "OpenlrPolygonLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrPolygonCorners",
     "openlrPolygonLocationReferenceExtension"
 })
@@ -36,9 +36,10 @@ public class OpenlrPolygonLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrPolygonCorners openlrPolygonCorners;
-    protected _ExtensionType openlrPolygonLocationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrPolygonLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrPolygonCorners property.
@@ -69,10 +70,10 @@ public class OpenlrPolygonLocationReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPolygonLocationReferenceExtension() {
+    public ExtensionType getOpenlrPolygonLocationReferenceExtension() {
         return openlrPolygonLocationReferenceExtension;
     }
 
@@ -81,10 +82,10 @@ public class OpenlrPolygonLocationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPolygonLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrPolygonLocationReferenceExtension(ExtensionType value) {
         this.openlrPolygonLocationReferenceExtension = value;
     }
 

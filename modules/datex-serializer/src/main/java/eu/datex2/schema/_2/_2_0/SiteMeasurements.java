@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SiteMeasurements", propOrder = {
+@XmlType(name = "SiteMeasurements", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementSiteReference",
     "measurementTimeDefault",
     "measuredValue",
@@ -42,23 +42,25 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class SiteMeasurements {
 
-    @XmlElement(required = true)
-    protected _MeasurementSiteRecordVersionedReference measurementSiteReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected MeasurementSiteRecordVersionedReference measurementSiteReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementTimeDefault;
-    protected List<_SiteMeasurementsIndexMeasuredValue> measuredValue;
-    protected _ExtensionType siteMeasurementsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<SiteMeasurementsIndexMeasuredValue> measuredValue;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType siteMeasurementsExtension;
 
     /**
      * Gets the value of the measurementSiteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public _MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
+    public MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
         return measurementSiteReference;
     }
 
@@ -67,10 +69,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public void setMeasurementSiteReference(_MeasurementSiteRecordVersionedReference value) {
+    public void setMeasurementSiteReference(MeasurementSiteRecordVersionedReference value) {
         this.measurementSiteReference = value;
     }
 
@@ -116,13 +118,13 @@ public class SiteMeasurements {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SiteMeasurementsIndexMeasuredValue }
+     * {@link SiteMeasurementsIndexMeasuredValue }
      * 
      * 
      */
-    public List<_SiteMeasurementsIndexMeasuredValue> getMeasuredValue() {
+    public List<SiteMeasurementsIndexMeasuredValue> getMeasuredValue() {
         if (measuredValue == null) {
-            measuredValue = new ArrayList<_SiteMeasurementsIndexMeasuredValue>();
+            measuredValue = new ArrayList<SiteMeasurementsIndexMeasuredValue>();
         }
         return this.measuredValue;
     }
@@ -132,10 +134,10 @@ public class SiteMeasurements {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSiteMeasurementsExtension() {
+    public ExtensionType getSiteMeasurementsExtension() {
         return siteMeasurementsExtension;
     }
 
@@ -144,10 +146,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSiteMeasurementsExtension(_ExtensionType value) {
+    public void setSiteMeasurementsExtension(ExtensionType value) {
         this.siteMeasurementsExtension = value;
     }
 

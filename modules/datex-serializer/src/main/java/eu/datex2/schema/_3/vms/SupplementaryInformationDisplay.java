@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryInformationDisplay", propOrder = {
-    "_SupplementaryInformationDisplayExtension"
+@XmlType(name = "SupplementaryInformationDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "supplementaryInformationDisplayExtension"
 })
 @XmlSeeAlso({
     SupplementaryPictogram.class,
@@ -44,31 +44,31 @@ public abstract class SupplementaryInformationDisplay
     extends DisplayAreaSettings
 {
 
-    @XmlElement(name = "_supplementaryInformationDisplayExtension")
-    protected _ExtensionType _SupplementaryInformationDisplayExtension;
+    @XmlElement(name = "_supplementaryInformationDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType supplementaryInformationDisplayExtension;
 
     /**
-     * Gets the value of the _SupplementaryInformationDisplayExtension property.
+     * Gets the value of the supplementaryInformationDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SupplementaryInformationDisplayExtension() {
-        return _SupplementaryInformationDisplayExtension;
+    public ExtensionType getSupplementaryInformationDisplayExtension() {
+        return supplementaryInformationDisplayExtension;
     }
 
     /**
-     * Sets the value of the _SupplementaryInformationDisplayExtension property.
+     * Sets the value of the supplementaryInformationDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SupplementaryInformationDisplayExtension(_ExtensionType value) {
-        this._SupplementaryInformationDisplayExtension = value;
+    public void setSupplementaryInformationDisplayExtension(ExtensionType value) {
+        this.supplementaryInformationDisplayExtension = value;
     }
 
 }

@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,22 +37,26 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfPeopleInvolved", propOrder = {
+@XmlType(name = "GroupOfPeopleInvolved", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "numberOfPeople",
     "injuryStatusType",
     "involvementRole",
     "categoryOfPeopleInvolved",
-    "_GroupOfPeopleInvolvedExtension"
+    "groupOfPeopleInvolvedExtension"
 })
 public class GroupOfPeopleInvolved {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPeople;
-    protected _InjuryStatusTypeEnum injuryStatusType;
-    protected _InvolvementRolesEnum involvementRole;
-    protected _PersonCategoryEnum categoryOfPeopleInvolved;
-    @XmlElement(name = "_groupOfPeopleInvolvedExtension")
-    protected _ExtensionType _GroupOfPeopleInvolvedExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected InjuryStatusTypeEnum injuryStatusType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected InvolvementRolesEnum involvementRole;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected PersonCategoryEnum categoryOfPeopleInvolved;
+    @XmlElement(name = "_groupOfPeopleInvolvedExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType groupOfPeopleInvolvedExtension;
 
     /**
      * Gets the value of the numberOfPeople property.
@@ -83,10 +87,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _InjuryStatusTypeEnum }
+     *     {@link InjuryStatusTypeEnum }
      *     
      */
-    public _InjuryStatusTypeEnum getInjuryStatusType() {
+    public InjuryStatusTypeEnum getInjuryStatusType() {
         return injuryStatusType;
     }
 
@@ -95,10 +99,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _InjuryStatusTypeEnum }
+     *     {@link InjuryStatusTypeEnum }
      *     
      */
-    public void setInjuryStatusType(_InjuryStatusTypeEnum value) {
+    public void setInjuryStatusType(InjuryStatusTypeEnum value) {
         this.injuryStatusType = value;
     }
 
@@ -107,10 +111,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _InvolvementRolesEnum }
+     *     {@link InvolvementRolesEnum }
      *     
      */
-    public _InvolvementRolesEnum getInvolvementRole() {
+    public InvolvementRolesEnum getInvolvementRole() {
         return involvementRole;
     }
 
@@ -119,10 +123,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _InvolvementRolesEnum }
+     *     {@link InvolvementRolesEnum }
      *     
      */
-    public void setInvolvementRole(_InvolvementRolesEnum value) {
+    public void setInvolvementRole(InvolvementRolesEnum value) {
         this.involvementRole = value;
     }
 
@@ -131,10 +135,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _PersonCategoryEnum }
+     *     {@link PersonCategoryEnum }
      *     
      */
-    public _PersonCategoryEnum getCategoryOfPeopleInvolved() {
+    public PersonCategoryEnum getCategoryOfPeopleInvolved() {
         return categoryOfPeopleInvolved;
     }
 
@@ -143,35 +147,35 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PersonCategoryEnum }
+     *     {@link PersonCategoryEnum }
      *     
      */
-    public void setCategoryOfPeopleInvolved(_PersonCategoryEnum value) {
+    public void setCategoryOfPeopleInvolved(PersonCategoryEnum value) {
         this.categoryOfPeopleInvolved = value;
     }
 
     /**
-     * Gets the value of the _GroupOfPeopleInvolvedExtension property.
+     * Gets the value of the groupOfPeopleInvolvedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GroupOfPeopleInvolvedExtension() {
-        return _GroupOfPeopleInvolvedExtension;
+    public ExtensionType getGroupOfPeopleInvolvedExtension() {
+        return groupOfPeopleInvolvedExtension;
     }
 
     /**
-     * Sets the value of the _GroupOfPeopleInvolvedExtension property.
+     * Sets the value of the groupOfPeopleInvolvedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GroupOfPeopleInvolvedExtension(_ExtensionType value) {
-        this._GroupOfPeopleInvolvedExtension = value;
+    public void setGroupOfPeopleInvolvedExtension(ExtensionType value) {
+        this.groupOfPeopleInvolvedExtension = value;
     }
 
 }

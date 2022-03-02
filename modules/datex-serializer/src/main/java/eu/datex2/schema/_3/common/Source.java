@@ -34,23 +34,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Source", propOrder = {
+@XmlType(name = "Source", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "sourceCountry",
     "sourceIdentification",
     "sourceName",
     "sourceType",
     "reliable",
-    "_SourceExtension"
+    "sourceExtension"
 })
 public class Source {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String sourceCountry;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String sourceIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString sourceName;
-    protected _SourceTypeEnum sourceType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected SourceTypeEnum sourceType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Boolean reliable;
-    @XmlElement(name = "_sourceExtension")
-    protected _ExtensionType _SourceExtension;
+    @XmlElement(name = "_sourceExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType sourceExtension;
 
     /**
      * Gets the value of the sourceCountry property.
@@ -129,10 +134,10 @@ public class Source {
      * 
      * @return
      *     possible object is
-     *     {@link _SourceTypeEnum }
+     *     {@link SourceTypeEnum }
      *     
      */
-    public _SourceTypeEnum getSourceType() {
+    public SourceTypeEnum getSourceType() {
         return sourceType;
     }
 
@@ -141,10 +146,10 @@ public class Source {
      * 
      * @param value
      *     allowed object is
-     *     {@link _SourceTypeEnum }
+     *     {@link SourceTypeEnum }
      *     
      */
-    public void setSourceType(_SourceTypeEnum value) {
+    public void setSourceType(SourceTypeEnum value) {
         this.sourceType = value;
     }
 
@@ -173,27 +178,27 @@ public class Source {
     }
 
     /**
-     * Gets the value of the _SourceExtension property.
+     * Gets the value of the sourceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SourceExtension() {
-        return _SourceExtension;
+    public ExtensionType getSourceExtension() {
+        return sourceExtension;
     }
 
     /**
-     * Sets the value of the _SourceExtension property.
+     * Sets the value of the sourceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SourceExtension(_ExtensionType value) {
-        this._SourceExtension = value;
+    public void setSourceExtension(ExtensionType value) {
+        this.sourceExtension = value;
     }
 
 }

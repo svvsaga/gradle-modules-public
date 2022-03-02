@@ -1,90 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ConstructionWorkTypeEnum.
+ * <p>Java class for _ConstructionWorkTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ConstructionWorkTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="blastingWork"/&gt;
- *     &lt;enumeration value="constructionWork"/&gt;
- *     &lt;enumeration value="demolitionWork"/&gt;
- *     &lt;enumeration value="roadImprovementOrUpgrading"/&gt;
- *     &lt;enumeration value="roadWideningWork"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ConstructionWorkTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;ConstructionWorkTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ConstructionWorkTypeEnum")
-@XmlEnum
-public enum ConstructionWorkTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ConstructionWorkTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class ConstructionWorkTypeEnum {
 
-
-    /**
-     * Blasting or quarrying work at the specified location.
-     * 
-     */
-    @XmlEnumValue("blastingWork")
-    BLASTING_WORK("blastingWork"),
-
-    /**
-     * Construction work of a general nature at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("constructionWork")
-    CONSTRUCTION_WORK("constructionWork"),
+    @XmlValue
+    protected ConstructionWorkTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Demolition work associated with the construction work.
+     * Types of works relating to construction.
      * 
+     * @return
+     *     possible object is
+     *     {@link ConstructionWorkTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("demolitionWork")
-    DEMOLITION_WORK("demolitionWork"),
-
-    /**
-     * Construction work associated with improvements to the road or its layout or with
-     *             it upgrading.
-     *           
-     * 
-     */
-    @XmlEnumValue("roadImprovementOrUpgrading")
-    ROAD_IMPROVEMENT_OR_UPGRADING("roadImprovementOrUpgrading"),
-
-    /**
-     * Road widening work at the specified location.
-     * 
-     */
-    @XmlEnumValue("roadWideningWork")
-    ROAD_WIDENING_WORK("roadWideningWork"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ConstructionWorkTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ConstructionWorkTypeEnum2 getValue() {
         return value;
     }
 
-    public static ConstructionWorkTypeEnum fromValue(String v) {
-        for (ConstructionWorkTypeEnum c: ConstructionWorkTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ConstructionWorkTypeEnum2 }
+     *     
+     */
+    public void setValue(ConstructionWorkTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

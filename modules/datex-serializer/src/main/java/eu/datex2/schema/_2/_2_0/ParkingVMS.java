@@ -31,27 +31,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingVMS", propOrder = {
+@XmlType(name = "ParkingVMS", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsUnitUsedToManageParking",
     "vmsOperator",
     "parkingVMSExtension"
 })
 public class ParkingVMS {
 
-    @XmlElement(required = true)
-    protected _VmsUnitRecordVersionedReference vmsUnitUsedToManageParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected VmsUnitRecordVersionedReference vmsUnitUsedToManageParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> vmsOperator;
-    protected _ExtensionType parkingVMSExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingVMSExtension;
 
     /**
      * Gets the value of the vmsUnitUsedToManageParking property.
      * 
      * @return
      *     possible object is
-     *     {@link _VmsUnitRecordVersionedReference }
+     *     {@link VmsUnitRecordVersionedReference }
      *     
      */
-    public _VmsUnitRecordVersionedReference getVmsUnitUsedToManageParking() {
+    public VmsUnitRecordVersionedReference getVmsUnitUsedToManageParking() {
         return vmsUnitUsedToManageParking;
     }
 
@@ -60,10 +62,10 @@ public class ParkingVMS {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsUnitRecordVersionedReference }
+     *     {@link VmsUnitRecordVersionedReference }
      *     
      */
-    public void setVmsUnitUsedToManageParking(_VmsUnitRecordVersionedReference value) {
+    public void setVmsUnitUsedToManageParking(VmsUnitRecordVersionedReference value) {
         this.vmsUnitUsedToManageParking = value;
     }
 
@@ -101,10 +103,10 @@ public class ParkingVMS {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingVMSExtension() {
+    public ExtensionType getParkingVMSExtension() {
         return parkingVMSExtension;
     }
 
@@ -113,10 +115,10 @@ public class ParkingVMS {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingVMSExtension(_ExtensionType value) {
+    public void setParkingVMSExtension(ExtensionType value) {
         this.parkingVMSExtension = value;
     }
 

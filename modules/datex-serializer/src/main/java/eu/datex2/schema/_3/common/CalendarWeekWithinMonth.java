@@ -34,18 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CalendarWeekWithinMonth", propOrder = {
+@XmlType(name = "CalendarWeekWithinMonth", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "applicableCalenderWeekWithinMonth",
-    "_CalendarWeekWithinMonthExtension"
+    "calendarWeekWithinMonthExtension"
 })
 public class CalendarWeekWithinMonth
     extends DayWeekMonth
 {
 
-    @XmlElement(required = true)
-    protected List<_CalendarWeekWithinMonthEnum> applicableCalenderWeekWithinMonth;
-    @XmlElement(name = "_calendarWeekWithinMonthExtension")
-    protected _ExtensionType _CalendarWeekWithinMonthExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected List<CalendarWeekWithinMonthEnum> applicableCalenderWeekWithinMonth;
+    @XmlElement(name = "_calendarWeekWithinMonthExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType calendarWeekWithinMonthExtension;
 
     /**
      * Gets the value of the applicableCalenderWeekWithinMonth property.
@@ -65,39 +65,39 @@ public class CalendarWeekWithinMonth
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _CalendarWeekWithinMonthEnum }
+     * {@link CalendarWeekWithinMonthEnum }
      * 
      * 
      */
-    public List<_CalendarWeekWithinMonthEnum> getApplicableCalenderWeekWithinMonth() {
+    public List<CalendarWeekWithinMonthEnum> getApplicableCalenderWeekWithinMonth() {
         if (applicableCalenderWeekWithinMonth == null) {
-            applicableCalenderWeekWithinMonth = new ArrayList<_CalendarWeekWithinMonthEnum>();
+            applicableCalenderWeekWithinMonth = new ArrayList<CalendarWeekWithinMonthEnum>();
         }
         return this.applicableCalenderWeekWithinMonth;
     }
 
     /**
-     * Gets the value of the _CalendarWeekWithinMonthExtension property.
+     * Gets the value of the calendarWeekWithinMonthExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_CalendarWeekWithinMonthExtension() {
-        return _CalendarWeekWithinMonthExtension;
+    public ExtensionType getCalendarWeekWithinMonthExtension() {
+        return calendarWeekWithinMonthExtension;
     }
 
     /**
-     * Sets the value of the _CalendarWeekWithinMonthExtension property.
+     * Sets the value of the calendarWeekWithinMonthExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_CalendarWeekWithinMonthExtension(_ExtensionType value) {
-        this._CalendarWeekWithinMonthExtension = value;
+    public void setCalendarWeekWithinMonthExtension(ExtensionType value) {
+        this.calendarWeekWithinMonthExtension = value;
     }
 
 }

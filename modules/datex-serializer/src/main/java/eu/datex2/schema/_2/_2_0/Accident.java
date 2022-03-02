@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Accident", propOrder = {
+@XmlType(name = "Accident", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "accidentCause",
     "accidentType",
     "totalNumberOfPeopleInvolved",
@@ -52,19 +52,26 @@ public class Accident
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected AccidentCauseEnum accidentCause;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<AccidentTypeEnum> accidentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfPeopleInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfVehiclesInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Vehicle> vehicleInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfVehiclesInvolved> groupOfVehiclesInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    protected _ExtensionType accidentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType accidentExtension;
 
     /**
      * Gets the value of the accidentCause property.
@@ -259,10 +266,10 @@ public class Accident
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAccidentExtension() {
+    public ExtensionType getAccidentExtension() {
         return accidentExtension;
     }
 
@@ -271,10 +278,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAccidentExtension(_ExtensionType value) {
+    public void setAccidentExtension(ExtensionType value) {
         this.accidentExtension = value;
     }
 

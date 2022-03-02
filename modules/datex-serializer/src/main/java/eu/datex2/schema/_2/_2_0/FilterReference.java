@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FilterReference", propOrder = {
+@XmlType(name = "FilterReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "deleteFilter",
     "filterOperationApproved",
     "keyFilterReference",
@@ -38,11 +38,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class FilterReference {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deleteFilter;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean filterOperationApproved;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String keyFilterReference;
-    protected _ExtensionType filterReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType filterReferenceExtension;
 
     /**
      * Gets the value of the deleteFilter property.
@@ -121,10 +124,10 @@ public class FilterReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFilterReferenceExtension() {
+    public ExtensionType getFilterReferenceExtension() {
         return filterReferenceExtension;
     }
 
@@ -133,10 +136,10 @@ public class FilterReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFilterReferenceExtension(_ExtensionType value) {
+    public void setFilterReferenceExtension(ExtensionType value) {
         this.filterReferenceExtension = value;
     }
 

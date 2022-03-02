@@ -1,100 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ReferentTypeEnum.
+ * <p>Java class for _ReferentTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ReferentTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="boundary"/&gt;
- *     &lt;enumeration value="intersection"/&gt;
- *     &lt;enumeration value="referenceMarker"/&gt;
- *     &lt;enumeration value="landmark"/&gt;
- *     &lt;enumeration value="roadNode"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ReferentTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;ReferentTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ReferentTypeEnum")
-@XmlEnum
-public enum ReferentTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ReferentTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class ReferentTypeEnum {
 
-
-    /**
-     * A boundary between two jurisdictional or administrative areas. These may be legal
-     *             boundaries such as between counties or countries, maintenance responsibility boundaries or
-     *             control boundaries.
-     *           
-     * 
-     */
-    @XmlEnumValue("boundary")
-    BOUNDARY("boundary"),
+    @XmlValue
+    protected ReferentTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * A crossing of two or more roads where the precise point of intersection is defined
-     *             according to specific business rules.
-     *           
+     * A set of types of known points along a linear object such as a road.
      * 
+     * @return
+     *     possible object is
+     *     {@link ReferentTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("intersection")
-    INTERSECTION("intersection"),
-
-    /**
-     * A marker which is usually but not necessarily physical that is one of a sequence
-     *             which are spaced out along the linear object (road) to provide a location reference. The spacing
-     *             of markers is not necessarily even.
-     *           
-     * 
-     */
-    @XmlEnumValue("referenceMarker")
-    REFERENCE_MARKER("referenceMarker"),
-
-    /**
-     * A visible identifiable physical landmark either alongside or close to the linear
-     *             object.
-     *           
-     * 
-     */
-    @XmlEnumValue("landmark")
-    LANDMARK("landmark"),
-
-    /**
-     * A topological node defined on a road network. Such nodes may delineate the
-     *             segmentation of the road network according to defined business rules or may constitute a purely
-     *             topological representation of a road network.
-     *           
-     * 
-     */
-    @XmlEnumValue("roadNode")
-    ROAD_NODE("roadNode"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ReferentTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ReferentTypeEnum2 getValue() {
         return value;
     }
 
-    public static ReferentTypeEnum fromValue(String v) {
-        for (ReferentTypeEnum c: ReferentTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ReferentTypeEnum2 }
+     *     
+     */
+    public void setValue(ReferentTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

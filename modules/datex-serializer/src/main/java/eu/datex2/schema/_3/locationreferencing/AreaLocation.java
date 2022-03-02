@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,37 +41,43 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AreaLocation", propOrder = {
+@XmlType(name = "AreaLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "areasAtWhichApplicable",
     "alertCArea",
     "tpegAreaLocation",
     "namedArea",
     "gmlMultiPolygon",
     "openlrAreaLocationReference",
-    "_AreaLocationExtension"
+    "areaLocationExtension"
 })
 public class AreaLocation
     extends Location
 {
 
-    protected _AreaPlacesEnum areasAtWhichApplicable;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected AreaPlacesEnum areasAtWhichApplicable;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCArea> alertCArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegAreaLocation tpegAreaLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected NamedArea namedArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected GmlMultiPolygon gmlMultiPolygon;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrAreaLocationReference openlrAreaLocationReference;
-    @XmlElement(name = "_areaLocationExtension")
-    protected _ExtensionType _AreaLocationExtension;
+    @XmlElement(name = "_areaLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType areaLocationExtension;
 
     /**
      * Gets the value of the areasAtWhichApplicable property.
      * 
      * @return
      *     possible object is
-     *     {@link _AreaPlacesEnum }
+     *     {@link AreaPlacesEnum }
      *     
      */
-    public _AreaPlacesEnum getAreasAtWhichApplicable() {
+    public AreaPlacesEnum getAreasAtWhichApplicable() {
         return areasAtWhichApplicable;
     }
 
@@ -80,10 +86,10 @@ public class AreaLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link _AreaPlacesEnum }
+     *     {@link AreaPlacesEnum }
      *     
      */
-    public void setAreasAtWhichApplicable(_AreaPlacesEnum value) {
+    public void setAreasAtWhichApplicable(AreaPlacesEnum value) {
         this.areasAtWhichApplicable = value;
     }
 
@@ -213,27 +219,27 @@ public class AreaLocation
     }
 
     /**
-     * Gets the value of the _AreaLocationExtension property.
+     * Gets the value of the areaLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AreaLocationExtension() {
-        return _AreaLocationExtension;
+    public ExtensionType getAreaLocationExtension() {
+        return areaLocationExtension;
     }
 
     /**
-     * Sets the value of the _AreaLocationExtension property.
+     * Sets the value of the areaLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AreaLocationExtension(_ExtensionType value) {
-        this._AreaLocationExtension = value;
+    public void setAreaLocationExtension(ExtensionType value) {
+        this.areaLocationExtension = value;
     }
 
 }

@@ -27,22 +27,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VersionedReference")
+@XmlType(name = "VersionedReference", namespace = "http://datex2.eu/schema/2/2_0")
 @XmlSeeAlso({
-    _ChargeBandVersionedReference.class,
-    _ContactDetailsVersionedReference.class,
-    _MeasurementSiteRecordVersionedReference.class,
-    _MeasurementSiteTableVersionedReference.class,
-    _ParkingRecordVersionedReference.class,
-    _ParkingRouteDetailsVersionedReference.class,
-    _ParkingTableVersionedReference.class,
-    _PredefinedItineraryVersionedReference.class,
-    _PredefinedLocationVersionedReference.class,
-    _PredefinedNonOrderedLocationGroupVersionedReference.class,
-    _SituationRecordVersionedReference.class,
-    _SituationVersionedReference.class,
-    _VmsUnitRecordVersionedReference.class,
-    _VmsUnitTableVersionedReference.class
+    ChargeBandVersionedReference.class,
+    ContactDetailsVersionedReference.class,
+    MeasurementSiteRecordVersionedReference.class,
+    MeasurementSiteTableVersionedReference.class,
+    ParkingRecordVersionedReference.class,
+    ParkingRouteDetailsVersionedReference.class,
+    ParkingTableVersionedReference.class,
+    PredefinedItineraryVersionedReference.class,
+    PredefinedLocationVersionedReference.class,
+    PredefinedNonOrderedLocationGroupVersionedReference.class,
+    SituationRecordVersionedReference.class,
+    SituationVersionedReference.class,
+    VmsUnitRecordVersionedReference.class,
+    VmsUnitTableVersionedReference.class
 })
 public class VersionedReference {
 

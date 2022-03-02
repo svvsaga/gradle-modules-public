@@ -34,31 +34,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Validity", propOrder = {
+@XmlType(name = "Validity", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "validityStatus",
     "overrunning",
     "validityTimeSpecification",
-    "_ValidityExtension"
+    "validityExtension"
 })
 public class Validity {
 
-    @XmlElement(required = true)
-    protected _ValidityStatusEnum validityStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected ValidityStatusEnum validityStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Boolean overrunning;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected OverallPeriod validityTimeSpecification;
-    @XmlElement(name = "_validityExtension")
-    protected _ExtensionType _ValidityExtension;
+    @XmlElement(name = "_validityExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType validityExtension;
 
     /**
      * Gets the value of the validityStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link _ValidityStatusEnum }
+     *     {@link ValidityStatusEnum }
      *     
      */
-    public _ValidityStatusEnum getValidityStatus() {
+    public ValidityStatusEnum getValidityStatus() {
         return validityStatus;
     }
 
@@ -67,10 +68,10 @@ public class Validity {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ValidityStatusEnum }
+     *     {@link ValidityStatusEnum }
      *     
      */
-    public void setValidityStatus(_ValidityStatusEnum value) {
+    public void setValidityStatus(ValidityStatusEnum value) {
         this.validityStatus = value;
     }
 
@@ -123,27 +124,27 @@ public class Validity {
     }
 
     /**
-     * Gets the value of the _ValidityExtension property.
+     * Gets the value of the validityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ValidityExtension() {
-        return _ValidityExtension;
+    public ExtensionType getValidityExtension() {
+        return validityExtension;
     }
 
     /**
-     * Sets the value of the _ValidityExtension property.
+     * Sets the value of the validityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ValidityExtension(_ExtensionType value) {
-        this._ValidityExtension = value;
+    public void setValidityExtension(ExtensionType value) {
+        this.validityExtension = value;
     }
 
 }

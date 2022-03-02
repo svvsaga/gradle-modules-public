@@ -30,427 +30,427 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _AbnormalTrafficTypeEnum }
+     * Create an instance of {@link AbnormalTrafficTypeEnum }
      * 
      */
-    public _AbnormalTrafficTypeEnum create_AbnormalTrafficTypeEnum() {
-        return new _AbnormalTrafficTypeEnum();
+    public AbnormalTrafficTypeEnum createAbnormalTrafficTypeEnum() {
+        return new AbnormalTrafficTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _AccidentCauseEnum }
+     * Create an instance of {@link AccidentCauseEnum }
      * 
      */
-    public _AccidentCauseEnum create_AccidentCauseEnum() {
-        return new _AccidentCauseEnum();
+    public AccidentCauseEnum createAccidentCauseEnum() {
+        return new AccidentCauseEnum();
     }
 
     /**
-     * Create an instance of {@link _AccidentTypeEnum }
+     * Create an instance of {@link AccidentTypeEnum }
      * 
      */
-    public _AccidentTypeEnum create_AccidentTypeEnum() {
-        return new _AccidentTypeEnum();
+    public AccidentTypeEnum createAccidentTypeEnum() {
+        return new AccidentTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _AnimalPresenceTypeEnum }
+     * Create an instance of {@link AnimalPresenceTypeEnum }
      * 
      */
-    public _AnimalPresenceTypeEnum create_AnimalPresenceTypeEnum() {
-        return new _AnimalPresenceTypeEnum();
+    public AnimalPresenceTypeEnum createAnimalPresenceTypeEnum() {
+        return new AnimalPresenceTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _AuthorityOperationTypeEnum }
+     * Create an instance of {@link AuthorityOperationTypeEnum }
      * 
      */
-    public _AuthorityOperationTypeEnum create_AuthorityOperationTypeEnum() {
-        return new _AuthorityOperationTypeEnum();
+    public AuthorityOperationTypeEnum createAuthorityOperationTypeEnum() {
+        return new AuthorityOperationTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _CauseTypeEnum }
+     * Create an instance of {@link CauseTypeEnum }
      * 
      */
-    public _CauseTypeEnum create_CauseTypeEnum() {
-        return new _CauseTypeEnum();
+    public CauseTypeEnum createCauseTypeEnum() {
+        return new CauseTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _CollisionTypeEnum }
+     * Create an instance of {@link CollisionTypeEnum }
      * 
      */
-    public _CollisionTypeEnum create_CollisionTypeEnum() {
-        return new _CollisionTypeEnum();
+    public CollisionTypeEnum createCollisionTypeEnum() {
+        return new CollisionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _CommentTypeEnum }
+     * Create an instance of {@link CommentTypeEnum }
      * 
      */
-    public _CommentTypeEnum create_CommentTypeEnum() {
-        return new _CommentTypeEnum();
+    public CommentTypeEnum createCommentTypeEnum() {
+        return new CommentTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _ComplianceOptionEnum }
+     * Create an instance of {@link ComplianceOptionEnum }
      * 
      */
-    public _ComplianceOptionEnum create_ComplianceOptionEnum() {
-        return new _ComplianceOptionEnum();
+    public ComplianceOptionEnum createComplianceOptionEnum() {
+        return new ComplianceOptionEnum();
     }
 
     /**
-     * Create an instance of {@link _ConstructionWorkTypeEnum }
+     * Create an instance of {@link ConstructionWorkTypeEnum }
      * 
      */
-    public _ConstructionWorkTypeEnum create_ConstructionWorkTypeEnum() {
-        return new _ConstructionWorkTypeEnum();
+    public ConstructionWorkTypeEnum createConstructionWorkTypeEnum() {
+        return new ConstructionWorkTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _DelayBandEnum }
+     * Create an instance of {@link DelayBandEnum }
      * 
      */
-    public _DelayBandEnum create_DelayBandEnum() {
-        return new _DelayBandEnum();
+    public DelayBandEnum createDelayBandEnum() {
+        return new DelayBandEnum();
     }
 
     /**
-     * Create an instance of {@link _DelaysTypeEnum }
+     * Create an instance of {@link DelaysTypeEnum }
      * 
      */
-    public _DelaysTypeEnum create_DelaysTypeEnum() {
-        return new _DelaysTypeEnum();
+    public DelaysTypeEnum createDelaysTypeEnum() {
+        return new DelaysTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _DisturbanceActivityTypeEnum }
+     * Create an instance of {@link DisturbanceActivityTypeEnum }
      * 
      */
-    public _DisturbanceActivityTypeEnum create_DisturbanceActivityTypeEnum() {
-        return new _DisturbanceActivityTypeEnum();
+    public DisturbanceActivityTypeEnum createDisturbanceActivityTypeEnum() {
+        return new DisturbanceActivityTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _DrivingConditionTypeEnum }
+     * Create an instance of {@link DrivingConditionTypeEnum }
      * 
      */
-    public _DrivingConditionTypeEnum create_DrivingConditionTypeEnum() {
-        return new _DrivingConditionTypeEnum();
+    public DrivingConditionTypeEnum createDrivingConditionTypeEnum() {
+        return new DrivingConditionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _EnvironmentalObstructionTypeEnum }
+     * Create an instance of {@link EnvironmentalObstructionTypeEnum }
      * 
      */
-    public _EnvironmentalObstructionTypeEnum create_EnvironmentalObstructionTypeEnum() {
-        return new _EnvironmentalObstructionTypeEnum();
+    public EnvironmentalObstructionTypeEnum createEnvironmentalObstructionTypeEnum() {
+        return new EnvironmentalObstructionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _EquipmentOrSystemFaultTypeEnum }
+     * Create an instance of {@link EquipmentOrSystemFaultTypeEnum }
      * 
      */
-    public _EquipmentOrSystemFaultTypeEnum create_EquipmentOrSystemFaultTypeEnum() {
-        return new _EquipmentOrSystemFaultTypeEnum();
+    public EquipmentOrSystemFaultTypeEnum createEquipmentOrSystemFaultTypeEnum() {
+        return new EquipmentOrSystemFaultTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _EquipmentOrSystemTypeEnum }
+     * Create an instance of {@link EquipmentOrSystemTypeEnum }
      * 
      */
-    public _EquipmentOrSystemTypeEnum create_EquipmentOrSystemTypeEnum() {
-        return new _EquipmentOrSystemTypeEnum();
+    public EquipmentOrSystemTypeEnum createEquipmentOrSystemTypeEnum() {
+        return new EquipmentOrSystemTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _GeneralInstructionToRoadUsersTypeEnum }
+     * Create an instance of {@link GeneralInstructionToRoadUsersTypeEnum }
      * 
      */
-    public _GeneralInstructionToRoadUsersTypeEnum create_GeneralInstructionToRoadUsersTypeEnum() {
-        return new _GeneralInstructionToRoadUsersTypeEnum();
+    public GeneralInstructionToRoadUsersTypeEnum createGeneralInstructionToRoadUsersTypeEnum() {
+        return new GeneralInstructionToRoadUsersTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _GeneralNetworkManagementTypeEnum }
+     * Create an instance of {@link GeneralNetworkManagementTypeEnum }
      * 
      */
-    public _GeneralNetworkManagementTypeEnum create_GeneralNetworkManagementTypeEnum() {
-        return new _GeneralNetworkManagementTypeEnum();
+    public GeneralNetworkManagementTypeEnum createGeneralNetworkManagementTypeEnum() {
+        return new GeneralNetworkManagementTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _InfrastructureDamageTypeEnum }
+     * Create an instance of {@link InfrastructureDamageTypeEnum }
      * 
      */
-    public _InfrastructureDamageTypeEnum create_InfrastructureDamageTypeEnum() {
-        return new _InfrastructureDamageTypeEnum();
+    public InfrastructureDamageTypeEnum createInfrastructureDamageTypeEnum() {
+        return new InfrastructureDamageTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _InjuryStatusTypeEnum }
+     * Create an instance of {@link InjuryStatusTypeEnum }
      * 
      */
-    public _InjuryStatusTypeEnum create_InjuryStatusTypeEnum() {
-        return new _InjuryStatusTypeEnum();
+    public InjuryStatusTypeEnum createInjuryStatusTypeEnum() {
+        return new InjuryStatusTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _InvolvementRolesEnum }
+     * Create an instance of {@link InvolvementRolesEnum }
      * 
      */
-    public _InvolvementRolesEnum create_InvolvementRolesEnum() {
-        return new _InvolvementRolesEnum();
+    public InvolvementRolesEnum createInvolvementRolesEnum() {
+        return new InvolvementRolesEnum();
     }
 
     /**
-     * Create an instance of {@link _MaintenanceVehicleActionsEnum }
+     * Create an instance of {@link MaintenanceVehicleActionsEnum }
      * 
      */
-    public _MaintenanceVehicleActionsEnum create_MaintenanceVehicleActionsEnum() {
-        return new _MaintenanceVehicleActionsEnum();
+    public MaintenanceVehicleActionsEnum createMaintenanceVehicleActionsEnum() {
+        return new MaintenanceVehicleActionsEnum();
     }
 
     /**
-     * Create an instance of {@link _MobilityTypeEnum }
+     * Create an instance of {@link MobilityTypeEnum }
      * 
      */
-    public _MobilityTypeEnum create_MobilityTypeEnum() {
-        return new _MobilityTypeEnum();
+    public MobilityTypeEnum createMobilityTypeEnum() {
+        return new MobilityTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _NonWeatherRelatedRoadConditionTypeEnum }
+     * Create an instance of {@link NonWeatherRelatedRoadConditionTypeEnum }
      * 
      */
-    public _NonWeatherRelatedRoadConditionTypeEnum create_NonWeatherRelatedRoadConditionTypeEnum() {
-        return new _NonWeatherRelatedRoadConditionTypeEnum();
+    public NonWeatherRelatedRoadConditionTypeEnum createNonWeatherRelatedRoadConditionTypeEnum() {
+        return new NonWeatherRelatedRoadConditionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _ObstructionTypeEnum }
+     * Create an instance of {@link ObstructionTypeEnum }
      * 
      */
-    public _ObstructionTypeEnum create_ObstructionTypeEnum() {
-        return new _ObstructionTypeEnum();
+    public ObstructionTypeEnum createObstructionTypeEnum() {
+        return new ObstructionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _OperatorActionOriginEnum }
+     * Create an instance of {@link OperatorActionOriginEnum }
      * 
      */
-    public _OperatorActionOriginEnum create_OperatorActionOriginEnum() {
-        return new _OperatorActionOriginEnum();
+    public OperatorActionOriginEnum createOperatorActionOriginEnum() {
+        return new OperatorActionOriginEnum();
     }
 
     /**
-     * Create an instance of {@link _OperatorActionStatusEnum }
+     * Create an instance of {@link OperatorActionStatusEnum }
      * 
      */
-    public _OperatorActionStatusEnum create_OperatorActionStatusEnum() {
-        return new _OperatorActionStatusEnum();
+    public OperatorActionStatusEnum createOperatorActionStatusEnum() {
+        return new OperatorActionStatusEnum();
     }
 
     /**
-     * Create an instance of {@link _PersonCategoryEnum }
+     * Create an instance of {@link PersonCategoryEnum }
      * 
      */
-    public _PersonCategoryEnum create_PersonCategoryEnum() {
-        return new _PersonCategoryEnum();
+    public PersonCategoryEnum createPersonCategoryEnum() {
+        return new PersonCategoryEnum();
     }
 
     /**
-     * Create an instance of {@link _PlacesEnum }
+     * Create an instance of {@link PlacesEnum }
      * 
      */
-    public _PlacesEnum create_PlacesEnum() {
-        return new _PlacesEnum();
+    public PlacesEnum createPlacesEnum() {
+        return new PlacesEnum();
     }
 
     /**
-     * Create an instance of {@link _PoorEnvironmentTypeEnum }
+     * Create an instance of {@link PoorEnvironmentTypeEnum }
      * 
      */
-    public _PoorEnvironmentTypeEnum create_PoorEnvironmentTypeEnum() {
-        return new _PoorEnvironmentTypeEnum();
+    public PoorEnvironmentTypeEnum createPoorEnvironmentTypeEnum() {
+        return new PoorEnvironmentTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _ProbabilityOfOccurrenceEnum }
+     * Create an instance of {@link ProbabilityOfOccurrenceEnum }
      * 
      */
-    public _ProbabilityOfOccurrenceEnum create_ProbabilityOfOccurrenceEnum() {
-        return new _ProbabilityOfOccurrenceEnum();
+    public ProbabilityOfOccurrenceEnum createProbabilityOfOccurrenceEnum() {
+        return new ProbabilityOfOccurrenceEnum();
     }
 
     /**
-     * Create an instance of {@link _RelativeTrafficFlowEnum }
+     * Create an instance of {@link RelativeTrafficFlowEnum }
      * 
      */
-    public _RelativeTrafficFlowEnum create_RelativeTrafficFlowEnum() {
-        return new _RelativeTrafficFlowEnum();
+    public RelativeTrafficFlowEnum createRelativeTrafficFlowEnum() {
+        return new RelativeTrafficFlowEnum();
     }
 
     /**
-     * Create an instance of {@link _ReroutingManagementTypeEnum }
+     * Create an instance of {@link ReroutingManagementTypeEnum }
      * 
      */
-    public _ReroutingManagementTypeEnum create_ReroutingManagementTypeEnum() {
-        return new _ReroutingManagementTypeEnum();
+    public ReroutingManagementTypeEnum createReroutingManagementTypeEnum() {
+        return new ReroutingManagementTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadMaintenanceTypeEnum }
+     * Create an instance of {@link RoadMaintenanceTypeEnum }
      * 
      */
-    public _RoadMaintenanceTypeEnum create_RoadMaintenanceTypeEnum() {
-        return new _RoadMaintenanceTypeEnum();
+    public RoadMaintenanceTypeEnum createRoadMaintenanceTypeEnum() {
+        return new RoadMaintenanceTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadOperatorServiceDisruptionTypeEnum }
+     * Create an instance of {@link RoadOperatorServiceDisruptionTypeEnum }
      * 
      */
-    public _RoadOperatorServiceDisruptionTypeEnum create_RoadOperatorServiceDisruptionTypeEnum() {
-        return new _RoadOperatorServiceDisruptionTypeEnum();
+    public RoadOperatorServiceDisruptionTypeEnum createRoadOperatorServiceDisruptionTypeEnum() {
+        return new RoadOperatorServiceDisruptionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadOrCarriagewayOrLaneManagementTypeEnum }
+     * Create an instance of {@link RoadOrCarriagewayOrLaneManagementTypeEnum }
      * 
      */
-    public _RoadOrCarriagewayOrLaneManagementTypeEnum create_RoadOrCarriagewayOrLaneManagementTypeEnum() {
-        return new _RoadOrCarriagewayOrLaneManagementTypeEnum();
+    public RoadOrCarriagewayOrLaneManagementTypeEnum createRoadOrCarriagewayOrLaneManagementTypeEnum() {
+        return new RoadOrCarriagewayOrLaneManagementTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadsideAssistanceTypeEnum }
+     * Create an instance of {@link RoadsideAssistanceTypeEnum }
      * 
      */
-    public _RoadsideAssistanceTypeEnum create_RoadsideAssistanceTypeEnum() {
-        return new _RoadsideAssistanceTypeEnum();
+    public RoadsideAssistanceTypeEnum createRoadsideAssistanceTypeEnum() {
+        return new RoadsideAssistanceTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadworksDurationEnum }
+     * Create an instance of {@link RoadworksDurationEnum }
      * 
      */
-    public _RoadworksDurationEnum create_RoadworksDurationEnum() {
-        return new _RoadworksDurationEnum();
+    public RoadworksDurationEnum createRoadworksDurationEnum() {
+        return new RoadworksDurationEnum();
     }
 
     /**
-     * Create an instance of {@link _RoadworksScaleEnum }
+     * Create an instance of {@link RoadworksScaleEnum }
      * 
      */
-    public _RoadworksScaleEnum create_RoadworksScaleEnum() {
-        return new _RoadworksScaleEnum();
+    public RoadworksScaleEnum createRoadworksScaleEnum() {
+        return new RoadworksScaleEnum();
     }
 
     /**
-     * Create an instance of {@link _ServiceDisruptionTypeEnum }
+     * Create an instance of {@link ServiceDisruptionTypeEnum }
      * 
      */
-    public _ServiceDisruptionTypeEnum create_ServiceDisruptionTypeEnum() {
-        return new _ServiceDisruptionTypeEnum();
+    public ServiceDisruptionTypeEnum createServiceDisruptionTypeEnum() {
+        return new ServiceDisruptionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _SeverityEnum }
+     * Create an instance of {@link SeverityEnum }
      * 
      */
-    public _SeverityEnum create_SeverityEnum() {
-        return new _SeverityEnum();
+    public SeverityEnum createSeverityEnum() {
+        return new SeverityEnum();
     }
 
     /**
-     * Create an instance of {@link _SituationRecordVersionedReference }
+     * Create an instance of {@link SituationRecordVersionedReference }
      * 
      */
-    public _SituationRecordVersionedReference create_SituationRecordVersionedReference() {
-        return new _SituationRecordVersionedReference();
+    public SituationRecordVersionedReference createSituationRecordVersionedReference() {
+        return new SituationRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _SituationVersionedReference }
+     * Create an instance of {@link SituationVersionedReference }
      * 
      */
-    public _SituationVersionedReference create_SituationVersionedReference() {
-        return new _SituationVersionedReference();
+    public SituationVersionedReference createSituationVersionedReference() {
+        return new SituationVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _SpeedManagementTypeEnum }
+     * Create an instance of {@link SpeedManagementTypeEnum }
      * 
      */
-    public _SpeedManagementTypeEnum create_SpeedManagementTypeEnum() {
-        return new _SpeedManagementTypeEnum();
+    public SpeedManagementTypeEnum createSpeedManagementTypeEnum() {
+        return new SpeedManagementTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _SubjectTypeOfWorksEnum }
+     * Create an instance of {@link SubjectTypeOfWorksEnum }
      * 
      */
-    public _SubjectTypeOfWorksEnum create_SubjectTypeOfWorksEnum() {
-        return new _SubjectTypeOfWorksEnum();
+    public SubjectTypeOfWorksEnum createSubjectTypeOfWorksEnum() {
+        return new SubjectTypeOfWorksEnum();
     }
 
     /**
-     * Create an instance of {@link _TrafficConstrictionTypeEnum }
+     * Create an instance of {@link TrafficConstrictionTypeEnum }
      * 
      */
-    public _TrafficConstrictionTypeEnum create_TrafficConstrictionTypeEnum() {
-        return new _TrafficConstrictionTypeEnum();
+    public TrafficConstrictionTypeEnum createTrafficConstrictionTypeEnum() {
+        return new TrafficConstrictionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TrafficFlowCharacteristicsEnum }
+     * Create an instance of {@link TrafficFlowCharacteristicsEnum }
      * 
      */
-    public _TrafficFlowCharacteristicsEnum create_TrafficFlowCharacteristicsEnum() {
-        return new _TrafficFlowCharacteristicsEnum();
+    public TrafficFlowCharacteristicsEnum createTrafficFlowCharacteristicsEnum() {
+        return new TrafficFlowCharacteristicsEnum();
     }
 
     /**
-     * Create an instance of {@link _TrafficTypeEnum }
+     * Create an instance of {@link TrafficTypeEnum }
      * 
      */
-    public _TrafficTypeEnum create_TrafficTypeEnum() {
-        return new _TrafficTypeEnum();
+    public TrafficTypeEnum createTrafficTypeEnum() {
+        return new TrafficTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TransitServiceInformationEnum }
+     * Create an instance of {@link TransitServiceInformationEnum }
      * 
      */
-    public _TransitServiceInformationEnum create_TransitServiceInformationEnum() {
-        return new _TransitServiceInformationEnum();
+    public TransitServiceInformationEnum createTransitServiceInformationEnum() {
+        return new TransitServiceInformationEnum();
     }
 
     /**
-     * Create an instance of {@link _TransitServiceTypeEnum }
+     * Create an instance of {@link TransitServiceTypeEnum }
      * 
      */
-    public _TransitServiceTypeEnum create_TransitServiceTypeEnum() {
-        return new _TransitServiceTypeEnum();
+    public TransitServiceTypeEnum createTransitServiceTypeEnum() {
+        return new TransitServiceTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _VehicleObstructionTypeEnum }
+     * Create an instance of {@link VehicleObstructionTypeEnum }
      * 
      */
-    public _VehicleObstructionTypeEnum create_VehicleObstructionTypeEnum() {
-        return new _VehicleObstructionTypeEnum();
+    public VehicleObstructionTypeEnum createVehicleObstructionTypeEnum() {
+        return new VehicleObstructionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _VehicleProblemCauseEnum }
+     * Create an instance of {@link VehicleProblemCauseEnum }
      * 
      */
-    public _VehicleProblemCauseEnum create_VehicleProblemCauseEnum() {
-        return new _VehicleProblemCauseEnum();
+    public VehicleProblemCauseEnum createVehicleProblemCauseEnum() {
+        return new VehicleProblemCauseEnum();
     }
 
     /**

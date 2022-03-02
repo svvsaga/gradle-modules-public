@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsSetting", propOrder = {
+@XmlType(name = "VmsSetting", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsSettingExtension"
 })
 @XmlSeeAlso({
@@ -35,17 +36,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class VmsSetting {
 
-    protected _ExtensionType vmsSettingExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsSettingExtension;
 
     /**
      * Gets the value of the vmsSettingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSettingExtension() {
+    public ExtensionType getVmsSettingExtension() {
         return vmsSettingExtension;
     }
 
@@ -54,10 +56,10 @@ public abstract class VmsSetting {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSettingExtension(_ExtensionType value) {
+    public void setVmsSettingExtension(ExtensionType value) {
         this.vmsSettingExtension = value;
     }
 

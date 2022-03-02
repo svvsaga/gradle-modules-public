@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -42,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSite", propOrder = {
+@XmlType(name = "ParkingSite", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingReservation",
     "parkingLayout",
     "highestFloor",
@@ -65,20 +66,32 @@ public abstract class ParkingSite
     extends ParkingRecord
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ReservationTypeEnum parkingReservation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingLayoutEnum> parkingLayout;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BigInteger highestFloor;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BigInteger lowestFloor;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean temporaryParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> parkingSiteAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> reservationService;
-    protected List<_ParkingSiteScenarioIndexParkingUsageScenario> parkingUsageScenario;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingSiteScenarioIndexParkingUsageScenario> parkingUsageScenario;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpeningTimes openingTimes;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingAccess> parkingAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingStandardsAndSecurity parkingStandardsAndSecurity;
-    protected _ExtensionType parkingSiteExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingSiteExtension;
 
     /**
      * Gets the value of the parkingReservation property.
@@ -281,13 +294,13 @@ public abstract class ParkingSite
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingSiteScenarioIndexParkingUsageScenario }
+     * {@link ParkingSiteScenarioIndexParkingUsageScenario }
      * 
      * 
      */
-    public List<_ParkingSiteScenarioIndexParkingUsageScenario> getParkingUsageScenario() {
+    public List<ParkingSiteScenarioIndexParkingUsageScenario> getParkingUsageScenario() {
         if (parkingUsageScenario == null) {
-            parkingUsageScenario = new ArrayList<_ParkingSiteScenarioIndexParkingUsageScenario>();
+            parkingUsageScenario = new ArrayList<ParkingSiteScenarioIndexParkingUsageScenario>();
         }
         return this.parkingUsageScenario;
     }
@@ -374,10 +387,10 @@ public abstract class ParkingSite
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingSiteExtension() {
+    public ExtensionType getParkingSiteExtension() {
         return parkingSiteExtension;
     }
 
@@ -386,10 +399,10 @@ public abstract class ParkingSite
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingSiteExtension(_ExtensionType value) {
+    public void setParkingSiteExtension(ExtensionType value) {
         this.parkingSiteExtension = value;
     }
 

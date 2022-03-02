@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,38 +30,38 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointAlongLine", propOrder = {
-    "_OpenlrPointAlongLineExtension"
+@XmlType(name = "OpenlrPointAlongLine", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "openlrPointAlongLineExtension"
 })
 public class OpenlrPointAlongLine
     extends OpenlrBasePointLocation
 {
 
-    @XmlElement(name = "_openlrPointAlongLineExtension")
-    protected _ExtensionType _OpenlrPointAlongLineExtension;
+    @XmlElement(name = "_openlrPointAlongLineExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrPointAlongLineExtension;
 
     /**
-     * Gets the value of the _OpenlrPointAlongLineExtension property.
+     * Gets the value of the openlrPointAlongLineExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrPointAlongLineExtension() {
-        return _OpenlrPointAlongLineExtension;
+    public ExtensionType getOpenlrPointAlongLineExtension() {
+        return openlrPointAlongLineExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrPointAlongLineExtension property.
+     * Sets the value of the openlrPointAlongLineExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrPointAlongLineExtension(_ExtensionType value) {
-        this._OpenlrPointAlongLineExtension = value;
+    public void setOpenlrPointAlongLineExtension(ExtensionType value) {
+        this.openlrPointAlongLineExtension = value;
     }
 
 }

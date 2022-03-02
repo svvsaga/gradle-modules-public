@@ -1,108 +1,87 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TravelTimeTypeEnum.
+ * <p>Java class for _TravelTimeTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TravelTimeTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="best"/&gt;
- *     &lt;enumeration value="estimated"/&gt;
- *     &lt;enumeration value="instantaneous"/&gt;
- *     &lt;enumeration value="reconstituted"/&gt;
- *     &lt;enumeration value="predictor"/&gt;
- *     &lt;enumeration value="profile"/&gt;
- *     &lt;enumeration value="sum"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TravelTimeTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/roadTrafficData&gt;TravelTimeTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TravelTimeTypeEnum")
-@XmlEnum
-public enum TravelTimeTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TravelTimeTypeEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+    "value"
+})
+public class TravelTimeTypeEnum {
 
-
-    /**
-     * Travel time is derived from the best out of a monitored sample.
-     * 
-     */
-    @XmlEnumValue("best")
-    BEST("best"),
-
-    /**
-     * Travel time is an automated estimate.
-     * 
-     */
-    @XmlEnumValue("estimated")
-    ESTIMATED("estimated"),
+    @XmlValue
+    protected TravelTimeTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Travel time is derived from instantaneous measurements.
+     * List of ways in which travel times are derived.
      * 
+     * @return
+     *     possible object is
+     *     {@link TravelTimeTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("instantaneous")
-    INSTANTANEOUS("instantaneous"),
-
-    /**
-     * Travel time is reconstituted from other measurements.
-     * 
-     */
-    @XmlEnumValue("reconstituted")
-    RECONSTITUTED("reconstituted"),
-
-    /**
-     * Travel time is the output of a predictor, for example a blend of current and
-     *             historical data, or a traffic flow model using current measurements.
-     *           
-     * 
-     */
-    @XmlEnumValue("predictor")
-    PREDICTOR("predictor"),
-
-    /**
-     * Travel time is based on past observations, without use of current measurements.
-     *           
-     * 
-     */
-    @XmlEnumValue("profile")
-    PROFILE("profile"),
-
-    /**
-     * Travel time is the sum of current travel times on subsections of the specified
-     *             location.
-     *           
-     * 
-     */
-    @XmlEnumValue("sum")
-    SUM("sum"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TravelTimeTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TravelTimeTypeEnum2 getValue() {
         return value;
     }
 
-    public static TravelTimeTypeEnum fromValue(String v) {
-        for (TravelTimeTypeEnum c: TravelTimeTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TravelTimeTypeEnum2 }
+     *     
+     */
+    public void setValue(TravelTimeTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

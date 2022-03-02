@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,24 +35,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegGeometricArea", propOrder = {
+@XmlType(name = "TpegGeometricArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "radius",
     "centrePoint",
     "name",
-    "_TpegGeometricAreaExtension"
+    "tpegGeometricAreaExtension"
 })
 public class TpegGeometricArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger radius;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates centrePoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegAreaDescriptor name;
-    @XmlElement(name = "_tpegGeometricAreaExtension")
-    protected _ExtensionType _TpegGeometricAreaExtension;
+    @XmlElement(name = "_tpegGeometricAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegGeometricAreaExtension;
 
     /**
      * Gets the value of the radius property.
@@ -127,27 +128,27 @@ public class TpegGeometricArea
     }
 
     /**
-     * Gets the value of the _TpegGeometricAreaExtension property.
+     * Gets the value of the tpegGeometricAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegGeometricAreaExtension() {
-        return _TpegGeometricAreaExtension;
+    public ExtensionType getTpegGeometricAreaExtension() {
+        return tpegGeometricAreaExtension;
     }
 
     /**
-     * Sets the value of the _TpegGeometricAreaExtension property.
+     * Sets the value of the tpegGeometricAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegGeometricAreaExtension(_ExtensionType value) {
-        this._TpegGeometricAreaExtension = value;
+    public void setTpegGeometricAreaExtension(ExtensionType value) {
+        this.tpegGeometricAreaExtension = value;
     }
 
 }

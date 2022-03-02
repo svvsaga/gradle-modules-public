@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,18 +33,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericSituationRecord", propOrder = {
+@XmlType(name = "GenericSituationRecord", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "genericSituationRecordName",
-    "_GenericSituationRecordExtension"
+    "genericSituationRecordExtension"
 })
 public class GenericSituationRecord
     extends SituationRecord
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected String genericSituationRecordName;
-    @XmlElement(name = "_genericSituationRecordExtension")
-    protected _ExtensionType _GenericSituationRecordExtension;
+    @XmlElement(name = "_genericSituationRecordExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType genericSituationRecordExtension;
 
     /**
      * Gets the value of the genericSituationRecordName property.
@@ -71,27 +71,27 @@ public class GenericSituationRecord
     }
 
     /**
-     * Gets the value of the _GenericSituationRecordExtension property.
+     * Gets the value of the genericSituationRecordExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GenericSituationRecordExtension() {
-        return _GenericSituationRecordExtension;
+    public ExtensionType getGenericSituationRecordExtension() {
+        return genericSituationRecordExtension;
     }
 
     /**
-     * Sets the value of the _GenericSituationRecordExtension property.
+     * Sets the value of the genericSituationRecordExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GenericSituationRecordExtension(_ExtensionType value) {
-        this._GenericSituationRecordExtension = value;
+    public void setGenericSituationRecordExtension(ExtensionType value) {
+        this.genericSituationRecordExtension = value;
     }
 
 }

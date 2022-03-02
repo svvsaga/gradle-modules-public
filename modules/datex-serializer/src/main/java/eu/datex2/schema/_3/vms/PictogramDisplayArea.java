@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,20 +34,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictogramDisplayArea", propOrder = {
+@XmlType(name = "PictogramDisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "pictogramCodeListIdentifier",
     "pictogramNumberOfColours",
-    "_PictogramDisplayAreaExtension"
+    "pictogramDisplayAreaExtension"
 })
 public class PictogramDisplayArea
     extends DisplayArea
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String pictogramCodeListIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramNumberOfColours;
-    @XmlElement(name = "_pictogramDisplayAreaExtension")
-    protected _ExtensionType _PictogramDisplayAreaExtension;
+    @XmlElement(name = "_pictogramDisplayAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType pictogramDisplayAreaExtension;
 
     /**
      * Gets the value of the pictogramCodeListIdentifier property.
@@ -98,27 +100,27 @@ public class PictogramDisplayArea
     }
 
     /**
-     * Gets the value of the _PictogramDisplayAreaExtension property.
+     * Gets the value of the pictogramDisplayAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PictogramDisplayAreaExtension() {
-        return _PictogramDisplayAreaExtension;
+    public ExtensionType getPictogramDisplayAreaExtension() {
+        return pictogramDisplayAreaExtension;
     }
 
     /**
-     * Sets the value of the _PictogramDisplayAreaExtension property.
+     * Sets the value of the pictogramDisplayAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PictogramDisplayAreaExtension(_ExtensionType value) {
-        this._PictogramDisplayAreaExtension = value;
+    public void setPictogramDisplayAreaExtension(ExtensionType value) {
+        this.pictogramDisplayAreaExtension = value;
     }
 
 }

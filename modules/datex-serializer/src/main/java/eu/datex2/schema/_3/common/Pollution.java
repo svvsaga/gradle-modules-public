@@ -31,28 +31,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pollution", propOrder = {
+@XmlType(name = "Pollution", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "pollutantType",
     "pollutantConcentration",
-    "_PollutionExtension"
+    "pollutionExtension"
 })
 public class Pollution {
 
-    @XmlElement(required = true)
-    protected _PollutantTypeEnum pollutantType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected PollutantTypeEnum pollutantType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MicrogramsConcentrationValue pollutantConcentration;
-    @XmlElement(name = "_pollutionExtension")
-    protected _ExtensionType _PollutionExtension;
+    @XmlElement(name = "_pollutionExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType pollutionExtension;
 
     /**
      * Gets the value of the pollutantType property.
      * 
      * @return
      *     possible object is
-     *     {@link _PollutantTypeEnum }
+     *     {@link PollutantTypeEnum }
      *     
      */
-    public _PollutantTypeEnum getPollutantType() {
+    public PollutantTypeEnum getPollutantType() {
         return pollutantType;
     }
 
@@ -61,10 +62,10 @@ public class Pollution {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PollutantTypeEnum }
+     *     {@link PollutantTypeEnum }
      *     
      */
-    public void setPollutantType(_PollutantTypeEnum value) {
+    public void setPollutantType(PollutantTypeEnum value) {
         this.pollutantType = value;
     }
 
@@ -93,27 +94,27 @@ public class Pollution {
     }
 
     /**
-     * Gets the value of the _PollutionExtension property.
+     * Gets the value of the pollutionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PollutionExtension() {
-        return _PollutionExtension;
+    public ExtensionType getPollutionExtension() {
+        return pollutionExtension;
     }
 
     /**
-     * Sets the value of the _PollutionExtension property.
+     * Sets the value of the pollutionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PollutionExtension(_ExtensionType value) {
-        this._PollutionExtension = value;
+    public void setPollutionExtension(ExtensionType value) {
+        this.pollutionExtension = value;
     }
 
 }

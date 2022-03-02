@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationReference", propOrder = {
-    "_PredefinedLocationReferenceExtension"
+@XmlType(name = "PredefinedLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "predefinedLocationReferenceExtension"
 })
 @XmlSeeAlso({
     PredefinedItinerary.class,
@@ -43,31 +43,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class PredefinedLocationReference {
 
-    @XmlElement(name = "_predefinedLocationReferenceExtension")
-    protected _ExtensionType _PredefinedLocationReferenceExtension;
+    @XmlElement(name = "_predefinedLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType predefinedLocationReferenceExtension;
 
     /**
-     * Gets the value of the _PredefinedLocationReferenceExtension property.
+     * Gets the value of the predefinedLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PredefinedLocationReferenceExtension() {
-        return _PredefinedLocationReferenceExtension;
+    public ExtensionType getPredefinedLocationReferenceExtension() {
+        return predefinedLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the _PredefinedLocationReferenceExtension property.
+     * Sets the value of the predefinedLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PredefinedLocationReferenceExtension(_ExtensionType value) {
-        this._PredefinedLocationReferenceExtension = value;
+    public void setPredefinedLocationReferenceExtension(ExtensionType value) {
+        this.predefinedLocationReferenceExtension = value;
     }
 
 }

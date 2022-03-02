@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegSimplePoint", propOrder = {
+@XmlType(name = "TpegSimplePoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegSimplePointLocationType",
     "point",
     "tpegSimplePointExtension"
@@ -39,12 +39,13 @@ public class TpegSimplePoint
     extends TpegPointLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01SimplePointLocationSubtypeEnum tpegSimplePointLocationType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegPoint point;
-    protected _ExtensionType tpegSimplePointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegSimplePointExtension;
 
     /**
      * Gets the value of the tpegSimplePointLocationType property.
@@ -99,10 +100,10 @@ public class TpegSimplePoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegSimplePointExtension() {
+    public ExtensionType getTpegSimplePointExtension() {
         return tpegSimplePointExtension;
     }
 
@@ -111,10 +112,10 @@ public class TpegSimplePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegSimplePointExtension(_ExtensionType value) {
+    public void setTpegSimplePointExtension(ExtensionType value) {
         this.tpegSimplePointExtension = value;
     }
 

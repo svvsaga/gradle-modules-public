@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Point", propOrder = {
+@XmlType(name = "Point", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegPointLocation",
     "alertCPoint",
     "pointAlongLinearElement",
@@ -41,11 +42,16 @@ public class Point
     extends NetworkLocation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegPointLocation tpegPointLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected AlertCPoint alertCPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointAlongLinearElement pointAlongLinearElement;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointByCoordinates pointByCoordinates;
-    protected _PointExtensionType pointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected PointExtensionType pointExtension;
 
     /**
      * Gets the value of the tpegPointLocation property.
@@ -148,10 +154,10 @@ public class Point
      * 
      * @return
      *     possible object is
-     *     {@link _PointExtensionType }
+     *     {@link PointExtensionType }
      *     
      */
-    public _PointExtensionType getPointExtension() {
+    public PointExtensionType getPointExtension() {
         return pointExtension;
     }
 
@@ -160,10 +166,10 @@ public class Point
      * 
      * @param value
      *     allowed object is
-     *     {@link _PointExtensionType }
+     *     {@link PointExtensionType }
      *     
      */
-    public void setPointExtension(_PointExtensionType value) {
+    public void setPointExtension(PointExtensionType value) {
         this.pointExtension = value;
     }
 

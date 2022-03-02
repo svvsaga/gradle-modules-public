@@ -3,7 +3,7 @@ package eu.datex2.schema._3.informationmanagement;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,16 +31,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InformationManagedResourceList", propOrder = {
+@XmlType(name = "InformationManagedResourceList", namespace = "http://datex2.eu/schema/3/informationManagement", propOrder = {
     "elementReference",
-    "_InformationManagedResourceListExtension"
+    "informationManagedResourceListExtension"
 })
 public class InformationManagedResourceList {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement", required = true)
     protected List<ElementReference> elementReference;
-    @XmlElement(name = "_informationManagedResourceListExtension")
-    protected _ExtensionType _InformationManagedResourceListExtension;
+    @XmlElement(name = "_informationManagedResourceListExtension", namespace = "http://datex2.eu/schema/3/informationManagement")
+    protected ExtensionType informationManagedResourceListExtension;
 
     /**
      * Gets the value of the elementReference property.
@@ -72,27 +72,27 @@ public class InformationManagedResourceList {
     }
 
     /**
-     * Gets the value of the _InformationManagedResourceListExtension property.
+     * Gets the value of the informationManagedResourceListExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_InformationManagedResourceListExtension() {
-        return _InformationManagedResourceListExtension;
+    public ExtensionType getInformationManagedResourceListExtension() {
+        return informationManagedResourceListExtension;
     }
 
     /**
-     * Sets the value of the _InformationManagedResourceListExtension property.
+     * Sets the value of the informationManagedResourceListExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_InformationManagedResourceListExtension(_ExtensionType value) {
-        this._InformationManagedResourceListExtension = value;
+    public void setInformationManagedResourceListExtension(ExtensionType value) {
+        this.informationManagedResourceListExtension = value;
     }
 
 }

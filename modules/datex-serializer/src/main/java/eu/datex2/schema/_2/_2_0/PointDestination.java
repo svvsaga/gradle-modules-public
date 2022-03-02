@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointDestination", propOrder = {
+@XmlType(name = "PointDestination", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "point",
     "pointDestinationExtension"
 })
@@ -36,9 +36,10 @@ public class PointDestination
     extends Destination
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected Point point;
-    protected _ExtensionType pointDestinationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType pointDestinationExtension;
 
     /**
      * Gets the value of the point property.
@@ -69,10 +70,10 @@ public class PointDestination
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointDestinationExtension() {
+    public ExtensionType getPointDestinationExtension() {
         return pointDestinationExtension;
     }
 
@@ -81,10 +82,10 @@ public class PointDestination
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointDestinationExtension(_ExtensionType value) {
+    public void setPointDestinationExtension(ExtensionType value) {
         this.pointDestinationExtension = value;
     }
 

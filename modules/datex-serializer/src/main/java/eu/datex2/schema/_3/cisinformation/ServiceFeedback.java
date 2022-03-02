@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.cisinformation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.VersionedReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.exchangeinformation.Agent;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -35,24 +35,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceFeedback", propOrder = {
+@XmlType(name = "ServiceFeedback", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
     "serviceRequestFeedbackReason",
     "serviceRequestStatus",
     "serviceRequestReference",
     "serviceProvider",
-    "_ServiceFeedbackExtension"
+    "serviceFeedbackExtension"
 })
 public class ServiceFeedback {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected MultilingualString serviceRequestFeedbackReason;
-    @XmlElement(required = true)
-    protected _ServiceActionStatusEnum serviceRequestStatus;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    protected ServiceActionStatusEnum serviceRequestStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     protected VersionedReference serviceRequestReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     protected Agent serviceProvider;
-    @XmlElement(name = "_serviceFeedbackExtension")
-    protected _ExtensionType _ServiceFeedbackExtension;
+    @XmlElement(name = "_serviceFeedbackExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    protected ExtensionType serviceFeedbackExtension;
 
     /**
      * Gets the value of the serviceRequestFeedbackReason property.
@@ -83,10 +84,10 @@ public class ServiceFeedback {
      * 
      * @return
      *     possible object is
-     *     {@link _ServiceActionStatusEnum }
+     *     {@link ServiceActionStatusEnum }
      *     
      */
-    public _ServiceActionStatusEnum getServiceRequestStatus() {
+    public ServiceActionStatusEnum getServiceRequestStatus() {
         return serviceRequestStatus;
     }
 
@@ -95,10 +96,10 @@ public class ServiceFeedback {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ServiceActionStatusEnum }
+     *     {@link ServiceActionStatusEnum }
      *     
      */
-    public void setServiceRequestStatus(_ServiceActionStatusEnum value) {
+    public void setServiceRequestStatus(ServiceActionStatusEnum value) {
         this.serviceRequestStatus = value;
     }
 
@@ -151,27 +152,27 @@ public class ServiceFeedback {
     }
 
     /**
-     * Gets the value of the _ServiceFeedbackExtension property.
+     * Gets the value of the serviceFeedbackExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ServiceFeedbackExtension() {
-        return _ServiceFeedbackExtension;
+    public ExtensionType getServiceFeedbackExtension() {
+        return serviceFeedbackExtension;
     }
 
     /**
-     * Sets the value of the _ServiceFeedbackExtension property.
+     * Sets the value of the serviceFeedbackExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ServiceFeedbackExtension(_ExtensionType value) {
-        this._ServiceFeedbackExtension = value;
+    public void setServiceFeedbackExtension(ExtensionType value) {
+        this.serviceFeedbackExtension = value;
     }
 
 }

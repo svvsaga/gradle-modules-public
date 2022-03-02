@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AffectedCarriagewayAndLanes", propOrder = {
+@XmlType(name = "AffectedCarriagewayAndLanes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "carriageway",
     "lane",
     "footpath",
@@ -43,14 +43,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AffectedCarriagewayAndLanes {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected CarriagewayEnum carriageway;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<LaneEnum> lane;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean footpath;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float lengthAffected;
-    protected _ExtensionType affectedCarriagewayAndLanesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType affectedCarriagewayAndLanesExtension;
 
     /**
      * Gets the value of the carriageway property.
@@ -158,10 +162,10 @@ public class AffectedCarriagewayAndLanes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAffectedCarriagewayAndLanesExtension() {
+    public ExtensionType getAffectedCarriagewayAndLanesExtension() {
         return affectedCarriagewayAndLanesExtension;
     }
 
@@ -170,10 +174,10 @@ public class AffectedCarriagewayAndLanes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAffectedCarriagewayAndLanesExtension(_ExtensionType value) {
+    public void setAffectedCarriagewayAndLanesExtension(ExtensionType value) {
         this.affectedCarriagewayAndLanesExtension = value;
     }
 

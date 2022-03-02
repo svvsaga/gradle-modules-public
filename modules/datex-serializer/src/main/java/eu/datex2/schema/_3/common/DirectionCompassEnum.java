@@ -1,175 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for DirectionCompassEnum.
+ * <p>Java class for _DirectionCompassEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="DirectionCompassEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="east"/&gt;
- *     &lt;enumeration value="eastNorthEast"/&gt;
- *     &lt;enumeration value="eastSouthEast"/&gt;
- *     &lt;enumeration value="north"/&gt;
- *     &lt;enumeration value="northEast"/&gt;
- *     &lt;enumeration value="northNorthEast"/&gt;
- *     &lt;enumeration value="northNorthWest"/&gt;
- *     &lt;enumeration value="northWest"/&gt;
- *     &lt;enumeration value="south"/&gt;
- *     &lt;enumeration value="southEast"/&gt;
- *     &lt;enumeration value="southSouthEast"/&gt;
- *     &lt;enumeration value="southSouthWest"/&gt;
- *     &lt;enumeration value="southWest"/&gt;
- *     &lt;enumeration value="west"/&gt;
- *     &lt;enumeration value="westNorthWest"/&gt;
- *     &lt;enumeration value="westSouthWest"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_DirectionCompassEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;DirectionCompassEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "DirectionCompassEnum")
-@XmlEnum
-public enum DirectionCompassEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_DirectionCompassEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class DirectionCompassEnum {
 
-
-    /**
-     * East.
-     * 
-     */
-    @XmlEnumValue("east")
-    EAST("east"),
-
-    /**
-     * East north east.
-     * 
-     */
-    @XmlEnumValue("eastNorthEast")
-    EAST_NORTH_EAST("eastNorthEast"),
+    @XmlValue
+    protected DirectionCompassEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * East south east.
+     * Cardinal direction points of the compass.
      * 
+     * @return
+     *     possible object is
+     *     {@link DirectionCompassEnum2 }
+     *     
      */
-    @XmlEnumValue("eastSouthEast")
-    EAST_SOUTH_EAST("eastSouthEast"),
-
-    /**
-     * North.
-     * 
-     */
-    @XmlEnumValue("north")
-    NORTH("north"),
-
-    /**
-     * North east.
-     * 
-     */
-    @XmlEnumValue("northEast")
-    NORTH_EAST("northEast"),
-
-    /**
-     * North north east.
-     * 
-     */
-    @XmlEnumValue("northNorthEast")
-    NORTH_NORTH_EAST("northNorthEast"),
-
-    /**
-     * North north west.
-     * 
-     */
-    @XmlEnumValue("northNorthWest")
-    NORTH_NORTH_WEST("northNorthWest"),
-
-    /**
-     * North west.
-     * 
-     */
-    @XmlEnumValue("northWest")
-    NORTH_WEST("northWest"),
-
-    /**
-     * South.
-     * 
-     */
-    @XmlEnumValue("south")
-    SOUTH("south"),
-
-    /**
-     * South east.
-     * 
-     */
-    @XmlEnumValue("southEast")
-    SOUTH_EAST("southEast"),
-
-    /**
-     * South south east.
-     * 
-     */
-    @XmlEnumValue("southSouthEast")
-    SOUTH_SOUTH_EAST("southSouthEast"),
-
-    /**
-     * South south west.
-     * 
-     */
-    @XmlEnumValue("southSouthWest")
-    SOUTH_SOUTH_WEST("southSouthWest"),
-
-    /**
-     * South west.
-     * 
-     */
-    @XmlEnumValue("southWest")
-    SOUTH_WEST("southWest"),
-
-    /**
-     * West.
-     * 
-     */
-    @XmlEnumValue("west")
-    WEST("west"),
-
-    /**
-     * West north west.
-     * 
-     */
-    @XmlEnumValue("westNorthWest")
-    WEST_NORTH_WEST("westNorthWest"),
-
-    /**
-     * West south west.
-     * 
-     */
-    @XmlEnumValue("westSouthWest")
-    WEST_SOUTH_WEST("westSouthWest"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    DirectionCompassEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public DirectionCompassEnum2 getValue() {
         return value;
     }
 
-    public static DirectionCompassEnum fromValue(String v) {
-        for (DirectionCompassEnum c: DirectionCompassEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DirectionCompassEnum2 }
+     *     
+     */
+    public void setValue(DirectionCompassEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

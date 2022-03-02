@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,8 +32,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WeatherData", propOrder = {
-    "_WeatherDataExtension"
+@XmlType(name = "WeatherData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+    "weatherDataExtension"
 })
 @XmlSeeAlso({
     HumidityInformation.class,
@@ -49,31 +49,31 @@ public abstract class WeatherData
     extends BasicData
 {
 
-    @XmlElement(name = "_weatherDataExtension")
-    protected _ExtensionType _WeatherDataExtension;
+    @XmlElement(name = "_weatherDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType weatherDataExtension;
 
     /**
-     * Gets the value of the _WeatherDataExtension property.
+     * Gets the value of the weatherDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_WeatherDataExtension() {
-        return _WeatherDataExtension;
+    public ExtensionType getWeatherDataExtension() {
+        return weatherDataExtension;
     }
 
     /**
-     * Sets the value of the _WeatherDataExtension property.
+     * Sets the value of the weatherDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_WeatherDataExtension(_ExtensionType value) {
-        this._WeatherDataExtension = value;
+    public void setWeatherDataExtension(ExtensionType value) {
+        this.weatherDataExtension = value;
     }
 
 }

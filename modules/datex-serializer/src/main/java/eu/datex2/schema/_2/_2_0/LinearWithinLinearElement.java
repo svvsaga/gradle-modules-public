@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearWithinLinearElement", propOrder = {
+@XmlType(name = "LinearWithinLinearElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "administrativeAreaOfLinearSection",
     "directionBoundOnLinearSection",
     "directionRelativeOnLinearSection",
@@ -47,20 +47,25 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class LinearWithinLinearElement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString administrativeAreaOfLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DirectionEnum directionBoundOnLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LinearReferencingDirectionEnum directionRelativeOnLinearSection;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected HeightGradeEnum heightGradeOfLinearSection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected LinearElement linearElement;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected DistanceAlongLinearElement fromPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected DistanceAlongLinearElement toPoint;
-    protected _ExtensionType linearWithinLinearElementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType linearWithinLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfLinearSection property.
@@ -235,10 +240,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearWithinLinearElementExtension() {
+    public ExtensionType getLinearWithinLinearElementExtension() {
         return linearWithinLinearElementExtension;
     }
 
@@ -247,10 +252,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearWithinLinearElementExtension(_ExtensionType value) {
+    public void setLinearWithinLinearElementExtension(ExtensionType value) {
         this.linearWithinLinearElementExtension = value;
     }
 

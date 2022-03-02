@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegNamedOnlyArea", propOrder = {
+@XmlType(name = "TpegNamedOnlyArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "name",
     "tpegNamedOnlyAreaExtension"
 })
@@ -38,9 +38,10 @@ public class TpegNamedOnlyArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<TpegAreaDescriptor> name;
-    protected _ExtensionType tpegNamedOnlyAreaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegNamedOnlyAreaExtension;
 
     /**
      * Gets the value of the name property.
@@ -76,10 +77,10 @@ public class TpegNamedOnlyArea
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegNamedOnlyAreaExtension() {
+    public ExtensionType getTpegNamedOnlyAreaExtension() {
         return tpegNamedOnlyAreaExtension;
     }
 
@@ -88,10 +89,10 @@ public class TpegNamedOnlyArea
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegNamedOnlyAreaExtension(_ExtensionType value) {
+    public void setTpegNamedOnlyAreaExtension(ExtensionType value) {
         this.tpegNamedOnlyAreaExtension = value;
     }
 

@@ -1,235 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ServiceDisruptionTypeEnum.
+ * <p>Java class for _ServiceDisruptionTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ServiceDisruptionTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="barClosed"/&gt;
- *     &lt;enumeration value="dieselShortage"/&gt;
- *     &lt;enumeration value="fuelShortage"/&gt;
- *     &lt;enumeration value="lpgShortage"/&gt;
- *     &lt;enumeration value="methaneShortage"/&gt;
- *     &lt;enumeration value="noDieselForHeavyVehicles"/&gt;
- *     &lt;enumeration value="noDieselForLightVehicles"/&gt;
- *     &lt;enumeration value="noParkingAvailability"/&gt;
- *     &lt;enumeration value="noPublicTelephones"/&gt;
- *     &lt;enumeration value="noToiletFacilities"/&gt;
- *     &lt;enumeration value="noVehicleRepairFacilities"/&gt;
- *     &lt;enumeration value="petrolShortage"/&gt;
- *     &lt;enumeration value="restAreaBusy"/&gt;
- *     &lt;enumeration value="restAreaClosed"/&gt;
- *     &lt;enumeration value="restAreaOvercrowdedDriveToAnotherRestArea"/&gt;
- *     &lt;enumeration value="serviceAreaBusy"/&gt;
- *     &lt;enumeration value="serviceAreaClosed"/&gt;
- *     &lt;enumeration value="serviceAreaFuelStationClosed"/&gt;
- *     &lt;enumeration value="serviceAreaOvercrowdedDriveToAnotherServiceArea"/&gt;
- *     &lt;enumeration value="serviceAreaRestaurantClosed"/&gt;
- *     &lt;enumeration value="someCommercialServicesClosed"/&gt;
- *     &lt;enumeration value="waterShortage"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ServiceDisruptionTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;ServiceDisruptionTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ServiceDisruptionTypeEnum")
-@XmlEnum
-public enum ServiceDisruptionTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ServiceDisruptionTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class ServiceDisruptionTypeEnum {
 
-
-    /**
-     * Bar closed.
-     * 
-     */
-    @XmlEnumValue("barClosed")
-    BAR_CLOSED("barClosed"),
-
-    /**
-     * There is a shortage of diesel at the specified location.
-     * 
-     */
-    @XmlEnumValue("dieselShortage")
-    DIESEL_SHORTAGE("dieselShortage"),
+    @XmlValue
+    protected ServiceDisruptionTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * There is a shortage of fuel (of one or more types) at the specified location.
-     *           
+     * Types of disruption to services relevant to road users.
      * 
+     * @return
+     *     possible object is
+     *     {@link ServiceDisruptionTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("fuelShortage")
-    FUEL_SHORTAGE("fuelShortage"),
-
-    /**
-     * There is a shortage of liquid petroleum gas at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("lpgShortage")
-    LPG_SHORTAGE("lpgShortage"),
-
-    /**
-     * There is a shortage of methane at the specified location.
-     * 
-     */
-    @XmlEnumValue("methaneShortage")
-    METHANE_SHORTAGE("methaneShortage"),
-
-    /**
-     * There is no diesel available for heavy goods vehicles at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("noDieselForHeavyVehicles")
-    NO_DIESEL_FOR_HEAVY_VEHICLES("noDieselForHeavyVehicles"),
-
-    /**
-     * There is no diesel available for light vehicles at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("noDieselForLightVehicles")
-    NO_DIESEL_FOR_LIGHT_VEHICLES("noDieselForLightVehicles"),
-
-    /**
-     * There is little or no availbility of parking
-     * 
-     */
-    @XmlEnumValue("noParkingAvailability")
-    NO_PARKING_AVAILABILITY("noParkingAvailability"),
-
-    /**
-     * There are no available public telephones at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("noPublicTelephones")
-    NO_PUBLIC_TELEPHONES("noPublicTelephones"),
-
-    /**
-     * There are no available public toilet facilities at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("noToiletFacilities")
-    NO_TOILET_FACILITIES("noToiletFacilities"),
-
-    /**
-     * There are no available vehicle repair facilities at the specified location.
-     *           
-     * 
-     */
-    @XmlEnumValue("noVehicleRepairFacilities")
-    NO_VEHICLE_REPAIR_FACILITIES("noVehicleRepairFacilities"),
-
-    /**
-     * There is a shortage of petrol at the specified location.
-     * 
-     */
-    @XmlEnumValue("petrolShortage")
-    PETROL_SHORTAGE("petrolShortage"),
-
-    /**
-     * The rest area at the specified location is busy.
-     * 
-     */
-    @XmlEnumValue("restAreaBusy")
-    REST_AREA_BUSY("restAreaBusy"),
-
-    /**
-     * The rest area at the specified location is closed.
-     * 
-     */
-    @XmlEnumValue("restAreaClosed")
-    REST_AREA_CLOSED("restAreaClosed"),
-
-    /**
-     * The rest area at the specified location is close to capacity and motorists are
-     *             advised to seek an alternative.
-     *           
-     * 
-     */
-    @XmlEnumValue("restAreaOvercrowdedDriveToAnotherRestArea")
-    REST_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_REST_AREA("restAreaOvercrowdedDriveToAnotherRestArea"),
-
-    /**
-     * The service area at the specified location is close to capacity.
-     *           
-     * 
-     */
-    @XmlEnumValue("serviceAreaBusy")
-    SERVICE_AREA_BUSY("serviceAreaBusy"),
-
-    /**
-     * The service area at the specified location is closed.
-     * 
-     */
-    @XmlEnumValue("serviceAreaClosed")
-    SERVICE_AREA_CLOSED("serviceAreaClosed"),
-
-    /**
-     * The fuel station at the specified service area is closed.
-     * 
-     */
-    @XmlEnumValue("serviceAreaFuelStationClosed")
-    SERVICE_AREA_FUEL_STATION_CLOSED("serviceAreaFuelStationClosed"),
-
-    /**
-     * The service area at the specified location is close to capacity and motorists are
-     *             advised to seek an alternative.
-     *           
-     * 
-     */
-    @XmlEnumValue("serviceAreaOvercrowdedDriveToAnotherServiceArea")
-    SERVICE_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_SERVICE_AREA("serviceAreaOvercrowdedDriveToAnotherServiceArea"),
-
-    /**
-     * The restaurant at the specified service area is closed.
-     * 
-     */
-    @XmlEnumValue("serviceAreaRestaurantClosed")
-    SERVICE_AREA_RESTAURANT_CLOSED("serviceAreaRestaurantClosed"),
-
-    /**
-     * Some commercial services are closed at the specified location.
-     * 
-     */
-    @XmlEnumValue("someCommercialServicesClosed")
-    SOME_COMMERCIAL_SERVICES_CLOSED("someCommercialServicesClosed"),
-
-    /**
-     * There is a shortage of water at the specified location.
-     * 
-     */
-    @XmlEnumValue("waterShortage")
-    WATER_SHORTAGE("waterShortage"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ServiceDisruptionTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ServiceDisruptionTypeEnum2 getValue() {
         return value;
     }
 
-    public static ServiceDisruptionTypeEnum fromValue(String v) {
-        for (ServiceDisruptionTypeEnum c: ServiceDisruptionTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ServiceDisruptionTypeEnum2 }
+     *     
+     */
+    public void setValue(ServiceDisruptionTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

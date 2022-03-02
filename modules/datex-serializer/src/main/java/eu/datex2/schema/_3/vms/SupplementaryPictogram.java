@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,38 +40,44 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPictogram", propOrder = {
+@XmlType(name = "SupplementaryPictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "pictogramDescription",
     "pictogramCode",
     "pictogramUrl",
     "additionalDescription",
     "pictogramFlashing",
     "pictogramInformationType",
-    "_SupplementaryPictogramExtension"
+    "supplementaryPictogramExtension"
 })
 public class SupplementaryPictogram
     extends SupplementaryInformationDisplay
 {
 
-    protected _SupplementalPictogramEnum pictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected SupplementalPictogramEnum pictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String pictogramCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String pictogramUrl;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString additionalDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramFlashing;
-    protected _InformationTypeEnum pictogramInformationType;
-    @XmlElement(name = "_supplementaryPictogramExtension")
-    protected _ExtensionType _SupplementaryPictogramExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected InformationTypeEnum pictogramInformationType;
+    @XmlElement(name = "_supplementaryPictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType supplementaryPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
      * 
      * @return
      *     possible object is
-     *     {@link _SupplementalPictogramEnum }
+     *     {@link SupplementalPictogramEnum }
      *     
      */
-    public _SupplementalPictogramEnum getPictogramDescription() {
+    public SupplementalPictogramEnum getPictogramDescription() {
         return pictogramDescription;
     }
 
@@ -80,10 +86,10 @@ public class SupplementaryPictogram
      * 
      * @param value
      *     allowed object is
-     *     {@link _SupplementalPictogramEnum }
+     *     {@link SupplementalPictogramEnum }
      *     
      */
-    public void setPictogramDescription(_SupplementalPictogramEnum value) {
+    public void setPictogramDescription(SupplementalPictogramEnum value) {
         this.pictogramDescription = value;
     }
 
@@ -188,10 +194,10 @@ public class SupplementaryPictogram
      * 
      * @return
      *     possible object is
-     *     {@link _InformationTypeEnum }
+     *     {@link InformationTypeEnum }
      *     
      */
-    public _InformationTypeEnum getPictogramInformationType() {
+    public InformationTypeEnum getPictogramInformationType() {
         return pictogramInformationType;
     }
 
@@ -200,35 +206,35 @@ public class SupplementaryPictogram
      * 
      * @param value
      *     allowed object is
-     *     {@link _InformationTypeEnum }
+     *     {@link InformationTypeEnum }
      *     
      */
-    public void setPictogramInformationType(_InformationTypeEnum value) {
+    public void setPictogramInformationType(InformationTypeEnum value) {
         this.pictogramInformationType = value;
     }
 
     /**
-     * Gets the value of the _SupplementaryPictogramExtension property.
+     * Gets the value of the supplementaryPictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SupplementaryPictogramExtension() {
-        return _SupplementaryPictogramExtension;
+    public ExtensionType getSupplementaryPictogramExtension() {
+        return supplementaryPictogramExtension;
     }
 
     /**
-     * Sets the value of the _SupplementaryPictogramExtension property.
+     * Sets the value of the supplementaryPictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SupplementaryPictogramExtension(_ExtensionType value) {
-        this._SupplementaryPictogramExtension = value;
+    public void setSupplementaryPictogramExtension(ExtensionType value) {
+        this.supplementaryPictogramExtension = value;
     }
 
 }

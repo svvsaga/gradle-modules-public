@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditions", propOrder = {
-    "_RoadSurfaceConditionsExtension"
+@XmlType(name = "RoadSurfaceConditions", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "roadSurfaceConditionsExtension"
 })
 @XmlSeeAlso({
     NonWeatherRelatedRoadConditions.class,
@@ -44,31 +44,31 @@ public abstract class RoadSurfaceConditions
     extends Conditions
 {
 
-    @XmlElement(name = "_roadSurfaceConditionsExtension")
-    protected _ExtensionType _RoadSurfaceConditionsExtension;
+    @XmlElement(name = "_roadSurfaceConditionsExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType roadSurfaceConditionsExtension;
 
     /**
-     * Gets the value of the _RoadSurfaceConditionsExtension property.
+     * Gets the value of the roadSurfaceConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadSurfaceConditionsExtension() {
-        return _RoadSurfaceConditionsExtension;
+    public ExtensionType getRoadSurfaceConditionsExtension() {
+        return roadSurfaceConditionsExtension;
     }
 
     /**
-     * Sets the value of the _RoadSurfaceConditionsExtension property.
+     * Sets the value of the roadSurfaceConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadSurfaceConditionsExtension(_ExtensionType value) {
-        this._RoadSurfaceConditionsExtension = value;
+    public void setRoadSurfaceConditionsExtension(ExtensionType value) {
+        this.roadSurfaceConditionsExtension = value;
     }
 
 }

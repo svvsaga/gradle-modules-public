@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRoute", propOrder = {
+@XmlType(name = "ParkingRoute", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingRouteColour",
     "parkingRouteExtension"
 })
@@ -38,8 +39,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingRoute {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected RGBColour parkingRouteColour;
-    protected _ExtensionType parkingRouteExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingRouteExtension;
 
     /**
      * Gets the value of the parkingRouteColour property.
@@ -70,10 +73,10 @@ public abstract class ParkingRoute {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingRouteExtension() {
+    public ExtensionType getParkingRouteExtension() {
         return parkingRouteExtension;
     }
 
@@ -82,10 +85,10 @@ public abstract class ParkingRoute {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingRouteExtension(_ExtensionType value) {
+    public void setParkingRouteExtension(ExtensionType value) {
         this.parkingRouteExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,17 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PercentageDistanceAlongLinearElement", propOrder = {
+@XmlType(name = "PercentageDistanceAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "percentageDistanceAlong",
-    "_PercentageDistanceAlongLinearElementExtension"
+    "percentageDistanceAlongLinearElementExtension"
 })
 public class PercentageDistanceAlongLinearElement
     extends DistanceAlongLinearElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float percentageDistanceAlong;
-    @XmlElement(name = "_percentageDistanceAlongLinearElementExtension")
-    protected _ExtensionType _PercentageDistanceAlongLinearElementExtension;
+    @XmlElement(name = "_percentageDistanceAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType percentageDistanceAlongLinearElementExtension;
 
     /**
      * Gets the value of the percentageDistanceAlong property.
@@ -63,27 +64,27 @@ public class PercentageDistanceAlongLinearElement
     }
 
     /**
-     * Gets the value of the _PercentageDistanceAlongLinearElementExtension property.
+     * Gets the value of the percentageDistanceAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PercentageDistanceAlongLinearElementExtension() {
-        return _PercentageDistanceAlongLinearElementExtension;
+    public ExtensionType getPercentageDistanceAlongLinearElementExtension() {
+        return percentageDistanceAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the _PercentageDistanceAlongLinearElementExtension property.
+     * Sets the value of the percentageDistanceAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PercentageDistanceAlongLinearElementExtension(_ExtensionType value) {
-        this._PercentageDistanceAlongLinearElementExtension = value;
+    public void setPercentageDistanceAlongLinearElementExtension(ExtensionType value) {
+        this.percentageDistanceAlongLinearElementExtension = value;
     }
 
 }

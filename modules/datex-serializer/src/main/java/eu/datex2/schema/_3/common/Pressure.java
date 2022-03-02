@@ -30,16 +30,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pressure", propOrder = {
+@XmlType(name = "Pressure", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "pressureValue",
-    "_PressureExtension"
+    "pressureExtension"
 })
 public class Pressure {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected PressureValue pressureValue;
-    @XmlElement(name = "_pressureExtension")
-    protected _ExtensionType _PressureExtension;
+    @XmlElement(name = "_pressureExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType pressureExtension;
 
     /**
      * Gets the value of the pressureValue property.
@@ -66,27 +66,27 @@ public class Pressure {
     }
 
     /**
-     * Gets the value of the _PressureExtension property.
+     * Gets the value of the pressureExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PressureExtension() {
-        return _PressureExtension;
+    public ExtensionType getPressureExtension() {
+        return pressureExtension;
     }
 
     /**
-     * Sets the value of the _PressureExtension property.
+     * Sets the value of the pressureExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PressureExtension(_ExtensionType value) {
-        this._PressureExtension = value;
+    public void setPressureExtension(ExtensionType value) {
+        this.pressureExtension = value;
     }
 
 }

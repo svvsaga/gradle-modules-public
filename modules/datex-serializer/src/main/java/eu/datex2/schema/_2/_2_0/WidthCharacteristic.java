@@ -30,18 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WidthCharacteristic", propOrder = {
+@XmlType(name = "WidthCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comparisonOperator",
     "vehicleWidth",
     "widthCharacteristicExtension"
 })
 public class WidthCharacteristic {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float vehicleWidth;
-    protected _ExtensionType widthCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType widthCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +90,10 @@ public class WidthCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWidthCharacteristicExtension() {
+    public ExtensionType getWidthCharacteristicExtension() {
         return widthCharacteristicExtension;
     }
 
@@ -100,10 +102,10 @@ public class WidthCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWidthCharacteristicExtension(_ExtensionType value) {
+    public void setWidthCharacteristicExtension(ExtensionType value) {
         this.widthCharacteristicExtension = value;
     }
 

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,31 +35,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SiteMeasurements", propOrder = {
+@XmlType(name = "SiteMeasurements", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "measurementSiteReference",
     "physicalQuantity",
     "measurementTimeDefault",
-    "_SiteMeasurementsExtension"
+    "siteMeasurementsExtension"
 })
 public class SiteMeasurements {
 
-    @XmlElement(required = true)
-    protected _MeasurementSiteVersionedReference measurementSiteReference;
-    protected List<_SiteMeasurementsIndexPhysicalQuantity> physicalQuantity;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    protected MeasurementSiteVersionedReference measurementSiteReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected List<SiteMeasurementsIndexPhysicalQuantity> physicalQuantity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected MeasurementOrCalculationTime measurementTimeDefault;
-    @XmlElement(name = "_siteMeasurementsExtension")
-    protected _ExtensionType _SiteMeasurementsExtension;
+    @XmlElement(name = "_siteMeasurementsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType siteMeasurementsExtension;
 
     /**
      * Gets the value of the measurementSiteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _MeasurementSiteVersionedReference }
+     *     {@link MeasurementSiteVersionedReference }
      *     
      */
-    public _MeasurementSiteVersionedReference getMeasurementSiteReference() {
+    public MeasurementSiteVersionedReference getMeasurementSiteReference() {
         return measurementSiteReference;
     }
 
@@ -68,10 +69,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasurementSiteVersionedReference }
+     *     {@link MeasurementSiteVersionedReference }
      *     
      */
-    public void setMeasurementSiteReference(_MeasurementSiteVersionedReference value) {
+    public void setMeasurementSiteReference(MeasurementSiteVersionedReference value) {
         this.measurementSiteReference = value;
     }
 
@@ -93,13 +94,13 @@ public class SiteMeasurements {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SiteMeasurementsIndexPhysicalQuantity }
+     * {@link SiteMeasurementsIndexPhysicalQuantity }
      * 
      * 
      */
-    public List<_SiteMeasurementsIndexPhysicalQuantity> getPhysicalQuantity() {
+    public List<SiteMeasurementsIndexPhysicalQuantity> getPhysicalQuantity() {
         if (physicalQuantity == null) {
-            physicalQuantity = new ArrayList<_SiteMeasurementsIndexPhysicalQuantity>();
+            physicalQuantity = new ArrayList<SiteMeasurementsIndexPhysicalQuantity>();
         }
         return this.physicalQuantity;
     }
@@ -129,27 +130,27 @@ public class SiteMeasurements {
     }
 
     /**
-     * Gets the value of the _SiteMeasurementsExtension property.
+     * Gets the value of the siteMeasurementsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SiteMeasurementsExtension() {
-        return _SiteMeasurementsExtension;
+    public ExtensionType getSiteMeasurementsExtension() {
+        return siteMeasurementsExtension;
     }
 
     /**
-     * Sets the value of the _SiteMeasurementsExtension property.
+     * Sets the value of the siteMeasurementsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SiteMeasurementsExtension(_ExtensionType value) {
-        this._SiteMeasurementsExtension = value;
+    public void setSiteMeasurementsExtension(ExtensionType value) {
+        this.siteMeasurementsExtension = value;
     }
 
 }

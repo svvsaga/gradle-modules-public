@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationContainer", propOrder = {
+@XmlType(name = "PredefinedLocationContainer", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "predefinedLocationContainerExtension"
 })
 @XmlSeeAlso({
@@ -37,17 +38,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class PredefinedLocationContainer {
 
-    protected _ExtensionType predefinedLocationContainerExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType predefinedLocationContainerExtension;
 
     /**
      * Gets the value of the predefinedLocationContainerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedLocationContainerExtension() {
+    public ExtensionType getPredefinedLocationContainerExtension() {
         return predefinedLocationContainerExtension;
     }
 
@@ -56,10 +58,10 @@ public abstract class PredefinedLocationContainer {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationContainerExtension(_ExtensionType value) {
+    public void setPredefinedLocationContainerExtension(ExtensionType value) {
         this.predefinedLocationContainerExtension = value;
     }
 

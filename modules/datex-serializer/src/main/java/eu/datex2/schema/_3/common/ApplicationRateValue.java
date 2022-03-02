@@ -30,17 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ApplicationRateValue", propOrder = {
+@XmlType(name = "ApplicationRateValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "applicationRate",
-    "_ApplicationRateValueExtension"
+    "applicationRateValueExtension"
 })
 public class ApplicationRateValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float applicationRate;
-    @XmlElement(name = "_applicationRateValueExtension")
-    protected _ExtensionType _ApplicationRateValueExtension;
+    @XmlElement(name = "_applicationRateValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType applicationRateValueExtension;
 
     /**
      * Gets the value of the applicationRate property.
@@ -59,27 +60,27 @@ public class ApplicationRateValue
     }
 
     /**
-     * Gets the value of the _ApplicationRateValueExtension property.
+     * Gets the value of the applicationRateValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ApplicationRateValueExtension() {
-        return _ApplicationRateValueExtension;
+    public ExtensionType getApplicationRateValueExtension() {
+        return applicationRateValueExtension;
     }
 
     /**
-     * Sets the value of the _ApplicationRateValueExtension property.
+     * Sets the value of the applicationRateValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ApplicationRateValueExtension(_ExtensionType value) {
-        this._ApplicationRateValueExtension = value;
+    public void setApplicationRateValueExtension(ExtensionType value) {
+        this.applicationRateValueExtension = value;
     }
 
 }

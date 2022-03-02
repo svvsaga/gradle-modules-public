@@ -7,6 +7,7 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -39,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCountAndRate", propOrder = {
+@XmlType(name = "VehicleCountAndRate", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementSiteReference",
     "measuredValueIndex",
     "dedicatedAccess",
@@ -52,28 +53,37 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCountAndRate {
 
-    protected _MeasurementSiteRecordVersionedReference measurementSiteReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected MeasurementSiteRecordVersionedReference measurementSiteReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measuredValueIndex;
-    protected _ParkingAccessReference dedicatedAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ParkingAccessReference dedicatedAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementTimeDefault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastCalibration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean coveringPetrolStationArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCountWithinInterval> vehicleCountWithinInterval;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleRate> vehicleRate;
-    protected _ExtensionType vehicleCountAndRateExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleCountAndRateExtension;
 
     /**
      * Gets the value of the measurementSiteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public _MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
+    public MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
         return measurementSiteReference;
     }
 
@@ -82,10 +92,10 @@ public class VehicleCountAndRate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public void setMeasurementSiteReference(_MeasurementSiteRecordVersionedReference value) {
+    public void setMeasurementSiteReference(MeasurementSiteRecordVersionedReference value) {
         this.measurementSiteReference = value;
     }
 
@@ -118,10 +128,10 @@ public class VehicleCountAndRate {
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public _ParkingAccessReference getDedicatedAccess() {
+    public ParkingAccessReference getDedicatedAccess() {
         return dedicatedAccess;
     }
 
@@ -130,10 +140,10 @@ public class VehicleCountAndRate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public void setDedicatedAccess(_ParkingAccessReference value) {
+    public void setDedicatedAccess(ParkingAccessReference value) {
         this.dedicatedAccess = value;
     }
 
@@ -272,10 +282,10 @@ public class VehicleCountAndRate {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleCountAndRateExtension() {
+    public ExtensionType getVehicleCountAndRateExtension() {
         return vehicleCountAndRateExtension;
     }
 
@@ -284,10 +294,10 @@ public class VehicleCountAndRate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleCountAndRateExtension(_ExtensionType value) {
+    public void setVehicleCountAndRateExtension(ExtensionType value) {
         this.vehicleCountAndRateExtension = value;
     }
 

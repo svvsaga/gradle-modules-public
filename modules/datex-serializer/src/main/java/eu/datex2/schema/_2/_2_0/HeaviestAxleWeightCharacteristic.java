@@ -30,18 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaviestAxleWeightCharacteristic", propOrder = {
+@XmlType(name = "HeaviestAxleWeightCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comparisonOperator",
     "heaviestAxleWeight",
     "heaviestAxleWeightCharacteristicExtension"
 })
 public class HeaviestAxleWeightCharacteristic {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float heaviestAxleWeight;
-    protected _ExtensionType heaviestAxleWeightCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType heaviestAxleWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +90,10 @@ public class HeaviestAxleWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHeaviestAxleWeightCharacteristicExtension() {
+    public ExtensionType getHeaviestAxleWeightCharacteristicExtension() {
         return heaviestAxleWeightCharacteristicExtension;
     }
 
@@ -100,10 +102,10 @@ public class HeaviestAxleWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHeaviestAxleWeightCharacteristicExtension(_ExtensionType value) {
+    public void setHeaviestAxleWeightCharacteristicExtension(ExtensionType value) {
         this.heaviestAxleWeightCharacteristicExtension = value;
     }
 

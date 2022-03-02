@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InterUrbanParkingSite", propOrder = {
+@XmlType(name = "InterUrbanParkingSite", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "interUrbanParkingSiteLocation",
     "interUrbanParkingSiteExtension"
 })
@@ -37,10 +37,11 @@ public class InterUrbanParkingSite
     extends ParkingSite
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected InterUrbanParkingSiteLocationEnum interUrbanParkingSiteLocation;
-    protected _ExtensionType interUrbanParkingSiteExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType interUrbanParkingSiteExtension;
 
     /**
      * Gets the value of the interUrbanParkingSiteLocation property.
@@ -71,10 +72,10 @@ public class InterUrbanParkingSite
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getInterUrbanParkingSiteExtension() {
+    public ExtensionType getInterUrbanParkingSiteExtension() {
         return interUrbanParkingSiteExtension;
     }
 
@@ -83,10 +84,10 @@ public class InterUrbanParkingSite
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setInterUrbanParkingSiteExtension(_ExtensionType value) {
+    public void setInterUrbanParkingSiteExtension(ExtensionType value) {
         this.interUrbanParkingSiteExtension = value;
     }
 

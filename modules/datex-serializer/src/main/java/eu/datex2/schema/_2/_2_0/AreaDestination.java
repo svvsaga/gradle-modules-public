@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AreaDestination", propOrder = {
+@XmlType(name = "AreaDestination", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "area",
     "areaDestinationExtension"
 })
@@ -36,9 +36,10 @@ public class AreaDestination
     extends Destination
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected Area area;
-    protected _ExtensionType areaDestinationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType areaDestinationExtension;
 
     /**
      * Gets the value of the area property.
@@ -69,10 +70,10 @@ public class AreaDestination
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAreaDestinationExtension() {
+    public ExtensionType getAreaDestinationExtension() {
         return areaDestinationExtension;
     }
 
@@ -81,10 +82,10 @@ public class AreaDestination
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAreaDestinationExtension(_ExtensionType value) {
+    public void setAreaDestinationExtension(ExtensionType value) {
         this.areaDestinationExtension = value;
     }
 

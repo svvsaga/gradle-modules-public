@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Area", propOrder = {
+@XmlType(name = "Area", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCArea",
     "tpegAreaLocation",
     "areaExtension"
@@ -37,9 +38,12 @@ public class Area
     extends Location
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected AlertCArea alertCArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegAreaLocation tpegAreaLocation;
-    protected _AreaExtensionType areaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected AreaExtensionType areaExtension;
 
     /**
      * Gets the value of the alertCArea property.
@@ -94,10 +98,10 @@ public class Area
      * 
      * @return
      *     possible object is
-     *     {@link _AreaExtensionType }
+     *     {@link AreaExtensionType }
      *     
      */
-    public _AreaExtensionType getAreaExtension() {
+    public AreaExtensionType getAreaExtension() {
         return areaExtension;
     }
 
@@ -106,10 +110,10 @@ public class Area
      * 
      * @param value
      *     allowed object is
-     *     {@link _AreaExtensionType }
+     *     {@link AreaExtensionType }
      *     
      */
-    public void setAreaExtension(_AreaExtensionType value) {
+    public void setAreaExtension(AreaExtensionType value) {
         this.areaExtension = value;
     }
 

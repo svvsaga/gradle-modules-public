@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Wind;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WindInformation", propOrder = {
+@XmlType(name = "WindInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "wind",
-    "_WindInformationExtension"
+    "windInformationExtension"
 })
 public class WindInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected Wind wind;
-    @XmlElement(name = "_windInformationExtension")
-    protected _ExtensionType _WindInformationExtension;
+    @XmlElement(name = "_windInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType windInformationExtension;
 
     /**
      * Gets the value of the wind property.
@@ -70,27 +70,27 @@ public class WindInformation
     }
 
     /**
-     * Gets the value of the _WindInformationExtension property.
+     * Gets the value of the windInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_WindInformationExtension() {
-        return _WindInformationExtension;
+    public ExtensionType getWindInformationExtension() {
+        return windInformationExtension;
     }
 
     /**
-     * Sets the value of the _WindInformationExtension property.
+     * Sets the value of the windInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_WindInformationExtension(_ExtensionType value) {
-        this._WindInformationExtension = value;
+    public void setWindInformationExtension(ExtensionType value) {
+        this.windInformationExtension = value;
     }
 
 }

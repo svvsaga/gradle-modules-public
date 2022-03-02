@@ -3,9 +3,9 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.SpeedValue;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._VehicleTypeEnum;
+import eu.datex2.schema._3.common.VehicleTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TravelTimeData", propOrder = {
+@XmlType(name = "TravelTimeData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "travelTimeTrendType",
     "travelTimeType",
     "vehicleType",
@@ -54,32 +54,40 @@ import jakarta.xml.bind.annotation.XmlType;
     "normallyExpectedTravelTime",
     "travelTimeDelay",
     "freeFlowSpeed",
-    "_TravelTimeDataExtension"
+    "travelTimeDataExtension"
 })
 public class TravelTimeData
     extends BasicData
 {
 
-    protected _TravelTimeTrendTypeEnum travelTimeTrendType;
-    protected _TravelTimeTypeEnum travelTimeType;
-    protected List<_VehicleTypeEnum> vehicleType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected TravelTimeTrendTypeEnum travelTimeTrendType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected TravelTimeTypeEnum travelTimeType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected List<VehicleTypeEnum> vehicleType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue travelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue freeFlowTravelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue normallyExpectedTravelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue travelTimeDelay;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue freeFlowSpeed;
-    @XmlElement(name = "_travelTimeDataExtension")
-    protected _ExtensionType _TravelTimeDataExtension;
+    @XmlElement(name = "_travelTimeDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType travelTimeDataExtension;
 
     /**
      * Gets the value of the travelTimeTrendType property.
      * 
      * @return
      *     possible object is
-     *     {@link _TravelTimeTrendTypeEnum }
+     *     {@link TravelTimeTrendTypeEnum }
      *     
      */
-    public _TravelTimeTrendTypeEnum getTravelTimeTrendType() {
+    public TravelTimeTrendTypeEnum getTravelTimeTrendType() {
         return travelTimeTrendType;
     }
 
@@ -88,10 +96,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link _TravelTimeTrendTypeEnum }
+     *     {@link TravelTimeTrendTypeEnum }
      *     
      */
-    public void setTravelTimeTrendType(_TravelTimeTrendTypeEnum value) {
+    public void setTravelTimeTrendType(TravelTimeTrendTypeEnum value) {
         this.travelTimeTrendType = value;
     }
 
@@ -100,10 +108,10 @@ public class TravelTimeData
      * 
      * @return
      *     possible object is
-     *     {@link _TravelTimeTypeEnum }
+     *     {@link TravelTimeTypeEnum }
      *     
      */
-    public _TravelTimeTypeEnum getTravelTimeType() {
+    public TravelTimeTypeEnum getTravelTimeType() {
         return travelTimeType;
     }
 
@@ -112,10 +120,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link _TravelTimeTypeEnum }
+     *     {@link TravelTimeTypeEnum }
      *     
      */
-    public void setTravelTimeType(_TravelTimeTypeEnum value) {
+    public void setTravelTimeType(TravelTimeTypeEnum value) {
         this.travelTimeType = value;
     }
 
@@ -137,13 +145,13 @@ public class TravelTimeData
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VehicleTypeEnum }
+     * {@link VehicleTypeEnum }
      * 
      * 
      */
-    public List<_VehicleTypeEnum> getVehicleType() {
+    public List<VehicleTypeEnum> getVehicleType() {
         if (vehicleType == null) {
-            vehicleType = new ArrayList<_VehicleTypeEnum>();
+            vehicleType = new ArrayList<VehicleTypeEnum>();
         }
         return this.vehicleType;
     }
@@ -269,27 +277,27 @@ public class TravelTimeData
     }
 
     /**
-     * Gets the value of the _TravelTimeDataExtension property.
+     * Gets the value of the travelTimeDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TravelTimeDataExtension() {
-        return _TravelTimeDataExtension;
+    public ExtensionType getTravelTimeDataExtension() {
+        return travelTimeDataExtension;
     }
 
     /**
-     * Sets the value of the _TravelTimeDataExtension property.
+     * Sets the value of the travelTimeDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TravelTimeDataExtension(_ExtensionType value) {
-        this._TravelTimeDataExtension = value;
+    public void setTravelTimeDataExtension(ExtensionType value) {
+        this.travelTimeDataExtension = value;
     }
 
 }

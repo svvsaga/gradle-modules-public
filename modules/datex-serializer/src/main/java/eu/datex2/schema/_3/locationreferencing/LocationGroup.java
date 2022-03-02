@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationGroup", propOrder = {
-    "_LocationGroupExtension"
+@XmlType(name = "LocationGroup", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "locationGroupExtension"
 })
 @XmlSeeAlso({
     LocationGroupByList.class,
@@ -44,31 +44,31 @@ public abstract class LocationGroup
     extends LocationReference
 {
 
-    @XmlElement(name = "_locationGroupExtension")
-    protected _ExtensionType _LocationGroupExtension;
+    @XmlElement(name = "_locationGroupExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType locationGroupExtension;
 
     /**
-     * Gets the value of the _LocationGroupExtension property.
+     * Gets the value of the locationGroupExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LocationGroupExtension() {
-        return _LocationGroupExtension;
+    public ExtensionType getLocationGroupExtension() {
+        return locationGroupExtension;
     }
 
     /**
-     * Sets the value of the _LocationGroupExtension property.
+     * Sets the value of the locationGroupExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LocationGroupExtension(_ExtensionType value) {
-        this._LocationGroupExtension = value;
+    public void setLocationGroupExtension(ExtensionType value) {
+        this.locationGroupExtension = value;
     }
 
 }

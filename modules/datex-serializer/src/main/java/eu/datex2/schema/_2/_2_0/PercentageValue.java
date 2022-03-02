@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PercentageValue", propOrder = {
+@XmlType(name = "PercentageValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "percentage",
     "percentageValueExtension"
 })
@@ -35,8 +36,10 @@ public class PercentageValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float percentage;
-    protected _ExtensionType percentageValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType percentageValueExtension;
 
     /**
      * Gets the value of the percentage property.
@@ -59,10 +62,10 @@ public class PercentageValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPercentageValueExtension() {
+    public ExtensionType getPercentageValueExtension() {
         return percentageValueExtension;
     }
 
@@ -71,10 +74,10 @@ public class PercentageValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPercentageValueExtension(_ExtensionType value) {
+    public void setPercentageValueExtension(ExtensionType value) {
         this.percentageValueExtension = value;
     }
 

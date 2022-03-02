@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NamedArea", propOrder = {
+@XmlType(name = "NamedArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "rest"
 })
 @XmlSeeAlso({
@@ -66,7 +66,7 @@ public class NamedArea
      * 
      * <p>
      * You are getting this "catch-all" property because of the following reason: 
-     * The field name "_NamedAreaExtension" is used by two different parts of a schema. See: 
+     * The field name "NamedAreaExtension" is used by two different parts of a schema. See: 
      * line 2147 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_LocationReferencing.xsd
      * line 2068 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_Common.xsd
      * <p>
@@ -89,9 +89,9 @@ public class NamedArea
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
      * {@link JAXBElement }{@code <}{@link MultilingualString }{@code >}
-     * {@link JAXBElement }{@code <}{@link _ExtensionType }{@code >}
-     * {@link JAXBElement }{@code <}{@link _NamedAreaTypeEnum }{@code >}
+     * {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 

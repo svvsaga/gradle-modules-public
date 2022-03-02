@@ -30,39 +30,39 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NamedArea", propOrder = {
-    "_NamedAreaExtension"
+@XmlType(name = "NamedArea", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "namedAreaExtension"
 })
 @XmlSeeAlso({
     eu.datex2.schema._3.locationreferencing.NamedArea.class
 })
 public abstract class NamedArea {
 
-    @XmlElement(name = "_namedAreaExtension")
-    protected _ExtensionType _NamedAreaExtension;
+    @XmlElement(name = "_namedAreaExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType namedAreaExtension;
 
     /**
-     * Gets the value of the _NamedAreaExtension property.
+     * Gets the value of the namedAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_NamedAreaExtension() {
-        return _NamedAreaExtension;
+    public ExtensionType getNamedAreaExtension() {
+        return namedAreaExtension;
     }
 
     /**
-     * Sets the value of the _NamedAreaExtension property.
+     * Sets the value of the namedAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_NamedAreaExtension(_ExtensionType value) {
-        this._NamedAreaExtension = value;
+    public void setNamedAreaExtension(ExtensionType value) {
+        this.namedAreaExtension = value;
     }
 
 }

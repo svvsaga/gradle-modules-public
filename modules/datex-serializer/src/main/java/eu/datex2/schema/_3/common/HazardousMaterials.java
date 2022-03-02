@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HazardousMaterials", propOrder = {
+@XmlType(name = "HazardousMaterials", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "chemicalName",
     "dangerousGoodsFlashPoint",
     "dangerousGoodsRegulations",
@@ -52,24 +52,33 @@ import jakarta.xml.bind.annotation.XmlType;
     "undgNumber",
     "volumeOfDangerousGoods",
     "weightOfDangerousGoods",
-    "_HazardousMaterialsExtension"
+    "hazardousMaterialsExtension"
 })
 public class HazardousMaterials {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected MultilingualString chemicalName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Float dangerousGoodsFlashPoint;
-    protected _DangerousGoodsRegulationsEnum dangerousGoodsRegulations;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected DangerousGoodsRegulationsEnum dangerousGoodsRegulations;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String hazardCodeIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger hazardCodeVersionNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String hazardSubstanceItemPageNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String tremCardNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String undgNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Float volumeOfDangerousGoods;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Float weightOfDangerousGoods;
-    @XmlElement(name = "_hazardousMaterialsExtension")
-    protected _ExtensionType _HazardousMaterialsExtension;
+    @XmlElement(name = "_hazardousMaterialsExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType hazardousMaterialsExtension;
 
     /**
      * Gets the value of the chemicalName property.
@@ -124,10 +133,10 @@ public class HazardousMaterials {
      * 
      * @return
      *     possible object is
-     *     {@link _DangerousGoodsRegulationsEnum }
+     *     {@link DangerousGoodsRegulationsEnum }
      *     
      */
-    public _DangerousGoodsRegulationsEnum getDangerousGoodsRegulations() {
+    public DangerousGoodsRegulationsEnum getDangerousGoodsRegulations() {
         return dangerousGoodsRegulations;
     }
 
@@ -136,10 +145,10 @@ public class HazardousMaterials {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DangerousGoodsRegulationsEnum }
+     *     {@link DangerousGoodsRegulationsEnum }
      *     
      */
-    public void setDangerousGoodsRegulations(_DangerousGoodsRegulationsEnum value) {
+    public void setDangerousGoodsRegulations(DangerousGoodsRegulationsEnum value) {
         this.dangerousGoodsRegulations = value;
     }
 
@@ -312,27 +321,27 @@ public class HazardousMaterials {
     }
 
     /**
-     * Gets the value of the _HazardousMaterialsExtension property.
+     * Gets the value of the hazardousMaterialsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HazardousMaterialsExtension() {
-        return _HazardousMaterialsExtension;
+    public ExtensionType getHazardousMaterialsExtension() {
+        return hazardousMaterialsExtension;
     }
 
     /**
-     * Sets the value of the _HazardousMaterialsExtension property.
+     * Sets the value of the hazardousMaterialsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HazardousMaterialsExtension(_ExtensionType value) {
-        this._HazardousMaterialsExtension = value;
+    public void setHazardousMaterialsExtension(ExtensionType value) {
+        this.hazardousMaterialsExtension = value;
     }
 
 }

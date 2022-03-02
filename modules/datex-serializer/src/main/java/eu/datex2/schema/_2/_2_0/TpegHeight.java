@@ -30,18 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegHeight", propOrder = {
+@XmlType(name = "TpegHeight", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "height",
     "heightType",
     "tpegHeightExtension"
 })
 public class TpegHeight {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float height;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc04HeightTypeEnum heightType;
-    protected _ExtensionType tpegHeightExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegHeightExtension;
 
     /**
      * Gets the value of the height property.
@@ -96,10 +98,10 @@ public class TpegHeight {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegHeightExtension() {
+    public ExtensionType getTpegHeightExtension() {
         return tpegHeightExtension;
     }
 
@@ -108,10 +110,10 @@ public class TpegHeight {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegHeightExtension(_ExtensionType value) {
+    public void setTpegHeightExtension(ExtensionType value) {
         this.tpegHeightExtension = value;
     }
 

@@ -57,7 +57,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContactDetails", propOrder = {
+@XmlType(name = "ContactDetails", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "contactOrganisationName",
     "contactPersonName",
     "contactPersonFirstName",
@@ -86,36 +86,58 @@ public class ContactDetails
     extends Contact
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString contactOrganisationName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactPersonName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactPersonFirstName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString contactPersonPosition;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
     protected List<String> contactDetailsLanguage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString contactDetailsAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactDetailsStreet;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> contactDetailsHouseNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactDetailsPostcode;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString contactDetailsCity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CountryEnum country;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactDetailsTelephoneNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactDetailsFax;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String contactDetailsEMail;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String contactDetailsLogoUrl;
-    @XmlElement(name = "available24hours")
+    @XmlElement(name = "available24hours", namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean available24Hours;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> contactDetailsResponsibility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> contactDetailsMoreInfo;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean publishingAgreement;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OwnershipTypeEnum contactDetailsOwnership;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations groupOfLocations;
-    protected _ExtensionType contactDetailsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType contactDetailsExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -674,10 +696,10 @@ public class ContactDetails
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getContactDetailsExtension() {
+    public ExtensionType getContactDetailsExtension() {
         return contactDetailsExtension;
     }
 
@@ -686,10 +708,10 @@ public class ContactDetails
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setContactDetailsExtension(_ExtensionType value) {
+    public void setContactDetailsExtension(ExtensionType value) {
         this.contactDetailsExtension = value;
     }
 

@@ -31,18 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointByCoordinates", propOrder = {
+@XmlType(name = "PointByCoordinates", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "bearing",
     "pointCoordinates",
     "pointByCoordinatesExtension"
 })
 public class PointByCoordinates {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger bearing;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates pointCoordinates;
-    protected _ExtensionType pointByCoordinatesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType pointByCoordinatesExtension;
 
     /**
      * Gets the value of the bearing property.
@@ -97,10 +99,10 @@ public class PointByCoordinates {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointByCoordinatesExtension() {
+    public ExtensionType getPointByCoordinatesExtension() {
         return pointByCoordinatesExtension;
     }
 
@@ -109,10 +111,10 @@ public class PointByCoordinates {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointByCoordinatesExtension(_ExtensionType value) {
+    public void setPointByCoordinatesExtension(ExtensionType value) {
         this.pointByCoordinatesExtension = value;
     }
 

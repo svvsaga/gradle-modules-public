@@ -36,10 +36,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DayWeekMonth", propOrder = {
+@XmlType(name = "DayWeekMonth", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "applicableDay",
     "applicableMonth",
-    "_DayWeekMonthExtension"
+    "dayWeekMonthExtension"
 })
 @XmlSeeAlso({
     CalendarWeekWithinMonth.class,
@@ -47,10 +47,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DayWeekMonth {
 
-    protected List<_DayEnum> applicableDay;
-    protected List<_MonthOfYearEnum> applicableMonth;
-    @XmlElement(name = "_dayWeekMonthExtension")
-    protected _ExtensionType _DayWeekMonthExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected List<DayEnum> applicableDay;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected List<MonthOfYearEnum> applicableMonth;
+    @XmlElement(name = "_dayWeekMonthExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType dayWeekMonthExtension;
 
     /**
      * Gets the value of the applicableDay property.
@@ -70,13 +72,13 @@ public class DayWeekMonth {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _DayEnum }
+     * {@link DayEnum }
      * 
      * 
      */
-    public List<_DayEnum> getApplicableDay() {
+    public List<DayEnum> getApplicableDay() {
         if (applicableDay == null) {
-            applicableDay = new ArrayList<_DayEnum>();
+            applicableDay = new ArrayList<DayEnum>();
         }
         return this.applicableDay;
     }
@@ -99,39 +101,39 @@ public class DayWeekMonth {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MonthOfYearEnum }
+     * {@link MonthOfYearEnum }
      * 
      * 
      */
-    public List<_MonthOfYearEnum> getApplicableMonth() {
+    public List<MonthOfYearEnum> getApplicableMonth() {
         if (applicableMonth == null) {
-            applicableMonth = new ArrayList<_MonthOfYearEnum>();
+            applicableMonth = new ArrayList<MonthOfYearEnum>();
         }
         return this.applicableMonth;
     }
 
     /**
-     * Gets the value of the _DayWeekMonthExtension property.
+     * Gets the value of the dayWeekMonthExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DayWeekMonthExtension() {
-        return _DayWeekMonthExtension;
+    public ExtensionType getDayWeekMonthExtension() {
+        return dayWeekMonthExtension;
     }
 
     /**
-     * Sets the value of the _DayWeekMonthExtension property.
+     * Sets the value of the dayWeekMonthExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DayWeekMonthExtension(_ExtensionType value) {
-        this._DayWeekMonthExtension = value;
+    public void setDayWeekMonthExtension(ExtensionType value) {
+        this.dayWeekMonthExtension = value;
     }
 
 }

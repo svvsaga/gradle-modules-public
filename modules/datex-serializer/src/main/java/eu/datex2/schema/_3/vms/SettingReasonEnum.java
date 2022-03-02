@@ -1,102 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for SettingReasonEnum.
+ * <p>Java class for _SettingReasonEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="SettingReasonEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="situation"/&gt;
- *     &lt;enumeration value="operatorCreated"/&gt;
- *     &lt;enumeration value="trafficManagement"/&gt;
- *     &lt;enumeration value="travelTime"/&gt;
- *     &lt;enumeration value="campaign"/&gt;
- *     &lt;enumeration value="default"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_SettingReasonEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;SettingReasonEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "SettingReasonEnum")
-@XmlEnum
-public enum SettingReasonEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_SettingReasonEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class SettingReasonEnum {
 
-
-    /**
-     * Message selected as the result of a situation occuring either on or off the road
-     *             which might affect road users.
-     *           
-     * 
-     */
-    @XmlEnumValue("situation")
-    SITUATION("situation"),
+    @XmlValue
+    protected SettingReasonEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Message selected by operator as the result of an unmanaged event or situation.
-     *           
+     * Coded reasons why a message has been selected for display on the sign.
      * 
+     * @return
+     *     possible object is
+     *     {@link SettingReasonEnum2 }
+     *     
      */
-    @XmlEnumValue("operatorCreated")
-    OPERATOR_CREATED("operatorCreated"),
-
-    /**
-     * Message selected as part of the implementation of a traffic management action.
-     *             This can be part of a specific traffic management or diversion plan.
-     *           
-     * 
-     */
-    @XmlEnumValue("trafficManagement")
-    TRAFFIC_MANAGEMENT("trafficManagement"),
-
-    /**
-     * The VMS is currently selected to display travel times.
-     * 
-     */
-    @XmlEnumValue("travelTime")
-    TRAVEL_TIME("travelTime"),
-
-    /**
-     * The VMS is currently selected to display a campaign message.
-     * 
-     */
-    @XmlEnumValue("campaign")
-    CAMPAIGN("campaign"),
-
-    /**
-     * The VMS is currently selected to display default information (e.g. time, date,
-     *             temperature).
-     *           
-     * 
-     */
-    @XmlEnumValue("default")
-    DEFAULT("default"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    SettingReasonEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public SettingReasonEnum2 getValue() {
         return value;
     }
 
-    public static SettingReasonEnum fromValue(String v) {
-        for (SettingReasonEnum c: SettingReasonEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SettingReasonEnum2 }
+     *     
+     */
+    public void setValue(SettingReasonEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

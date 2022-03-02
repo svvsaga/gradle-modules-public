@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficConcentration", propOrder = {
+@XmlType(name = "TrafficConcentration", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "concentration",
     "occupancy",
     "trafficConcentrationExtension"
@@ -37,9 +38,12 @@ public class TrafficConcentration
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ConcentrationOfVehiclesValue concentration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PercentageValue occupancy;
-    protected _ExtensionType trafficConcentrationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficConcentrationExtension;
 
     /**
      * Gets the value of the concentration property.
@@ -94,10 +98,10 @@ public class TrafficConcentration
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficConcentrationExtension() {
+    public ExtensionType getTrafficConcentrationExtension() {
         return trafficConcentrationExtension;
     }
 
@@ -106,10 +110,10 @@ public class TrafficConcentration
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficConcentrationExtension(_ExtensionType value) {
+    public void setTrafficConcentrationExtension(ExtensionType value) {
         this.trafficConcentrationExtension = value;
     }
 

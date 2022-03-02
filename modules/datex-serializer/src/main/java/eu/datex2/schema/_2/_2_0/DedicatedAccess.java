@@ -31,28 +31,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DedicatedAccess", propOrder = {
+@XmlType(name = "DedicatedAccess", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "dedicatedAccess",
     "distanceFromParkingSpace",
     "dedicatedAccessExtension"
 })
 public class DedicatedAccess {
 
-    @XmlElement(required = true)
-    protected _ParkingAccessReference dedicatedAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingAccessReference dedicatedAccess;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromParkingSpace;
-    protected _ExtensionType dedicatedAccessExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType dedicatedAccessExtension;
 
     /**
      * Gets the value of the dedicatedAccess property.
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public _ParkingAccessReference getDedicatedAccess() {
+    public ParkingAccessReference getDedicatedAccess() {
         return dedicatedAccess;
     }
 
@@ -61,10 +63,10 @@ public class DedicatedAccess {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public void setDedicatedAccess(_ParkingAccessReference value) {
+    public void setDedicatedAccess(ParkingAccessReference value) {
         this.dedicatedAccess = value;
     }
 
@@ -97,10 +99,10 @@ public class DedicatedAccess {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDedicatedAccessExtension() {
+    public ExtensionType getDedicatedAccessExtension() {
         return dedicatedAccessExtension;
     }
 
@@ -109,10 +111,10 @@ public class DedicatedAccess {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDedicatedAccessExtension(_ExtensionType value) {
+    public void setDedicatedAccessExtension(ExtensionType value) {
         this.dedicatedAccessExtension = value;
     }
 

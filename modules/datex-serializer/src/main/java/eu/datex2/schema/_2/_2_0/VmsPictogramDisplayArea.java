@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,16 +31,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsPictogramDisplayArea", propOrder = {
+@XmlType(name = "VmsPictogramDisplayArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "synchronizedSequencingWithTextPages",
     "vmsPictogram",
     "vmsPictogramDisplayAreaExtension"
 })
 public class VmsPictogramDisplayArea {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean synchronizedSequencingWithTextPages;
-    protected List<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> vmsPictogram;
-    protected _ExtensionType vmsPictogramDisplayAreaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> vmsPictogram;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsPictogramDisplayAreaExtension;
 
     /**
      * Gets the value of the synchronizedSequencingWithTextPages property.
@@ -83,13 +87,13 @@ public class VmsPictogramDisplayArea {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
+     * {@link VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
      * 
      * 
      */
-    public List<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> getVmsPictogram() {
+    public List<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> getVmsPictogram() {
         if (vmsPictogram == null) {
-            vmsPictogram = new ArrayList<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram>();
+            vmsPictogram = new ArrayList<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram>();
         }
         return this.vmsPictogram;
     }
@@ -99,10 +103,10 @@ public class VmsPictogramDisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsPictogramDisplayAreaExtension() {
+    public ExtensionType getVmsPictogramDisplayAreaExtension() {
         return vmsPictogramDisplayAreaExtension;
     }
 
@@ -111,10 +115,10 @@ public class VmsPictogramDisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsPictogramDisplayAreaExtension(_ExtensionType value) {
+    public void setVmsPictogramDisplayAreaExtension(ExtensionType value) {
         this.vmsPictogramDisplayAreaExtension = value;
     }
 

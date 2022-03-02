@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficData", propOrder = {
+@XmlType(name = "TrafficData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "forVehiclesWithCharacteristicsOf",
     "trafficDataExtension"
 })
@@ -43,8 +44,10 @@ public abstract class TrafficData
     extends BasicData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics forVehiclesWithCharacteristicsOf;
-    protected _ExtensionType trafficDataExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficDataExtension;
 
     /**
      * Gets the value of the forVehiclesWithCharacteristicsOf property.
@@ -75,10 +78,10 @@ public abstract class TrafficData
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficDataExtension() {
+    public ExtensionType getTrafficDataExtension() {
         return trafficDataExtension;
     }
 
@@ -87,10 +90,10 @@ public abstract class TrafficData
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficDataExtension(_ExtensionType value) {
+    public void setTrafficDataExtension(ExtensionType value) {
         this.trafficDataExtension = value;
     }
 

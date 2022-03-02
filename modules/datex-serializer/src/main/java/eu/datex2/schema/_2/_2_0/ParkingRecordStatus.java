@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRecordStatus", propOrder = {
+@XmlType(name = "ParkingRecordStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingRecordReference",
     "parkingStatusOriginTime",
     "parkingStatusDescription",
@@ -75,42 +75,56 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingRecordStatus {
 
-    @XmlElement(required = true)
-    protected _ParkingRecordVersionedReference parkingRecordReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingRecordVersionedReference parkingRecordReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingStatusOriginTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingStatusDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float parkingQueueingTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingConditionsEnum parkingConditions;
-    @XmlElement(type = Boolean.class)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", type = Boolean.class)
     protected List<Boolean> blurredAvailability;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingFaultEnum> parkingFault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<WinterEquipmentManagementTypeEnum> winterEquipmentManagementType;
-    protected List<_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus> parkingSpaceStatus;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus> parkingSpaceStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected ParkingOccupancy parkingOccupancy;
-    protected List<_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus> groupOfParkingSpacesStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus> groupOfParkingSpacesStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingStatusValidity parkingStatusValidity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingThresholds overrideParkingThresholds;
-    protected List<_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus> parkingEquipmentOrServiceFacilityStatus;
-    protected List<_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus> parkingUsageScenarioStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus> parkingEquipmentOrServiceFacilityStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus> parkingUsageScenarioStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingAccessStatus> parkingAccessStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRouteStatus> parkingRouteStatus;
-    protected _ExtensionType parkingRecordStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingRecordStatusExtension;
 
     /**
      * Gets the value of the parkingRecordReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingRecordVersionedReference }
+     *     {@link ParkingRecordVersionedReference }
      *     
      */
-    public _ParkingRecordVersionedReference getParkingRecordReference() {
+    public ParkingRecordVersionedReference getParkingRecordReference() {
         return parkingRecordReference;
     }
 
@@ -119,10 +133,10 @@ public abstract class ParkingRecordStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingRecordVersionedReference }
+     *     {@link ParkingRecordVersionedReference }
      *     
      */
-    public void setParkingRecordReference(_ParkingRecordVersionedReference value) {
+    public void setParkingRecordReference(ParkingRecordVersionedReference value) {
         this.parkingRecordReference = value;
     }
 
@@ -327,13 +341,13 @@ public abstract class ParkingRecordStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus }
+     * {@link ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus }
      * 
      * 
      */
-    public List<_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus> getParkingSpaceStatus() {
+    public List<ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus> getParkingSpaceStatus() {
         if (parkingSpaceStatus == null) {
-            parkingSpaceStatus = new ArrayList<_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus>();
+            parkingSpaceStatus = new ArrayList<ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus>();
         }
         return this.parkingSpaceStatus;
     }
@@ -380,13 +394,13 @@ public abstract class ParkingRecordStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus }
+     * {@link ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus }
      * 
      * 
      */
-    public List<_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus> getGroupOfParkingSpacesStatus() {
+    public List<ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus> getGroupOfParkingSpacesStatus() {
         if (groupOfParkingSpacesStatus == null) {
-            groupOfParkingSpacesStatus = new ArrayList<_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus>();
+            groupOfParkingSpacesStatus = new ArrayList<ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus>();
         }
         return this.groupOfParkingSpacesStatus;
     }
@@ -457,13 +471,13 @@ public abstract class ParkingRecordStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus }
+     * {@link ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus }
      * 
      * 
      */
-    public List<_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus> getParkingEquipmentOrServiceFacilityStatus() {
+    public List<ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus> getParkingEquipmentOrServiceFacilityStatus() {
         if (parkingEquipmentOrServiceFacilityStatus == null) {
-            parkingEquipmentOrServiceFacilityStatus = new ArrayList<_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus>();
+            parkingEquipmentOrServiceFacilityStatus = new ArrayList<ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus>();
         }
         return this.parkingEquipmentOrServiceFacilityStatus;
     }
@@ -486,13 +500,13 @@ public abstract class ParkingRecordStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus }
+     * {@link ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus }
      * 
      * 
      */
-    public List<_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus> getParkingUsageScenarioStatus() {
+    public List<ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus> getParkingUsageScenarioStatus() {
         if (parkingUsageScenarioStatus == null) {
-            parkingUsageScenarioStatus = new ArrayList<_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus>();
+            parkingUsageScenarioStatus = new ArrayList<ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus>();
         }
         return this.parkingUsageScenarioStatus;
     }
@@ -560,10 +574,10 @@ public abstract class ParkingRecordStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingRecordStatusExtension() {
+    public ExtensionType getParkingRecordStatusExtension() {
         return parkingRecordStatusExtension;
     }
 
@@ -572,10 +586,10 @@ public abstract class ParkingRecordStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingRecordStatusExtension(_ExtensionType value) {
+    public void setParkingRecordStatusExtension(ExtensionType value) {
         this.parkingRecordStatusExtension = value;
     }
 

@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ManagedCause", propOrder = {
+@XmlType(name = "ManagedCause", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "managedCause",
     "managedCauseExtension"
 })
@@ -35,18 +36,20 @@ public class ManagedCause
     extends Cause
 {
 
-    protected _SituationRecordVersionedReference managedCause;
-    protected _ExtensionType managedCauseExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected SituationRecordVersionedReference managedCause;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType managedCauseExtension;
 
     /**
      * Gets the value of the managedCause property.
      * 
      * @return
      *     possible object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public _SituationRecordVersionedReference getManagedCause() {
+    public SituationRecordVersionedReference getManagedCause() {
         return managedCause;
     }
 
@@ -55,10 +58,10 @@ public class ManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public void setManagedCause(_SituationRecordVersionedReference value) {
+    public void setManagedCause(SituationRecordVersionedReference value) {
         this.managedCause = value;
     }
 
@@ -67,10 +70,10 @@ public class ManagedCause
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getManagedCauseExtension() {
+    public ExtensionType getManagedCauseExtension() {
         return managedCauseExtension;
     }
 
@@ -79,10 +82,10 @@ public class ManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setManagedCauseExtension(_ExtensionType value) {
+    public void setManagedCauseExtension(ExtensionType value) {
         this.managedCauseExtension = value;
     }
 

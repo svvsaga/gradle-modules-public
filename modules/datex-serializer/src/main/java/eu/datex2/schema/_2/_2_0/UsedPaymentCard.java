@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UsedPaymentCard", propOrder = {
+@XmlType(name = "UsedPaymentCard", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "paymentCard",
     "otherPaymentCard",
     "paymentCardBrand",
@@ -41,14 +41,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class UsedPaymentCard {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected PaymentCardTypesEnum paymentCard;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String otherPaymentCard;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PaymentCardBrandsEnum paymentCardBrand;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String otherPaymentCardBrand;
-    protected _ExtensionType usedPaymentCardExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType usedPaymentCardExtension;
 
     /**
      * Gets the value of the paymentCard property.
@@ -151,10 +155,10 @@ public class UsedPaymentCard {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getUsedPaymentCardExtension() {
+    public ExtensionType getUsedPaymentCardExtension() {
         return usedPaymentCardExtension;
     }
 
@@ -163,10 +167,10 @@ public class UsedPaymentCard {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setUsedPaymentCardExtension(_ExtensionType value) {
+    public void setUsedPaymentCardExtension(ExtensionType value) {
         this.usedPaymentCardExtension = value;
     }
 

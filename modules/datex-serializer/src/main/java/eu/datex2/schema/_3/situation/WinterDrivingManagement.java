@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._WinterEquipmentManagementTypeEnum;
+import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common.WinterEquipmentManagementTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WinterDrivingManagement", propOrder = {
+@XmlType(name = "WinterDrivingManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "winterEquipmentManagementType",
-    "_WinterDrivingManagementExtension"
+    "winterDrivingManagementExtension"
 })
 public class WinterDrivingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
-    protected _WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
-    @XmlElement(name = "_winterDrivingManagementExtension")
-    protected _ExtensionType _WinterDrivingManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
+    @XmlElement(name = "_winterDrivingManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType winterDrivingManagementExtension;
 
     /**
      * Gets the value of the winterEquipmentManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link _WinterEquipmentManagementTypeEnum }
+     *     {@link WinterEquipmentManagementTypeEnum }
      *     
      */
-    public _WinterEquipmentManagementTypeEnum getWinterEquipmentManagementType() {
+    public WinterEquipmentManagementTypeEnum getWinterEquipmentManagementType() {
         return winterEquipmentManagementType;
     }
 
@@ -63,35 +63,35 @@ public class WinterDrivingManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _WinterEquipmentManagementTypeEnum }
+     *     {@link WinterEquipmentManagementTypeEnum }
      *     
      */
-    public void setWinterEquipmentManagementType(_WinterEquipmentManagementTypeEnum value) {
+    public void setWinterEquipmentManagementType(WinterEquipmentManagementTypeEnum value) {
         this.winterEquipmentManagementType = value;
     }
 
     /**
-     * Gets the value of the _WinterDrivingManagementExtension property.
+     * Gets the value of the winterDrivingManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_WinterDrivingManagementExtension() {
-        return _WinterDrivingManagementExtension;
+    public ExtensionType getWinterDrivingManagementExtension() {
+        return winterDrivingManagementExtension;
     }
 
     /**
-     * Sets the value of the _WinterDrivingManagementExtension property.
+     * Sets the value of the winterDrivingManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_WinterDrivingManagementExtension(_ExtensionType value) {
-        this._WinterDrivingManagementExtension = value;
+    public void setWinterDrivingManagementExtension(ExtensionType value) {
+        this.winterDrivingManagementExtension = value;
     }
 
 }

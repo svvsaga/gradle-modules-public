@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,27 +30,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceSettings", propOrder = {
+@XmlType(name = "ReferenceSettings", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "predefinedNonOrderedLocationGroupReference",
     "trafficStatusDefault",
     "referenceSettingsExtension"
 })
 public class ReferenceSettings {
 
-    protected _PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TrafficStatusEnum trafficStatusDefault;
-    protected _ExtensionType referenceSettingsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType referenceSettingsExtension;
 
     /**
      * Gets the value of the predefinedNonOrderedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public _PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
+    public PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
         return predefinedNonOrderedLocationGroupReference;
     }
 
@@ -58,10 +62,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupReference(_PredefinedNonOrderedLocationGroupVersionedReference value) {
+    public void setPredefinedNonOrderedLocationGroupReference(PredefinedNonOrderedLocationGroupVersionedReference value) {
         this.predefinedNonOrderedLocationGroupReference = value;
     }
 
@@ -94,10 +98,10 @@ public class ReferenceSettings {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getReferenceSettingsExtension() {
+    public ExtensionType getReferenceSettingsExtension() {
         return referenceSettingsExtension;
     }
 
@@ -106,10 +110,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setReferenceSettingsExtension(_ExtensionType value) {
+    public void setReferenceSettingsExtension(ExtensionType value) {
         this.referenceSettingsExtension = value;
     }
 

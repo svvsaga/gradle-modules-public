@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrClosedLineLocationReference", propOrder = {
+@XmlType(name = "OpenlrClosedLineLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrLocationReferencePoint",
     "openlrLastLine",
     "openlrClosedLineLocationReferenceExtension"
@@ -40,11 +40,12 @@ public class OpenlrClosedLineLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<OpenlrLocationReferencePoint> openlrLocationReferencePoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLineAttributes openlrLastLine;
-    protected _ExtensionType openlrClosedLineLocationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrClosedLineLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrLocationReferencePoint property.
@@ -104,10 +105,10 @@ public class OpenlrClosedLineLocationReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrClosedLineLocationReferenceExtension() {
+    public ExtensionType getOpenlrClosedLineLocationReferenceExtension() {
         return openlrClosedLineLocationReferenceExtension;
     }
 
@@ -116,10 +117,10 @@ public class OpenlrClosedLineLocationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrClosedLineLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrClosedLineLocationReferenceExtension(ExtensionType value) {
         this.openlrClosedLineLocationReferenceExtension = value;
     }
 

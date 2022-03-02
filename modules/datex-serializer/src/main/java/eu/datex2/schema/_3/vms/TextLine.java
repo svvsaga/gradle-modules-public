@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -45,26 +45,31 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextLine", propOrder = {
+@XmlType(name = "TextLine", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "textLine",
     "lineColour",
     "lineFlashing",
     "lineHtml",
     "isExactTextOnSign",
     "textInformationType",
-    "_TextLineExtension"
+    "textLineExtension"
 })
 public class TextLine {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected String textLine;
-    protected _ColourEnum lineColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected ColourEnum lineColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean lineFlashing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String lineHtml;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isExactTextOnSign;
-    protected List<_InformationTypeEnum> textInformationType;
-    @XmlElement(name = "_textLineExtension")
-    protected _ExtensionType _TextLineExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<InformationTypeEnum> textInformationType;
+    @XmlElement(name = "_textLineExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType textLineExtension;
     @XmlAttribute(name = "lineLanguage")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lineLanguage;
@@ -98,10 +103,10 @@ public class TextLine {
      * 
      * @return
      *     possible object is
-     *     {@link _ColourEnum }
+     *     {@link ColourEnum }
      *     
      */
-    public _ColourEnum getLineColour() {
+    public ColourEnum getLineColour() {
         return lineColour;
     }
 
@@ -110,10 +115,10 @@ public class TextLine {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ColourEnum }
+     *     {@link ColourEnum }
      *     
      */
-    public void setLineColour(_ColourEnum value) {
+    public void setLineColour(ColourEnum value) {
         this.lineColour = value;
     }
 
@@ -207,39 +212,39 @@ public class TextLine {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _InformationTypeEnum }
+     * {@link InformationTypeEnum }
      * 
      * 
      */
-    public List<_InformationTypeEnum> getTextInformationType() {
+    public List<InformationTypeEnum> getTextInformationType() {
         if (textInformationType == null) {
-            textInformationType = new ArrayList<_InformationTypeEnum>();
+            textInformationType = new ArrayList<InformationTypeEnum>();
         }
         return this.textInformationType;
     }
 
     /**
-     * Gets the value of the _TextLineExtension property.
+     * Gets the value of the textLineExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TextLineExtension() {
-        return _TextLineExtension;
+    public ExtensionType getTextLineExtension() {
+        return textLineExtension;
     }
 
     /**
-     * Sets the value of the _TextLineExtension property.
+     * Sets the value of the textLineExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TextLineExtension(_ExtensionType value) {
-        this._TextLineExtension = value;
+    public void setTextLineExtension(ExtensionType value) {
+        this.textLineExtension = value;
     }
 
     /**

@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RGBColour", propOrder = {
+@XmlType(name = "RGBColour", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "rgbRedValue",
     "rgbGreenValue",
     "rgbBlueValue",
@@ -42,17 +42,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RGBColour {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbRedValue;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbGreenValue;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbBlueValue;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString colourName;
-    protected _ExtensionType rgbColourExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType rgbColourExtension;
 
     /**
      * Gets the value of the rgbRedValue property.
@@ -155,10 +157,10 @@ public class RGBColour {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRgbColourExtension() {
+    public ExtensionType getRgbColourExtension() {
         return rgbColourExtension;
     }
 
@@ -167,10 +169,10 @@ public class RGBColour {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRgbColourExtension(_ExtensionType value) {
+    public void setRgbColourExtension(ExtensionType value) {
         this.rgbColourExtension = value;
     }
 

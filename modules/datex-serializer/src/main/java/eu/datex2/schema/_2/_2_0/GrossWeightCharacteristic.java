@@ -30,18 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GrossWeightCharacteristic", propOrder = {
+@XmlType(name = "GrossWeightCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comparisonOperator",
     "grossVehicleWeight",
     "grossWeightCharacteristicExtension"
 })
 public class GrossWeightCharacteristic {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float grossVehicleWeight;
-    protected _ExtensionType grossWeightCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType grossWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +90,10 @@ public class GrossWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGrossWeightCharacteristicExtension() {
+    public ExtensionType getGrossWeightCharacteristicExtension() {
         return grossWeightCharacteristicExtension;
     }
 
@@ -100,10 +102,10 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGrossWeightCharacteristicExtension(_ExtensionType value) {
+    public void setGrossWeightCharacteristicExtension(ExtensionType value) {
         this.grossWeightCharacteristicExtension = value;
     }
 

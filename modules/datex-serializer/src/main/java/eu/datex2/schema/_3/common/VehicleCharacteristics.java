@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCharacteristics", propOrder = {
+@XmlType(name = "VehicleCharacteristics", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "fuelType",
     "loadType",
     "vehicleEquipment",
@@ -61,26 +61,39 @@ import jakarta.xml.bind.annotation.XmlType;
     "heaviestAxleWeightCharacteristic",
     "numberOfAxlesCharacteristic",
     "emissions",
-    "_VehicleCharacteristicsExtension"
+    "vehicleCharacteristicsExtension"
 })
 public class VehicleCharacteristics {
 
-    protected List<_FuelTypeEnum> fuelType;
-    protected _LoadTypeEnum loadType;
-    protected _VehicleEquipmentEnum vehicleEquipment;
-    protected List<_VehicleTypeEnum> vehicleType;
-    protected _VehicleUsageEnum vehicleUsage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected List<FuelTypeEnum> fuelType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected LoadTypeEnum loadType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected VehicleEquipmentEnum vehicleEquipment;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected List<VehicleTypeEnum> vehicleType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected VehicleUsageEnum vehicleUsage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger yearOfFirstRegistration;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<GrossWeightCharacteristic> grossWeightCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<HeightCharacteristic> heightCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<LengthCharacteristic> lengthCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<WidthCharacteristic> widthCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<HeaviestAxleWeightCharacteristic> heaviestAxleWeightCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Emissions emissions;
-    @XmlElement(name = "_vehicleCharacteristicsExtension")
-    protected _ExtensionType _VehicleCharacteristicsExtension;
+    @XmlElement(name = "_vehicleCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType vehicleCharacteristicsExtension;
 
     /**
      * Gets the value of the fuelType property.
@@ -100,13 +113,13 @@ public class VehicleCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _FuelTypeEnum }
+     * {@link FuelTypeEnum }
      * 
      * 
      */
-    public List<_FuelTypeEnum> getFuelType() {
+    public List<FuelTypeEnum> getFuelType() {
         if (fuelType == null) {
-            fuelType = new ArrayList<_FuelTypeEnum>();
+            fuelType = new ArrayList<FuelTypeEnum>();
         }
         return this.fuelType;
     }
@@ -116,10 +129,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _LoadTypeEnum }
+     *     {@link LoadTypeEnum }
      *     
      */
-    public _LoadTypeEnum getLoadType() {
+    public LoadTypeEnum getLoadType() {
         return loadType;
     }
 
@@ -128,10 +141,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _LoadTypeEnum }
+     *     {@link LoadTypeEnum }
      *     
      */
-    public void setLoadType(_LoadTypeEnum value) {
+    public void setLoadType(LoadTypeEnum value) {
         this.loadType = value;
     }
 
@@ -140,10 +153,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleEquipmentEnum }
+     *     {@link VehicleEquipmentEnum }
      *     
      */
-    public _VehicleEquipmentEnum getVehicleEquipment() {
+    public VehicleEquipmentEnum getVehicleEquipment() {
         return vehicleEquipment;
     }
 
@@ -152,10 +165,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleEquipmentEnum }
+     *     {@link VehicleEquipmentEnum }
      *     
      */
-    public void setVehicleEquipment(_VehicleEquipmentEnum value) {
+    public void setVehicleEquipment(VehicleEquipmentEnum value) {
         this.vehicleEquipment = value;
     }
 
@@ -177,13 +190,13 @@ public class VehicleCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VehicleTypeEnum }
+     * {@link VehicleTypeEnum }
      * 
      * 
      */
-    public List<_VehicleTypeEnum> getVehicleType() {
+    public List<VehicleTypeEnum> getVehicleType() {
         if (vehicleType == null) {
-            vehicleType = new ArrayList<_VehicleTypeEnum>();
+            vehicleType = new ArrayList<VehicleTypeEnum>();
         }
         return this.vehicleType;
     }
@@ -193,10 +206,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleUsageEnum }
+     *     {@link VehicleUsageEnum }
      *     
      */
-    public _VehicleUsageEnum getVehicleUsage() {
+    public VehicleUsageEnum getVehicleUsage() {
         return vehicleUsage;
     }
 
@@ -205,10 +218,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleUsageEnum }
+     *     {@link VehicleUsageEnum }
      *     
      */
-    public void setVehicleUsage(_VehicleUsageEnum value) {
+    public void setVehicleUsage(VehicleUsageEnum value) {
         this.vehicleUsage = value;
     }
 
@@ -435,27 +448,27 @@ public class VehicleCharacteristics {
     }
 
     /**
-     * Gets the value of the _VehicleCharacteristicsExtension property.
+     * Gets the value of the vehicleCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VehicleCharacteristicsExtension() {
-        return _VehicleCharacteristicsExtension;
+    public ExtensionType getVehicleCharacteristicsExtension() {
+        return vehicleCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the _VehicleCharacteristicsExtension property.
+     * Sets the value of the vehicleCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VehicleCharacteristicsExtension(_ExtensionType value) {
-        this._VehicleCharacteristicsExtension = value;
+    public void setVehicleCharacteristicsExtension(ExtensionType value) {
+        this.vehicleCharacteristicsExtension = value;
     }
 
 }

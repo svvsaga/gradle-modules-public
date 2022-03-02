@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegFramedPoint", propOrder = {
+@XmlType(name = "TpegFramedPoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegFramedPointLocationType",
     "framedPoint",
     "to",
@@ -43,16 +43,17 @@ public class TpegFramedPoint
     extends TpegPointLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01FramedPointLocationSubtypeEnum tpegFramedPointLocationType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegNonJunctionPoint framedPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegPoint to;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegPoint from;
-    protected _ExtensionType tpegFramedPointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegFramedPointExtension;
 
     /**
      * Gets the value of the tpegFramedPointLocationType property.
@@ -155,10 +156,10 @@ public class TpegFramedPoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegFramedPointExtension() {
+    public ExtensionType getTpegFramedPointExtension() {
         return tpegFramedPointExtension;
     }
 
@@ -167,10 +168,10 @@ public class TpegFramedPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegFramedPointExtension(_ExtensionType value) {
+    public void setTpegFramedPointExtension(ExtensionType value) {
         this.tpegFramedPointExtension = value;
     }
 

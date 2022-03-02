@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Equipment", propOrder = {
+@XmlType(name = "Equipment", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "equipmentType",
     "electricCharging",
     "equipmentExtension"
@@ -39,11 +39,13 @@ public class Equipment
     extends ParkingEquipmentOrServiceFacility
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentTypeEnum equipmentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ElectricCharging electricCharging;
-    protected _ExtensionType equipmentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType equipmentExtension;
 
     /**
      * Gets the value of the equipmentType property.
@@ -98,10 +100,10 @@ public class Equipment
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getEquipmentExtension() {
+    public ExtensionType getEquipmentExtension() {
         return equipmentExtension;
     }
 
@@ -110,10 +112,10 @@ public class Equipment
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setEquipmentExtension(_ExtensionType value) {
+    public void setEquipmentExtension(ExtensionType value) {
         this.equipmentExtension = value;
     }
 

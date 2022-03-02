@@ -35,21 +35,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UrlLink", propOrder = {
+@XmlType(name = "UrlLink", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "urlLinkAddress",
     "urlLinkDescription",
     "urlLinkType",
-    "_UrlLinkExtension"
+    "urlLinkExtension"
 })
 public class UrlLink {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString urlLinkDescription;
-    protected _UrlLinkTypeEnum urlLinkType;
-    @XmlElement(name = "_urlLinkExtension")
-    protected _ExtensionType _UrlLinkExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected UrlLinkTypeEnum urlLinkType;
+    @XmlElement(name = "_urlLinkExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType urlLinkExtension;
 
     /**
      * Gets the value of the urlLinkAddress property.
@@ -104,10 +106,10 @@ public class UrlLink {
      * 
      * @return
      *     possible object is
-     *     {@link _UrlLinkTypeEnum }
+     *     {@link UrlLinkTypeEnum }
      *     
      */
-    public _UrlLinkTypeEnum getUrlLinkType() {
+    public UrlLinkTypeEnum getUrlLinkType() {
         return urlLinkType;
     }
 
@@ -116,35 +118,35 @@ public class UrlLink {
      * 
      * @param value
      *     allowed object is
-     *     {@link _UrlLinkTypeEnum }
+     *     {@link UrlLinkTypeEnum }
      *     
      */
-    public void setUrlLinkType(_UrlLinkTypeEnum value) {
+    public void setUrlLinkType(UrlLinkTypeEnum value) {
         this.urlLinkType = value;
     }
 
     /**
-     * Gets the value of the _UrlLinkExtension property.
+     * Gets the value of the urlLinkExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_UrlLinkExtension() {
-        return _UrlLinkExtension;
+    public ExtensionType getUrlLinkExtension() {
+        return urlLinkExtension;
     }
 
     /**
-     * Sets the value of the _UrlLinkExtension property.
+     * Sets the value of the urlLinkExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_UrlLinkExtension(_ExtensionType value) {
-        this._UrlLinkExtension = value;
+    public void setUrlLinkExtension(ExtensionType value) {
+        this.urlLinkExtension = value;
     }
 
 }

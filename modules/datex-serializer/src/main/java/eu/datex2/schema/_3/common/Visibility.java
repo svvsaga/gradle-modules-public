@@ -30,16 +30,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Visibility", propOrder = {
+@XmlType(name = "Visibility", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "minimumVisibilityDistance",
-    "_VisibilityExtension"
+    "visibilityExtension"
 })
 public class Visibility {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected IntegerMetreDistanceValue minimumVisibilityDistance;
-    @XmlElement(name = "_visibilityExtension")
-    protected _ExtensionType _VisibilityExtension;
+    @XmlElement(name = "_visibilityExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType visibilityExtension;
 
     /**
      * Gets the value of the minimumVisibilityDistance property.
@@ -66,27 +66,27 @@ public class Visibility {
     }
 
     /**
-     * Gets the value of the _VisibilityExtension property.
+     * Gets the value of the visibilityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VisibilityExtension() {
-        return _VisibilityExtension;
+    public ExtensionType getVisibilityExtension() {
+        return visibilityExtension;
     }
 
     /**
-     * Sets the value of the _VisibilityExtension property.
+     * Sets the value of the visibilityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VisibilityExtension(_ExtensionType value) {
-        this._VisibilityExtension = value;
+    public void setVisibilityExtension(ExtensionType value) {
+        this.visibilityExtension = value;
     }
 
 }

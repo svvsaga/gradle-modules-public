@@ -1,106 +1,88 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TrafficConstrictionTypeEnum.
+ * <p>Java class for _TrafficConstrictionTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TrafficConstrictionTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="carriagewayBlocked"/&gt;
- *     &lt;enumeration value="carriagewayPartiallyObstructed"/&gt;
- *     &lt;enumeration value="lanesBlocked"/&gt;
- *     &lt;enumeration value="lanesPartiallyObstructed"/&gt;
- *     &lt;enumeration value="roadBlocked"/&gt;
- *     &lt;enumeration value="roadPartiallyObstructed"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TrafficConstrictionTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;TrafficConstrictionTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TrafficConstrictionTypeEnum")
-@XmlEnum
-public enum TrafficConstrictionTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TrafficConstrictionTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class TrafficConstrictionTypeEnum {
 
-
-    /**
-     * The carriageway is totally obstructed in the specified direction due to an
-     *             unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("carriagewayBlocked")
-    CARRIAGEWAY_BLOCKED("carriagewayBlocked"),
+    @XmlValue
+    protected TrafficConstrictionTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The carriageway is partially obstructed in the specified direction due to an
-     *             unplanned event.
-     *           
+     * Types of constriction to which traffic is subjected as a result of an event.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link TrafficConstrictionTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("carriagewayPartiallyObstructed")
-    CARRIAGEWAY_PARTIALLY_OBSTRUCTED("carriagewayPartiallyObstructed"),
-
-    /**
-     * One or more lanes is totally obstructed in the specified direction due to an
-     *             unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("lanesBlocked")
-    LANES_BLOCKED("lanesBlocked"),
-
-    /**
-     * One or more lanes is partially obstructed in the specified direction due to an
-     *             unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("lanesPartiallyObstructed")
-    LANES_PARTIALLY_OBSTRUCTED("lanesPartiallyObstructed"),
-
-    /**
-     * The road is totally obstructed, for all vehicles in both directions, due to an
-     *             unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("roadBlocked")
-    ROAD_BLOCKED("roadBlocked"),
-
-    /**
-     * The road is partially obstructed in both directions due to an unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("roadPartiallyObstructed")
-    ROAD_PARTIALLY_OBSTRUCTED("roadPartiallyObstructed"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TrafficConstrictionTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TrafficConstrictionTypeEnum2 getValue() {
         return value;
     }
 
-    public static TrafficConstrictionTypeEnum fromValue(String v) {
-        for (TrafficConstrictionTypeEnum c: TrafficConstrictionTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TrafficConstrictionTypeEnum2 }
+     *     
+     */
+    public void setValue(TrafficConstrictionTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -30,91 +30,91 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _MeasuredOrDerivedDataTypeEnum }
+     * Create an instance of {@link MeasuredOrDerivedDataTypeEnum }
      * 
      */
-    public _MeasuredOrDerivedDataTypeEnum create_MeasuredOrDerivedDataTypeEnum() {
-        return new _MeasuredOrDerivedDataTypeEnum();
+    public MeasuredOrDerivedDataTypeEnum createMeasuredOrDerivedDataTypeEnum() {
+        return new MeasuredOrDerivedDataTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteIndexMeasurementSpecificCharacteristics }
+     * Create an instance of {@link MeasurementSiteIndexMeasurementSpecificCharacteristics }
      * 
      */
-    public _MeasurementSiteIndexMeasurementSpecificCharacteristics create_MeasurementSiteIndexMeasurementSpecificCharacteristics() {
-        return new _MeasurementSiteIndexMeasurementSpecificCharacteristics();
+    public MeasurementSiteIndexMeasurementSpecificCharacteristics createMeasurementSiteIndexMeasurementSpecificCharacteristics() {
+        return new MeasurementSiteIndexMeasurementSpecificCharacteristics();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteTableVersionedReference }
+     * Create an instance of {@link MeasurementSiteTableVersionedReference }
      * 
      */
-    public _MeasurementSiteTableVersionedReference create_MeasurementSiteTableVersionedReference() {
-        return new _MeasurementSiteTableVersionedReference();
+    public MeasurementSiteTableVersionedReference createMeasurementSiteTableVersionedReference() {
+        return new MeasurementSiteTableVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _MeasurementSiteVersionedReference }
+     * Create an instance of {@link MeasurementSiteVersionedReference }
      * 
      */
-    public _MeasurementSiteVersionedReference create_MeasurementSiteVersionedReference() {
-        return new _MeasurementSiteVersionedReference();
+    public MeasurementSiteVersionedReference createMeasurementSiteVersionedReference() {
+        return new MeasurementSiteVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PhysicalQuantityFaultEnum }
+     * Create an instance of {@link PhysicalQuantityFaultEnum }
      * 
      */
-    public _PhysicalQuantityFaultEnum create_PhysicalQuantityFaultEnum() {
-        return new _PhysicalQuantityFaultEnum();
+    public PhysicalQuantityFaultEnum createPhysicalQuantityFaultEnum() {
+        return new PhysicalQuantityFaultEnum();
     }
 
     /**
-     * Create an instance of {@link _PredefinedLocationGroupVersionedReference }
+     * Create an instance of {@link PredefinedLocationGroupVersionedReference }
      * 
      */
-    public _PredefinedLocationGroupVersionedReference create_PredefinedLocationGroupVersionedReference() {
-        return new _PredefinedLocationGroupVersionedReference();
+    public PredefinedLocationGroupVersionedReference createPredefinedLocationGroupVersionedReference() {
+        return new PredefinedLocationGroupVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _SiteMeasurementsIndexPhysicalQuantity }
+     * Create an instance of {@link SiteMeasurementsIndexPhysicalQuantity }
      * 
      */
-    public _SiteMeasurementsIndexPhysicalQuantity create_SiteMeasurementsIndexPhysicalQuantity() {
-        return new _SiteMeasurementsIndexPhysicalQuantity();
+    public SiteMeasurementsIndexPhysicalQuantity createSiteMeasurementsIndexPhysicalQuantity() {
+        return new SiteMeasurementsIndexPhysicalQuantity();
     }
 
     /**
-     * Create an instance of {@link _TimeMeaningEnum }
+     * Create an instance of {@link TimeMeaningEnum }
      * 
      */
-    public _TimeMeaningEnum create_TimeMeaningEnum() {
-        return new _TimeMeaningEnum();
+    public TimeMeaningEnum createTimeMeaningEnum() {
+        return new TimeMeaningEnum();
     }
 
     /**
-     * Create an instance of {@link _TrafficStatusEnum }
+     * Create an instance of {@link TrafficStatusEnum }
      * 
      */
-    public _TrafficStatusEnum create_TrafficStatusEnum() {
-        return new _TrafficStatusEnum();
+    public TrafficStatusEnum createTrafficStatusEnum() {
+        return new TrafficStatusEnum();
     }
 
     /**
-     * Create an instance of {@link _TravelTimeTrendTypeEnum }
+     * Create an instance of {@link TravelTimeTrendTypeEnum }
      * 
      */
-    public _TravelTimeTrendTypeEnum create_TravelTimeTrendTypeEnum() {
-        return new _TravelTimeTrendTypeEnum();
+    public TravelTimeTrendTypeEnum createTravelTimeTrendTypeEnum() {
+        return new TravelTimeTrendTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TravelTimeTypeEnum }
+     * Create an instance of {@link TravelTimeTypeEnum }
      * 
      */
-    public _TravelTimeTypeEnum create_TravelTimeTypeEnum() {
-        return new _TravelTimeTypeEnum();
+    public TravelTimeTypeEnum createTravelTimeTypeEnum() {
+        return new TravelTimeTypeEnum();
     }
 
     /**

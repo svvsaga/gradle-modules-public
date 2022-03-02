@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,9 +34,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficElement", propOrder = {
+@XmlType(name = "TrafficElement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "trafficConstrictionType",
-    "_TrafficElementExtension"
+    "trafficElementExtension"
 })
 @XmlSeeAlso({
     AbnormalTraffic.class,
@@ -50,19 +50,20 @@ public abstract class TrafficElement
     extends SituationRecord
 {
 
-    protected _TrafficConstrictionTypeEnum trafficConstrictionType;
-    @XmlElement(name = "_trafficElementExtension")
-    protected _ExtensionType _TrafficElementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected TrafficConstrictionTypeEnum trafficConstrictionType;
+    @XmlElement(name = "_trafficElementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType trafficElementExtension;
 
     /**
      * Gets the value of the trafficConstrictionType property.
      * 
      * @return
      *     possible object is
-     *     {@link _TrafficConstrictionTypeEnum }
+     *     {@link TrafficConstrictionTypeEnum }
      *     
      */
-    public _TrafficConstrictionTypeEnum getTrafficConstrictionType() {
+    public TrafficConstrictionTypeEnum getTrafficConstrictionType() {
         return trafficConstrictionType;
     }
 
@@ -71,35 +72,35 @@ public abstract class TrafficElement
      * 
      * @param value
      *     allowed object is
-     *     {@link _TrafficConstrictionTypeEnum }
+     *     {@link TrafficConstrictionTypeEnum }
      *     
      */
-    public void setTrafficConstrictionType(_TrafficConstrictionTypeEnum value) {
+    public void setTrafficConstrictionType(TrafficConstrictionTypeEnum value) {
         this.trafficConstrictionType = value;
     }
 
     /**
-     * Gets the value of the _TrafficElementExtension property.
+     * Gets the value of the trafficElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficElementExtension() {
-        return _TrafficElementExtension;
+    public ExtensionType getTrafficElementExtension() {
+        return trafficElementExtension;
     }
 
     /**
-     * Sets the value of the _TrafficElementExtension property.
+     * Sets the value of the trafficElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficElementExtension(_ExtensionType value) {
-        this._TrafficElementExtension = value;
+    public void setTrafficElementExtension(ExtensionType value) {
+        this.trafficElementExtension = value;
     }
 
 }

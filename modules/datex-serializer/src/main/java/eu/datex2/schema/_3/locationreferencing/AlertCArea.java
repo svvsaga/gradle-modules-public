@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,25 +34,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCArea", propOrder = {
+@XmlType(name = "AlertCArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
     "areaLocation",
-    "_AlertCAreaExtension"
+    "alertCAreaExtension"
 })
 public class AlertCArea {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCLocation areaLocation;
-    @XmlElement(name = "_alertCAreaExtension")
-    protected _ExtensionType _AlertCAreaExtension;
+    @XmlElement(name = "_alertCAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCAreaExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -151,27 +151,27 @@ public class AlertCArea {
     }
 
     /**
-     * Gets the value of the _AlertCAreaExtension property.
+     * Gets the value of the alertCAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCAreaExtension() {
-        return _AlertCAreaExtension;
+    public ExtensionType getAlertCAreaExtension() {
+        return alertCAreaExtension;
     }
 
     /**
-     * Sets the value of the _AlertCAreaExtension property.
+     * Sets the value of the alertCAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCAreaExtension(_ExtensionType value) {
-        this._AlertCAreaExtension = value;
+    public void setAlertCAreaExtension(ExtensionType value) {
+        this.alertCAreaExtension = value;
     }
 
 }

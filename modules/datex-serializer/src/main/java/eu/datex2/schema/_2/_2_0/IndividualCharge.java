@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IndividualCharge", propOrder = {
+@XmlType(name = "IndividualCharge", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "chargeBandReference",
     "chargePaid",
     "chargeCurrency",
@@ -46,26 +46,32 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class IndividualCharge {
 
-    protected _ChargeBandVersionedReference chargeBandReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ChargeBandVersionedReference chargeBandReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected BigDecimal chargePaid;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CurrencyEnum chargeCurrency;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected MeansOfPaymentEnum usedMeansOfPayment;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean withReservation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected UsedPaymentCard usedPaymentCard;
-    protected _ExtensionType individualChargeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType individualChargeExtension;
 
     /**
      * Gets the value of the chargeBandReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ChargeBandVersionedReference }
+     *     {@link ChargeBandVersionedReference }
      *     
      */
-    public _ChargeBandVersionedReference getChargeBandReference() {
+    public ChargeBandVersionedReference getChargeBandReference() {
         return chargeBandReference;
     }
 
@@ -74,10 +80,10 @@ public class IndividualCharge {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ChargeBandVersionedReference }
+     *     {@link ChargeBandVersionedReference }
      *     
      */
-    public void setChargeBandReference(_ChargeBandVersionedReference value) {
+    public void setChargeBandReference(ChargeBandVersionedReference value) {
         this.chargeBandReference = value;
     }
 
@@ -206,10 +212,10 @@ public class IndividualCharge {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getIndividualChargeExtension() {
+    public ExtensionType getIndividualChargeExtension() {
         return individualChargeExtension;
     }
 
@@ -218,10 +224,10 @@ public class IndividualCharge {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setIndividualChargeExtension(_ExtensionType value) {
+    public void setIndividualChargeExtension(ExtensionType value) {
         this.individualChargeExtension = value;
     }
 

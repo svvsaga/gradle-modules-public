@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,11 +36,11 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearLocation", propOrder = {
+@XmlType(name = "LinearLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrLinear",
     "gmlLineString",
     "secondarySupplementaryDescription",
-    "_LinearLocationExtension"
+    "linearLocationExtension"
 })
 @XmlSeeAlso({
     SingleRoadLinearLocation.class
@@ -49,11 +49,14 @@ public class LinearLocation
     extends NetworkLocation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrLinear openlrLinear;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected GmlLineString gmlLineString;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected SupplementaryPositionalDescription secondarySupplementaryDescription;
-    @XmlElement(name = "_linearLocationExtension")
-    protected _ExtensionType _LinearLocationExtension;
+    @XmlElement(name = "_linearLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType linearLocationExtension;
 
     /**
      * Gets the value of the openlrLinear property.
@@ -128,27 +131,27 @@ public class LinearLocation
     }
 
     /**
-     * Gets the value of the _LinearLocationExtension property.
+     * Gets the value of the linearLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LinearLocationExtension() {
-        return _LinearLocationExtension;
+    public ExtensionType getLinearLocationExtension() {
+        return linearLocationExtension;
     }
 
     /**
-     * Sets the value of the _LinearLocationExtension property.
+     * Sets the value of the linearLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LinearLocationExtension(_ExtensionType value) {
-        this._LinearLocationExtension = value;
+    public void setLinearLocationExtension(ExtensionType value) {
+        this.linearLocationExtension = value;
     }
 
 }

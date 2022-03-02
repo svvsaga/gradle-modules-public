@@ -31,17 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationIntensityValue", propOrder = {
+@XmlType(name = "PrecipitationIntensityValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "millimetresPerHourIntensity",
-    "_PrecipitationIntensityValueExtension"
+    "precipitationIntensityValueExtension"
 })
 public class PrecipitationIntensityValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float millimetresPerHourIntensity;
-    @XmlElement(name = "_precipitationIntensityValueExtension")
-    protected _ExtensionType _PrecipitationIntensityValueExtension;
+    @XmlElement(name = "_precipitationIntensityValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType precipitationIntensityValueExtension;
 
     /**
      * Gets the value of the millimetresPerHourIntensity property.
@@ -60,27 +61,27 @@ public class PrecipitationIntensityValue
     }
 
     /**
-     * Gets the value of the _PrecipitationIntensityValueExtension property.
+     * Gets the value of the precipitationIntensityValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PrecipitationIntensityValueExtension() {
-        return _PrecipitationIntensityValueExtension;
+    public ExtensionType getPrecipitationIntensityValueExtension() {
+        return precipitationIntensityValueExtension;
     }
 
     /**
-     * Sets the value of the _PrecipitationIntensityValueExtension property.
+     * Sets the value of the precipitationIntensityValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PrecipitationIntensityValueExtension(_ExtensionType value) {
-        this._PrecipitationIntensityValueExtension = value;
+    public void setPrecipitationIntensityValueExtension(ExtensionType value) {
+        this.precipitationIntensityValueExtension = value;
     }
 
 }

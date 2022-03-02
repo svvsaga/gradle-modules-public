@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingVehicle", propOrder = {
+@XmlType(name = "ParkingVehicle", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingRecordReference",
     "parkingSpaceReference",
     "groupOfParkingSpacesReference",
@@ -51,16 +51,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingVehicle {
 
-    @XmlElement(required = true)
-    protected _ParkingRecordVersionedReference parkingRecordReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingRecordVersionedReference parkingRecordReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingSpaceReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> groupOfParkingSpacesReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingPermit> parkingPermit;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected Vehicle vehicle;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected IndividualCharge individualCharge;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod parkingPeriod;
-    protected _ExtensionType parkingVehicleExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingVehicleExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -71,10 +77,10 @@ public class ParkingVehicle {
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingRecordVersionedReference }
+     *     {@link ParkingRecordVersionedReference }
      *     
      */
-    public _ParkingRecordVersionedReference getParkingRecordReference() {
+    public ParkingRecordVersionedReference getParkingRecordReference() {
         return parkingRecordReference;
     }
 
@@ -83,10 +89,10 @@ public class ParkingVehicle {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingRecordVersionedReference }
+     *     {@link ParkingRecordVersionedReference }
      *     
      */
-    public void setParkingRecordReference(_ParkingRecordVersionedReference value) {
+    public void setParkingRecordReference(ParkingRecordVersionedReference value) {
         this.parkingRecordReference = value;
     }
 
@@ -249,10 +255,10 @@ public class ParkingVehicle {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingVehicleExtension() {
+    public ExtensionType getParkingVehicleExtension() {
         return parkingVehicleExtension;
     }
 
@@ -261,10 +267,10 @@ public class ParkingVehicle {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingVehicleExtension(_ExtensionType value) {
+    public void setParkingVehicleExtension(ExtensionType value) {
         this.parkingVehicleExtension = value;
     }
 

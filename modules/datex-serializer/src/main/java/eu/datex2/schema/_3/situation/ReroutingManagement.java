@@ -3,8 +3,8 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Destination;
 import eu.datex2.schema._3.locationreferencing.Itinerary;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReroutingManagement", propOrder = {
+@XmlType(name = "ReroutingManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "reroutingManagementType",
     "reroutingItineraryDescription",
     "signedRerouting",
@@ -55,24 +55,32 @@ import jakarta.xml.bind.annotation.XmlType;
     "roadOrJunctionNumber",
     "alternativeRoute",
     "destination",
-    "_ReroutingManagementExtension"
+    "reroutingManagementExtension"
 })
 public class ReroutingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
-    protected List<_ReroutingManagementTypeEnum> reroutingManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected List<ReroutingManagementTypeEnum> reroutingManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString reroutingItineraryDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean signedRerouting;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String alternativeRouteIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String entry;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String exit;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String roadOrJunctionNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Itinerary> alternativeRoute;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Destination destination;
-    @XmlElement(name = "_reroutingManagementExtension")
-    protected _ExtensionType _ReroutingManagementExtension;
+    @XmlElement(name = "_reroutingManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType reroutingManagementExtension;
 
     /**
      * Gets the value of the reroutingManagementType property.
@@ -92,13 +100,13 @@ public class ReroutingManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ReroutingManagementTypeEnum }
+     * {@link ReroutingManagementTypeEnum }
      * 
      * 
      */
-    public List<_ReroutingManagementTypeEnum> getReroutingManagementType() {
+    public List<ReroutingManagementTypeEnum> getReroutingManagementType() {
         if (reroutingManagementType == null) {
-            reroutingManagementType = new ArrayList<_ReroutingManagementTypeEnum>();
+            reroutingManagementType = new ArrayList<ReroutingManagementTypeEnum>();
         }
         return this.reroutingManagementType;
     }
@@ -301,27 +309,27 @@ public class ReroutingManagement
     }
 
     /**
-     * Gets the value of the _ReroutingManagementExtension property.
+     * Gets the value of the reroutingManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ReroutingManagementExtension() {
-        return _ReroutingManagementExtension;
+    public ExtensionType getReroutingManagementExtension() {
+        return reroutingManagementExtension;
     }
 
     /**
-     * Sets the value of the _ReroutingManagementExtension property.
+     * Sets the value of the reroutingManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ReroutingManagementExtension(_ExtensionType value) {
-        this._ReroutingManagementExtension = value;
+    public void setReroutingManagementExtension(ExtensionType value) {
+        this.reroutingManagementExtension = value;
     }
 
 }

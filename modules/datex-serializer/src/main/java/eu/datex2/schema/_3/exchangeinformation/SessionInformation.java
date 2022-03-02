@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.exchangeinformation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,19 +32,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SessionInformation", propOrder = {
+@XmlType(name = "SessionInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "sessionID",
     "startSession",
-    "_SessionInformationExtension"
+    "sessionInformationExtension"
 })
 public class SessionInformation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     protected String sessionID;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startSession;
-    @XmlElement(name = "_sessionInformationExtension")
-    protected _ExtensionType _SessionInformationExtension;
+    @XmlElement(name = "_sessionInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType sessionInformationExtension;
 
     /**
      * Gets the value of the sessionID property.
@@ -95,27 +96,27 @@ public class SessionInformation {
     }
 
     /**
-     * Gets the value of the _SessionInformationExtension property.
+     * Gets the value of the sessionInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SessionInformationExtension() {
-        return _SessionInformationExtension;
+    public ExtensionType getSessionInformationExtension() {
+        return sessionInformationExtension;
     }
 
     /**
-     * Sets the value of the _SessionInformationExtension property.
+     * Sets the value of the sessionInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SessionInformationExtension(_ExtensionType value) {
-        this._SessionInformationExtension = value;
+    public void setSessionInformationExtension(ExtensionType value) {
+        this.sessionInformationExtension = value;
     }
 
 }

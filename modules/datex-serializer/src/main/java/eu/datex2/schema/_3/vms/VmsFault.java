@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Fault;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,28 +34,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsFault", propOrder = {
+@XmlType(name = "VmsFault", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "vmsFault",
-    "_VmsFaultExtension"
+    "vmsFaultExtension"
 })
 public class VmsFault
     extends Fault
 {
 
-    @XmlElement(required = true)
-    protected _VmsFaultEnum vmsFault;
-    @XmlElement(name = "_vmsFaultExtension")
-    protected _ExtensionType _VmsFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected VmsFaultEnum vmsFault;
+    @XmlElement(name = "_vmsFaultExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsFaultExtension;
 
     /**
      * Gets the value of the vmsFault property.
      * 
      * @return
      *     possible object is
-     *     {@link _VmsFaultEnum }
+     *     {@link VmsFaultEnum }
      *     
      */
-    public _VmsFaultEnum getVmsFault() {
+    public VmsFaultEnum getVmsFault() {
         return vmsFault;
     }
 
@@ -64,35 +64,35 @@ public class VmsFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsFaultEnum }
+     *     {@link VmsFaultEnum }
      *     
      */
-    public void setVmsFault(_VmsFaultEnum value) {
+    public void setVmsFault(VmsFaultEnum value) {
         this.vmsFault = value;
     }
 
     /**
-     * Gets the value of the _VmsFaultExtension property.
+     * Gets the value of the vmsFaultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsFaultExtension() {
-        return _VmsFaultExtension;
+    public ExtensionType getVmsFaultExtension() {
+        return vmsFaultExtension;
     }
 
     /**
-     * Sets the value of the _VmsFaultExtension property.
+     * Sets the value of the vmsFaultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsFaultExtension(_ExtensionType value) {
-        this._VmsFaultExtension = value;
+    public void setVmsFaultExtension(ExtensionType value) {
+        this.vmsFaultExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,26 +40,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PositionConfidenceEllipse", propOrder = {
+@XmlType(name = "PositionConfidenceEllipse", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "semiMajorAxisLength",
     "semiMajorAxisLengthCodedError",
     "semiMinorAxisLength",
     "semiMinorAxisLengthCodedError",
     "semiMajorAxisOrientation",
     "semiMajorAxisOrientationError",
-    "_PositionConfidenceEllipseExtension"
+    "positionConfidenceEllipseExtension"
 })
 public class PositionConfidenceEllipse {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float semiMajorAxisLength;
-    protected _PositionConfidenceCodedErrorEnum semiMajorAxisLengthCodedError;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected PositionConfidenceCodedErrorEnum semiMajorAxisLengthCodedError;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float semiMinorAxisLength;
-    protected _PositionConfidenceCodedErrorEnum semiMinorAxisLengthCodedError;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected PositionConfidenceCodedErrorEnum semiMinorAxisLengthCodedError;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected Integer semiMajorAxisOrientation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Boolean semiMajorAxisOrientationError;
-    @XmlElement(name = "_positionConfidenceEllipseExtension")
-    protected _ExtensionType _PositionConfidenceEllipseExtension;
+    @XmlElement(name = "_positionConfidenceEllipseExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType positionConfidenceEllipseExtension;
 
     /**
      * Gets the value of the semiMajorAxisLength property.
@@ -90,10 +96,10 @@ public class PositionConfidenceEllipse {
      * 
      * @return
      *     possible object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public _PositionConfidenceCodedErrorEnum getSemiMajorAxisLengthCodedError() {
+    public PositionConfidenceCodedErrorEnum getSemiMajorAxisLengthCodedError() {
         return semiMajorAxisLengthCodedError;
     }
 
@@ -102,10 +108,10 @@ public class PositionConfidenceEllipse {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setSemiMajorAxisLengthCodedError(_PositionConfidenceCodedErrorEnum value) {
+    public void setSemiMajorAxisLengthCodedError(PositionConfidenceCodedErrorEnum value) {
         this.semiMajorAxisLengthCodedError = value;
     }
 
@@ -138,10 +144,10 @@ public class PositionConfidenceEllipse {
      * 
      * @return
      *     possible object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public _PositionConfidenceCodedErrorEnum getSemiMinorAxisLengthCodedError() {
+    public PositionConfidenceCodedErrorEnum getSemiMinorAxisLengthCodedError() {
         return semiMinorAxisLengthCodedError;
     }
 
@@ -150,10 +156,10 @@ public class PositionConfidenceEllipse {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setSemiMinorAxisLengthCodedError(_PositionConfidenceCodedErrorEnum value) {
+    public void setSemiMinorAxisLengthCodedError(PositionConfidenceCodedErrorEnum value) {
         this.semiMinorAxisLengthCodedError = value;
     }
 
@@ -206,27 +212,27 @@ public class PositionConfidenceEllipse {
     }
 
     /**
-     * Gets the value of the _PositionConfidenceEllipseExtension property.
+     * Gets the value of the positionConfidenceEllipseExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PositionConfidenceEllipseExtension() {
-        return _PositionConfidenceEllipseExtension;
+    public ExtensionType getPositionConfidenceEllipseExtension() {
+        return positionConfidenceEllipseExtension;
     }
 
     /**
-     * Sets the value of the _PositionConfidenceEllipseExtension property.
+     * Sets the value of the positionConfidenceEllipseExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PositionConfidenceEllipseExtension(_ExtensionType value) {
-        this._PositionConfidenceEllipseExtension = value;
+    public void setPositionConfidenceEllipseExtension(ExtensionType value) {
+        this.positionConfidenceEllipseExtension = value;
     }
 
 }

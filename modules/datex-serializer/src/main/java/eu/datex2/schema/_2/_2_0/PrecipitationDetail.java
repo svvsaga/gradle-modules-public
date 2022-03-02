@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationDetail", propOrder = {
+@XmlType(name = "PrecipitationDetail", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "precipitationType",
     "precipitationIntensity",
     "depositionDepth",
@@ -38,11 +39,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PrecipitationDetail {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PrecipitationTypeEnum precipitationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PrecipitationIntensityValue precipitationIntensity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue depositionDepth;
-    protected _ExtensionType precipitationDetailExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType precipitationDetailExtension;
 
     /**
      * Gets the value of the precipitationType property.
@@ -121,10 +126,10 @@ public class PrecipitationDetail {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPrecipitationDetailExtension() {
+    public ExtensionType getPrecipitationDetailExtension() {
         return precipitationDetailExtension;
     }
 
@@ -133,10 +138,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationDetailExtension(_ExtensionType value) {
+    public void setPrecipitationDetailExtension(ExtensionType value) {
         this.precipitationDetailExtension = value;
     }
 

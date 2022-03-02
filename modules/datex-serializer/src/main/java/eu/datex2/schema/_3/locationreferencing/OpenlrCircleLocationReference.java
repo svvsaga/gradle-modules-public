@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,22 +35,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrCircleLocationReference", propOrder = {
+@XmlType(name = "OpenlrCircleLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrRadius",
     "openlrGeoCoordinate",
-    "_OpenlrCircleLocationReferenceExtension"
+    "openlrCircleLocationReferenceExtension"
 })
 public class OpenlrCircleLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrRadius;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrGeoCoordinate openlrGeoCoordinate;
-    @XmlElement(name = "_openlrCircleLocationReferenceExtension")
-    protected _ExtensionType _OpenlrCircleLocationReferenceExtension;
+    @XmlElement(name = "_openlrCircleLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrCircleLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrRadius property.
@@ -101,27 +101,27 @@ public class OpenlrCircleLocationReference
     }
 
     /**
-     * Gets the value of the _OpenlrCircleLocationReferenceExtension property.
+     * Gets the value of the openlrCircleLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrCircleLocationReferenceExtension() {
-        return _OpenlrCircleLocationReferenceExtension;
+    public ExtensionType getOpenlrCircleLocationReferenceExtension() {
+        return openlrCircleLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrCircleLocationReferenceExtension property.
+     * Sets the value of the openlrCircleLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrCircleLocationReferenceExtension(_ExtensionType value) {
-        this._OpenlrCircleLocationReferenceExtension = value;
+    public void setOpenlrCircleLocationReferenceExtension(ExtensionType value) {
+        this.openlrCircleLocationReferenceExtension = value;
     }
 
 }

@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedNonOrderedLocationGroup", propOrder = {
+@XmlType(name = "PredefinedNonOrderedLocationGroup", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "predefinedNonOrderedLocationGroupName",
     "predefinedLocation",
     "predefinedNonOrderedLocationGroupExtension"
@@ -43,10 +43,12 @@ public class PredefinedNonOrderedLocationGroup
     extends PredefinedLocationContainer
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString predefinedNonOrderedLocationGroupName;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<PredefinedLocation> predefinedLocation;
-    protected _ExtensionType predefinedNonOrderedLocationGroupExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType predefinedNonOrderedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -110,10 +112,10 @@ public class PredefinedNonOrderedLocationGroup
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedNonOrderedLocationGroupExtension() {
+    public ExtensionType getPredefinedNonOrderedLocationGroupExtension() {
         return predefinedNonOrderedLocationGroupExtension;
     }
 
@@ -122,10 +124,10 @@ public class PredefinedNonOrderedLocationGroup
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupExtension(_ExtensionType value) {
+    public void setPredefinedNonOrderedLocationGroupExtension(ExtensionType value) {
         this.predefinedNonOrderedLocationGroupExtension = value;
     }
 

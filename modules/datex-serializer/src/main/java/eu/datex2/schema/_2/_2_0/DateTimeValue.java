@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DateTimeValue", propOrder = {
+@XmlType(name = "DateTimeValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "dateTime",
     "dateTimeValueExtension"
 })
@@ -38,10 +38,11 @@ public class DateTimeValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dateTime;
-    protected _ExtensionType dateTimeValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType dateTimeValueExtension;
 
     /**
      * Gets the value of the dateTime property.
@@ -72,10 +73,10 @@ public class DateTimeValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDateTimeValueExtension() {
+    public ExtensionType getDateTimeValueExtension() {
         return dateTimeValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class DateTimeValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDateTimeValueExtension(_ExtensionType value) {
+    public void setDateTimeValueExtension(ExtensionType value) {
         this.dateTimeValueExtension = value;
     }
 

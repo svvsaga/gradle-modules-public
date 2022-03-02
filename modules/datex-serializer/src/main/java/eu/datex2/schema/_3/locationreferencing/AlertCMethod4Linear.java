@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,24 +36,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4Linear", propOrder = {
+@XmlType(name = "AlertCMethod4Linear", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
     "alertCMethod4SecondaryPointLocation",
-    "_AlertCMethod4LinearExtension"
+    "alertCMethod4LinearExtension"
 })
 public class AlertCMethod4Linear
     extends AlertCLinear
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCMethod4SecondaryPointLocation alertCMethod4SecondaryPointLocation;
-    @XmlElement(name = "_alertCMethod4LinearExtension")
-    protected _ExtensionType _AlertCMethod4LinearExtension;
+    @XmlElement(name = "_alertCMethod4LinearExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCMethod4LinearExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -128,27 +128,27 @@ public class AlertCMethod4Linear
     }
 
     /**
-     * Gets the value of the _AlertCMethod4LinearExtension property.
+     * Gets the value of the alertCMethod4LinearExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCMethod4LinearExtension() {
-        return _AlertCMethod4LinearExtension;
+    public ExtensionType getAlertCMethod4LinearExtension() {
+        return alertCMethod4LinearExtension;
     }
 
     /**
-     * Sets the value of the _AlertCMethod4LinearExtension property.
+     * Sets the value of the alertCMethod4LinearExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCMethod4LinearExtension(_ExtensionType value) {
-        this._AlertCMethod4LinearExtension = value;
+    public void setAlertCMethod4LinearExtension(ExtensionType value) {
+        this.alertCMethod4LinearExtension = value;
     }
 
 }

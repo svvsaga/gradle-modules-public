@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLinear", propOrder = {
+@XmlType(name = "OpenlrLinear", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "firstDirection",
     "oppositeDirection",
-    "_OpenlrLinearExtension"
+    "openlrLinearExtension"
 })
 public class OpenlrLinear {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrLineLocationReference firstDirection;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrLineLocationReference oppositeDirection;
-    @XmlElement(name = "_openlrLinearExtension")
-    protected _ExtensionType _OpenlrLinearExtension;
+    @XmlElement(name = "_openlrLinearExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrLinearExtension;
 
     /**
      * Gets the value of the firstDirection property.
@@ -94,27 +95,27 @@ public class OpenlrLinear {
     }
 
     /**
-     * Gets the value of the _OpenlrLinearExtension property.
+     * Gets the value of the openlrLinearExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrLinearExtension() {
-        return _OpenlrLinearExtension;
+    public ExtensionType getOpenlrLinearExtension() {
+        return openlrLinearExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrLinearExtension property.
+     * Sets the value of the openlrLinearExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrLinearExtension(_ExtensionType value) {
-        this._OpenlrLinearExtension = value;
+    public void setOpenlrLinearExtension(ExtensionType value) {
+        this.openlrLinearExtension = value;
     }
 
 }

@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConcentrationOfVehiclesValue", propOrder = {
+@XmlType(name = "ConcentrationOfVehiclesValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "concentrationOfVehicles",
     "concentrationOfVehiclesValueExtension"
 })
@@ -38,10 +38,11 @@ public class ConcentrationOfVehiclesValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger concentrationOfVehicles;
-    protected _ExtensionType concentrationOfVehiclesValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType concentrationOfVehiclesValueExtension;
 
     /**
      * Gets the value of the concentrationOfVehicles property.
@@ -72,10 +73,10 @@ public class ConcentrationOfVehiclesValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getConcentrationOfVehiclesValueExtension() {
+    public ExtensionType getConcentrationOfVehiclesValueExtension() {
         return concentrationOfVehiclesValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class ConcentrationOfVehiclesValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setConcentrationOfVehiclesValueExtension(_ExtensionType value) {
+    public void setConcentrationOfVehiclesValueExtension(ExtensionType value) {
         this.concentrationOfVehiclesValueExtension = value;
     }
 

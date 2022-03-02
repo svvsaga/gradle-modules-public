@@ -1,79 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for FaultUrgencyEnum.
+ * <p>Java class for _FaultUrgencyEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="FaultUrgencyEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="normal"/&gt;
- *     &lt;enumeration value="urgent"/&gt;
- *     &lt;enumeration value="extremelyUrgent"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_FaultUrgencyEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;FaultUrgencyEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "FaultUrgencyEnum")
-@XmlEnum
-public enum FaultUrgencyEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_FaultUrgencyEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class FaultUrgencyEnum {
 
-
-    /**
-     * The fault is of normal urgency.
-     * 
-     */
-    @XmlEnumValue("normal")
-    NORMAL("normal"),
-
-    /**
-     * The fault is to be rectified urgent.
-     * 
-     */
-    @XmlEnumValue("urgent")
-    URGENT("urgent"),
+    @XmlValue
+    protected FaultUrgencyEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The fault is to be rectified extremely urgency.
+     * Classification of the urgency to rectify a fault.
      * 
+     * @return
+     *     possible object is
+     *     {@link FaultUrgencyEnum2 }
+     *     
      */
-    @XmlEnumValue("extremelyUrgent")
-    EXTREMELY_URGENT("extremelyUrgent"),
-
-    /**
-     * The fault is of unknown urgency.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    FaultUrgencyEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public FaultUrgencyEnum2 getValue() {
         return value;
     }
 
-    public static FaultUrgencyEnum fromValue(String v) {
-        for (FaultUrgencyEnum c: FaultUrgencyEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FaultUrgencyEnum2 }
+     *     
+     */
+    public void setValue(FaultUrgencyEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

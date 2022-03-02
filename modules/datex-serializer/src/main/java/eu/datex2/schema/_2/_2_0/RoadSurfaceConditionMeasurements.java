@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -32,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionMeasurements", propOrder = {
+@XmlType(name = "RoadSurfaceConditionMeasurements", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "roadSurfaceTemperature",
     "protectionTemperature",
     "deIcingApplicationRate",
@@ -43,13 +44,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RoadSurfaceConditionMeasurements {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue roadSurfaceTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue protectionTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ApplicationRateValue deIcingApplicationRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected KilogramsConcentrationValue deIcingConcentration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue depthOfSnow;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue waterFilmThickness;
-    protected _ExtensionType roadSurfaceConditionMeasurementsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType roadSurfaceConditionMeasurementsExtension;
 
     /**
      * Gets the value of the roadSurfaceTemperature property.
@@ -200,10 +208,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadSurfaceConditionMeasurementsExtension() {
+    public ExtensionType getRoadSurfaceConditionMeasurementsExtension() {
         return roadSurfaceConditionMeasurementsExtension;
     }
 
@@ -212,10 +220,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionMeasurementsExtension(_ExtensionType value) {
+    public void setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
         this.roadSurfaceConditionMeasurementsExtension = value;
     }
 

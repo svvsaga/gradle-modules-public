@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -31,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingStatusValidity", propOrder = {
+@XmlType(name = "ParkingStatusValidity", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingStatusTime",
     "parkingStatusTimeOffsetToOrigin",
     "validityTimeSpecification",
@@ -39,11 +40,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingStatusValidity {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingStatusTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float parkingStatusTimeOffsetToOrigin;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod validityTimeSpecification;
-    protected _ExtensionType parkingStatusValidityExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingStatusValidityExtension;
 
     /**
      * Gets the value of the parkingStatusTime property.
@@ -122,10 +127,10 @@ public class ParkingStatusValidity {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingStatusValidityExtension() {
+    public ExtensionType getParkingStatusValidityExtension() {
         return parkingStatusValidityExtension;
     }
 
@@ -134,10 +139,10 @@ public class ParkingStatusValidity {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingStatusValidityExtension(_ExtensionType value) {
+    public void setParkingStatusValidityExtension(ExtensionType value) {
         this.parkingStatusValidityExtension = value;
     }
 

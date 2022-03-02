@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -32,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsSupplementaryPictogram", propOrder = {
+@XmlType(name = "VmsSupplementaryPictogram", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "supplementaryPictogramDescription",
     "supplementaryPictogramCode",
     "supplementaryPictogramUrl",
@@ -42,14 +43,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsSupplementaryPictogram {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VmsDatexSupplementalPictogramEnum supplementaryPictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String supplementaryPictogramCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String supplementaryPictogramUrl;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString additionalSupplementaryPictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean pictogramFlashing;
-    protected _ExtensionType vmsSupplementaryPictogramExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsSupplementaryPictogramExtension;
 
     /**
      * Gets the value of the supplementaryPictogramDescription property.
@@ -176,10 +183,10 @@ public class VmsSupplementaryPictogram {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSupplementaryPictogramExtension() {
+    public ExtensionType getVmsSupplementaryPictogramExtension() {
         return vmsSupplementaryPictogramExtension;
     }
 
@@ -188,10 +195,10 @@ public class VmsSupplementaryPictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPictogramExtension(_ExtensionType value) {
+    public void setVmsSupplementaryPictogramExtension(ExtensionType value) {
         this.vmsSupplementaryPictogramExtension = value;
     }
 

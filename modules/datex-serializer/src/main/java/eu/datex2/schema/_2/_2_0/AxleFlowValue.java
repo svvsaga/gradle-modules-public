@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleFlowValue", propOrder = {
+@XmlType(name = "AxleFlowValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "axleFlowRate",
     "axleFlowValueExtension"
 })
@@ -38,10 +38,11 @@ public class AxleFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleFlowRate;
-    protected _ExtensionType axleFlowValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType axleFlowValueExtension;
 
     /**
      * Gets the value of the axleFlowRate property.
@@ -72,10 +73,10 @@ public class AxleFlowValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleFlowValueExtension() {
+    public ExtensionType getAxleFlowValueExtension() {
         return axleFlowValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class AxleFlowValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleFlowValueExtension(_ExtensionType value) {
+    public void setAxleFlowValueExtension(ExtensionType value) {
         this.axleFlowValueExtension = value;
     }
 

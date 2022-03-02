@@ -1,79 +1,88 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for EquipmentOrSystemFaultTypeEnum.
+ * <p>Java class for _EquipmentOrSystemFaultTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="EquipmentOrSystemFaultTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="notWorking"/&gt;
- *     &lt;enumeration value="outOfService"/&gt;
- *     &lt;enumeration value="workingIncorrectly"/&gt;
- *     &lt;enumeration value="workingIntermittently"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_EquipmentOrSystemFaultTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;EquipmentOrSystemFaultTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "EquipmentOrSystemFaultTypeEnum")
-@XmlEnum
-public enum EquipmentOrSystemFaultTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_EquipmentOrSystemFaultTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class EquipmentOrSystemFaultTypeEnum {
 
-
-    /**
-     * Not working or functioning.
-     * 
-     */
-    @XmlEnumValue("notWorking")
-    NOT_WORKING("notWorking"),
-
-    /**
-     * Out of service (usually for operational reasons).
-     * 
-     */
-    @XmlEnumValue("outOfService")
-    OUT_OF_SERVICE("outOfService"),
+    @XmlValue
+    protected EquipmentOrSystemFaultTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Working incorrectly.
+     * Types of fault, malfunctioning or non operational conditions of equipment or systems.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link EquipmentOrSystemFaultTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("workingIncorrectly")
-    WORKING_INCORRECTLY("workingIncorrectly"),
-
-    /**
-     * Working intermittently.
-     * 
-     */
-    @XmlEnumValue("workingIntermittently")
-    WORKING_INTERMITTENTLY("workingIntermittently"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    EquipmentOrSystemFaultTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public EquipmentOrSystemFaultTypeEnum2 getValue() {
         return value;
     }
 
-    public static EquipmentOrSystemFaultTypeEnum fromValue(String v) {
-        for (EquipmentOrSystemFaultTypeEnum c: EquipmentOrSystemFaultTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EquipmentOrSystemFaultTypeEnum2 }
+     *     
+     */
+    public void setValue(EquipmentOrSystemFaultTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

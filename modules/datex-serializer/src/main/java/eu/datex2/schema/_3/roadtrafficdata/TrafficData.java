@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,9 +35,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficData", propOrder = {
+@XmlType(name = "TrafficData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "forVehiclesWithCharacteristicsOf",
-    "_TrafficDataExtension"
+    "trafficDataExtension"
 })
 @XmlSeeAlso({
     IndividualVehicleDataValues.class,
@@ -51,9 +51,10 @@ public abstract class TrafficData
     extends BasicData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleCharacteristics forVehiclesWithCharacteristicsOf;
-    @XmlElement(name = "_trafficDataExtension")
-    protected _ExtensionType _TrafficDataExtension;
+    @XmlElement(name = "_trafficDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficDataExtension;
 
     /**
      * Gets the value of the forVehiclesWithCharacteristicsOf property.
@@ -80,27 +81,27 @@ public abstract class TrafficData
     }
 
     /**
-     * Gets the value of the _TrafficDataExtension property.
+     * Gets the value of the trafficDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficDataExtension() {
-        return _TrafficDataExtension;
+    public ExtensionType getTrafficDataExtension() {
+        return trafficDataExtension;
     }
 
     /**
-     * Sets the value of the _TrafficDataExtension property.
+     * Sets the value of the trafficDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficDataExtension(_ExtensionType value) {
-        this._TrafficDataExtension = value;
+    public void setTrafficDataExtension(ExtensionType value) {
+        this.trafficDataExtension = value;
     }
 
 }

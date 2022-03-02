@@ -4,8 +4,8 @@ package eu.datex2.schema._3.vms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsMessage", propOrder = {
+@XmlType(name = "VmsMessage", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "associatedTrafficManagementPlan",
     "messageSetBy",
     "setBySystem",
@@ -70,30 +70,45 @@ import jakarta.xml.bind.annotation.XmlType;
     "sequencingInterval",
     "displayAreaSettings",
     "image",
-    "_VmsMessageExtension"
+    "vmsMessageExtension"
 })
 public class VmsMessage {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String associatedTrafficManagementPlan;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString messageSetBy;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean setBySystem;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString reasonForSetting;
-    protected _SettingReasonEnum codedReasonForSetting;
-    protected List<_MessageInformationTypeEnum> messageInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected SettingReasonEnum codedReasonForSetting;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<MessageInformationTypeEnum> messageInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean primarySetting;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean mareNostrumCompliant;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeLastSet;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString requestedBy;
-    protected List<_SituationVersionedReference> relatedSituation;
-    protected List<_SituationRecordVersionedReference> relatedSituationRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<SituationVersionedReference> relatedSituation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<SituationRecordVersionedReference> relatedSituationRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float distanceFromClosestSituationRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float sequencingInterval;
-    protected List<_VmsMessageDisplayAreaIndexDisplayAreaSettings> displayAreaSettings;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<VmsMessageDisplayAreaIndexDisplayAreaSettings> displayAreaSettings;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Image image;
-    @XmlElement(name = "_vmsMessageExtension")
-    protected _ExtensionType _VmsMessageExtension;
+    @XmlElement(name = "_vmsMessageExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsMessageExtension;
 
     /**
      * Gets the value of the associatedTrafficManagementPlan property.
@@ -196,10 +211,10 @@ public class VmsMessage {
      * 
      * @return
      *     possible object is
-     *     {@link _SettingReasonEnum }
+     *     {@link SettingReasonEnum }
      *     
      */
-    public _SettingReasonEnum getCodedReasonForSetting() {
+    public SettingReasonEnum getCodedReasonForSetting() {
         return codedReasonForSetting;
     }
 
@@ -208,10 +223,10 @@ public class VmsMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link _SettingReasonEnum }
+     *     {@link SettingReasonEnum }
      *     
      */
-    public void setCodedReasonForSetting(_SettingReasonEnum value) {
+    public void setCodedReasonForSetting(SettingReasonEnum value) {
         this.codedReasonForSetting = value;
     }
 
@@ -233,13 +248,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MessageInformationTypeEnum }
+     * {@link MessageInformationTypeEnum }
      * 
      * 
      */
-    public List<_MessageInformationTypeEnum> getMessageInformationType() {
+    public List<MessageInformationTypeEnum> getMessageInformationType() {
         if (messageInformationType == null) {
-            messageInformationType = new ArrayList<_MessageInformationTypeEnum>();
+            messageInformationType = new ArrayList<MessageInformationTypeEnum>();
         }
         return this.messageInformationType;
     }
@@ -358,13 +373,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SituationVersionedReference }
+     * {@link SituationVersionedReference }
      * 
      * 
      */
-    public List<_SituationVersionedReference> getRelatedSituation() {
+    public List<SituationVersionedReference> getRelatedSituation() {
         if (relatedSituation == null) {
-            relatedSituation = new ArrayList<_SituationVersionedReference>();
+            relatedSituation = new ArrayList<SituationVersionedReference>();
         }
         return this.relatedSituation;
     }
@@ -387,13 +402,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SituationRecordVersionedReference }
+     * {@link SituationRecordVersionedReference }
      * 
      * 
      */
-    public List<_SituationRecordVersionedReference> getRelatedSituationRecord() {
+    public List<SituationRecordVersionedReference> getRelatedSituationRecord() {
         if (relatedSituationRecord == null) {
-            relatedSituationRecord = new ArrayList<_SituationRecordVersionedReference>();
+            relatedSituationRecord = new ArrayList<SituationRecordVersionedReference>();
         }
         return this.relatedSituationRecord;
     }
@@ -464,13 +479,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsMessageDisplayAreaIndexDisplayAreaSettings }
+     * {@link VmsMessageDisplayAreaIndexDisplayAreaSettings }
      * 
      * 
      */
-    public List<_VmsMessageDisplayAreaIndexDisplayAreaSettings> getDisplayAreaSettings() {
+    public List<VmsMessageDisplayAreaIndexDisplayAreaSettings> getDisplayAreaSettings() {
         if (displayAreaSettings == null) {
-            displayAreaSettings = new ArrayList<_VmsMessageDisplayAreaIndexDisplayAreaSettings>();
+            displayAreaSettings = new ArrayList<VmsMessageDisplayAreaIndexDisplayAreaSettings>();
         }
         return this.displayAreaSettings;
     }
@@ -500,27 +515,27 @@ public class VmsMessage {
     }
 
     /**
-     * Gets the value of the _VmsMessageExtension property.
+     * Gets the value of the vmsMessageExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsMessageExtension() {
-        return _VmsMessageExtension;
+    public ExtensionType getVmsMessageExtension() {
+        return vmsMessageExtension;
     }
 
     /**
-     * Sets the value of the _VmsMessageExtension property.
+     * Sets the value of the vmsMessageExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsMessageExtension(_ExtensionType value) {
-        this._VmsMessageExtension = value;
+    public void setVmsMessageExtension(ExtensionType value) {
+        this.vmsMessageExtension = value;
     }
 
 }

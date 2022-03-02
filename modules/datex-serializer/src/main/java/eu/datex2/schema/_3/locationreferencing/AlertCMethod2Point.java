@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,21 +34,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod2Point", propOrder = {
+@XmlType(name = "AlertCMethod2Point", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCDirection",
     "alertCMethod2PrimaryPointLocation",
-    "_AlertCMethod2PointExtension"
+    "alertCMethod2PointExtension"
 })
 public class AlertCMethod2Point
     extends AlertCPoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected AlertCMethod2PrimaryPointLocation alertCMethod2PrimaryPointLocation;
-    @XmlElement(name = "_alertCMethod2PointExtension")
-    protected _ExtensionType _AlertCMethod2PointExtension;
+    @XmlElement(name = "_alertCMethod2PointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCMethod2PointExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -99,27 +99,27 @@ public class AlertCMethod2Point
     }
 
     /**
-     * Gets the value of the _AlertCMethod2PointExtension property.
+     * Gets the value of the alertCMethod2PointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCMethod2PointExtension() {
-        return _AlertCMethod2PointExtension;
+    public ExtensionType getAlertCMethod2PointExtension() {
+        return alertCMethod2PointExtension;
     }
 
     /**
-     * Sets the value of the _AlertCMethod2PointExtension property.
+     * Sets the value of the alertCMethod2PointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCMethod2PointExtension(_ExtensionType value) {
-        this._AlertCMethod2PointExtension = value;
+    public void setAlertCMethod2PointExtension(ExtensionType value) {
+        this.alertCMethod2PointExtension = value;
     }
 
 }

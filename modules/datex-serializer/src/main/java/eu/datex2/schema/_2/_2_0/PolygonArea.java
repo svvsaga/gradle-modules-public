@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,16 +31,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PolygonArea", propOrder = {
+@XmlType(name = "PolygonArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "sectionName",
     "pointCoordinates",
     "polygonAreaExtension"
 })
 public class PolygonArea {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString sectionName;
-    protected List<_PolygonAreaIndexPointCoordinates> pointCoordinates;
-    protected _ExtensionType polygonAreaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<PolygonAreaIndexPointCoordinates> pointCoordinates;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType polygonAreaExtension;
 
     /**
      * Gets the value of the sectionName property.
@@ -83,13 +87,13 @@ public class PolygonArea {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PolygonAreaIndexPointCoordinates }
+     * {@link PolygonAreaIndexPointCoordinates }
      * 
      * 
      */
-    public List<_PolygonAreaIndexPointCoordinates> getPointCoordinates() {
+    public List<PolygonAreaIndexPointCoordinates> getPointCoordinates() {
         if (pointCoordinates == null) {
-            pointCoordinates = new ArrayList<_PolygonAreaIndexPointCoordinates>();
+            pointCoordinates = new ArrayList<PolygonAreaIndexPointCoordinates>();
         }
         return this.pointCoordinates;
     }
@@ -99,10 +103,10 @@ public class PolygonArea {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPolygonAreaExtension() {
+    public ExtensionType getPolygonAreaExtension() {
         return polygonAreaExtension;
     }
 
@@ -111,10 +115,10 @@ public class PolygonArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPolygonAreaExtension(_ExtensionType value) {
+    public void setPolygonAreaExtension(ExtensionType value) {
         this.polygonAreaExtension = value;
     }
 

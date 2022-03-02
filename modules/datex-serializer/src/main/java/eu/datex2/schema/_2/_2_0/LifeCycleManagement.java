@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,16 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LifeCycleManagement", propOrder = {
+@XmlType(name = "LifeCycleManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "cancel",
     "end",
     "lifeCycleManagementExtension"
 })
 public class LifeCycleManagement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean cancel;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean end;
-    protected _ExtensionType lifeCycleManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType lifeCycleManagementExtension;
 
     /**
      * Gets the value of the cancel property.
@@ -92,10 +96,10 @@ public class LifeCycleManagement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLifeCycleManagementExtension() {
+    public ExtensionType getLifeCycleManagementExtension() {
         return lifeCycleManagementExtension;
     }
 
@@ -104,10 +108,10 @@ public class LifeCycleManagement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLifeCycleManagementExtension(_ExtensionType value) {
+    public void setLifeCycleManagementExtension(ExtensionType value) {
         this.lifeCycleManagementExtension = value;
     }
 

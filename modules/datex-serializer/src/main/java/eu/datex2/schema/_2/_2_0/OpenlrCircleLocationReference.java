@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrCircleLocationReference", propOrder = {
+@XmlType(name = "OpenlrCircleLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "radius",
     "openlrGeoCoordinate",
     "openlrCircleLocationReferenceExtension"
@@ -40,12 +40,13 @@ public class OpenlrCircleLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger radius;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrGeoCoordinate openlrGeoCoordinate;
-    protected _ExtensionType openlrCircleLocationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrCircleLocationReferenceExtension;
 
     /**
      * Gets the value of the radius property.
@@ -100,10 +101,10 @@ public class OpenlrCircleLocationReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrCircleLocationReferenceExtension() {
+    public ExtensionType getOpenlrCircleLocationReferenceExtension() {
         return openlrCircleLocationReferenceExtension;
     }
 
@@ -112,10 +113,10 @@ public class OpenlrCircleLocationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrCircleLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrCircleLocationReferenceExtension(ExtensionType value) {
         this.openlrCircleLocationReferenceExtension = value;
     }
 

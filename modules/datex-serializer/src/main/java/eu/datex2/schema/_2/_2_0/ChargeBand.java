@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChargeBand", propOrder = {
+@XmlType(name = "ChargeBand", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "chargeCurrency",
     "maximumDuration",
     "chargeBandName",
@@ -54,19 +54,26 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ChargeBand {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected CurrencyEnum chargeCurrency;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargeBandName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<UserTypeEnum> applicableForUser;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<Charge> charge;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod applicableForPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> applicableForVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingPermit> parkingPermit;
-    protected _ExtensionType chargeBandExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType chargeBandExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -289,10 +296,10 @@ public class ChargeBand {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getChargeBandExtension() {
+    public ExtensionType getChargeBandExtension() {
         return chargeBandExtension;
     }
 
@@ -301,10 +308,10 @@ public class ChargeBand {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setChargeBandExtension(_ExtensionType value) {
+    public void setChargeBandExtension(ExtensionType value) {
         this.chargeBandExtension = value;
     }
 

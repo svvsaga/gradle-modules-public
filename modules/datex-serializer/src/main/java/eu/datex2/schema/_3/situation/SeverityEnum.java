@@ -1,103 +1,89 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for SeverityEnum.
+ * <p>Java class for _SeverityEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="SeverityEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="highest"/&gt;
- *     &lt;enumeration value="high"/&gt;
- *     &lt;enumeration value="medium"/&gt;
- *     &lt;enumeration value="low"/&gt;
- *     &lt;enumeration value="lowest"/&gt;
- *     &lt;enumeration value="none"/&gt;
- *     &lt;enumeration value="unknown"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_SeverityEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;SeverityEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "SeverityEnum")
-@XmlEnum
-public enum SeverityEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_SeverityEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class SeverityEnum {
 
-
-    /**
-     * Perceived by supplier as being of the highest level.
-     * 
-     */
-    @XmlEnumValue("highest")
-    HIGHEST("highest"),
-
-    /**
-     * Perceived by supplier as being of a high level.
-     * 
-     */
-    @XmlEnumValue("high")
-    HIGH("high"),
+    @XmlValue
+    protected SeverityEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Perceived by supplier as being of a medium level.
+     * Levels of severity of a situation as whole assessed by the impact that the situation may
+     *         have on traffic flow as perceived by the supplier.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link SeverityEnum2 }
+     *     
      */
-    @XmlEnumValue("medium")
-    MEDIUM("medium"),
-
-    /**
-     * Perceived by supplier as being of a low level.
-     * 
-     */
-    @XmlEnumValue("low")
-    LOW("low"),
-
-    /**
-     * Perceived by supplier as being of the lowest discernible level.
-     * 
-     */
-    @XmlEnumValue("lowest")
-    LOWEST("lowest"),
-
-    /**
-     * Perceived by supplier as having a severity rating of none.
-     * 
-     */
-    @XmlEnumValue("none")
-    NONE("none"),
-
-    /**
-     * Perceived by supplier as being of an unknown level.
-     * 
-     */
-    @XmlEnumValue("unknown")
-    UNKNOWN("unknown"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    SeverityEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public SeverityEnum2 getValue() {
         return value;
     }
 
-    public static SeverityEnum fromValue(String v) {
-        for (SeverityEnum c: SeverityEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SeverityEnum2 }
+     *     
+     */
+    public void setValue(SeverityEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

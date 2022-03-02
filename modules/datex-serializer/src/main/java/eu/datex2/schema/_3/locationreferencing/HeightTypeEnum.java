@@ -1,76 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for HeightTypeEnum.
+ * <p>Java class for _HeightTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="HeightTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="ellipsoidalHeight"/&gt;
- *     &lt;enumeration value="gravityRelatedHeight"/&gt;
- *     &lt;enumeration value="relativeHeight"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_HeightTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;HeightTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "HeightTypeEnum")
-@XmlEnum
-public enum HeightTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_HeightTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class HeightTypeEnum {
 
-
-    /**
-     * Value measured vertically above the reference ellipsoid
-     * 
-     */
-    @XmlEnumValue("ellipsoidalHeight")
-    ELLIPSOIDAL_HEIGHT("ellipsoidalHeight"),
-
-    /**
-     * Height type corresponding a value measured along direction of gravity above the
-     *             reference geoid i.e. equipotential surface of the Earth's gravity field which globally
-     *             approximates mean sea level.
-     *           
-     * 
-     */
-    @XmlEnumValue("gravityRelatedHeight")
-    GRAVITY_RELATED_HEIGHT("gravityRelatedHeight"),
+    @XmlValue
+    protected HeightTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Height type corresponding to value masured vertically above the ground level at
-     *             this point.
-     *           
+     * Coded value for type of height
      * 
+     * @return
+     *     possible object is
+     *     {@link HeightTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("relativeHeight")
-    RELATIVE_HEIGHT("relativeHeight"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    HeightTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public HeightTypeEnum2 getValue() {
         return value;
     }
 
-    public static HeightTypeEnum fromValue(String v) {
-        for (HeightTypeEnum c: HeightTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link HeightTypeEnum2 }
+     *     
+     */
+    public void setValue(HeightTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

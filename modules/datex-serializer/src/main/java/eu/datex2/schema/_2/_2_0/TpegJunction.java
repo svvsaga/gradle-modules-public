@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunction", propOrder = {
+@XmlType(name = "TpegJunction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "pointCoordinates",
     "name",
     "ilc",
@@ -44,13 +44,16 @@ public class TpegJunction
     extends TpegPoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates pointCoordinates;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegJunctionPointDescriptor name;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<TpegIlcPointDescriptor> ilc;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<TpegOtherPointDescriptor> otherName;
-    protected _ExtensionType tpegJunctionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegJunctionExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -163,10 +166,10 @@ public class TpegJunction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegJunctionExtension() {
+    public ExtensionType getTpegJunctionExtension() {
         return tpegJunctionExtension;
     }
 
@@ -175,10 +178,10 @@ public class TpegJunction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegJunctionExtension(_ExtensionType value) {
+    public void setTpegJunctionExtension(ExtensionType value) {
         this.tpegJunctionExtension = value;
     }
 

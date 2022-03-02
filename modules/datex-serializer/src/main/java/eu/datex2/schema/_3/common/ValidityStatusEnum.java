@@ -1,87 +1,88 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ValidityStatusEnum.
+ * <p>Java class for _ValidityStatusEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ValidityStatusEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="active"/&gt;
- *     &lt;enumeration value="planned"/&gt;
- *     &lt;enumeration value="suspended"/&gt;
- *     &lt;enumeration value="definedByValidityTimeSpec"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ValidityStatusEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;ValidityStatusEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ValidityStatusEnum")
-@XmlEnum
-public enum ValidityStatusEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ValidityStatusEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class ValidityStatusEnum {
 
-
-    /**
-     * The described event, action or item is currently active regardless of the
-     *             definition of the validity time specification.
-     *           
-     * 
-     */
-    @XmlEnumValue("active")
-    ACTIVE("active"),
+    @XmlValue
+    protected ValidityStatusEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The described event, action or item is currently planned regardless of the
-     *             definition of the validity time specification.
-     *           
+     * Values of validity status that can be assigned to a described event, action or item.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link ValidityStatusEnum2 }
+     *     
      */
-    @XmlEnumValue("planned")
-    PLANNED("planned"),
-
-    /**
-     * The described event, action or item is currently suspended, that is inactive,
-     *             regardless of the definition of the validity time specification.
-     *           
-     * 
-     */
-    @XmlEnumValue("suspended")
-    SUSPENDED("suspended"),
-
-    /**
-     * The validity status of the described event, action or item is in accordance with
-     *             the definition of the validity time specification.
-     *           
-     * 
-     */
-    @XmlEnumValue("definedByValidityTimeSpec")
-    DEFINED_BY_VALIDITY_TIME_SPEC("definedByValidityTimeSpec"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ValidityStatusEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ValidityStatusEnum2 getValue() {
         return value;
     }
 
-    public static ValidityStatusEnum fromValue(String v) {
-        for (ValidityStatusEnum c: ValidityStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ValidityStatusEnum2 }
+     *     
+     */
+    public void setValue(ValidityStatusEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -30,20 +30,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PermitsAndProhibitions", propOrder = {
+@XmlType(name = "PermitsAndProhibitions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "activity",
     "regulation",
     "permitsAndProhibitionsExtension"
 })
 public class PermitsAndProhibitions {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected RestAreaActivityEnum activity;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected RegulationEnum regulation;
-    protected _ExtensionType permitsAndProhibitionsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType permitsAndProhibitionsExtension;
 
     /**
      * Gets the value of the activity property.
@@ -98,10 +99,10 @@ public class PermitsAndProhibitions {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPermitsAndProhibitionsExtension() {
+    public ExtensionType getPermitsAndProhibitionsExtension() {
         return permitsAndProhibitionsExtension;
     }
 
@@ -110,10 +111,10 @@ public class PermitsAndProhibitions {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPermitsAndProhibitionsExtension(_ExtensionType value) {
+    public void setPermitsAndProhibitionsExtension(ExtensionType value) {
         this.permitsAndProhibitionsExtension = value;
     }
 

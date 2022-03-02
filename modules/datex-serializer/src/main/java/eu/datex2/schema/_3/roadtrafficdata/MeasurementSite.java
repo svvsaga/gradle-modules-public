@@ -5,9 +5,9 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSite", propOrder = {
+@XmlType(name = "MeasurementSite", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "measurementSiteRecordVersionTime",
     "measurementEquipmentReference",
     "measurementEquipmentTypeUsed",
@@ -61,24 +61,32 @@ import jakarta.xml.bind.annotation.XmlType;
     "measurementSpecificCharacteristics",
     "measurementSiteLocation",
     "informationManagerOverride",
-    "_MeasurementSiteExtension"
+    "measurementSiteExtension"
 })
 public class MeasurementSite {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementSiteRecordVersionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementEquipmentReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementEquipmentTypeUsed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementSiteName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measurementSiteNumberOfLanes;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementSiteIdentification;
-    protected List<_MeasurementSiteIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected List<MeasurementSiteIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected LocationReference measurementSiteLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(name = "_measurementSiteExtension")
-    protected _ExtensionType _MeasurementSiteExtension;
+    @XmlElement(name = "_measurementSiteExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType measurementSiteExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -246,13 +254,13 @@ public class MeasurementSite {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MeasurementSiteIndexMeasurementSpecificCharacteristics }
+     * {@link MeasurementSiteIndexMeasurementSpecificCharacteristics }
      * 
      * 
      */
-    public List<_MeasurementSiteIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
+    public List<MeasurementSiteIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
         if (measurementSpecificCharacteristics == null) {
-            measurementSpecificCharacteristics = new ArrayList<_MeasurementSiteIndexMeasurementSpecificCharacteristics>();
+            measurementSpecificCharacteristics = new ArrayList<MeasurementSiteIndexMeasurementSpecificCharacteristics>();
         }
         return this.measurementSpecificCharacteristics;
     }
@@ -306,27 +314,27 @@ public class MeasurementSite {
     }
 
     /**
-     * Gets the value of the _MeasurementSiteExtension property.
+     * Gets the value of the measurementSiteExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MeasurementSiteExtension() {
-        return _MeasurementSiteExtension;
+    public ExtensionType getMeasurementSiteExtension() {
+        return measurementSiteExtension;
     }
 
     /**
-     * Sets the value of the _MeasurementSiteExtension property.
+     * Sets the value of the measurementSiteExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MeasurementSiteExtension(_ExtensionType value) {
-        this._MeasurementSiteExtension = value;
+    public void setMeasurementSiteExtension(ExtensionType value) {
+        this.measurementSiteExtension = value;
     }
 
     /**

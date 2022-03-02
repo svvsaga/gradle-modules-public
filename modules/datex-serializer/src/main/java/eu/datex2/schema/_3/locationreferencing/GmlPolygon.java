@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,18 +35,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlPolygon", propOrder = {
+@XmlType(name = "GmlPolygon", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "exterior",
     "interior",
-    "_GmlPolygonExtension"
+    "gmlPolygonExtension"
 })
 public class GmlPolygon {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected GmlLinearRing exterior;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<GmlLinearRing> interior;
-    @XmlElement(name = "_gmlPolygonExtension")
-    protected _ExtensionType _GmlPolygonExtension;
+    @XmlElement(name = "_gmlPolygonExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType gmlPolygonExtension;
 
     /**
      * Gets the value of the exterior property.
@@ -102,27 +103,27 @@ public class GmlPolygon {
     }
 
     /**
-     * Gets the value of the _GmlPolygonExtension property.
+     * Gets the value of the gmlPolygonExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GmlPolygonExtension() {
-        return _GmlPolygonExtension;
+    public ExtensionType getGmlPolygonExtension() {
+        return gmlPolygonExtension;
     }
 
     /**
-     * Sets the value of the _GmlPolygonExtension property.
+     * Sets the value of the gmlPolygonExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GmlPolygonExtension(_ExtensionType value) {
-        this._GmlPolygonExtension = value;
+    public void setGmlPolygonExtension(ExtensionType value) {
+        this.gmlPolygonExtension = value;
     }
 
 }

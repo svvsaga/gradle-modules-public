@@ -3,7 +3,7 @@ package eu.datex2.schema._3.exchangeinformation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExchangeContext", propOrder = {
+@XmlType(name = "ExchangeContext", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "codedExchangeProtocol",
     "exchangeSpecificationVersion",
     "operatingMode",
@@ -47,33 +47,38 @@ import jakarta.xml.bind.annotation.XmlType;
     "supplierOrCisRequester",
     "clientOrCisProvider",
     "subscription",
-    "_ExchangeContextExtension"
+    "exchangeContextExtension"
 })
 public class ExchangeContext {
 
-    @XmlElement(required = true)
-    protected _ProtocolTypeEnum codedExchangeProtocol;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    protected ProtocolTypeEnum codedExchangeProtocol;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     protected String exchangeSpecificationVersion;
-    protected _OperatingModeEnum operatingMode;
-    protected _UpdateMethodEnum updateMethod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected OperatingModeEnum operatingMode;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected UpdateMethodEnum updateMethod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String nonCodedExchangeProtocol;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     protected Agent supplierOrCisRequester;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected List<Agent> clientOrCisProvider;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Subscription subscription;
-    @XmlElement(name = "_exchangeContextExtension")
-    protected _ExtensionType _ExchangeContextExtension;
+    @XmlElement(name = "_exchangeContextExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType exchangeContextExtension;
 
     /**
      * Gets the value of the codedExchangeProtocol property.
      * 
      * @return
      *     possible object is
-     *     {@link _ProtocolTypeEnum }
+     *     {@link ProtocolTypeEnum }
      *     
      */
-    public _ProtocolTypeEnum getCodedExchangeProtocol() {
+    public ProtocolTypeEnum getCodedExchangeProtocol() {
         return codedExchangeProtocol;
     }
 
@@ -82,10 +87,10 @@ public class ExchangeContext {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ProtocolTypeEnum }
+     *     {@link ProtocolTypeEnum }
      *     
      */
-    public void setCodedExchangeProtocol(_ProtocolTypeEnum value) {
+    public void setCodedExchangeProtocol(ProtocolTypeEnum value) {
         this.codedExchangeProtocol = value;
     }
 
@@ -118,10 +123,10 @@ public class ExchangeContext {
      * 
      * @return
      *     possible object is
-     *     {@link _OperatingModeEnum }
+     *     {@link OperatingModeEnum }
      *     
      */
-    public _OperatingModeEnum getOperatingMode() {
+    public OperatingModeEnum getOperatingMode() {
         return operatingMode;
     }
 
@@ -130,10 +135,10 @@ public class ExchangeContext {
      * 
      * @param value
      *     allowed object is
-     *     {@link _OperatingModeEnum }
+     *     {@link OperatingModeEnum }
      *     
      */
-    public void setOperatingMode(_OperatingModeEnum value) {
+    public void setOperatingMode(OperatingModeEnum value) {
         this.operatingMode = value;
     }
 
@@ -142,10 +147,10 @@ public class ExchangeContext {
      * 
      * @return
      *     possible object is
-     *     {@link _UpdateMethodEnum }
+     *     {@link UpdateMethodEnum }
      *     
      */
-    public _UpdateMethodEnum getUpdateMethod() {
+    public UpdateMethodEnum getUpdateMethod() {
         return updateMethod;
     }
 
@@ -154,10 +159,10 @@ public class ExchangeContext {
      * 
      * @param value
      *     allowed object is
-     *     {@link _UpdateMethodEnum }
+     *     {@link UpdateMethodEnum }
      *     
      */
-    public void setUpdateMethod(_UpdateMethodEnum value) {
+    public void setUpdateMethod(UpdateMethodEnum value) {
         this.updateMethod = value;
     }
 
@@ -263,27 +268,27 @@ public class ExchangeContext {
     }
 
     /**
-     * Gets the value of the _ExchangeContextExtension property.
+     * Gets the value of the exchangeContextExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ExchangeContextExtension() {
-        return _ExchangeContextExtension;
+    public ExtensionType getExchangeContextExtension() {
+        return exchangeContextExtension;
     }
 
     /**
-     * Sets the value of the _ExchangeContextExtension property.
+     * Sets the value of the exchangeContextExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ExchangeContextExtension(_ExtensionType value) {
-        this._ExchangeContextExtension = value;
+    public void setExchangeContextExtension(ExtensionType value) {
+        this.exchangeContextExtension = value;
     }
 
 }

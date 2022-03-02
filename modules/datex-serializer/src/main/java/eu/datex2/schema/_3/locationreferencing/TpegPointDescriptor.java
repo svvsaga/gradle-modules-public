@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,8 +31,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegPointDescriptor", propOrder = {
-    "_TpegPointDescriptorExtension"
+@XmlType(name = "TpegPointDescriptor", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "tpegPointDescriptorExtension"
 })
 @XmlSeeAlso({
     TpegIlcPointDescriptor.class,
@@ -43,31 +43,31 @@ public abstract class TpegPointDescriptor
     extends TpegDescriptor
 {
 
-    @XmlElement(name = "_tpegPointDescriptorExtension")
-    protected _ExtensionType _TpegPointDescriptorExtension;
+    @XmlElement(name = "_tpegPointDescriptorExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegPointDescriptorExtension;
 
     /**
-     * Gets the value of the _TpegPointDescriptorExtension property.
+     * Gets the value of the tpegPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegPointDescriptorExtension() {
-        return _TpegPointDescriptorExtension;
+    public ExtensionType getTpegPointDescriptorExtension() {
+        return tpegPointDescriptorExtension;
     }
 
     /**
-     * Sets the value of the _TpegPointDescriptorExtension property.
+     * Sets the value of the tpegPointDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegPointDescriptorExtension(_ExtensionType value) {
-        this._TpegPointDescriptorExtension = value;
+    public void setTpegPointDescriptorExtension(ExtensionType value) {
+        this.tpegPointDescriptorExtension = value;
     }
 
 }

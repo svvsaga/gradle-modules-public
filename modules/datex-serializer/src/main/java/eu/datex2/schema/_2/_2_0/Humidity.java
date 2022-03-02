@@ -28,15 +28,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Humidity", propOrder = {
+@XmlType(name = "Humidity", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "relativeHumidity",
     "humidityExtension"
 })
 public class Humidity {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PercentageValue relativeHumidity;
-    protected _ExtensionType humidityExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType humidityExtension;
 
     /**
      * Gets the value of the relativeHumidity property.
@@ -67,10 +68,10 @@ public class Humidity {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHumidityExtension() {
+    public ExtensionType getHumidityExtension() {
         return humidityExtension;
     }
 
@@ -79,10 +80,10 @@ public class Humidity {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHumidityExtension(_ExtensionType value) {
+    public void setHumidityExtension(ExtensionType value) {
         this.humidityExtension = value;
     }
 

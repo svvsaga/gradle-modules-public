@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,10 +38,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Obstruction", propOrder = {
+@XmlType(name = "Obstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "numberOfObstructions",
     "mobilityOfObstruction",
-    "_ObstructionExtension"
+    "obstructionExtension"
 })
 @XmlSeeAlso({
     AnimalPresenceObstruction.class,
@@ -54,11 +54,13 @@ public abstract class Obstruction
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfObstructions;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobilityOfObstruction;
-    @XmlElement(name = "_obstructionExtension")
-    protected _ExtensionType _ObstructionExtension;
+    @XmlElement(name = "_obstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType obstructionExtension;
 
     /**
      * Gets the value of the numberOfObstructions property.
@@ -109,27 +111,27 @@ public abstract class Obstruction
     }
 
     /**
-     * Gets the value of the _ObstructionExtension property.
+     * Gets the value of the obstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ObstructionExtension() {
-        return _ObstructionExtension;
+    public ExtensionType getObstructionExtension() {
+        return obstructionExtension;
     }
 
     /**
-     * Sets the value of the _ObstructionExtension property.
+     * Sets the value of the obstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ObstructionExtension(_ExtensionType value) {
-        this._ObstructionExtension = value;
+    public void setObstructionExtension(ExtensionType value) {
+        this.obstructionExtension = value;
     }
 
 }

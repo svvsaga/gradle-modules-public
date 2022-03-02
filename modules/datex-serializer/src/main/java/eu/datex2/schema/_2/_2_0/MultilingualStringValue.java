@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MultilingualStringValue", propOrder = {
+@XmlType(name = "MultilingualStringValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "value"
 })
 public class MultilingualStringValue {

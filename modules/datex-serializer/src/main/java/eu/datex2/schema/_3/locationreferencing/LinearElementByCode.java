@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,18 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByCode", propOrder = {
+@XmlType(name = "LinearElementByCode", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "linearElementIdentifier",
-    "_LinearElementByCodeExtension"
+    "linearElementByCodeExtension"
 })
 public class LinearElementByCode
     extends LinearElement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String linearElementIdentifier;
-    @XmlElement(name = "_linearElementByCodeExtension")
-    protected _ExtensionType _LinearElementByCodeExtension;
+    @XmlElement(name = "_linearElementByCodeExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType linearElementByCodeExtension;
 
     /**
      * Gets the value of the linearElementIdentifier property.
@@ -72,27 +72,27 @@ public class LinearElementByCode
     }
 
     /**
-     * Gets the value of the _LinearElementByCodeExtension property.
+     * Gets the value of the linearElementByCodeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LinearElementByCodeExtension() {
-        return _LinearElementByCodeExtension;
+    public ExtensionType getLinearElementByCodeExtension() {
+        return linearElementByCodeExtension;
     }
 
     /**
-     * Sets the value of the _LinearElementByCodeExtension property.
+     * Sets the value of the linearElementByCodeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LinearElementByCodeExtension(_ExtensionType value) {
-        this._LinearElementByCodeExtension = value;
+    public void setLinearElementByCodeExtension(ExtensionType value) {
+        this.linearElementByCodeExtension = value;
     }
 
 }

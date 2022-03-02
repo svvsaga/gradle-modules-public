@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegPointDescriptor", propOrder = {
+@XmlType(name = "TpegPointDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegPointDescriptorExtension"
 })
 @XmlSeeAlso({
@@ -39,17 +40,18 @@ public abstract class TpegPointDescriptor
     extends TpegDescriptor
 {
 
-    protected _ExtensionType tpegPointDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegPointDescriptorExtension() {
+    public ExtensionType getTpegPointDescriptorExtension() {
         return tpegPointDescriptorExtension;
     }
 
@@ -58,10 +60,10 @@ public abstract class TpegPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegPointDescriptorExtension(ExtensionType value) {
         this.tpegPointDescriptorExtension = value;
     }
 

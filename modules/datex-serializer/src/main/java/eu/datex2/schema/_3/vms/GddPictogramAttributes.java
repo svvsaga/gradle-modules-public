@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,16 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GddPictogramAttributes", propOrder = {
+@XmlType(name = "GddPictogramAttributes", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "attributes",
-    "_GddPictogramAttributesExtension"
+    "gddPictogramAttributesExtension"
 })
 public class GddPictogramAttributes {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected byte[] attributes;
-    @XmlElement(name = "_gddPictogramAttributesExtension")
-    protected _ExtensionType _GddPictogramAttributesExtension;
+    @XmlElement(name = "_gddPictogramAttributesExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType gddPictogramAttributesExtension;
 
     /**
      * Gets the value of the attributes property.
@@ -67,27 +67,27 @@ public class GddPictogramAttributes {
     }
 
     /**
-     * Gets the value of the _GddPictogramAttributesExtension property.
+     * Gets the value of the gddPictogramAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GddPictogramAttributesExtension() {
-        return _GddPictogramAttributesExtension;
+    public ExtensionType getGddPictogramAttributesExtension() {
+        return gddPictogramAttributesExtension;
     }
 
     /**
-     * Sets the value of the _GddPictogramAttributesExtension property.
+     * Sets the value of the gddPictogramAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GddPictogramAttributesExtension(_ExtensionType value) {
-        this._GddPictogramAttributesExtension = value;
+    public void setGddPictogramAttributesExtension(ExtensionType value) {
+        this.gddPictogramAttributesExtension = value;
     }
 
 }

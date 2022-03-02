@@ -3,9 +3,9 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,21 +38,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationsPublication", propOrder = {
+@XmlType(name = "PredefinedLocationsPublication", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "headerInformation",
     "predefinedLocationReference",
-    "_PredefinedLocationsPublicationExtension"
+    "predefinedLocationsPublicationExtension"
 })
 public class PredefinedLocationsPublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<PredefinedLocationReference> predefinedLocationReference;
-    @XmlElement(name = "_predefinedLocationsPublicationExtension")
-    protected _ExtensionType _PredefinedLocationsPublicationExtension;
+    @XmlElement(name = "_predefinedLocationsPublicationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType predefinedLocationsPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -108,27 +108,27 @@ public class PredefinedLocationsPublication
     }
 
     /**
-     * Gets the value of the _PredefinedLocationsPublicationExtension property.
+     * Gets the value of the predefinedLocationsPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PredefinedLocationsPublicationExtension() {
-        return _PredefinedLocationsPublicationExtension;
+    public ExtensionType getPredefinedLocationsPublicationExtension() {
+        return predefinedLocationsPublicationExtension;
     }
 
     /**
-     * Sets the value of the _PredefinedLocationsPublicationExtension property.
+     * Sets the value of the predefinedLocationsPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PredefinedLocationsPublicationExtension(_ExtensionType value) {
-        this._PredefinedLocationsPublicationExtension = value;
+    public void setPredefinedLocationsPublicationExtension(ExtensionType value) {
+        this.predefinedLocationsPublicationExtension = value;
     }
 
 }

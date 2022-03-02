@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,31 +34,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegSimplePoint", propOrder = {
+@XmlType(name = "TpegSimplePoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "tpegSimplePointLocationType",
     "point",
-    "_TpegSimplePointExtension"
+    "tpegSimplePointExtension"
 })
 public class TpegSimplePoint
     extends TpegPointLocation
 {
 
-    @XmlElement(required = true)
-    protected _TpegLoc01SimplePointLocationSubtypeEnum tpegSimplePointLocationType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected TpegLoc01SimplePointLocationSubtypeEnum tpegSimplePointLocationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected TpegPoint point;
-    @XmlElement(name = "_tpegSimplePointExtension")
-    protected _ExtensionType _TpegSimplePointExtension;
+    @XmlElement(name = "_tpegSimplePointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegSimplePointExtension;
 
     /**
      * Gets the value of the tpegSimplePointLocationType property.
      * 
      * @return
      *     possible object is
-     *     {@link _TpegLoc01SimplePointLocationSubtypeEnum }
+     *     {@link TpegLoc01SimplePointLocationSubtypeEnum }
      *     
      */
-    public _TpegLoc01SimplePointLocationSubtypeEnum getTpegSimplePointLocationType() {
+    public TpegLoc01SimplePointLocationSubtypeEnum getTpegSimplePointLocationType() {
         return tpegSimplePointLocationType;
     }
 
@@ -67,10 +67,10 @@ public class TpegSimplePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _TpegLoc01SimplePointLocationSubtypeEnum }
+     *     {@link TpegLoc01SimplePointLocationSubtypeEnum }
      *     
      */
-    public void setTpegSimplePointLocationType(_TpegLoc01SimplePointLocationSubtypeEnum value) {
+    public void setTpegSimplePointLocationType(TpegLoc01SimplePointLocationSubtypeEnum value) {
         this.tpegSimplePointLocationType = value;
     }
 
@@ -99,27 +99,27 @@ public class TpegSimplePoint
     }
 
     /**
-     * Gets the value of the _TpegSimplePointExtension property.
+     * Gets the value of the tpegSimplePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegSimplePointExtension() {
-        return _TpegSimplePointExtension;
+    public ExtensionType getTpegSimplePointExtension() {
+        return tpegSimplePointExtension;
     }
 
     /**
-     * Sets the value of the _TpegSimplePointExtension property.
+     * Sets the value of the tpegSimplePointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegSimplePointExtension(_ExtensionType value) {
-        this._TpegSimplePointExtension = value;
+    public void setTpegSimplePointExtension(ExtensionType value) {
+        this.tpegSimplePointExtension = value;
     }
 
 }

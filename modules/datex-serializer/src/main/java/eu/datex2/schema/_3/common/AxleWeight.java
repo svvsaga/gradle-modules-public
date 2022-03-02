@@ -34,21 +34,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleWeight", propOrder = {
+@XmlType(name = "AxleWeight", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "axlePositionIdentifier",
     "axleWeight",
     "maximumPermittedAxleWeight",
-    "_AxleWeightExtension"
+    "axleWeightExtension"
 })
 public class AxleWeight {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axlePositionIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Float axleWeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Float maximumPermittedAxleWeight;
-    @XmlElement(name = "_axleWeightExtension")
-    protected _ExtensionType _AxleWeightExtension;
+    @XmlElement(name = "_axleWeightExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType axleWeightExtension;
 
     /**
      * Gets the value of the axlePositionIdentifier property.
@@ -123,27 +125,27 @@ public class AxleWeight {
     }
 
     /**
-     * Gets the value of the _AxleWeightExtension property.
+     * Gets the value of the axleWeightExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AxleWeightExtension() {
-        return _AxleWeightExtension;
+    public ExtensionType getAxleWeightExtension() {
+        return axleWeightExtension;
     }
 
     /**
-     * Sets the value of the _AxleWeightExtension property.
+     * Sets the value of the axleWeightExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AxleWeightExtension(_ExtensionType value) {
-        this._AxleWeightExtension = value;
+    public void setAxleWeightExtension(ExtensionType value) {
+        this.axleWeightExtension = value;
     }
 
 }

@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NonOrderedLocationGroupByList", propOrder = {
+@XmlType(name = "NonOrderedLocationGroupByList", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "locationContainedInGroup",
     "nonOrderedLocationGroupByListExtension"
 })
@@ -38,9 +38,10 @@ public class NonOrderedLocationGroupByList
     extends NonOrderedLocations
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<Location> locationContainedInGroup;
-    protected _ExtensionType nonOrderedLocationGroupByListExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType nonOrderedLocationGroupByListExtension;
 
     /**
      * Gets the value of the locationContainedInGroup property.
@@ -76,10 +77,10 @@ public class NonOrderedLocationGroupByList
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNonOrderedLocationGroupByListExtension() {
+    public ExtensionType getNonOrderedLocationGroupByListExtension() {
         return nonOrderedLocationGroupByListExtension;
     }
 
@@ -88,10 +89,10 @@ public class NonOrderedLocationGroupByList
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNonOrderedLocationGroupByListExtension(_ExtensionType value) {
+    public void setNonOrderedLocationGroupByListExtension(ExtensionType value) {
         this.nonOrderedLocationGroupByListExtension = value;
     }
 

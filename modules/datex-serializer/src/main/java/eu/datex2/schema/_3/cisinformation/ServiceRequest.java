@@ -4,9 +4,9 @@ package eu.datex2.schema._3.cisinformation;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Reference;
 import eu.datex2.schema._3.common.VersionedReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.exchangeinformation.Agent;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceRequest", propOrder = {
+@XmlType(name = "ServiceRequest", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
     "elementToProcessReference",
     "elementToProcessVersionedReference",
     "expiryTime",
@@ -65,33 +65,40 @@ import jakarta.xml.bind.annotation.XmlType;
     "serviceRequester",
     "serviceProvider",
     "serviceRequestCondition",
-    "_ServiceRequestExtension"
+    "serviceRequestExtension"
 })
 public class ServiceRequest {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected Reference elementToProcessReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected VersionedReference elementToProcessVersionedReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected VersionedReference expiryTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String externalReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String notPredefinedServiceName;
-    @XmlElement(required = true)
-    protected _PredefinedServiceEnum predefinedService;
-    @XmlElement(required = true)
-    protected _ServiceActionEnum requestedAction;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    protected PredefinedServiceEnum predefinedService;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    protected ServiceActionEnum requestedAction;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar servicerRequestCreationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar servicerRequestVersionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String customServiceParameter;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     protected Agent serviceRequester;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
     protected List<Agent> serviceProvider;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected ServiceRequestCondition serviceRequestCondition;
-    @XmlElement(name = "_serviceRequestExtension")
-    protected _ExtensionType _ServiceRequestExtension;
+    @XmlElement(name = "_serviceRequestExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    protected ExtensionType serviceRequestExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -222,10 +229,10 @@ public class ServiceRequest {
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedServiceEnum }
+     *     {@link PredefinedServiceEnum }
      *     
      */
-    public _PredefinedServiceEnum getPredefinedService() {
+    public PredefinedServiceEnum getPredefinedService() {
         return predefinedService;
     }
 
@@ -234,10 +241,10 @@ public class ServiceRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedServiceEnum }
+     *     {@link PredefinedServiceEnum }
      *     
      */
-    public void setPredefinedService(_PredefinedServiceEnum value) {
+    public void setPredefinedService(PredefinedServiceEnum value) {
         this.predefinedService = value;
     }
 
@@ -246,10 +253,10 @@ public class ServiceRequest {
      * 
      * @return
      *     possible object is
-     *     {@link _ServiceActionEnum }
+     *     {@link ServiceActionEnum }
      *     
      */
-    public _ServiceActionEnum getRequestedAction() {
+    public ServiceActionEnum getRequestedAction() {
         return requestedAction;
     }
 
@@ -258,10 +265,10 @@ public class ServiceRequest {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ServiceActionEnum }
+     *     {@link ServiceActionEnum }
      *     
      */
-    public void setRequestedAction(_ServiceActionEnum value) {
+    public void setRequestedAction(ServiceActionEnum value) {
         this.requestedAction = value;
     }
 
@@ -415,27 +422,27 @@ public class ServiceRequest {
     }
 
     /**
-     * Gets the value of the _ServiceRequestExtension property.
+     * Gets the value of the serviceRequestExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ServiceRequestExtension() {
-        return _ServiceRequestExtension;
+    public ExtensionType getServiceRequestExtension() {
+        return serviceRequestExtension;
     }
 
     /**
-     * Sets the value of the _ServiceRequestExtension property.
+     * Sets the value of the serviceRequestExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ServiceRequestExtension(_ExtensionType value) {
-        this._ServiceRequestExtension = value;
+    public void setServiceRequestExtension(ExtensionType value) {
+        this.serviceRequestExtension = value;
     }
 
     /**

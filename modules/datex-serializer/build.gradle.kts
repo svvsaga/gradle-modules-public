@@ -3,26 +3,23 @@ plugins {
     id("com.intershop.gradle.jaxb") version "5.1.0"
 }
 
-// binding.xjb needed to avoid name collision between extensions with underscores when generating POJO from XSD.
 jaxb {
     javaGen {
         register("Datex3") {
             schema = file(
                 "../datex-schemas/src/main/resources/DatexII_3/DATEXII_3_MessageContainer.xsd",
             )
-            binding = file("binding.xjb")
             outputDir = file("src/main/java")
             header = false
-            args = listOf("-npa")
+            args = listOf("-npa", "-XautoNameResolution")
         }
         register("Datex2") {
             schema = file(
                 "../datex-schemas/src/main/resources/DATEXIISchema_2_2_3.xsd",
             )
-            binding = file("binding.xjb")
             outputDir = file("src/main/java")
             header = false
-            args = listOf("-npa")
+            args = listOf("-npa", "-XautoNameResolution")
         }
     }
 }

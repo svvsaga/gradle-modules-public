@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subscription", propOrder = {
+@XmlType(name = "Subscription", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "deleteSubscription",
     "deliveryInterval",
     "operatingMode",
@@ -56,27 +56,33 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Subscription {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deleteSubscription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float deliveryInterval;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OperatingModeEnum operatingMode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStartTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected SubscriptionStateEnum subscriptionState;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStopTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected UpdateMethodEnum updateMethod;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<Target> target;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FilterReference filterReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected CatalogueReference catalogueReference;
-    protected _ExtensionType subscriptionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType subscriptionExtension;
 
     /**
      * Gets the value of the deleteSubscription property.
@@ -328,10 +334,10 @@ public class Subscription {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSubscriptionExtension() {
+    public ExtensionType getSubscriptionExtension() {
         return subscriptionExtension;
     }
 
@@ -340,10 +346,10 @@ public class Subscription {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSubscriptionExtension(_ExtensionType value) {
+    public void setSubscriptionExtension(ExtensionType value) {
         this.subscriptionExtension = value;
     }
 

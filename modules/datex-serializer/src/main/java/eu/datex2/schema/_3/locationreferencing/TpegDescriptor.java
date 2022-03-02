@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,9 +35,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegDescriptor", propOrder = {
+@XmlType(name = "TpegDescriptor", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "descriptor",
-    "_TpegDescriptorExtension"
+    "tpegDescriptorExtension"
 })
 @XmlSeeAlso({
     TpegAreaDescriptor.class,
@@ -45,10 +45,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegDescriptor {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected MultilingualString descriptor;
-    @XmlElement(name = "_tpegDescriptorExtension")
-    protected _ExtensionType _TpegDescriptorExtension;
+    @XmlElement(name = "_tpegDescriptorExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegDescriptorExtension;
 
     /**
      * Gets the value of the descriptor property.
@@ -75,27 +75,27 @@ public abstract class TpegDescriptor {
     }
 
     /**
-     * Gets the value of the _TpegDescriptorExtension property.
+     * Gets the value of the tpegDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegDescriptorExtension() {
-        return _TpegDescriptorExtension;
+    public ExtensionType getTpegDescriptorExtension() {
+        return tpegDescriptorExtension;
     }
 
     /**
-     * Sets the value of the _TpegDescriptorExtension property.
+     * Sets the value of the tpegDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegDescriptorExtension(_ExtensionType value) {
-        this._TpegDescriptorExtension = value;
+    public void setTpegDescriptorExtension(ExtensionType value) {
+        this.tpegDescriptorExtension = value;
     }
 
 }

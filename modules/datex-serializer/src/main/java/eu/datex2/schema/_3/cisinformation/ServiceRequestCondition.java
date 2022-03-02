@@ -3,10 +3,10 @@ package eu.datex2.schema._3.cisinformation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.Reference;
 import eu.datex2.schema._3.common.VersionedReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,21 +37,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceRequestCondition", propOrder = {
+@XmlType(name = "ServiceRequestCondition", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
     "conditionDescription",
     "externalIdCondition",
     "referencedCondition",
     "versionReferencedCondition",
-    "_ServiceRequestConditionExtension"
+    "serviceRequestConditionExtension"
 })
 public class ServiceRequestCondition {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected MultilingualString conditionDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<String> externalIdCondition;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<Reference> referencedCondition;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<VersionedReference> versionReferencedCondition;
-    @XmlElement(name = "_serviceRequestConditionExtension")
-    protected _ExtensionType _ServiceRequestConditionExtension;
+    @XmlElement(name = "_serviceRequestConditionExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    protected ExtensionType serviceRequestConditionExtension;
 
     /**
      * Gets the value of the conditionDescription property.
@@ -165,27 +169,27 @@ public class ServiceRequestCondition {
     }
 
     /**
-     * Gets the value of the _ServiceRequestConditionExtension property.
+     * Gets the value of the serviceRequestConditionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ServiceRequestConditionExtension() {
-        return _ServiceRequestConditionExtension;
+    public ExtensionType getServiceRequestConditionExtension() {
+        return serviceRequestConditionExtension;
     }
 
     /**
-     * Sets the value of the _ServiceRequestConditionExtension property.
+     * Sets the value of the serviceRequestConditionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ServiceRequestConditionExtension(_ExtensionType value) {
-        this._ServiceRequestConditionExtension = value;
+    public void setServiceRequestConditionExtension(ExtensionType value) {
+        this.serviceRequestConditionExtension = value;
     }
 
 }

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,22 +38,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextDisplay", propOrder = {
+@XmlType(name = "TextDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "textCode",
     "textImageUrl",
     "textLine",
-    "_TextDisplayExtension"
+    "textDisplayExtension"
 })
 public class TextDisplay
     extends DisplayAreaSettings
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String textCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String textImageUrl;
-    protected List<_TextDisplayLineIndexTextLine> textLine;
-    @XmlElement(name = "_textDisplayExtension")
-    protected _ExtensionType _TextDisplayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<TextDisplayLineIndexTextLine> textLine;
+    @XmlElement(name = "_textDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType textDisplayExtension;
 
     /**
      * Gets the value of the textCode property.
@@ -121,39 +124,39 @@ public class TextDisplay
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _TextDisplayLineIndexTextLine }
+     * {@link TextDisplayLineIndexTextLine }
      * 
      * 
      */
-    public List<_TextDisplayLineIndexTextLine> getTextLine() {
+    public List<TextDisplayLineIndexTextLine> getTextLine() {
         if (textLine == null) {
-            textLine = new ArrayList<_TextDisplayLineIndexTextLine>();
+            textLine = new ArrayList<TextDisplayLineIndexTextLine>();
         }
         return this.textLine;
     }
 
     /**
-     * Gets the value of the _TextDisplayExtension property.
+     * Gets the value of the textDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TextDisplayExtension() {
-        return _TextDisplayExtension;
+    public ExtensionType getTextDisplayExtension() {
+        return textDisplayExtension;
     }
 
     /**
-     * Sets the value of the _TextDisplayExtension property.
+     * Sets the value of the textDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TextDisplayExtension(_ExtensionType value) {
-        this._TextDisplayExtension = value;
+    public void setTextDisplayExtension(ExtensionType value) {
+        this.textDisplayExtension = value;
     }
 
 }

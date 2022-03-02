@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceFromLinearElementStart", propOrder = {
+@XmlType(name = "DistanceFromLinearElementStart", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "distanceAlong",
     "distanceFromLinearElementStartExtension"
 })
@@ -35,8 +36,10 @@ public class DistanceFromLinearElementStart
     extends DistanceAlongLinearElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float distanceAlong;
-    protected _ExtensionType distanceFromLinearElementStartExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType distanceFromLinearElementStartExtension;
 
     /**
      * Gets the value of the distanceAlong property.
@@ -59,10 +62,10 @@ public class DistanceFromLinearElementStart
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDistanceFromLinearElementStartExtension() {
+    public ExtensionType getDistanceFromLinearElementStartExtension() {
         return distanceFromLinearElementStartExtension;
     }
 
@@ -71,10 +74,10 @@ public class DistanceFromLinearElementStart
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDistanceFromLinearElementStartExtension(_ExtensionType value) {
+    public void setDistanceFromLinearElementStartExtension(ExtensionType value) {
         this.distanceFromLinearElementStartExtension = value;
     }
 

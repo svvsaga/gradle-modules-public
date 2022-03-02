@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -44,24 +44,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsController", propOrder = {
+@XmlType(name = "VmsController", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "numberOfVms",
     "externalIdentifier",
     "ipAddress",
     "electronicAddress",
     "vms",
-    "_VmsControllerExtension"
+    "vmsControllerExtension"
 })
 public class VmsController {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVms;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String externalIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String ipAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String electronicAddress;
-    protected List<_VmsControllerVmsIndexVms> vms;
-    @XmlElement(name = "_vmsControllerExtension")
-    protected _ExtensionType _VmsControllerExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<VmsControllerVmsIndexVms> vms;
+    @XmlElement(name = "_vmsControllerExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsControllerExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -181,39 +186,39 @@ public class VmsController {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsControllerVmsIndexVms }
+     * {@link VmsControllerVmsIndexVms }
      * 
      * 
      */
-    public List<_VmsControllerVmsIndexVms> getVms() {
+    public List<VmsControllerVmsIndexVms> getVms() {
         if (vms == null) {
-            vms = new ArrayList<_VmsControllerVmsIndexVms>();
+            vms = new ArrayList<VmsControllerVmsIndexVms>();
         }
         return this.vms;
     }
 
     /**
-     * Gets the value of the _VmsControllerExtension property.
+     * Gets the value of the vmsControllerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsControllerExtension() {
-        return _VmsControllerExtension;
+    public ExtensionType getVmsControllerExtension() {
+        return vmsControllerExtension;
     }
 
     /**
-     * Sets the value of the _VmsControllerExtension property.
+     * Sets the value of the vmsControllerExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsControllerExtension(_ExtensionType value) {
-        this._VmsControllerExtension = value;
+    public void setVmsControllerExtension(ExtensionType value) {
+        this.vmsControllerExtension = value;
     }
 
     /**

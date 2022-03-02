@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,8 +34,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationReference", propOrder = {
-    "_LocationReferenceExtension"
+@XmlType(name = "LocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "locationReferenceExtension"
 })
 @XmlSeeAlso({
     Itinerary.class,
@@ -44,31 +44,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class LocationReference {
 
-    @XmlElement(name = "_locationReferenceExtension")
-    protected _ExtensionType _LocationReferenceExtension;
+    @XmlElement(name = "_locationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType locationReferenceExtension;
 
     /**
-     * Gets the value of the _LocationReferenceExtension property.
+     * Gets the value of the locationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LocationReferenceExtension() {
-        return _LocationReferenceExtension;
+    public ExtensionType getLocationReferenceExtension() {
+        return locationReferenceExtension;
     }
 
     /**
-     * Sets the value of the _LocationReferenceExtension property.
+     * Sets the value of the locationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LocationReferenceExtension(_ExtensionType value) {
-        this._LocationReferenceExtension = value;
+    public void setLocationReferenceExtension(ExtensionType value) {
+        this.locationReferenceExtension = value;
     }
 
 }

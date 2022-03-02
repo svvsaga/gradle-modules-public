@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,19 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Image", propOrder = {
+@XmlType(name = "Image", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "imageData",
     "imageFormat",
-    "_ImageExtension"
+    "imageExtension"
 })
 public class Image {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected byte[] imageData;
-    @XmlElement(required = true)
-    protected _ImageFormatEnum imageFormat;
-    @XmlElement(name = "_imageExtension")
-    protected _ExtensionType _ImageExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected ImageFormatEnum imageFormat;
+    @XmlElement(name = "_imageExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType imageExtension;
 
     /**
      * Gets the value of the imageData property.
@@ -73,10 +73,10 @@ public class Image {
      * 
      * @return
      *     possible object is
-     *     {@link _ImageFormatEnum }
+     *     {@link ImageFormatEnum }
      *     
      */
-    public _ImageFormatEnum getImageFormat() {
+    public ImageFormatEnum getImageFormat() {
         return imageFormat;
     }
 
@@ -85,35 +85,35 @@ public class Image {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ImageFormatEnum }
+     *     {@link ImageFormatEnum }
      *     
      */
-    public void setImageFormat(_ImageFormatEnum value) {
+    public void setImageFormat(ImageFormatEnum value) {
         this.imageFormat = value;
     }
 
     /**
-     * Gets the value of the _ImageExtension property.
+     * Gets the value of the imageExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ImageExtension() {
-        return _ImageExtension;
+    public ExtensionType getImageExtension() {
+        return imageExtension;
     }
 
     /**
-     * Sets the value of the _ImageExtension property.
+     * Sets the value of the imageExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ImageExtension(_ExtensionType value) {
-        this._ImageExtension = value;
+    public void setImageExtension(ExtensionType value) {
+        this.imageExtension = value;
     }
 
 }

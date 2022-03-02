@@ -1,71 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for PositionXAbsoluteEnum.
+ * <p>Java class for _PositionXAbsoluteEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="PositionXAbsoluteEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="onLeft"/&gt;
- *     &lt;enumeration value="inTheMiddle"/&gt;
- *     &lt;enumeration value="onRight"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_PositionXAbsoluteEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;PositionXAbsoluteEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "PositionXAbsoluteEnum")
-@XmlEnum
-public enum PositionXAbsoluteEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_PositionXAbsoluteEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class PositionXAbsoluteEnum {
 
-
-    /**
-     * On the left of the assigned space.
-     * 
-     */
-    @XmlEnumValue("onLeft")
-    ON_LEFT("onLeft"),
-
-    /**
-     * In the middle of the assigned space.
-     * 
-     */
-    @XmlEnumValue("inTheMiddle")
-    IN_THE_MIDDLE("inTheMiddle"),
+    @XmlValue
+    protected PositionXAbsoluteEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * On the right of the assigned space.
+     * Absolute horizontal positions of an item within an assigned space.
      * 
+     * @return
+     *     possible object is
+     *     {@link PositionXAbsoluteEnum2 }
+     *     
      */
-    @XmlEnumValue("onRight")
-    ON_RIGHT("onRight"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    PositionXAbsoluteEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public PositionXAbsoluteEnum2 getValue() {
         return value;
     }
 
-    public static PositionXAbsoluteEnum fromValue(String v) {
-        for (PositionXAbsoluteEnum c: PositionXAbsoluteEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PositionXAbsoluteEnum2 }
+     *     
+     */
+    public void setValue(PositionXAbsoluteEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

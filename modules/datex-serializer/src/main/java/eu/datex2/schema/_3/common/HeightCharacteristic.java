@@ -31,28 +31,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeightCharacteristic", propOrder = {
+@XmlType(name = "HeightCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "comparisonOperator",
     "vehicleHeight",
-    "_HeightCharacteristicExtension"
+    "heightCharacteristicExtension"
 })
 public class HeightCharacteristic {
 
-    @XmlElement(required = true)
-    protected _ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float vehicleHeight;
-    @XmlElement(name = "_heightCharacteristicExtension")
-    protected _ExtensionType _HeightCharacteristicExtension;
+    @XmlElement(name = "_heightCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType heightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public _ComparisonOperatorEnum getComparisonOperator() {
+    public ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -61,10 +62,10 @@ public class HeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(_ComparisonOperatorEnum value) {
+    public void setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -85,27 +86,27 @@ public class HeightCharacteristic {
     }
 
     /**
-     * Gets the value of the _HeightCharacteristicExtension property.
+     * Gets the value of the heightCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HeightCharacteristicExtension() {
-        return _HeightCharacteristicExtension;
+    public ExtensionType getHeightCharacteristicExtension() {
+        return heightCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the _HeightCharacteristicExtension property.
+     * Sets the value of the heightCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HeightCharacteristicExtension(_ExtensionType value) {
-        this._HeightCharacteristicExtension = value;
+    public void setHeightCharacteristicExtension(ExtensionType value) {
+        this.heightCharacteristicExtension = value;
     }
 
 }

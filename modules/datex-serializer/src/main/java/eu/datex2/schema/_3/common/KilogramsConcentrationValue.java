@@ -32,17 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KilogramsConcentrationValue", propOrder = {
+@XmlType(name = "KilogramsConcentrationValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "kilogramsConcentration",
-    "_KilogramsConcentrationValueExtension"
+    "kilogramsConcentrationValueExtension"
 })
 public class KilogramsConcentrationValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float kilogramsConcentration;
-    @XmlElement(name = "_kilogramsConcentrationValueExtension")
-    protected _ExtensionType _KilogramsConcentrationValueExtension;
+    @XmlElement(name = "_kilogramsConcentrationValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType kilogramsConcentrationValueExtension;
 
     /**
      * Gets the value of the kilogramsConcentration property.
@@ -61,27 +62,27 @@ public class KilogramsConcentrationValue
     }
 
     /**
-     * Gets the value of the _KilogramsConcentrationValueExtension property.
+     * Gets the value of the kilogramsConcentrationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_KilogramsConcentrationValueExtension() {
-        return _KilogramsConcentrationValueExtension;
+    public ExtensionType getKilogramsConcentrationValueExtension() {
+        return kilogramsConcentrationValueExtension;
     }
 
     /**
-     * Sets the value of the _KilogramsConcentrationValueExtension property.
+     * Sets the value of the kilogramsConcentrationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_KilogramsConcentrationValueExtension(_ExtensionType value) {
-        this._KilogramsConcentrationValueExtension = value;
+    public void setKilogramsConcentrationValueExtension(ExtensionType value) {
+        this.kilogramsConcentrationValueExtension = value;
     }
 
 }

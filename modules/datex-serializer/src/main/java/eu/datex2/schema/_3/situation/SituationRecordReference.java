@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GlobalReference;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,28 +32,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationRecordReference", propOrder = {
+@XmlType(name = "SituationRecordReference", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "objectReference",
-    "_SituationRecordReferenceExtension"
+    "situationRecordReferenceExtension"
 })
 public class SituationRecordReference
     extends GlobalReference
 {
 
-    @XmlElement(required = true)
-    protected _SituationRecordVersionedReference objectReference;
-    @XmlElement(name = "_situationRecordReferenceExtension")
-    protected _ExtensionType _SituationRecordReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected SituationRecordVersionedReference objectReference;
+    @XmlElement(name = "_situationRecordReferenceExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType situationRecordReferenceExtension;
 
     /**
      * Gets the value of the objectReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public _SituationRecordVersionedReference getObjectReference() {
+    public SituationRecordVersionedReference getObjectReference() {
         return objectReference;
     }
 
@@ -62,35 +62,35 @@ public class SituationRecordReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public void setObjectReference(_SituationRecordVersionedReference value) {
+    public void setObjectReference(SituationRecordVersionedReference value) {
         this.objectReference = value;
     }
 
     /**
-     * Gets the value of the _SituationRecordReferenceExtension property.
+     * Gets the value of the situationRecordReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SituationRecordReferenceExtension() {
-        return _SituationRecordReferenceExtension;
+    public ExtensionType getSituationRecordReferenceExtension() {
+        return situationRecordReferenceExtension;
     }
 
     /**
-     * Sets the value of the _SituationRecordReferenceExtension property.
+     * Sets the value of the situationRecordReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SituationRecordReferenceExtension(_ExtensionType value) {
-        this._SituationRecordReferenceExtension = value;
+    public void setSituationRecordReferenceExtension(ExtensionType value) {
+        this.situationRecordReferenceExtension = value;
     }
 
 }

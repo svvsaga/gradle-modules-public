@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,38 +32,38 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLastLocationReferencePoint", propOrder = {
-    "_OpenlrLastLocationReferencePointExtension"
+@XmlType(name = "OpenlrLastLocationReferencePoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "openlrLastLocationReferencePointExtension"
 })
 public class OpenlrLastLocationReferencePoint
     extends OpenlrBaseReferencePoint
 {
 
-    @XmlElement(name = "_openlrLastLocationReferencePointExtension")
-    protected _ExtensionType _OpenlrLastLocationReferencePointExtension;
+    @XmlElement(name = "_openlrLastLocationReferencePointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrLastLocationReferencePointExtension;
 
     /**
-     * Gets the value of the _OpenlrLastLocationReferencePointExtension property.
+     * Gets the value of the openlrLastLocationReferencePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrLastLocationReferencePointExtension() {
-        return _OpenlrLastLocationReferencePointExtension;
+    public ExtensionType getOpenlrLastLocationReferencePointExtension() {
+        return openlrLastLocationReferencePointExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrLastLocationReferencePointExtension property.
+     * Sets the value of the openlrLastLocationReferencePointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrLastLocationReferencePointExtension(_ExtensionType value) {
-        this._OpenlrLastLocationReferencePointExtension = value;
+    public void setOpenlrLastLocationReferencePointExtension(ExtensionType value) {
+        this.openlrLastLocationReferencePointExtension = value;
     }
 
 }

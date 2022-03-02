@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,30 +34,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralNetworkManagement", propOrder = {
+@XmlType(name = "GeneralNetworkManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "generalNetworkManagementType",
     "trafficManuallyDirectedBy",
-    "_GeneralNetworkManagementExtension"
+    "generalNetworkManagementExtension"
 })
 public class GeneralNetworkManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
-    protected _GeneralNetworkManagementTypeEnum generalNetworkManagementType;
-    protected _PersonCategoryEnum trafficManuallyDirectedBy;
-    @XmlElement(name = "_generalNetworkManagementExtension")
-    protected _ExtensionType _GeneralNetworkManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected PersonCategoryEnum trafficManuallyDirectedBy;
+    @XmlElement(name = "_generalNetworkManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType generalNetworkManagementExtension;
 
     /**
      * Gets the value of the generalNetworkManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link _GeneralNetworkManagementTypeEnum }
+     *     {@link GeneralNetworkManagementTypeEnum }
      *     
      */
-    public _GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
+    public GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
         return generalNetworkManagementType;
     }
 
@@ -66,10 +67,10 @@ public class GeneralNetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _GeneralNetworkManagementTypeEnum }
+     *     {@link GeneralNetworkManagementTypeEnum }
      *     
      */
-    public void setGeneralNetworkManagementType(_GeneralNetworkManagementTypeEnum value) {
+    public void setGeneralNetworkManagementType(GeneralNetworkManagementTypeEnum value) {
         this.generalNetworkManagementType = value;
     }
 
@@ -78,10 +79,10 @@ public class GeneralNetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link _PersonCategoryEnum }
+     *     {@link PersonCategoryEnum }
      *     
      */
-    public _PersonCategoryEnum getTrafficManuallyDirectedBy() {
+    public PersonCategoryEnum getTrafficManuallyDirectedBy() {
         return trafficManuallyDirectedBy;
     }
 
@@ -90,35 +91,35 @@ public class GeneralNetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _PersonCategoryEnum }
+     *     {@link PersonCategoryEnum }
      *     
      */
-    public void setTrafficManuallyDirectedBy(_PersonCategoryEnum value) {
+    public void setTrafficManuallyDirectedBy(PersonCategoryEnum value) {
         this.trafficManuallyDirectedBy = value;
     }
 
     /**
-     * Gets the value of the _GeneralNetworkManagementExtension property.
+     * Gets the value of the generalNetworkManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GeneralNetworkManagementExtension() {
-        return _GeneralNetworkManagementExtension;
+    public ExtensionType getGeneralNetworkManagementExtension() {
+        return generalNetworkManagementExtension;
     }
 
     /**
-     * Sets the value of the _GeneralNetworkManagementExtension property.
+     * Sets the value of the generalNetworkManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GeneralNetworkManagementExtension(_ExtensionType value) {
-        this._GeneralNetworkManagementExtension = value;
+    public void setGeneralNetworkManagementExtension(ExtensionType value) {
+        this.generalNetworkManagementExtension = value;
     }
 
 }

@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfParkingSitesStatus", propOrder = {
+@XmlType(name = "GroupOfParkingSitesStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "groupOfParkingSitesStatus",
     "groupOfParkingSitesStatusExtension"
 })
@@ -36,9 +37,11 @@ public class GroupOfParkingSitesStatus
     extends ParkingRecordStatus
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected GroupOfParkingSitesStatusEnum groupOfParkingSitesStatus;
-    protected _ExtensionType groupOfParkingSitesStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType groupOfParkingSitesStatusExtension;
 
     /**
      * Gets the value of the groupOfParkingSitesStatus property.
@@ -69,10 +72,10 @@ public class GroupOfParkingSitesStatus
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfParkingSitesStatusExtension() {
+    public ExtensionType getGroupOfParkingSitesStatusExtension() {
         return groupOfParkingSitesStatusExtension;
     }
 
@@ -81,10 +84,10 @@ public class GroupOfParkingSitesStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfParkingSitesStatusExtension(_ExtensionType value) {
+    public void setGroupOfParkingSitesStatusExtension(ExtensionType value) {
         this.groupOfParkingSitesStatusExtension = value;
     }
 

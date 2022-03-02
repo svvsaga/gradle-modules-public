@@ -1,71 +1,87 @@
 
 package eu.datex2.schema._3.cisinformation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ServiceActionStatusEnum.
+ * <p>Java class for _ServiceActionStatusEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ServiceActionStatusEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="compliant"/&gt;
- *     &lt;enumeration value="failed"/&gt;
- *     &lt;enumeration value="notCompliant"/&gt;
- *     &lt;enumeration value="processing"/&gt;
- *     &lt;enumeration value="rejected"/&gt;
- *     &lt;enumeration value="scheduled"/&gt;
- *     &lt;enumeration value="success"/&gt;
- *     &lt;enumeration value="timedOut"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ServiceActionStatusEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/cisInformation&gt;ServiceActionStatusEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ServiceActionStatusEnum")
-@XmlEnum
-public enum ServiceActionStatusEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ServiceActionStatusEnum", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+    "value"
+})
+public class ServiceActionStatusEnum {
 
-    @XmlEnumValue("compliant")
-    COMPLIANT("compliant"),
-    @XmlEnumValue("failed")
-    FAILED("failed"),
-    @XmlEnumValue("notCompliant")
-    NOT_COMPLIANT("notCompliant"),
-    @XmlEnumValue("processing")
-    PROCESSING("processing"),
-    @XmlEnumValue("rejected")
-    REJECTED("rejected"),
-    @XmlEnumValue("scheduled")
-    SCHEDULED("scheduled"),
-    @XmlEnumValue("success")
-    SUCCESS("success"),
-    @XmlEnumValue("timedOut")
-    TIMED_OUT("timedOut"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
+    @XmlValue
+    protected ServiceActionStatusEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
-    ServiceActionStatusEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    /**
+     * Gets the value of the value property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ServiceActionStatusEnum2 }
+     *     
+     */
+    public ServiceActionStatusEnum2 getValue() {
         return value;
     }
 
-    public static ServiceActionStatusEnum fromValue(String v) {
-        for (ServiceActionStatusEnum c: ServiceActionStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ServiceActionStatusEnum2 }
+     *     
+     */
+    public void setValue(ServiceActionStatusEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

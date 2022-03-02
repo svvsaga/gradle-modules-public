@@ -1,84 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for InformationStatusEnum.
+ * <p>Java class for _InformationStatusEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="InformationStatusEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="real"/&gt;
- *     &lt;enumeration value="securityExercise"/&gt;
- *     &lt;enumeration value="technicalExercise"/&gt;
- *     &lt;enumeration value="test"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_InformationStatusEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;InformationStatusEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "InformationStatusEnum")
-@XmlEnum
-public enum InformationStatusEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_InformationStatusEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class InformationStatusEnum {
 
-
-    /**
-     * The information is real. It is not a test or exercise.
-     * 
-     */
-    @XmlEnumValue("real")
-    REAL("real"),
-
-    /**
-     * The information is part of an exercise which is for testing security.
-     *           
-     * 
-     */
-    @XmlEnumValue("securityExercise")
-    SECURITY_EXERCISE("securityExercise"),
+    @XmlValue
+    protected InformationStatusEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The information is part of an exercise which includes tests of associated
-     *             technical subsystems.
-     *           
+     * Status of the related information (i.e. real, test or exercise).
      * 
+     * @return
+     *     possible object is
+     *     {@link InformationStatusEnum2 }
+     *     
      */
-    @XmlEnumValue("technicalExercise")
-    TECHNICAL_EXERCISE("technicalExercise"),
-
-    /**
-     * The information is part of a test for checking the exchange of this type of
-     *             information.
-     *           
-     * 
-     */
-    @XmlEnumValue("test")
-    TEST("test"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    InformationStatusEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public InformationStatusEnum2 getValue() {
         return value;
     }
 
-    public static InformationStatusEnum fromValue(String v) {
-        for (InformationStatusEnum c: InformationStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InformationStatusEnum2 }
+     *     
+     */
+    public void setValue(InformationStatusEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

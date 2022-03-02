@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrBaseLocationReferencePoint", propOrder = {
+@XmlType(name = "OpenlrBaseLocationReferencePoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrCoordinate",
     "openlrLineAttributes",
     "openlrBaseLocationReferencePointExtension"
@@ -41,11 +41,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class OpenlrBaseLocationReferencePoint {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates openlrCoordinate;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLineAttributes openlrLineAttributes;
-    protected _ExtensionType openlrBaseLocationReferencePointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrBaseLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -100,10 +101,10 @@ public abstract class OpenlrBaseLocationReferencePoint {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrBaseLocationReferencePointExtension() {
+    public ExtensionType getOpenlrBaseLocationReferencePointExtension() {
         return openlrBaseLocationReferencePointExtension;
     }
 
@@ -112,10 +113,10 @@ public abstract class OpenlrBaseLocationReferencePoint {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrBaseLocationReferencePointExtension(_ExtensionType value) {
+    public void setOpenlrBaseLocationReferencePointExtension(ExtensionType value) {
         this.openlrBaseLocationReferencePointExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,29 +35,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Delays", propOrder = {
+@XmlType(name = "Delays", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "delayBand",
     "delaysType",
     "delayTimeValue",
-    "_DelaysExtension"
+    "delaysExtension"
 })
 public class Delays {
 
-    protected _DelayBandEnum delayBand;
-    protected _DelaysTypeEnum delaysType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected DelayBandEnum delayBand;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected DelaysTypeEnum delaysType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float delayTimeValue;
-    @XmlElement(name = "_delaysExtension")
-    protected _ExtensionType _DelaysExtension;
+    @XmlElement(name = "_delaysExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType delaysExtension;
 
     /**
      * Gets the value of the delayBand property.
      * 
      * @return
      *     possible object is
-     *     {@link _DelayBandEnum }
+     *     {@link DelayBandEnum }
      *     
      */
-    public _DelayBandEnum getDelayBand() {
+    public DelayBandEnum getDelayBand() {
         return delayBand;
     }
 
@@ -66,10 +69,10 @@ public class Delays {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DelayBandEnum }
+     *     {@link DelayBandEnum }
      *     
      */
-    public void setDelayBand(_DelayBandEnum value) {
+    public void setDelayBand(DelayBandEnum value) {
         this.delayBand = value;
     }
 
@@ -78,10 +81,10 @@ public class Delays {
      * 
      * @return
      *     possible object is
-     *     {@link _DelaysTypeEnum }
+     *     {@link DelaysTypeEnum }
      *     
      */
-    public _DelaysTypeEnum getDelaysType() {
+    public DelaysTypeEnum getDelaysType() {
         return delaysType;
     }
 
@@ -90,10 +93,10 @@ public class Delays {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DelaysTypeEnum }
+     *     {@link DelaysTypeEnum }
      *     
      */
-    public void setDelaysType(_DelaysTypeEnum value) {
+    public void setDelaysType(DelaysTypeEnum value) {
         this.delaysType = value;
     }
 
@@ -122,27 +125,27 @@ public class Delays {
     }
 
     /**
-     * Gets the value of the _DelaysExtension property.
+     * Gets the value of the delaysExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DelaysExtension() {
-        return _DelaysExtension;
+    public ExtensionType getDelaysExtension() {
+        return delaysExtension;
     }
 
     /**
-     * Sets the value of the _DelaysExtension property.
+     * Sets the value of the delaysExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DelaysExtension(_ExtensionType value) {
-        this._DelaysExtension = value;
+    public void setDelaysExtension(ExtensionType value) {
+        this.delaysExtension = value;
     }
 
 }

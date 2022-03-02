@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Pollution;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,18 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PollutionInformation", propOrder = {
+@XmlType(name = "PollutionInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "pollution",
-    "_PollutionInformationExtension"
+    "pollutionInformationExtension"
 })
 public class PollutionInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected List<Pollution> pollution;
-    @XmlElement(name = "_pollutionInformationExtension")
-    protected _ExtensionType _PollutionInformationExtension;
+    @XmlElement(name = "_pollutionInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType pollutionInformationExtension;
 
     /**
      * Gets the value of the pollution property.
@@ -77,27 +77,27 @@ public class PollutionInformation
     }
 
     /**
-     * Gets the value of the _PollutionInformationExtension property.
+     * Gets the value of the pollutionInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PollutionInformationExtension() {
-        return _PollutionInformationExtension;
+    public ExtensionType getPollutionInformationExtension() {
+        return pollutionInformationExtension;
     }
 
     /**
-     * Sets the value of the _PollutionInformationExtension property.
+     * Sets the value of the pollutionInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PollutionInformationExtension(_ExtensionType value) {
-        this._PollutionInformationExtension = value;
+    public void setPollutionInformationExtension(ExtensionType value) {
+        this.pollutionInformationExtension = value;
     }
 
 }

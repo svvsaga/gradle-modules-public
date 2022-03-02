@@ -1,103 +1,89 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for GddServiceCategoryEnum.
+ * <p>Java class for _GddServiceCategoryEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="GddServiceCategoryEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="dangerWarning"/&gt;
- *     &lt;enumeration value="regulatory"/&gt;
- *     &lt;enumeration value="informative"/&gt;
- *     &lt;enumeration value="publicFacilities"/&gt;
- *     &lt;enumeration value="ambientConditions"/&gt;
- *     &lt;enumeration value="roadConditions"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_GddServiceCategoryEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;GddServiceCategoryEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "GddServiceCategoryEnum")
-@XmlEnum
-public enum GddServiceCategoryEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_GddServiceCategoryEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class GddServiceCategoryEnum {
 
-
-    /**
-     * Danger warning sign information (GDD service category 11).
-     * 
-     */
-    @XmlEnumValue("dangerWarning")
-    DANGER_WARNING("dangerWarning"),
-
-    /**
-     * Informing of special obligations, restrictions or prohibitions (GDD service
-     *             category 12).
-     *           
-     * 
-     */
-    @XmlEnumValue("regulatory")
-    REGULATORY("regulatory"),
+    @XmlValue
+    protected GddServiceCategoryEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Informative, advisory, or guiding (GDD service category 13).
+     * Type of service offered by the pictogram, as defined in ISO 14823 Graphic Data Dictionary
+     *         (GDD)
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link GddServiceCategoryEnum2 }
+     *     
      */
-    @XmlEnumValue("informative")
-    INFORMATIVE("informative"),
-
-    /**
-     * Informing of a certain public facility and its service (GDD service category
-     *             21).
-     *           
-     * 
-     */
-    @XmlEnumValue("publicFacilities")
-    PUBLIC_FACILITIES("publicFacilities"),
-
-    /**
-     * Notifying of road-related ambient conditions and events on route (GDD service
-     *             category 31).
-     *           
-     * 
-     */
-    @XmlEnumValue("ambientConditions")
-    AMBIENT_CONDITIONS("ambientConditions"),
-
-    /**
-     * Notifying of road-related conditions and events on route (GDD service category
-     *             32).
-     *           
-     * 
-     */
-    @XmlEnumValue("roadConditions")
-    ROAD_CONDITIONS("roadConditions"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    GddServiceCategoryEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public GddServiceCategoryEnum2 getValue() {
         return value;
     }
 
-    public static GddServiceCategoryEnum fromValue(String v) {
-        for (GddServiceCategoryEnum c: GddServiceCategoryEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link GddServiceCategoryEnum2 }
+     *     
+     */
+    public void setValue(GddServiceCategoryEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

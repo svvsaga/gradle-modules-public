@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -36,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TravelTimeData", propOrder = {
+@XmlType(name = "TravelTimeData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "travelTimeTrendType",
     "travelTimeType",
     "vehicleType",
@@ -50,17 +51,25 @@ public class TravelTimeData
     extends BasicData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TravelTimeTrendTypeEnum travelTimeTrendType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TravelTimeTypeEnum travelTimeType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<VehicleTypeEnum> vehicleType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue travelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue freeFlowTravelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue normallyExpectedTravelTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected SpeedValue freeFlowSpeed;
-    protected _ExtensionType travelTimeDataExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType travelTimeDataExtension;
 
     /**
      * Gets the value of the travelTimeTrendType property.
@@ -240,10 +249,10 @@ public class TravelTimeData
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTravelTimeDataExtension() {
+    public ExtensionType getTravelTimeDataExtension() {
         return travelTimeDataExtension;
     }
 
@@ -252,10 +261,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTravelTimeDataExtension(_ExtensionType value) {
+    public void setTravelTimeDataExtension(ExtensionType value) {
         this.travelTimeDataExtension = value;
     }
 

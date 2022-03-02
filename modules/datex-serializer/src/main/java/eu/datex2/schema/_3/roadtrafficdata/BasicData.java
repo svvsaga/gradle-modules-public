@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,9 +34,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BasicData", propOrder = {
+@XmlType(name = "BasicData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "measurementOrCalculationTime",
-    "_BasicDataExtension"
+    "basicDataExtension"
 })
 @XmlSeeAlso({
     TrafficData.class,
@@ -46,9 +46,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class BasicData {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MeasurementOrCalculationTime measurementOrCalculationTime;
-    @XmlElement(name = "_basicDataExtension")
-    protected _ExtensionType _BasicDataExtension;
+    @XmlElement(name = "_basicDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType basicDataExtension;
 
     /**
      * Gets the value of the measurementOrCalculationTime property.
@@ -75,27 +76,27 @@ public abstract class BasicData {
     }
 
     /**
-     * Gets the value of the _BasicDataExtension property.
+     * Gets the value of the basicDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_BasicDataExtension() {
-        return _BasicDataExtension;
+    public ExtensionType getBasicDataExtension() {
+        return basicDataExtension;
     }
 
     /**
-     * Sets the value of the _BasicDataExtension property.
+     * Sets the value of the basicDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_BasicDataExtension(_ExtensionType value) {
-        this._BasicDataExtension = value;
+    public void setBasicDataExtension(ExtensionType value) {
+        this.basicDataExtension = value;
     }
 
 }

@@ -1,119 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for RoadsideAssistanceTypeEnum.
+ * <p>Java class for _RoadsideAssistanceTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="RoadsideAssistanceTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="airAmbulance"/&gt;
- *     &lt;enumeration value="busPassengerAssistance"/&gt;
- *     &lt;enumeration value="emergencyServices"/&gt;
- *     &lt;enumeration value="firstAid"/&gt;
- *     &lt;enumeration value="foodDelivery"/&gt;
- *     &lt;enumeration value="helicopterRescue"/&gt;
- *     &lt;enumeration value="vehicleRepair"/&gt;
- *     &lt;enumeration value="vehicleRecovery"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_RoadsideAssistanceTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;RoadsideAssistanceTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "RoadsideAssistanceTypeEnum")
-@XmlEnum
-public enum RoadsideAssistanceTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_RoadsideAssistanceTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class RoadsideAssistanceTypeEnum {
 
-
-    /**
-     * Air ambulance assistance.
-     * 
-     */
-    @XmlEnumValue("airAmbulance")
-    AIR_AMBULANCE("airAmbulance"),
-
-    /**
-     * Bus passenger assistance.
-     * 
-     */
-    @XmlEnumValue("busPassengerAssistance")
-    BUS_PASSENGER_ASSISTANCE("busPassengerAssistance"),
+    @XmlValue
+    protected RoadsideAssistanceTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Emergency services assistance.
+     * Types of road side assistance.
      * 
+     * @return
+     *     possible object is
+     *     {@link RoadsideAssistanceTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("emergencyServices")
-    EMERGENCY_SERVICES("emergencyServices"),
-
-    /**
-     * First aid assistance.
-     * 
-     */
-    @XmlEnumValue("firstAid")
-    FIRST_AID("firstAid"),
-
-    /**
-     * Food delivery.
-     * 
-     */
-    @XmlEnumValue("foodDelivery")
-    FOOD_DELIVERY("foodDelivery"),
-
-    /**
-     * Helicopter rescue.
-     * 
-     */
-    @XmlEnumValue("helicopterRescue")
-    HELICOPTER_RESCUE("helicopterRescue"),
-
-    /**
-     * Vehicle repair assistance.
-     * 
-     */
-    @XmlEnumValue("vehicleRepair")
-    VEHICLE_REPAIR("vehicleRepair"),
-
-    /**
-     * Vehicle recovery.
-     * 
-     */
-    @XmlEnumValue("vehicleRecovery")
-    VEHICLE_RECOVERY("vehicleRecovery"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    RoadsideAssistanceTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public RoadsideAssistanceTypeEnum2 getValue() {
         return value;
     }
 
-    public static RoadsideAssistanceTypeEnum fromValue(String v) {
-        for (RoadsideAssistanceTypeEnum c: RoadsideAssistanceTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RoadsideAssistanceTypeEnum2 }
+     *     
+     */
+    public void setValue(RoadsideAssistanceTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

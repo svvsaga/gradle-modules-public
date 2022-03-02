@@ -1,212 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for AuthorityOperationTypeEnum.
+ * <p>Java class for _AuthorityOperationTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="AuthorityOperationTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="accidentInvestigationWork"/&gt;
- *     &lt;enumeration value="bombSquadInAction"/&gt;
- *     &lt;enumeration value="civilEmergency"/&gt;
- *     &lt;enumeration value="customsOperation"/&gt;
- *     &lt;enumeration value="juridicalReconstruction"/&gt;
- *     &lt;enumeration value="policeCheckPoint"/&gt;
- *     &lt;enumeration value="policeInvestigation"/&gt;
- *     &lt;enumeration value="roadOperatorCheckPoint"/&gt;
- *     &lt;enumeration value="snowChainOnBoardOrSnowTyresMountedCheck"/&gt;
- *     &lt;enumeration value="snowChainOrSnowTyresMountedCheck"/&gt;
- *     &lt;enumeration value="survey"/&gt;
- *     &lt;enumeration value="transportOfVip"/&gt;
- *     &lt;enumeration value="undefinedAuthorityActivity"/&gt;
- *     &lt;enumeration value="vehicleInspectionCheckPoint"/&gt;
- *     &lt;enumeration value="vehicleWeighing"/&gt;
- *     &lt;enumeration value="weighInMotion"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_AuthorityOperationTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;AuthorityOperationTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "AuthorityOperationTypeEnum")
-@XmlEnum
-public enum AuthorityOperationTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_AuthorityOperationTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class AuthorityOperationTypeEnum {
 
-
-    /**
-     * An operation involving authorised investigation work connected to an earlier
-     *             reported accident.
-     *           
-     * 
-     */
-    @XmlEnumValue("accidentInvestigationWork")
-    ACCIDENT_INVESTIGATION_WORK("accidentInvestigationWork"),
+    @XmlValue
+    protected AuthorityOperationTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * An operation where a bomb squad is in action to deal with suspected or actual
-     *             explosive or incendiary devices which may cause disruption to traffic.
-     *           
+     * Types of authority operations.
      * 
+     * @return
+     *     possible object is
+     *     {@link AuthorityOperationTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("bombSquadInAction")
-    BOMB_SQUAD_IN_ACTION("bombSquadInAction"),
-
-    /**
-     * A situation, perceived or actual, relating to a civil emergency which could
-     *             disrupt traffic. This includes large scale destruction, through events such as earthquakes,
-     *             insurrection, and civil disobedience.
-     *           
-     * 
-     */
-    @XmlEnumValue("civilEmergency")
-    CIVIL_EMERGENCY("civilEmergency"),
-
-    /**
-     * A permanent or temporary operation established by customs and excise authorities
-     *             on or adjacent to the carriageway.
-     *           
-     * 
-     */
-    @XmlEnumValue("customsOperation")
-    CUSTOMS_OPERATION("customsOperation"),
-
-    /**
-     * An operation involving the juridical reconstruction of events for the purposes of
-     *             judicial or legal proceedings.
-     *           
-     * 
-     */
-    @XmlEnumValue("juridicalReconstruction")
-    JURIDICAL_RECONSTRUCTION("juridicalReconstruction"),
-
-    /**
-     * A permanent or temporary operation established on or adjacent to the carriageway
-     *             for use by police or other authorities.
-     *           
-     * 
-     */
-    @XmlEnumValue("policeCheckPoint")
-    POLICE_CHECK_POINT("policeCheckPoint"),
-
-    /**
-     * A temporary operation established on or adjacent to the carriageway by the police
-     *             associated with an ongoing investigation.
-     *           
-     * 
-     */
-    @XmlEnumValue("policeInvestigation")
-    POLICE_INVESTIGATION("policeInvestigation"),
-
-    /**
-     * A permanent or temporary operation established on or adjacent to the carriageway
-     *             for use by the road operator, such as for survey or inspection purposes, but not for traffic
-     *             management purposes.
-     *           
-     * 
-     */
-    @XmlEnumValue("roadOperatorCheckPoint")
-    ROAD_OPERATOR_CHECK_POINT("roadOperatorCheckPoint"),
-
-    /**
-     * the police are checking if snow chains are on board vehicles or vehicles have snow
-     *             tyres mounted
-     *           
-     * 
-     */
-    @XmlEnumValue("snowChainOnBoardOrSnowTyresMountedCheck")
-    SNOW_CHAIN_ON_BOARD_OR_SNOW_TYRES_MOUNTED_CHECK("snowChainOnBoardOrSnowTyresMountedCheck"),
-
-    /**
-     * the police are checking if snow chains or snow tyres are mounted on vehicles
-     *           
-     * 
-     */
-    @XmlEnumValue("snowChainOrSnowTyresMountedCheck")
-    SNOW_CHAIN_OR_SNOW_TYRES_MOUNTED_CHECK("snowChainOrSnowTyresMountedCheck"),
-
-    /**
-     * A permanent or temporary operation established by authorities on or adjacent to
-     *             the carriageway for the purpose of gathering statistics or other traffic related information.
-     *           
-     * 
-     */
-    @XmlEnumValue("survey")
-    SURVEY("survey"),
-
-    /**
-     * An operation to transport one or more VIPs.
-     * 
-     */
-    @XmlEnumValue("transportOfVip")
-    TRANSPORT_OF_VIP("transportOfVip"),
-
-    /**
-     * An authority activity of undefined type.
-     * 
-     */
-    @XmlEnumValue("undefinedAuthorityActivity")
-    UNDEFINED_AUTHORITY_ACTIVITY("undefinedAuthorityActivity"),
-
-    /**
-     * A permanent or temporary operation established on or adjacent to the carriageway
-     *             for inspection of vehicles by authorities (e.g. vehicle safety checks and tachograph checks).
-     *           
-     * 
-     */
-    @XmlEnumValue("vehicleInspectionCheckPoint")
-    VEHICLE_INSPECTION_CHECK_POINT("vehicleInspectionCheckPoint"),
-
-    /**
-     * A permanent or temporary operation established on or adjacent to the carriageway
-     *             for weighing of vehicles by authorities.
-     *           
-     * 
-     */
-    @XmlEnumValue("vehicleWeighing")
-    VEHICLE_WEIGHING("vehicleWeighing"),
-
-    /**
-     * A permanent or temporary facility established by authorities on the carriageway
-     *             for weighing vehicles while in motion.
-     *           
-     * 
-     */
-    @XmlEnumValue("weighInMotion")
-    WEIGH_IN_MOTION("weighInMotion"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    AuthorityOperationTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public AuthorityOperationTypeEnum2 getValue() {
         return value;
     }
 
-    public static AuthorityOperationTypeEnum fromValue(String v) {
-        for (AuthorityOperationTypeEnum c: AuthorityOperationTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AuthorityOperationTypeEnum2 }
+     *     
+     */
+    public void setValue(AuthorityOperationTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

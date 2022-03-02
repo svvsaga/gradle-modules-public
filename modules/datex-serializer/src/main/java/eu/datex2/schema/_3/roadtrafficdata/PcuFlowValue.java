@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,19 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PcuFlowValue", propOrder = {
+@XmlType(name = "PcuFlowValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "pcuFlowRate",
-    "_PcuFlowValueExtension"
+    "pcuFlowValueExtension"
 })
 public class PcuFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pcuFlowRate;
-    @XmlElement(name = "_pcuFlowValueExtension")
-    protected _ExtensionType _PcuFlowValueExtension;
+    @XmlElement(name = "_pcuFlowValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType pcuFlowValueExtension;
 
     /**
      * Gets the value of the pcuFlowRate property.
@@ -73,27 +73,27 @@ public class PcuFlowValue
     }
 
     /**
-     * Gets the value of the _PcuFlowValueExtension property.
+     * Gets the value of the pcuFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PcuFlowValueExtension() {
-        return _PcuFlowValueExtension;
+    public ExtensionType getPcuFlowValueExtension() {
+        return pcuFlowValueExtension;
     }
 
     /**
-     * Sets the value of the _PcuFlowValueExtension property.
+     * Sets the value of the pcuFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PcuFlowValueExtension(_ExtensionType value) {
-        this._PcuFlowValueExtension = value;
+    public void setPcuFlowValueExtension(ExtensionType value) {
+        this.pcuFlowValueExtension = value;
     }
 
 }

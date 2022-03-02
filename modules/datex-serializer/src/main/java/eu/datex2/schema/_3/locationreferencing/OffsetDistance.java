@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,17 +34,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OffsetDistance", propOrder = {
+@XmlType(name = "OffsetDistance", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "offsetDistance",
-    "_OffsetDistanceExtension"
+    "offsetDistanceExtension"
 })
 public class OffsetDistance {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger offsetDistance;
-    @XmlElement(name = "_offsetDistanceExtension")
-    protected _ExtensionType _OffsetDistanceExtension;
+    @XmlElement(name = "_offsetDistanceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType offsetDistanceExtension;
 
     /**
      * Gets the value of the offsetDistance property.
@@ -71,27 +71,27 @@ public class OffsetDistance {
     }
 
     /**
-     * Gets the value of the _OffsetDistanceExtension property.
+     * Gets the value of the offsetDistanceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OffsetDistanceExtension() {
-        return _OffsetDistanceExtension;
+    public ExtensionType getOffsetDistanceExtension() {
+        return offsetDistanceExtension;
     }
 
     /**
-     * Sets the value of the _OffsetDistanceExtension property.
+     * Sets the value of the offsetDistanceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OffsetDistanceExtension(_ExtensionType value) {
-        this._OffsetDistanceExtension = value;
+    public void setOffsetDistanceExtension(ExtensionType value) {
+        this.offsetDistanceExtension = value;
     }
 
 }

@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WinterDrivingManagement", propOrder = {
+@XmlType(name = "WinterDrivingManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "winterEquipmentManagementType",
     "winterDrivingManagementExtension"
 })
@@ -37,10 +37,11 @@ public class WinterDrivingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
-    protected _ExtensionType winterDrivingManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType winterDrivingManagementExtension;
 
     /**
      * Gets the value of the winterEquipmentManagementType property.
@@ -71,10 +72,10 @@ public class WinterDrivingManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWinterDrivingManagementExtension() {
+    public ExtensionType getWinterDrivingManagementExtension() {
         return winterDrivingManagementExtension;
     }
 
@@ -83,10 +84,10 @@ public class WinterDrivingManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWinterDrivingManagementExtension(_ExtensionType value) {
+    public void setWinterDrivingManagementExtension(ExtensionType value) {
         this.winterDrivingManagementExtension = value;
     }
 

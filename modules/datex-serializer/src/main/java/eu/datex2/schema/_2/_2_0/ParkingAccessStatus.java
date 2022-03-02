@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingAccessStatus", propOrder = {
+@XmlType(name = "ParkingAccessStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "accessReference",
     "accessOpeningStatus",
     "accessFault",
@@ -41,23 +41,26 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingAccessStatus {
 
-    @XmlElement(required = true)
-    protected _ParkingAccessReference accessReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingAccessReference accessReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum accessOpeningStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingFaultEnum> accessFault;
-    protected _ExtensionType parkingAccessStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingAccessStatusExtension;
 
     /**
      * Gets the value of the accessReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public _ParkingAccessReference getAccessReference() {
+    public ParkingAccessReference getAccessReference() {
         return accessReference;
     }
 
@@ -66,10 +69,10 @@ public class ParkingAccessStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingAccessReference }
+     *     {@link ParkingAccessReference }
      *     
      */
-    public void setAccessReference(_ParkingAccessReference value) {
+    public void setAccessReference(ParkingAccessReference value) {
         this.accessReference = value;
     }
 
@@ -131,10 +134,10 @@ public class ParkingAccessStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingAccessStatusExtension() {
+    public ExtensionType getParkingAccessStatusExtension() {
         return parkingAccessStatusExtension;
     }
 
@@ -143,10 +146,10 @@ public class ParkingAccessStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingAccessStatusExtension(_ExtensionType value) {
+    public void setParkingAccessStatusExtension(ExtensionType value) {
         this.parkingAccessStatusExtension = value;
     }
 

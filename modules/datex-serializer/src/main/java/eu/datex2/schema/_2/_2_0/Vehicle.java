@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -40,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vehicle", propOrder = {
+@XmlType(name = "Vehicle", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vehicleColour",
     "vehicleCountryOfOrigin",
     "vehicleIdentifier",
@@ -56,19 +57,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Vehicle {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vehicleColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vehicleCountryOfOrigin;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vehicleIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vehicleManufacturer;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vehicleModel;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vehicleRegistrationPlateIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VehicleStatusEnum vehicleStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics vehicleCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<AxleSpacing> axleSpacingOnVehicle;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<AxleWeight> specificAxleWeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected HazardousMaterials hazardousGoodsAssociatedWithVehicle;
-    protected _ExtensionType vehicleExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleExtension;
 
     /**
      * Gets the value of the vehicleColour property.
@@ -349,10 +362,10 @@ public class Vehicle {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleExtension() {
+    public ExtensionType getVehicleExtension() {
         return vehicleExtension;
     }
 
@@ -361,10 +374,10 @@ public class Vehicle {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleExtension(_ExtensionType value) {
+    public void setVehicleExtension(ExtensionType value) {
         this.vehicleExtension = value;
     }
 

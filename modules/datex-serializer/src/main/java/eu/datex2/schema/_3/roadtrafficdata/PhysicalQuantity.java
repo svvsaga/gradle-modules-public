@@ -3,10 +3,10 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.Source;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -45,14 +45,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalQuantity", propOrder = {
+@XmlType(name = "PhysicalQuantity", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "forecast",
     "measurementEquipmentTypeUsed",
     "pertinentLocation",
     "physicalQuantityFault",
     "source",
     "informationManagerOverride",
-    "_PhysicalQuantityExtension"
+    "physicalQuantityExtension"
 })
 @XmlSeeAlso({
     SinglePhysicalQuantity.class,
@@ -60,14 +60,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class PhysicalQuantity {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Boolean forecast;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementEquipmentTypeUsed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected LocationReference pertinentLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<PhysicalQuantityFault> physicalQuantityFault;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Source source;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(name = "_physicalQuantityExtension")
-    protected _ExtensionType _PhysicalQuantityExtension;
+    @XmlElement(name = "_physicalQuantityExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType physicalQuantityExtension;
 
     /**
      * Gets the value of the forecast property.
@@ -219,27 +225,27 @@ public abstract class PhysicalQuantity {
     }
 
     /**
-     * Gets the value of the _PhysicalQuantityExtension property.
+     * Gets the value of the physicalQuantityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PhysicalQuantityExtension() {
-        return _PhysicalQuantityExtension;
+    public ExtensionType getPhysicalQuantityExtension() {
+        return physicalQuantityExtension;
     }
 
     /**
-     * Sets the value of the _PhysicalQuantityExtension property.
+     * Sets the value of the physicalQuantityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PhysicalQuantityExtension(_ExtensionType value) {
-        this._PhysicalQuantityExtension = value;
+    public void setPhysicalQuantityExtension(ExtensionType value) {
+        this.physicalQuantityExtension = value;
     }
 
 }

@@ -1,83 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for MaintenanceVehicleActionsEnum.
+ * <p>Java class for _MaintenanceVehicleActionsEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="MaintenanceVehicleActionsEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="maintenanceAction"/&gt;
- *     &lt;enumeration value="maintenanceVehiclesMergingIntoTrafficFlow"/&gt;
- *     &lt;enumeration value="slowMoving"/&gt;
- *     &lt;enumeration value="stoppingToServiceEquipments"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_MaintenanceVehicleActionsEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;MaintenanceVehicleActionsEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "MaintenanceVehicleActionsEnum")
-@XmlEnum
-public enum MaintenanceVehicleActionsEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_MaintenanceVehicleActionsEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class MaintenanceVehicleActionsEnum {
 
-
-    /**
-     * Maintenance vehicles are performing maintenance action
-     * 
-     */
-    @XmlEnumValue("maintenanceAction")
-    MAINTENANCE_ACTION("maintenanceAction"),
-
-    /**
-     * Maintenance vehicles are merging into the traffic flow creating a potential hazard
-     *             for road users.
-     *           
-     * 
-     */
-    @XmlEnumValue("maintenanceVehiclesMergingIntoTrafficFlow")
-    MAINTENANCE_VEHICLES_MERGING_INTO_TRAFFIC_FLOW("maintenanceVehiclesMergingIntoTrafficFlow"),
+    @XmlValue
+    protected MaintenanceVehicleActionsEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Maintenance vehicles are slow moving.
+     * Types of maintenance vehicle actions associated with roadworks.
      * 
+     * @return
+     *     possible object is
+     *     {@link MaintenanceVehicleActionsEnum2 }
+     *     
      */
-    @XmlEnumValue("slowMoving")
-    SLOW_MOVING("slowMoving"),
-
-    /**
-     * Maintenance vehicles are stopping to service equipments on or next to the
-     *             roadway.
-     *           
-     * 
-     */
-    @XmlEnumValue("stoppingToServiceEquipments")
-    STOPPING_TO_SERVICE_EQUIPMENTS("stoppingToServiceEquipments"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    MaintenanceVehicleActionsEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public MaintenanceVehicleActionsEnum2 getValue() {
         return value;
     }
 
-    public static MaintenanceVehicleActionsEnum fromValue(String v) {
-        for (MaintenanceVehicleActionsEnum c: MaintenanceVehicleActionsEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MaintenanceVehicleActionsEnum2 }
+     *     
+     */
+    public void setValue(MaintenanceVehicleActionsEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

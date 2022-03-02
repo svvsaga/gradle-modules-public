@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegLinearLocation", propOrder = {
+@XmlType(name = "TpegLinearLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegDirection",
     "tpegLinearLocationType",
     "to",
@@ -41,17 +41,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TpegLinearLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected DirectionEnum tpegDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01LinearLocationSubtypeEnum tpegLinearLocationType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegPoint to;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected TpegPoint from;
-    protected _ExtensionType tpegLinearLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegLinearLocationExtension;
 
     /**
      * Gets the value of the tpegDirection property.
@@ -154,10 +155,10 @@ public class TpegLinearLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegLinearLocationExtension() {
+    public ExtensionType getTpegLinearLocationExtension() {
         return tpegLinearLocationExtension;
     }
 
@@ -166,10 +167,10 @@ public class TpegLinearLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegLinearLocationExtension(_ExtensionType value) {
+    public void setTpegLinearLocationExtension(ExtensionType value) {
         this.tpegLinearLocationExtension = value;
     }
 

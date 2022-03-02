@@ -33,21 +33,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Temperature", propOrder = {
+@XmlType(name = "Temperature", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "airTemperature",
     "dewPointTemperature",
     "maximumTemperature",
     "minimumTemperature",
-    "_TemperatureExtension"
+    "temperatureExtension"
 })
 public class Temperature {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue airTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue dewPointTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue maximumTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue minimumTemperature;
-    @XmlElement(name = "_temperatureExtension")
-    protected _ExtensionType _TemperatureExtension;
+    @XmlElement(name = "_temperatureExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType temperatureExtension;
 
     /**
      * Gets the value of the airTemperature property.
@@ -146,27 +150,27 @@ public class Temperature {
     }
 
     /**
-     * Gets the value of the _TemperatureExtension property.
+     * Gets the value of the temperatureExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TemperatureExtension() {
-        return _TemperatureExtension;
+    public ExtensionType getTemperatureExtension() {
+        return temperatureExtension;
     }
 
     /**
-     * Sets the value of the _TemperatureExtension property.
+     * Sets the value of the temperatureExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TemperatureExtension(_ExtensionType value) {
-        this._TemperatureExtension = value;
+    public void setTemperatureExtension(ExtensionType value) {
+        this.temperatureExtension = value;
     }
 
 }

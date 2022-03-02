@@ -30,27 +30,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _PredefinedServiceEnum }
+     * Create an instance of {@link PredefinedServiceEnum }
      * 
      */
-    public _PredefinedServiceEnum create_PredefinedServiceEnum() {
-        return new _PredefinedServiceEnum();
+    public PredefinedServiceEnum createPredefinedServiceEnum() {
+        return new PredefinedServiceEnum();
     }
 
     /**
-     * Create an instance of {@link _ServiceActionEnum }
+     * Create an instance of {@link ServiceActionEnum }
      * 
      */
-    public _ServiceActionEnum create_ServiceActionEnum() {
-        return new _ServiceActionEnum();
+    public ServiceActionEnum createServiceActionEnum() {
+        return new ServiceActionEnum();
     }
 
     /**
-     * Create an instance of {@link _ServiceActionStatusEnum }
+     * Create an instance of {@link ServiceActionStatusEnum }
      * 
      */
-    public _ServiceActionStatusEnum create_ServiceActionStatusEnum() {
-        return new _ServiceActionStatusEnum();
+    public ServiceActionStatusEnum createServiceActionStatusEnum() {
+        return new ServiceActionStatusEnum();
     }
 
     /**

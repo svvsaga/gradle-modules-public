@@ -31,18 +31,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DirectionBearingValue", propOrder = {
+@XmlType(name = "DirectionBearingValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "directionBearing",
-    "_DirectionBearingValueExtension"
+    "directionBearingValueExtension"
 })
 public class DirectionBearingValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int directionBearing;
-    @XmlElement(name = "_directionBearingValueExtension")
-    protected _ExtensionType _DirectionBearingValueExtension;
+    @XmlElement(name = "_directionBearingValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType directionBearingValueExtension;
 
     /**
      * Gets the value of the directionBearing property.
@@ -61,27 +62,27 @@ public class DirectionBearingValue
     }
 
     /**
-     * Gets the value of the _DirectionBearingValueExtension property.
+     * Gets the value of the directionBearingValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DirectionBearingValueExtension() {
-        return _DirectionBearingValueExtension;
+    public ExtensionType getDirectionBearingValueExtension() {
+        return directionBearingValueExtension;
     }
 
     /**
-     * Sets the value of the _DirectionBearingValueExtension property.
+     * Sets the value of the directionBearingValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DirectionBearingValueExtension(_ExtensionType value) {
-        this._DirectionBearingValueExtension = value;
+    public void setDirectionBearingValueExtension(ExtensionType value) {
+        this.directionBearingValueExtension = value;
     }
 
 }

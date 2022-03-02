@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Humidity;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HumidityInformation", propOrder = {
+@XmlType(name = "HumidityInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "humidity",
-    "_HumidityInformationExtension"
+    "humidityInformationExtension"
 })
 public class HumidityInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected Humidity humidity;
-    @XmlElement(name = "_humidityInformationExtension")
-    protected _ExtensionType _HumidityInformationExtension;
+    @XmlElement(name = "_humidityInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType humidityInformationExtension;
 
     /**
      * Gets the value of the humidity property.
@@ -70,27 +70,27 @@ public class HumidityInformation
     }
 
     /**
-     * Gets the value of the _HumidityInformationExtension property.
+     * Gets the value of the humidityInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HumidityInformationExtension() {
-        return _HumidityInformationExtension;
+    public ExtensionType getHumidityInformationExtension() {
+        return humidityInformationExtension;
     }
 
     /**
-     * Sets the value of the _HumidityInformationExtension property.
+     * Sets the value of the humidityInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HumidityInformationExtension(_ExtensionType value) {
-        this._HumidityInformationExtension = value;
+    public void setHumidityInformationExtension(ExtensionType value) {
+        this.humidityInformationExtension = value;
     }
 
 }

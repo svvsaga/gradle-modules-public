@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Contact", propOrder = {
+@XmlType(name = "Contact", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "contactUnknown",
     "contactNotDefined",
     "validityOfContact",
@@ -42,10 +43,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Contact {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean contactUnknown;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean contactNotDefined;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod validityOfContact;
-    protected _ExtensionType contactExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType contactExtension;
 
     /**
      * Gets the value of the contactUnknown property.
@@ -124,10 +129,10 @@ public class Contact {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getContactExtension() {
+    public ExtensionType getContactExtension() {
         return contactExtension;
     }
 
@@ -136,10 +141,10 @@ public class Contact {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setContactExtension(_ExtensionType value) {
+    public void setContactExtension(ExtensionType value) {
         this.contactExtension = value;
     }
 

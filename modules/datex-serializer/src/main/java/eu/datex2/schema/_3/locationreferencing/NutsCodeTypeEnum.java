@@ -1,87 +1,89 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for NutsCodeTypeEnum.
+ * <p>Java class for _NutsCodeTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="NutsCodeTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="nuts1Code"/&gt;
- *     &lt;enumeration value="nuts2Code"/&gt;
- *     &lt;enumeration value="nuts3Code"/&gt;
- *     &lt;enumeration value="lau1Code"/&gt;
- *     &lt;enumeration value="lau2Code"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_NutsCodeTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;NutsCodeTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "NutsCodeTypeEnum")
-@XmlEnum
-public enum NutsCodeTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_NutsCodeTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class NutsCodeTypeEnum {
 
-
-    /**
-     * NUTS 1 code
-     * 
-     */
-    @XmlEnumValue("nuts1Code")
-    NUTS_1_CODE("nuts1Code"),
-
-    /**
-     * NUTS 2 code
-     * 
-     */
-    @XmlEnumValue("nuts2Code")
-    NUTS_2_CODE("nuts2Code"),
+    @XmlValue
+    protected NutsCodeTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * NUTS 3 code
+     * Types of NUTS codes (Nomenclature of territorial units for statistics) including LAU codes
+     *         (Local Administrative Units).
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link NutsCodeTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("nuts3Code")
-    NUTS_3_CODE("nuts3Code"),
-
-    /**
-     * LAU 1 code
-     * 
-     */
-    @XmlEnumValue("lau1Code")
-    LAU_1_CODE("lau1Code"),
-
-    /**
-     * LAU 2 code
-     * 
-     */
-    @XmlEnumValue("lau2Code")
-    LAU_2_CODE("lau2Code"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    NutsCodeTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public NutsCodeTypeEnum2 getValue() {
         return value;
     }
 
-    public static NutsCodeTypeEnum fromValue(String v) {
-        for (NutsCodeTypeEnum c: NutsCodeTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NutsCodeTypeEnum2 }
+     *     
+     */
+    public void setValue(NutsCodeTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

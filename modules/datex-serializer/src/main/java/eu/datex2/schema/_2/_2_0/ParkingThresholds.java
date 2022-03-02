@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -40,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingThresholds", propOrder = {
+@XmlType(name = "ParkingThresholds", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "almostFullDecreasing",
     "almostFullIncreasing",
     "entranceFull",
@@ -55,26 +56,37 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingThresholds {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger almostFullDecreasing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger almostFullIncreasing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger entranceFull;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger fullDecreasing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger fullIncreasing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger overcrowding;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger overcrowdingLevel1;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger overcrowdingLevel2;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingLastMaximumOccupancy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingStatusColourMapping> parkingStatusColourMapping;
-    protected _ExtensionType parkingThresholdsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingThresholdsExtension;
 
     /**
      * Gets the value of the almostFullDecreasing property.
@@ -326,10 +338,10 @@ public class ParkingThresholds {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingThresholdsExtension() {
+    public ExtensionType getParkingThresholdsExtension() {
         return parkingThresholdsExtension;
     }
 
@@ -338,10 +350,10 @@ public class ParkingThresholds {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingThresholdsExtension(_ExtensionType value) {
+    public void setParkingThresholdsExtension(ExtensionType value) {
         this.parkingThresholdsExtension = value;
     }
 

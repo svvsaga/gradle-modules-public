@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficViewPublication", propOrder = {
+@XmlType(name = "TrafficViewPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "headerInformation",
     "trafficView",
     "trafficViewPublicationExtension"
@@ -40,11 +40,12 @@ public class TrafficViewPublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<TrafficView> trafficView;
-    protected _ExtensionType trafficViewPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficViewPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +105,10 @@ public class TrafficViewPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficViewPublicationExtension() {
+    public ExtensionType getTrafficViewPublicationExtension() {
         return trafficViewPublicationExtension;
     }
 
@@ -116,10 +117,10 @@ public class TrafficViewPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewPublicationExtension(_ExtensionType value) {
+    public void setTrafficViewPublicationExtension(ExtensionType value) {
         this.trafficViewPublicationExtension = value;
     }
 

@@ -29,16 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingUsageScenarioStatus", propOrder = {
+@XmlType(name = "ParkingUsageScenarioStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "usageScenarioOperationStatus",
     "parkingUsageScenarioStatusExtension"
 })
 public class ParkingUsageScenarioStatus {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OperationStatusEnum usageScenarioOperationStatus;
-    protected _ExtensionType parkingUsageScenarioStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingUsageScenarioStatusExtension;
 
     /**
      * Gets the value of the usageScenarioOperationStatus property.
@@ -69,10 +70,10 @@ public class ParkingUsageScenarioStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingUsageScenarioStatusExtension() {
+    public ExtensionType getParkingUsageScenarioStatusExtension() {
         return parkingUsageScenarioStatusExtension;
     }
 
@@ -81,10 +82,10 @@ public class ParkingUsageScenarioStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingUsageScenarioStatusExtension(_ExtensionType value) {
+    public void setParkingUsageScenarioStatusExtension(ExtensionType value) {
         this.parkingUsageScenarioStatusExtension = value;
     }
 

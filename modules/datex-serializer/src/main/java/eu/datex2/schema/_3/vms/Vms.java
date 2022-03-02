@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.vms;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.UrlLink;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -50,7 +50,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vms", propOrder = {
+@XmlType(name = "Vms", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "lanternsPresent",
     "description",
     "owner",
@@ -66,28 +66,42 @@ import jakarta.xml.bind.annotation.XmlType;
     "vmsLocation",
     "managedLogicalLocation",
     "imageLink",
-    "_VmsExtension"
+    "vmsExtension"
 })
 public class Vms {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean lanternsPresent;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString description;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString owner;
-    protected _PhysicalSupportEnum physicalSupport;
-    protected _VmsTypeEnum vmsType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected PhysicalSupportEnum physicalSupport;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected VmsTypeEnum vmsType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String vmsTypeCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean dynamicallyConfigurable;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float heightAboveCarriageway;
-    protected _DedicatedUsageEnum dedicatedUsage;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected DedicatedUsageEnum dedicatedUsage;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected VmsConfiguration vmsConfiguration;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location vmsLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected ManagedLogicalLocation managedLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected UrlLink imageLink;
-    @XmlElement(name = "_vmsExtension")
-    protected _ExtensionType _VmsExtension;
+    @XmlElement(name = "_vmsExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsExtension;
 
     /**
      * Gets the value of the lanternsPresent property.
@@ -166,10 +180,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link _PhysicalSupportEnum }
+     *     {@link PhysicalSupportEnum }
      *     
      */
-    public _PhysicalSupportEnum getPhysicalSupport() {
+    public PhysicalSupportEnum getPhysicalSupport() {
         return physicalSupport;
     }
 
@@ -178,10 +192,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PhysicalSupportEnum }
+     *     {@link PhysicalSupportEnum }
      *     
      */
-    public void setPhysicalSupport(_PhysicalSupportEnum value) {
+    public void setPhysicalSupport(PhysicalSupportEnum value) {
         this.physicalSupport = value;
     }
 
@@ -190,10 +204,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link _VmsTypeEnum }
+     *     {@link VmsTypeEnum }
      *     
      */
-    public _VmsTypeEnum getVmsType() {
+    public VmsTypeEnum getVmsType() {
         return vmsType;
     }
 
@@ -202,10 +216,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsTypeEnum }
+     *     {@link VmsTypeEnum }
      *     
      */
-    public void setVmsType(_VmsTypeEnum value) {
+    public void setVmsType(VmsTypeEnum value) {
         this.vmsType = value;
     }
 
@@ -334,10 +348,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link _DedicatedUsageEnum }
+     *     {@link DedicatedUsageEnum }
      *     
      */
-    public _DedicatedUsageEnum getDedicatedUsage() {
+    public DedicatedUsageEnum getDedicatedUsage() {
         return dedicatedUsage;
     }
 
@@ -346,10 +360,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DedicatedUsageEnum }
+     *     {@link DedicatedUsageEnum }
      *     
      */
-    public void setDedicatedUsage(_DedicatedUsageEnum value) {
+    public void setDedicatedUsage(DedicatedUsageEnum value) {
         this.dedicatedUsage = value;
     }
 
@@ -450,27 +464,27 @@ public class Vms {
     }
 
     /**
-     * Gets the value of the _VmsExtension property.
+     * Gets the value of the vmsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsExtension() {
-        return _VmsExtension;
+    public ExtensionType getVmsExtension() {
+        return vmsExtension;
     }
 
     /**
-     * Sets the value of the _VmsExtension property.
+     * Sets the value of the vmsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsExtension(_ExtensionType value) {
-        this._VmsExtension = value;
+    public void setVmsExtension(ExtensionType value) {
+        this.vmsExtension = value;
     }
 
 }

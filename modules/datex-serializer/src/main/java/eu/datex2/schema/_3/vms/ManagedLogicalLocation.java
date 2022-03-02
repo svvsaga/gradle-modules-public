@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -39,20 +39,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ManagedLogicalLocation", propOrder = {
+@XmlType(name = "ManagedLogicalLocation", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "managedLogicalLocation",
     "distanceFromLogicalLocation",
     "managedLocation",
-    "_ManagedLogicalLocationExtension"
+    "managedLogicalLocationExtension"
 })
 public class ManagedLogicalLocation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString managedLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location managedLocation;
-    @XmlElement(name = "_managedLogicalLocationExtension")
-    protected _ExtensionType _ManagedLogicalLocationExtension;
+    @XmlElement(name = "_managedLogicalLocationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType managedLogicalLocationExtension;
 
     /**
      * Gets the value of the managedLogicalLocation property.
@@ -127,27 +130,27 @@ public class ManagedLogicalLocation {
     }
 
     /**
-     * Gets the value of the _ManagedLogicalLocationExtension property.
+     * Gets the value of the managedLogicalLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ManagedLogicalLocationExtension() {
-        return _ManagedLogicalLocationExtension;
+    public ExtensionType getManagedLogicalLocationExtension() {
+        return managedLogicalLocationExtension;
     }
 
     /**
-     * Sets the value of the _ManagedLogicalLocationExtension property.
+     * Sets the value of the managedLogicalLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ManagedLogicalLocationExtension(_ExtensionType value) {
-        this._ManagedLogicalLocationExtension = value;
+    public void setManagedLogicalLocationExtension(ExtensionType value) {
+        this.managedLogicalLocationExtension = value;
     }
 
 }

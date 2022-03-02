@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._TrafficTrendTypeEnum;
+import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common.TrafficTrendTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,29 +35,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficStatus", propOrder = {
+@XmlType(name = "TrafficStatus", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "trafficTrendType",
     "trafficStatus",
-    "_TrafficStatusExtension"
+    "trafficStatusExtension"
 })
 public class TrafficStatus
     extends BasicData
 {
 
-    protected _TrafficTrendTypeEnum trafficTrendType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected TrafficTrendTypeEnum trafficTrendType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficStatusValue trafficStatus;
-    @XmlElement(name = "_trafficStatusExtension")
-    protected _ExtensionType _TrafficStatusExtension;
+    @XmlElement(name = "_trafficStatusExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficStatusExtension;
 
     /**
      * Gets the value of the trafficTrendType property.
      * 
      * @return
      *     possible object is
-     *     {@link _TrafficTrendTypeEnum }
+     *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public _TrafficTrendTypeEnum getTrafficTrendType() {
+    public TrafficTrendTypeEnum getTrafficTrendType() {
         return trafficTrendType;
     }
 
@@ -66,10 +68,10 @@ public class TrafficStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link _TrafficTrendTypeEnum }
+     *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendType(_TrafficTrendTypeEnum value) {
+    public void setTrafficTrendType(TrafficTrendTypeEnum value) {
         this.trafficTrendType = value;
     }
 
@@ -98,27 +100,27 @@ public class TrafficStatus
     }
 
     /**
-     * Gets the value of the _TrafficStatusExtension property.
+     * Gets the value of the trafficStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficStatusExtension() {
-        return _TrafficStatusExtension;
+    public ExtensionType getTrafficStatusExtension() {
+        return trafficStatusExtension;
     }
 
     /**
-     * Sets the value of the _TrafficStatusExtension property.
+     * Sets the value of the trafficStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficStatusExtension(_ExtensionType value) {
-        this._TrafficStatusExtension = value;
+    public void setTrafficStatusExtension(ExtensionType value) {
+        this.trafficStatusExtension = value;
     }
 
 }

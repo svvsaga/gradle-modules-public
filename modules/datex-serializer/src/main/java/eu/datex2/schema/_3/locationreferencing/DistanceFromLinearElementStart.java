@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,17 +34,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceFromLinearElementStart", propOrder = {
+@XmlType(name = "DistanceFromLinearElementStart", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "distanceAlong",
-    "_DistanceFromLinearElementStartExtension"
+    "distanceFromLinearElementStartExtension"
 })
 public class DistanceFromLinearElementStart
     extends DistanceAlongLinearElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float distanceAlong;
-    @XmlElement(name = "_distanceFromLinearElementStartExtension")
-    protected _ExtensionType _DistanceFromLinearElementStartExtension;
+    @XmlElement(name = "_distanceFromLinearElementStartExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType distanceFromLinearElementStartExtension;
 
     /**
      * Gets the value of the distanceAlong property.
@@ -63,27 +64,27 @@ public class DistanceFromLinearElementStart
     }
 
     /**
-     * Gets the value of the _DistanceFromLinearElementStartExtension property.
+     * Gets the value of the distanceFromLinearElementStartExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DistanceFromLinearElementStartExtension() {
-        return _DistanceFromLinearElementStartExtension;
+    public ExtensionType getDistanceFromLinearElementStartExtension() {
+        return distanceFromLinearElementStartExtension;
     }
 
     /**
-     * Sets the value of the _DistanceFromLinearElementStartExtension property.
+     * Sets the value of the distanceFromLinearElementStartExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DistanceFromLinearElementStartExtension(_ExtensionType value) {
-        this._DistanceFromLinearElementStartExtension = value;
+    public void setDistanceFromLinearElementStartExtension(ExtensionType value) {
+        this.distanceFromLinearElementStartExtension = value;
     }
 
 }

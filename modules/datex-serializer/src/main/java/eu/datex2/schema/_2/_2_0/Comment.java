@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Comment", propOrder = {
+@XmlType(name = "Comment", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comment",
     "commentDateTime",
     "commentType",
@@ -40,13 +40,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Comment {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected MultilingualString comment;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar commentDateTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CommentTypeEnum commentType;
-    protected _ExtensionType commentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType commentExtension;
 
     /**
      * Gets the value of the comment property.
@@ -125,10 +128,10 @@ public class Comment {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCommentExtension() {
+    public ExtensionType getCommentExtension() {
         return commentExtension;
     }
 
@@ -137,10 +140,10 @@ public class Comment {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCommentExtension(_ExtensionType value) {
+    public void setCommentExtension(ExtensionType value) {
         this.commentExtension = value;
     }
 

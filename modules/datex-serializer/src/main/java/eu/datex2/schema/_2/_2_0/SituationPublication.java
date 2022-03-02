@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationPublication", propOrder = {
+@XmlType(name = "SituationPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "situation",
     "situationPublicationExtension"
 })
@@ -37,8 +38,10 @@ public class SituationPublication
     extends PayloadPublication
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Situation> situation;
-    protected _ExtensionType situationPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType situationPublicationExtension;
 
     /**
      * Gets the value of the situation property.
@@ -74,10 +77,10 @@ public class SituationPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSituationPublicationExtension() {
+    public ExtensionType getSituationPublicationExtension() {
         return situationPublicationExtension;
     }
 
@@ -86,10 +89,10 @@ public class SituationPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSituationPublicationExtension(_ExtensionType value) {
+    public void setSituationPublicationExtension(ExtensionType value) {
         this.situationPublicationExtension = value;
     }
 

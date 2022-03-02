@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -26,24 +27,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLastLocationReferencePoint", propOrder = {
+@XmlType(name = "OpenlrLastLocationReferencePoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrLastLocationReferencePointExtension"
 })
 public class OpenlrLastLocationReferencePoint
     extends OpenlrBaseLocationReferencePoint
 {
 
-    protected _ExtensionType openlrLastLocationReferencePointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrLastLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrLastLocationReferencePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLastLocationReferencePointExtension() {
+    public ExtensionType getOpenlrLastLocationReferencePointExtension() {
         return openlrLastLocationReferencePointExtension;
     }
 
@@ -52,10 +54,10 @@ public class OpenlrLastLocationReferencePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLastLocationReferencePointExtension(_ExtensionType value) {
+    public void setOpenlrLastLocationReferencePointExtension(ExtensionType value) {
         this.openlrLastLocationReferencePointExtension = value;
     }
 

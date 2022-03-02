@@ -30,17 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureValue", propOrder = {
+@XmlType(name = "TemperatureValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "temperature",
-    "_TemperatureValueExtension"
+    "temperatureValueExtension"
 })
 public class TemperatureValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float temperature;
-    @XmlElement(name = "_temperatureValueExtension")
-    protected _ExtensionType _TemperatureValueExtension;
+    @XmlElement(name = "_temperatureValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType temperatureValueExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -59,27 +60,27 @@ public class TemperatureValue
     }
 
     /**
-     * Gets the value of the _TemperatureValueExtension property.
+     * Gets the value of the temperatureValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TemperatureValueExtension() {
-        return _TemperatureValueExtension;
+    public ExtensionType getTemperatureValueExtension() {
+        return temperatureValueExtension;
     }
 
     /**
-     * Sets the value of the _TemperatureValueExtension property.
+     * Sets the value of the temperatureValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TemperatureValueExtension(_ExtensionType value) {
-        this._TemperatureValueExtension = value;
+    public void setTemperatureValueExtension(ExtensionType value) {
+        this.temperatureValueExtension = value;
     }
 
 }

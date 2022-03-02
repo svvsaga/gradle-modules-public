@@ -35,20 +35,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfVehiclesInvolved", propOrder = {
+@XmlType(name = "GroupOfVehiclesInvolved", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "numberOfVehicles",
     "vehicleStatus",
     "vehicleCharacteristics",
-    "_GroupOfVehiclesInvolvedExtension"
+    "groupOfVehiclesInvolvedExtension"
 })
 public class GroupOfVehiclesInvolved {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehicles;
-    protected _VehicleStatusEnum vehicleStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected VehicleStatusEnum vehicleStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleCharacteristics vehicleCharacteristics;
-    @XmlElement(name = "_groupOfVehiclesInvolvedExtension")
-    protected _ExtensionType _GroupOfVehiclesInvolvedExtension;
+    @XmlElement(name = "_groupOfVehiclesInvolvedExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType groupOfVehiclesInvolvedExtension;
 
     /**
      * Gets the value of the numberOfVehicles property.
@@ -79,10 +82,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleStatusEnum }
+     *     {@link VehicleStatusEnum }
      *     
      */
-    public _VehicleStatusEnum getVehicleStatus() {
+    public VehicleStatusEnum getVehicleStatus() {
         return vehicleStatus;
     }
 
@@ -91,10 +94,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleStatusEnum }
+     *     {@link VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatus(_VehicleStatusEnum value) {
+    public void setVehicleStatus(VehicleStatusEnum value) {
         this.vehicleStatus = value;
     }
 
@@ -123,27 +126,27 @@ public class GroupOfVehiclesInvolved {
     }
 
     /**
-     * Gets the value of the _GroupOfVehiclesInvolvedExtension property.
+     * Gets the value of the groupOfVehiclesInvolvedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GroupOfVehiclesInvolvedExtension() {
-        return _GroupOfVehiclesInvolvedExtension;
+    public ExtensionType getGroupOfVehiclesInvolvedExtension() {
+        return groupOfVehiclesInvolvedExtension;
     }
 
     /**
-     * Sets the value of the _GroupOfVehiclesInvolvedExtension property.
+     * Sets the value of the groupOfVehiclesInvolvedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GroupOfVehiclesInvolvedExtension(_ExtensionType value) {
-        this._GroupOfVehiclesInvolvedExtension = value;
+    public void setGroupOfVehiclesInvolvedExtension(ExtensionType value) {
+        this.groupOfVehiclesInvolvedExtension = value;
     }
 
 }

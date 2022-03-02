@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,8 +33,8 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceInformation", propOrder = {
-    "_ServiceInformationExtension"
+@XmlType(name = "ServiceInformation", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "serviceInformationExtension"
 })
 @XmlSeeAlso({
     RoadOperatorServiceDisruption.class,
@@ -45,31 +45,31 @@ public abstract class ServiceInformation
     extends SituationRecord
 {
 
-    @XmlElement(name = "_serviceInformationExtension")
-    protected _ExtensionType _ServiceInformationExtension;
+    @XmlElement(name = "_serviceInformationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType serviceInformationExtension;
 
     /**
-     * Gets the value of the _ServiceInformationExtension property.
+     * Gets the value of the serviceInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ServiceInformationExtension() {
-        return _ServiceInformationExtension;
+    public ExtensionType getServiceInformationExtension() {
+        return serviceInformationExtension;
     }
 
     /**
-     * Sets the value of the _ServiceInformationExtension property.
+     * Sets the value of the serviceInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ServiceInformationExtension(_ExtensionType value) {
-        this._ServiceInformationExtension = value;
+    public void setServiceInformationExtension(ExtensionType value) {
+        this.serviceInformationExtension = value;
     }
 
 }

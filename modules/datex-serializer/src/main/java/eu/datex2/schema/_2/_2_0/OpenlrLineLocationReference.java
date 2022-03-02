@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLineLocationReference", propOrder = {
+@XmlType(name = "OpenlrLineLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrLocationReferencePoint",
     "openlrLastLocationReferencePoint",
     "openlrOffsets",
@@ -40,12 +40,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpenlrLineLocationReference {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<OpenlrLocationReferencePoint> openlrLocationReferencePoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrOffsets openlrOffsets;
-    protected _ExtensionType openlrLineLocationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrLineLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrLocationReferencePoint property.
@@ -129,10 +131,10 @@ public class OpenlrLineLocationReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLineLocationReferenceExtension() {
+    public ExtensionType getOpenlrLineLocationReferenceExtension() {
         return openlrLineLocationReferenceExtension;
     }
 
@@ -141,10 +143,10 @@ public class OpenlrLineLocationReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLineLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrLineLocationReferenceExtension(ExtensionType value) {
         this.openlrLineLocationReferenceExtension = value;
     }
 

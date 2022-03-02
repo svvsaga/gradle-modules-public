@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangleLocationReference", propOrder = {
+@XmlType(name = "OpenlrRectangleLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrRectangle",
     "openlrRectangleLocationReferenceExtension"
 })
@@ -36,9 +36,10 @@ public class OpenlrRectangleLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrRectangle openlrRectangle;
-    protected _ExtensionType openlrRectangleLocationReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrRectangleLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrRectangle property.
@@ -69,10 +70,10 @@ public class OpenlrRectangleLocationReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrRectangleLocationReferenceExtension() {
+    public ExtensionType getOpenlrRectangleLocationReferenceExtension() {
         return openlrRectangleLocationReferenceExtension;
     }
 
@@ -81,10 +82,10 @@ public class OpenlrRectangleLocationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrRectangleLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrRectangleLocationReferenceExtension(ExtensionType value) {
         this.openlrRectangleLocationReferenceExtension = value;
     }
 

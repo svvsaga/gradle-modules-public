@@ -30,18 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeightCharacteristic", propOrder = {
+@XmlType(name = "HeightCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "comparisonOperator",
     "vehicleHeight",
     "heightCharacteristicExtension"
 })
 public class HeightCharacteristic {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float vehicleHeight;
-    protected _ExtensionType heightCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType heightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +90,10 @@ public class HeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHeightCharacteristicExtension() {
+    public ExtensionType getHeightCharacteristicExtension() {
         return heightCharacteristicExtension;
     }
 
@@ -100,10 +102,10 @@ public class HeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHeightCharacteristicExtension(_ExtensionType value) {
+    public void setHeightCharacteristicExtension(ExtensionType value) {
         this.heightCharacteristicExtension = value;
     }
 

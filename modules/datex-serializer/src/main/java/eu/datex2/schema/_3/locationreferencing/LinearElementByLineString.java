@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,18 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByLineString", propOrder = {
+@XmlType(name = "LinearElementByLineString", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "gmlLineString",
-    "_LinearElementByLineStringExtension"
+    "linearElementByLineStringExtension"
 })
 public class LinearElementByLineString
     extends LinearElement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected GmlLineString gmlLineString;
-    @XmlElement(name = "_linearElementByLineStringExtension")
-    protected _ExtensionType _LinearElementByLineStringExtension;
+    @XmlElement(name = "_linearElementByLineStringExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType linearElementByLineStringExtension;
 
     /**
      * Gets the value of the gmlLineString property.
@@ -69,27 +69,27 @@ public class LinearElementByLineString
     }
 
     /**
-     * Gets the value of the _LinearElementByLineStringExtension property.
+     * Gets the value of the linearElementByLineStringExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LinearElementByLineStringExtension() {
-        return _LinearElementByLineStringExtension;
+    public ExtensionType getLinearElementByLineStringExtension() {
+        return linearElementByLineStringExtension;
     }
 
     /**
-     * Sets the value of the _LinearElementByLineStringExtension property.
+     * Sets the value of the linearElementByLineStringExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LinearElementByLineStringExtension(_ExtensionType value) {
-        this._LinearElementByLineStringExtension = value;
+    public void setLinearElementByLineStringExtension(ExtensionType value) {
+        this.linearElementByLineStringExtension = value;
     }
 
 }

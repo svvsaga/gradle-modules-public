@@ -28,25 +28,26 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChargeBandByReference", propOrder = {
+@XmlType(name = "ChargeBandByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "chargeBandReference",
     "chargeBandByReferenceExtension"
 })
 public class ChargeBandByReference {
 
-    @XmlElement(required = true)
-    protected _ChargeBandVersionedReference chargeBandReference;
-    protected _ExtensionType chargeBandByReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ChargeBandVersionedReference chargeBandReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType chargeBandByReferenceExtension;
 
     /**
      * Gets the value of the chargeBandReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ChargeBandVersionedReference }
+     *     {@link ChargeBandVersionedReference }
      *     
      */
-    public _ChargeBandVersionedReference getChargeBandReference() {
+    public ChargeBandVersionedReference getChargeBandReference() {
         return chargeBandReference;
     }
 
@@ -55,10 +56,10 @@ public class ChargeBandByReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ChargeBandVersionedReference }
+     *     {@link ChargeBandVersionedReference }
      *     
      */
-    public void setChargeBandReference(_ChargeBandVersionedReference value) {
+    public void setChargeBandReference(ChargeBandVersionedReference value) {
         this.chargeBandReference = value;
     }
 
@@ -67,10 +68,10 @@ public class ChargeBandByReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getChargeBandByReferenceExtension() {
+    public ExtensionType getChargeBandByReferenceExtension() {
         return chargeBandByReferenceExtension;
     }
 
@@ -79,10 +80,10 @@ public class ChargeBandByReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setChargeBandByReferenceExtension(_ExtensionType value) {
+    public void setChargeBandByReferenceExtension(ExtensionType value) {
         this.chargeBandByReferenceExtension = value;
     }
 

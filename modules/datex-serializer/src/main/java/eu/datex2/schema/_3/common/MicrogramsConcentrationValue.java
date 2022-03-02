@@ -32,17 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MicrogramsConcentrationValue", propOrder = {
+@XmlType(name = "MicrogramsConcentrationValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "microgramsConcentration",
-    "_MicrogramsConcentrationValueExtension"
+    "microgramsConcentrationValueExtension"
 })
 public class MicrogramsConcentrationValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float microgramsConcentration;
-    @XmlElement(name = "_microgramsConcentrationValueExtension")
-    protected _ExtensionType _MicrogramsConcentrationValueExtension;
+    @XmlElement(name = "_microgramsConcentrationValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType microgramsConcentrationValueExtension;
 
     /**
      * Gets the value of the microgramsConcentration property.
@@ -61,27 +62,27 @@ public class MicrogramsConcentrationValue
     }
 
     /**
-     * Gets the value of the _MicrogramsConcentrationValueExtension property.
+     * Gets the value of the microgramsConcentrationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MicrogramsConcentrationValueExtension() {
-        return _MicrogramsConcentrationValueExtension;
+    public ExtensionType getMicrogramsConcentrationValueExtension() {
+        return microgramsConcentrationValueExtension;
     }
 
     /**
-     * Sets the value of the _MicrogramsConcentrationValueExtension property.
+     * Sets the value of the microgramsConcentrationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MicrogramsConcentrationValueExtension(_ExtensionType value) {
-        this._MicrogramsConcentrationValueExtension = value;
+    public void setMicrogramsConcentrationValueExtension(ExtensionType value) {
+        this.microgramsConcentrationValueExtension = value;
     }
 
 }

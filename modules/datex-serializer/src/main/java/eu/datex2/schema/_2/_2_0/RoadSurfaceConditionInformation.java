@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionInformation", propOrder = {
+@XmlType(name = "RoadSurfaceConditionInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "weatherRelatedRoadConditionType",
     "roadSurfaceConditionMeasurements",
     "roadSurfaceConditionInformationExtension"
@@ -41,11 +41,13 @@ public class RoadSurfaceConditionInformation
     extends WeatherData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
-    protected _ExtensionType roadSurfaceConditionInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType roadSurfaceConditionInformationExtension;
 
     /**
      * Gets the value of the weatherRelatedRoadConditionType property.
@@ -105,10 +107,10 @@ public class RoadSurfaceConditionInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadSurfaceConditionInformationExtension() {
+    public ExtensionType getRoadSurfaceConditionInformationExtension() {
         return roadSurfaceConditionInformationExtension;
     }
 
@@ -117,10 +119,10 @@ public class RoadSurfaceConditionInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionInformationExtension(_ExtensionType value) {
+    public void setRoadSurfaceConditionInformationExtension(ExtensionType value) {
         this.roadSurfaceConditionInformationExtension = value;
     }
 

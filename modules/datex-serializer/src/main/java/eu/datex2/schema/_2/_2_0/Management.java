@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,16 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Management", propOrder = {
+@XmlType(name = "Management", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "lifeCycleManagement",
     "filterExitManagement",
     "managementExtension"
 })
 public class Management {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected LifeCycleManagement lifeCycleManagement;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FilterExitManagement filterExitManagement;
-    protected _ExtensionType managementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType managementExtension;
 
     /**
      * Gets the value of the lifeCycleManagement property.
@@ -92,10 +96,10 @@ public class Management {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getManagementExtension() {
+    public ExtensionType getManagementExtension() {
         return managementExtension;
     }
 
@@ -104,10 +108,10 @@ public class Management {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setManagementExtension(_ExtensionType value) {
+    public void setManagementExtension(ExtensionType value) {
         this.managementExtension = value;
     }
 

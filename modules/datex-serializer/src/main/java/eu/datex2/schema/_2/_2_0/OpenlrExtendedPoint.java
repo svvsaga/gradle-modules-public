@@ -27,12 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrExtendedPoint", propOrder = {
+@XmlType(name = "OpenlrExtendedPoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrPointLocationReference"
 })
 public class OpenlrExtendedPoint {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrPointLocationReference openlrPointLocationReference;
 
     /**

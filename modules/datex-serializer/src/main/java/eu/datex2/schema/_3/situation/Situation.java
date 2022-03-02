@@ -4,9 +4,9 @@ package eu.datex2.schema._3.situation;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.InternationalIdentifier;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Situation", propOrder = {
+@XmlType(name = "Situation", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "overallSeverity",
     "situationVersionTime",
     "headerInformation",
@@ -56,22 +56,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "relatedSituation",
     "informationManager",
     "situationSummary",
-    "_SituationExtension"
+    "situationExtension"
 })
 public class Situation {
 
-    protected _SeverityEnum overallSeverity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected SeverityEnum overallSeverity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationVersionTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected List<SituationRecord> situationRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<SituationReference> relatedSituation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InternationalIdentifier informationManager;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SituationRecord situationSummary;
-    @XmlElement(name = "_situationExtension")
-    protected _ExtensionType _SituationExtension;
+    @XmlElement(name = "_situationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType situationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -80,10 +85,10 @@ public class Situation {
      * 
      * @return
      *     possible object is
-     *     {@link _SeverityEnum }
+     *     {@link SeverityEnum }
      *     
      */
-    public _SeverityEnum getOverallSeverity() {
+    public SeverityEnum getOverallSeverity() {
         return overallSeverity;
     }
 
@@ -92,10 +97,10 @@ public class Situation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _SeverityEnum }
+     *     {@link SeverityEnum }
      *     
      */
-    public void setOverallSeverity(_SeverityEnum value) {
+    public void setOverallSeverity(SeverityEnum value) {
         this.overallSeverity = value;
     }
 
@@ -254,27 +259,27 @@ public class Situation {
     }
 
     /**
-     * Gets the value of the _SituationExtension property.
+     * Gets the value of the situationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SituationExtension() {
-        return _SituationExtension;
+    public ExtensionType getSituationExtension() {
+        return situationExtension;
     }
 
     /**
-     * Sets the value of the _SituationExtension property.
+     * Sets the value of the situationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SituationExtension(_ExtensionType value) {
-        this._SituationExtension = value;
+    public void setSituationExtension(ExtensionType value) {
+        this.situationExtension = value;
     }
 
     /**

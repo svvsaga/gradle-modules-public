@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Referent", propOrder = {
+@XmlType(name = "Referent", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "referentIdentifier",
     "referentName",
     "referentType",
@@ -43,15 +43,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Referent {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String referentIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String referentName;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ReferentTypeEnum referentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString referentDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointCoordinates pointCoordinates;
-    protected _ExtensionType referentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType referentExtension;
 
     /**
      * Gets the value of the referentIdentifier property.
@@ -178,10 +182,10 @@ public class Referent {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getReferentExtension() {
+    public ExtensionType getReferentExtension() {
         return referentExtension;
     }
 
@@ -190,10 +194,10 @@ public class Referent {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setReferentExtension(_ExtensionType value) {
+    public void setReferentExtension(ExtensionType value) {
         this.referentExtension = value;
     }
 

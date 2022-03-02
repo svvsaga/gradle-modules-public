@@ -68,7 +68,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRecord", propOrder = {
+@XmlType(name = "ParkingRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingName",
     "parkingAlias",
     "parkingDescription",
@@ -109,47 +109,78 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingRecord {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> parkingAlias;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingDescription;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingRecordVersionTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingPrincipalNumberOfSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumParkingDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String photoUrl;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<OccupancyDetectionTypeEnum> parkingOccupanyDetectionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> emergencyContact;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> owner;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> responisbleAuthority;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> securityService;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> operator;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> servicePartner;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingVMS> parkingVMS;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected GroupOfLocations parkingLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRoute> parkingRoute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected RGBColour parkingColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment onlyAssignedParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment assignedParkingAmongOthers;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment prohibitedParking;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TariffsAndPayment tariffsAndPayment;
-    protected List<_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> parkingEquipmentOrServiceFacility;
-    protected List<_ParkingSpace> parkingSpace;
-    protected List<_GroupOfParkingSpaces> groupOfParkingSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> parkingEquipmentOrServiceFacility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingSpace> parkingSpace;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<GroupOfParkingSpaces> groupOfParkingSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingThresholds parkingThresholds;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<PermitsAndProhibitions> permitsAndProhibitions;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations emergencyAssemblyPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Area entireArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Dimension parkingRecordDimension;
-    protected _ExtensionType parkingRecordExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -799,13 +830,13 @@ public abstract class ParkingRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
+     * {@link ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
      * 
      * 
      */
-    public List<_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> getParkingEquipmentOrServiceFacility() {
+    public List<ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> getParkingEquipmentOrServiceFacility() {
         if (parkingEquipmentOrServiceFacility == null) {
-            parkingEquipmentOrServiceFacility = new ArrayList<_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility>();
+            parkingEquipmentOrServiceFacility = new ArrayList<ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility>();
         }
         return this.parkingEquipmentOrServiceFacility;
     }
@@ -828,13 +859,13 @@ public abstract class ParkingRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingSpace }
+     * {@link ParkingSpace }
      * 
      * 
      */
-    public List<_ParkingSpace> getParkingSpace() {
+    public List<ParkingSpace> getParkingSpace() {
         if (parkingSpace == null) {
-            parkingSpace = new ArrayList<_ParkingSpace>();
+            parkingSpace = new ArrayList<ParkingSpace>();
         }
         return this.parkingSpace;
     }
@@ -857,13 +888,13 @@ public abstract class ParkingRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _GroupOfParkingSpaces }
+     * {@link GroupOfParkingSpaces }
      * 
      * 
      */
-    public List<_GroupOfParkingSpaces> getGroupOfParkingSpaces() {
+    public List<GroupOfParkingSpaces> getGroupOfParkingSpaces() {
         if (groupOfParkingSpaces == null) {
-            groupOfParkingSpaces = new ArrayList<_GroupOfParkingSpaces>();
+            groupOfParkingSpaces = new ArrayList<GroupOfParkingSpaces>();
         }
         return this.groupOfParkingSpaces;
     }
@@ -998,10 +1029,10 @@ public abstract class ParkingRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingRecordExtension() {
+    public ExtensionType getParkingRecordExtension() {
         return parkingRecordExtension;
     }
 
@@ -1010,10 +1041,10 @@ public abstract class ParkingRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingRecordExtension(_ExtensionType value) {
+    public void setParkingRecordExtension(ExtensionType value) {
         this.parkingRecordExtension = value;
     }
 

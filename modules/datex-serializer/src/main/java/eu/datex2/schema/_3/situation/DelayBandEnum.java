@@ -1,103 +1,88 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for DelayBandEnum.
+ * <p>Java class for _DelayBandEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="DelayBandEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="negligible"/&gt;
- *     &lt;enumeration value="upToTenMinutes"/&gt;
- *     &lt;enumeration value="betweenTenMinutesAndThirtyMinutes"/&gt;
- *     &lt;enumeration value="betweenThirtyMinutesAndOneHour"/&gt;
- *     &lt;enumeration value="betweenOneHourAndThreeHours"/&gt;
- *     &lt;enumeration value="betweenThreeHoursAndSixHours"/&gt;
- *     &lt;enumeration value="longerThanSixHours"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_DelayBandEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;DelayBandEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "DelayBandEnum")
-@XmlEnum
-public enum DelayBandEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_DelayBandEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class DelayBandEnum {
 
-
-    /**
-     * Negligible delay.
-     * 
-     */
-    @XmlEnumValue("negligible")
-    NEGLIGIBLE("negligible"),
-
-    /**
-     * Delay up to ten minutes.
-     * 
-     */
-    @XmlEnumValue("upToTenMinutes")
-    UP_TO_TEN_MINUTES("upToTenMinutes"),
+    @XmlValue
+    protected DelayBandEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Delay between ten minutes and thirty minutes.
+     * Classifications of a delay banded by length (i.e. the additional travel time).
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link DelayBandEnum2 }
+     *     
      */
-    @XmlEnumValue("betweenTenMinutesAndThirtyMinutes")
-    BETWEEN_TEN_MINUTES_AND_THIRTY_MINUTES("betweenTenMinutesAndThirtyMinutes"),
-
-    /**
-     * Delay between thirty minutes and one hour.
-     * 
-     */
-    @XmlEnumValue("betweenThirtyMinutesAndOneHour")
-    BETWEEN_THIRTY_MINUTES_AND_ONE_HOUR("betweenThirtyMinutesAndOneHour"),
-
-    /**
-     * Delay between one hour and three hours.
-     * 
-     */
-    @XmlEnumValue("betweenOneHourAndThreeHours")
-    BETWEEN_ONE_HOUR_AND_THREE_HOURS("betweenOneHourAndThreeHours"),
-
-    /**
-     * Delay between three hours and six hours.
-     * 
-     */
-    @XmlEnumValue("betweenThreeHoursAndSixHours")
-    BETWEEN_THREE_HOURS_AND_SIX_HOURS("betweenThreeHoursAndSixHours"),
-
-    /**
-     * Delay longer than six hours.
-     * 
-     */
-    @XmlEnumValue("longerThanSixHours")
-    LONGER_THAN_SIX_HOURS("longerThanSixHours"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    DelayBandEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public DelayBandEnum2 getValue() {
         return value;
     }
 
-    public static DelayBandEnum fromValue(String v) {
-        for (DelayBandEnum c: DelayBandEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DelayBandEnum2 }
+     *     
+     */
+    public void setValue(DelayBandEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

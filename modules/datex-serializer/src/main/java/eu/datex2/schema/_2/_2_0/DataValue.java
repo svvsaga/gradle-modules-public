@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -38,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DataValue", propOrder = {
+@XmlType(name = "DataValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "dataError",
     "reasonForDataError",
     "dataValueExtension"
@@ -67,9 +68,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DataValue {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean dataError;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString reasonForDataError;
-    protected _ExtensionType dataValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType dataValueExtension;
     @XmlAttribute(name = "accuracy")
     protected Float accuracy;
     @XmlAttribute(name = "computationalMethod")
@@ -138,10 +142,10 @@ public abstract class DataValue {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDataValueExtension() {
+    public ExtensionType getDataValueExtension() {
         return dataValueExtension;
     }
 
@@ -150,10 +154,10 @@ public abstract class DataValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDataValueExtension(_ExtensionType value) {
+    public void setDataValueExtension(ExtensionType value) {
         this.dataValueExtension = value;
     }
 

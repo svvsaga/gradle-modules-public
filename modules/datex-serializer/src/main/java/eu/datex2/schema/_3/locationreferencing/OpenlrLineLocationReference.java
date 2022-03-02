@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,21 +37,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLineLocationReference", propOrder = {
+@XmlType(name = "OpenlrLineLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrLocationReferencePoint",
     "openlrLastLocationReferencePoint",
     "openlrOffsets",
-    "_OpenlrLineLocationReferenceExtension"
+    "openlrLineLocationReferenceExtension"
 })
 public class OpenlrLineLocationReference {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<OpenlrLocationReferencePoint> openlrLocationReferencePoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrOffsets openlrOffsets;
-    @XmlElement(name = "_openlrLineLocationReferenceExtension")
-    protected _ExtensionType _OpenlrLineLocationReferenceExtension;
+    @XmlElement(name = "_openlrLineLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrLineLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrLocationReferencePoint property.
@@ -131,27 +132,27 @@ public class OpenlrLineLocationReference {
     }
 
     /**
-     * Gets the value of the _OpenlrLineLocationReferenceExtension property.
+     * Gets the value of the openlrLineLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrLineLocationReferenceExtension() {
-        return _OpenlrLineLocationReferenceExtension;
+    public ExtensionType getOpenlrLineLocationReferenceExtension() {
+        return openlrLineLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrLineLocationReferenceExtension property.
+     * Sets the value of the openlrLineLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrLineLocationReferenceExtension(_ExtensionType value) {
-        this._OpenlrLineLocationReferenceExtension = value;
+    public void setOpenlrLineLocationReferenceExtension(ExtensionType value) {
+        this.openlrLineLocationReferenceExtension = value;
     }
 
 }

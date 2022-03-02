@@ -3,6 +3,7 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Humidity;
 import eu.datex2.schema._3.common.Pollution;
 import eu.datex2.schema._3.common.PrecipitationDetail;
@@ -10,7 +11,6 @@ import eu.datex2.schema._3.common.Pressure;
 import eu.datex2.schema._3.common.Temperature;
 import eu.datex2.schema._3.common.Visibility;
 import eu.datex2.schema._3.common.Wind;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PoorEnvironmentConditions", propOrder = {
+@XmlType(name = "PoorEnvironmentConditions", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "poorEnvironmentType",
     "precipitationDetail",
     "visibility",
@@ -57,23 +57,30 @@ import jakarta.xml.bind.annotation.XmlType;
     "wind",
     "humidity",
     "pressure",
-    "_PoorEnvironmentConditionsExtension"
+    "poorEnvironmentConditionsExtension"
 })
 public class PoorEnvironmentConditions
     extends Conditions
 {
 
-    @XmlElement(required = true)
-    protected List<_PoorEnvironmentTypeEnum> poorEnvironmentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected PrecipitationDetail precipitationDetail;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Visibility visibility;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Pollution pollution;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Temperature temperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Wind wind;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Humidity humidity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Pressure pressure;
-    @XmlElement(name = "_poorEnvironmentConditionsExtension")
-    protected _ExtensionType _PoorEnvironmentConditionsExtension;
+    @XmlElement(name = "_poorEnvironmentConditionsExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType poorEnvironmentConditionsExtension;
 
     /**
      * Gets the value of the poorEnvironmentType property.
@@ -93,13 +100,13 @@ public class PoorEnvironmentConditions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PoorEnvironmentTypeEnum }
+     * {@link PoorEnvironmentTypeEnum }
      * 
      * 
      */
-    public List<_PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
+    public List<PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
         if (poorEnvironmentType == null) {
-            poorEnvironmentType = new ArrayList<_PoorEnvironmentTypeEnum>();
+            poorEnvironmentType = new ArrayList<PoorEnvironmentTypeEnum>();
         }
         return this.poorEnvironmentType;
     }
@@ -273,27 +280,27 @@ public class PoorEnvironmentConditions
     }
 
     /**
-     * Gets the value of the _PoorEnvironmentConditionsExtension property.
+     * Gets the value of the poorEnvironmentConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PoorEnvironmentConditionsExtension() {
-        return _PoorEnvironmentConditionsExtension;
+    public ExtensionType getPoorEnvironmentConditionsExtension() {
+        return poorEnvironmentConditionsExtension;
     }
 
     /**
-     * Sets the value of the _PoorEnvironmentConditionsExtension property.
+     * Sets the value of the poorEnvironmentConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PoorEnvironmentConditionsExtension(_ExtensionType value) {
-        this._PoorEnvironmentConditionsExtension = value;
+    public void setPoorEnvironmentConditionsExtension(ExtensionType value) {
+        this.poorEnvironmentConditionsExtension = value;
     }
 
 }

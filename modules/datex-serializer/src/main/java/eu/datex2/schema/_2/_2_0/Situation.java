@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Situation", propOrder = {
+@XmlType(name = "Situation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "overallSeverity",
     "relatedSituation",
     "situationVersionTime",
@@ -49,16 +49,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Situation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected SeverityEnum overallSeverity;
-    protected List<_SituationVersionedReference> relatedSituation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<SituationVersionedReference> relatedSituation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationVersionTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<SituationRecord> situationRecord;
-    protected _ExtensionType situationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType situationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -106,13 +110,13 @@ public class Situation {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SituationVersionedReference }
+     * {@link SituationVersionedReference }
      * 
      * 
      */
-    public List<_SituationVersionedReference> getRelatedSituation() {
+    public List<SituationVersionedReference> getRelatedSituation() {
         if (relatedSituation == null) {
-            relatedSituation = new ArrayList<_SituationVersionedReference>();
+            relatedSituation = new ArrayList<SituationVersionedReference>();
         }
         return this.relatedSituation;
     }
@@ -199,10 +203,10 @@ public class Situation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSituationExtension() {
+    public ExtensionType getSituationExtension() {
         return situationExtension;
     }
 
@@ -211,10 +215,10 @@ public class Situation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSituationExtension(_ExtensionType value) {
+    public void setSituationExtension(ExtensionType value) {
         this.situationExtension = value;
     }
 

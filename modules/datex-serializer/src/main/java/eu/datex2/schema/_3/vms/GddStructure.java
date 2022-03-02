@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,18 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GddStructure", propOrder = {
+@XmlType(name = "GddStructure", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "gddPictogramIdentification",
     "gddPictogramAttributes",
-    "_GddStructureExtension"
+    "gddStructureExtension"
 })
 public class GddStructure {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected GddPictogramIdentification gddPictogramIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected GddPictogramAttributes gddPictogramAttributes;
-    @XmlElement(name = "_gddStructureExtension")
-    protected _ExtensionType _GddStructureExtension;
+    @XmlElement(name = "_gddStructureExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType gddStructureExtension;
 
     /**
      * Gets the value of the gddPictogramIdentification property.
@@ -96,27 +97,27 @@ public class GddStructure {
     }
 
     /**
-     * Gets the value of the _GddStructureExtension property.
+     * Gets the value of the gddStructureExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GddStructureExtension() {
-        return _GddStructureExtension;
+    public ExtensionType getGddStructureExtension() {
+        return gddStructureExtension;
     }
 
     /**
-     * Sets the value of the _GddStructureExtension property.
+     * Sets the value of the gddStructureExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GddStructureExtension(_ExtensionType value) {
-        this._GddStructureExtension = value;
+    public void setGddStructureExtension(ExtensionType value) {
+        this.gddStructureExtension = value;
     }
 
 }

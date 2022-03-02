@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedDataFault", propOrder = {
+@XmlType(name = "ElaboratedDataFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "elaboratedDataFault",
     "elaboratedDataFaultExtension"
 })
@@ -37,10 +37,11 @@ public class ElaboratedDataFault
     extends Fault
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ElaboratedDataFaultEnum elaboratedDataFault;
-    protected _ExtensionType elaboratedDataFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType elaboratedDataFaultExtension;
 
     /**
      * Gets the value of the elaboratedDataFault property.
@@ -71,10 +72,10 @@ public class ElaboratedDataFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataFaultExtension() {
+    public ExtensionType getElaboratedDataFaultExtension() {
         return elaboratedDataFaultExtension;
     }
 
@@ -83,10 +84,10 @@ public class ElaboratedDataFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataFaultExtension(_ExtensionType value) {
+    public void setElaboratedDataFaultExtension(ExtensionType value) {
         this.elaboratedDataFaultExtension = value;
     }
 

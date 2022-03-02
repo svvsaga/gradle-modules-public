@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,13 +37,13 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrBasePointLocation", propOrder = {
+@XmlType(name = "OpenlrBasePointLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
     "openlrLocationReferencePoint",
     "openlrLastLocationReferencePoint",
     "openlrOffsets",
-    "_OpenlrBasePointLocationExtension"
+    "openlrBasePointLocationExtension"
 })
 @XmlSeeAlso({
     OpenlrPointAlongLine.class,
@@ -53,27 +53,28 @@ public abstract class OpenlrBasePointLocation
     extends OpenlrPointLocationReference
 {
 
-    @XmlElement(required = true)
-    protected _OpenlrSideOfRoadEnum openlrSideOfRoad;
-    @XmlElement(required = true)
-    protected _OpenlrOrientationEnum openlrOrientation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected OpenlrSideOfRoadEnum openlrSideOfRoad;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected OpenlrOrientationEnum openlrOrientation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrLocationReferencePoint openlrLocationReferencePoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrOffsets openlrOffsets;
-    @XmlElement(name = "_openlrBasePointLocationExtension")
-    protected _ExtensionType _OpenlrBasePointLocationExtension;
+    @XmlElement(name = "_openlrBasePointLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrBasePointLocationExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
      * 
      * @return
      *     possible object is
-     *     {@link _OpenlrSideOfRoadEnum }
+     *     {@link OpenlrSideOfRoadEnum }
      *     
      */
-    public _OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
+    public OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
         return openlrSideOfRoad;
     }
 
@@ -82,10 +83,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link _OpenlrSideOfRoadEnum }
+     *     {@link OpenlrSideOfRoadEnum }
      *     
      */
-    public void setOpenlrSideOfRoad(_OpenlrSideOfRoadEnum value) {
+    public void setOpenlrSideOfRoad(OpenlrSideOfRoadEnum value) {
         this.openlrSideOfRoad = value;
     }
 
@@ -94,10 +95,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @return
      *     possible object is
-     *     {@link _OpenlrOrientationEnum }
+     *     {@link OpenlrOrientationEnum }
      *     
      */
-    public _OpenlrOrientationEnum getOpenlrOrientation() {
+    public OpenlrOrientationEnum getOpenlrOrientation() {
         return openlrOrientation;
     }
 
@@ -106,10 +107,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link _OpenlrOrientationEnum }
+     *     {@link OpenlrOrientationEnum }
      *     
      */
-    public void setOpenlrOrientation(_OpenlrOrientationEnum value) {
+    public void setOpenlrOrientation(OpenlrOrientationEnum value) {
         this.openlrOrientation = value;
     }
 
@@ -186,27 +187,27 @@ public abstract class OpenlrBasePointLocation
     }
 
     /**
-     * Gets the value of the _OpenlrBasePointLocationExtension property.
+     * Gets the value of the openlrBasePointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrBasePointLocationExtension() {
-        return _OpenlrBasePointLocationExtension;
+    public ExtensionType getOpenlrBasePointLocationExtension() {
+        return openlrBasePointLocationExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrBasePointLocationExtension property.
+     * Sets the value of the openlrBasePointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrBasePointLocationExtension(_ExtensionType value) {
-        this._OpenlrBasePointLocationExtension = value;
+    public void setOpenlrBasePointLocationExtension(ExtensionType value) {
+        this.openlrBasePointLocationExtension = value;
     }
 
 }

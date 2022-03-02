@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.SpeedValue;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,25 +38,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficSpeed", propOrder = {
+@XmlType(name = "TrafficSpeed", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "averageVehicleSpeed",
     "speedPercentile",
     "normallyExpectedSpeed",
     "minimumSpeed",
     "maximumSpeed",
-    "_TrafficSpeedExtension"
+    "trafficSpeedExtension"
 })
 public class TrafficSpeed
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue averageVehicleSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<SpeedPercentile> speedPercentile;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue normallyExpectedSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue minimumSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue maximumSpeed;
-    @XmlElement(name = "_trafficSpeedExtension")
-    protected _ExtensionType _TrafficSpeedExtension;
+    @XmlElement(name = "_trafficSpeedExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficSpeedExtension;
 
     /**
      * Gets the value of the averageVehicleSpeed property.
@@ -184,27 +189,27 @@ public class TrafficSpeed
     }
 
     /**
-     * Gets the value of the _TrafficSpeedExtension property.
+     * Gets the value of the trafficSpeedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficSpeedExtension() {
-        return _TrafficSpeedExtension;
+    public ExtensionType getTrafficSpeedExtension() {
+        return trafficSpeedExtension;
     }
 
     /**
-     * Sets the value of the _TrafficSpeedExtension property.
+     * Sets the value of the trafficSpeedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficSpeedExtension(_ExtensionType value) {
-        this._TrafficSpeedExtension = value;
+    public void setTrafficSpeedExtension(ExtensionType value) {
+        this.trafficSpeedExtension = value;
     }
 
 }

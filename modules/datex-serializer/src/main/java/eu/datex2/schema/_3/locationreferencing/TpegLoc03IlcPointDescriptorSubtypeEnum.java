@@ -1,72 +1,89 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TpegLoc03IlcPointDescriptorSubtypeEnum.
+ * <p>Java class for _TpegLoc03IlcPointDescriptorSubtypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TpegLoc03IlcPointDescriptorSubtypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="tpegIlcName1"/&gt;
- *     &lt;enumeration value="tpegIlcName2"/&gt;
- *     &lt;enumeration value="tpegIlcName3"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TpegLoc03IlcPointDescriptorSubtypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;TpegLoc03IlcPointDescriptorSubtypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TpegLoc03IlcPointDescriptorSubtypeEnum")
-@XmlEnum
-public enum TpegLoc03IlcPointDescriptorSubtypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TpegLoc03IlcPointDescriptorSubtypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class TpegLoc03IlcPointDescriptorSubtypeEnum {
 
-
-    /**
-     * The name of the road on which the junction point is located.
-     * 
-     */
-    @XmlEnumValue("tpegIlcName1")
-    TPEG_ILC_NAME_1("tpegIlcName1"),
-
-    /**
-     * The name of the first intersecting road at the junction.
-     * 
-     */
-    @XmlEnumValue("tpegIlcName2")
-    TPEG_ILC_NAME_2("tpegIlcName2"),
+    @XmlValue
+    protected TpegLoc03IlcPointDescriptorSubtypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The name of the second intersecting road (if one exists) at the junction.
-     *           
+     * Descriptors for describing a junction by identifying the intersecting roads at a road
+     *         junction.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link TpegLoc03IlcPointDescriptorSubtypeEnum2 }
+     *     
      */
-    @XmlEnumValue("tpegIlcName3")
-    TPEG_ILC_NAME_3("tpegIlcName3"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TpegLoc03IlcPointDescriptorSubtypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TpegLoc03IlcPointDescriptorSubtypeEnum2 getValue() {
         return value;
     }
 
-    public static TpegLoc03IlcPointDescriptorSubtypeEnum fromValue(String v) {
-        for (TpegLoc03IlcPointDescriptorSubtypeEnum c: TpegLoc03IlcPointDescriptorSubtypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TpegLoc03IlcPointDescriptorSubtypeEnum2 }
+     *     
+     */
+    public void setValue(TpegLoc03IlcPointDescriptorSubtypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

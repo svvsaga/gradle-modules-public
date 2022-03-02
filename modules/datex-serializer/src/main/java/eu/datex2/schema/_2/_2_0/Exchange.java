@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Exchange", propOrder = {
+@XmlType(name = "Exchange", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "changedFlag",
     "clientIdentification",
     "deliveryBreak",
@@ -66,29 +66,44 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Exchange {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ChangedFlagEnum changedFlag;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String clientIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deliveryBreak;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DenyReasonEnum denyReason;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar historicalStartDate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar historicalStopDate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean keepAlive;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RequestTypeEnum requestType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ResponseEnum response;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String subscriptionReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected InternationalIdentifier supplierIdentification;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Target target;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Subscription subscription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<FilterReference> filterReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<CatalogueReference> catalogueReference;
-    protected _ExtensionType exchangeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType exchangeExtension;
 
     /**
      * Gets the value of the changedFlag property.
@@ -465,10 +480,10 @@ public class Exchange {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getExchangeExtension() {
+    public ExtensionType getExchangeExtension() {
         return exchangeExtension;
     }
 
@@ -477,10 +492,10 @@ public class Exchange {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setExchangeExtension(_ExtensionType value) {
+    public void setExchangeExtension(ExtensionType value) {
         this.exchangeExtension = value;
     }
 

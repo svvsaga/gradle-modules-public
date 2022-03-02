@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,25 +36,27 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunction", propOrder = {
+@XmlType(name = "TpegJunction", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "pointCoordinates",
     "name",
     "ilc",
     "otherName",
-    "_TpegJunctionExtension"
+    "tpegJunctionExtension"
 })
 public class TpegJunction
     extends TpegPoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates pointCoordinates;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegJunctionPointDescriptor name;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<TpegIlcPointDescriptor> ilc;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<TpegOtherPointDescriptor> otherName;
-    @XmlElement(name = "_tpegJunctionExtension")
-    protected _ExtensionType _TpegJunctionExtension;
+    @XmlElement(name = "_tpegJunctionExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegJunctionExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -163,27 +165,27 @@ public class TpegJunction
     }
 
     /**
-     * Gets the value of the _TpegJunctionExtension property.
+     * Gets the value of the tpegJunctionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegJunctionExtension() {
-        return _TpegJunctionExtension;
+    public ExtensionType getTpegJunctionExtension() {
+        return tpegJunctionExtension;
     }
 
     /**
-     * Sets the value of the _TpegJunctionExtension property.
+     * Sets the value of the tpegJunctionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegJunctionExtension(_ExtensionType value) {
-        this._TpegJunctionExtension = value;
+    public void setTpegJunctionExtension(ExtensionType value) {
+        this.tpegJunctionExtension = value;
     }
 
 }

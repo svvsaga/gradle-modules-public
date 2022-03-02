@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRouteByReference", propOrder = {
+@XmlType(name = "ParkingRouteByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingRouteReference",
     "parkingRouteByReferenceExtension"
 })
@@ -36,19 +36,20 @@ public class ParkingRouteByReference
     extends ParkingRoute
 {
 
-    @XmlElement(required = true)
-    protected _ParkingRouteDetailsVersionedReference parkingRouteReference;
-    protected _ExtensionType parkingRouteByReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected ParkingRouteDetailsVersionedReference parkingRouteReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingRouteByReferenceExtension;
 
     /**
      * Gets the value of the parkingRouteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _ParkingRouteDetailsVersionedReference }
+     *     {@link ParkingRouteDetailsVersionedReference }
      *     
      */
-    public _ParkingRouteDetailsVersionedReference getParkingRouteReference() {
+    public ParkingRouteDetailsVersionedReference getParkingRouteReference() {
         return parkingRouteReference;
     }
 
@@ -57,10 +58,10 @@ public class ParkingRouteByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ParkingRouteDetailsVersionedReference }
+     *     {@link ParkingRouteDetailsVersionedReference }
      *     
      */
-    public void setParkingRouteReference(_ParkingRouteDetailsVersionedReference value) {
+    public void setParkingRouteReference(ParkingRouteDetailsVersionedReference value) {
         this.parkingRouteReference = value;
     }
 
@@ -69,10 +70,10 @@ public class ParkingRouteByReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingRouteByReferenceExtension() {
+    public ExtensionType getParkingRouteByReferenceExtension() {
         return parkingRouteByReferenceExtension;
     }
 
@@ -81,10 +82,10 @@ public class ParkingRouteByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingRouteByReferenceExtension(_ExtensionType value) {
+    public void setParkingRouteByReferenceExtension(ExtensionType value) {
         this.parkingRouteByReferenceExtension = value;
     }
 

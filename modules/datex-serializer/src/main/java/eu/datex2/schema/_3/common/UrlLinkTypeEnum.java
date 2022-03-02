@@ -1,103 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for UrlLinkTypeEnum.
+ * <p>Java class for _UrlLinkTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="UrlLinkTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="documentPdf"/&gt;
- *     &lt;enumeration value="html"/&gt;
- *     &lt;enumeration value="image"/&gt;
- *     &lt;enumeration value="rss"/&gt;
- *     &lt;enumeration value="videoStream"/&gt;
- *     &lt;enumeration value="voiceStream"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_UrlLinkTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;UrlLinkTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "UrlLinkTypeEnum")
-@XmlEnum
-public enum UrlLinkTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_UrlLinkTypeEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class UrlLinkTypeEnum {
 
-
-    /**
-     * URL link to a pdf document.
-     * 
-     */
-    @XmlEnumValue("documentPdf")
-    DOCUMENT_PDF("documentPdf"),
-
-    /**
-     * URL link to an html page.
-     * 
-     */
-    @XmlEnumValue("html")
-    HTML("html"),
+    @XmlValue
+    protected UrlLinkTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * URL link to an image.
+     * Types of URL links.
      * 
+     * @return
+     *     possible object is
+     *     {@link UrlLinkTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("image")
-    IMAGE("image"),
-
-    /**
-     * URL link to an RSS feed.
-     * 
-     */
-    @XmlEnumValue("rss")
-    RSS("rss"),
-
-    /**
-     * URL link to a video stream.
-     * 
-     */
-    @XmlEnumValue("videoStream")
-    VIDEO_STREAM("videoStream"),
-
-    /**
-     * URL link to a voice stream.
-     * 
-     */
-    @XmlEnumValue("voiceStream")
-    VOICE_STREAM("voiceStream"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    UrlLinkTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public UrlLinkTypeEnum2 getValue() {
         return value;
     }
 
-    public static UrlLinkTypeEnum fromValue(String v) {
-        for (UrlLinkTypeEnum c: UrlLinkTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UrlLinkTypeEnum2 }
+     *     
+     */
+    public void setValue(UrlLinkTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

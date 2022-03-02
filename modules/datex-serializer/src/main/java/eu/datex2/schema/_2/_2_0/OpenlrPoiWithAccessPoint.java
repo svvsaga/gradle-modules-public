@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPoiWithAccessPoint", propOrder = {
+@XmlType(name = "OpenlrPoiWithAccessPoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrCoordinate",
     "openlrPoiWithAccessPointExtension"
 })
@@ -36,9 +36,10 @@ public class OpenlrPoiWithAccessPoint
     extends OpenlrBasePointLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates openlrCoordinate;
-    protected _ExtensionType openlrPoiWithAccessPointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrPoiWithAccessPointExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -69,10 +70,10 @@ public class OpenlrPoiWithAccessPoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPoiWithAccessPointExtension() {
+    public ExtensionType getOpenlrPoiWithAccessPointExtension() {
         return openlrPoiWithAccessPointExtension;
     }
 
@@ -81,10 +82,10 @@ public class OpenlrPoiWithAccessPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPoiWithAccessPointExtension(_ExtensionType value) {
+    public void setOpenlrPoiWithAccessPointExtension(ExtensionType value) {
         this.openlrPoiWithAccessPointExtension = value;
     }
 

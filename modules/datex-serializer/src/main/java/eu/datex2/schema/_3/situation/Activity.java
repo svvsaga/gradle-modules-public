@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,9 +34,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Activity", propOrder = {
+@XmlType(name = "Activity", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "mobilityOfActivity",
-    "_ActivityExtension"
+    "activityExtension"
 })
 @XmlSeeAlso({
     AuthorityOperation.class,
@@ -47,9 +47,10 @@ public abstract class Activity
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobilityOfActivity;
-    @XmlElement(name = "_activityExtension")
-    protected _ExtensionType _ActivityExtension;
+    @XmlElement(name = "_activityExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType activityExtension;
 
     /**
      * Gets the value of the mobilityOfActivity property.
@@ -76,27 +77,27 @@ public abstract class Activity
     }
 
     /**
-     * Gets the value of the _ActivityExtension property.
+     * Gets the value of the activityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ActivityExtension() {
-        return _ActivityExtension;
+    public ExtensionType getActivityExtension() {
+        return activityExtension;
     }
 
     /**
-     * Sets the value of the _ActivityExtension property.
+     * Sets the value of the activityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ActivityExtension(_ExtensionType value) {
-        this._ActivityExtension = value;
+    public void setActivityExtension(ExtensionType value) {
+        this.activityExtension = value;
     }
 
 }

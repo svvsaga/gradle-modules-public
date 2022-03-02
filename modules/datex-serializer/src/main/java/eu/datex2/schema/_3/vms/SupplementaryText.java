@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,18 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryText", propOrder = {
+@XmlType(name = "SupplementaryText", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "textLine",
-    "_SupplementaryTextExtension"
+    "supplementaryTextExtension"
 })
 public class SupplementaryText
     extends SupplementaryInformationDisplay
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected TextLine textLine;
-    @XmlElement(name = "_supplementaryTextExtension")
-    protected _ExtensionType _SupplementaryTextExtension;
+    @XmlElement(name = "_supplementaryTextExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType supplementaryTextExtension;
 
     /**
      * Gets the value of the textLine property.
@@ -69,27 +69,27 @@ public class SupplementaryText
     }
 
     /**
-     * Gets the value of the _SupplementaryTextExtension property.
+     * Gets the value of the supplementaryTextExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SupplementaryTextExtension() {
-        return _SupplementaryTextExtension;
+    public ExtensionType getSupplementaryTextExtension() {
+        return supplementaryTextExtension;
     }
 
     /**
-     * Sets the value of the _SupplementaryTextExtension property.
+     * Sets the value of the supplementaryTextExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SupplementaryTextExtension(_ExtensionType value) {
-        this._SupplementaryTextExtension = value;
+    public void setSupplementaryTextExtension(ExtensionType value) {
+        this.supplementaryTextExtension = value;
     }
 
 }

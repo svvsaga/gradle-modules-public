@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TpegLoc04HeightTypeEnum")
+@XmlType(name = "TpegLoc04HeightTypeEnum", namespace = "http://datex2.eu/schema/2/2_0")
 @XmlEnum
 public enum TpegLoc04HeightTypeEnum {
 

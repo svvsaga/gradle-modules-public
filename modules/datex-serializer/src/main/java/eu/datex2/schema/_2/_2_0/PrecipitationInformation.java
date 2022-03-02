@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationInformation", propOrder = {
+@XmlType(name = "PrecipitationInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "noPrecipitation",
     "precipitationDetail",
     "precipitationInformationExtension"
@@ -37,9 +38,12 @@ public class PrecipitationInformation
     extends WeatherData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean noPrecipitation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PrecipitationDetail precipitationDetail;
-    protected _ExtensionType precipitationInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType precipitationInformationExtension;
 
     /**
      * Gets the value of the noPrecipitation property.
@@ -94,10 +98,10 @@ public class PrecipitationInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPrecipitationInformationExtension() {
+    public ExtensionType getPrecipitationInformationExtension() {
         return precipitationInformationExtension;
     }
 
@@ -106,10 +110,10 @@ public class PrecipitationInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationInformationExtension(_ExtensionType value) {
+    public void setPrecipitationInformationExtension(ExtensionType value) {
         this.precipitationInformationExtension = value;
     }
 

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsTextLine", propOrder = {
+@XmlType(name = "VmsTextLine", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsTextLine",
     "vmsTextLineLanguage",
     "vmsTextLineColour",
@@ -45,16 +45,21 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class VmsTextLine {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String vmsTextLine;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
     protected String vmsTextLineLanguage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ColourEnum vmsTextLineColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean vmsTextLineFlashing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsTextLineHtml;
-    protected _ExtensionType vmsTextLineExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsTextLineExtension;
 
     /**
      * Gets the value of the vmsTextLine property.
@@ -181,10 +186,10 @@ public class VmsTextLine {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsTextLineExtension() {
+    public ExtensionType getVmsTextLineExtension() {
         return vmsTextLineExtension;
     }
 
@@ -193,10 +198,10 @@ public class VmsTextLine {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsTextLineExtension(_ExtensionType value) {
+    public void setVmsTextLineExtension(ExtensionType value) {
         this.vmsTextLineExtension = value;
     }
 

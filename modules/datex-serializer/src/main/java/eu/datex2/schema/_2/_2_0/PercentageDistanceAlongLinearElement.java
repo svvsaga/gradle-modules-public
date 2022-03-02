@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PercentageDistanceAlongLinearElement", propOrder = {
+@XmlType(name = "PercentageDistanceAlongLinearElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "percentageDistanceAlong",
     "percentageDistanceAlongLinearElementExtension"
 })
@@ -35,8 +36,10 @@ public class PercentageDistanceAlongLinearElement
     extends DistanceAlongLinearElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float percentageDistanceAlong;
-    protected _ExtensionType percentageDistanceAlongLinearElementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType percentageDistanceAlongLinearElementExtension;
 
     /**
      * Gets the value of the percentageDistanceAlong property.
@@ -59,10 +62,10 @@ public class PercentageDistanceAlongLinearElement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPercentageDistanceAlongLinearElementExtension() {
+    public ExtensionType getPercentageDistanceAlongLinearElementExtension() {
         return percentageDistanceAlongLinearElementExtension;
     }
 
@@ -71,10 +74,10 @@ public class PercentageDistanceAlongLinearElement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPercentageDistanceAlongLinearElementExtension(_ExtensionType value) {
+    public void setPercentageDistanceAlongLinearElementExtension(ExtensionType value) {
         this.percentageDistanceAlongLinearElementExtension = value;
     }
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -33,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedData", propOrder = {
+@XmlType(name = "ElaboratedData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "forecast",
     "source",
     "validity",
@@ -43,12 +44,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ElaboratedData {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean forecast;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Source source;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Validity validity;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ElaboratedDataFault> elaboratedDataFault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BasicData basicData;
-    protected _ExtensionType elaboratedDataExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType elaboratedDataExtension;
 
     /**
      * Gets the value of the forecast property.
@@ -180,10 +187,10 @@ public class ElaboratedData {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataExtension() {
+    public ExtensionType getElaboratedDataExtension() {
         return elaboratedDataExtension;
     }
 
@@ -192,10 +199,10 @@ public class ElaboratedData {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataExtension(_ExtensionType value) {
+    public void setElaboratedDataExtension(ExtensionType value) {
         this.elaboratedDataExtension = value;
     }
 

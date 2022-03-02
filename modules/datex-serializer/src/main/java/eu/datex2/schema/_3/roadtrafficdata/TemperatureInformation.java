@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Temperature;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureInformation", propOrder = {
+@XmlType(name = "TemperatureInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "temperature",
-    "_TemperatureInformationExtension"
+    "temperatureInformationExtension"
 })
 public class TemperatureInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected Temperature temperature;
-    @XmlElement(name = "_temperatureInformationExtension")
-    protected _ExtensionType _TemperatureInformationExtension;
+    @XmlElement(name = "_temperatureInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType temperatureInformationExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -70,27 +70,27 @@ public class TemperatureInformation
     }
 
     /**
-     * Gets the value of the _TemperatureInformationExtension property.
+     * Gets the value of the temperatureInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TemperatureInformationExtension() {
-        return _TemperatureInformationExtension;
+    public ExtensionType getTemperatureInformationExtension() {
+        return temperatureInformationExtension;
     }
 
     /**
-     * Sets the value of the _TemperatureInformationExtension property.
+     * Sets the value of the temperatureInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TemperatureInformationExtension(_ExtensionType value) {
-        this._TemperatureInformationExtension = value;
+    public void setTemperatureInformationExtension(ExtensionType value) {
+        this.temperatureInformationExtension = value;
     }
 
 }

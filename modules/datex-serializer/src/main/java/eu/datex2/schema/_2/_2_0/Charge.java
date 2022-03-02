@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Charge", propOrder = {
+@XmlType(name = "Charge", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "charge",
     "chargeInterval",
     "chargeType",
@@ -51,20 +51,28 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Charge {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected BigDecimal charge;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float chargeInterval;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ChargeTypeEnum chargeType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargeTypeDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxIterationsOfCharge;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minIterationsOfCharge;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger chargeOrderIndex;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TimePeriodOfDay timePeriodOfDay;
-    protected _ExtensionType chargeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType chargeExtension;
 
     /**
      * Gets the value of the charge property.
@@ -263,10 +271,10 @@ public class Charge {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getChargeExtension() {
+    public ExtensionType getChargeExtension() {
         return chargeExtension;
     }
 
@@ -275,10 +283,10 @@ public class Charge {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setChargeExtension(_ExtensionType value) {
+    public void setChargeExtension(ExtensionType value) {
         this.chargeExtension = value;
     }
 

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -46,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsPictogram", propOrder = {
+@XmlType(name = "VmsPictogram", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "pictogramDescription",
     "pictogramCode",
     "pictogramUrl",
@@ -67,26 +68,43 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsPictogram {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<VmsDatexPictogramEnum> pictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String pictogramCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String pictogramUrl;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString additionalPictogramDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean pictogramFlashing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean pictogramInInverseColour;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean presenceOfRedTriangle;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean viennaConventionCompliant;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float heightAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float lengthAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float speedAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float weightAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float weightPerAxleAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float widthAttribute;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsSupplementaryPanel vmsSupplementaryPanel;
-    protected _ExtensionType vmsPictogramExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
@@ -474,10 +492,10 @@ public class VmsPictogram {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsPictogramExtension() {
+    public ExtensionType getVmsPictogramExtension() {
         return vmsPictogramExtension;
     }
 
@@ -486,10 +504,10 @@ public class VmsPictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsPictogramExtension(_ExtensionType value) {
+    public void setVmsPictogramExtension(ExtensionType value) {
         this.vmsPictogramExtension = value;
     }
 

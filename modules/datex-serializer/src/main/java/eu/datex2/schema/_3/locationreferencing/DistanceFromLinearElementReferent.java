@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,22 +36,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceFromLinearElementReferent", propOrder = {
+@XmlType(name = "DistanceFromLinearElementReferent", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "distanceAlong",
     "fromReferent",
     "towardsReferent",
-    "_DistanceFromLinearElementReferentExtension"
+    "distanceFromLinearElementReferentExtension"
 })
 public class DistanceFromLinearElementReferent
     extends DistanceAlongLinearElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float distanceAlong;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected Referent fromReferent;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Referent towardsReferent;
-    @XmlElement(name = "_distanceFromLinearElementReferentExtension")
-    protected _ExtensionType _DistanceFromLinearElementReferentExtension;
+    @XmlElement(name = "_distanceFromLinearElementReferentExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType distanceFromLinearElementReferentExtension;
 
     /**
      * Gets the value of the distanceAlong property.
@@ -118,27 +120,27 @@ public class DistanceFromLinearElementReferent
     }
 
     /**
-     * Gets the value of the _DistanceFromLinearElementReferentExtension property.
+     * Gets the value of the distanceFromLinearElementReferentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DistanceFromLinearElementReferentExtension() {
-        return _DistanceFromLinearElementReferentExtension;
+    public ExtensionType getDistanceFromLinearElementReferentExtension() {
+        return distanceFromLinearElementReferentExtension;
     }
 
     /**
-     * Sets the value of the _DistanceFromLinearElementReferentExtension property.
+     * Sets the value of the distanceFromLinearElementReferentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DistanceFromLinearElementReferentExtension(_ExtensionType value) {
-        this._DistanceFromLinearElementReferentExtension = value;
+    public void setDistanceFromLinearElementReferentExtension(ExtensionType value) {
+        this.distanceFromLinearElementReferentExtension = value;
     }
 
 }

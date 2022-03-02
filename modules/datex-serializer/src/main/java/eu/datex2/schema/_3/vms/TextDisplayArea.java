@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextDisplayArea", propOrder = {
+@XmlType(name = "TextDisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "proportionalFont",
     "maxNumberOfCharacters",
     "maxNumberOfRows",
@@ -53,32 +53,42 @@ import jakarta.xml.bind.annotation.XmlType;
     "minFontWidth",
     "maxFontSpacing",
     "minFontSpacing",
-    "_TextDisplayAreaExtension"
+    "textDisplayAreaExtension"
 })
 public class TextDisplayArea
     extends DisplayArea
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean proportionalFont;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfCharacters;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfRows;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String textCodeListIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontSpacing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontSpacing;
-    @XmlElement(name = "_textDisplayAreaExtension")
-    protected _ExtensionType _TextDisplayAreaExtension;
+    @XmlElement(name = "_textDisplayAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType textDisplayAreaExtension;
 
     /**
      * Gets the value of the proportionalFont property.
@@ -321,27 +331,27 @@ public class TextDisplayArea
     }
 
     /**
-     * Gets the value of the _TextDisplayAreaExtension property.
+     * Gets the value of the textDisplayAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TextDisplayAreaExtension() {
-        return _TextDisplayAreaExtension;
+    public ExtensionType getTextDisplayAreaExtension() {
+        return textDisplayAreaExtension;
     }
 
     /**
-     * Sets the value of the _TextDisplayAreaExtension property.
+     * Sets the value of the textDisplayAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TextDisplayAreaExtension(_ExtensionType value) {
-        this._TextDisplayAreaExtension = value;
+    public void setTextDisplayAreaExtension(ExtensionType value) {
+        this.textDisplayAreaExtension = value;
     }
 
 }

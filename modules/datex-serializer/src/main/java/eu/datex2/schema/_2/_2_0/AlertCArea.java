@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCArea", propOrder = {
+@XmlType(name = "AlertCArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
@@ -40,15 +40,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AlertCArea {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCLocation areaLocation;
-    protected _ExtensionType alertCAreaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCAreaExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -151,10 +152,10 @@ public class AlertCArea {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCAreaExtension() {
+    public ExtensionType getAlertCAreaExtension() {
         return alertCAreaExtension;
     }
 
@@ -163,10 +164,10 @@ public class AlertCArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCAreaExtension(_ExtensionType value) {
+    public void setAlertCAreaExtension(ExtensionType value) {
         this.alertCAreaExtension = value;
     }
 

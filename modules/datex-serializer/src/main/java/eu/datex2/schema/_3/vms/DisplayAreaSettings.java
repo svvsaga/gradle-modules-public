@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,11 +35,11 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayAreaSettings", propOrder = {
+@XmlType(name = "DisplayAreaSettings", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "isBlank",
     "legallyBinding",
     "legalBasis",
-    "_DisplayAreaSettingsExtension"
+    "displayAreaSettingsExtension"
 })
 @XmlSeeAlso({
     MultiPageDisplay.class,
@@ -49,11 +49,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DisplayAreaSettings {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isBlank;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean legallyBinding;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString legalBasis;
-    @XmlElement(name = "_displayAreaSettingsExtension")
-    protected _ExtensionType _DisplayAreaSettingsExtension;
+    @XmlElement(name = "_displayAreaSettingsExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType displayAreaSettingsExtension;
 
     /**
      * Gets the value of the isBlank property.
@@ -128,27 +131,27 @@ public abstract class DisplayAreaSettings {
     }
 
     /**
-     * Gets the value of the _DisplayAreaSettingsExtension property.
+     * Gets the value of the displayAreaSettingsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DisplayAreaSettingsExtension() {
-        return _DisplayAreaSettingsExtension;
+    public ExtensionType getDisplayAreaSettingsExtension() {
+        return displayAreaSettingsExtension;
     }
 
     /**
-     * Sets the value of the _DisplayAreaSettingsExtension property.
+     * Sets the value of the displayAreaSettingsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DisplayAreaSettingsExtension(_ExtensionType value) {
-        this._DisplayAreaSettingsExtension = value;
+    public void setDisplayAreaSettingsExtension(ExtensionType value) {
+        this.displayAreaSettingsExtension = value;
     }
 
 }

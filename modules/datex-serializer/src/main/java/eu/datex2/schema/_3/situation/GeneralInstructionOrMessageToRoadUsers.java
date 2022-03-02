@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,29 +35,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", propOrder = {
+@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "generalInstructionToRoadUsersType",
     "generalMessageToRoadUsers",
-    "_GeneralInstructionOrMessageToRoadUsersExtension"
+    "generalInstructionOrMessageToRoadUsersExtension"
 })
 public class GeneralInstructionOrMessageToRoadUsers
     extends NetworkManagement
 {
 
-    protected _GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString generalMessageToRoadUsers;
-    @XmlElement(name = "_generalInstructionOrMessageToRoadUsersExtension")
-    protected _ExtensionType _GeneralInstructionOrMessageToRoadUsersExtension;
+    @XmlElement(name = "_generalInstructionOrMessageToRoadUsersExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType generalInstructionOrMessageToRoadUsersExtension;
 
     /**
      * Gets the value of the generalInstructionToRoadUsersType property.
      * 
      * @return
      *     possible object is
-     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public _GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
+    public GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
         return generalInstructionToRoadUsersType;
     }
 
@@ -66,10 +68,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @param value
      *     allowed object is
-     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public void setGeneralInstructionToRoadUsersType(_GeneralInstructionToRoadUsersTypeEnum value) {
+    public void setGeneralInstructionToRoadUsersType(GeneralInstructionToRoadUsersTypeEnum value) {
         this.generalInstructionToRoadUsersType = value;
     }
 
@@ -98,27 +100,27 @@ public class GeneralInstructionOrMessageToRoadUsers
     }
 
     /**
-     * Gets the value of the _GeneralInstructionOrMessageToRoadUsersExtension property.
+     * Gets the value of the generalInstructionOrMessageToRoadUsersExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GeneralInstructionOrMessageToRoadUsersExtension() {
-        return _GeneralInstructionOrMessageToRoadUsersExtension;
+    public ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
+        return generalInstructionOrMessageToRoadUsersExtension;
     }
 
     /**
-     * Sets the value of the _GeneralInstructionOrMessageToRoadUsersExtension property.
+     * Sets the value of the generalInstructionOrMessageToRoadUsersExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GeneralInstructionOrMessageToRoadUsersExtension(_ExtensionType value) {
-        this._GeneralInstructionOrMessageToRoadUsersExtension = value;
+    public void setGeneralInstructionOrMessageToRoadUsersExtension(ExtensionType value) {
+        this.generalInstructionOrMessageToRoadUsersExtension = value;
     }
 
 }

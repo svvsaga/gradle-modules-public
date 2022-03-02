@@ -35,19 +35,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleSpacing", propOrder = {
+@XmlType(name = "AxleSpacing", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "axleSpacing",
     "axleSpacingSequenceIdentifier",
-    "_AxleSpacingExtension"
+    "axleSpacingExtension"
 })
 public class AxleSpacing {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float axleSpacing;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleSpacingSequenceIdentifier;
-    @XmlElement(name = "_axleSpacingExtension")
-    protected _ExtensionType _AxleSpacingExtension;
+    @XmlElement(name = "_axleSpacingExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType axleSpacingExtension;
 
     /**
      * Gets the value of the axleSpacing property.
@@ -90,27 +91,27 @@ public class AxleSpacing {
     }
 
     /**
-     * Gets the value of the _AxleSpacingExtension property.
+     * Gets the value of the axleSpacingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AxleSpacingExtension() {
-        return _AxleSpacingExtension;
+    public ExtensionType getAxleSpacingExtension() {
+        return axleSpacingExtension;
     }
 
     /**
-     * Sets the value of the _AxleSpacingExtension property.
+     * Sets the value of the axleSpacingExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AxleSpacingExtension(_ExtensionType value) {
-        this._AxleSpacingExtension = value;
+    public void setAxleSpacingExtension(ExtensionType value) {
+        this.axleSpacingExtension = value;
     }
 
 }

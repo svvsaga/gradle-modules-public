@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -39,19 +39,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlLineString", propOrder = {
+@XmlType(name = "GmlLineString", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "posList",
-    "_GmlLineStringExtension"
+    "gmlLineStringExtension"
 })
 @XmlSeeAlso({
     GmlLinearRing.class
 })
 public class GmlLineString {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String posList;
-    @XmlElement(name = "_gmlLineStringExtension")
-    protected _ExtensionType _GmlLineStringExtension;
+    @XmlElement(name = "_gmlLineStringExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType gmlLineStringExtension;
     @XmlAttribute(name = "srsDimension")
     protected BigInteger srsDimension;
     @XmlAttribute(name = "srsName")
@@ -82,27 +82,27 @@ public class GmlLineString {
     }
 
     /**
-     * Gets the value of the _GmlLineStringExtension property.
+     * Gets the value of the gmlLineStringExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GmlLineStringExtension() {
-        return _GmlLineStringExtension;
+    public ExtensionType getGmlLineStringExtension() {
+        return gmlLineStringExtension;
     }
 
     /**
-     * Sets the value of the _GmlLineStringExtension property.
+     * Sets the value of the gmlLineStringExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GmlLineStringExtension(_ExtensionType value) {
-        this._GmlLineStringExtension = value;
+    public void setGmlLineStringExtension(ExtensionType value) {
+        this.gmlLineStringExtension = value;
     }
 
     /**

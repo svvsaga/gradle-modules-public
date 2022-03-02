@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -32,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfParkingSites", propOrder = {
+@XmlType(name = "GroupOfParkingSites", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "groupOfParkingSitesType",
     "parkingSiteByReference",
     "parkingSite",
@@ -42,11 +43,15 @@ public class GroupOfParkingSites
     extends ParkingRecord
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected GroupOfParkingSitesTypeEnum groupOfParkingSitesType;
-    protected List<_ParkingRecordVersionedReference> parkingSiteByReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingRecordVersionedReference> parkingSiteByReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingSite> parkingSite;
-    protected _ExtensionType groupOfParkingSitesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType groupOfParkingSitesExtension;
 
     /**
      * Gets the value of the groupOfParkingSitesType property.
@@ -90,13 +95,13 @@ public class GroupOfParkingSites
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingRecordVersionedReference }
+     * {@link ParkingRecordVersionedReference }
      * 
      * 
      */
-    public List<_ParkingRecordVersionedReference> getParkingSiteByReference() {
+    public List<ParkingRecordVersionedReference> getParkingSiteByReference() {
         if (parkingSiteByReference == null) {
-            parkingSiteByReference = new ArrayList<_ParkingRecordVersionedReference>();
+            parkingSiteByReference = new ArrayList<ParkingRecordVersionedReference>();
         }
         return this.parkingSiteByReference;
     }
@@ -135,10 +140,10 @@ public class GroupOfParkingSites
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfParkingSitesExtension() {
+    public ExtensionType getGroupOfParkingSitesExtension() {
         return groupOfParkingSitesExtension;
     }
 
@@ -147,10 +152,10 @@ public class GroupOfParkingSites
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfParkingSitesExtension(_ExtensionType value) {
+    public void setGroupOfParkingSitesExtension(ExtensionType value) {
         this.groupOfParkingSitesExtension = value;
     }
 

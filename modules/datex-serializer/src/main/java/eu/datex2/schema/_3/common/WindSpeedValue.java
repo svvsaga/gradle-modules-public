@@ -30,17 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WindSpeedValue", propOrder = {
+@XmlType(name = "WindSpeedValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "windSpeed",
-    "_WindSpeedValueExtension"
+    "windSpeedValueExtension"
 })
 public class WindSpeedValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float windSpeed;
-    @XmlElement(name = "_windSpeedValueExtension")
-    protected _ExtensionType _WindSpeedValueExtension;
+    @XmlElement(name = "_windSpeedValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType windSpeedValueExtension;
 
     /**
      * Gets the value of the windSpeed property.
@@ -59,27 +60,27 @@ public class WindSpeedValue
     }
 
     /**
-     * Gets the value of the _WindSpeedValueExtension property.
+     * Gets the value of the windSpeedValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_WindSpeedValueExtension() {
-        return _WindSpeedValueExtension;
+    public ExtensionType getWindSpeedValueExtension() {
+        return windSpeedValueExtension;
     }
 
     /**
-     * Sets the value of the _WindSpeedValueExtension property.
+     * Sets the value of the windSpeedValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_WindSpeedValueExtension(_ExtensionType value) {
-        this._WindSpeedValueExtension = value;
+    public void setWindSpeedValueExtension(ExtensionType value) {
+        this.windSpeedValueExtension = value;
     }
 
 }

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OverallPeriod", propOrder = {
+@XmlType(name = "OverallPeriod", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "overallStartTime",
     "overallEndTime",
     "validPeriod",
@@ -44,14 +44,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OverallPeriod {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallStartTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallEndTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Period> validPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Period> exceptionPeriod;
-    protected _ExtensionType overallPeriodExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType overallPeriodExtension;
 
     /**
      * Gets the value of the overallStartTime property.
@@ -164,10 +168,10 @@ public class OverallPeriod {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOverallPeriodExtension() {
+    public ExtensionType getOverallPeriodExtension() {
         return overallPeriodExtension;
     }
 
@@ -176,10 +180,10 @@ public class OverallPeriod {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOverallPeriodExtension(_ExtensionType value) {
+    public void setOverallPeriodExtension(ExtensionType value) {
         this.overallPeriodExtension = value;
     }
 

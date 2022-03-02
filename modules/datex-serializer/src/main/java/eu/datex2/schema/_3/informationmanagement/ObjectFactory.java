@@ -30,11 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _ManagementTypeEnum }
+     * Create an instance of {@link ManagementTypeEnum }
      * 
      */
-    public _ManagementTypeEnum create_ManagementTypeEnum() {
-        return new _ManagementTypeEnum();
+    public ManagementTypeEnum createManagementTypeEnum() {
+        return new ManagementTypeEnum();
     }
 
     /**

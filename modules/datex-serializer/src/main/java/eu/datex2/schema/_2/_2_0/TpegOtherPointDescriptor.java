@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegOtherPointDescriptor", propOrder = {
+@XmlType(name = "TpegOtherPointDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegOtherPointDescriptorType",
     "tpegOtherPointDescriptorExtension"
 })
@@ -37,10 +37,11 @@ public class TpegOtherPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03OtherPointDescriptorSubtypeEnum tpegOtherPointDescriptorType;
-    protected _ExtensionType tpegOtherPointDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegOtherPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegOtherPointDescriptorType property.
@@ -71,10 +72,10 @@ public class TpegOtherPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegOtherPointDescriptorExtension() {
+    public ExtensionType getTpegOtherPointDescriptorExtension() {
         return tpegOtherPointDescriptorExtension;
     }
 
@@ -83,10 +84,10 @@ public class TpegOtherPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegOtherPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegOtherPointDescriptorExtension(ExtensionType value) {
         this.tpegOtherPointDescriptorExtension = value;
     }
 

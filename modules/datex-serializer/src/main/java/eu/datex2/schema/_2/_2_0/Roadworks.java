@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -35,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Roadworks", propOrder = {
+@XmlType(name = "Roadworks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "roadworksDuration",
     "roadworksScale",
     "underTraffic",
@@ -53,16 +54,24 @@ public abstract class Roadworks
     extends OperatorAction
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RoadworksDurationEnum roadworksDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RoadworksScaleEnum roadworksScale;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean underTraffic;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean urgentRoadworks;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Mobility mobility;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Subjects subjects;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MaintenanceVehicles maintenanceVehicles;
-    protected _ExtensionType roadworksExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType roadworksExtension;
 
     /**
      * Gets the value of the roadworksDuration property.
@@ -237,10 +246,10 @@ public abstract class Roadworks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadworksExtension() {
+    public ExtensionType getRoadworksExtension() {
         return roadworksExtension;
     }
 
@@ -249,10 +258,10 @@ public abstract class Roadworks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadworksExtension(_ExtensionType value) {
+    public void setRoadworksExtension(ExtensionType value) {
         this.roadworksExtension = value;
     }
 

@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadNode", propOrder = {
+@XmlType(name = "RoadNode", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "junctionName",
     "roadNodeExtension"
 })
@@ -36,9 +36,10 @@ public class RoadNode
     extends Road
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected MultilingualString junctionName;
-    protected _ExtensionType roadNodeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType roadNodeExtension;
 
     /**
      * Gets the value of the junctionName property.
@@ -69,10 +70,10 @@ public class RoadNode
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadNodeExtension() {
+    public ExtensionType getRoadNodeExtension() {
         return roadNodeExtension;
     }
 
@@ -81,10 +82,10 @@ public class RoadNode
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadNodeExtension(_ExtensionType value) {
+    public void setRoadNodeExtension(ExtensionType value) {
         this.roadNodeExtension = value;
     }
 

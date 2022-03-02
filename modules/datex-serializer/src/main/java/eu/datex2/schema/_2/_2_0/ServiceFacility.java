@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceFacility", propOrder = {
+@XmlType(name = "ServiceFacility", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "serviceFacilityType",
     "numberOfSubitems",
     "distanceFromParkingSite",
@@ -42,14 +42,17 @@ public class ServiceFacility
     extends ParkingEquipmentOrServiceFacility
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ServiceFacilityTypeEnum serviceFacilityType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubitems;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromParkingSite;
-    protected _ExtensionType serviceFacilityExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType serviceFacilityExtension;
 
     /**
      * Gets the value of the serviceFacilityType property.
@@ -128,10 +131,10 @@ public class ServiceFacility
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getServiceFacilityExtension() {
+    public ExtensionType getServiceFacilityExtension() {
         return serviceFacilityExtension;
     }
 
@@ -140,10 +143,10 @@ public class ServiceFacility
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setServiceFacilityExtension(_ExtensionType value) {
+    public void setServiceFacilityExtension(ExtensionType value) {
         this.serviceFacilityExtension = value;
     }
 

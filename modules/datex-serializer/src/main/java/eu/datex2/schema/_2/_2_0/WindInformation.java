@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WindInformation", propOrder = {
+@XmlType(name = "WindInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "wind",
     "windInformationExtension"
 })
@@ -36,9 +36,10 @@ public class WindInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected Wind wind;
-    protected _ExtensionType windInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType windInformationExtension;
 
     /**
      * Gets the value of the wind property.
@@ -69,10 +70,10 @@ public class WindInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWindInformationExtension() {
+    public ExtensionType getWindInformationExtension() {
         return windInformationExtension;
     }
 
@@ -81,10 +82,10 @@ public class WindInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWindInformationExtension(_ExtensionType value) {
+    public void setWindInformationExtension(ExtensionType value) {
         this.windInformationExtension = value;
     }
 

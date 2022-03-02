@@ -31,20 +31,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrGridAttributes", propOrder = {
+@XmlType(name = "OpenlrGridAttributes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrNumColumns",
     "openlrNumRows",
     "openlrGridAttributesExtension"
 })
 public class OpenlrGridAttributes {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNumColumns;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNumRows;
-    protected _ExtensionType openlrGridAttributesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrGridAttributesExtension;
 
     /**
      * Gets the value of the openlrNumColumns property.
@@ -99,10 +100,10 @@ public class OpenlrGridAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrGridAttributesExtension() {
+    public ExtensionType getOpenlrGridAttributesExtension() {
         return openlrGridAttributesExtension;
     }
 
@@ -111,10 +112,10 @@ public class OpenlrGridAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrGridAttributesExtension(_ExtensionType value) {
+    public void setOpenlrGridAttributesExtension(ExtensionType value) {
         this.openlrGridAttributesExtension = value;
     }
 

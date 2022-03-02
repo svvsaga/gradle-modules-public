@@ -6,6 +6,7 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -33,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedItinerary", propOrder = {
+@XmlType(name = "PredefinedItinerary", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "predefinedItineraryName",
     "predefinedLocation",
     "predefinedItineraryExtension"
@@ -42,9 +43,12 @@ public class PredefinedItinerary
     extends PredefinedLocationContainer
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString predefinedItineraryName;
-    protected List<_PredefinedItineraryIndexPredefinedLocation> predefinedLocation;
-    protected _ExtensionType predefinedItineraryExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<PredefinedItineraryIndexPredefinedLocation> predefinedLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType predefinedItineraryExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -92,13 +96,13 @@ public class PredefinedItinerary
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PredefinedItineraryIndexPredefinedLocation }
+     * {@link PredefinedItineraryIndexPredefinedLocation }
      * 
      * 
      */
-    public List<_PredefinedItineraryIndexPredefinedLocation> getPredefinedLocation() {
+    public List<PredefinedItineraryIndexPredefinedLocation> getPredefinedLocation() {
         if (predefinedLocation == null) {
-            predefinedLocation = new ArrayList<_PredefinedItineraryIndexPredefinedLocation>();
+            predefinedLocation = new ArrayList<PredefinedItineraryIndexPredefinedLocation>();
         }
         return this.predefinedLocation;
     }
@@ -108,10 +112,10 @@ public class PredefinedItinerary
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedItineraryExtension() {
+    public ExtensionType getPredefinedItineraryExtension() {
         return predefinedItineraryExtension;
     }
 
@@ -120,10 +124,10 @@ public class PredefinedItinerary
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedItineraryExtension(_ExtensionType value) {
+    public void setPredefinedItineraryExtension(ExtensionType value) {
         this.predefinedItineraryExtension = value;
     }
 

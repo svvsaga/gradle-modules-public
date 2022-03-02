@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,16 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FilterExitManagement", propOrder = {
+@XmlType(name = "FilterExitManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "filterEnd",
     "filterOutOfRange",
     "filterExitManagementExtension"
 })
 public class FilterExitManagement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean filterEnd;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean filterOutOfRange;
-    protected _ExtensionType filterExitManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType filterExitManagementExtension;
 
     /**
      * Gets the value of the filterEnd property.
@@ -76,10 +80,10 @@ public class FilterExitManagement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFilterExitManagementExtension() {
+    public ExtensionType getFilterExitManagementExtension() {
         return filterExitManagementExtension;
     }
 
@@ -88,10 +92,10 @@ public class FilterExitManagement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFilterExitManagementExtension(_ExtensionType value) {
+    public void setFilterExitManagementExtension(ExtensionType value) {
         this.filterExitManagementExtension = value;
     }
 

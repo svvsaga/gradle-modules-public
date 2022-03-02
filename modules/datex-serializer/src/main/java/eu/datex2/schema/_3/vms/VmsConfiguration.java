@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,18 +38,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsConfiguration", propOrder = {
+@XmlType(name = "VmsConfiguration", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "numberOfDisplayAreas",
     "displayArea",
-    "_VmsConfigurationExtension"
+    "vmsConfigurationExtension"
 })
 public class VmsConfiguration {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfDisplayAreas;
-    protected List<_VmsConfigurationDisplayAreaIndexDisplayArea> displayArea;
-    @XmlElement(name = "_vmsConfigurationExtension")
-    protected _ExtensionType _VmsConfigurationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
+    protected List<VmsConfigurationDisplayAreaIndexDisplayArea> displayArea;
+    @XmlElement(name = "_vmsConfigurationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType vmsConfigurationExtension;
 
     /**
      * Gets the value of the numberOfDisplayAreas property.
@@ -93,39 +95,39 @@ public class VmsConfiguration {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsConfigurationDisplayAreaIndexDisplayArea }
+     * {@link VmsConfigurationDisplayAreaIndexDisplayArea }
      * 
      * 
      */
-    public List<_VmsConfigurationDisplayAreaIndexDisplayArea> getDisplayArea() {
+    public List<VmsConfigurationDisplayAreaIndexDisplayArea> getDisplayArea() {
         if (displayArea == null) {
-            displayArea = new ArrayList<_VmsConfigurationDisplayAreaIndexDisplayArea>();
+            displayArea = new ArrayList<VmsConfigurationDisplayAreaIndexDisplayArea>();
         }
         return this.displayArea;
     }
 
     /**
-     * Gets the value of the _VmsConfigurationExtension property.
+     * Gets the value of the vmsConfigurationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VmsConfigurationExtension() {
-        return _VmsConfigurationExtension;
+    public ExtensionType getVmsConfigurationExtension() {
+        return vmsConfigurationExtension;
     }
 
     /**
-     * Sets the value of the _VmsConfigurationExtension property.
+     * Sets the value of the vmsConfigurationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VmsConfigurationExtension(_ExtensionType value) {
-        this._VmsConfigurationExtension = value;
+    public void setVmsConfigurationExtension(ExtensionType value) {
+        this.vmsConfigurationExtension = value;
     }
 
 }

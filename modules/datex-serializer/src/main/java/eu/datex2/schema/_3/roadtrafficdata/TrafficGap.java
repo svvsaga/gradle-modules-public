@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.FloatingPointMetreDistanceValue;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,19 +35,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficGap", propOrder = {
+@XmlType(name = "TrafficGap", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "averageDistanceGap",
     "averageTimeGap",
-    "_TrafficGapExtension"
+    "trafficGapExtension"
 })
 public class TrafficGap
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected FloatingPointMetreDistanceValue averageDistanceGap;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue averageTimeGap;
-    @XmlElement(name = "_trafficGapExtension")
-    protected _ExtensionType _TrafficGapExtension;
+    @XmlElement(name = "_trafficGapExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficGapExtension;
 
     /**
      * Gets the value of the averageDistanceGap property.
@@ -98,27 +100,27 @@ public class TrafficGap
     }
 
     /**
-     * Gets the value of the _TrafficGapExtension property.
+     * Gets the value of the trafficGapExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficGapExtension() {
-        return _TrafficGapExtension;
+    public ExtensionType getTrafficGapExtension() {
+        return trafficGapExtension;
     }
 
     /**
-     * Sets the value of the _TrafficGapExtension property.
+     * Sets the value of the trafficGapExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficGapExtension(_ExtensionType value) {
-        this._TrafficGapExtension = value;
+    public void setTrafficGapExtension(ExtensionType value) {
+        this.trafficGapExtension = value;
     }
 
 }

@@ -35,30 +35,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaderInformation", propOrder = {
+@XmlType(name = "HeaderInformation", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "confidentiality",
     "allowedDeliveryChannel",
     "informationStatus",
-    "_HeaderInformationExtension"
+    "headerInformationExtension"
 })
 public class HeaderInformation {
 
-    protected _ConfidentialityValueEnum confidentiality;
-    protected List<_InformationDeliveryServicesEnum> allowedDeliveryChannel;
-    @XmlElement(required = true)
-    protected _InformationStatusEnum informationStatus;
-    @XmlElement(name = "_headerInformationExtension")
-    protected _ExtensionType _HeaderInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected ConfidentialityValueEnum confidentiality;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected List<InformationDeliveryServicesEnum> allowedDeliveryChannel;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected InformationStatusEnum informationStatus;
+    @XmlElement(name = "_headerInformationExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType headerInformationExtension;
 
     /**
      * Gets the value of the confidentiality property.
      * 
      * @return
      *     possible object is
-     *     {@link _ConfidentialityValueEnum }
+     *     {@link ConfidentialityValueEnum }
      *     
      */
-    public _ConfidentialityValueEnum getConfidentiality() {
+    public ConfidentialityValueEnum getConfidentiality() {
         return confidentiality;
     }
 
@@ -67,10 +69,10 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ConfidentialityValueEnum }
+     *     {@link ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentiality(_ConfidentialityValueEnum value) {
+    public void setConfidentiality(ConfidentialityValueEnum value) {
         this.confidentiality = value;
     }
 
@@ -92,13 +94,13 @@ public class HeaderInformation {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _InformationDeliveryServicesEnum }
+     * {@link InformationDeliveryServicesEnum }
      * 
      * 
      */
-    public List<_InformationDeliveryServicesEnum> getAllowedDeliveryChannel() {
+    public List<InformationDeliveryServicesEnum> getAllowedDeliveryChannel() {
         if (allowedDeliveryChannel == null) {
-            allowedDeliveryChannel = new ArrayList<_InformationDeliveryServicesEnum>();
+            allowedDeliveryChannel = new ArrayList<InformationDeliveryServicesEnum>();
         }
         return this.allowedDeliveryChannel;
     }
@@ -108,10 +110,10 @@ public class HeaderInformation {
      * 
      * @return
      *     possible object is
-     *     {@link _InformationStatusEnum }
+     *     {@link InformationStatusEnum }
      *     
      */
-    public _InformationStatusEnum getInformationStatus() {
+    public InformationStatusEnum getInformationStatus() {
         return informationStatus;
     }
 
@@ -120,35 +122,35 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _InformationStatusEnum }
+     *     {@link InformationStatusEnum }
      *     
      */
-    public void setInformationStatus(_InformationStatusEnum value) {
+    public void setInformationStatus(InformationStatusEnum value) {
         this.informationStatus = value;
     }
 
     /**
-     * Gets the value of the _HeaderInformationExtension property.
+     * Gets the value of the headerInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HeaderInformationExtension() {
-        return _HeaderInformationExtension;
+    public ExtensionType getHeaderInformationExtension() {
+        return headerInformationExtension;
     }
 
     /**
-     * Sets the value of the _HeaderInformationExtension property.
+     * Sets the value of the headerInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HeaderInformationExtension(_ExtensionType value) {
-        this._HeaderInformationExtension = value;
+    public void setHeaderInformationExtension(ExtensionType value) {
+        this.headerInformationExtension = value;
     }
 
 }

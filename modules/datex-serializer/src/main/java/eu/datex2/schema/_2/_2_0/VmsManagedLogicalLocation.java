@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -31,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsManagedLogicalLocation", propOrder = {
+@XmlType(name = "VmsManagedLogicalLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "managedLogicalLocation",
     "distanceFromLogicalLocation",
     "managedLocation",
@@ -39,11 +40,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsManagedLogicalLocation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString managedLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location managedLocation;
-    protected _ExtensionType vmsManagedLogicalLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsManagedLogicalLocationExtension;
 
     /**
      * Gets the value of the managedLogicalLocation property.
@@ -122,10 +127,10 @@ public class VmsManagedLogicalLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsManagedLogicalLocationExtension() {
+    public ExtensionType getVmsManagedLogicalLocationExtension() {
         return vmsManagedLogicalLocationExtension;
     }
 
@@ -134,10 +139,10 @@ public class VmsManagedLogicalLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsManagedLogicalLocationExtension(_ExtensionType value) {
+    public void setVmsManagedLogicalLocationExtension(ExtensionType value) {
         this.vmsManagedLogicalLocationExtension = value;
     }
 

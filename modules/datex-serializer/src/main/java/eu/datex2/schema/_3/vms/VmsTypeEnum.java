@@ -1,119 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for VmsTypeEnum.
+ * <p>Java class for _VmsTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="VmsTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="colourGraphic"/&gt;
- *     &lt;enumeration value="rotatingPrismSign"/&gt;
- *     &lt;enumeration value="monochromeGraphic"/&gt;
- *     &lt;enumeration value="simpleMatrixSign"/&gt;
- *     &lt;enumeration value="fullMatrixSign"/&gt;
- *     &lt;enumeration value="rollerBlindSign"/&gt;
- *     &lt;enumeration value="virtualVms"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_VmsTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;VmsTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "VmsTypeEnum")
-@XmlEnum
-public enum VmsTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_VmsTypeEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class VmsTypeEnum {
 
-
-    /**
-     * A colour graphic display.
-     * 
-     */
-    @XmlEnumValue("colourGraphic")
-    COLOUR_GRAPHIC("colourGraphic"),
-
-    /**
-     * A sign implementing fixed messages which are made visible to drivers by
-     *             electromechanical means e.g. a fixed sign parallel to traffic flow and therefore not legible is
-     *             rotated to be orthogonal to traffic flow and becomes legible.
-     *           
-     * 
-     */
-    @XmlEnumValue("rotatingPrismSign")
-    ROTATING_PRISM_SIGN("rotatingPrismSign"),
+    @XmlValue
+    protected VmsTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * A monochrome graphic display.
+     * Type of variable message sign.
      * 
+     * @return
+     *     possible object is
+     *     {@link VmsTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("monochromeGraphic")
-    MONOCHROME_GRAPHIC("monochromeGraphic"),
-
-    /**
-     * Simple display made up of a fixed matrix of pixels (e.g. sets of LEDs or lights)
-     *             capable of showing a limited set of aspects (or matrix images). The display area is regarded as
-     *             a pictogram area in DATEX II.
-     *           
-     * 
-     */
-    @XmlEnumValue("simpleMatrixSign")
-    SIMPLE_MATRIX_SIGN("simpleMatrixSign"),
-
-    /**
-     * A full-matrix sign.
-     * 
-     */
-    @XmlEnumValue("fullMatrixSign")
-    FULL_MATRIX_SIGN("fullMatrixSign"),
-
-    /**
-     * Continuous sign using a roller blind.
-     * 
-     */
-    @XmlEnumValue("rollerBlindSign")
-    ROLLER_BLIND_SIGN("rollerBlindSign"),
-
-    /**
-     * Not a physical VMS but a conceptual one used in the electronic distribution of
-     *             information
-     *           
-     * 
-     */
-    @XmlEnumValue("virtualVms")
-    VIRTUAL_VMS("virtualVms"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    VmsTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public VmsTypeEnum2 getValue() {
         return value;
     }
 
-    public static VmsTypeEnum fromValue(String v) {
-        for (VmsTypeEnum c: VmsTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VmsTypeEnum2 }
+     *     
+     */
+    public void setValue(VmsTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

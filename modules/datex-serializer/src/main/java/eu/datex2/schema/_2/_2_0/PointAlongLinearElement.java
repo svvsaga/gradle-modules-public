@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointAlongLinearElement", propOrder = {
+@XmlType(name = "PointAlongLinearElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "administrativeAreaOfPoint",
     "directionBoundAtPoint",
     "directionRelativeAtPoint",
@@ -45,18 +45,23 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PointAlongLinearElement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString administrativeAreaOfPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DirectionEnum directionBoundAtPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LinearReferencingDirectionEnum directionRelativeAtPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected HeightGradeEnum heightGradeOfPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected LinearElement linearElement;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected DistanceAlongLinearElement distanceAlongLinearElement;
-    protected _ExtensionType pointAlongLinearElementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType pointAlongLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfPoint property.
@@ -207,10 +212,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointAlongLinearElementExtension() {
+    public ExtensionType getPointAlongLinearElementExtension() {
         return pointAlongLinearElementExtension;
     }
 
@@ -219,10 +224,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointAlongLinearElementExtension(_ExtensionType value) {
+    public void setPointAlongLinearElementExtension(ExtensionType value) {
         this.pointAlongLinearElementExtension = value;
     }
 

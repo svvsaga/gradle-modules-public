@@ -51,10 +51,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DataValue", propOrder = {
+@XmlType(name = "DataValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "dataError",
     "reasonForDataError",
-    "_DataValueExtension"
+    "dataValueExtension"
 })
 @XmlSeeAlso({
     ApplicationRateValue.class,
@@ -82,14 +82,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DataValue {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Boolean dataError;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString reasonForDataError;
-    @XmlElement(name = "_dataValueExtension")
-    protected _ExtensionType _DataValueExtension;
+    @XmlElement(name = "_dataValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType dataValueExtension;
     @XmlAttribute(name = "accuracy")
     protected Float accuracy;
     @XmlAttribute(name = "computationalMethod")
-    protected ComputationMethodEnum computationalMethod;
+    protected ComputationMethodEnum2 computationalMethod;
     @XmlAttribute(name = "numberOfIncompleteInputs")
     protected BigInteger numberOfIncompleteInputs;
     @XmlAttribute(name = "numberOfInputValuesUsed")
@@ -150,27 +152,27 @@ public abstract class DataValue {
     }
 
     /**
-     * Gets the value of the _DataValueExtension property.
+     * Gets the value of the dataValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DataValueExtension() {
-        return _DataValueExtension;
+    public ExtensionType getDataValueExtension() {
+        return dataValueExtension;
     }
 
     /**
-     * Sets the value of the _DataValueExtension property.
+     * Sets the value of the dataValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DataValueExtension(_ExtensionType value) {
-        this._DataValueExtension = value;
+    public void setDataValueExtension(ExtensionType value) {
+        this.dataValueExtension = value;
     }
 
     /**
@@ -202,10 +204,10 @@ public abstract class DataValue {
      * 
      * @return
      *     possible object is
-     *     {@link ComputationMethodEnum }
+     *     {@link ComputationMethodEnum2 }
      *     
      */
-    public ComputationMethodEnum getComputationalMethod() {
+    public ComputationMethodEnum2 getComputationalMethod() {
         return computationalMethod;
     }
 
@@ -214,10 +216,10 @@ public abstract class DataValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComputationMethodEnum }
+     *     {@link ComputationMethodEnum2 }
      *     
      */
-    public void setComputationalMethod(ComputationMethodEnum value) {
+    public void setComputationalMethod(ComputationMethodEnum2 value) {
         this.computationalMethod = value;
     }
 

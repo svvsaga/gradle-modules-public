@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrBasePointLocation", propOrder = {
+@XmlType(name = "OpenlrBasePointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
     "openlrPositiveOffset",
@@ -49,19 +49,21 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class OpenlrBasePointLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrSideOfRoadEnum openlrSideOfRoad;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrOrientationEnum openlrOrientation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrPositiveOffset;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLocationReferencePoint openlrLocationReferencePoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
-    protected _ExtensionType openlrBasePointLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrBasePointLocationExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
@@ -188,10 +190,10 @@ public abstract class OpenlrBasePointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrBasePointLocationExtension() {
+    public ExtensionType getOpenlrBasePointLocationExtension() {
         return openlrBasePointLocationExtension;
     }
 
@@ -200,10 +202,10 @@ public abstract class OpenlrBasePointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrBasePointLocationExtension(_ExtensionType value) {
+    public void setOpenlrBasePointLocationExtension(ExtensionType value) {
         this.openlrBasePointLocationExtension = value;
     }
 

@@ -4,7 +4,7 @@ package eu.datex2.schema._3.situation;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,18 +36,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MaintenanceVehicles", propOrder = {
+@XmlType(name = "MaintenanceVehicles", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "numberOfMaintenanceVehicles",
     "maintenanceVehicleActions",
-    "_MaintenanceVehiclesExtension"
+    "maintenanceVehiclesExtension"
 })
 public class MaintenanceVehicles {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfMaintenanceVehicles;
-    protected List<_MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
-    @XmlElement(name = "_maintenanceVehiclesExtension")
-    protected _ExtensionType _MaintenanceVehiclesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected List<MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
+    @XmlElement(name = "_maintenanceVehiclesExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType maintenanceVehiclesExtension;
 
     /**
      * Gets the value of the numberOfMaintenanceVehicles property.
@@ -91,39 +93,39 @@ public class MaintenanceVehicles {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MaintenanceVehicleActionsEnum }
+     * {@link MaintenanceVehicleActionsEnum }
      * 
      * 
      */
-    public List<_MaintenanceVehicleActionsEnum> getMaintenanceVehicleActions() {
+    public List<MaintenanceVehicleActionsEnum> getMaintenanceVehicleActions() {
         if (maintenanceVehicleActions == null) {
-            maintenanceVehicleActions = new ArrayList<_MaintenanceVehicleActionsEnum>();
+            maintenanceVehicleActions = new ArrayList<MaintenanceVehicleActionsEnum>();
         }
         return this.maintenanceVehicleActions;
     }
 
     /**
-     * Gets the value of the _MaintenanceVehiclesExtension property.
+     * Gets the value of the maintenanceVehiclesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MaintenanceVehiclesExtension() {
-        return _MaintenanceVehiclesExtension;
+    public ExtensionType getMaintenanceVehiclesExtension() {
+        return maintenanceVehiclesExtension;
     }
 
     /**
-     * Sets the value of the _MaintenanceVehiclesExtension property.
+     * Sets the value of the maintenanceVehiclesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MaintenanceVehiclesExtension(_ExtensionType value) {
-        this._MaintenanceVehiclesExtension = value;
+    public void setMaintenanceVehiclesExtension(ExtensionType value) {
+        this.maintenanceVehiclesExtension = value;
     }
 
 }

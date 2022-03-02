@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegDescriptor", propOrder = {
+@XmlType(name = "TpegDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "descriptor",
     "tpegDescriptorExtension"
 })
@@ -39,9 +39,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegDescriptor {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected MultilingualString descriptor;
-    protected _ExtensionType tpegDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegDescriptorExtension;
 
     /**
      * Gets the value of the descriptor property.
@@ -72,10 +73,10 @@ public abstract class TpegDescriptor {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegDescriptorExtension() {
+    public ExtensionType getTpegDescriptorExtension() {
         return tpegDescriptorExtension;
     }
 
@@ -84,10 +85,10 @@ public abstract class TpegDescriptor {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegDescriptorExtension(_ExtensionType value) {
+    public void setTpegDescriptorExtension(ExtensionType value) {
         this.tpegDescriptorExtension = value;
     }
 

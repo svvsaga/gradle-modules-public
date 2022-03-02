@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.situation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,21 +38,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Comment", propOrder = {
+@XmlType(name = "Comment", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "comment",
     "commentDateTime",
     "commentType",
-    "_CommentExtension"
+    "commentExtension"
 })
 public class Comment {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
     protected MultilingualString comment;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar commentDateTime;
-    protected _CommentTypeEnum commentType;
-    @XmlElement(name = "_commentExtension")
-    protected _ExtensionType _CommentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected CommentTypeEnum commentType;
+    @XmlElement(name = "_commentExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType commentExtension;
 
     /**
      * Gets the value of the comment property.
@@ -107,10 +109,10 @@ public class Comment {
      * 
      * @return
      *     possible object is
-     *     {@link _CommentTypeEnum }
+     *     {@link CommentTypeEnum }
      *     
      */
-    public _CommentTypeEnum getCommentType() {
+    public CommentTypeEnum getCommentType() {
         return commentType;
     }
 
@@ -119,35 +121,35 @@ public class Comment {
      * 
      * @param value
      *     allowed object is
-     *     {@link _CommentTypeEnum }
+     *     {@link CommentTypeEnum }
      *     
      */
-    public void setCommentType(_CommentTypeEnum value) {
+    public void setCommentType(CommentTypeEnum value) {
         this.commentType = value;
     }
 
     /**
-     * Gets the value of the _CommentExtension property.
+     * Gets the value of the commentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_CommentExtension() {
-        return _CommentExtension;
+    public ExtensionType getCommentExtension() {
+        return commentExtension;
     }
 
     /**
-     * Sets the value of the _CommentExtension property.
+     * Sets the value of the commentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_CommentExtension(_ExtensionType value) {
-        this._CommentExtension = value;
+    public void setCommentExtension(ExtensionType value) {
+        this.commentExtension = value;
     }
 
 }

@@ -30,14 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingVehiclesPublication", propOrder = {
+@XmlType(name = "ParkingVehiclesPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingTableReference",
     "parkingVehicle"
 })
 public class ParkingVehiclesPublication {
 
-    protected List<_ParkingTableVersionedReference> parkingTableReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<ParkingTableVersionedReference> parkingTableReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<ParkingVehicle> parkingVehicle;
 
     /**
@@ -58,13 +59,13 @@ public class ParkingVehiclesPublication {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ParkingTableVersionedReference }
+     * {@link ParkingTableVersionedReference }
      * 
      * 
      */
-    public List<_ParkingTableVersionedReference> getParkingTableReference() {
+    public List<ParkingTableVersionedReference> getParkingTableReference() {
         if (parkingTableReference == null) {
-            parkingTableReference = new ArrayList<_ParkingTableVersionedReference>();
+            parkingTableReference = new ArrayList<ParkingTableVersionedReference>();
         }
         return this.parkingTableReference;
     }

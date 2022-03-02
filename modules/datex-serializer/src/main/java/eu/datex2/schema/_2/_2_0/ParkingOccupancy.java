@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -43,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingOccupancy", propOrder = {
+@XmlType(name = "ParkingOccupancy", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingNumberOfSpacesOverride",
     "parkingNumberOfVacantSpaces",
     "parkingNumberOfVacantSpacesLowerThan",
@@ -63,28 +64,41 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingOccupancy {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfSpacesOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfVacantSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfVacantSpacesLowerThan;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfVacantSpacesHigherThan;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingVacantSpacesEnum parkingNumberOfVacantSpacesGraded;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfOccupiedSpaces;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float parkingOccupancy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingOccupancyEnum parkingOccupancyGraded;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingOccupancyTrendEnum parkingOccupancyTrend;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean parkingNotAllowed;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCountAndRate> vehicleCountAndRate;
-    protected _ExtensionType parkingOccupancyExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingOccupancyExtension;
 
     /**
      * Gets the value of the parkingNumberOfSpacesOverride property.
@@ -384,10 +398,10 @@ public class ParkingOccupancy {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingOccupancyExtension() {
+    public ExtensionType getParkingOccupancyExtension() {
         return parkingOccupancyExtension;
     }
 
@@ -396,10 +410,10 @@ public class ParkingOccupancy {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingOccupancyExtension(_ExtensionType value) {
+    public void setParkingOccupancyExtension(ExtensionType value) {
         this.parkingOccupancyExtension = value;
     }
 

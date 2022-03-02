@@ -4,8 +4,8 @@ package eu.datex2.schema._3.locationreferencing;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPositionalDescription", propOrder = {
+@XmlType(name = "SupplementaryPositionalDescription", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "directionPurpose",
     "geographicDescriptor",
     "infrastructureDescriptor",
@@ -60,23 +60,33 @@ import jakarta.xml.bind.annotation.XmlType;
     "carriageway",
     "namedArea",
     "roadInformation",
-    "_SupplementaryPositionalDescriptionExtension"
+    "supplementaryPositionalDescriptionExtension"
 })
 public class SupplementaryPositionalDescription {
 
-    protected _DirectionPurposeEnum directionPurpose;
-    protected _GeographicCharacteristicEnum geographicDescriptor;
-    protected _InfrastructureDescriptorEnum infrastructureDescriptor;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected DirectionPurposeEnum directionPurpose;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected GeographicCharacteristicEnum geographicDescriptor;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected InfrastructureDescriptorEnum infrastructureDescriptor;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float lengthAffected;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString locationDescription;
-    protected _RelativePositionOnCarriagewayEnum positionOnCarriageway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected RelativePositionOnCarriagewayEnum positionOnCarriageway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequentialRampNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<Carriageway> carriageway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected NamedArea namedArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<RoadInformation> roadInformation;
-    @XmlElement(name = "_supplementaryPositionalDescriptionExtension")
-    protected _ExtensionType _SupplementaryPositionalDescriptionExtension;
+    @XmlElement(name = "_supplementaryPositionalDescriptionExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType supplementaryPositionalDescriptionExtension;
     @XmlAttribute(name = "locationPrecision")
     protected BigInteger locationPrecision;
 
@@ -85,10 +95,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionPurposeEnum }
+     *     {@link DirectionPurposeEnum }
      *     
      */
-    public _DirectionPurposeEnum getDirectionPurpose() {
+    public DirectionPurposeEnum getDirectionPurpose() {
         return directionPurpose;
     }
 
@@ -97,10 +107,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionPurposeEnum }
+     *     {@link DirectionPurposeEnum }
      *     
      */
-    public void setDirectionPurpose(_DirectionPurposeEnum value) {
+    public void setDirectionPurpose(DirectionPurposeEnum value) {
         this.directionPurpose = value;
     }
 
@@ -109,10 +119,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link _GeographicCharacteristicEnum }
+     *     {@link GeographicCharacteristicEnum }
      *     
      */
-    public _GeographicCharacteristicEnum getGeographicDescriptor() {
+    public GeographicCharacteristicEnum getGeographicDescriptor() {
         return geographicDescriptor;
     }
 
@@ -121,10 +131,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link _GeographicCharacteristicEnum }
+     *     {@link GeographicCharacteristicEnum }
      *     
      */
-    public void setGeographicDescriptor(_GeographicCharacteristicEnum value) {
+    public void setGeographicDescriptor(GeographicCharacteristicEnum value) {
         this.geographicDescriptor = value;
     }
 
@@ -133,10 +143,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link _InfrastructureDescriptorEnum }
+     *     {@link InfrastructureDescriptorEnum }
      *     
      */
-    public _InfrastructureDescriptorEnum getInfrastructureDescriptor() {
+    public InfrastructureDescriptorEnum getInfrastructureDescriptor() {
         return infrastructureDescriptor;
     }
 
@@ -145,10 +155,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link _InfrastructureDescriptorEnum }
+     *     {@link InfrastructureDescriptorEnum }
      *     
      */
-    public void setInfrastructureDescriptor(_InfrastructureDescriptorEnum value) {
+    public void setInfrastructureDescriptor(InfrastructureDescriptorEnum value) {
         this.infrastructureDescriptor = value;
     }
 
@@ -205,10 +215,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link _RelativePositionOnCarriagewayEnum }
+     *     {@link RelativePositionOnCarriagewayEnum }
      *     
      */
-    public _RelativePositionOnCarriagewayEnum getPositionOnCarriageway() {
+    public RelativePositionOnCarriagewayEnum getPositionOnCarriageway() {
         return positionOnCarriageway;
     }
 
@@ -217,10 +227,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link _RelativePositionOnCarriagewayEnum }
+     *     {@link RelativePositionOnCarriagewayEnum }
      *     
      */
-    public void setPositionOnCarriageway(_RelativePositionOnCarriagewayEnum value) {
+    public void setPositionOnCarriageway(RelativePositionOnCarriagewayEnum value) {
         this.positionOnCarriageway = value;
     }
 
@@ -331,27 +341,27 @@ public class SupplementaryPositionalDescription {
     }
 
     /**
-     * Gets the value of the _SupplementaryPositionalDescriptionExtension property.
+     * Gets the value of the supplementaryPositionalDescriptionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SupplementaryPositionalDescriptionExtension() {
-        return _SupplementaryPositionalDescriptionExtension;
+    public ExtensionType getSupplementaryPositionalDescriptionExtension() {
+        return supplementaryPositionalDescriptionExtension;
     }
 
     /**
-     * Sets the value of the _SupplementaryPositionalDescriptionExtension property.
+     * Sets the value of the supplementaryPositionalDescriptionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SupplementaryPositionalDescriptionExtension(_ExtensionType value) {
-        this._SupplementaryPositionalDescriptionExtension = value;
+    public void setSupplementaryPositionalDescriptionExtension(ExtensionType value) {
+        this.supplementaryPositionalDescriptionExtension = value;
     }
 
     /**

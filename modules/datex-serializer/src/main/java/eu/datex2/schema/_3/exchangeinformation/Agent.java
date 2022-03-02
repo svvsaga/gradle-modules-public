@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,23 +34,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Agent", propOrder = {
+@XmlType(name = "Agent", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "address",
     "name",
     "referenceID",
     "serviceURL",
     "internationalIdentifier",
-    "_AgentExtension"
+    "agentExtension"
 })
 public class Agent {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String address;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String name;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String referenceID;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String serviceURL;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected InternationalIdentifier internationalIdentifier;
-    @XmlElement(name = "_agentExtension")
-    protected _ExtensionType _AgentExtension;
+    @XmlElement(name = "_agentExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType agentExtension;
 
     /**
      * Gets the value of the address property.
@@ -173,27 +178,27 @@ public class Agent {
     }
 
     /**
-     * Gets the value of the _AgentExtension property.
+     * Gets the value of the agentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AgentExtension() {
-        return _AgentExtension;
+    public ExtensionType getAgentExtension() {
+        return agentExtension;
     }
 
     /**
-     * Sets the value of the _AgentExtension property.
+     * Sets the value of the agentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AgentExtension(_ExtensionType value) {
-        this._AgentExtension = value;
+    public void setAgentExtension(ExtensionType value) {
+        this.agentExtension = value;
     }
 
 }

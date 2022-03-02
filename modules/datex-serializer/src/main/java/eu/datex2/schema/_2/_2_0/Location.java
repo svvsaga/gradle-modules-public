@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -31,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Location", propOrder = {
+@XmlType(name = "Location", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "externalReferencing",
     "locationForDisplay",
     "locationExtension"
@@ -45,9 +46,12 @@ public abstract class Location
     extends GroupOfLocations
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ExternalReferencing> externalReferencing;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointCoordinates locationForDisplay;
-    protected _ExtensionType locationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType locationExtension;
 
     /**
      * Gets the value of the externalReferencing property.
@@ -107,10 +111,10 @@ public abstract class Location
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLocationExtension() {
+    public ExtensionType getLocationExtension() {
         return locationExtension;
     }
 
@@ -119,10 +123,10 @@ public abstract class Location
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLocationExtension(_ExtensionType value) {
+    public void setLocationExtension(ExtensionType value) {
         this.locationExtension = value;
     }
 

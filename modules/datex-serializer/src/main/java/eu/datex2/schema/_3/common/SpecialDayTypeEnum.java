@@ -1,123 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for SpecialDayTypeEnum.
+ * <p>Java class for _SpecialDayTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="SpecialDayTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="dayBeforePublicHoliday"/&gt;
- *     &lt;enumeration value="publicHoliday"/&gt;
- *     &lt;enumeration value="dayFollowingPublicHoliday"/&gt;
- *     &lt;enumeration value="longWeekendDay"/&gt;
- *     &lt;enumeration value="inLieuOfPublicHoliday"/&gt;
- *     &lt;enumeration value="schoolDay"/&gt;
- *     &lt;enumeration value="schoolHolidays"/&gt;
- *     &lt;enumeration value="publicEventDay"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_SpecialDayTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;SpecialDayTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "SpecialDayTypeEnum")
-@XmlEnum
-public enum SpecialDayTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_SpecialDayTypeEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class SpecialDayTypeEnum {
 
-
-    /**
-     * The day preceding a public holiday.
-     * 
-     */
-    @XmlEnumValue("dayBeforePublicHoliday")
-    DAY_BEFORE_PUBLIC_HOLIDAY("dayBeforePublicHoliday"),
-
-    /**
-     * A public holiday in general. You may use the PublicHoliday class to refer on a
-     *             specific public holiday.
-     *           
-     * 
-     */
-    @XmlEnumValue("publicHoliday")
-    PUBLIC_HOLIDAY("publicHoliday"),
+    @XmlValue
+    protected SpecialDayTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * A day following a public holiday.
+     * Collection of special types of days.
      * 
+     * @return
+     *     possible object is
+     *     {@link SpecialDayTypeEnum2 }
+     *     
      */
-    @XmlEnumValue("dayFollowingPublicHoliday")
-    DAY_FOLLOWING_PUBLIC_HOLIDAY("dayFollowingPublicHoliday"),
-
-    /**
-     * A day between a public holiday and the weekend.
-     * 
-     */
-    @XmlEnumValue("longWeekendDay")
-    LONG_WEEKEND_DAY("longWeekendDay"),
-
-    /**
-     * A holiday in lieu of a public holiday that falls on a weekend.
-     * 
-     */
-    @XmlEnumValue("inLieuOfPublicHoliday")
-    IN_LIEU_OF_PUBLIC_HOLIDAY("inLieuOfPublicHoliday"),
-
-    /**
-     * A school day.
-     * 
-     */
-    @XmlEnumValue("schoolDay")
-    SCHOOL_DAY("schoolDay"),
-
-    /**
-     * A day within the school holidays.
-     * 
-     */
-    @XmlEnumValue("schoolHolidays")
-    SCHOOL_HOLIDAYS("schoolHolidays"),
-
-    /**
-     * A day of a public event. You may use the publicEvent attribute to specify the
-     *             corresponding event.
-     *           
-     * 
-     */
-    @XmlEnumValue("publicEventDay")
-    PUBLIC_EVENT_DAY("publicEventDay"),
-
-    /**
-     * Some other special day.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    SpecialDayTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public SpecialDayTypeEnum2 getValue() {
         return value;
     }
 
-    public static SpecialDayTypeEnum fromValue(String v) {
-        for (SpecialDayTypeEnum c: SpecialDayTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SpecialDayTypeEnum2 }
+     *     
+     */
+    public void setValue(SpecialDayTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

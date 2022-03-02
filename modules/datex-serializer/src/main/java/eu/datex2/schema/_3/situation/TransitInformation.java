@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.situation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,30 +42,34 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TransitInformation", propOrder = {
+@XmlType(name = "TransitInformation", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "journeyDestination",
     "journeyOrigin",
     "journeyReference",
     "transitServiceInformation",
     "transitServiceType",
     "scheduledDepartureTime",
-    "_TransitInformationExtension"
+    "transitInformationExtension"
 })
 public class TransitInformation
     extends ServiceInformation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString journeyDestination;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString journeyOrigin;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String journeyReference;
-    @XmlElement(required = true)
-    protected _TransitServiceInformationEnum transitServiceInformation;
-    @XmlElement(required = true)
-    protected _TransitServiceTypeEnum transitServiceType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected TransitServiceInformationEnum transitServiceInformation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected TransitServiceTypeEnum transitServiceType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar scheduledDepartureTime;
-    @XmlElement(name = "_transitInformationExtension")
-    protected _ExtensionType _TransitInformationExtension;
+    @XmlElement(name = "_transitInformationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType transitInformationExtension;
 
     /**
      * Gets the value of the journeyDestination property.
@@ -144,10 +148,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link _TransitServiceInformationEnum }
+     *     {@link TransitServiceInformationEnum }
      *     
      */
-    public _TransitServiceInformationEnum getTransitServiceInformation() {
+    public TransitServiceInformationEnum getTransitServiceInformation() {
         return transitServiceInformation;
     }
 
@@ -156,10 +160,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _TransitServiceInformationEnum }
+     *     {@link TransitServiceInformationEnum }
      *     
      */
-    public void setTransitServiceInformation(_TransitServiceInformationEnum value) {
+    public void setTransitServiceInformation(TransitServiceInformationEnum value) {
         this.transitServiceInformation = value;
     }
 
@@ -168,10 +172,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link _TransitServiceTypeEnum }
+     *     {@link TransitServiceTypeEnum }
      *     
      */
-    public _TransitServiceTypeEnum getTransitServiceType() {
+    public TransitServiceTypeEnum getTransitServiceType() {
         return transitServiceType;
     }
 
@@ -180,10 +184,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _TransitServiceTypeEnum }
+     *     {@link TransitServiceTypeEnum }
      *     
      */
-    public void setTransitServiceType(_TransitServiceTypeEnum value) {
+    public void setTransitServiceType(TransitServiceTypeEnum value) {
         this.transitServiceType = value;
     }
 
@@ -212,27 +216,27 @@ public class TransitInformation
     }
 
     /**
-     * Gets the value of the _TransitInformationExtension property.
+     * Gets the value of the transitInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TransitInformationExtension() {
-        return _TransitInformationExtension;
+    public ExtensionType getTransitInformationExtension() {
+        return transitInformationExtension;
     }
 
     /**
-     * Sets the value of the _TransitInformationExtension property.
+     * Sets the value of the transitInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TransitInformationExtension(_ExtensionType value) {
-        this._TransitInformationExtension = value;
+    public void setTransitInformationExtension(ExtensionType value) {
+        this.transitInformationExtension = value;
     }
 
 }

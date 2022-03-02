@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralObstruction", propOrder = {
+@XmlType(name = "GeneralObstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "obstructionType",
     "groupOfPeopleInvolved",
     "generalObstructionExtension"
@@ -41,11 +41,13 @@ public class GeneralObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<ObstructionTypeEnum> obstructionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    protected _ExtensionType generalObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType generalObstructionExtension;
 
     /**
      * Gets the value of the obstructionType property.
@@ -110,10 +112,10 @@ public class GeneralObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGeneralObstructionExtension() {
+    public ExtensionType getGeneralObstructionExtension() {
         return generalObstructionExtension;
     }
 
@@ -122,10 +124,10 @@ public class GeneralObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGeneralObstructionExtension(_ExtensionType value) {
+    public void setGeneralObstructionExtension(ExtensionType value) {
         this.generalObstructionExtension = value;
     }
 

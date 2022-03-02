@@ -29,18 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedPercentile", propOrder = {
+@XmlType(name = "SpeedPercentile", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vehiclePercentage",
     "speedPercentile",
     "speedPercentileExtension"
 })
 public class SpeedPercentile {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PercentageValue vehiclePercentage;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected SpeedValue speedPercentile;
-    protected _ExtensionType speedPercentileExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType speedPercentileExtension;
 
     /**
      * Gets the value of the vehiclePercentage property.
@@ -95,10 +96,10 @@ public class SpeedPercentile {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSpeedPercentileExtension() {
+    public ExtensionType getSpeedPercentileExtension() {
         return speedPercentileExtension;
     }
 
@@ -107,10 +108,10 @@ public class SpeedPercentile {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSpeedPercentileExtension(_ExtensionType value) {
+    public void setSpeedPercentileExtension(ExtensionType value) {
         this.speedPercentileExtension = value;
     }
 

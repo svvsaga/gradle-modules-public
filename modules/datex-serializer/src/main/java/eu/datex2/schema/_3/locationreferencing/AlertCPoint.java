@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,11 +36,11 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCPoint", propOrder = {
+@XmlType(name = "AlertCPoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
-    "_AlertCPointExtension"
+    "alertCPointExtension"
 })
 @XmlSeeAlso({
     AlertCMethod2Point.class,
@@ -48,14 +48,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class AlertCPoint {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(name = "_alertCPointExtension")
-    protected _ExtensionType _AlertCPointExtension;
+    @XmlElement(name = "_alertCPointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCPointExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -130,27 +130,27 @@ public abstract class AlertCPoint {
     }
 
     /**
-     * Gets the value of the _AlertCPointExtension property.
+     * Gets the value of the alertCPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCPointExtension() {
-        return _AlertCPointExtension;
+    public ExtensionType getAlertCPointExtension() {
+        return alertCPointExtension;
     }
 
     /**
-     * Sets the value of the _AlertCPointExtension property.
+     * Sets the value of the alertCPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCPointExtension(_ExtensionType value) {
-        this._AlertCPointExtension = value;
+    public void setAlertCPointExtension(ExtensionType value) {
+        this.alertCPointExtension = value;
     }
 
 }

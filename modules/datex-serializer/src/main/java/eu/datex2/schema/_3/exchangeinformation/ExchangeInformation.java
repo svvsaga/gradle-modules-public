@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -37,21 +37,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExchangeInformation", propOrder = {
+@XmlType(name = "ExchangeInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "messageType",
     "exchangeContext",
     "dynamicInformation",
-    "_ExchangeInformationExtension"
+    "exchangeInformationExtension"
 })
 public class ExchangeInformation {
 
-    protected _MessageTypeEnum messageType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected MessageTypeEnum messageType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     protected ExchangeContext exchangeContext;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
     protected DynamicInformation dynamicInformation;
-    @XmlElement(name = "_exchangeInformationExtension")
-    protected _ExtensionType _ExchangeInformationExtension;
+    @XmlElement(name = "_exchangeInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType exchangeInformationExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;
     @XmlAttribute(name = "extensionName")
@@ -68,10 +69,10 @@ public class ExchangeInformation {
      * 
      * @return
      *     possible object is
-     *     {@link _MessageTypeEnum }
+     *     {@link MessageTypeEnum }
      *     
      */
-    public _MessageTypeEnum getMessageType() {
+    public MessageTypeEnum getMessageType() {
         return messageType;
     }
 
@@ -80,10 +81,10 @@ public class ExchangeInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MessageTypeEnum }
+     *     {@link MessageTypeEnum }
      *     
      */
-    public void setMessageType(_MessageTypeEnum value) {
+    public void setMessageType(MessageTypeEnum value) {
         this.messageType = value;
     }
 
@@ -136,27 +137,27 @@ public class ExchangeInformation {
     }
 
     /**
-     * Gets the value of the _ExchangeInformationExtension property.
+     * Gets the value of the exchangeInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ExchangeInformationExtension() {
-        return _ExchangeInformationExtension;
+    public ExtensionType getExchangeInformationExtension() {
+        return exchangeInformationExtension;
     }
 
     /**
-     * Sets the value of the _ExchangeInformationExtension property.
+     * Sets the value of the exchangeInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ExchangeInformationExtension(_ExtensionType value) {
-        this._ExchangeInformationExtension = value;
+    public void setExchangeInformationExtension(ExtensionType value) {
+        this.exchangeInformationExtension = value;
     }
 
     /**

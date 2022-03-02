@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,9 +34,9 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegPointLocation", propOrder = {
+@XmlType(name = "TpegPointLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "tpegDirection",
-    "_TpegPointLocationExtension"
+    "tpegPointLocationExtension"
 })
 @XmlSeeAlso({
     TpegFramedPoint.class,
@@ -44,20 +44,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegPointLocation {
 
-    @XmlElement(required = true)
-    protected _DirectionEnum tpegDirection;
-    @XmlElement(name = "_tpegPointLocationExtension")
-    protected _ExtensionType _TpegPointLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected DirectionEnum tpegDirection;
+    @XmlElement(name = "_tpegPointLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegPointLocationExtension;
 
     /**
      * Gets the value of the tpegDirection property.
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public _DirectionEnum getTpegDirection() {
+    public DirectionEnum getTpegDirection() {
         return tpegDirection;
     }
 
@@ -66,35 +66,35 @@ public abstract class TpegPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public void setTpegDirection(_DirectionEnum value) {
+    public void setTpegDirection(DirectionEnum value) {
         this.tpegDirection = value;
     }
 
     /**
-     * Gets the value of the _TpegPointLocationExtension property.
+     * Gets the value of the tpegPointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegPointLocationExtension() {
-        return _TpegPointLocationExtension;
+    public ExtensionType getTpegPointLocationExtension() {
+        return tpegPointLocationExtension;
     }
 
     /**
-     * Sets the value of the _TpegPointLocationExtension property.
+     * Sets the value of the tpegPointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegPointLocationExtension(_ExtensionType value) {
-        this._TpegPointLocationExtension = value;
+    public void setTpegPointLocationExtension(ExtensionType value) {
+        this.tpegPointLocationExtension = value;
     }
 
 }

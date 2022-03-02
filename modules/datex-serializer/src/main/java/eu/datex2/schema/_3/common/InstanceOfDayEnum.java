@@ -1,97 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for InstanceOfDayEnum.
+ * <p>Java class for _InstanceOfDayEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="InstanceOfDayEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="firstInstance"/&gt;
- *     &lt;enumeration value="secondInstance"/&gt;
- *     &lt;enumeration value="thirdInstance"/&gt;
- *     &lt;enumeration value="fourthInstance"/&gt;
- *     &lt;enumeration value="fifthInstance"/&gt;
- *     &lt;enumeration value="lastInstance"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_InstanceOfDayEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;InstanceOfDayEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "InstanceOfDayEnum")
-@XmlEnum
-public enum InstanceOfDayEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_InstanceOfDayEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class InstanceOfDayEnum {
 
-
-    /**
-     * First instance of specified day of week in month.
-     * 
-     */
-    @XmlEnumValue("firstInstance")
-    FIRST_INSTANCE("firstInstance"),
-
-    /**
-     * Second instance of specified day of week in month.
-     * 
-     */
-    @XmlEnumValue("secondInstance")
-    SECOND_INSTANCE("secondInstance"),
+    @XmlValue
+    protected InstanceOfDayEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Third instance of specified day of week in month.
+     * Instances of a day of the week in a month
      * 
+     * @return
+     *     possible object is
+     *     {@link InstanceOfDayEnum2 }
+     *     
      */
-    @XmlEnumValue("thirdInstance")
-    THIRD_INSTANCE("thirdInstance"),
-
-    /**
-     * Fourth instance of specified day of week in month.
-     * 
-     */
-    @XmlEnumValue("fourthInstance")
-    FOURTH_INSTANCE("fourthInstance"),
-
-    /**
-     * Fifth instance of specified day of week in month.
-     * 
-     */
-    @XmlEnumValue("fifthInstance")
-    FIFTH_INSTANCE("fifthInstance"),
-
-    /**
-     * Last instance of specified day of week in month (regardless its actual instance
-     *             number).
-     *           
-     * 
-     */
-    @XmlEnumValue("lastInstance")
-    LAST_INSTANCE("lastInstance"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    InstanceOfDayEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public InstanceOfDayEnum2 getValue() {
         return value;
     }
 
-    public static InstanceOfDayEnum fromValue(String v) {
-        for (InstanceOfDayEnum c: InstanceOfDayEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InstanceOfDayEnum2 }
+     *     
+     */
+    public void setValue(InstanceOfDayEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -32,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfPeopleInvolved", propOrder = {
+@XmlType(name = "GroupOfPeopleInvolved", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfPeople",
     "injuryStatus",
     "involvementRole",
@@ -41,15 +42,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GroupOfPeopleInvolved {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPeople;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected InjuryStatusTypeEnum injuryStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected InvolvementRolesEnum involvementRole;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PersonCategoryEnum categoryOfPeopleInvolved;
-    protected _ExtensionType groupOfPeopleInvolvedExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType groupOfPeopleInvolvedExtension;
 
     /**
      * Gets the value of the numberOfPeople property.
@@ -152,10 +158,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfPeopleInvolvedExtension() {
+    public ExtensionType getGroupOfPeopleInvolvedExtension() {
         return groupOfPeopleInvolvedExtension;
     }
 
@@ -164,10 +170,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfPeopleInvolvedExtension(_ExtensionType value) {
+    public void setGroupOfPeopleInvolvedExtension(ExtensionType value) {
         this.groupOfPeopleInvolvedExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,19 +33,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadInformation", propOrder = {
+@XmlType(name = "RoadInformation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "roadDestination",
     "roadName",
     "roadNumber",
-    "_RoadInformationExtension"
+    "roadInformationExtension"
 })
 public class RoadInformation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadDestination;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadNumber;
-    @XmlElement(name = "_roadInformationExtension")
-    protected _ExtensionType _RoadInformationExtension;
+    @XmlElement(name = "_roadInformationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType roadInformationExtension;
 
     /**
      * Gets the value of the roadDestination property.
@@ -120,27 +123,27 @@ public class RoadInformation {
     }
 
     /**
-     * Gets the value of the _RoadInformationExtension property.
+     * Gets the value of the roadInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadInformationExtension() {
-        return _RoadInformationExtension;
+    public ExtensionType getRoadInformationExtension() {
+        return roadInformationExtension;
     }
 
     /**
-     * Sets the value of the _RoadInformationExtension property.
+     * Sets the value of the roadInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadInformationExtension(_ExtensionType value) {
-        this._RoadInformationExtension = value;
+    public void setRoadInformationExtension(ExtensionType value) {
+        this.roadInformationExtension = value;
     }
 
 }

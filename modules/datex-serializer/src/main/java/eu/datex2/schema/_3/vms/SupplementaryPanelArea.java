@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,19 +35,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPanelArea", propOrder = {
+@XmlType(name = "SupplementaryPanelArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "supplementaryPictogramCodeListIdentifier",
     "relatedPictogramArea",
-    "_SupplementaryPanelAreaExtension"
+    "supplementaryPanelAreaExtension"
 })
 public class SupplementaryPanelArea
     extends DisplayArea
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String supplementaryPictogramCodeListIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected BigInteger relatedPictogramArea;
-    @XmlElement(name = "_supplementaryPanelAreaExtension")
-    protected _ExtensionType _SupplementaryPanelAreaExtension;
+    @XmlElement(name = "_supplementaryPanelAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType supplementaryPanelAreaExtension;
 
     /**
      * Gets the value of the supplementaryPictogramCodeListIdentifier property.
@@ -98,27 +100,27 @@ public class SupplementaryPanelArea
     }
 
     /**
-     * Gets the value of the _SupplementaryPanelAreaExtension property.
+     * Gets the value of the supplementaryPanelAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SupplementaryPanelAreaExtension() {
-        return _SupplementaryPanelAreaExtension;
+    public ExtensionType getSupplementaryPanelAreaExtension() {
+        return supplementaryPanelAreaExtension;
     }
 
     /**
-     * Sets the value of the _SupplementaryPanelAreaExtension property.
+     * Sets the value of the supplementaryPanelAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SupplementaryPanelAreaExtension(_ExtensionType value) {
-        this._SupplementaryPanelAreaExtension = value;
+    public void setSupplementaryPanelAreaExtension(ExtensionType value) {
+        this.supplementaryPanelAreaExtension = value;
     }
 
 }

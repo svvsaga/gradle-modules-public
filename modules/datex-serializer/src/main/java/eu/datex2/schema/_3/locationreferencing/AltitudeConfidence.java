@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,27 +33,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AltitudeConfidence", propOrder = {
+@XmlType(name = "AltitudeConfidence", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "altitudeAccuracyCodedValue",
     "altitudeAccuracyCodedError",
-    "_AltitudeConfidenceExtension"
+    "altitudeConfidenceExtension"
 })
 public class AltitudeConfidence {
 
-    protected _AltitudeAccuracyEnum altitudeAccuracyCodedValue;
-    protected _PositionConfidenceCodedErrorEnum altitudeAccuracyCodedError;
-    @XmlElement(name = "_altitudeConfidenceExtension")
-    protected _ExtensionType _AltitudeConfidenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected AltitudeAccuracyEnum altitudeAccuracyCodedValue;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected PositionConfidenceCodedErrorEnum altitudeAccuracyCodedError;
+    @XmlElement(name = "_altitudeConfidenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType altitudeConfidenceExtension;
 
     /**
      * Gets the value of the altitudeAccuracyCodedValue property.
      * 
      * @return
      *     possible object is
-     *     {@link _AltitudeAccuracyEnum }
+     *     {@link AltitudeAccuracyEnum }
      *     
      */
-    public _AltitudeAccuracyEnum getAltitudeAccuracyCodedValue() {
+    public AltitudeAccuracyEnum getAltitudeAccuracyCodedValue() {
         return altitudeAccuracyCodedValue;
     }
 
@@ -62,10 +64,10 @@ public class AltitudeConfidence {
      * 
      * @param value
      *     allowed object is
-     *     {@link _AltitudeAccuracyEnum }
+     *     {@link AltitudeAccuracyEnum }
      *     
      */
-    public void setAltitudeAccuracyCodedValue(_AltitudeAccuracyEnum value) {
+    public void setAltitudeAccuracyCodedValue(AltitudeAccuracyEnum value) {
         this.altitudeAccuracyCodedValue = value;
     }
 
@@ -74,10 +76,10 @@ public class AltitudeConfidence {
      * 
      * @return
      *     possible object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public _PositionConfidenceCodedErrorEnum getAltitudeAccuracyCodedError() {
+    public PositionConfidenceCodedErrorEnum getAltitudeAccuracyCodedError() {
         return altitudeAccuracyCodedError;
     }
 
@@ -86,35 +88,35 @@ public class AltitudeConfidence {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PositionConfidenceCodedErrorEnum }
+     *     {@link PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setAltitudeAccuracyCodedError(_PositionConfidenceCodedErrorEnum value) {
+    public void setAltitudeAccuracyCodedError(PositionConfidenceCodedErrorEnum value) {
         this.altitudeAccuracyCodedError = value;
     }
 
     /**
-     * Gets the value of the _AltitudeConfidenceExtension property.
+     * Gets the value of the altitudeConfidenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AltitudeConfidenceExtension() {
-        return _AltitudeConfidenceExtension;
+    public ExtensionType getAltitudeConfidenceExtension() {
+        return altitudeConfidenceExtension;
     }
 
     /**
-     * Sets the value of the _AltitudeConfidenceExtension property.
+     * Sets the value of the altitudeConfidenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AltitudeConfidenceExtension(_ExtensionType value) {
-        this._AltitudeConfidenceExtension = value;
+    public void setAltitudeConfidenceExtension(ExtensionType value) {
+        this.altitudeConfidenceExtension = value;
     }
 
 }

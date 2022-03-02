@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericPublication", propOrder = {
+@XmlType(name = "GenericPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "genericPublicationName",
     "genericPublicationExtension"
 })
@@ -36,9 +36,10 @@ public class GenericPublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String genericPublicationName;
-    protected _GenericPublicationExtensionType genericPublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected GenericPublicationExtensionType genericPublicationExtension;
 
     /**
      * Gets the value of the genericPublicationName property.
@@ -69,10 +70,10 @@ public class GenericPublication
      * 
      * @return
      *     possible object is
-     *     {@link _GenericPublicationExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public _GenericPublicationExtensionType getGenericPublicationExtension() {
+    public GenericPublicationExtensionType getGenericPublicationExtension() {
         return genericPublicationExtension;
     }
 
@@ -81,10 +82,10 @@ public class GenericPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _GenericPublicationExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public void setGenericPublicationExtension(_GenericPublicationExtensionType value) {
+    public void setGenericPublicationExtension(GenericPublicationExtensionType value) {
         this.genericPublicationExtension = value;
     }
 

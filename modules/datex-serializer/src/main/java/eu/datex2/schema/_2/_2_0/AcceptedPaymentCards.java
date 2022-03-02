@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AcceptedPaymentCards", propOrder = {
+@XmlType(name = "AcceptedPaymentCards", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "paymentCards",
     "otherPaymentCards",
     "paymentCardBrands",
@@ -43,14 +43,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AcceptedPaymentCards {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<PaymentCardTypesEnum> paymentCards;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> otherPaymentCards;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<PaymentCardBrandsEnum> paymentCardBrands;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> otherPaymentCardBrands;
-    protected _ExtensionType acceptedPaymentCardsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType acceptedPaymentCardsExtension;
 
     /**
      * Gets the value of the paymentCards property.
@@ -173,10 +177,10 @@ public class AcceptedPaymentCards {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAcceptedPaymentCardsExtension() {
+    public ExtensionType getAcceptedPaymentCardsExtension() {
         return acceptedPaymentCardsExtension;
     }
 
@@ -185,10 +189,10 @@ public class AcceptedPaymentCards {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAcceptedPaymentCardsExtension(_ExtensionType value) {
+    public void setAcceptedPaymentCardsExtension(ExtensionType value) {
         this.acceptedPaymentCardsExtension = value;
     }
 

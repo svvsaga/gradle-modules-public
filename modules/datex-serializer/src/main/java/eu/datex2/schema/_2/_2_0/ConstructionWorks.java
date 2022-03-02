@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConstructionWorks", propOrder = {
+@XmlType(name = "ConstructionWorks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "constructionWorkType",
     "constructionWorksExtension"
 })
@@ -36,9 +37,11 @@ public class ConstructionWorks
     extends Roadworks
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ConstructionWorkTypeEnum constructionWorkType;
-    protected _ExtensionType constructionWorksExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType constructionWorksExtension;
 
     /**
      * Gets the value of the constructionWorkType property.
@@ -69,10 +72,10 @@ public class ConstructionWorks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getConstructionWorksExtension() {
+    public ExtensionType getConstructionWorksExtension() {
         return constructionWorksExtension;
     }
 
@@ -81,10 +84,10 @@ public class ConstructionWorks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setConstructionWorksExtension(_ExtensionType value) {
+    public void setConstructionWorksExtension(ExtensionType value) {
         this.constructionWorksExtension = value;
     }
 

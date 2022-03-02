@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,17 +35,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItineraryByIndexedLocations", propOrder = {
+@XmlType(name = "ItineraryByIndexedLocations", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "locationContainedInItinerary",
-    "_ItineraryByIndexedLocationsExtension"
+    "itineraryByIndexedLocationsExtension"
 })
 public class ItineraryByIndexedLocations
     extends Itinerary
 {
 
-    protected List<_LocationContainedInItinerary> locationContainedInItinerary;
-    @XmlElement(name = "_itineraryByIndexedLocationsExtension")
-    protected _ExtensionType _ItineraryByIndexedLocationsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected List<LocationContainedInItinerary> locationContainedInItinerary;
+    @XmlElement(name = "_itineraryByIndexedLocationsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType itineraryByIndexedLocationsExtension;
 
     /**
      * Gets the value of the locationContainedInItinerary property.
@@ -65,39 +66,39 @@ public class ItineraryByIndexedLocations
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _LocationContainedInItinerary }
+     * {@link LocationContainedInItinerary }
      * 
      * 
      */
-    public List<_LocationContainedInItinerary> getLocationContainedInItinerary() {
+    public List<LocationContainedInItinerary> getLocationContainedInItinerary() {
         if (locationContainedInItinerary == null) {
-            locationContainedInItinerary = new ArrayList<_LocationContainedInItinerary>();
+            locationContainedInItinerary = new ArrayList<LocationContainedInItinerary>();
         }
         return this.locationContainedInItinerary;
     }
 
     /**
-     * Gets the value of the _ItineraryByIndexedLocationsExtension property.
+     * Gets the value of the itineraryByIndexedLocationsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ItineraryByIndexedLocationsExtension() {
-        return _ItineraryByIndexedLocationsExtension;
+    public ExtensionType getItineraryByIndexedLocationsExtension() {
+        return itineraryByIndexedLocationsExtension;
     }
 
     /**
-     * Sets the value of the _ItineraryByIndexedLocationsExtension property.
+     * Sets the value of the itineraryByIndexedLocationsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ItineraryByIndexedLocationsExtension(_ExtensionType value) {
-        this._ItineraryByIndexedLocationsExtension = value;
+    public void setItineraryByIndexedLocationsExtension(ExtensionType value) {
+        this.itineraryByIndexedLocationsExtension = value;
     }
 
 }

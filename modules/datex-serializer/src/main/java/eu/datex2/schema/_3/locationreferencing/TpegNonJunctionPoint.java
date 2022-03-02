@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,21 +34,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegNonJunctionPoint", propOrder = {
+@XmlType(name = "TpegNonJunctionPoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "pointCoordinates",
     "name",
-    "_TpegNonJunctionPointExtension"
+    "tpegNonJunctionPointExtension"
 })
 public class TpegNonJunctionPoint
     extends TpegPoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates pointCoordinates;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<TpegOtherPointDescriptor> name;
-    @XmlElement(name = "_tpegNonJunctionPointExtension")
-    protected _ExtensionType _TpegNonJunctionPointExtension;
+    @XmlElement(name = "_tpegNonJunctionPointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType tpegNonJunctionPointExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -104,27 +104,27 @@ public class TpegNonJunctionPoint
     }
 
     /**
-     * Gets the value of the _TpegNonJunctionPointExtension property.
+     * Gets the value of the tpegNonJunctionPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TpegNonJunctionPointExtension() {
-        return _TpegNonJunctionPointExtension;
+    public ExtensionType getTpegNonJunctionPointExtension() {
+        return tpegNonJunctionPointExtension;
     }
 
     /**
-     * Sets the value of the _TpegNonJunctionPointExtension property.
+     * Sets the value of the tpegNonJunctionPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TpegNonJunctionPointExtension(_ExtensionType value) {
-        this._TpegNonJunctionPointExtension = value;
+    public void setTpegNonJunctionPointExtension(ExtensionType value) {
+        this.tpegNonJunctionPointExtension = value;
     }
 
 }

@@ -32,31 +32,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GrossWeightCharacteristic", propOrder = {
+@XmlType(name = "GrossWeightCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "comparisonOperator",
     "grossVehicleWeight",
     "typeOfWeight",
-    "_GrossWeightCharacteristicExtension"
+    "grossWeightCharacteristicExtension"
 })
 public class GrossWeightCharacteristic {
 
-    @XmlElement(required = true)
-    protected _ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float grossVehicleWeight;
-    @XmlElement(required = true)
-    protected _WeightTypeEnum typeOfWeight;
-    @XmlElement(name = "_grossWeightCharacteristicExtension")
-    protected _ExtensionType _GrossWeightCharacteristicExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected WeightTypeEnum typeOfWeight;
+    @XmlElement(name = "_grossWeightCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType grossWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public _ComparisonOperatorEnum getComparisonOperator() {
+    public ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -65,10 +66,10 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(_ComparisonOperatorEnum value) {
+    public void setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -93,10 +94,10 @@ public class GrossWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _WeightTypeEnum }
+     *     {@link WeightTypeEnum }
      *     
      */
-    public _WeightTypeEnum getTypeOfWeight() {
+    public WeightTypeEnum getTypeOfWeight() {
         return typeOfWeight;
     }
 
@@ -105,35 +106,35 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _WeightTypeEnum }
+     *     {@link WeightTypeEnum }
      *     
      */
-    public void setTypeOfWeight(_WeightTypeEnum value) {
+    public void setTypeOfWeight(WeightTypeEnum value) {
         this.typeOfWeight = value;
     }
 
     /**
-     * Gets the value of the _GrossWeightCharacteristicExtension property.
+     * Gets the value of the grossWeightCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GrossWeightCharacteristicExtension() {
-        return _GrossWeightCharacteristicExtension;
+    public ExtensionType getGrossWeightCharacteristicExtension() {
+        return grossWeightCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the _GrossWeightCharacteristicExtension property.
+     * Sets the value of the grossWeightCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GrossWeightCharacteristicExtension(_ExtensionType value) {
-        this._GrossWeightCharacteristicExtension = value;
+    public void setGrossWeightCharacteristicExtension(ExtensionType value) {
+        this.grossWeightCharacteristicExtension = value;
     }
 
 }

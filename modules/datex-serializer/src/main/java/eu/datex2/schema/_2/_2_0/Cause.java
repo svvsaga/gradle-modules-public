@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Cause", propOrder = {
+@XmlType(name = "Cause", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "causeExtension"
 })
 @XmlSeeAlso({
@@ -36,17 +37,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Cause {
 
-    protected _ExtensionType causeExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType causeExtension;
 
     /**
      * Gets the value of the causeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCauseExtension() {
+    public ExtensionType getCauseExtension() {
         return causeExtension;
     }
 
@@ -55,10 +57,10 @@ public abstract class Cause {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCauseExtension(_ExtensionType value) {
+    public void setCauseExtension(ExtensionType value) {
         this.causeExtension = value;
     }
 

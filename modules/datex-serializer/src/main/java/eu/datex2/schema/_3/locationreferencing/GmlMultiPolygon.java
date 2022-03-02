@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,18 +35,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlMultiPolygon", propOrder = {
+@XmlType(name = "GmlMultiPolygon", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "gmlAreaName",
     "gmlPolygon",
-    "_GmlMultiPolygonExtension"
+    "gmlMultiPolygonExtension"
 })
 public class GmlMultiPolygon {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString gmlAreaName;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected List<GmlPolygon> gmlPolygon;
-    @XmlElement(name = "_gmlMultiPolygonExtension")
-    protected _ExtensionType _GmlMultiPolygonExtension;
+    @XmlElement(name = "_gmlMultiPolygonExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType gmlMultiPolygonExtension;
 
     /**
      * Gets the value of the gmlAreaName property.
@@ -102,27 +103,27 @@ public class GmlMultiPolygon {
     }
 
     /**
-     * Gets the value of the _GmlMultiPolygonExtension property.
+     * Gets the value of the gmlMultiPolygonExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GmlMultiPolygonExtension() {
-        return _GmlMultiPolygonExtension;
+    public ExtensionType getGmlMultiPolygonExtension() {
+        return gmlMultiPolygonExtension;
     }
 
     /**
-     * Sets the value of the _GmlMultiPolygonExtension property.
+     * Sets the value of the gmlMultiPolygonExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GmlMultiPolygonExtension(_ExtensionType value) {
-        this._GmlMultiPolygonExtension = value;
+    public void setGmlMultiPolygonExtension(ExtensionType value) {
+        this.gmlMultiPolygonExtension = value;
     }
 
 }

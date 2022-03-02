@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimePeriodOfDay", propOrder = {
+@XmlType(name = "TimePeriodOfDay", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "timePeriodOfDayExtension"
 })
 @XmlSeeAlso({
@@ -35,17 +36,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TimePeriodOfDay {
 
-    protected _ExtensionType timePeriodOfDayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType timePeriodOfDayExtension;
 
     /**
      * Gets the value of the timePeriodOfDayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTimePeriodOfDayExtension() {
+    public ExtensionType getTimePeriodOfDayExtension() {
         return timePeriodOfDayExtension;
     }
 
@@ -54,10 +56,10 @@ public abstract class TimePeriodOfDay {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTimePeriodOfDayExtension(_ExtensionType value) {
+    public void setTimePeriodOfDayExtension(ExtensionType value) {
         this.timePeriodOfDayExtension = value;
     }
 

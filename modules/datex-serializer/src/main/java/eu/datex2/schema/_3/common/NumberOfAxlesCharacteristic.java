@@ -33,30 +33,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NumberOfAxlesCharacteristic", propOrder = {
+@XmlType(name = "NumberOfAxlesCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "comparisonOperator",
     "numberOfAxles",
-    "_NumberOfAxlesCharacteristicExtension"
+    "numberOfAxlesCharacteristicExtension"
 })
 public class NumberOfAxlesCharacteristic {
 
-    @XmlElement(required = true)
-    protected _ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfAxles;
-    @XmlElement(name = "_numberOfAxlesCharacteristicExtension")
-    protected _ExtensionType _NumberOfAxlesCharacteristicExtension;
+    @XmlElement(name = "_numberOfAxlesCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType numberOfAxlesCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public _ComparisonOperatorEnum getComparisonOperator() {
+    public ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -65,10 +65,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(_ComparisonOperatorEnum value) {
+    public void setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -97,27 +97,27 @@ public class NumberOfAxlesCharacteristic {
     }
 
     /**
-     * Gets the value of the _NumberOfAxlesCharacteristicExtension property.
+     * Gets the value of the numberOfAxlesCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_NumberOfAxlesCharacteristicExtension() {
-        return _NumberOfAxlesCharacteristicExtension;
+    public ExtensionType getNumberOfAxlesCharacteristicExtension() {
+        return numberOfAxlesCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the _NumberOfAxlesCharacteristicExtension property.
+     * Sets the value of the numberOfAxlesCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_NumberOfAxlesCharacteristicExtension(_ExtensionType value) {
-        this._NumberOfAxlesCharacteristicExtension = value;
+    public void setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
+        this.numberOfAxlesCharacteristicExtension = value;
     }
 
 }

@@ -29,18 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4PrimaryPointLocation", propOrder = {
+@XmlType(name = "AlertCMethod4PrimaryPointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocation",
     "offsetDistance",
     "alertCMethod4PrimaryPointLocationExtension"
 })
 public class AlertCMethod4PrimaryPointLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCLocation alertCLocation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OffsetDistance offsetDistance;
-    protected _ExtensionType alertCMethod4PrimaryPointLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCMethod4PrimaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -95,10 +96,10 @@ public class AlertCMethod4PrimaryPointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4PrimaryPointLocationExtension() {
+    public ExtensionType getAlertCMethod4PrimaryPointLocationExtension() {
         return alertCMethod4PrimaryPointLocationExtension;
     }
 
@@ -107,10 +108,10 @@ public class AlertCMethod4PrimaryPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4PrimaryPointLocationExtension(_ExtensionType value) {
+    public void setAlertCMethod4PrimaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod4PrimaryPointLocationExtension = value;
     }
 

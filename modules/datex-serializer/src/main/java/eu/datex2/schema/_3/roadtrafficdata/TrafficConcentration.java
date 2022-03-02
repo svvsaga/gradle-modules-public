@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PercentageValue;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,19 +33,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficConcentration", propOrder = {
+@XmlType(name = "TrafficConcentration", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "density",
     "occupancy",
-    "_TrafficConcentrationExtension"
+    "trafficConcentrationExtension"
 })
 public class TrafficConcentration
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficDensityValue density;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected PercentageValue occupancy;
-    @XmlElement(name = "_trafficConcentrationExtension")
-    protected _ExtensionType _TrafficConcentrationExtension;
+    @XmlElement(name = "_trafficConcentrationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficConcentrationExtension;
 
     /**
      * Gets the value of the density property.
@@ -96,27 +98,27 @@ public class TrafficConcentration
     }
 
     /**
-     * Gets the value of the _TrafficConcentrationExtension property.
+     * Gets the value of the trafficConcentrationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficConcentrationExtension() {
-        return _TrafficConcentrationExtension;
+    public ExtensionType getTrafficConcentrationExtension() {
+        return trafficConcentrationExtension;
     }
 
     /**
-     * Sets the value of the _TrafficConcentrationExtension property.
+     * Sets the value of the trafficConcentrationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficConcentrationExtension(_ExtensionType value) {
-        this._TrafficConcentrationExtension = value;
+    public void setTrafficConcentrationExtension(ExtensionType value) {
+        this.trafficConcentrationExtension = value;
     }
 
 }

@@ -2,9 +2,9 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Period;
-import eu.datex2.schema._3.common.TimePrecisionEnum;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.TimePrecisionEnum2;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,32 +41,35 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementOrCalculationTime", propOrder = {
+@XmlType(name = "MeasurementOrCalculationTime", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "timeMeaning",
     "timeValue",
     "period",
-    "_MeasurementOrCalculationTimeExtension"
+    "measurementOrCalculationTimeExtension"
 })
 public class MeasurementOrCalculationTime {
 
-    protected _TimeMeaningEnum timeMeaning;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected TimeMeaningEnum timeMeaning;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeValue;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Period period;
-    @XmlElement(name = "_measurementOrCalculationTimeExtension")
-    protected _ExtensionType _MeasurementOrCalculationTimeExtension;
+    @XmlElement(name = "_measurementOrCalculationTimeExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType measurementOrCalculationTimeExtension;
     @XmlAttribute(name = "timePrecision")
-    protected TimePrecisionEnum timePrecision;
+    protected TimePrecisionEnum2 timePrecision;
 
     /**
      * Gets the value of the timeMeaning property.
      * 
      * @return
      *     possible object is
-     *     {@link _TimeMeaningEnum }
+     *     {@link TimeMeaningEnum }
      *     
      */
-    public _TimeMeaningEnum getTimeMeaning() {
+    public TimeMeaningEnum getTimeMeaning() {
         return timeMeaning;
     }
 
@@ -75,10 +78,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @param value
      *     allowed object is
-     *     {@link _TimeMeaningEnum }
+     *     {@link TimeMeaningEnum }
      *     
      */
-    public void setTimeMeaning(_TimeMeaningEnum value) {
+    public void setTimeMeaning(TimeMeaningEnum value) {
         this.timeMeaning = value;
     }
 
@@ -131,27 +134,27 @@ public class MeasurementOrCalculationTime {
     }
 
     /**
-     * Gets the value of the _MeasurementOrCalculationTimeExtension property.
+     * Gets the value of the measurementOrCalculationTimeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MeasurementOrCalculationTimeExtension() {
-        return _MeasurementOrCalculationTimeExtension;
+    public ExtensionType getMeasurementOrCalculationTimeExtension() {
+        return measurementOrCalculationTimeExtension;
     }
 
     /**
-     * Sets the value of the _MeasurementOrCalculationTimeExtension property.
+     * Sets the value of the measurementOrCalculationTimeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MeasurementOrCalculationTimeExtension(_ExtensionType value) {
-        this._MeasurementOrCalculationTimeExtension = value;
+    public void setMeasurementOrCalculationTimeExtension(ExtensionType value) {
+        this.measurementOrCalculationTimeExtension = value;
     }
 
     /**
@@ -159,10 +162,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @return
      *     possible object is
-     *     {@link TimePrecisionEnum }
+     *     {@link TimePrecisionEnum2 }
      *     
      */
-    public TimePrecisionEnum getTimePrecision() {
+    public TimePrecisionEnum2 getTimePrecision() {
         return timePrecision;
     }
 
@@ -171,10 +174,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @param value
      *     allowed object is
-     *     {@link TimePrecisionEnum }
+     *     {@link TimePrecisionEnum2 }
      *     
      */
-    public void setTimePrecision(TimePrecisionEnum value) {
+    public void setTimePrecision(TimePrecisionEnum2 value) {
         this.timePrecision = value;
     }
 

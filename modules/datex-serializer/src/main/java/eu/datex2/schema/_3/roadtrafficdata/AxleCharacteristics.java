@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,17 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleCharacteristics", propOrder = {
+@XmlType(name = "AxleCharacteristics", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "maximumWeight",
     "minimumWeight",
-    "_AxleCharacteristicsExtension"
+    "axleCharacteristicsExtension"
 })
 public class AxleCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float maximumWeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float minimumWeight;
-    @XmlElement(name = "_axleCharacteristicsExtension")
-    protected _ExtensionType _AxleCharacteristicsExtension;
+    @XmlElement(name = "_axleCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType axleCharacteristicsExtension;
 
     /**
      * Gets the value of the maximumWeight property.
@@ -93,27 +95,27 @@ public class AxleCharacteristics {
     }
 
     /**
-     * Gets the value of the _AxleCharacteristicsExtension property.
+     * Gets the value of the axleCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AxleCharacteristicsExtension() {
-        return _AxleCharacteristicsExtension;
+    public ExtensionType getAxleCharacteristicsExtension() {
+        return axleCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the _AxleCharacteristicsExtension property.
+     * Sets the value of the axleCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AxleCharacteristicsExtension(_ExtensionType value) {
-        this._AxleCharacteristicsExtension = value;
+    public void setAxleCharacteristicsExtension(ExtensionType value) {
+        this.axleCharacteristicsExtension = value;
     }
 
 }

@@ -38,59 +38,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _ExchangeReturnEnum }
+     * Create an instance of {@link ExchangeReturnEnum }
      * 
      */
-    public _ExchangeReturnEnum create_ExchangeReturnEnum() {
-        return new _ExchangeReturnEnum();
+    public ExchangeReturnEnum createExchangeReturnEnum() {
+        return new ExchangeReturnEnum();
     }
 
     /**
-     * Create an instance of {@link _ExchangeStatusEnum }
+     * Create an instance of {@link ExchangeStatusEnum }
      * 
      */
-    public _ExchangeStatusEnum create_ExchangeStatusEnum() {
-        return new _ExchangeStatusEnum();
+    public ExchangeStatusEnum createExchangeStatusEnum() {
+        return new ExchangeStatusEnum();
     }
 
     /**
-     * Create an instance of {@link _InvalidityReasonEnum }
+     * Create an instance of {@link InvalidityReasonEnum }
      * 
      */
-    public _InvalidityReasonEnum create_InvalidityReasonEnum() {
-        return new _InvalidityReasonEnum();
+    public InvalidityReasonEnum createInvalidityReasonEnum() {
+        return new InvalidityReasonEnum();
     }
 
     /**
-     * Create an instance of {@link _MessageTypeEnum }
+     * Create an instance of {@link MessageTypeEnum }
      * 
      */
-    public _MessageTypeEnum create_MessageTypeEnum() {
-        return new _MessageTypeEnum();
+    public MessageTypeEnum createMessageTypeEnum() {
+        return new MessageTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _OperatingModeEnum }
+     * Create an instance of {@link OperatingModeEnum }
      * 
      */
-    public _OperatingModeEnum create_OperatingModeEnum() {
-        return new _OperatingModeEnum();
+    public OperatingModeEnum createOperatingModeEnum() {
+        return new OperatingModeEnum();
     }
 
     /**
-     * Create an instance of {@link _ProtocolTypeEnum }
+     * Create an instance of {@link ProtocolTypeEnum }
      * 
      */
-    public _ProtocolTypeEnum create_ProtocolTypeEnum() {
-        return new _ProtocolTypeEnum();
+    public ProtocolTypeEnum createProtocolTypeEnum() {
+        return new ProtocolTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _UpdateMethodEnum }
+     * Create an instance of {@link UpdateMethodEnum }
      * 
      */
-    public _UpdateMethodEnum create_UpdateMethodEnum() {
-        return new _UpdateMethodEnum();
+    public UpdateMethodEnum createUpdateMethodEnum() {
+        return new UpdateMethodEnum();
     }
 
     /**

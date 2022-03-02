@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4Linear", propOrder = {
+@XmlType(name = "AlertCMethod4Linear", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
     "alertCMethod4SecondaryPointLocation",
@@ -40,13 +40,14 @@ public class AlertCMethod4Linear
     extends AlertCLinear
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCMethod4SecondaryPointLocation alertCMethod4SecondaryPointLocation;
-    protected _ExtensionType alertCMethod4LinearExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCMethod4LinearExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -125,10 +126,10 @@ public class AlertCMethod4Linear
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4LinearExtension() {
+    public ExtensionType getAlertCMethod4LinearExtension() {
         return alertCMethod4LinearExtension;
     }
 
@@ -137,10 +138,10 @@ public class AlertCMethod4Linear
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4LinearExtension(_ExtensionType value) {
+    public void setAlertCMethod4LinearExtension(ExtensionType value) {
         this.alertCMethod4LinearExtension = value;
     }
 

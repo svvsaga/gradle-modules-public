@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OccupancyChangeValue", propOrder = {
+@XmlType(name = "OccupancyChangeValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "occupancyChange",
     "occupancyChangeValueExtension"
 })
@@ -37,9 +37,10 @@ public class OccupancyChangeValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected BigInteger occupancyChange;
-    protected _ExtensionType occupancyChangeValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType occupancyChangeValueExtension;
 
     /**
      * Gets the value of the occupancyChange property.
@@ -70,10 +71,10 @@ public class OccupancyChangeValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOccupancyChangeValueExtension() {
+    public ExtensionType getOccupancyChangeValueExtension() {
         return occupancyChangeValueExtension;
     }
 
@@ -82,10 +83,10 @@ public class OccupancyChangeValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOccupancyChangeValueExtension(_ExtensionType value) {
+    public void setOccupancyChangeValueExtension(ExtensionType value) {
         this.occupancyChangeValueExtension = value;
     }
 

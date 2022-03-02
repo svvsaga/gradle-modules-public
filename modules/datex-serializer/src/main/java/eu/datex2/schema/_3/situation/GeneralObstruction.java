@@ -3,7 +3,7 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,20 +36,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralObstruction", propOrder = {
+@XmlType(name = "GeneralObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "obstructionType",
     "groupOfPeopleInvolved",
-    "_GeneralObstructionExtension"
+    "generalObstructionExtension"
 })
 public class GeneralObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
-    protected List<_ObstructionTypeEnum> obstructionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected List<ObstructionTypeEnum> obstructionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    @XmlElement(name = "_generalObstructionExtension")
-    protected _ExtensionType _GeneralObstructionExtension;
+    @XmlElement(name = "_generalObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType generalObstructionExtension;
 
     /**
      * Gets the value of the obstructionType property.
@@ -69,13 +70,13 @@ public class GeneralObstruction
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _ObstructionTypeEnum }
+     * {@link ObstructionTypeEnum }
      * 
      * 
      */
-    public List<_ObstructionTypeEnum> getObstructionType() {
+    public List<ObstructionTypeEnum> getObstructionType() {
         if (obstructionType == null) {
-            obstructionType = new ArrayList<_ObstructionTypeEnum>();
+            obstructionType = new ArrayList<ObstructionTypeEnum>();
         }
         return this.obstructionType;
     }
@@ -110,27 +111,27 @@ public class GeneralObstruction
     }
 
     /**
-     * Gets the value of the _GeneralObstructionExtension property.
+     * Gets the value of the generalObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GeneralObstructionExtension() {
-        return _GeneralObstructionExtension;
+    public ExtensionType getGeneralObstructionExtension() {
+        return generalObstructionExtension;
     }
 
     /**
-     * Sets the value of the _GeneralObstructionExtension property.
+     * Sets the value of the generalObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GeneralObstructionExtension(_ExtensionType value) {
-        this._GeneralObstructionExtension = value;
+    public void setGeneralObstructionExtension(ExtensionType value) {
+        this.generalObstructionExtension = value;
     }
 
 }

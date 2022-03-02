@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficElement", propOrder = {
+@XmlType(name = "TrafficElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "trafficElementExtension"
 })
 @XmlSeeAlso({
@@ -42,17 +43,18 @@ public abstract class TrafficElement
     extends SituationRecord
 {
 
-    protected _ExtensionType trafficElementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficElementExtension;
 
     /**
      * Gets the value of the trafficElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficElementExtension() {
+    public ExtensionType getTrafficElementExtension() {
         return trafficElementExtension;
     }
 
@@ -61,10 +63,10 @@ public abstract class TrafficElement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficElementExtension(_ExtensionType value) {
+    public void setTrafficElementExtension(ExtensionType value) {
         this.trafficElementExtension = value;
     }
 

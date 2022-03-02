@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,38 +31,38 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlLinearRing", propOrder = {
-    "_GmlLinearRingExtension"
+@XmlType(name = "GmlLinearRing", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "gmlLinearRingExtension"
 })
 public class GmlLinearRing
     extends GmlLineString
 {
 
-    @XmlElement(name = "_gmlLinearRingExtension")
-    protected _ExtensionType _GmlLinearRingExtension;
+    @XmlElement(name = "_gmlLinearRingExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType gmlLinearRingExtension;
 
     /**
-     * Gets the value of the _GmlLinearRingExtension property.
+     * Gets the value of the gmlLinearRingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GmlLinearRingExtension() {
-        return _GmlLinearRingExtension;
+    public ExtensionType getGmlLinearRingExtension() {
+        return gmlLinearRingExtension;
     }
 
     /**
-     * Sets the value of the _GmlLinearRingExtension property.
+     * Sets the value of the gmlLinearRingExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GmlLinearRingExtension(_ExtensionType value) {
-        this._GmlLinearRingExtension = value;
+    public void setGmlLinearRingExtension(ExtensionType value) {
+        this.gmlLinearRingExtension = value;
     }
 
 }

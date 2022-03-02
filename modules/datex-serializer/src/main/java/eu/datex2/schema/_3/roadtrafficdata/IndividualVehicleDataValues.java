@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Vehicle;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IndividualVehicleDataValues", propOrder = {
+@XmlType(name = "IndividualVehicleDataValues", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "arrivalTime",
     "distanceGap",
     "distanceHeadway",
@@ -56,26 +56,36 @@ import jakarta.xml.bind.annotation.XmlType;
     "timeGap",
     "timeHeadway",
     "individualVehicle",
-    "_IndividualVehicleDataValuesExtension"
+    "individualVehicleDataValuesExtension"
 })
 public class IndividualVehicleDataValues
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar arrivalTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float distanceGap;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float distanceHeadway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar exitTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float passageDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float presenceDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float speed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float timeGap;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float timeHeadway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Vehicle individualVehicle;
-    @XmlElement(name = "_individualVehicleDataValuesExtension")
-    protected _ExtensionType _IndividualVehicleDataValuesExtension;
+    @XmlElement(name = "_individualVehicleDataValuesExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType individualVehicleDataValuesExtension;
 
     /**
      * Gets the value of the arrivalTime property.
@@ -318,27 +328,27 @@ public class IndividualVehicleDataValues
     }
 
     /**
-     * Gets the value of the _IndividualVehicleDataValuesExtension property.
+     * Gets the value of the individualVehicleDataValuesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_IndividualVehicleDataValuesExtension() {
-        return _IndividualVehicleDataValuesExtension;
+    public ExtensionType getIndividualVehicleDataValuesExtension() {
+        return individualVehicleDataValuesExtension;
     }
 
     /**
-     * Sets the value of the _IndividualVehicleDataValuesExtension property.
+     * Sets the value of the individualVehicleDataValuesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_IndividualVehicleDataValuesExtension(_ExtensionType value) {
-        this._IndividualVehicleDataValuesExtension = value;
+    public void setIndividualVehicleDataValuesExtension(ExtensionType value) {
+        this.individualVehicleDataValuesExtension = value;
     }
 
 }

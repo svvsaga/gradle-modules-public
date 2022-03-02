@@ -29,18 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Target", propOrder = {
+@XmlType(name = "Target", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "address",
     "protocol",
     "targetExtension"
 })
 public class Target {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String address;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected String protocol;
-    protected _ExtensionType targetExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType targetExtension;
 
     /**
      * Gets the value of the address property.
@@ -95,10 +96,10 @@ public class Target {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTargetExtension() {
+    public ExtensionType getTargetExtension() {
         return targetExtension;
     }
 
@@ -107,10 +108,10 @@ public class Target {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTargetExtension(_ExtensionType value) {
+    public void setTargetExtension(ExtensionType value) {
         this.targetExtension = value;
     }
 

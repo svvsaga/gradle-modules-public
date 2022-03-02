@@ -31,20 +31,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPathAttributes", propOrder = {
+@XmlType(name = "OpenlrPathAttributes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrLowestFRCToNextLRPoint",
     "openlrDistanceToNextLRPoint",
     "openlrPathAttributesExtension"
 })
 public class OpenlrPathAttributes {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrFunctionalRoadClassEnum openlrLowestFRCToNextLRPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrDistanceToNextLRPoint;
-    protected _ExtensionType openlrPathAttributesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrPathAttributesExtension;
 
     /**
      * Gets the value of the openlrLowestFRCToNextLRPoint property.
@@ -99,10 +100,10 @@ public class OpenlrPathAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPathAttributesExtension() {
+    public ExtensionType getOpenlrPathAttributesExtension() {
         return openlrPathAttributesExtension;
     }
 
@@ -111,10 +112,10 @@ public class OpenlrPathAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPathAttributesExtension(_ExtensionType value) {
+    public void setOpenlrPathAttributesExtension(ExtensionType value) {
         this.openlrPathAttributesExtension = value;
     }
 

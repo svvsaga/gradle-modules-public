@@ -28,15 +28,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod2SecondaryPointLocation", propOrder = {
+@XmlType(name = "AlertCMethod2SecondaryPointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocation",
     "alertCMethod2SecondaryPointLocationExtension"
 })
 public class AlertCMethod2SecondaryPointLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCLocation alertCLocation;
-    protected _ExtensionType alertCMethod2SecondaryPointLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCMethod2SecondaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -67,10 +68,10 @@ public class AlertCMethod2SecondaryPointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod2SecondaryPointLocationExtension() {
+    public ExtensionType getAlertCMethod2SecondaryPointLocationExtension() {
         return alertCMethod2SecondaryPointLocationExtension;
     }
 
@@ -79,10 +80,10 @@ public class AlertCMethod2SecondaryPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod2SecondaryPointLocationExtension(_ExtensionType value) {
+    public void setAlertCMethod2SecondaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod2SecondaryPointLocationExtension = value;
     }
 

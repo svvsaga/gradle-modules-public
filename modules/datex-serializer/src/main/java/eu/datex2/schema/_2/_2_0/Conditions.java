@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Conditions", propOrder = {
+@XmlType(name = "Conditions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "drivingConditionType",
     "conditionsExtension"
 })
@@ -41,9 +42,11 @@ public class Conditions
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DrivingConditionTypeEnum drivingConditionType;
-    protected _ExtensionType conditionsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType conditionsExtension;
 
     /**
      * Gets the value of the drivingConditionType property.
@@ -74,10 +77,10 @@ public class Conditions
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getConditionsExtension() {
+    public ExtensionType getConditionsExtension() {
         return conditionsExtension;
     }
 
@@ -86,10 +89,10 @@ public class Conditions
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setConditionsExtension(_ExtensionType value) {
+    public void setConditionsExtension(ExtensionType value) {
         this.conditionsExtension = value;
     }
 

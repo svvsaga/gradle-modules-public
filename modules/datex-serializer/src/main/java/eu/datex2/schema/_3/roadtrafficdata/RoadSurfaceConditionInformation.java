@@ -3,9 +3,9 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.RoadSurfaceConditionMeasurements;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._WeatherRelatedRoadConditionTypeEnum;
+import eu.datex2.schema._3.common.WeatherRelatedRoadConditionTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,20 +37,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionInformation", propOrder = {
+@XmlType(name = "RoadSurfaceConditionInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "weatherRelatedRoadConditionType",
     "roadSurfaceConditionMeasurements",
-    "_RoadSurfaceConditionInformationExtension"
+    "roadSurfaceConditionInformationExtension"
 })
 public class RoadSurfaceConditionInformation
     extends WeatherData
 {
 
-    protected List<_WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
-    @XmlElement(name = "_roadSurfaceConditionInformationExtension")
-    protected _ExtensionType _RoadSurfaceConditionInformationExtension;
+    @XmlElement(name = "_roadSurfaceConditionInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType roadSurfaceConditionInformationExtension;
 
     /**
      * Gets the value of the weatherRelatedRoadConditionType property.
@@ -70,13 +71,13 @@ public class RoadSurfaceConditionInformation
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _WeatherRelatedRoadConditionTypeEnum }
+     * {@link WeatherRelatedRoadConditionTypeEnum }
      * 
      * 
      */
-    public List<_WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
+    public List<WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
         if (weatherRelatedRoadConditionType == null) {
-            weatherRelatedRoadConditionType = new ArrayList<_WeatherRelatedRoadConditionTypeEnum>();
+            weatherRelatedRoadConditionType = new ArrayList<WeatherRelatedRoadConditionTypeEnum>();
         }
         return this.weatherRelatedRoadConditionType;
     }
@@ -106,27 +107,27 @@ public class RoadSurfaceConditionInformation
     }
 
     /**
-     * Gets the value of the _RoadSurfaceConditionInformationExtension property.
+     * Gets the value of the roadSurfaceConditionInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadSurfaceConditionInformationExtension() {
-        return _RoadSurfaceConditionInformationExtension;
+    public ExtensionType getRoadSurfaceConditionInformationExtension() {
+        return roadSurfaceConditionInformationExtension;
     }
 
     /**
-     * Sets the value of the _RoadSurfaceConditionInformationExtension property.
+     * Sets the value of the roadSurfaceConditionInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadSurfaceConditionInformationExtension(_ExtensionType value) {
-        this._RoadSurfaceConditionInformationExtension = value;
+    public void setRoadSurfaceConditionInformationExtension(ExtensionType value) {
+        this.roadSurfaceConditionInformationExtension = value;
     }
 
 }

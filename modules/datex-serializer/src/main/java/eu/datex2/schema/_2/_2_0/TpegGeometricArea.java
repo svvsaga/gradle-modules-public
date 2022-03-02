@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegGeometricArea", propOrder = {
+@XmlType(name = "TpegGeometricArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "radius",
     "centrePoint",
     "name",
@@ -42,13 +42,15 @@ public class TpegGeometricArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger radius;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates centrePoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegAreaDescriptor name;
-    protected _ExtensionType tpegGeometricAreaExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegGeometricAreaExtension;
 
     /**
      * Gets the value of the radius property.
@@ -127,10 +129,10 @@ public class TpegGeometricArea
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegGeometricAreaExtension() {
+    public ExtensionType getTpegGeometricAreaExtension() {
         return tpegGeometricAreaExtension;
     }
 
@@ -139,10 +141,10 @@ public class TpegGeometricArea
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegGeometricAreaExtension(_ExtensionType value) {
+    public void setTpegGeometricAreaExtension(ExtensionType value) {
         this.tpegGeometricAreaExtension = value;
     }
 

@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignSetting", propOrder = {
+@XmlType(name = "SignSetting", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsSetting",
     "signSettingExtension"
 })
@@ -36,9 +36,10 @@ public class SignSetting
     extends OperatorAction
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected VmsSetting vmsSetting;
-    protected _ExtensionType signSettingExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType signSettingExtension;
 
     /**
      * Gets the value of the vmsSetting property.
@@ -69,10 +70,10 @@ public class SignSetting
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSignSettingExtension() {
+    public ExtensionType getSignSettingExtension() {
         return signSettingExtension;
     }
 
@@ -81,10 +82,10 @@ public class SignSetting
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSignSettingExtension(_ExtensionType value) {
+    public void setSignSettingExtension(ExtensionType value) {
         this.signSettingExtension = value;
     }
 

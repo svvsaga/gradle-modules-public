@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleWeight", propOrder = {
+@XmlType(name = "AxleWeight", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "axlePositionIdentifier",
     "axleWeight",
     "maximumPermittedAxleWeight",
@@ -40,12 +40,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AxleWeight {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axlePositionIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float axleWeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumPermittedAxleWeight;
-    protected _ExtensionType axleWeightExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType axleWeightExtension;
 
     /**
      * Gets the value of the axlePositionIdentifier property.
@@ -124,10 +127,10 @@ public class AxleWeight {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleWeightExtension() {
+    public ExtensionType getAxleWeightExtension() {
         return axleWeightExtension;
     }
 
@@ -136,10 +139,10 @@ public class AxleWeight {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleWeightExtension(_ExtensionType value) {
+    public void setAxleWeightExtension(ExtensionType value) {
         this.axleWeightExtension = value;
     }
 

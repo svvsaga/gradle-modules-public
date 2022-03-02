@@ -1,88 +1,88 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ComputationMethodEnum.
+ * <p>Java class for _ComputationMethodEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ComputationMethodEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples"/&gt;
- *     &lt;enumeration value="arithmeticAverageOfSamplesInATimePeriod"/&gt;
- *     &lt;enumeration value="harmonicAverageOfSamplesInATimePeriod"/&gt;
- *     &lt;enumeration value="medianOfSamplesInATimePeriod"/&gt;
- *     &lt;enumeration value="movingAverageOfSamples"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ComputationMethodEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;ComputationMethodEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ComputationMethodEnum")
-@XmlEnum
-public enum ComputationMethodEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ComputationMethodEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class ComputationMethodEnum {
 
-
-    /**
-     * Arithmetic average of sample values based on a fixed number of samples.
-     *           
-     * 
-     */
-    @XmlEnumValue("arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples")
-    ARITHMETIC_AVERAGE_OF_SAMPLES_BASED_ON_A_FIXED_NUMBER_OF_SAMPLES("arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples"),
+    @XmlValue
+    protected ComputationMethodEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Arithmetic average of sample values in a time period.
+     * Types of computational methods used in deriving data values for data sets.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link ComputationMethodEnum2 }
+     *     
      */
-    @XmlEnumValue("arithmeticAverageOfSamplesInATimePeriod")
-    ARITHMETIC_AVERAGE_OF_SAMPLES_IN_A_TIME_PERIOD("arithmeticAverageOfSamplesInATimePeriod"),
-
-    /**
-     * Harmonic average of sample values in a time period.
-     * 
-     */
-    @XmlEnumValue("harmonicAverageOfSamplesInATimePeriod")
-    HARMONIC_AVERAGE_OF_SAMPLES_IN_A_TIME_PERIOD("harmonicAverageOfSamplesInATimePeriod"),
-
-    /**
-     * Median of sample values taken over a time period.
-     * 
-     */
-    @XmlEnumValue("medianOfSamplesInATimePeriod")
-    MEDIAN_OF_SAMPLES_IN_A_TIME_PERIOD("medianOfSamplesInATimePeriod"),
-
-    /**
-     * Moving average of sample values.
-     * 
-     */
-    @XmlEnumValue("movingAverageOfSamples")
-    MOVING_AVERAGE_OF_SAMPLES("movingAverageOfSamples"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    ComputationMethodEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public ComputationMethodEnum2 getValue() {
         return value;
     }
 
-    public static ComputationMethodEnum fromValue(String v) {
-        for (ComputationMethodEnum c: ComputationMethodEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ComputationMethodEnum2 }
+     *     
+     */
+    public void setValue(ComputationMethodEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

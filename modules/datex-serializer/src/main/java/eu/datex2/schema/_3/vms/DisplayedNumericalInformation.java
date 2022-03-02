@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigDecimal;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,32 +34,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayedNumericalInformation", propOrder = {
+@XmlType(name = "DisplayedNumericalInformation", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "numericalInformationType",
     "numericValue",
     "unitOfMeasure",
-    "_DisplayedNumericalInformationExtension"
+    "displayedNumericalInformationExtension"
 })
 public class DisplayedNumericalInformation {
 
-    @XmlElement(required = true)
-    protected _DisplayedNumericalInformationTypeEnum numericalInformationType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected DisplayedNumericalInformationTypeEnum numericalInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
     protected BigDecimal numericValue;
-    @XmlElement(required = true)
-    protected _UnitOfMeasureEnum unitOfMeasure;
-    @XmlElement(name = "_displayedNumericalInformationExtension")
-    protected _ExtensionType _DisplayedNumericalInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    protected UnitOfMeasureEnum unitOfMeasure;
+    @XmlElement(name = "_displayedNumericalInformationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType displayedNumericalInformationExtension;
 
     /**
      * Gets the value of the numericalInformationType property.
      * 
      * @return
      *     possible object is
-     *     {@link _DisplayedNumericalInformationTypeEnum }
+     *     {@link DisplayedNumericalInformationTypeEnum }
      *     
      */
-    public _DisplayedNumericalInformationTypeEnum getNumericalInformationType() {
+    public DisplayedNumericalInformationTypeEnum getNumericalInformationType() {
         return numericalInformationType;
     }
 
@@ -68,10 +68,10 @@ public class DisplayedNumericalInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DisplayedNumericalInformationTypeEnum }
+     *     {@link DisplayedNumericalInformationTypeEnum }
      *     
      */
-    public void setNumericalInformationType(_DisplayedNumericalInformationTypeEnum value) {
+    public void setNumericalInformationType(DisplayedNumericalInformationTypeEnum value) {
         this.numericalInformationType = value;
     }
 
@@ -104,10 +104,10 @@ public class DisplayedNumericalInformation {
      * 
      * @return
      *     possible object is
-     *     {@link _UnitOfMeasureEnum }
+     *     {@link UnitOfMeasureEnum }
      *     
      */
-    public _UnitOfMeasureEnum getUnitOfMeasure() {
+    public UnitOfMeasureEnum getUnitOfMeasure() {
         return unitOfMeasure;
     }
 
@@ -116,35 +116,35 @@ public class DisplayedNumericalInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _UnitOfMeasureEnum }
+     *     {@link UnitOfMeasureEnum }
      *     
      */
-    public void setUnitOfMeasure(_UnitOfMeasureEnum value) {
+    public void setUnitOfMeasure(UnitOfMeasureEnum value) {
         this.unitOfMeasure = value;
     }
 
     /**
-     * Gets the value of the _DisplayedNumericalInformationExtension property.
+     * Gets the value of the displayedNumericalInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DisplayedNumericalInformationExtension() {
-        return _DisplayedNumericalInformationExtension;
+    public ExtensionType getDisplayedNumericalInformationExtension() {
+        return displayedNumericalInformationExtension;
     }
 
     /**
-     * Sets the value of the _DisplayedNumericalInformationExtension property.
+     * Sets the value of the displayedNumericalInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DisplayedNumericalInformationExtension(_ExtensionType value) {
-        this._DisplayedNumericalInformationExtension = value;
+    public void setDisplayedNumericalInformationExtension(ExtensionType value) {
+        this.displayedNumericalInformationExtension = value;
     }
 
 }

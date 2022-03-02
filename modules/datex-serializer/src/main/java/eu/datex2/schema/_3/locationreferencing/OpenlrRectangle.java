@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,19 +35,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangle", propOrder = {
+@XmlType(name = "OpenlrRectangle", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrLowerLeft",
     "openlrUpperRight",
-    "_OpenlrRectangleExtension"
+    "openlrRectangleExtension"
 })
 public class OpenlrRectangle {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates openlrLowerLeft;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected PointCoordinates openlrUpperRight;
-    @XmlElement(name = "_openlrRectangleExtension")
-    protected _ExtensionType _OpenlrRectangleExtension;
+    @XmlElement(name = "_openlrRectangleExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrRectangleExtension;
 
     /**
      * Gets the value of the openlrLowerLeft property.
@@ -98,27 +98,27 @@ public class OpenlrRectangle {
     }
 
     /**
-     * Gets the value of the _OpenlrRectangleExtension property.
+     * Gets the value of the openlrRectangleExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrRectangleExtension() {
-        return _OpenlrRectangleExtension;
+    public ExtensionType getOpenlrRectangleExtension() {
+        return openlrRectangleExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrRectangleExtension property.
+     * Sets the value of the openlrRectangleExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrRectangleExtension(_ExtensionType value) {
-        this._OpenlrRectangleExtension = value;
+    public void setOpenlrRectangleExtension(ExtensionType value) {
+        this.openlrRectangleExtension = value;
     }
 
 }

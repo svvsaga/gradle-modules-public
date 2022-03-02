@@ -1,95 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TimePrecisionEnum.
+ * <p>Java class for _TimePrecisionEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TimePrecisionEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="tenthsOfSecond"/&gt;
- *     &lt;enumeration value="second"/&gt;
- *     &lt;enumeration value="minute"/&gt;
- *     &lt;enumeration value="quarterHour"/&gt;
- *     &lt;enumeration value="halfHour"/&gt;
- *     &lt;enumeration value="hour"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TimePrecisionEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;TimePrecisionEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TimePrecisionEnum")
-@XmlEnum
-public enum TimePrecisionEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TimePrecisionEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class TimePrecisionEnum {
 
-
-    /**
-     * Time given to the nearest tenth of a second.
-     * 
-     */
-    @XmlEnumValue("tenthsOfSecond")
-    TENTHS_OF_SECOND("tenthsOfSecond"),
-
-    /**
-     * Time given to the nearest second.
-     * 
-     */
-    @XmlEnumValue("second")
-    SECOND("second"),
+    @XmlValue
+    protected TimePrecisionEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Time given to the nearest minute.
+     * List of precisions to which times can be given.
      * 
+     * @return
+     *     possible object is
+     *     {@link TimePrecisionEnum2 }
+     *     
      */
-    @XmlEnumValue("minute")
-    MINUTE("minute"),
-
-    /**
-     * Time given to the nearest quarter hour.
-     * 
-     */
-    @XmlEnumValue("quarterHour")
-    QUARTER_HOUR("quarterHour"),
-
-    /**
-     * Time given to the nearest half hour.
-     * 
-     */
-    @XmlEnumValue("halfHour")
-    HALF_HOUR("halfHour"),
-
-    /**
-     * Time given to the nearest hour.
-     * 
-     */
-    @XmlEnumValue("hour")
-    HOUR("hour"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TimePrecisionEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TimePrecisionEnum2 getValue() {
         return value;
     }
 
-    public static TimePrecisionEnum fromValue(String v) {
-        for (TimePrecisionEnum c: TimePrecisionEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TimePrecisionEnum2 }
+     *     
+     */
+    public void setValue(TimePrecisionEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

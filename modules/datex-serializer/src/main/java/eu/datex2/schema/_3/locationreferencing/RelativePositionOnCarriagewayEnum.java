@@ -1,71 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for RelativePositionOnCarriagewayEnum.
+ * <p>Java class for _RelativePositionOnCarriagewayEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="RelativePositionOnCarriagewayEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="inTheCentre"/&gt;
- *     &lt;enumeration value="onTheLeft"/&gt;
- *     &lt;enumeration value="onTheRight"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_RelativePositionOnCarriagewayEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;RelativePositionOnCarriagewayEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "RelativePositionOnCarriagewayEnum")
-@XmlEnum
-public enum RelativePositionOnCarriagewayEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_RelativePositionOnCarriagewayEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class RelativePositionOnCarriagewayEnum {
 
-
-    /**
-     * In the centre of the roadway.
-     * 
-     */
-    @XmlEnumValue("inTheCentre")
-    IN_THE_CENTRE("inTheCentre"),
-
-    /**
-     * On the left of the roadway.
-     * 
-     */
-    @XmlEnumValue("onTheLeft")
-    ON_THE_LEFT("onTheLeft"),
+    @XmlValue
+    protected RelativePositionOnCarriagewayEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * On the right of the roadway.
+     * Identifies a relative position across a carriageway
      * 
+     * @return
+     *     possible object is
+     *     {@link RelativePositionOnCarriagewayEnum2 }
+     *     
      */
-    @XmlEnumValue("onTheRight")
-    ON_THE_RIGHT("onTheRight"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    RelativePositionOnCarriagewayEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public RelativePositionOnCarriagewayEnum2 getValue() {
         return value;
     }
 
-    public static RelativePositionOnCarriagewayEnum fromValue(String v) {
-        for (RelativePositionOnCarriagewayEnum c: RelativePositionOnCarriagewayEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RelativePositionOnCarriagewayEnum2 }
+     *     
+     */
+    public void setValue(RelativePositionOnCarriagewayEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

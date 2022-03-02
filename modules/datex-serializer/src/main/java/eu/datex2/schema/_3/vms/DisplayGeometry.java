@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,27 +38,33 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayGeometry", propOrder = {
+@XmlType(name = "DisplayGeometry", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
     "pixelsAcross",
     "pixelsDown",
     "displayHeight",
     "displayWidth",
     "positionX",
     "positionY",
-    "_DisplayGeometryExtension"
+    "displayGeometryExtension"
 })
 public class DisplayGeometry {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pixelsAcross;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pixelsDown;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float positionX;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float positionY;
-    @XmlElement(name = "_displayGeometryExtension")
-    protected _ExtensionType _DisplayGeometryExtension;
+    @XmlElement(name = "_displayGeometryExtension", namespace = "http://datex2.eu/schema/3/vms")
+    protected ExtensionType displayGeometryExtension;
 
     /**
      * Gets the value of the pixelsAcross property.
@@ -205,27 +211,27 @@ public class DisplayGeometry {
     }
 
     /**
-     * Gets the value of the _DisplayGeometryExtension property.
+     * Gets the value of the displayGeometryExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DisplayGeometryExtension() {
-        return _DisplayGeometryExtension;
+    public ExtensionType getDisplayGeometryExtension() {
+        return displayGeometryExtension;
     }
 
     /**
-     * Sets the value of the _DisplayGeometryExtension property.
+     * Sets the value of the displayGeometryExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DisplayGeometryExtension(_ExtensionType value) {
-        this._DisplayGeometryExtension = value;
+    public void setDisplayGeometryExtension(ExtensionType value) {
+        this.displayGeometryExtension = value;
     }
 
 }

@@ -28,15 +28,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod2PrimaryPointLocation", propOrder = {
+@XmlType(name = "AlertCMethod2PrimaryPointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCLocation",
     "alertCMethod2PrimaryPointLocationExtension"
 })
 public class AlertCMethod2PrimaryPointLocation {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCLocation alertCLocation;
-    protected _ExtensionType alertCMethod2PrimaryPointLocationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCMethod2PrimaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -67,10 +68,10 @@ public class AlertCMethod2PrimaryPointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod2PrimaryPointLocationExtension() {
+    public ExtensionType getAlertCMethod2PrimaryPointLocationExtension() {
         return alertCMethod2PrimaryPointLocationExtension;
     }
 
@@ -79,10 +80,10 @@ public class AlertCMethod2PrimaryPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod2PrimaryPointLocationExtension(_ExtensionType value) {
+    public void setAlertCMethod2PrimaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod2PrimaryPointLocationExtension = value;
     }
 

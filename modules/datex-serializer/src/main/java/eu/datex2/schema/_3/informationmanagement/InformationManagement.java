@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.informationmanagement;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -29,15 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InformationManagement", propOrder = {
+@XmlType(name = "InformationManagement", namespace = "http://datex2.eu/schema/3/informationManagement", propOrder = {
     "informationManagedResourceList",
-    "_InformationManagementExtension"
+    "informationManagementExtension"
 })
 public class InformationManagement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement")
     protected InformationManagedResourceList informationManagedResourceList;
-    @XmlElement(name = "_informationManagementExtension")
-    protected _ExtensionType _InformationManagementExtension;
+    @XmlElement(name = "_informationManagementExtension", namespace = "http://datex2.eu/schema/3/informationManagement")
+    protected ExtensionType informationManagementExtension;
 
     /**
      * Gets the value of the informationManagedResourceList property.
@@ -64,27 +65,27 @@ public class InformationManagement {
     }
 
     /**
-     * Gets the value of the _InformationManagementExtension property.
+     * Gets the value of the informationManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_InformationManagementExtension() {
-        return _InformationManagementExtension;
+    public ExtensionType getInformationManagementExtension() {
+        return informationManagementExtension;
     }
 
     /**
-     * Sets the value of the _InformationManagementExtension property.
+     * Sets the value of the informationManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_InformationManagementExtension(_ExtensionType value) {
-        this._InformationManagementExtension = value;
+    public void setInformationManagementExtension(ExtensionType value) {
+        this.informationManagementExtension = value;
     }
 
 }

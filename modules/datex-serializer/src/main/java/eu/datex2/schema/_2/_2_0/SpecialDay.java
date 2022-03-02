@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpecialDay", propOrder = {
+@XmlType(name = "SpecialDay", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "intersectWithApplicableDays",
     "specialDayType",
     "specialDayName",
@@ -43,13 +43,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class SpecialDay {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean intersectWithApplicableDays;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected SpecialDayTypeEnum specialDayType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString specialDayName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<PublicHoliday> publicHoliday;
-    protected _ExtensionType specialDayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType specialDayExtension;
 
     /**
      * Gets the value of the intersectWithApplicableDays property.
@@ -149,10 +153,10 @@ public class SpecialDay {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSpecialDayExtension() {
+    public ExtensionType getSpecialDayExtension() {
         return specialDayExtension;
     }
 
@@ -161,10 +165,10 @@ public class SpecialDay {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSpecialDayExtension(_ExtensionType value) {
+    public void setSpecialDayExtension(ExtensionType value) {
         this.specialDayExtension = value;
     }
 

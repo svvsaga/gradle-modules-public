@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficStatusValue", propOrder = {
+@XmlType(name = "TrafficStatusValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "trafficStatusValue",
     "trafficStatusValueExtension"
 })
@@ -37,10 +37,11 @@ public class TrafficStatusValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TrafficStatusEnum trafficStatusValue;
-    protected _ExtensionType trafficStatusValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficStatusValueExtension;
 
     /**
      * Gets the value of the trafficStatusValue property.
@@ -71,10 +72,10 @@ public class TrafficStatusValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficStatusValueExtension() {
+    public ExtensionType getTrafficStatusValueExtension() {
         return trafficStatusValueExtension;
     }
 
@@ -83,10 +84,10 @@ public class TrafficStatusValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficStatusValueExtension(_ExtensionType value) {
+    public void setTrafficStatusValueExtension(ExtensionType value) {
         this.trafficStatusValueExtension = value;
     }
 

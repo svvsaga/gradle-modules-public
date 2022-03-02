@@ -1,84 +1,87 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for TrafficFlowCharacteristicsEnum.
+ * <p>Java class for _TrafficFlowCharacteristicsEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="TrafficFlowCharacteristicsEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="erraticFlow"/&gt;
- *     &lt;enumeration value="smoothFlow"/&gt;
- *     &lt;enumeration value="stopAndGo"/&gt;
- *     &lt;enumeration value="trafficBlocked"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_TrafficFlowCharacteristicsEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;TrafficFlowCharacteristicsEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "TrafficFlowCharacteristicsEnum")
-@XmlEnum
-public enum TrafficFlowCharacteristicsEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_TrafficFlowCharacteristicsEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class TrafficFlowCharacteristicsEnum {
 
-
-    /**
-     * Traffic flow is of an irregular nature, subject to sudden changes in rates.
-     *           
-     * 
-     */
-    @XmlEnumValue("erraticFlow")
-    ERRATIC_FLOW("erraticFlow"),
+    @XmlValue
+    protected TrafficFlowCharacteristicsEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Traffic flow is smooth.
+     * Types of consistency (steadiness) of traffic flow.
      * 
+     * @return
+     *     possible object is
+     *     {@link TrafficFlowCharacteristicsEnum2 }
+     *     
      */
-    @XmlEnumValue("smoothFlow")
-    SMOOTH_FLOW("smoothFlow"),
-
-    /**
-     * Traffic flow is of a stop and go nature with queues forming and ending
-     *             continuously on the specified section of road.
-     *           
-     * 
-     */
-    @XmlEnumValue("stopAndGo")
-    STOP_AND_GO("stopAndGo"),
-
-    /**
-     * Traffic is blocked at the specified location and in the specified direction due to
-     *             an unplanned event.
-     *           
-     * 
-     */
-    @XmlEnumValue("trafficBlocked")
-    TRAFFIC_BLOCKED("trafficBlocked"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    TrafficFlowCharacteristicsEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public TrafficFlowCharacteristicsEnum2 getValue() {
         return value;
     }
 
-    public static TrafficFlowCharacteristicsEnum fromValue(String v) {
-        for (TrafficFlowCharacteristicsEnum c: TrafficFlowCharacteristicsEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TrafficFlowCharacteristicsEnum2 }
+     *     
+     */
+    public void setValue(TrafficFlowCharacteristicsEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,27 +40,33 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Impact", propOrder = {
+@XmlType(name = "Impact", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "capacityRemaining",
     "numberOfLanesRestricted",
     "numberOfOperationalLanes",
     "residualLaneWidth",
     "residualRoadWidth",
     "delays",
-    "_ImpactExtension"
+    "impactExtension"
 })
 public class Impact {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float capacityRemaining;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfLanesRestricted;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfOperationalLanes;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float residualLaneWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float residualRoadWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Delays delays;
-    @XmlElement(name = "_impactExtension")
-    protected _ExtensionType _ImpactExtension;
+    @XmlElement(name = "_impactExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType impactExtension;
 
     /**
      * Gets the value of the capacityRemaining property.
@@ -207,27 +213,27 @@ public class Impact {
     }
 
     /**
-     * Gets the value of the _ImpactExtension property.
+     * Gets the value of the impactExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ImpactExtension() {
-        return _ImpactExtension;
+    public ExtensionType getImpactExtension() {
+        return impactExtension;
     }
 
     /**
-     * Sets the value of the _ImpactExtension property.
+     * Sets the value of the impactExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ImpactExtension(_ExtensionType value) {
-        this._ImpactExtension = value;
+    public void setImpactExtension(ExtensionType value) {
+        this.impactExtension = value;
     }
 
 }

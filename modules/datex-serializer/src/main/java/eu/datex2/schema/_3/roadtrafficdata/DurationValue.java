@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,17 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DurationValue", propOrder = {
+@XmlType(name = "DurationValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "duration",
-    "_DurationValueExtension"
+    "durationValueExtension"
 })
 public class DurationValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected float duration;
-    @XmlElement(name = "_durationValueExtension")
-    protected _ExtensionType _DurationValueExtension;
+    @XmlElement(name = "_durationValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType durationValueExtension;
 
     /**
      * Gets the value of the duration property.
@@ -61,27 +62,27 @@ public class DurationValue
     }
 
     /**
-     * Gets the value of the _DurationValueExtension property.
+     * Gets the value of the durationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DurationValueExtension() {
-        return _DurationValueExtension;
+    public ExtensionType getDurationValueExtension() {
+        return durationValueExtension;
     }
 
     /**
-     * Sets the value of the _DurationValueExtension property.
+     * Sets the value of the durationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DurationValueExtension(_ExtensionType value) {
-        this._DurationValueExtension = value;
+    public void setDurationValueExtension(ExtensionType value) {
+        this.durationValueExtension = value;
     }
 
 }

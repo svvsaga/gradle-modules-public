@@ -1,67 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for DirectionPurposeEnum.
+ * <p>Java class for _DirectionPurposeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="DirectionPurposeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="inbound"/&gt;
- *     &lt;enumeration value="outbound"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_DirectionPurposeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;DirectionPurposeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "DirectionPurposeEnum")
-@XmlEnum
-public enum DirectionPurposeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_DirectionPurposeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class DirectionPurposeEnum {
 
-
-    /**
-     * On the carriageway or lane which is inbound towards the centre of the town or
-     *             city.
-     *           
-     * 
-     */
-    @XmlEnumValue("inbound")
-    INBOUND("inbound"),
+    @XmlValue
+    protected DirectionPurposeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * On the carriageway or lane which is outbound from the centre of the town or
-     *             city.
-     *           
+     * Main purpose of a direction of a road
      * 
+     * @return
+     *     possible object is
+     *     {@link DirectionPurposeEnum2 }
+     *     
      */
-    @XmlEnumValue("outbound")
-    OUTBOUND("outbound"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    DirectionPurposeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public DirectionPurposeEnum2 getValue() {
         return value;
     }
 
-    public static DirectionPurposeEnum fromValue(String v) {
-        for (DirectionPurposeEnum c: DirectionPurposeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DirectionPurposeEnum2 }
+     *     
+     */
+    public void setValue(DirectionPurposeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

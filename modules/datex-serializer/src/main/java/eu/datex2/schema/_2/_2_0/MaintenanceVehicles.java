@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -32,18 +33,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MaintenanceVehicles", propOrder = {
+@XmlType(name = "MaintenanceVehicles", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfMaintenanceVehicles",
     "maintenanceVehicleActions",
     "maintenanceVehiclesExtension"
 })
 public class MaintenanceVehicles {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfMaintenanceVehicles;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
-    protected _ExtensionType maintenanceVehiclesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType maintenanceVehiclesExtension;
 
     /**
      * Gets the value of the numberOfMaintenanceVehicles property.
@@ -103,10 +107,10 @@ public class MaintenanceVehicles {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMaintenanceVehiclesExtension() {
+    public ExtensionType getMaintenanceVehiclesExtension() {
         return maintenanceVehiclesExtension;
     }
 
@@ -115,10 +119,10 @@ public class MaintenanceVehicles {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMaintenanceVehiclesExtension(_ExtensionType value) {
+    public void setMaintenanceVehiclesExtension(ExtensionType value) {
         this.maintenanceVehiclesExtension = value;
     }
 

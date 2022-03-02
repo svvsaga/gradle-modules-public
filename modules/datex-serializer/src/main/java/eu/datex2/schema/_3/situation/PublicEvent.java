@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.situation;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._PublicEventTypeEnum;
+import eu.datex2.schema._3.common.PublicEventTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,30 +34,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicEvent", propOrder = {
+@XmlType(name = "PublicEvent", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "publicEventType",
     "venueName",
-    "_PublicEventExtension"
+    "publicEventExtension"
 })
 public class PublicEvent
     extends Activity
 {
 
-    @XmlElement(required = true)
-    protected _PublicEventTypeEnum publicEventType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected PublicEventTypeEnum publicEventType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString venueName;
-    @XmlElement(name = "_publicEventExtension")
-    protected _ExtensionType _PublicEventExtension;
+    @XmlElement(name = "_publicEventExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType publicEventExtension;
 
     /**
      * Gets the value of the publicEventType property.
      * 
      * @return
      *     possible object is
-     *     {@link _PublicEventTypeEnum }
+     *     {@link PublicEventTypeEnum }
      *     
      */
-    public _PublicEventTypeEnum getPublicEventType() {
+    public PublicEventTypeEnum getPublicEventType() {
         return publicEventType;
     }
 
@@ -66,10 +67,10 @@ public class PublicEvent
      * 
      * @param value
      *     allowed object is
-     *     {@link _PublicEventTypeEnum }
+     *     {@link PublicEventTypeEnum }
      *     
      */
-    public void setPublicEventType(_PublicEventTypeEnum value) {
+    public void setPublicEventType(PublicEventTypeEnum value) {
         this.publicEventType = value;
     }
 
@@ -98,27 +99,27 @@ public class PublicEvent
     }
 
     /**
-     * Gets the value of the _PublicEventExtension property.
+     * Gets the value of the publicEventExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PublicEventExtension() {
-        return _PublicEventExtension;
+    public ExtensionType getPublicEventExtension() {
+        return publicEventExtension;
     }
 
     /**
-     * Sets the value of the _PublicEventExtension property.
+     * Sets the value of the publicEventExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PublicEventExtension(_ExtensionType value) {
-        this._PublicEventExtension = value;
+    public void setPublicEventExtension(ExtensionType value) {
+        this.publicEventExtension = value;
     }
 
 }

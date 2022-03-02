@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,29 +33,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedManagement", propOrder = {
+@XmlType(name = "SpeedManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "speedManagementType",
     "temporarySpeedLimit",
-    "_SpeedManagementExtension"
+    "speedManagementExtension"
 })
 public class SpeedManagement
     extends NetworkManagement
 {
 
-    protected _SpeedManagementTypeEnum speedManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected SpeedManagementTypeEnum speedManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float temporarySpeedLimit;
-    @XmlElement(name = "_speedManagementExtension")
-    protected _ExtensionType _SpeedManagementExtension;
+    @XmlElement(name = "_speedManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType speedManagementExtension;
 
     /**
      * Gets the value of the speedManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link _SpeedManagementTypeEnum }
+     *     {@link SpeedManagementTypeEnum }
      *     
      */
-    public _SpeedManagementTypeEnum getSpeedManagementType() {
+    public SpeedManagementTypeEnum getSpeedManagementType() {
         return speedManagementType;
     }
 
@@ -64,10 +66,10 @@ public class SpeedManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _SpeedManagementTypeEnum }
+     *     {@link SpeedManagementTypeEnum }
      *     
      */
-    public void setSpeedManagementType(_SpeedManagementTypeEnum value) {
+    public void setSpeedManagementType(SpeedManagementTypeEnum value) {
         this.speedManagementType = value;
     }
 
@@ -96,27 +98,27 @@ public class SpeedManagement
     }
 
     /**
-     * Gets the value of the _SpeedManagementExtension property.
+     * Gets the value of the speedManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SpeedManagementExtension() {
-        return _SpeedManagementExtension;
+    public ExtensionType getSpeedManagementExtension() {
+        return speedManagementExtension;
     }
 
     /**
-     * Sets the value of the _SpeedManagementExtension property.
+     * Sets the value of the speedManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SpeedManagementExtension(_ExtensionType value) {
-        this._SpeedManagementExtension = value;
+    public void setSpeedManagementExtension(ExtensionType value) {
+        this.speedManagementExtension = value;
     }
 
 }

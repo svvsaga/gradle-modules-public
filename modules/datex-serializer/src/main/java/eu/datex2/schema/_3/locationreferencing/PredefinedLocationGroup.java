@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,21 +41,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationGroup", propOrder = {
+@XmlType(name = "PredefinedLocationGroup", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "predefinedLocationGroupName",
     "locationGroup",
     "predefinedLocation",
-    "_PredefinedLocationGroupExtension"
+    "predefinedLocationGroupExtension"
 })
 public class PredefinedLocationGroup
     extends PredefinedLocationReference
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString predefinedLocationGroupName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LocationGroup locationGroup;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<PredefinedLocation> predefinedLocation;
-    @XmlElement(name = "_predefinedLocationGroupExtension")
-    protected _ExtensionType _PredefinedLocationGroupExtension;
+    @XmlElement(name = "_predefinedLocationGroupExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType predefinedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -139,27 +142,27 @@ public class PredefinedLocationGroup
     }
 
     /**
-     * Gets the value of the _PredefinedLocationGroupExtension property.
+     * Gets the value of the predefinedLocationGroupExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PredefinedLocationGroupExtension() {
-        return _PredefinedLocationGroupExtension;
+    public ExtensionType getPredefinedLocationGroupExtension() {
+        return predefinedLocationGroupExtension;
     }
 
     /**
-     * Sets the value of the _PredefinedLocationGroupExtension property.
+     * Sets the value of the predefinedLocationGroupExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PredefinedLocationGroupExtension(_ExtensionType value) {
-        this._PredefinedLocationGroupExtension = value;
+    public void setPredefinedLocationGroupExtension(ExtensionType value) {
+        this.predefinedLocationGroupExtension = value;
     }
 
     /**

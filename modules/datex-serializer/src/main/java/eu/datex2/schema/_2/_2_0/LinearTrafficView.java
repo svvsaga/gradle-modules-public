@@ -33,18 +33,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearTrafficView", propOrder = {
+@XmlType(name = "LinearTrafficView", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "linearPredefinedLocationReference",
     "trafficViewRecord",
     "linearTrafficViewExtension"
 })
 public class LinearTrafficView {
 
-    @XmlElement(required = true)
-    protected _PredefinedLocationVersionedReference linearPredefinedLocationReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected PredefinedLocationVersionedReference linearPredefinedLocationReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<TrafficViewRecord> trafficViewRecord;
-    protected _ExtensionType linearTrafficViewExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType linearTrafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -53,10 +54,10 @@ public class LinearTrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public _PredefinedLocationVersionedReference getLinearPredefinedLocationReference() {
+    public PredefinedLocationVersionedReference getLinearPredefinedLocationReference() {
         return linearPredefinedLocationReference;
     }
 
@@ -65,10 +66,10 @@ public class LinearTrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public void setLinearPredefinedLocationReference(_PredefinedLocationVersionedReference value) {
+    public void setLinearPredefinedLocationReference(PredefinedLocationVersionedReference value) {
         this.linearPredefinedLocationReference = value;
     }
 
@@ -106,10 +107,10 @@ public class LinearTrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearTrafficViewExtension() {
+    public ExtensionType getLinearTrafficViewExtension() {
         return linearTrafficViewExtension;
     }
 
@@ -118,10 +119,10 @@ public class LinearTrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearTrafficViewExtension(_ExtensionType value) {
+    public void setLinearTrafficViewExtension(ExtensionType value) {
         this.linearTrafficViewExtension = value;
     }
 

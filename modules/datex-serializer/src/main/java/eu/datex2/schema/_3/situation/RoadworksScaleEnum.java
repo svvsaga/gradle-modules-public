@@ -1,74 +1,89 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for RoadworksScaleEnum.
+ * <p>Java class for _RoadworksScaleEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="RoadworksScaleEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="major"/&gt;
- *     &lt;enumeration value="medium"/&gt;
- *     &lt;enumeration value="minor"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_RoadworksScaleEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;RoadworksScaleEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "RoadworksScaleEnum")
-@XmlEnum
-public enum RoadworksScaleEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_RoadworksScaleEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+    "value"
+})
+public class RoadworksScaleEnum {
 
-
-    /**
-     * The roadworks scale is major according to the responsible road operator.
-     *           
-     * 
-     */
-    @XmlEnumValue("major")
-    MAJOR("major"),
+    @XmlValue
+    protected RoadworksScaleEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The roadworks scale is medium according to the responsible road operator.
-     *           
+     * Grade of complexity of the roadworks according to the responsible road operator. For
+     *         example determined by size, duration and/or traffic disruption.
+     *       
      * 
+     * @return
+     *     possible object is
+     *     {@link RoadworksScaleEnum2 }
+     *     
      */
-    @XmlEnumValue("medium")
-    MEDIUM("medium"),
-
-    /**
-     * The roadworks scale is minor according to the responsible road operator.
-     *           
-     * 
-     */
-    @XmlEnumValue("minor")
-    MINOR("minor"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    RoadworksScaleEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public RoadworksScaleEnum2 getValue() {
         return value;
     }
 
-    public static RoadworksScaleEnum fromValue(String v) {
-        for (RoadworksScaleEnum c: RoadworksScaleEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RoadworksScaleEnum2 }
+     *     
+     */
+    public void setValue(RoadworksScaleEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunctionPointDescriptor", propOrder = {
+@XmlType(name = "TpegJunctionPointDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "tpegJunctionPointDescriptorType",
     "tpegJunctionPointDescriptorExtension"
 })
@@ -37,10 +37,11 @@ public class TpegJunctionPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03JunctionPointDescriptorSubtypeEnum tpegJunctionPointDescriptorType;
-    protected _ExtensionType tpegJunctionPointDescriptorExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType tpegJunctionPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegJunctionPointDescriptorType property.
@@ -71,10 +72,10 @@ public class TpegJunctionPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegJunctionPointDescriptorExtension() {
+    public ExtensionType getTpegJunctionPointDescriptorExtension() {
         return tpegJunctionPointDescriptorExtension;
     }
 
@@ -83,10 +84,10 @@ public class TpegJunctionPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegJunctionPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegJunctionPointDescriptorExtension(ExtensionType value) {
         this.tpegJunctionPointDescriptorExtension = value;
     }
 

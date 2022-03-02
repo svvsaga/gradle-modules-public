@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,21 +38,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SingleRoadLinearLocation", propOrder = {
+@XmlType(name = "SingleRoadLinearLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "tpegLinearLocation",
     "alertCLinear",
     "linearWithinLinearElement",
-    "_SingleRoadLinearLocationExtension"
+    "singleRoadLinearLocationExtension"
 })
 public class SingleRoadLinearLocation
     extends LinearLocation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegLinearLocation tpegLinearLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCLinear> alertCLinear;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<LinearWithinLinearElement> linearWithinLinearElement;
-    @XmlElement(name = "_singleRoadLinearLocationExtension")
-    protected _ExtensionType _SingleRoadLinearLocationExtension;
+    @XmlElement(name = "_singleRoadLinearLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType singleRoadLinearLocationExtension;
 
     /**
      * Gets the value of the tpegLinearLocation property.
@@ -137,27 +140,27 @@ public class SingleRoadLinearLocation
     }
 
     /**
-     * Gets the value of the _SingleRoadLinearLocationExtension property.
+     * Gets the value of the singleRoadLinearLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SingleRoadLinearLocationExtension() {
-        return _SingleRoadLinearLocationExtension;
+    public ExtensionType getSingleRoadLinearLocationExtension() {
+        return singleRoadLinearLocationExtension;
     }
 
     /**
-     * Sets the value of the _SingleRoadLinearLocationExtension property.
+     * Sets the value of the singleRoadLinearLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SingleRoadLinearLocationExtension(_ExtensionType value) {
-        this._SingleRoadLinearLocationExtension = value;
+    public void setSingleRoadLinearLocationExtension(ExtensionType value) {
+        this.singleRoadLinearLocationExtension = value;
     }
 
 }

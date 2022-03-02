@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpeningTimes", propOrder = {
+@XmlType(name = "OpeningTimes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "lastUpdated",
     "openAllYear",
     "available24Hours",
@@ -48,17 +48,24 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpeningTimes {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastUpdated;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openAllYear;
-    @XmlElement(name = "available24hours")
+    @XmlElement(name = "available24hours", namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean available24Hours;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openingTimesUnknown;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openingTimesNotSpecified;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Validity validity;
-    protected _ExtensionType openingTimesExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openingTimesExtension;
 
     /**
      * Gets the value of the lastUpdated property.
@@ -233,10 +240,10 @@ public class OpeningTimes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpeningTimesExtension() {
+    public ExtensionType getOpeningTimesExtension() {
         return openingTimesExtension;
     }
 
@@ -245,10 +252,10 @@ public class OpeningTimes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpeningTimesExtension(_ExtensionType value) {
+    public void setOpeningTimesExtension(ExtensionType value) {
         this.openingTimesExtension = value;
     }
 

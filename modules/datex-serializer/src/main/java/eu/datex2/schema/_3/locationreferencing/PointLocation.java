@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,25 +37,30 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointLocation", propOrder = {
+@XmlType(name = "PointLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "pointByCoordinates",
     "pointAlongLinearElement",
     "alertCPoint",
     "tpegPointLocation",
     "openlrPointLocationReference",
-    "_PointLocationExtension"
+    "pointLocationExtension"
 })
 public class PointLocation
     extends NetworkLocation
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PointByCoordinates pointByCoordinates;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<PointAlongLinearElement> pointAlongLinearElement;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCPoint> alertCPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegPointLocation tpegPointLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrPointLocationReference openlrPointLocationReference;
-    @XmlElement(name = "_pointLocationExtension")
-    protected _ExtensionType _PointLocationExtension;
+    @XmlElement(name = "_pointLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType pointLocationExtension;
 
     /**
      * Gets the value of the pointByCoordinates property.
@@ -188,27 +193,27 @@ public class PointLocation
     }
 
     /**
-     * Gets the value of the _PointLocationExtension property.
+     * Gets the value of the pointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PointLocationExtension() {
-        return _PointLocationExtension;
+    public ExtensionType getPointLocationExtension() {
+        return pointLocationExtension;
     }
 
     /**
-     * Sets the value of the _PointLocationExtension property.
+     * Sets the value of the pointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PointLocationExtension(_ExtensionType value) {
-        this._PointLocationExtension = value;
+    public void setPointLocationExtension(ExtensionType value) {
+        this.pointLocationExtension = value;
     }
 
 }

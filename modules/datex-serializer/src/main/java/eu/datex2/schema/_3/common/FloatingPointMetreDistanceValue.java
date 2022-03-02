@@ -31,17 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FloatingPointMetreDistanceValue", propOrder = {
+@XmlType(name = "FloatingPointMetreDistanceValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "distance",
-    "_FloatingPointMetreDistanceValueExtension"
+    "floatingPointMetreDistanceValueExtension"
 })
 public class FloatingPointMetreDistanceValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float distance;
-    @XmlElement(name = "_floatingPointMetreDistanceValueExtension")
-    protected _ExtensionType _FloatingPointMetreDistanceValueExtension;
+    @XmlElement(name = "_floatingPointMetreDistanceValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType floatingPointMetreDistanceValueExtension;
 
     /**
      * Gets the value of the distance property.
@@ -60,27 +61,27 @@ public class FloatingPointMetreDistanceValue
     }
 
     /**
-     * Gets the value of the _FloatingPointMetreDistanceValueExtension property.
+     * Gets the value of the floatingPointMetreDistanceValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_FloatingPointMetreDistanceValueExtension() {
-        return _FloatingPointMetreDistanceValueExtension;
+    public ExtensionType getFloatingPointMetreDistanceValueExtension() {
+        return floatingPointMetreDistanceValueExtension;
     }
 
     /**
-     * Sets the value of the _FloatingPointMetreDistanceValueExtension property.
+     * Sets the value of the floatingPointMetreDistanceValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_FloatingPointMetreDistanceValueExtension(_ExtensionType value) {
-        this._FloatingPointMetreDistanceValueExtension = value;
+    public void setFloatingPointMetreDistanceValueExtension(ExtensionType value) {
+        this.floatingPointMetreDistanceValueExtension = value;
     }
 
 }

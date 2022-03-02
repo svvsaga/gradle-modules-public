@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCountValue", propOrder = {
+@XmlType(name = "VehicleCountValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vehicleCount",
     "vehicleCountValueExtension"
 })
@@ -38,10 +38,11 @@ public class VehicleCountValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleCount;
-    protected _ExtensionType vehicleCountValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleCountValueExtension;
 
     /**
      * Gets the value of the vehicleCount property.
@@ -72,10 +73,10 @@ public class VehicleCountValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleCountValueExtension() {
+    public ExtensionType getVehicleCountValueExtension() {
         return vehicleCountValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class VehicleCountValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleCountValueExtension(_ExtensionType value) {
+    public void setVehicleCountValueExtension(ExtensionType value) {
         this.vehicleCountValueExtension = value;
     }
 

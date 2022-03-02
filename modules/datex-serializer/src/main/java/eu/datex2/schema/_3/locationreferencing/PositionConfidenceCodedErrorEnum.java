@@ -1,65 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for PositionConfidenceCodedErrorEnum.
+ * <p>Java class for _PositionConfidenceCodedErrorEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="PositionConfidenceCodedErrorEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="outOfRange"/&gt;
- *     &lt;enumeration value="unavailable"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_PositionConfidenceCodedErrorEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;PositionConfidenceCodedErrorEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "PositionConfidenceCodedErrorEnum")
-@XmlEnum
-public enum PositionConfidenceCodedErrorEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_PositionConfidenceCodedErrorEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class PositionConfidenceCodedErrorEnum {
 
-
-    /**
-     * Indicates the accuracy is out of range, i.e. greater than 4 093 cm for horizontal
-     *             position.
-     *           
-     * 
-     */
-    @XmlEnumValue("outOfRange")
-    OUT_OF_RANGE("outOfRange"),
+    @XmlValue
+    protected PositionConfidenceCodedErrorEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Indicates the accuracy information is unavailable.
+     * Error code for horizontal or vertical position confidence
      * 
+     * @return
+     *     possible object is
+     *     {@link PositionConfidenceCodedErrorEnum2 }
+     *     
      */
-    @XmlEnumValue("unavailable")
-    UNAVAILABLE("unavailable"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    PositionConfidenceCodedErrorEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public PositionConfidenceCodedErrorEnum2 getValue() {
         return value;
     }
 
-    public static PositionConfidenceCodedErrorEnum fromValue(String v) {
-        for (PositionConfidenceCodedErrorEnum c: PositionConfidenceCodedErrorEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PositionConfidenceCodedErrorEnum2 }
+     *     
+     */
+    public void setValue(PositionConfidenceCodedErrorEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

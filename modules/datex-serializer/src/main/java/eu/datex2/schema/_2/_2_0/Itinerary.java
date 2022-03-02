@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -30,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Itinerary", propOrder = {
+@XmlType(name = "Itinerary", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "routeDestination",
     "itineraryExtension"
 })
@@ -42,8 +43,10 @@ public abstract class Itinerary
     extends GroupOfLocations
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Destination> routeDestination;
-    protected _ExtensionType itineraryExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType itineraryExtension;
 
     /**
      * Gets the value of the routeDestination property.
@@ -79,10 +82,10 @@ public abstract class Itinerary
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getItineraryExtension() {
+    public ExtensionType getItineraryExtension() {
         return itineraryExtension;
     }
 
@@ -91,10 +94,10 @@ public abstract class Itinerary
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setItineraryExtension(_ExtensionType value) {
+    public void setItineraryExtension(ExtensionType value) {
         this.itineraryExtension = value;
     }
 

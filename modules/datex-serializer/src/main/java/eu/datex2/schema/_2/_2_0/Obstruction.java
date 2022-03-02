@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -31,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Obstruction", propOrder = {
+@XmlType(name = "Obstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "numberOfObstructions",
     "mobilityOfObstruction",
     "obstructionExtension"
@@ -47,10 +48,13 @@ public abstract class Obstruction
     extends TrafficElement
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfObstructions;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Mobility mobilityOfObstruction;
-    protected _ExtensionType obstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType obstructionExtension;
 
     /**
      * Gets the value of the numberOfObstructions property.
@@ -105,10 +109,10 @@ public abstract class Obstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getObstructionExtension() {
+    public ExtensionType getObstructionExtension() {
         return obstructionExtension;
     }
 
@@ -117,10 +121,10 @@ public abstract class Obstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setObstructionExtension(_ExtensionType value) {
+    public void setObstructionExtension(ExtensionType value) {
         this.obstructionExtension = value;
     }
 

@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElectricCharging", propOrder = {
+@XmlType(name = "ElectricCharging", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "chargingStationUsageType",
     "chargingStationModelType",
     "maximumCurrent",
@@ -48,17 +48,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ElectricCharging {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<ChargingStationUsageTypeEnum> chargingStationUsageType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargingStationModelType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumCurrent;
-    @XmlElement(type = Float.class)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", type = Float.class)
     protected List<Float> voltage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> chargingStationConnectorType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfChargingPoints;
-    protected _ExtensionType electricChargingExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType electricChargingExtension;
 
     /**
      * Gets the value of the chargingStationUsageType property.
@@ -224,10 +229,10 @@ public class ElectricCharging {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElectricChargingExtension() {
+    public ExtensionType getElectricChargingExtension() {
         return electricChargingExtension;
     }
 
@@ -236,10 +241,10 @@ public class ElectricCharging {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElectricChargingExtension(_ExtensionType value) {
+    public void setElectricChargingExtension(ExtensionType value) {
         this.electricChargingExtension = value;
     }
 

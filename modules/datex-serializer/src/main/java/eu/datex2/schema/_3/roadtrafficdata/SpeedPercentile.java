@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PercentageValue;
 import eu.datex2.schema._3.common.SpeedValue;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,19 +36,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedPercentile", propOrder = {
+@XmlType(name = "SpeedPercentile", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "vehiclePercentage",
     "speedPercentile",
-    "_SpeedPercentileExtension"
+    "speedPercentileExtension"
 })
 public class SpeedPercentile {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected PercentageValue vehiclePercentage;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected SpeedValue speedPercentile;
-    @XmlElement(name = "_speedPercentileExtension")
-    protected _ExtensionType _SpeedPercentileExtension;
+    @XmlElement(name = "_speedPercentileExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType speedPercentileExtension;
 
     /**
      * Gets the value of the vehiclePercentage property.
@@ -99,27 +99,27 @@ public class SpeedPercentile {
     }
 
     /**
-     * Gets the value of the _SpeedPercentileExtension property.
+     * Gets the value of the speedPercentileExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SpeedPercentileExtension() {
-        return _SpeedPercentileExtension;
+    public ExtensionType getSpeedPercentileExtension() {
+        return speedPercentileExtension;
     }
 
     /**
-     * Sets the value of the _SpeedPercentileExtension property.
+     * Sets the value of the speedPercentileExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SpeedPercentileExtension(_ExtensionType value) {
-        this._SpeedPercentileExtension = value;
+    public void setSpeedPercentileExtension(ExtensionType value) {
+        this.speedPercentileExtension = value;
     }
 
 }

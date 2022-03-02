@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PcuFlowValue", propOrder = {
+@XmlType(name = "PcuFlowValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "pcuFlowRate",
     "pcuFlowValueExtension"
 })
@@ -38,10 +38,11 @@ public class PcuFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pcuFlowRate;
-    protected _ExtensionType pcuFlowValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType pcuFlowValueExtension;
 
     /**
      * Gets the value of the pcuFlowRate property.
@@ -72,10 +73,10 @@ public class PcuFlowValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPcuFlowValueExtension() {
+    public ExtensionType getPcuFlowValueExtension() {
         return pcuFlowValueExtension;
     }
 
@@ -84,10 +85,10 @@ public class PcuFlowValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPcuFlowValueExtension(_ExtensionType value) {
+    public void setPcuFlowValueExtension(ExtensionType value) {
         this.pcuFlowValueExtension = value;
     }
 

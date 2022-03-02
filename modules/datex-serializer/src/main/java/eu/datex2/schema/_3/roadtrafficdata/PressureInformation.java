@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Pressure;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PressureInformation", propOrder = {
+@XmlType(name = "PressureInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "pressure",
-    "_PressureInformationExtension"
+    "pressureInformationExtension"
 })
 public class PressureInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected Pressure pressure;
-    @XmlElement(name = "_pressureInformationExtension")
-    protected _ExtensionType _PressureInformationExtension;
+    @XmlElement(name = "_pressureInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType pressureInformationExtension;
 
     /**
      * Gets the value of the pressure property.
@@ -70,27 +70,27 @@ public class PressureInformation
     }
 
     /**
-     * Gets the value of the _PressureInformationExtension property.
+     * Gets the value of the pressureInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PressureInformationExtension() {
-        return _PressureInformationExtension;
+    public ExtensionType getPressureInformationExtension() {
+        return pressureInformationExtension;
     }
 
     /**
-     * Sets the value of the _PressureInformationExtension property.
+     * Sets the value of the pressureInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PressureInformationExtension(_ExtensionType value) {
-        this._PressureInformationExtension = value;
+    public void setPressureInformationExtension(ExtensionType value) {
+        this.pressureInformationExtension = value;
     }
 
 }

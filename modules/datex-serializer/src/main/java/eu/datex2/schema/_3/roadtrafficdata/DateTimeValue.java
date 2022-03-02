@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,19 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DateTimeValue", propOrder = {
+@XmlType(name = "DateTimeValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "dateTime",
-    "_DateTimeValueExtension"
+    "dateTimeValueExtension"
 })
 public class DateTimeValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dateTime;
-    @XmlElement(name = "_dateTimeValueExtension")
-    protected _ExtensionType _DateTimeValueExtension;
+    @XmlElement(name = "_dateTimeValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType dateTimeValueExtension;
 
     /**
      * Gets the value of the dateTime property.
@@ -73,27 +73,27 @@ public class DateTimeValue
     }
 
     /**
-     * Gets the value of the _DateTimeValueExtension property.
+     * Gets the value of the dateTimeValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_DateTimeValueExtension() {
-        return _DateTimeValueExtension;
+    public ExtensionType getDateTimeValueExtension() {
+        return dateTimeValueExtension;
     }
 
     /**
-     * Sets the value of the _DateTimeValueExtension property.
+     * Sets the value of the dateTimeValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_DateTimeValueExtension(_ExtensionType value) {
-        this._DateTimeValueExtension = value;
+    public void setDateTimeValueExtension(ExtensionType value) {
+        this.dateTimeValueExtension = value;
     }
 
 }

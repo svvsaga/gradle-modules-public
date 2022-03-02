@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsTablePublication", propOrder = {
+@XmlType(name = "VmsTablePublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "headerInformation",
     "vmsUnitTable",
     "vmsTablePublicationExtension"
@@ -40,11 +40,12 @@ public class VmsTablePublication
     extends PayloadPublication
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<VmsUnitTable> vmsUnitTable;
-    protected _ExtensionType vmsTablePublicationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsTablePublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +105,10 @@ public class VmsTablePublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsTablePublicationExtension() {
+    public ExtensionType getVmsTablePublicationExtension() {
         return vmsTablePublicationExtension;
     }
 
@@ -116,10 +117,10 @@ public class VmsTablePublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsTablePublicationExtension(_ExtensionType value) {
+    public void setVmsTablePublicationExtension(ExtensionType value) {
         this.vmsTablePublicationExtension = value;
     }
 

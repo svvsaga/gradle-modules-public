@@ -1,62 +1,87 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for UpdateMethodEnum.
+ * <p>Java class for _UpdateMethodEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="UpdateMethodEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="allElementUpdate"/&gt;
- *     &lt;enumeration value="allInformationUpdate"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="singleElementUpdate"/&gt;
- *     &lt;enumeration value="snapshot"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_UpdateMethodEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/exchangeInformation&gt;UpdateMethodEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "UpdateMethodEnum")
-@XmlEnum
-public enum UpdateMethodEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_UpdateMethodEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+    "value"
+})
+public class UpdateMethodEnum {
 
-    @XmlEnumValue("allElementUpdate")
-    ALL_ELEMENT_UPDATE("allElementUpdate"),
-    @XmlEnumValue("allInformationUpdate")
-    ALL_INFORMATION_UPDATE("allInformationUpdate"),
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("singleElementUpdate")
-    SINGLE_ELEMENT_UPDATE("singleElementUpdate"),
-    @XmlEnumValue("snapshot")
-    SNAPSHOT("snapshot"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
+    @XmlValue
+    protected UpdateMethodEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
-    UpdateMethodEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    /**
+     * Gets the value of the value property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link UpdateMethodEnum2 }
+     *     
+     */
+    public UpdateMethodEnum2 getValue() {
         return value;
     }
 
-    public static UpdateMethodEnum fromValue(String v) {
-        for (UpdateMethodEnum c: UpdateMethodEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UpdateMethodEnum2 }
+     *     
+     */
+    public void setValue(UpdateMethodEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -36,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsSupplementaryPanelCharacteristics", propOrder = {
+@XmlType(name = "VmsSupplementaryPanelCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "supplementaryPictogramCodeListIdentifier",
     "supplementaryPanelPixelsAcross",
     "supplementaryPanelPixelsDown",
@@ -49,18 +50,27 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsSupplementaryPanelCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String supplementaryPictogramCodeListIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger supplementaryPanelPixelsAcross;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger supplementaryPanelPixelsDown;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float supplementaryPanelDisplayHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float supplementaryPanelDisplayWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float supplementaryPanelPositionX;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float supplementaryPanelPositionY;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PositionRelativeEnum relativePositionToPictogramArea;
-    protected _ExtensionType vmsSupplementaryPanelCharacteristicsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsSupplementaryPanelCharacteristicsExtension;
 
     /**
      * Gets the value of the supplementaryPictogramCodeListIdentifier property.
@@ -259,10 +269,10 @@ public class VmsSupplementaryPanelCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSupplementaryPanelCharacteristicsExtension() {
+    public ExtensionType getVmsSupplementaryPanelCharacteristicsExtension() {
         return vmsSupplementaryPanelCharacteristicsExtension;
     }
 
@@ -271,10 +281,10 @@ public class VmsSupplementaryPanelCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPanelCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsSupplementaryPanelCharacteristicsExtension(ExtensionType value) {
         this.vmsSupplementaryPanelCharacteristicsExtension = value;
     }
 

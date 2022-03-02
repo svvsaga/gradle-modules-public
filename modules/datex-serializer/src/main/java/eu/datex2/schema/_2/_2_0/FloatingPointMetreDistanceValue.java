@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FloatingPointMetreDistanceValue", propOrder = {
+@XmlType(name = "FloatingPointMetreDistanceValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "floatingPointMetreDistance",
     "floatingPointMetreDistanceValueExtension"
 })
@@ -35,8 +36,10 @@ public class FloatingPointMetreDistanceValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float floatingPointMetreDistance;
-    protected _ExtensionType floatingPointMetreDistanceValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType floatingPointMetreDistanceValueExtension;
 
     /**
      * Gets the value of the floatingPointMetreDistance property.
@@ -59,10 +62,10 @@ public class FloatingPointMetreDistanceValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFloatingPointMetreDistanceValueExtension() {
+    public ExtensionType getFloatingPointMetreDistanceValueExtension() {
         return floatingPointMetreDistanceValueExtension;
     }
 
@@ -71,10 +74,10 @@ public class FloatingPointMetreDistanceValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFloatingPointMetreDistanceValueExtension(_ExtensionType value) {
+    public void setFloatingPointMetreDistanceValueExtension(ExtensionType value) {
         this.floatingPointMetreDistanceValueExtension = value;
     }
 

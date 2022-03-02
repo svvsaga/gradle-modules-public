@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficView", propOrder = {
+@XmlType(name = "TrafficView", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "trafficViewTime",
     "predefinedNonOrderedLocationGroupReference",
     "linearTrafficView",
@@ -44,14 +44,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TrafficView {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar trafficViewTime;
-    @XmlElement(required = true)
-    protected _PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<LinearTrafficView> linearTrafficView;
-    protected _ExtensionType trafficViewExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -84,10 +85,10 @@ public class TrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public _PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
+    public PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
         return predefinedNonOrderedLocationGroupReference;
     }
 
@@ -96,10 +97,10 @@ public class TrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupReference(_PredefinedNonOrderedLocationGroupVersionedReference value) {
+    public void setPredefinedNonOrderedLocationGroupReference(PredefinedNonOrderedLocationGroupVersionedReference value) {
         this.predefinedNonOrderedLocationGroupReference = value;
     }
 
@@ -137,10 +138,10 @@ public class TrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficViewExtension() {
+    public ExtensionType getTrafficViewExtension() {
         return trafficViewExtension;
     }
 
@@ -149,10 +150,10 @@ public class TrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewExtension(_ExtensionType value) {
+    public void setTrafficViewExtension(ExtensionType value) {
         this.trafficViewExtension = value;
     }
 

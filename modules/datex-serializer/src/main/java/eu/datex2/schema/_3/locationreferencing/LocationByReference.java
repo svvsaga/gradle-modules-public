@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,28 +31,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationByReference", propOrder = {
+@XmlType(name = "LocationByReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "predefinedLocationReference",
-    "_LocationByReferenceExtension"
+    "locationByReferenceExtension"
 })
 public class LocationByReference
     extends Location
 {
 
-    @XmlElement(required = true)
-    protected _PredefinedLocationVersionedReference predefinedLocationReference;
-    @XmlElement(name = "_locationByReferenceExtension")
-    protected _ExtensionType _LocationByReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected PredefinedLocationVersionedReference predefinedLocationReference;
+    @XmlElement(name = "_locationByReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType locationByReferenceExtension;
 
     /**
      * Gets the value of the predefinedLocationReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public _PredefinedLocationVersionedReference getPredefinedLocationReference() {
+    public PredefinedLocationVersionedReference getPredefinedLocationReference() {
         return predefinedLocationReference;
     }
 
@@ -61,35 +61,35 @@ public class LocationByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public void setPredefinedLocationReference(_PredefinedLocationVersionedReference value) {
+    public void setPredefinedLocationReference(PredefinedLocationVersionedReference value) {
         this.predefinedLocationReference = value;
     }
 
     /**
-     * Gets the value of the _LocationByReferenceExtension property.
+     * Gets the value of the locationByReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LocationByReferenceExtension() {
-        return _LocationByReferenceExtension;
+    public ExtensionType getLocationByReferenceExtension() {
+        return locationByReferenceExtension;
     }
 
     /**
-     * Sets the value of the _LocationByReferenceExtension property.
+     * Sets the value of the locationByReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LocationByReferenceExtension(_ExtensionType value) {
-        this._LocationByReferenceExtension = value;
+    public void setLocationByReferenceExtension(ExtensionType value) {
+        this.locationByReferenceExtension = value;
     }
 
 }

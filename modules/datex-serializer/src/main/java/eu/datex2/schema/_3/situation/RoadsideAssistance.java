@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,28 +31,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadsideAssistance", propOrder = {
+@XmlType(name = "RoadsideAssistance", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "roadsideAssistanceType",
-    "_RoadsideAssistanceExtension"
+    "roadsideAssistanceExtension"
 })
 public class RoadsideAssistance
     extends OperatorAction
 {
 
-    @XmlElement(required = true)
-    protected _RoadsideAssistanceTypeEnum roadsideAssistanceType;
-    @XmlElement(name = "_roadsideAssistanceExtension")
-    protected _ExtensionType _RoadsideAssistanceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected RoadsideAssistanceTypeEnum roadsideAssistanceType;
+    @XmlElement(name = "_roadsideAssistanceExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType roadsideAssistanceExtension;
 
     /**
      * Gets the value of the roadsideAssistanceType property.
      * 
      * @return
      *     possible object is
-     *     {@link _RoadsideAssistanceTypeEnum }
+     *     {@link RoadsideAssistanceTypeEnum }
      *     
      */
-    public _RoadsideAssistanceTypeEnum getRoadsideAssistanceType() {
+    public RoadsideAssistanceTypeEnum getRoadsideAssistanceType() {
         return roadsideAssistanceType;
     }
 
@@ -61,35 +61,35 @@ public class RoadsideAssistance
      * 
      * @param value
      *     allowed object is
-     *     {@link _RoadsideAssistanceTypeEnum }
+     *     {@link RoadsideAssistanceTypeEnum }
      *     
      */
-    public void setRoadsideAssistanceType(_RoadsideAssistanceTypeEnum value) {
+    public void setRoadsideAssistanceType(RoadsideAssistanceTypeEnum value) {
         this.roadsideAssistanceType = value;
     }
 
     /**
-     * Gets the value of the _RoadsideAssistanceExtension property.
+     * Gets the value of the roadsideAssistanceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadsideAssistanceExtension() {
-        return _RoadsideAssistanceExtension;
+    public ExtensionType getRoadsideAssistanceExtension() {
+        return roadsideAssistanceExtension;
     }
 
     /**
-     * Sets the value of the _RoadsideAssistanceExtension property.
+     * Sets the value of the roadsideAssistanceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadsideAssistanceExtension(_ExtensionType value) {
-        this._RoadsideAssistanceExtension = value;
+    public void setRoadsideAssistanceExtension(ExtensionType value) {
+        this.roadsideAssistanceExtension = value;
     }
 
 }

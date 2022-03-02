@@ -1,79 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for WorkingStatusEnum.
+ * <p>Java class for _WorkingStatusEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="WorkingStatusEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="blank"/&gt;
- *     &lt;enumeration value="covered"/&gt;
- *     &lt;enumeration value="notWorking"/&gt;
- *     &lt;enumeration value="working"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_WorkingStatusEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;WorkingStatusEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "WorkingStatusEnum")
-@XmlEnum
-public enum WorkingStatusEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_WorkingStatusEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class WorkingStatusEnum {
 
-
-    /**
-     * The VMS is blank
-     * 
-     */
-    @XmlEnumValue("blank")
-    BLANK("blank"),
-
-    /**
-     * The VMS is physically covered so no messages can be seen.
-     * 
-     */
-    @XmlEnumValue("covered")
-    COVERED("covered"),
+    @XmlValue
+    protected WorkingStatusEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The VMS is not working
+     * Identifies the working status of a VMS.
      * 
+     * @return
+     *     possible object is
+     *     {@link WorkingStatusEnum2 }
+     *     
      */
-    @XmlEnumValue("notWorking")
-    NOT_WORKING("notWorking"),
-
-    /**
-     * The VMS is working
-     * 
-     */
-    @XmlEnumValue("working")
-    WORKING("working"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    WorkingStatusEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public WorkingStatusEnum2 getValue() {
         return value;
     }
 
-    public static WorkingStatusEnum fromValue(String v) {
-        for (WorkingStatusEnum c: WorkingStatusEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link WorkingStatusEnum2 }
+     *     
+     */
+    public void setValue(WorkingStatusEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

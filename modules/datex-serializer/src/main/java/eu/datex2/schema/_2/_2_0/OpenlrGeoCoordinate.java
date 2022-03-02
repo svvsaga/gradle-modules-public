@@ -28,15 +28,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrGeoCoordinate", propOrder = {
+@XmlType(name = "OpenlrGeoCoordinate", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrCoordinate",
     "openlrGeoCoordinateExtension"
 })
 public class OpenlrGeoCoordinate {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates openlrCoordinate;
-    protected _ExtensionType openlrGeoCoordinateExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrGeoCoordinateExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -67,10 +68,10 @@ public class OpenlrGeoCoordinate {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrGeoCoordinateExtension() {
+    public ExtensionType getOpenlrGeoCoordinateExtension() {
         return openlrGeoCoordinateExtension;
     }
 
@@ -79,10 +80,10 @@ public class OpenlrGeoCoordinate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrGeoCoordinateExtension(_ExtensionType value) {
+    public void setOpenlrGeoCoordinateExtension(ExtensionType value) {
         this.openlrGeoCoordinateExtension = value;
     }
 

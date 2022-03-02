@@ -3,9 +3,9 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.locationreferencing._DirectionEnum;
+import eu.datex2.schema._3.locationreferencing.DirectionEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,14 +42,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkManagement", propOrder = {
+@XmlType(name = "NetworkManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "complianceOption",
     "applicableForTrafficDirection",
     "applicableForTrafficType",
     "placesAtWhichApplicable",
     "automaticallyInitiated",
     "forVehiclesWithCharacteristicsOf",
-    "_NetworkManagementExtension"
+    "networkManagementExtension"
 })
 @XmlSeeAlso({
     GeneralInstructionOrMessageToRoadUsers.class,
@@ -63,25 +63,30 @@ public abstract class NetworkManagement
     extends OperatorAction
 {
 
-    @XmlElement(required = true)
-    protected _ComplianceOptionEnum complianceOption;
-    protected List<_DirectionEnum> applicableForTrafficDirection;
-    protected List<_TrafficTypeEnum> applicableForTrafficType;
-    protected List<_PlacesEnum> placesAtWhichApplicable;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected ComplianceOptionEnum complianceOption;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected List<DirectionEnum> applicableForTrafficDirection;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected List<TrafficTypeEnum> applicableForTrafficType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected List<PlacesEnum> placesAtWhichApplicable;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean automaticallyInitiated;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
-    @XmlElement(name = "_networkManagementExtension")
-    protected _ExtensionType _NetworkManagementExtension;
+    @XmlElement(name = "_networkManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType networkManagementExtension;
 
     /**
      * Gets the value of the complianceOption property.
      * 
      * @return
      *     possible object is
-     *     {@link _ComplianceOptionEnum }
+     *     {@link ComplianceOptionEnum }
      *     
      */
-    public _ComplianceOptionEnum getComplianceOption() {
+    public ComplianceOptionEnum getComplianceOption() {
         return complianceOption;
     }
 
@@ -90,10 +95,10 @@ public abstract class NetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComplianceOptionEnum }
+     *     {@link ComplianceOptionEnum }
      *     
      */
-    public void setComplianceOption(_ComplianceOptionEnum value) {
+    public void setComplianceOption(ComplianceOptionEnum value) {
         this.complianceOption = value;
     }
 
@@ -115,13 +120,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _DirectionEnum }
+     * {@link DirectionEnum }
      * 
      * 
      */
-    public List<_DirectionEnum> getApplicableForTrafficDirection() {
+    public List<DirectionEnum> getApplicableForTrafficDirection() {
         if (applicableForTrafficDirection == null) {
-            applicableForTrafficDirection = new ArrayList<_DirectionEnum>();
+            applicableForTrafficDirection = new ArrayList<DirectionEnum>();
         }
         return this.applicableForTrafficDirection;
     }
@@ -144,13 +149,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _TrafficTypeEnum }
+     * {@link TrafficTypeEnum }
      * 
      * 
      */
-    public List<_TrafficTypeEnum> getApplicableForTrafficType() {
+    public List<TrafficTypeEnum> getApplicableForTrafficType() {
         if (applicableForTrafficType == null) {
-            applicableForTrafficType = new ArrayList<_TrafficTypeEnum>();
+            applicableForTrafficType = new ArrayList<TrafficTypeEnum>();
         }
         return this.applicableForTrafficType;
     }
@@ -173,13 +178,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PlacesEnum }
+     * {@link PlacesEnum }
      * 
      * 
      */
-    public List<_PlacesEnum> getPlacesAtWhichApplicable() {
+    public List<PlacesEnum> getPlacesAtWhichApplicable() {
         if (placesAtWhichApplicable == null) {
-            placesAtWhichApplicable = new ArrayList<_PlacesEnum>();
+            placesAtWhichApplicable = new ArrayList<PlacesEnum>();
         }
         return this.placesAtWhichApplicable;
     }
@@ -238,27 +243,27 @@ public abstract class NetworkManagement
     }
 
     /**
-     * Gets the value of the _NetworkManagementExtension property.
+     * Gets the value of the networkManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_NetworkManagementExtension() {
-        return _NetworkManagementExtension;
+    public ExtensionType getNetworkManagementExtension() {
+        return networkManagementExtension;
     }
 
     /**
-     * Sets the value of the _NetworkManagementExtension property.
+     * Sets the value of the networkManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_NetworkManagementExtension(_ExtensionType value) {
-        this._NetworkManagementExtension = value;
+    public void setNetworkManagementExtension(ExtensionType value) {
+        this.networkManagementExtension = value;
     }
 
 }

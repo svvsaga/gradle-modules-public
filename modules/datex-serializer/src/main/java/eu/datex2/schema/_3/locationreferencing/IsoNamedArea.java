@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IsoNamedArea")
+@XmlType(name = "IsoNamedArea", namespace = "http://datex2.eu/schema/3/locationReferencing")
 public class IsoNamedArea
     extends NamedArea
 {

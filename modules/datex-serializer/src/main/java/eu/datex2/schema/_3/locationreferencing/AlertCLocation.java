@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,18 +36,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLocation", propOrder = {
+@XmlType(name = "AlertCLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "alertCLocationName",
     "specificLocation",
-    "_AlertCLocationExtension"
+    "alertCLocationExtension"
 })
 public class AlertCLocation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString alertCLocationName;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int specificLocation;
-    @XmlElement(name = "_alertCLocationExtension")
-    protected _ExtensionType _AlertCLocationExtension;
+    @XmlElement(name = "_alertCLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType alertCLocationExtension;
 
     /**
      * Gets the value of the alertCLocationName property.
@@ -90,27 +92,27 @@ public class AlertCLocation {
     }
 
     /**
-     * Gets the value of the _AlertCLocationExtension property.
+     * Gets the value of the alertCLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AlertCLocationExtension() {
-        return _AlertCLocationExtension;
+    public ExtensionType getAlertCLocationExtension() {
+        return alertCLocationExtension;
     }
 
     /**
-     * Sets the value of the _AlertCLocationExtension property.
+     * Sets the value of the alertCLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AlertCLocationExtension(_ExtensionType value) {
-        this._AlertCLocationExtension = value;
+    public void setAlertCLocationExtension(ExtensionType value) {
+        this.alertCLocationExtension = value;
     }
 
 }

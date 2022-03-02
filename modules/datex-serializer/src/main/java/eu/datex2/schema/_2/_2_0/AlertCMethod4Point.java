@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4Point", propOrder = {
+@XmlType(name = "AlertCMethod4Point", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
     "alertCMethod4PointExtension"
@@ -38,11 +38,12 @@ public class AlertCMethod4Point
     extends AlertCPoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
-    protected _ExtensionType alertCMethod4PointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType alertCMethod4PointExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -97,10 +98,10 @@ public class AlertCMethod4Point
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4PointExtension() {
+    public ExtensionType getAlertCMethod4PointExtension() {
         return alertCMethod4PointExtension;
     }
 
@@ -109,10 +110,10 @@ public class AlertCMethod4Point
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4PointExtension(_ExtensionType value) {
+    public void setAlertCMethod4PointExtension(ExtensionType value) {
         this.alertCMethod4PointExtension = value;
     }
 

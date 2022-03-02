@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItineraryByReference", propOrder = {
+@XmlType(name = "ItineraryByReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "predefinedItineraryReference",
-    "_ItineraryByReferenceExtension"
+    "itineraryByReferenceExtension"
 })
 public class ItineraryByReference
     extends Itinerary
 {
 
-    @XmlElement(required = true)
-    protected _PredefinedItineraryVersionedReference predefinedItineraryReference;
-    @XmlElement(name = "_itineraryByReferenceExtension")
-    protected _ExtensionType _ItineraryByReferenceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    protected PredefinedItineraryVersionedReference predefinedItineraryReference;
+    @XmlElement(name = "_itineraryByReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType itineraryByReferenceExtension;
 
     /**
      * Gets the value of the predefinedItineraryReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedItineraryVersionedReference }
+     *     {@link PredefinedItineraryVersionedReference }
      *     
      */
-    public _PredefinedItineraryVersionedReference getPredefinedItineraryReference() {
+    public PredefinedItineraryVersionedReference getPredefinedItineraryReference() {
         return predefinedItineraryReference;
     }
 
@@ -63,35 +63,35 @@ public class ItineraryByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedItineraryVersionedReference }
+     *     {@link PredefinedItineraryVersionedReference }
      *     
      */
-    public void setPredefinedItineraryReference(_PredefinedItineraryVersionedReference value) {
+    public void setPredefinedItineraryReference(PredefinedItineraryVersionedReference value) {
         this.predefinedItineraryReference = value;
     }
 
     /**
-     * Gets the value of the _ItineraryByReferenceExtension property.
+     * Gets the value of the itineraryByReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ItineraryByReferenceExtension() {
-        return _ItineraryByReferenceExtension;
+    public ExtensionType getItineraryByReferenceExtension() {
+        return itineraryByReferenceExtension;
     }
 
     /**
-     * Sets the value of the _ItineraryByReferenceExtension property.
+     * Sets the value of the itineraryByReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ItineraryByReferenceExtension(_ExtensionType value) {
-        this._ItineraryByReferenceExtension = value;
+    public void setItineraryByReferenceExtension(ExtensionType value) {
+        this.itineraryByReferenceExtension = value;
     }
 
 }

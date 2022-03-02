@@ -30,19 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingStatusColourMapping", propOrder = {
+@XmlType(name = "ParkingStatusColourMapping", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingSiteStatus",
     "rgbColour",
     "parkingStatusColourMappingExtension"
 })
 public class ParkingStatusColourMapping {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ParkingSiteStatusEnum parkingSiteStatus;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected RGBColour rgbColour;
-    protected _ExtensionType parkingStatusColourMappingExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingStatusColourMappingExtension;
 
     /**
      * Gets the value of the parkingSiteStatus property.
@@ -97,10 +98,10 @@ public class ParkingStatusColourMapping {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingStatusColourMappingExtension() {
+    public ExtensionType getParkingStatusColourMappingExtension() {
         return parkingStatusColourMappingExtension;
     }
 
@@ -109,10 +110,10 @@ public class ParkingStatusColourMapping {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingStatusColourMappingExtension(_ExtensionType value) {
+    public void setParkingStatusColourMappingExtension(ExtensionType value) {
         this.parkingStatusColourMappingExtension = value;
     }
 

@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._TrafficTrendTypeEnum;
+import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common.TrafficTrendTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,39 +39,45 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbnormalTraffic", propOrder = {
+@XmlType(name = "AbnormalTraffic", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "abnormalTrafficType",
     "numberOfVehiclesWaiting",
     "queueLength",
     "relativeTrafficFlow",
     "trafficFlowCharacteristics",
     "trafficTrendType",
-    "_AbnormalTrafficExtension"
+    "abnormalTrafficExtension"
 })
 public class AbnormalTraffic
     extends TrafficElement
 {
 
-    protected _AbnormalTrafficTypeEnum abnormalTrafficType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected AbnormalTrafficTypeEnum abnormalTrafficType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehiclesWaiting;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger queueLength;
-    protected _RelativeTrafficFlowEnum relativeTrafficFlow;
-    protected _TrafficFlowCharacteristicsEnum trafficFlowCharacteristics;
-    protected _TrafficTrendTypeEnum trafficTrendType;
-    @XmlElement(name = "_abnormalTrafficExtension")
-    protected _ExtensionType _AbnormalTrafficExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected RelativeTrafficFlowEnum relativeTrafficFlow;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected TrafficFlowCharacteristicsEnum trafficFlowCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected TrafficTrendTypeEnum trafficTrendType;
+    @XmlElement(name = "_abnormalTrafficExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType abnormalTrafficExtension;
 
     /**
      * Gets the value of the abnormalTrafficType property.
      * 
      * @return
      *     possible object is
-     *     {@link _AbnormalTrafficTypeEnum }
+     *     {@link AbnormalTrafficTypeEnum }
      *     
      */
-    public _AbnormalTrafficTypeEnum getAbnormalTrafficType() {
+    public AbnormalTrafficTypeEnum getAbnormalTrafficType() {
         return abnormalTrafficType;
     }
 
@@ -80,10 +86,10 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link _AbnormalTrafficTypeEnum }
+     *     {@link AbnormalTrafficTypeEnum }
      *     
      */
-    public void setAbnormalTrafficType(_AbnormalTrafficTypeEnum value) {
+    public void setAbnormalTrafficType(AbnormalTrafficTypeEnum value) {
         this.abnormalTrafficType = value;
     }
 
@@ -140,10 +146,10 @@ public class AbnormalTraffic
      * 
      * @return
      *     possible object is
-     *     {@link _RelativeTrafficFlowEnum }
+     *     {@link RelativeTrafficFlowEnum }
      *     
      */
-    public _RelativeTrafficFlowEnum getRelativeTrafficFlow() {
+    public RelativeTrafficFlowEnum getRelativeTrafficFlow() {
         return relativeTrafficFlow;
     }
 
@@ -152,10 +158,10 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link _RelativeTrafficFlowEnum }
+     *     {@link RelativeTrafficFlowEnum }
      *     
      */
-    public void setRelativeTrafficFlow(_RelativeTrafficFlowEnum value) {
+    public void setRelativeTrafficFlow(RelativeTrafficFlowEnum value) {
         this.relativeTrafficFlow = value;
     }
 
@@ -164,10 +170,10 @@ public class AbnormalTraffic
      * 
      * @return
      *     possible object is
-     *     {@link _TrafficFlowCharacteristicsEnum }
+     *     {@link TrafficFlowCharacteristicsEnum }
      *     
      */
-    public _TrafficFlowCharacteristicsEnum getTrafficFlowCharacteristics() {
+    public TrafficFlowCharacteristicsEnum getTrafficFlowCharacteristics() {
         return trafficFlowCharacteristics;
     }
 
@@ -176,10 +182,10 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link _TrafficFlowCharacteristicsEnum }
+     *     {@link TrafficFlowCharacteristicsEnum }
      *     
      */
-    public void setTrafficFlowCharacteristics(_TrafficFlowCharacteristicsEnum value) {
+    public void setTrafficFlowCharacteristics(TrafficFlowCharacteristicsEnum value) {
         this.trafficFlowCharacteristics = value;
     }
 
@@ -188,10 +194,10 @@ public class AbnormalTraffic
      * 
      * @return
      *     possible object is
-     *     {@link _TrafficTrendTypeEnum }
+     *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public _TrafficTrendTypeEnum getTrafficTrendType() {
+    public TrafficTrendTypeEnum getTrafficTrendType() {
         return trafficTrendType;
     }
 
@@ -200,35 +206,35 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link _TrafficTrendTypeEnum }
+     *     {@link TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendType(_TrafficTrendTypeEnum value) {
+    public void setTrafficTrendType(TrafficTrendTypeEnum value) {
         this.trafficTrendType = value;
     }
 
     /**
-     * Gets the value of the _AbnormalTrafficExtension property.
+     * Gets the value of the abnormalTrafficExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AbnormalTrafficExtension() {
-        return _AbnormalTrafficExtension;
+    public ExtensionType getAbnormalTrafficExtension() {
+        return abnormalTrafficExtension;
     }
 
     /**
-     * Sets the value of the _AbnormalTrafficExtension property.
+     * Sets the value of the abnormalTrafficExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AbnormalTrafficExtension(_ExtensionType value) {
-        this._AbnormalTrafficExtension = value;
+    public void setAbnormalTrafficExtension(ExtensionType value) {
+        this.abnormalTrafficExtension = value;
     }
 
 }

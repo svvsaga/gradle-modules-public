@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleObstruction", propOrder = {
+@XmlType(name = "VehicleObstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vehicleObstructionType",
     "obstructingVehicle",
     "vehicleObstructionExtension"
@@ -41,11 +41,13 @@ public class VehicleObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected VehicleObstructionTypeEnum vehicleObstructionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Vehicle> obstructingVehicle;
-    protected _ExtensionType vehicleObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleObstructionExtension;
 
     /**
      * Gets the value of the vehicleObstructionType property.
@@ -105,10 +107,10 @@ public class VehicleObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleObstructionExtension() {
+    public ExtensionType getVehicleObstructionExtension() {
         return vehicleObstructionExtension;
     }
 
@@ -117,10 +119,10 @@ public class VehicleObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleObstructionExtension(_ExtensionType value) {
+    public void setVehicleObstructionExtension(ExtensionType value) {
         this.vehicleObstructionExtension = value;
     }
 

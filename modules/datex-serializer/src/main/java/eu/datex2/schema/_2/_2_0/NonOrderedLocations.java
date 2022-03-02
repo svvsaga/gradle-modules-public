@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NonOrderedLocations", propOrder = {
+@XmlType(name = "NonOrderedLocations", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "nonOrderedLocationsExtension"
 })
 @XmlSeeAlso({
@@ -38,17 +39,18 @@ public abstract class NonOrderedLocations
     extends GroupOfLocations
 {
 
-    protected _ExtensionType nonOrderedLocationsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType nonOrderedLocationsExtension;
 
     /**
      * Gets the value of the nonOrderedLocationsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNonOrderedLocationsExtension() {
+    public ExtensionType getNonOrderedLocationsExtension() {
         return nonOrderedLocationsExtension;
     }
 
@@ -57,10 +59,10 @@ public abstract class NonOrderedLocations
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNonOrderedLocationsExtension(_ExtensionType value) {
+    public void setNonOrderedLocationsExtension(ExtensionType value) {
         this.nonOrderedLocationsExtension = value;
     }
 

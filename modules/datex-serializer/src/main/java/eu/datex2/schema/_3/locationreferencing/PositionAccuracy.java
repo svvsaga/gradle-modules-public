@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,19 +33,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PositionAccuracy", propOrder = {
+@XmlType(name = "PositionAccuracy", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "accuracyPercentile50",
     "accuracyPercentile75",
     "accuracyPercentile95",
-    "_PositionAccuracyExtension"
+    "positionAccuracyExtension"
 })
 public class PositionAccuracy {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile50;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile75;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile95;
-    @XmlElement(name = "_positionAccuracyExtension")
-    protected _ExtensionType _PositionAccuracyExtension;
+    @XmlElement(name = "_positionAccuracyExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType positionAccuracyExtension;
 
     /**
      * Gets the value of the accuracyPercentile50 property.
@@ -120,27 +123,27 @@ public class PositionAccuracy {
     }
 
     /**
-     * Gets the value of the _PositionAccuracyExtension property.
+     * Gets the value of the positionAccuracyExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PositionAccuracyExtension() {
-        return _PositionAccuracyExtension;
+    public ExtensionType getPositionAccuracyExtension() {
+        return positionAccuracyExtension;
     }
 
     /**
-     * Sets the value of the _PositionAccuracyExtension property.
+     * Sets the value of the positionAccuracyExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PositionAccuracyExtension(_ExtensionType value) {
-        this._PositionAccuracyExtension = value;
+    public void setPositionAccuracyExtension(ExtensionType value) {
+        this.positionAccuracyExtension = value;
     }
 
 }

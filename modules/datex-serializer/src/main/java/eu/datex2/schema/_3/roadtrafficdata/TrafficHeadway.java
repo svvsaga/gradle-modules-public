@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.FloatingPointMetreDistanceValue;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,19 +36,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficHeadway", propOrder = {
+@XmlType(name = "TrafficHeadway", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "averageDistanceHeadway",
     "averageTimeHeadway",
-    "_TrafficHeadwayExtension"
+    "trafficHeadwayExtension"
 })
 public class TrafficHeadway
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue averageTimeHeadway;
-    @XmlElement(name = "_trafficHeadwayExtension")
-    protected _ExtensionType _TrafficHeadwayExtension;
+    @XmlElement(name = "_trafficHeadwayExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType trafficHeadwayExtension;
 
     /**
      * Gets the value of the averageDistanceHeadway property.
@@ -99,27 +101,27 @@ public class TrafficHeadway
     }
 
     /**
-     * Gets the value of the _TrafficHeadwayExtension property.
+     * Gets the value of the trafficHeadwayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TrafficHeadwayExtension() {
-        return _TrafficHeadwayExtension;
+    public ExtensionType getTrafficHeadwayExtension() {
+        return trafficHeadwayExtension;
     }
 
     /**
-     * Sets the value of the _TrafficHeadwayExtension property.
+     * Sets the value of the trafficHeadwayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TrafficHeadwayExtension(_ExtensionType value) {
-        this._TrafficHeadwayExtension = value;
+    public void setTrafficHeadwayExtension(ExtensionType value) {
+        this.trafficHeadwayExtension = value;
     }
 
 }

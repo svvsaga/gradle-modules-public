@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLocationReferencePoint", propOrder = {
+@XmlType(name = "OpenlrLocationReferencePoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrPathAttributes",
     "openlrLocationReferencePointExtension"
 })
@@ -36,9 +36,10 @@ public class OpenlrLocationReferencePoint
     extends OpenlrBaseLocationReferencePoint
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected OpenlrPathAttributes openlrPathAttributes;
-    protected _ExtensionType openlrLocationReferencePointExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrPathAttributes property.
@@ -69,10 +70,10 @@ public class OpenlrLocationReferencePoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLocationReferencePointExtension() {
+    public ExtensionType getOpenlrLocationReferencePointExtension() {
         return openlrLocationReferencePointExtension;
     }
 
@@ -81,10 +82,10 @@ public class OpenlrLocationReferencePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLocationReferencePointExtension(_ExtensionType value) {
+    public void setOpenlrLocationReferencePointExtension(ExtensionType value) {
         this.openlrLocationReferencePointExtension = value;
     }
 

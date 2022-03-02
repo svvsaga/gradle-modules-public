@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InfrastructureDamageObstruction", propOrder = {
+@XmlType(name = "InfrastructureDamageObstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "infrastructureDamageType",
     "infrastructureDamageObstructionExtension"
 })
@@ -37,10 +37,11 @@ public class InfrastructureDamageObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected InfrastructureDamageTypeEnum infrastructureDamageType;
-    protected _ExtensionType infrastructureDamageObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType infrastructureDamageObstructionExtension;
 
     /**
      * Gets the value of the infrastructureDamageType property.
@@ -71,10 +72,10 @@ public class InfrastructureDamageObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getInfrastructureDamageObstructionExtension() {
+    public ExtensionType getInfrastructureDamageObstructionExtension() {
         return infrastructureDamageObstructionExtension;
     }
 
@@ -83,10 +84,10 @@ public class InfrastructureDamageObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setInfrastructureDamageObstructionExtension(_ExtensionType value) {
+    public void setInfrastructureDamageObstructionExtension(ExtensionType value) {
         this.infrastructureDamageObstructionExtension = value;
     }
 

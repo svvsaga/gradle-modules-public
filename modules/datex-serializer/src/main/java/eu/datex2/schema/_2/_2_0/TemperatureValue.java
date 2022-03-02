@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureValue", propOrder = {
+@XmlType(name = "TemperatureValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "temperature",
     "temperatureValueExtension"
 })
@@ -35,8 +36,10 @@ public class TemperatureValue
     extends DataValue
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float temperature;
-    protected _ExtensionType temperatureValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType temperatureValueExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -59,10 +62,10 @@ public class TemperatureValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTemperatureValueExtension() {
+    public ExtensionType getTemperatureValueExtension() {
         return temperatureValueExtension;
     }
 
@@ -71,10 +74,10 @@ public class TemperatureValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTemperatureValueExtension(_ExtensionType value) {
+    public void setTemperatureValueExtension(ExtensionType value) {
         this.temperatureValueExtension = value;
     }
 

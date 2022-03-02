@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkManagement", propOrder = {
+@XmlType(name = "NetworkManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "complianceOption",
     "applicableForTrafficDirection",
     "applicableForTrafficType",
@@ -58,18 +58,24 @@ public abstract class NetworkManagement
     extends OperatorAction
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected ComplianceOptionEnum complianceOption;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<DirectionEnum> applicableForTrafficDirection;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<TrafficTypeEnum> applicableForTrafficType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<PlacesEnum> placesAtWhichApplicable;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean automaticallyInitiated;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
-    protected _ExtensionType networkManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType networkManagementExtension;
 
     /**
      * Gets the value of the complianceOption property.
@@ -240,10 +246,10 @@ public abstract class NetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNetworkManagementExtension() {
+    public ExtensionType getNetworkManagementExtension() {
         return networkManagementExtension;
     }
 
@@ -252,10 +258,10 @@ public abstract class NetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNetworkManagementExtension(_ExtensionType value) {
+    public void setNetworkManagementExtension(ExtensionType value) {
         this.networkManagementExtension = value;
     }
 

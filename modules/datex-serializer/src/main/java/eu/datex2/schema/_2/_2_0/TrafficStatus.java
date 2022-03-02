@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficStatus", propOrder = {
+@XmlType(name = "TrafficStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "trafficTrendType",
     "trafficStatus",
     "trafficStatusExtension"
@@ -38,10 +39,13 @@ public class TrafficStatus
     extends BasicData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TrafficTrendTypeEnum trafficTrendType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TrafficStatusValue trafficStatus;
-    protected _ExtensionType trafficStatusExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficStatusExtension;
 
     /**
      * Gets the value of the trafficTrendType property.
@@ -96,10 +100,10 @@ public class TrafficStatus
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficStatusExtension() {
+    public ExtensionType getTrafficStatusExtension() {
         return trafficStatusExtension;
     }
 
@@ -108,10 +112,10 @@ public class TrafficStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficStatusExtension(_ExtensionType value) {
+    public void setTrafficStatusExtension(ExtensionType value) {
         this.trafficStatusExtension = value;
     }
 

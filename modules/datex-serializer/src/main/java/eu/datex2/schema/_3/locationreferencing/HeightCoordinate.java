@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,21 +34,25 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeightCoordinate", propOrder = {
+@XmlType(name = "HeightCoordinate", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "heightValue",
     "heightType",
     "altitudeConfidence",
     "verticalPositionAccuracy",
-    "_HeightCoordinateExtension"
+    "heightCoordinateExtension"
 })
 public class HeightCoordinate {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float heightValue;
-    protected _HeightTypeEnum heightType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected HeightTypeEnum heightType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected AltitudeConfidence altitudeConfidence;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionAccuracy verticalPositionAccuracy;
-    @XmlElement(name = "_heightCoordinateExtension")
-    protected _ExtensionType _HeightCoordinateExtension;
+    @XmlElement(name = "_heightCoordinateExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType heightCoordinateExtension;
 
     /**
      * Gets the value of the heightValue property.
@@ -71,10 +75,10 @@ public class HeightCoordinate {
      * 
      * @return
      *     possible object is
-     *     {@link _HeightTypeEnum }
+     *     {@link HeightTypeEnum }
      *     
      */
-    public _HeightTypeEnum getHeightType() {
+    public HeightTypeEnum getHeightType() {
         return heightType;
     }
 
@@ -83,10 +87,10 @@ public class HeightCoordinate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _HeightTypeEnum }
+     *     {@link HeightTypeEnum }
      *     
      */
-    public void setHeightType(_HeightTypeEnum value) {
+    public void setHeightType(HeightTypeEnum value) {
         this.heightType = value;
     }
 
@@ -139,27 +143,27 @@ public class HeightCoordinate {
     }
 
     /**
-     * Gets the value of the _HeightCoordinateExtension property.
+     * Gets the value of the heightCoordinateExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HeightCoordinateExtension() {
-        return _HeightCoordinateExtension;
+    public ExtensionType getHeightCoordinateExtension() {
+        return heightCoordinateExtension;
     }
 
     /**
-     * Sets the value of the _HeightCoordinateExtension property.
+     * Sets the value of the heightCoordinateExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HeightCoordinateExtension(_ExtensionType value) {
-        this._HeightCoordinateExtension = value;
+    public void setHeightCoordinateExtension(ExtensionType value) {
+        this.heightCoordinateExtension = value;
     }
 
 }

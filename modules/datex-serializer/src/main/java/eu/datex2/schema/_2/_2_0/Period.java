@@ -6,6 +6,7 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -35,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Period", propOrder = {
+@XmlType(name = "Period", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "startOfPeriod",
     "endOfPeriod",
     "periodName",
@@ -45,14 +46,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Period {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startOfPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endOfPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString periodName;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<TimePeriodOfDay> recurringTimePeriodOfDay;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
-    protected _PeriodExtensionType periodExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected PeriodExtensionType periodExtension;
 
     /**
      * Gets the value of the startOfPeriod property.
@@ -189,10 +196,10 @@ public class Period {
      * 
      * @return
      *     possible object is
-     *     {@link _PeriodExtensionType }
+     *     {@link PeriodExtensionType }
      *     
      */
-    public _PeriodExtensionType getPeriodExtension() {
+    public PeriodExtensionType getPeriodExtension() {
         return periodExtension;
     }
 
@@ -201,10 +208,10 @@ public class Period {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PeriodExtensionType }
+     *     {@link PeriodExtensionType }
      *     
      */
-    public void setPeriodExtension(_PeriodExtensionType value) {
+    public void setPeriodExtension(PeriodExtensionType value) {
         this.periodExtension = value;
     }
 

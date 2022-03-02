@@ -33,21 +33,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimePeriodOfDay", propOrder = {
+@XmlType(name = "TimePeriodOfDay", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "startTimeOfPeriod",
     "endTimeOfPeriod",
-    "_TimePeriodOfDayExtension"
+    "timePeriodOfDayExtension"
 })
 public class TimePeriodOfDay {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar startTimeOfPeriod;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar endTimeOfPeriod;
-    @XmlElement(name = "_timePeriodOfDayExtension")
-    protected _ExtensionType _TimePeriodOfDayExtension;
+    @XmlElement(name = "_timePeriodOfDayExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType timePeriodOfDayExtension;
 
     /**
      * Gets the value of the startTimeOfPeriod property.
@@ -98,27 +98,27 @@ public class TimePeriodOfDay {
     }
 
     /**
-     * Gets the value of the _TimePeriodOfDayExtension property.
+     * Gets the value of the timePeriodOfDayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_TimePeriodOfDayExtension() {
-        return _TimePeriodOfDayExtension;
+    public ExtensionType getTimePeriodOfDayExtension() {
+        return timePeriodOfDayExtension;
     }
 
     /**
-     * Sets the value of the _TimePeriodOfDayExtension property.
+     * Sets the value of the timePeriodOfDayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_TimePeriodOfDayExtension(_ExtensionType value) {
-        this._TimePeriodOfDayExtension = value;
+    public void setTimePeriodOfDayExtension(ExtensionType value) {
+        this.timePeriodOfDayExtension = value;
     }
 
 }

@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleRate", propOrder = {
+@XmlType(name = "VehicleRate", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementOrCalculationTime",
     "fillRate",
     "exitRate",
@@ -43,13 +44,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleRate {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementOrCalculationTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue fillRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue exitRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue vehicleFlowRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics measuredVehicles;
-    protected _ExtensionType vehicleRateExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vehicleRateExtension;
 
     /**
      * Gets the value of the measurementOrCalculationTime property.
@@ -176,10 +183,10 @@ public class VehicleRate {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleRateExtension() {
+    public ExtensionType getVehicleRateExtension() {
         return vehicleRateExtension;
     }
 
@@ -188,10 +195,10 @@ public class VehicleRate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleRateExtension(_ExtensionType value) {
+    public void setVehicleRateExtension(ExtensionType value) {
         this.vehicleRateExtension = value;
     }
 

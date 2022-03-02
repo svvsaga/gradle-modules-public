@@ -4,10 +4,10 @@ package eu.datex2.schema._3.roadtrafficdata;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.PayloadPublication;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedDataPublication", propOrder = {
+@XmlType(name = "ElaboratedDataPublication", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "forecastDefault",
     "periodDefault",
     "timeDefault",
@@ -52,24 +52,29 @@ import jakarta.xml.bind.annotation.XmlType;
     "referenceSettings",
     "physicalQuantity",
     "informationManager",
-    "_ElaboratedDataPublicationExtension"
+    "elaboratedDataPublicationExtension"
 })
 public class ElaboratedDataPublication
     extends PayloadPublication
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Boolean forecastDefault;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float periodDefault;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeDefault;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected HeaderInformation headerInformation;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected ReferenceSettings referenceSettings;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected List<PhysicalQuantity> physicalQuantity;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManager;
-    @XmlElement(name = "_elaboratedDataPublicationExtension")
-    protected _ExtensionType _ElaboratedDataPublicationExtension;
+    @XmlElement(name = "_elaboratedDataPublicationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType elaboratedDataPublicationExtension;
 
     /**
      * Gets the value of the forecastDefault property.
@@ -245,27 +250,27 @@ public class ElaboratedDataPublication
     }
 
     /**
-     * Gets the value of the _ElaboratedDataPublicationExtension property.
+     * Gets the value of the elaboratedDataPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ElaboratedDataPublicationExtension() {
-        return _ElaboratedDataPublicationExtension;
+    public ExtensionType getElaboratedDataPublicationExtension() {
+        return elaboratedDataPublicationExtension;
     }
 
     /**
-     * Sets the value of the _ElaboratedDataPublicationExtension property.
+     * Sets the value of the elaboratedDataPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ElaboratedDataPublicationExtension(_ExtensionType value) {
-        this._ElaboratedDataPublicationExtension = value;
+    public void setElaboratedDataPublicationExtension(ExtensionType value) {
+        this.elaboratedDataPublicationExtension = value;
     }
 
 }

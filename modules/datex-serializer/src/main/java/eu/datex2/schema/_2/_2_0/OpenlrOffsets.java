@@ -4,6 +4,7 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -30,18 +31,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrOffsets", propOrder = {
+@XmlType(name = "OpenlrOffsets", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrPositiveOffset",
     "openlrNegativeOffset",
     "openlrOffsetsExtension"
 })
 public class OpenlrOffsets {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrPositiveOffset;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNegativeOffset;
-    protected _ExtensionType openlrOffsetsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrOffsetsExtension;
 
     /**
      * Gets the value of the openlrPositiveOffset property.
@@ -96,10 +100,10 @@ public class OpenlrOffsets {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrOffsetsExtension() {
+    public ExtensionType getOpenlrOffsetsExtension() {
         return openlrOffsetsExtension;
     }
 
@@ -108,10 +112,10 @@ public class OpenlrOffsets {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrOffsetsExtension(_ExtensionType value) {
+    public void setOpenlrOffsetsExtension(ExtensionType value) {
         this.openlrOffsetsExtension = value;
     }
 

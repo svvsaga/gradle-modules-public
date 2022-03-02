@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,27 +39,31 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointAlongLinearElement", propOrder = {
+@XmlType(name = "PointAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "administrativeAreaOfPoint",
     "directionAtPoint",
     "directionRelativeAtPoint",
     "heightGradeOfPoint",
     "linearElement",
     "distanceAlongLinearElement",
-    "_PointAlongLinearElementExtension"
+    "pointAlongLinearElementExtension"
 })
 public class PointAlongLinearElement {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString administrativeAreaOfPoint;
-    protected _DirectionEnum directionAtPoint;
-    protected _LinearDirectionEnum directionRelativeAtPoint;
-    protected _HeightGradeEnum heightGradeOfPoint;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected DirectionEnum directionAtPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected LinearDirectionEnum directionRelativeAtPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected HeightGradeEnum heightGradeOfPoint;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected LinearElement linearElement;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected DistanceAlongLinearElement distanceAlongLinearElement;
-    @XmlElement(name = "_pointAlongLinearElementExtension")
-    protected _ExtensionType _PointAlongLinearElementExtension;
+    @XmlElement(name = "_pointAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType pointAlongLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfPoint property.
@@ -90,10 +94,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public _DirectionEnum getDirectionAtPoint() {
+    public DirectionEnum getDirectionAtPoint() {
         return directionAtPoint;
     }
 
@@ -102,10 +106,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public void setDirectionAtPoint(_DirectionEnum value) {
+    public void setDirectionAtPoint(DirectionEnum value) {
         this.directionAtPoint = value;
     }
 
@@ -114,10 +118,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public _LinearDirectionEnum getDirectionRelativeAtPoint() {
+    public LinearDirectionEnum getDirectionRelativeAtPoint() {
         return directionRelativeAtPoint;
     }
 
@@ -126,10 +130,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _LinearDirectionEnum }
+     *     {@link LinearDirectionEnum }
      *     
      */
-    public void setDirectionRelativeAtPoint(_LinearDirectionEnum value) {
+    public void setDirectionRelativeAtPoint(LinearDirectionEnum value) {
         this.directionRelativeAtPoint = value;
     }
 
@@ -138,10 +142,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _HeightGradeEnum }
+     *     {@link HeightGradeEnum }
      *     
      */
-    public _HeightGradeEnum getHeightGradeOfPoint() {
+    public HeightGradeEnum getHeightGradeOfPoint() {
         return heightGradeOfPoint;
     }
 
@@ -150,10 +154,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _HeightGradeEnum }
+     *     {@link HeightGradeEnum }
      *     
      */
-    public void setHeightGradeOfPoint(_HeightGradeEnum value) {
+    public void setHeightGradeOfPoint(HeightGradeEnum value) {
         this.heightGradeOfPoint = value;
     }
 
@@ -206,27 +210,27 @@ public class PointAlongLinearElement {
     }
 
     /**
-     * Gets the value of the _PointAlongLinearElementExtension property.
+     * Gets the value of the pointAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PointAlongLinearElementExtension() {
-        return _PointAlongLinearElementExtension;
+    public ExtensionType getPointAlongLinearElementExtension() {
+        return pointAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the _PointAlongLinearElementExtension property.
+     * Sets the value of the pointAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PointAlongLinearElementExtension(_ExtensionType value) {
-        this._PointAlongLinearElementExtension = value;
+    public void setPointAlongLinearElementExtension(ExtensionType value) {
+        this.pointAlongLinearElementExtension = value;
     }
 
 }

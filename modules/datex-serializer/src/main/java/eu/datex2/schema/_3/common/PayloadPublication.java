@@ -54,12 +54,12 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PayloadPublication", propOrder = {
+@XmlType(name = "PayloadPublication", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "feedDescription",
     "feedType",
     "publicationTime",
     "publicationCreator",
-    "_PayloadPublicationExtension"
+    "payloadPublicationExtension"
 })
 @XmlSeeAlso({
     GenericPublication.class,
@@ -73,15 +73,17 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public abstract class PayloadPublication {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString feedDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String feedType;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar publicationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     protected InternationalIdentifier publicationCreator;
-    @XmlElement(name = "_payloadPublicationExtension")
-    protected _ExtensionType _PayloadPublicationExtension;
+    @XmlElement(name = "_payloadPublicationExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType payloadPublicationExtension;
     @XmlAttribute(name = "lang", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lang;
@@ -193,27 +195,27 @@ public abstract class PayloadPublication {
     }
 
     /**
-     * Gets the value of the _PayloadPublicationExtension property.
+     * Gets the value of the payloadPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_PayloadPublicationExtension() {
-        return _PayloadPublicationExtension;
+    public ExtensionType getPayloadPublicationExtension() {
+        return payloadPublicationExtension;
     }
 
     /**
-     * Sets the value of the _PayloadPublicationExtension property.
+     * Sets the value of the payloadPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_PayloadPublicationExtension(_ExtensionType value) {
-        this._PayloadPublicationExtension = value;
+    public void setPayloadPublicationExtension(ExtensionType value) {
+        this.payloadPublicationExtension = value;
     }
 
     /**

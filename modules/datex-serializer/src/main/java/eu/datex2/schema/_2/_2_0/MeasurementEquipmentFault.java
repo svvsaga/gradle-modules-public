@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementEquipmentFault", propOrder = {
+@XmlType(name = "MeasurementEquipmentFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementEquipmentFault",
     "measurementEquipmentFaultExtension"
 })
@@ -37,10 +37,11 @@ public class MeasurementEquipmentFault
     extends Fault
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected MeasurementEquipmentFaultEnum measurementEquipmentFault;
-    protected _ExtensionType measurementEquipmentFaultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType measurementEquipmentFaultExtension;
 
     /**
      * Gets the value of the measurementEquipmentFault property.
@@ -71,10 +72,10 @@ public class MeasurementEquipmentFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementEquipmentFaultExtension() {
+    public ExtensionType getMeasurementEquipmentFaultExtension() {
         return measurementEquipmentFaultExtension;
     }
 
@@ -83,10 +84,10 @@ public class MeasurementEquipmentFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementEquipmentFaultExtension(_ExtensionType value) {
+    public void setMeasurementEquipmentFaultExtension(ExtensionType value) {
         this.measurementEquipmentFaultExtension = value;
     }
 

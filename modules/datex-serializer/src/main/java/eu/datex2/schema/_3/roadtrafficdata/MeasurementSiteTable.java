@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -42,20 +42,22 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteTable", propOrder = {
+@XmlType(name = "MeasurementSiteTable", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "measurementSiteTableIdentification",
     "measurementSite",
     "informationManager",
-    "_MeasurementSiteTableExtension"
+    "measurementSiteTableExtension"
 })
 public class MeasurementSiteTable {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementSiteTableIdentification;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected List<MeasurementSite> measurementSite;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManager;
-    @XmlElement(name = "_measurementSiteTableExtension")
-    protected _ExtensionType _MeasurementSiteTableExtension;
+    @XmlElement(name = "_measurementSiteTableExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType measurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -139,27 +141,27 @@ public class MeasurementSiteTable {
     }
 
     /**
-     * Gets the value of the _MeasurementSiteTableExtension property.
+     * Gets the value of the measurementSiteTableExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MeasurementSiteTableExtension() {
-        return _MeasurementSiteTableExtension;
+    public ExtensionType getMeasurementSiteTableExtension() {
+        return measurementSiteTableExtension;
     }
 
     /**
-     * Sets the value of the _MeasurementSiteTableExtension property.
+     * Sets the value of the measurementSiteTableExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MeasurementSiteTableExtension(_ExtensionType value) {
-        this._MeasurementSiteTableExtension = value;
+    public void setMeasurementSiteTableExtension(ExtensionType value) {
+        this.measurementSiteTableExtension = value;
     }
 
     /**

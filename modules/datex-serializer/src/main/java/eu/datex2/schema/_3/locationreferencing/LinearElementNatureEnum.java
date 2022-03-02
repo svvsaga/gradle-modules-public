@@ -1,79 +1,87 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for LinearElementNatureEnum.
+ * <p>Java class for _LinearElementNatureEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="LinearElementNatureEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="road"/&gt;
- *     &lt;enumeration value="roadSection"/&gt;
- *     &lt;enumeration value="slipRoad"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_LinearElementNatureEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;LinearElementNatureEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "LinearElementNatureEnum")
-@XmlEnum
-public enum LinearElementNatureEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_LinearElementNatureEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+    "value"
+})
+public class LinearElementNatureEnum {
 
-
-    /**
-     * The nature of the linear element is a road.
-     * 
-     */
-    @XmlEnumValue("road")
-    ROAD("road"),
-
-    /**
-     * The nature of the linear element is a section of a road.
-     * 
-     */
-    @XmlEnumValue("roadSection")
-    ROAD_SECTION("roadSection"),
+    @XmlValue
+    protected LinearElementNatureEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * The nature of the linear element is a slip road.
+     * List of indicative natures of linear elements.
      * 
+     * @return
+     *     possible object is
+     *     {@link LinearElementNatureEnum2 }
+     *     
      */
-    @XmlEnumValue("slipRoad")
-    SLIP_ROAD("slipRoad"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    LinearElementNatureEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public LinearElementNatureEnum2 getValue() {
         return value;
     }
 
-    public static LinearElementNatureEnum fromValue(String v) {
-        for (LinearElementNatureEnum c: LinearElementNatureEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LinearElementNatureEnum2 }
+     *     
+     */
+    public void setValue(LinearElementNatureEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

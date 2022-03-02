@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,23 +36,24 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByPoints", propOrder = {
+@XmlType(name = "LinearElementByPoints", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "startPointOfLinearElement",
     "intermediatePointOnLinearElement",
     "endPointOfLinearElement",
-    "_LinearElementByPointsExtension"
+    "linearElementByPointsExtension"
 })
 public class LinearElementByPoints
     extends LinearElement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected Referent startPointOfLinearElement;
-    protected List<_IntermediatePointOnLinearElement> intermediatePointOnLinearElement;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected List<IntermediatePointOnLinearElement> intermediatePointOnLinearElement;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected Referent endPointOfLinearElement;
-    @XmlElement(name = "_linearElementByPointsExtension")
-    protected _ExtensionType _LinearElementByPointsExtension;
+    @XmlElement(name = "_linearElementByPointsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType linearElementByPointsExtension;
 
     /**
      * Gets the value of the startPointOfLinearElement property.
@@ -96,13 +97,13 @@ public class LinearElementByPoints
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _IntermediatePointOnLinearElement }
+     * {@link IntermediatePointOnLinearElement }
      * 
      * 
      */
-    public List<_IntermediatePointOnLinearElement> getIntermediatePointOnLinearElement() {
+    public List<IntermediatePointOnLinearElement> getIntermediatePointOnLinearElement() {
         if (intermediatePointOnLinearElement == null) {
-            intermediatePointOnLinearElement = new ArrayList<_IntermediatePointOnLinearElement>();
+            intermediatePointOnLinearElement = new ArrayList<IntermediatePointOnLinearElement>();
         }
         return this.intermediatePointOnLinearElement;
     }
@@ -132,27 +133,27 @@ public class LinearElementByPoints
     }
 
     /**
-     * Gets the value of the _LinearElementByPointsExtension property.
+     * Gets the value of the linearElementByPointsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LinearElementByPointsExtension() {
-        return _LinearElementByPointsExtension;
+    public ExtensionType getLinearElementByPointsExtension() {
+        return linearElementByPointsExtension;
     }
 
     /**
-     * Sets the value of the _LinearElementByPointsExtension property.
+     * Sets the value of the linearElementByPointsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LinearElementByPointsExtension(_ExtensionType value) {
-        this._LinearElementByPointsExtension = value;
+    public void setLinearElementByPointsExtension(ExtensionType value) {
+        this.linearElementByPointsExtension = value;
     }
 
 }

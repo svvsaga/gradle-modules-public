@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,10 +37,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Location", propOrder = {
+@XmlType(name = "Location", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "externalReferencing",
     "coordinatesForDisplay",
-    "_LocationExtension"
+    "locationExtension"
 })
 @XmlSeeAlso({
     AreaLocation.class,
@@ -51,10 +51,12 @@ public abstract class Location
     extends LocationReference
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<ExternalReferencing> externalReferencing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PointCoordinates coordinatesForDisplay;
-    @XmlElement(name = "_locationExtension")
-    protected _ExtensionType _LocationExtension;
+    @XmlElement(name = "_locationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType locationExtension;
 
     /**
      * Gets the value of the externalReferencing property.
@@ -110,27 +112,27 @@ public abstract class Location
     }
 
     /**
-     * Gets the value of the _LocationExtension property.
+     * Gets the value of the locationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_LocationExtension() {
-        return _LocationExtension;
+    public ExtensionType getLocationExtension() {
+        return locationExtension;
     }
 
     /**
-     * Sets the value of the _LocationExtension property.
+     * Sets the value of the locationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_LocationExtension(_ExtensionType value) {
-        this._LocationExtension = value;
+    public void setLocationExtension(ExtensionType value) {
+        this.locationExtension = value;
     }
 
 }

@@ -1,74 +1,87 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for ProtocolTypeEnum.
+ * <p>Java class for _ProtocolTypeEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="ProtocolTypeEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="deltaPull"/&gt;
- *     &lt;enumeration value="deltaPush"/&gt;
- *     &lt;enumeration value="simpleCIS"/&gt;
- *     &lt;enumeration value="simplePush"/&gt;
- *     &lt;enumeration value="snapshotPull"/&gt;
- *     &lt;enumeration value="snapshotPush"/&gt;
- *     &lt;enumeration value="statefulCIS"/&gt;
- *     &lt;enumeration value="statefulPush"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_ProtocolTypeEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/exchangeInformation&gt;ProtocolTypeEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "ProtocolTypeEnum")
-@XmlEnum
-public enum ProtocolTypeEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_ProtocolTypeEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+    "value"
+})
+public class ProtocolTypeEnum {
 
-    @XmlEnumValue("deltaPull")
-    DELTA_PULL("deltaPull"),
-    @XmlEnumValue("deltaPush")
-    DELTA_PUSH("deltaPush"),
-    @XmlEnumValue("simpleCIS")
-    SIMPLE_CIS("simpleCIS"),
-    @XmlEnumValue("simplePush")
-    SIMPLE_PUSH("simplePush"),
-    @XmlEnumValue("snapshotPull")
-    SNAPSHOT_PULL("snapshotPull"),
-    @XmlEnumValue("snapshotPush")
-    SNAPSHOT_PUSH("snapshotPush"),
-    @XmlEnumValue("statefulCIS")
-    STATEFUL_CIS("statefulCIS"),
-    @XmlEnumValue("statefulPush")
-    STATEFUL_PUSH("statefulPush"),
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
+    @XmlValue
+    protected ProtocolTypeEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
-    ProtocolTypeEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    /**
+     * Gets the value of the value property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ProtocolTypeEnum2 }
+     *     
+     */
+    public ProtocolTypeEnum2 getValue() {
         return value;
     }
 
-    public static ProtocolTypeEnum fromValue(String v) {
-        for (ProtocolTypeEnum c: ProtocolTypeEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ProtocolTypeEnum2 }
+     *     
+     */
+    public void setValue(ProtocolTypeEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

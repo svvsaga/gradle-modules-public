@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficHeadway", propOrder = {
+@XmlType(name = "TrafficHeadway", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "averageDistanceHeadway",
     "averageTimeHeadway",
     "trafficHeadwayExtension"
@@ -37,9 +38,12 @@ public class TrafficHeadway
     extends TrafficData
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue averageTimeHeadway;
-    protected _ExtensionType trafficHeadwayExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType trafficHeadwayExtension;
 
     /**
      * Gets the value of the averageDistanceHeadway property.
@@ -94,10 +98,10 @@ public class TrafficHeadway
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficHeadwayExtension() {
+    public ExtensionType getTrafficHeadwayExtension() {
         return trafficHeadwayExtension;
     }
 
@@ -106,10 +110,10 @@ public class TrafficHeadway
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficHeadwayExtension(_ExtensionType value) {
+    public void setTrafficHeadwayExtension(ExtensionType value) {
         this.trafficHeadwayExtension = value;
     }
 

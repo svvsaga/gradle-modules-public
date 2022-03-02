@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -45,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsRecord", propOrder = {
+@XmlType(name = "VmsRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsDescription",
     "vmsOwner",
     "vmsPhysicalMounting",
@@ -65,25 +66,41 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsRecord {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vmsDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vmsOwner;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PhysicalMountingEnum vmsPhysicalMounting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VmsTypeEnum vmsType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsTypeCode;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPictogramDisplayAreas;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean dynamicallyConfigurableDisplayAreas;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsDisplayHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsDisplayWidth;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsHeightAboveRoadway;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    protected List<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location vmsLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsManagedLogicalLocation vmsManagedLogicalLocation;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected UrlLink backgroundImageUrl;
-    protected _ExtensionType vmsRecordExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsRecordExtension;
 
     /**
      * Gets the value of the vmsDescription property.
@@ -367,13 +384,13 @@ public class VmsRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * {@link VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      * 
      */
-    public List<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
+    public List<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
         if (vmsPictogramDisplayCharacteristics == null) {
-            vmsPictogramDisplayCharacteristics = new ArrayList<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
+            vmsPictogramDisplayCharacteristics = new ArrayList<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
         }
         return this.vmsPictogramDisplayCharacteristics;
     }
@@ -455,10 +472,10 @@ public class VmsRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsRecordExtension() {
+    public ExtensionType getVmsRecordExtension() {
         return vmsRecordExtension;
     }
 
@@ -467,10 +484,10 @@ public class VmsRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsRecordExtension(_ExtensionType value) {
+    public void setVmsRecordExtension(ExtensionType value) {
         this.vmsRecordExtension = value;
     }
 

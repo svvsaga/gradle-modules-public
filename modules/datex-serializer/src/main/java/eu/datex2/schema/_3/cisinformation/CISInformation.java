@@ -3,7 +3,7 @@ package eu.datex2.schema._3.cisinformation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,17 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CISInformation", propOrder = {
+@XmlType(name = "CISInformation", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
     "serviceFeedback",
     "serviceRequest",
-    "_CisInformationExtension"
+    "cisInformationExtension"
 })
 public class CISInformation {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<ServiceFeedback> serviceFeedback;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<ServiceRequest> serviceRequest;
-    @XmlElement(name = "_cisInformationExtension")
-    protected _ExtensionType _CisInformationExtension;
+    @XmlElement(name = "_cisInformationExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    protected ExtensionType cisInformationExtension;
 
     /**
      * Gets the value of the serviceFeedback property.
@@ -103,27 +105,27 @@ public class CISInformation {
     }
 
     /**
-     * Gets the value of the _CisInformationExtension property.
+     * Gets the value of the cisInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_CisInformationExtension() {
-        return _CisInformationExtension;
+    public ExtensionType getCisInformationExtension() {
+        return cisInformationExtension;
     }
 
     /**
-     * Sets the value of the _CisInformationExtension property.
+     * Sets the value of the cisInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_CisInformationExtension(_ExtensionType value) {
-        this._CisInformationExtension = value;
+    public void setCisInformationExtension(ExtensionType value) {
+        this.cisInformationExtension = value;
     }
 
 }

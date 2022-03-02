@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,19 +36,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrOffsets", propOrder = {
+@XmlType(name = "OpenlrOffsets", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "openlrPositiveOffset",
     "openlrNegativeOffset",
-    "_OpenlrOffsetsExtension"
+    "openlrOffsetsExtension"
 })
 public class OpenlrOffsets {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrPositiveOffset;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNegativeOffset;
-    @XmlElement(name = "_openlrOffsetsExtension")
-    protected _ExtensionType _OpenlrOffsetsExtension;
+    @XmlElement(name = "_openlrOffsetsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType openlrOffsetsExtension;
 
     /**
      * Gets the value of the openlrPositiveOffset property.
@@ -99,27 +101,27 @@ public class OpenlrOffsets {
     }
 
     /**
-     * Gets the value of the _OpenlrOffsetsExtension property.
+     * Gets the value of the openlrOffsetsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_OpenlrOffsetsExtension() {
-        return _OpenlrOffsetsExtension;
+    public ExtensionType getOpenlrOffsetsExtension() {
+        return openlrOffsetsExtension;
     }
 
     /**
-     * Sets the value of the _OpenlrOffsetsExtension property.
+     * Sets the value of the openlrOffsetsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_OpenlrOffsetsExtension(_ExtensionType value) {
-        this._OpenlrOffsetsExtension = value;
+    public void setOpenlrOffsetsExtension(ExtensionType value) {
+        this.openlrOffsetsExtension = value;
     }
 
 }

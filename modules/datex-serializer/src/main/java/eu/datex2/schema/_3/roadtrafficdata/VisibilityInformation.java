@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Visibility;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VisibilityInformation", propOrder = {
+@XmlType(name = "VisibilityInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "visibility",
-    "_VisibilityInformationExtension"
+    "visibilityInformationExtension"
 })
 public class VisibilityInformation
     extends WeatherData
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     protected Visibility visibility;
-    @XmlElement(name = "_visibilityInformationExtension")
-    protected _ExtensionType _VisibilityInformationExtension;
+    @XmlElement(name = "_visibilityInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType visibilityInformationExtension;
 
     /**
      * Gets the value of the visibility property.
@@ -70,27 +70,27 @@ public class VisibilityInformation
     }
 
     /**
-     * Gets the value of the _VisibilityInformationExtension property.
+     * Gets the value of the visibilityInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VisibilityInformationExtension() {
-        return _VisibilityInformationExtension;
+    public ExtensionType getVisibilityInformationExtension() {
+        return visibilityInformationExtension;
     }
 
     /**
-     * Sets the value of the _VisibilityInformationExtension property.
+     * Sets the value of the visibilityInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VisibilityInformationExtension(_ExtensionType value) {
-        this._VisibilityInformationExtension = value;
+    public void setVisibilityInformationExtension(ExtensionType value) {
+        this.visibilityInformationExtension = value;
     }
 
 }

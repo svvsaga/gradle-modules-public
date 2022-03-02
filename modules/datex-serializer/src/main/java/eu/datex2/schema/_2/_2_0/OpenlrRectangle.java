@@ -29,18 +29,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangle", propOrder = {
+@XmlType(name = "OpenlrRectangle", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "openlrLowerLeft",
     "openlrUpperRight",
     "openlrRectangleExtension"
 })
 public class OpenlrRectangle {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates openlrLowerLeft;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected PointCoordinates openlrUpperRight;
-    protected _ExtensionType openlrRectangleExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType openlrRectangleExtension;
 
     /**
      * Gets the value of the openlrLowerLeft property.
@@ -95,10 +96,10 @@ public class OpenlrRectangle {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrRectangleExtension() {
+    public ExtensionType getOpenlrRectangleExtension() {
         return openlrRectangleExtension;
     }
 
@@ -107,10 +108,10 @@ public class OpenlrRectangle {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrRectangleExtension(_ExtensionType value) {
+    public void setOpenlrRectangleExtension(ExtensionType value) {
         this.openlrRectangleExtension = value;
     }
 

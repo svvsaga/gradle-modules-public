@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,19 +33,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExternalReferencing", propOrder = {
+@XmlType(name = "ExternalReferencing", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
     "externalLocationCode",
     "externalReferencingSystem",
-    "_ExternalReferencingExtension"
+    "externalReferencingExtension"
 })
 public class ExternalReferencing {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String externalLocationCode;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
     protected String externalReferencingSystem;
-    @XmlElement(name = "_externalReferencingExtension")
-    protected _ExtensionType _ExternalReferencingExtension;
+    @XmlElement(name = "_externalReferencingExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    protected ExtensionType externalReferencingExtension;
 
     /**
      * Gets the value of the externalLocationCode property.
@@ -96,27 +96,27 @@ public class ExternalReferencing {
     }
 
     /**
-     * Gets the value of the _ExternalReferencingExtension property.
+     * Gets the value of the externalReferencingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ExternalReferencingExtension() {
-        return _ExternalReferencingExtension;
+    public ExtensionType getExternalReferencingExtension() {
+        return externalReferencingExtension;
     }
 
     /**
-     * Sets the value of the _ExternalReferencingExtension property.
+     * Sets the value of the externalReferencingExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ExternalReferencingExtension(_ExtensionType value) {
-        this._ExternalReferencingExtension = value;
+    public void setExternalReferencingExtension(ExtensionType value) {
+        this.externalReferencingExtension = value;
     }
 
 }

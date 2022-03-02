@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingTable", propOrder = {
+@XmlType(name = "ParkingTable", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "parkingTableName",
     "parkingTableVersionTime",
     "parkingRecord",
@@ -45,13 +45,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingTable {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingTableName;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingTableVersionTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected List<ParkingRecord> parkingRecord;
-    protected _ExtensionType parkingTableExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -139,10 +141,10 @@ public class ParkingTable {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingTableExtension() {
+    public ExtensionType getParkingTableExtension() {
         return parkingTableExtension;
     }
 
@@ -151,10 +153,10 @@ public class ParkingTable {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingTableExtension(_ExtensionType value) {
+    public void setParkingTableExtension(ExtensionType value) {
         this.parkingTableExtension = value;
     }
 

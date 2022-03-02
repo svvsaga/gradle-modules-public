@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsMessage", propOrder = {
+@XmlType(name = "VmsMessage", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "associatedManagementOrDiversionPlan",
     "messageSetBy",
     "setBySystem",
@@ -68,27 +68,43 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsMessage {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String associatedManagementOrDiversionPlan;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString messageSetBy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean setBySystem;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString reasonForSetting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CodedReasonForSettingMessageEnum codedReasonForSetting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<VmsMessageInformationTypeEnum> vmsMessageInformationType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean primarySetting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean mareNostrumCompliant;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeLastSet;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString requestedBy;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VersionedReference situationToWhichMessageIsRelated;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VersionedReference situationRecordToWhichMessageIsRelated;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float distanceFromSituationRecord;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textPictogramSequencingInterval;
-    protected List<_TextPage> textPage;
-    protected List<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> vmsPictogramDisplayArea;
-    protected _ExtensionType vmsMessageExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<TextPage> textPage;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> vmsPictogramDisplayArea;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsMessageExtension;
 
     /**
      * Gets the value of the associatedManagementOrDiversionPlan property.
@@ -449,13 +465,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _TextPage }
+     * {@link TextPage }
      * 
      * 
      */
-    public List<_TextPage> getTextPage() {
+    public List<TextPage> getTextPage() {
         if (textPage == null) {
-            textPage = new ArrayList<_TextPage>();
+            textPage = new ArrayList<TextPage>();
         }
         return this.textPage;
     }
@@ -478,13 +494,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
+     * {@link VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
      * 
      * 
      */
-    public List<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> getVmsPictogramDisplayArea() {
+    public List<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> getVmsPictogramDisplayArea() {
         if (vmsPictogramDisplayArea == null) {
-            vmsPictogramDisplayArea = new ArrayList<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea>();
+            vmsPictogramDisplayArea = new ArrayList<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea>();
         }
         return this.vmsPictogramDisplayArea;
     }
@@ -494,10 +510,10 @@ public class VmsMessage {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsMessageExtension() {
+    public ExtensionType getVmsMessageExtension() {
         return vmsMessageExtension;
     }
 
@@ -506,10 +522,10 @@ public class VmsMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsMessageExtension(_ExtensionType value) {
+    public void setVmsMessageExtension(ExtensionType value) {
         this.vmsMessageExtension = value;
     }
 

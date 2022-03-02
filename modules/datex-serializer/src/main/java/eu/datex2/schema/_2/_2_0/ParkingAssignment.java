@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -35,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingAssignment", propOrder = {
+@XmlType(name = "ParkingAssignment", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "applicableForUser",
     "parkingDuration",
     "vehicleCharacteristics",
@@ -46,15 +47,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingAssignment {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<UserTypeEnum> applicableForUser;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingDurationEnum> parkingDuration;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> vehicleCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<HazardousMaterials> hazardousMaterials;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<TimePeriodByHour> timePeriodByHour;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingPermit> parkingPermit;
-    protected _ExtensionType parkingAssignmentExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType parkingAssignmentExtension;
 
     /**
      * Gets the value of the applicableForUser property.
@@ -235,10 +243,10 @@ public class ParkingAssignment {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getParkingAssignmentExtension() {
+    public ExtensionType getParkingAssignmentExtension() {
         return parkingAssignmentExtension;
     }
 
@@ -247,10 +255,10 @@ public class ParkingAssignment {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setParkingAssignmentExtension(_ExtensionType value) {
+    public void setParkingAssignmentExtension(ExtensionType value) {
         this.parkingAssignmentExtension = value;
     }
 

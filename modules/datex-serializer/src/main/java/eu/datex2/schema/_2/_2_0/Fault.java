@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fault", propOrder = {
+@XmlType(name = "Fault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "faultIdentifier",
     "faultDescription",
     "faultCreationTime",
@@ -51,16 +51,21 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Fault {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String faultIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String faultDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultCreationTime;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultLastUpdateTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected FaultSeverityEnum faultSeverity;
-    protected _ExtensionType faultExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType faultExtension;
 
     /**
      * Gets the value of the faultIdentifier property.
@@ -187,10 +192,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFaultExtension() {
+    public ExtensionType getFaultExtension() {
         return faultExtension;
     }
 
@@ -199,10 +204,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFaultExtension(_ExtensionType value) {
+    public void setFaultExtension(ExtensionType value) {
         this.faultExtension = value;
     }
 

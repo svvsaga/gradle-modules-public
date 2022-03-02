@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -31,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OperatorAction", propOrder = {
+@XmlType(name = "OperatorAction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "actionOrigin",
     "actionPlanIdentifier",
     "operatorActionStatus",
@@ -47,12 +48,16 @@ public class OperatorAction
     extends SituationRecord
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OperatorActionOriginEnum actionOrigin;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String actionPlanIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OperatorActionStatusEnum operatorActionStatus;
-    protected _ExtensionType operatorActionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType operatorActionExtension;
 
     /**
      * Gets the value of the actionOrigin property.
@@ -131,10 +136,10 @@ public class OperatorAction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOperatorActionExtension() {
+    public ExtensionType getOperatorActionExtension() {
         return operatorActionExtension;
     }
 
@@ -143,10 +148,10 @@ public class OperatorAction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOperatorActionExtension(_ExtensionType value) {
+    public void setOperatorActionExtension(ExtensionType value) {
         this.operatorActionExtension = value;
     }
 

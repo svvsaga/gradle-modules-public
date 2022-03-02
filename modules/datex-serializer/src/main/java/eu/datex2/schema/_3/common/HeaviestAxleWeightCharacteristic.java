@@ -31,28 +31,29 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaviestAxleWeightCharacteristic", propOrder = {
+@XmlType(name = "HeaviestAxleWeightCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "comparisonOperator",
     "heaviestAxleWeight",
-    "_HeaviestAxleWeightCharacteristicExtension"
+    "heaviestAxleWeightCharacteristicExtension"
 })
 public class HeaviestAxleWeightCharacteristic {
 
-    @XmlElement(required = true)
-    protected _ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    protected ComparisonOperatorEnum comparisonOperator;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float heaviestAxleWeight;
-    @XmlElement(name = "_heaviestAxleWeightCharacteristicExtension")
-    protected _ExtensionType _HeaviestAxleWeightCharacteristicExtension;
+    @XmlElement(name = "_heaviestAxleWeightCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType heaviestAxleWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public _ComparisonOperatorEnum getComparisonOperator() {
+    public ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -61,10 +62,10 @@ public class HeaviestAxleWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComparisonOperatorEnum }
+     *     {@link ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(_ComparisonOperatorEnum value) {
+    public void setComparisonOperator(ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -85,27 +86,27 @@ public class HeaviestAxleWeightCharacteristic {
     }
 
     /**
-     * Gets the value of the _HeaviestAxleWeightCharacteristicExtension property.
+     * Gets the value of the heaviestAxleWeightCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_HeaviestAxleWeightCharacteristicExtension() {
-        return _HeaviestAxleWeightCharacteristicExtension;
+    public ExtensionType getHeaviestAxleWeightCharacteristicExtension() {
+        return heaviestAxleWeightCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the _HeaviestAxleWeightCharacteristicExtension property.
+     * Sets the value of the heaviestAxleWeightCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_HeaviestAxleWeightCharacteristicExtension(_ExtensionType value) {
-        this._HeaviestAxleWeightCharacteristicExtension = value;
+    public void setHeaviestAxleWeightCharacteristicExtension(ExtensionType value) {
+        this.heaviestAxleWeightCharacteristicExtension = value;
     }
 
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -32,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasuredValue", propOrder = {
+@XmlType(name = "MeasuredValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementEquipmentTypeUsed",
     "locationCharacteristicsOverride",
     "measurementEquipmentFault",
@@ -41,11 +42,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasuredValue {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString measurementEquipmentTypeUsed;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected LocationCharacteristicsOverride locationCharacteristicsOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MeasurementEquipmentFault> measurementEquipmentFault;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BasicData basicData;
-    protected _ExtensionType measuredValueExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType measuredValueExtension;
 
     /**
      * Gets the value of the measurementEquipmentTypeUsed property.
@@ -153,10 +159,10 @@ public class MeasuredValue {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasuredValueExtension() {
+    public ExtensionType getMeasuredValueExtension() {
         return measuredValueExtension;
     }
 
@@ -165,10 +171,10 @@ public class MeasuredValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasuredValueExtension(_ExtensionType value) {
+    public void setMeasuredValueExtension(ExtensionType value) {
         this.measuredValueExtension = value;
     }
 

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WeatherRelatedRoadConditions", propOrder = {
+@XmlType(name = "WeatherRelatedRoadConditions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "weatherRelatedRoadConditionType",
     "roadSurfaceConditionMeasurements",
     "weatherRelatedRoadConditionsExtension"
@@ -41,11 +41,13 @@ public class WeatherRelatedRoadConditions
     extends RoadConditions
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
-    protected _ExtensionType weatherRelatedRoadConditionsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType weatherRelatedRoadConditionsExtension;
 
     /**
      * Gets the value of the weatherRelatedRoadConditionType property.
@@ -105,10 +107,10 @@ public class WeatherRelatedRoadConditions
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWeatherRelatedRoadConditionsExtension() {
+    public ExtensionType getWeatherRelatedRoadConditionsExtension() {
         return weatherRelatedRoadConditionsExtension;
     }
 
@@ -117,10 +119,10 @@ public class WeatherRelatedRoadConditions
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWeatherRelatedRoadConditionsExtension(_ExtensionType value) {
+    public void setWeatherRelatedRoadConditionsExtension(ExtensionType value) {
         this.weatherRelatedRoadConditionsExtension = value;
     }
 

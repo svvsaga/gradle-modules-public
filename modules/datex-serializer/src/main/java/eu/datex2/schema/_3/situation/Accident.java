@@ -4,9 +4,9 @@ package eu.datex2.schema._3.situation;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GroupOfVehiclesInvolved;
 import eu.datex2.schema._3.common.Vehicle;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Accident", propOrder = {
+@XmlType(name = "Accident", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "accidentCause",
     "accidentType",
     "collisionType",
@@ -55,35 +55,42 @@ import jakarta.xml.bind.annotation.XmlType;
     "vehicleInvolved",
     "groupOfVehiclesInvolved",
     "groupOfPeopleInvolved",
-    "_AccidentExtension"
+    "accidentExtension"
 })
 public class Accident
     extends TrafficElement
 {
 
-    protected _AccidentCauseEnum accidentCause;
-    @XmlElement(required = true)
-    protected List<_AccidentTypeEnum> accidentType;
-    protected _CollisionTypeEnum collisionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected AccidentCauseEnum accidentCause;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected List<AccidentTypeEnum> accidentType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected CollisionTypeEnum collisionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfPeopleInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfVehiclesInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Vehicle> vehicleInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<GroupOfVehiclesInvolved> groupOfVehiclesInvolved;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    @XmlElement(name = "_accidentExtension")
-    protected _ExtensionType _AccidentExtension;
+    @XmlElement(name = "_accidentExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType accidentExtension;
 
     /**
      * Gets the value of the accidentCause property.
      * 
      * @return
      *     possible object is
-     *     {@link _AccidentCauseEnum }
+     *     {@link AccidentCauseEnum }
      *     
      */
-    public _AccidentCauseEnum getAccidentCause() {
+    public AccidentCauseEnum getAccidentCause() {
         return accidentCause;
     }
 
@@ -92,10 +99,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link _AccidentCauseEnum }
+     *     {@link AccidentCauseEnum }
      *     
      */
-    public void setAccidentCause(_AccidentCauseEnum value) {
+    public void setAccidentCause(AccidentCauseEnum value) {
         this.accidentCause = value;
     }
 
@@ -117,13 +124,13 @@ public class Accident
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _AccidentTypeEnum }
+     * {@link AccidentTypeEnum }
      * 
      * 
      */
-    public List<_AccidentTypeEnum> getAccidentType() {
+    public List<AccidentTypeEnum> getAccidentType() {
         if (accidentType == null) {
-            accidentType = new ArrayList<_AccidentTypeEnum>();
+            accidentType = new ArrayList<AccidentTypeEnum>();
         }
         return this.accidentType;
     }
@@ -133,10 +140,10 @@ public class Accident
      * 
      * @return
      *     possible object is
-     *     {@link _CollisionTypeEnum }
+     *     {@link CollisionTypeEnum }
      *     
      */
-    public _CollisionTypeEnum getCollisionType() {
+    public CollisionTypeEnum getCollisionType() {
         return collisionType;
     }
 
@@ -145,10 +152,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link _CollisionTypeEnum }
+     *     {@link CollisionTypeEnum }
      *     
      */
-    public void setCollisionType(_CollisionTypeEnum value) {
+    public void setCollisionType(CollisionTypeEnum value) {
         this.collisionType = value;
     }
 
@@ -288,27 +295,27 @@ public class Accident
     }
 
     /**
-     * Gets the value of the _AccidentExtension property.
+     * Gets the value of the accidentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AccidentExtension() {
-        return _AccidentExtension;
+    public ExtensionType getAccidentExtension() {
+        return accidentExtension;
     }
 
     /**
-     * Sets the value of the _AccidentExtension property.
+     * Sets the value of the accidentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AccidentExtension(_ExtensionType value) {
-        this._AccidentExtension = value;
+    public void setAccidentExtension(ExtensionType value) {
+        this.accidentExtension = value;
     }
 
 }

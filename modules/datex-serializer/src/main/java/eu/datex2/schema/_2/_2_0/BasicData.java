@@ -5,6 +5,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -34,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BasicData", propOrder = {
+@XmlType(name = "BasicData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementOrCalculationPeriod",
     "measurementOrCalculationTime",
     "pertinentLocation",
@@ -48,11 +49,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class BasicData {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float measurementOrCalculationPeriod;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementOrCalculationTime;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations pertinentLocation;
-    protected _ExtensionType basicDataExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType basicDataExtension;
     @XmlAttribute(name = "measurementOrCalculatedTimePrecision")
     protected TimePrecisionEnum measurementOrCalculatedTimePrecision;
 
@@ -133,10 +138,10 @@ public abstract class BasicData {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getBasicDataExtension() {
+    public ExtensionType getBasicDataExtension() {
         return basicDataExtension;
     }
 
@@ -145,10 +150,10 @@ public abstract class BasicData {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setBasicDataExtension(_ExtensionType value) {
+    public void setBasicDataExtension(ExtensionType value) {
         this.basicDataExtension = value;
     }
 

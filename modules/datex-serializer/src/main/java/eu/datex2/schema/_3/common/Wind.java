@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Wind", propOrder = {
+@XmlType(name = "Wind", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "windMeasurementHeight",
     "windSpeed",
     "maximumWindSpeed",
@@ -46,20 +46,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "maximumWindDirectionBearing",
     "windDirectionCompass",
     "maximumWindDirectionCompass",
-    "_WindExtension"
+    "windExtension"
 })
 public class Wind {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger windMeasurementHeight;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected WindSpeedValue windSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected WindSpeedValue maximumWindSpeed;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionBearingValue windDirectionBearing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionBearingValue maximumWindDirectionBearing;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionCompassValue windDirectionCompass;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionCompassValue maximumWindDirectionCompass;
-    @XmlElement(name = "_windExtension")
-    protected _ExtensionType _WindExtension;
+    @XmlElement(name = "_windExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType windExtension;
 
     /**
      * Gets the value of the windMeasurementHeight property.
@@ -230,27 +237,27 @@ public class Wind {
     }
 
     /**
-     * Gets the value of the _WindExtension property.
+     * Gets the value of the windExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_WindExtension() {
-        return _WindExtension;
+    public ExtensionType getWindExtension() {
+        return windExtension;
     }
 
     /**
-     * Sets the value of the _WindExtension property.
+     * Sets the value of the windExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_WindExtension(_ExtensionType value) {
-        this._WindExtension = value;
+    public void setWindExtension(ExtensionType value) {
+        this.windExtension = value;
     }
 
 }

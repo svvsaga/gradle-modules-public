@@ -32,17 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "D2LogicalModel", propOrder = {
+@XmlType(name = "D2LogicalModel", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "exchange",
     "payloadPublication",
     "d2LogicalModelExtension"
 })
 public class D2LogicalModel {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     protected Exchange exchange;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PayloadPublication payloadPublication;
-    protected _ExtensionType d2LogicalModelExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType d2LogicalModelExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     @XmlSchemaType(name = "anySimpleType")
     protected String modelBaseVersion;
@@ -100,10 +102,10 @@ public class D2LogicalModel {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getD2LogicalModelExtension() {
+    public ExtensionType getD2LogicalModelExtension() {
         return d2LogicalModelExtension;
     }
 
@@ -112,10 +114,10 @@ public class D2LogicalModel {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setD2LogicalModelExtension(_ExtensionType value) {
+    public void setD2LogicalModelExtension(ExtensionType value) {
         this.d2LogicalModelExtension = value;
     }
 

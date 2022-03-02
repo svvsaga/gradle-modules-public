@@ -3,6 +3,7 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,17 +30,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationCharacteristicsOverride", propOrder = {
+@XmlType(name = "LocationCharacteristicsOverride", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "measurementLanesOverride",
     "reversedFlow",
     "locationCharacteristicsOverrideExtension"
 })
 public class LocationCharacteristicsOverride {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LaneEnum measurementLanesOverride;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean reversedFlow;
-    protected _ExtensionType locationCharacteristicsOverrideExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType locationCharacteristicsOverrideExtension;
 
     /**
      * Gets the value of the measurementLanesOverride property.
@@ -94,10 +98,10 @@ public class LocationCharacteristicsOverride {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLocationCharacteristicsOverrideExtension() {
+    public ExtensionType getLocationCharacteristicsOverrideExtension() {
         return locationCharacteristicsOverrideExtension;
     }
 
@@ -106,10 +110,10 @@ public class LocationCharacteristicsOverride {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLocationCharacteristicsOverrideExtension(_ExtensionType value) {
+    public void setLocationCharacteristicsOverrideExtension(ExtensionType value) {
         this.locationCharacteristicsOverrideExtension = value;
     }
 

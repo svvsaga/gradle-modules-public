@@ -3,9 +3,9 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Vehicle;
-import eu.datex2.schema._3.common._ExtensionType;
-import eu.datex2.schema._3.common._VehicleTypeEnum;
+import eu.datex2.schema._3.common.VehicleTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,34 +38,37 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleObstruction", propOrder = {
+@XmlType(name = "VehicleObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
     "vehicleObstructionType",
     "involvedVehicleType",
     "vehicleProblemCause",
     "obstructingVehicle",
-    "_VehicleObstructionExtension"
+    "vehicleObstructionExtension"
 })
 public class VehicleObstruction
     extends Obstruction
 {
 
-    @XmlElement(required = true)
-    protected _VehicleObstructionTypeEnum vehicleObstructionType;
-    protected _VehicleTypeEnum involvedVehicleType;
-    protected _VehicleProblemCauseEnum vehicleProblemCause;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    protected VehicleObstructionTypeEnum vehicleObstructionType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected VehicleTypeEnum involvedVehicleType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
+    protected VehicleProblemCauseEnum vehicleProblemCause;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Vehicle> obstructingVehicle;
-    @XmlElement(name = "_vehicleObstructionExtension")
-    protected _ExtensionType _VehicleObstructionExtension;
+    @XmlElement(name = "_vehicleObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    protected ExtensionType vehicleObstructionExtension;
 
     /**
      * Gets the value of the vehicleObstructionType property.
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleObstructionTypeEnum }
+     *     {@link VehicleObstructionTypeEnum }
      *     
      */
-    public _VehicleObstructionTypeEnum getVehicleObstructionType() {
+    public VehicleObstructionTypeEnum getVehicleObstructionType() {
         return vehicleObstructionType;
     }
 
@@ -74,10 +77,10 @@ public class VehicleObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleObstructionTypeEnum }
+     *     {@link VehicleObstructionTypeEnum }
      *     
      */
-    public void setVehicleObstructionType(_VehicleObstructionTypeEnum value) {
+    public void setVehicleObstructionType(VehicleObstructionTypeEnum value) {
         this.vehicleObstructionType = value;
     }
 
@@ -86,10 +89,10 @@ public class VehicleObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleTypeEnum }
+     *     {@link VehicleTypeEnum }
      *     
      */
-    public _VehicleTypeEnum getInvolvedVehicleType() {
+    public VehicleTypeEnum getInvolvedVehicleType() {
         return involvedVehicleType;
     }
 
@@ -98,10 +101,10 @@ public class VehicleObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleTypeEnum }
+     *     {@link VehicleTypeEnum }
      *     
      */
-    public void setInvolvedVehicleType(_VehicleTypeEnum value) {
+    public void setInvolvedVehicleType(VehicleTypeEnum value) {
         this.involvedVehicleType = value;
     }
 
@@ -110,10 +113,10 @@ public class VehicleObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _VehicleProblemCauseEnum }
+     *     {@link VehicleProblemCauseEnum }
      *     
      */
-    public _VehicleProblemCauseEnum getVehicleProblemCause() {
+    public VehicleProblemCauseEnum getVehicleProblemCause() {
         return vehicleProblemCause;
     }
 
@@ -122,10 +125,10 @@ public class VehicleObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _VehicleProblemCauseEnum }
+     *     {@link VehicleProblemCauseEnum }
      *     
      */
-    public void setVehicleProblemCause(_VehicleProblemCauseEnum value) {
+    public void setVehicleProblemCause(VehicleProblemCauseEnum value) {
         this.vehicleProblemCause = value;
     }
 
@@ -159,27 +162,27 @@ public class VehicleObstruction
     }
 
     /**
-     * Gets the value of the _VehicleObstructionExtension property.
+     * Gets the value of the vehicleObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VehicleObstructionExtension() {
-        return _VehicleObstructionExtension;
+    public ExtensionType getVehicleObstructionExtension() {
+        return vehicleObstructionExtension;
     }
 
     /**
-     * Sets the value of the _VehicleObstructionExtension property.
+     * Sets the value of the vehicleObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VehicleObstructionExtension(_ExtensionType value) {
-        this._VehicleObstructionExtension = value;
+    public void setVehicleObstructionExtension(ExtensionType value) {
+        this.vehicleObstructionExtension = value;
     }
 
 }

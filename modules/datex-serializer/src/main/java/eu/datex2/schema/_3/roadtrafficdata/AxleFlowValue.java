@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,19 +34,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleFlowValue", propOrder = {
+@XmlType(name = "AxleFlowValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "axleFlowRate",
-    "_AxleFlowValueExtension"
+    "axleFlowValueExtension"
 })
 public class AxleFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleFlowRate;
-    @XmlElement(name = "_axleFlowValueExtension")
-    protected _ExtensionType _AxleFlowValueExtension;
+    @XmlElement(name = "_axleFlowValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType axleFlowValueExtension;
 
     /**
      * Gets the value of the axleFlowRate property.
@@ -73,27 +73,27 @@ public class AxleFlowValue
     }
 
     /**
-     * Gets the value of the _AxleFlowValueExtension property.
+     * Gets the value of the axleFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_AxleFlowValueExtension() {
-        return _AxleFlowValueExtension;
+    public ExtensionType getAxleFlowValueExtension() {
+        return axleFlowValueExtension;
     }
 
     /**
-     * Sets the value of the _AxleFlowValueExtension property.
+     * Sets the value of the axleFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_AxleFlowValueExtension(_ExtensionType value) {
-        this._AxleFlowValueExtension = value;
+    public void setAxleFlowValueExtension(ExtensionType value) {
+        this.axleFlowValueExtension = value;
     }
 
 }

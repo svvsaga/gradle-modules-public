@@ -36,10 +36,10 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GlobalReference", propOrder = {
+@XmlType(name = "GlobalReference", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "externalPublicationIdentifier",
     "externalPublisher",
-    "_GlobalReferenceExtension"
+    "globalReferenceExtension"
 })
 @XmlSeeAlso({
     SituationRecordReference.class,
@@ -47,10 +47,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class GlobalReference {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String externalPublicationIdentifier;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected InternationalIdentifier externalPublisher;
-    @XmlElement(name = "_globalReferenceExtension")
-    protected _ExtensionType _GlobalReferenceExtension;
+    @XmlElement(name = "_globalReferenceExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType globalReferenceExtension;
 
     /**
      * Gets the value of the externalPublicationIdentifier property.
@@ -101,27 +103,27 @@ public abstract class GlobalReference {
     }
 
     /**
-     * Gets the value of the _GlobalReferenceExtension property.
+     * Gets the value of the globalReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_GlobalReferenceExtension() {
-        return _GlobalReferenceExtension;
+    public ExtensionType getGlobalReferenceExtension() {
+        return globalReferenceExtension;
     }
 
     /**
-     * Sets the value of the _GlobalReferenceExtension property.
+     * Sets the value of the globalReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_GlobalReferenceExtension(_ExtensionType value) {
-        this._GlobalReferenceExtension = value;
+    public void setGlobalReferenceExtension(ExtensionType value) {
+        this.globalReferenceExtension = value;
     }
 
 }

@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionMeasurements", propOrder = {
+@XmlType(name = "RoadSurfaceConditionMeasurements", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "temperatureBelowOrAboveRoadSurface",
     "roadSurfaceTemperature",
     "protectionTemperature",
@@ -53,22 +53,32 @@ import jakarta.xml.bind.annotation.XmlType;
     "waterFilmThickness",
     "iceLayerThickness",
     "icePercentage",
-    "_RoadSurfaceConditionMeasurementsExtension"
+    "roadSurfaceConditionMeasurementsExtension"
 })
 public class RoadSurfaceConditionMeasurements {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<TemperatureBelowOrAboveRoadSurface> temperatureBelowOrAboveRoadSurface;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue roadSurfaceTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue protectionTemperature;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected ApplicationRateValue deIcingApplicationRate;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected KilogramsConcentrationValue deIcingConcentration;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FrictionValue friction;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue depthOfSnow;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue waterFilmThickness;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue iceLayerThickness;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PercentageValue icePercentage;
-    @XmlElement(name = "_roadSurfaceConditionMeasurementsExtension")
-    protected _ExtensionType _RoadSurfaceConditionMeasurementsExtension;
+    @XmlElement(name = "_roadSurfaceConditionMeasurementsExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType roadSurfaceConditionMeasurementsExtension;
 
     /**
      * Gets the value of the temperatureBelowOrAboveRoadSurface property.
@@ -316,27 +326,27 @@ public class RoadSurfaceConditionMeasurements {
     }
 
     /**
-     * Gets the value of the _RoadSurfaceConditionMeasurementsExtension property.
+     * Gets the value of the roadSurfaceConditionMeasurementsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_RoadSurfaceConditionMeasurementsExtension() {
-        return _RoadSurfaceConditionMeasurementsExtension;
+    public ExtensionType getRoadSurfaceConditionMeasurementsExtension() {
+        return roadSurfaceConditionMeasurementsExtension;
     }
 
     /**
-     * Sets the value of the _RoadSurfaceConditionMeasurementsExtension property.
+     * Sets the value of the roadSurfaceConditionMeasurementsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_RoadSurfaceConditionMeasurementsExtension(_ExtensionType value) {
-        this._RoadSurfaceConditionMeasurementsExtension = value;
+    public void setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
+        this.roadSurfaceConditionMeasurementsExtension = value;
     }
 
 }

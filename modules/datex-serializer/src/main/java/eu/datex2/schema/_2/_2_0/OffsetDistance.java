@@ -30,16 +30,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OffsetDistance", propOrder = {
+@XmlType(name = "OffsetDistance", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "offsetDistance",
     "offsetDistanceExtension"
 })
 public class OffsetDistance {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger offsetDistance;
-    protected _ExtensionType offsetDistanceExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType offsetDistanceExtension;
 
     /**
      * Gets the value of the offsetDistance property.
@@ -70,10 +71,10 @@ public class OffsetDistance {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOffsetDistanceExtension() {
+    public ExtensionType getOffsetDistanceExtension() {
         return offsetDistanceExtension;
     }
 
@@ -82,10 +83,10 @@ public class OffsetDistance {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOffsetDistanceExtension(_ExtensionType value) {
+    public void setOffsetDistanceExtension(ExtensionType value) {
         this.offsetDistanceExtension = value;
     }
 

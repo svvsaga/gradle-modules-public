@@ -3,8 +3,8 @@ package eu.datex2.schema._3.exchangeinformation;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,30 +34,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReturnInformation", propOrder = {
+@XmlType(name = "ReturnInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "returnStatus",
     "returnStatusReason",
     "codedInvalidityReason",
-    "_ReturnInformationExtension"
+    "returnInformationExtension"
 })
 public class ReturnInformation {
 
-    @XmlElement(required = true)
-    protected _ExchangeReturnEnum returnStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    protected ExchangeReturnEnum returnStatus;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected MultilingualString returnStatusReason;
-    protected List<_InvalidityReasonEnum> codedInvalidityReason;
-    @XmlElement(name = "_returnInformationExtension")
-    protected _ExtensionType _ReturnInformationExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected List<InvalidityReasonEnum> codedInvalidityReason;
+    @XmlElement(name = "_returnInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType returnInformationExtension;
 
     /**
      * Gets the value of the returnStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExchangeReturnEnum }
+     *     {@link ExchangeReturnEnum }
      *     
      */
-    public _ExchangeReturnEnum getReturnStatus() {
+    public ExchangeReturnEnum getReturnStatus() {
         return returnStatus;
     }
 
@@ -66,10 +68,10 @@ public class ReturnInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExchangeReturnEnum }
+     *     {@link ExchangeReturnEnum }
      *     
      */
-    public void setReturnStatus(_ExchangeReturnEnum value) {
+    public void setReturnStatus(ExchangeReturnEnum value) {
         this.returnStatus = value;
     }
 
@@ -115,39 +117,39 @@ public class ReturnInformation {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _InvalidityReasonEnum }
+     * {@link InvalidityReasonEnum }
      * 
      * 
      */
-    public List<_InvalidityReasonEnum> getCodedInvalidityReason() {
+    public List<InvalidityReasonEnum> getCodedInvalidityReason() {
         if (codedInvalidityReason == null) {
-            codedInvalidityReason = new ArrayList<_InvalidityReasonEnum>();
+            codedInvalidityReason = new ArrayList<InvalidityReasonEnum>();
         }
         return this.codedInvalidityReason;
     }
 
     /**
-     * Gets the value of the _ReturnInformationExtension property.
+     * Gets the value of the returnInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_ReturnInformationExtension() {
-        return _ReturnInformationExtension;
+    public ExtensionType getReturnInformationExtension() {
+        return returnInformationExtension;
     }
 
     /**
-     * Sets the value of the _ReturnInformationExtension property.
+     * Sets the value of the returnInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_ReturnInformationExtension(_ExtensionType value) {
-        this._ReturnInformationExtension = value;
+    public void setReturnInformationExtension(ExtensionType value) {
+        this.returnInformationExtension = value;
     }
 
 }

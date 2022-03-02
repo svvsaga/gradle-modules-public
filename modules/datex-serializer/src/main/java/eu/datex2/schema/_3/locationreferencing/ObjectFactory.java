@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import javax.xml.namespace.QName;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
@@ -29,7 +29,7 @@ public class ObjectFactory {
     private final static QName _NamedAreaAreaName_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "areaName");
     private final static QName _NamedAreaNamedAreaType_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "namedAreaType");
     private final static QName _NamedAreaCountry_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "country");
-    private final static QName _NamedArea_NamedAreaExtension_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "_namedAreaExtension");
+    private final static QName _NamedAreaNamedAreaExtension_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "_namedAreaExtension");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: eu.datex2.schema._3.locationreferencing
@@ -39,299 +39,299 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link _AlertCDirectionEnum }
+     * Create an instance of {@link AlertCDirectionEnum }
      * 
      */
-    public _AlertCDirectionEnum create_AlertCDirectionEnum() {
-        return new _AlertCDirectionEnum();
+    public AlertCDirectionEnum createAlertCDirectionEnum() {
+        return new AlertCDirectionEnum();
     }
 
     /**
-     * Create an instance of {@link _AltitudeAccuracyEnum }
+     * Create an instance of {@link AltitudeAccuracyEnum }
      * 
      */
-    public _AltitudeAccuracyEnum create_AltitudeAccuracyEnum() {
-        return new _AltitudeAccuracyEnum();
+    public AltitudeAccuracyEnum createAltitudeAccuracyEnum() {
+        return new AltitudeAccuracyEnum();
     }
 
     /**
-     * Create an instance of {@link _AreaPlacesEnum }
+     * Create an instance of {@link AreaPlacesEnum }
      * 
      */
-    public _AreaPlacesEnum create_AreaPlacesEnum() {
-        return new _AreaPlacesEnum();
+    public AreaPlacesEnum createAreaPlacesEnum() {
+        return new AreaPlacesEnum();
     }
 
     /**
-     * Create an instance of {@link _CarriagewayEnum }
+     * Create an instance of {@link CarriagewayEnum }
      * 
      */
-    public _CarriagewayEnum create_CarriagewayEnum() {
-        return new _CarriagewayEnum();
+    public CarriagewayEnum createCarriagewayEnum() {
+        return new CarriagewayEnum();
     }
 
     /**
-     * Create an instance of {@link _DirectionEnum }
+     * Create an instance of {@link DirectionEnum }
      * 
      */
-    public _DirectionEnum create_DirectionEnum() {
-        return new _DirectionEnum();
+    public DirectionEnum createDirectionEnum() {
+        return new DirectionEnum();
     }
 
     /**
-     * Create an instance of {@link _DirectionPurposeEnum }
+     * Create an instance of {@link DirectionPurposeEnum }
      * 
      */
-    public _DirectionPurposeEnum create_DirectionPurposeEnum() {
-        return new _DirectionPurposeEnum();
+    public DirectionPurposeEnum createDirectionPurposeEnum() {
+        return new DirectionPurposeEnum();
     }
 
     /**
-     * Create an instance of {@link _GeographicCharacteristicEnum }
+     * Create an instance of {@link GeographicCharacteristicEnum }
      * 
      */
-    public _GeographicCharacteristicEnum create_GeographicCharacteristicEnum() {
-        return new _GeographicCharacteristicEnum();
+    public GeographicCharacteristicEnum createGeographicCharacteristicEnum() {
+        return new GeographicCharacteristicEnum();
     }
 
     /**
-     * Create an instance of {@link _HeightGradeEnum }
+     * Create an instance of {@link HeightGradeEnum }
      * 
      */
-    public _HeightGradeEnum create_HeightGradeEnum() {
-        return new _HeightGradeEnum();
+    public HeightGradeEnum createHeightGradeEnum() {
+        return new HeightGradeEnum();
     }
 
     /**
-     * Create an instance of {@link _HeightTypeEnum }
+     * Create an instance of {@link HeightTypeEnum }
      * 
      */
-    public _HeightTypeEnum create_HeightTypeEnum() {
-        return new _HeightTypeEnum();
+    public HeightTypeEnum createHeightTypeEnum() {
+        return new HeightTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _InfrastructureDescriptorEnum }
+     * Create an instance of {@link InfrastructureDescriptorEnum }
      * 
      */
-    public _InfrastructureDescriptorEnum create_InfrastructureDescriptorEnum() {
-        return new _InfrastructureDescriptorEnum();
+    public InfrastructureDescriptorEnum createInfrastructureDescriptorEnum() {
+        return new InfrastructureDescriptorEnum();
     }
 
     /**
-     * Create an instance of {@link _IntermediatePointOnLinearElement }
+     * Create an instance of {@link IntermediatePointOnLinearElement }
      * 
      */
-    public _IntermediatePointOnLinearElement create_IntermediatePointOnLinearElement() {
-        return new _IntermediatePointOnLinearElement();
+    public IntermediatePointOnLinearElement createIntermediatePointOnLinearElement() {
+        return new IntermediatePointOnLinearElement();
     }
 
     /**
-     * Create an instance of {@link _LaneEnum }
+     * Create an instance of {@link LaneEnum }
      * 
      */
-    public _LaneEnum create_LaneEnum() {
-        return new _LaneEnum();
+    public LaneEnum createLaneEnum() {
+        return new LaneEnum();
     }
 
     /**
-     * Create an instance of {@link _LinearDirectionEnum }
+     * Create an instance of {@link LinearDirectionEnum }
      * 
      */
-    public _LinearDirectionEnum create_LinearDirectionEnum() {
-        return new _LinearDirectionEnum();
+    public LinearDirectionEnum createLinearDirectionEnum() {
+        return new LinearDirectionEnum();
     }
 
     /**
-     * Create an instance of {@link _LinearElementNatureEnum }
+     * Create an instance of {@link LinearElementNatureEnum }
      * 
      */
-    public _LinearElementNatureEnum create_LinearElementNatureEnum() {
-        return new _LinearElementNatureEnum();
+    public LinearElementNatureEnum createLinearElementNatureEnum() {
+        return new LinearElementNatureEnum();
     }
 
     /**
-     * Create an instance of {@link _LocationContainedInItinerary }
+     * Create an instance of {@link LocationContainedInItinerary }
      * 
      */
-    public _LocationContainedInItinerary create_LocationContainedInItinerary() {
-        return new _LocationContainedInItinerary();
+    public LocationContainedInItinerary createLocationContainedInItinerary() {
+        return new LocationContainedInItinerary();
     }
 
     /**
-     * Create an instance of {@link _NamedAreaTypeEnum }
+     * Create an instance of {@link NamedAreaTypeEnum }
      * 
      */
-    public _NamedAreaTypeEnum create_NamedAreaTypeEnum() {
-        return new _NamedAreaTypeEnum();
+    public NamedAreaTypeEnum createNamedAreaTypeEnum() {
+        return new NamedAreaTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _NutsCodeTypeEnum }
+     * Create an instance of {@link NutsCodeTypeEnum }
      * 
      */
-    public _NutsCodeTypeEnum create_NutsCodeTypeEnum() {
-        return new _NutsCodeTypeEnum();
+    public NutsCodeTypeEnum createNutsCodeTypeEnum() {
+        return new NutsCodeTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _OpenlrFormOfWayEnum }
+     * Create an instance of {@link OpenlrFormOfWayEnum }
      * 
      */
-    public _OpenlrFormOfWayEnum create_OpenlrFormOfWayEnum() {
-        return new _OpenlrFormOfWayEnum();
+    public OpenlrFormOfWayEnum createOpenlrFormOfWayEnum() {
+        return new OpenlrFormOfWayEnum();
     }
 
     /**
-     * Create an instance of {@link _OpenlrFunctionalRoadClassEnum }
+     * Create an instance of {@link OpenlrFunctionalRoadClassEnum }
      * 
      */
-    public _OpenlrFunctionalRoadClassEnum create_OpenlrFunctionalRoadClassEnum() {
-        return new _OpenlrFunctionalRoadClassEnum();
+    public OpenlrFunctionalRoadClassEnum createOpenlrFunctionalRoadClassEnum() {
+        return new OpenlrFunctionalRoadClassEnum();
     }
 
     /**
-     * Create an instance of {@link _OpenlrOrientationEnum }
+     * Create an instance of {@link OpenlrOrientationEnum }
      * 
      */
-    public _OpenlrOrientationEnum create_OpenlrOrientationEnum() {
-        return new _OpenlrOrientationEnum();
+    public OpenlrOrientationEnum createOpenlrOrientationEnum() {
+        return new OpenlrOrientationEnum();
     }
 
     /**
-     * Create an instance of {@link _OpenlrSideOfRoadEnum }
+     * Create an instance of {@link OpenlrSideOfRoadEnum }
      * 
      */
-    public _OpenlrSideOfRoadEnum create_OpenlrSideOfRoadEnum() {
-        return new _OpenlrSideOfRoadEnum();
+    public OpenlrSideOfRoadEnum createOpenlrSideOfRoadEnum() {
+        return new OpenlrSideOfRoadEnum();
     }
 
     /**
-     * Create an instance of {@link _PositionConfidenceCodedErrorEnum }
+     * Create an instance of {@link PositionConfidenceCodedErrorEnum }
      * 
      */
-    public _PositionConfidenceCodedErrorEnum create_PositionConfidenceCodedErrorEnum() {
-        return new _PositionConfidenceCodedErrorEnum();
+    public PositionConfidenceCodedErrorEnum createPositionConfidenceCodedErrorEnum() {
+        return new PositionConfidenceCodedErrorEnum();
     }
 
     /**
-     * Create an instance of {@link _PredefinedItineraryVersionedReference }
+     * Create an instance of {@link PredefinedItineraryVersionedReference }
      * 
      */
-    public _PredefinedItineraryVersionedReference create_PredefinedItineraryVersionedReference() {
-        return new _PredefinedItineraryVersionedReference();
+    public PredefinedItineraryVersionedReference createPredefinedItineraryVersionedReference() {
+        return new PredefinedItineraryVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PredefinedLocationGroupVersionedReference }
+     * Create an instance of {@link PredefinedLocationGroupVersionedReference }
      * 
      */
-    public _PredefinedLocationGroupVersionedReference create_PredefinedLocationGroupVersionedReference() {
-        return new _PredefinedLocationGroupVersionedReference();
+    public PredefinedLocationGroupVersionedReference createPredefinedLocationGroupVersionedReference() {
+        return new PredefinedLocationGroupVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _PredefinedLocationVersionedReference }
+     * Create an instance of {@link PredefinedLocationVersionedReference }
      * 
      */
-    public _PredefinedLocationVersionedReference create_PredefinedLocationVersionedReference() {
-        return new _PredefinedLocationVersionedReference();
+    public PredefinedLocationVersionedReference createPredefinedLocationVersionedReference() {
+        return new PredefinedLocationVersionedReference();
     }
 
     /**
-     * Create an instance of {@link _ReferentTypeEnum }
+     * Create an instance of {@link ReferentTypeEnum }
      * 
      */
-    public _ReferentTypeEnum create_ReferentTypeEnum() {
-        return new _ReferentTypeEnum();
+    public ReferentTypeEnum createReferentTypeEnum() {
+        return new ReferentTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _RelativePositionOnCarriagewayEnum }
+     * Create an instance of {@link RelativePositionOnCarriagewayEnum }
      * 
      */
-    public _RelativePositionOnCarriagewayEnum create_RelativePositionOnCarriagewayEnum() {
-        return new _RelativePositionOnCarriagewayEnum();
+    public RelativePositionOnCarriagewayEnum createRelativePositionOnCarriagewayEnum() {
+        return new RelativePositionOnCarriagewayEnum();
     }
 
     /**
-     * Create an instance of {@link _SubdivisionTypeEnum }
+     * Create an instance of {@link SubdivisionTypeEnum }
      * 
      */
-    public _SubdivisionTypeEnum create_SubdivisionTypeEnum() {
-        return new _SubdivisionTypeEnum();
+    public SubdivisionTypeEnum createSubdivisionTypeEnum() {
+        return new SubdivisionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc01AreaLocationSubtypeEnum }
+     * Create an instance of {@link TpegLoc01AreaLocationSubtypeEnum }
      * 
      */
-    public _TpegLoc01AreaLocationSubtypeEnum create_TpegLoc01AreaLocationSubtypeEnum() {
-        return new _TpegLoc01AreaLocationSubtypeEnum();
+    public TpegLoc01AreaLocationSubtypeEnum createTpegLoc01AreaLocationSubtypeEnum() {
+        return new TpegLoc01AreaLocationSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc01FramedPointLocationSubtypeEnum }
+     * Create an instance of {@link TpegLoc01FramedPointLocationSubtypeEnum }
      * 
      */
-    public _TpegLoc01FramedPointLocationSubtypeEnum create_TpegLoc01FramedPointLocationSubtypeEnum() {
-        return new _TpegLoc01FramedPointLocationSubtypeEnum();
+    public TpegLoc01FramedPointLocationSubtypeEnum createTpegLoc01FramedPointLocationSubtypeEnum() {
+        return new TpegLoc01FramedPointLocationSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc01LinearLocationSubtypeEnum }
+     * Create an instance of {@link TpegLoc01LinearLocationSubtypeEnum }
      * 
      */
-    public _TpegLoc01LinearLocationSubtypeEnum create_TpegLoc01LinearLocationSubtypeEnum() {
-        return new _TpegLoc01LinearLocationSubtypeEnum();
+    public TpegLoc01LinearLocationSubtypeEnum createTpegLoc01LinearLocationSubtypeEnum() {
+        return new TpegLoc01LinearLocationSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc01SimplePointLocationSubtypeEnum }
+     * Create an instance of {@link TpegLoc01SimplePointLocationSubtypeEnum }
      * 
      */
-    public _TpegLoc01SimplePointLocationSubtypeEnum create_TpegLoc01SimplePointLocationSubtypeEnum() {
-        return new _TpegLoc01SimplePointLocationSubtypeEnum();
+    public TpegLoc01SimplePointLocationSubtypeEnum createTpegLoc01SimplePointLocationSubtypeEnum() {
+        return new TpegLoc01SimplePointLocationSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc03AreaDescriptorSubtypeEnum }
+     * Create an instance of {@link TpegLoc03AreaDescriptorSubtypeEnum }
      * 
      */
-    public _TpegLoc03AreaDescriptorSubtypeEnum create_TpegLoc03AreaDescriptorSubtypeEnum() {
-        return new _TpegLoc03AreaDescriptorSubtypeEnum();
+    public TpegLoc03AreaDescriptorSubtypeEnum createTpegLoc03AreaDescriptorSubtypeEnum() {
+        return new TpegLoc03AreaDescriptorSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc03IlcPointDescriptorSubtypeEnum }
+     * Create an instance of {@link TpegLoc03IlcPointDescriptorSubtypeEnum }
      * 
      */
-    public _TpegLoc03IlcPointDescriptorSubtypeEnum create_TpegLoc03IlcPointDescriptorSubtypeEnum() {
-        return new _TpegLoc03IlcPointDescriptorSubtypeEnum();
+    public TpegLoc03IlcPointDescriptorSubtypeEnum createTpegLoc03IlcPointDescriptorSubtypeEnum() {
+        return new TpegLoc03IlcPointDescriptorSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc03JunctionPointDescriptorSubtypeEnum }
+     * Create an instance of {@link TpegLoc03JunctionPointDescriptorSubtypeEnum }
      * 
      */
-    public _TpegLoc03JunctionPointDescriptorSubtypeEnum create_TpegLoc03JunctionPointDescriptorSubtypeEnum() {
-        return new _TpegLoc03JunctionPointDescriptorSubtypeEnum();
+    public TpegLoc03JunctionPointDescriptorSubtypeEnum createTpegLoc03JunctionPointDescriptorSubtypeEnum() {
+        return new TpegLoc03JunctionPointDescriptorSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc03OtherPointDescriptorSubtypeEnum }
+     * Create an instance of {@link TpegLoc03OtherPointDescriptorSubtypeEnum }
      * 
      */
-    public _TpegLoc03OtherPointDescriptorSubtypeEnum create_TpegLoc03OtherPointDescriptorSubtypeEnum() {
-        return new _TpegLoc03OtherPointDescriptorSubtypeEnum();
+    public TpegLoc03OtherPointDescriptorSubtypeEnum createTpegLoc03OtherPointDescriptorSubtypeEnum() {
+        return new TpegLoc03OtherPointDescriptorSubtypeEnum();
     }
 
     /**
-     * Create an instance of {@link _TpegLoc04HeightTypeEnum }
+     * Create an instance of {@link TpegLoc04HeightTypeEnum }
      * 
      */
-    public _TpegLoc04HeightTypeEnum create_TpegLoc04HeightTypeEnum() {
-        return new _TpegLoc04HeightTypeEnum();
+    public TpegLoc04HeightTypeEnum createTpegLoc04HeightTypeEnum() {
+        return new TpegLoc04HeightTypeEnum();
     }
 
     /**
@@ -1036,16 +1036,16 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link _NamedAreaTypeEnum }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link _NamedAreaTypeEnum }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
      */
     @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "namedAreaType", scope = NamedArea.class)
-    public JAXBElement<_NamedAreaTypeEnum> createNamedAreaNamedAreaType(_NamedAreaTypeEnum value) {
-        return new JAXBElement<_NamedAreaTypeEnum>(_NamedAreaNamedAreaType_QNAME, _NamedAreaTypeEnum.class, NamedArea.class, value);
+    public JAXBElement<NamedAreaTypeEnum> createNamedAreaNamedAreaType(NamedAreaTypeEnum value) {
+        return new JAXBElement<NamedAreaTypeEnum>(_NamedAreaNamedAreaType_QNAME, NamedAreaTypeEnum.class, NamedArea.class, value);
     }
 
     /**
@@ -1062,16 +1062,16 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link _ExtensionType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link _ExtensionType }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
      */
     @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "_namedAreaExtension", scope = NamedArea.class)
-    public JAXBElement<_ExtensionType> createNamedArea_NamedAreaExtension(_ExtensionType value) {
-        return new JAXBElement<_ExtensionType>(_NamedArea_NamedAreaExtension_QNAME, _ExtensionType.class, NamedArea.class, value);
+    public JAXBElement<ExtensionType> createNamedAreaNamedAreaExtension(ExtensionType value) {
+        return new JAXBElement<ExtensionType>(_NamedAreaNamedAreaExtension_QNAME, ExtensionType.class, NamedArea.class, value);
     }
 
 }

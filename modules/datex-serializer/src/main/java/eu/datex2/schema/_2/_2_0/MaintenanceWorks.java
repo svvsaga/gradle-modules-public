@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MaintenanceWorks", propOrder = {
+@XmlType(name = "MaintenanceWorks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "roadMaintenanceType",
     "maintenanceWorksExtension"
 })
@@ -39,10 +39,11 @@ public class MaintenanceWorks
     extends Roadworks
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<RoadMaintenanceTypeEnum> roadMaintenanceType;
-    protected _ExtensionType maintenanceWorksExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType maintenanceWorksExtension;
 
     /**
      * Gets the value of the roadMaintenanceType property.
@@ -78,10 +79,10 @@ public class MaintenanceWorks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMaintenanceWorksExtension() {
+    public ExtensionType getMaintenanceWorksExtension() {
         return maintenanceWorksExtension;
     }
 
@@ -90,10 +91,10 @@ public class MaintenanceWorks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMaintenanceWorksExtension(_ExtensionType value) {
+    public void setMaintenanceWorksExtension(ExtensionType value) {
         this.maintenanceWorksExtension = value;
     }
 

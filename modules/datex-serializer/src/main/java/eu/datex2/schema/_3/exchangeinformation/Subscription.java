@@ -3,9 +3,9 @@ package eu.datex2.schema._3.exchangeinformation;
 
 import java.math.BigInteger;
 import javax.xml.datatype.XMLGregorianCalendar;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Reference;
 import eu.datex2.schema._3.common.Validity;
-import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,28 +39,34 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subscription", propOrder = {
+@XmlType(name = "Subscription", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
     "name",
     "referenceID",
     "subscriptionStart",
     "subscriptionEnd",
     "deliveyFrequency",
     "validity",
-    "_SubscriptionExtension"
+    "subscriptionExtension"
 })
 public class Subscription {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String name;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Reference referenceID;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStart;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionEnd;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger deliveyFrequency;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Validity validity;
-    @XmlElement(name = "_subscriptionExtension")
-    protected _ExtensionType _SubscriptionExtension;
+    @XmlElement(name = "_subscriptionExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    protected ExtensionType subscriptionExtension;
 
     /**
      * Gets the value of the name property.
@@ -207,27 +213,27 @@ public class Subscription {
     }
 
     /**
-     * Gets the value of the _SubscriptionExtension property.
+     * Gets the value of the subscriptionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_SubscriptionExtension() {
-        return _SubscriptionExtension;
+    public ExtensionType getSubscriptionExtension() {
+        return subscriptionExtension;
     }
 
     /**
-     * Sets the value of the _SubscriptionExtension property.
+     * Sets the value of the subscriptionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_SubscriptionExtension(_ExtensionType value) {
-        this._SubscriptionExtension = value;
+    public void setSubscriptionExtension(ExtensionType value) {
+        this.subscriptionExtension = value;
     }
 
 }

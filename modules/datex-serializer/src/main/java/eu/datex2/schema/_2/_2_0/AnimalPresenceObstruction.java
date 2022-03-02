@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AnimalPresenceObstruction", propOrder = {
+@XmlType(name = "AnimalPresenceObstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "alive",
     "animalPresenceType",
     "animalPresenceObstructionExtension"
@@ -39,11 +39,13 @@ public class AnimalPresenceObstruction
     extends Obstruction
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean alive;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected AnimalPresenceTypeEnum animalPresenceType;
-    protected _ExtensionType animalPresenceObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType animalPresenceObstructionExtension;
 
     /**
      * Gets the value of the alive property.
@@ -98,10 +100,10 @@ public class AnimalPresenceObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAnimalPresenceObstructionExtension() {
+    public ExtensionType getAnimalPresenceObstructionExtension() {
         return animalPresenceObstructionExtension;
     }
 
@@ -110,10 +112,10 @@ public class AnimalPresenceObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAnimalPresenceObstructionExtension(_ExtensionType value) {
+    public void setAnimalPresenceObstructionExtension(ExtensionType value) {
         this.animalPresenceObstructionExtension = value;
     }
 

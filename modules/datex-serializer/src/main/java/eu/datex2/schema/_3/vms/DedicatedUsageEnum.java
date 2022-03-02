@@ -1,103 +1,87 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for DedicatedUsageEnum.
+ * <p>Java class for _DedicatedUsageEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="DedicatedUsageEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="energyInformation"/&gt;
- *     &lt;enumeration value="inspectionArea"/&gt;
- *     &lt;enumeration value="laneControlSystem"/&gt;
- *     &lt;enumeration value="parkingInformation"/&gt;
- *     &lt;enumeration value="rampMetering"/&gt;
- *     &lt;enumeration value="tunnelManagement"/&gt;
- *     &lt;enumeration value="other"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_DedicatedUsageEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;DedicatedUsageEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "DedicatedUsageEnum")
-@XmlEnum
-public enum DedicatedUsageEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_DedicatedUsageEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+    "value"
+})
+public class DedicatedUsageEnum {
 
-
-    /**
-     * Dedicated to displaying energy information
-     * 
-     */
-    @XmlEnumValue("energyInformation")
-    ENERGY_INFORMATION("energyInformation"),
-
-    /**
-     * Dedicated to an inspection area
-     * 
-     */
-    @XmlEnumValue("inspectionArea")
-    INSPECTION_AREA("inspectionArea"),
+    @XmlValue
+    protected DedicatedUsageEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Dedicated to the purpose of lane control
+     * Type of usage for which a VMS is dedicated
      * 
+     * @return
+     *     possible object is
+     *     {@link DedicatedUsageEnum2 }
+     *     
      */
-    @XmlEnumValue("laneControlSystem")
-    LANE_CONTROL_SYSTEM("laneControlSystem"),
-
-    /**
-     * Dedicated to displaying parking information
-     * 
-     */
-    @XmlEnumValue("parkingInformation")
-    PARKING_INFORMATION("parkingInformation"),
-
-    /**
-     * Dedicated to ramp metering
-     * 
-     */
-    @XmlEnumValue("rampMetering")
-    RAMP_METERING("rampMetering"),
-
-    /**
-     * Dedicated to tunnel management
-     * 
-     */
-    @XmlEnumValue("tunnelManagement")
-    TUNNEL_MANAGEMENT("tunnelManagement"),
-
-    /**
-     * Other dedicated usage
-     * 
-     */
-    @XmlEnumValue("other")
-    OTHER("other"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    DedicatedUsageEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public DedicatedUsageEnum2 getValue() {
         return value;
     }
 
-    public static DedicatedUsageEnum fromValue(String v) {
-        for (DedicatedUsageEnum c: DedicatedUsageEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DedicatedUsageEnum2 }
+     *     
+     */
+    public void setValue(DedicatedUsageEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EnvironmentalObstruction", propOrder = {
+@XmlType(name = "EnvironmentalObstruction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "depth",
     "environmentalObstructionType",
     "environmentalObstructionExtension"
@@ -39,11 +39,13 @@ public class EnvironmentalObstruction
     extends Obstruction
 {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float depth;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected EnvironmentalObstructionTypeEnum environmentalObstructionType;
-    protected _ExtensionType environmentalObstructionExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType environmentalObstructionExtension;
 
     /**
      * Gets the value of the depth property.
@@ -98,10 +100,10 @@ public class EnvironmentalObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getEnvironmentalObstructionExtension() {
+    public ExtensionType getEnvironmentalObstructionExtension() {
         return environmentalObstructionExtension;
     }
 
@@ -110,10 +112,10 @@ public class EnvironmentalObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setEnvironmentalObstructionExtension(_ExtensionType value) {
+    public void setEnvironmentalObstructionExtension(ExtensionType value) {
         this.environmentalObstructionExtension = value;
     }
 

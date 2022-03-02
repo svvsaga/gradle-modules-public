@@ -32,19 +32,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleFlowValue", propOrder = {
+@XmlType(name = "VehicleFlowValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "vehicleFlowRate",
-    "_VehicleFlowValueExtension"
+    "vehicleFlowValueExtension"
 })
 public class VehicleFlowValue
     extends DataValue
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
-    @XmlElement(name = "_vehicleFlowValueExtension")
-    protected _ExtensionType _VehicleFlowValueExtension;
+    @XmlElement(name = "_vehicleFlowValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType vehicleFlowValueExtension;
 
     /**
      * Gets the value of the vehicleFlowRate property.
@@ -71,27 +71,27 @@ public class VehicleFlowValue
     }
 
     /**
-     * Gets the value of the _VehicleFlowValueExtension property.
+     * Gets the value of the vehicleFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_VehicleFlowValueExtension() {
-        return _VehicleFlowValueExtension;
+    public ExtensionType getVehicleFlowValueExtension() {
+        return vehicleFlowValueExtension;
     }
 
     /**
-     * Sets the value of the _VehicleFlowValueExtension property.
+     * Sets the value of the vehicleFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_VehicleFlowValueExtension(_ExtensionType value) {
-        this._VehicleFlowValueExtension = value;
+    public void setVehicleFlowValueExtension(ExtensionType value) {
+        this.vehicleFlowValueExtension = value;
     }
 
 }

@@ -3,11 +3,11 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
+import eu.datex2.schema._3.common.ComputationMethodEnum;
+import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
-import eu.datex2.schema._3.common._ComputationMethodEnum;
-import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.locationreferencing.DirectionEnum;
 import eu.datex2.schema._3.locationreferencing.Lane;
-import eu.datex2.schema._3.locationreferencing._DirectionEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSpecificCharacteristics", propOrder = {
+@XmlType(name = "MeasurementSpecificCharacteristics", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
     "accuracy",
     "computationMethod",
     "defaultMeasurementHeight",
@@ -59,23 +59,32 @@ import jakarta.xml.bind.annotation.XmlType;
     "specificVehicleCharacteristics",
     "specificLane",
     "axleCharacteristics",
-    "_MeasurementSpecificCharacteristicsExtension"
+    "measurementSpecificCharacteristicsExtension"
 })
 public class MeasurementSpecificCharacteristics {
 
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float accuracy;
-    protected _ComputationMethodEnum computationMethod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ComputationMethodEnum computationMethod;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float defaultMeasurementHeight;
-    protected _DirectionEnum measurementSide;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected DirectionEnum measurementSide;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float period;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float smoothingFactor;
-    @XmlElement(required = true)
-    protected _MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleCharacteristics specificVehicleCharacteristics;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<Lane> specificLane;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected AxleCharacteristics axleCharacteristics;
-    @XmlElement(name = "_measurementSpecificCharacteristicsExtension")
-    protected _ExtensionType _MeasurementSpecificCharacteristicsExtension;
+    @XmlElement(name = "_measurementSpecificCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    protected ExtensionType measurementSpecificCharacteristicsExtension;
 
     /**
      * Gets the value of the accuracy property.
@@ -106,10 +115,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ComputationMethodEnum }
+     *     {@link ComputationMethodEnum }
      *     
      */
-    public _ComputationMethodEnum getComputationMethod() {
+    public ComputationMethodEnum getComputationMethod() {
         return computationMethod;
     }
 
@@ -118,10 +127,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ComputationMethodEnum }
+     *     {@link ComputationMethodEnum }
      *     
      */
-    public void setComputationMethod(_ComputationMethodEnum value) {
+    public void setComputationMethod(ComputationMethodEnum value) {
         this.computationMethod = value;
     }
 
@@ -154,10 +163,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public _DirectionEnum getMeasurementSide() {
+    public DirectionEnum getMeasurementSide() {
         return measurementSide;
     }
 
@@ -166,10 +175,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _DirectionEnum }
+     *     {@link DirectionEnum }
      *     
      */
-    public void setMeasurementSide(_DirectionEnum value) {
+    public void setMeasurementSide(DirectionEnum value) {
         this.measurementSide = value;
     }
 
@@ -226,10 +235,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _MeasuredOrDerivedDataTypeEnum }
+     *     {@link MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public _MeasuredOrDerivedDataTypeEnum getSpecificMeasurementValueType() {
+    public MeasuredOrDerivedDataTypeEnum getSpecificMeasurementValueType() {
         return specificMeasurementValueType;
     }
 
@@ -238,10 +247,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasuredOrDerivedDataTypeEnum }
+     *     {@link MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public void setSpecificMeasurementValueType(_MeasuredOrDerivedDataTypeEnum value) {
+    public void setSpecificMeasurementValueType(MeasuredOrDerivedDataTypeEnum value) {
         this.specificMeasurementValueType = value;
     }
 
@@ -323,27 +332,27 @@ public class MeasurementSpecificCharacteristics {
     }
 
     /**
-     * Gets the value of the _MeasurementSpecificCharacteristicsExtension property.
+     * Gets the value of the measurementSpecificCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_MeasurementSpecificCharacteristicsExtension() {
-        return _MeasurementSpecificCharacteristicsExtension;
+    public ExtensionType getMeasurementSpecificCharacteristicsExtension() {
+        return measurementSpecificCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the _MeasurementSpecificCharacteristicsExtension property.
+     * Sets the value of the measurementSpecificCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_MeasurementSpecificCharacteristicsExtension(_ExtensionType value) {
-        this._MeasurementSpecificCharacteristicsExtension = value;
+    public void setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
+        this.measurementSpecificCharacteristicsExtension = value;
     }
 
 }

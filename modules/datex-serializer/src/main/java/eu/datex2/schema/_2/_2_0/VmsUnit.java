@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsUnit", propOrder = {
+@XmlType(name = "VmsUnit", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "vmsUnitTableReference",
     "vmsUnitReference",
     "vms",
@@ -44,23 +44,26 @@ public class VmsUnit
     extends VmsSetting
 {
 
-    @XmlElement(required = true)
-    protected _VmsUnitTableVersionedReference vmsUnitTableReference;
-    @XmlElement(required = true)
-    protected _VmsUnitRecordVersionedReference vmsUnitReference;
-    protected List<_VmsUnitVmsIndexVms> vms;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected VmsUnitTableVersionedReference vmsUnitTableReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    protected VmsUnitRecordVersionedReference vmsUnitReference;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected List<VmsUnitVmsIndexVms> vms;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsUnitFault> vmsUnitFault;
-    protected _ExtensionType vmsUnitExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType vmsUnitExtension;
 
     /**
      * Gets the value of the vmsUnitTableReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _VmsUnitTableVersionedReference }
+     *     {@link VmsUnitTableVersionedReference }
      *     
      */
-    public _VmsUnitTableVersionedReference getVmsUnitTableReference() {
+    public VmsUnitTableVersionedReference getVmsUnitTableReference() {
         return vmsUnitTableReference;
     }
 
@@ -69,10 +72,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsUnitTableVersionedReference }
+     *     {@link VmsUnitTableVersionedReference }
      *     
      */
-    public void setVmsUnitTableReference(_VmsUnitTableVersionedReference value) {
+    public void setVmsUnitTableReference(VmsUnitTableVersionedReference value) {
         this.vmsUnitTableReference = value;
     }
 
@@ -81,10 +84,10 @@ public class VmsUnit
      * 
      * @return
      *     possible object is
-     *     {@link _VmsUnitRecordVersionedReference }
+     *     {@link VmsUnitRecordVersionedReference }
      *     
      */
-    public _VmsUnitRecordVersionedReference getVmsUnitReference() {
+    public VmsUnitRecordVersionedReference getVmsUnitReference() {
         return vmsUnitReference;
     }
 
@@ -93,10 +96,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link _VmsUnitRecordVersionedReference }
+     *     {@link VmsUnitRecordVersionedReference }
      *     
      */
-    public void setVmsUnitReference(_VmsUnitRecordVersionedReference value) {
+    public void setVmsUnitReference(VmsUnitRecordVersionedReference value) {
         this.vmsUnitReference = value;
     }
 
@@ -118,13 +121,13 @@ public class VmsUnit
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsUnitVmsIndexVms }
+     * {@link VmsUnitVmsIndexVms }
      * 
      * 
      */
-    public List<_VmsUnitVmsIndexVms> getVms() {
+    public List<VmsUnitVmsIndexVms> getVms() {
         if (vms == null) {
-            vms = new ArrayList<_VmsUnitVmsIndexVms>();
+            vms = new ArrayList<VmsUnitVmsIndexVms>();
         }
         return this.vms;
     }
@@ -163,10 +166,10 @@ public class VmsUnit
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsUnitExtension() {
+    public ExtensionType getVmsUnitExtension() {
         return vmsUnitExtension;
     }
 
@@ -175,10 +178,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsUnitExtension(_ExtensionType value) {
+    public void setVmsUnitExtension(ExtensionType value) {
         this.vmsUnitExtension = value;
     }
 

@@ -1,108 +1,87 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlEnum;
-import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for CalendarWeekWithinMonthEnum.
+ * <p>Java class for _CalendarWeekWithinMonthEnum complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
- * &lt;simpleType name="CalendarWeekWithinMonthEnum"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="firstWeek"/&gt;
- *     &lt;enumeration value="secondWeek"/&gt;
- *     &lt;enumeration value="thirdWeek"/&gt;
- *     &lt;enumeration value="fourthWeek"/&gt;
- *     &lt;enumeration value="fifthWeek"/&gt;
- *     &lt;enumeration value="sixthWeek"/&gt;
- *     &lt;enumeration value="lastWeek"/&gt;
- *     &lt;enumeration value="_extended"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;complexType name="_CalendarWeekWithinMonthEnum"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;CalendarWeekWithinMonthEnum"&gt;
+ *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
+ * 
  */
-@XmlType(name = "CalendarWeekWithinMonthEnum")
-@XmlEnum
-public enum CalendarWeekWithinMonthEnum {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "_CalendarWeekWithinMonthEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+    "value"
+})
+public class CalendarWeekWithinMonthEnum {
 
-
-    /**
-     * Calendar week containing the first of the month. Several days of the first week of
-     *             the month may occur in the previous calendar month. By construction, the last week of a
-     *             preceding month can also be the first week of a subsequent month.
-     *           
-     * 
-     */
-    @XmlEnumValue("firstWeek")
-    FIRST_WEEK("firstWeek"),
+    @XmlValue
+    protected CalendarWeekWithinMonthEnum2 value;
+    @XmlAttribute(name = "_extendedValue")
+    protected String extendedValue;
 
     /**
-     * Second week of the month.
+     * Calendar week within month (see ISO8601).
      * 
+     * @return
+     *     possible object is
+     *     {@link CalendarWeekWithinMonthEnum2 }
+     *     
      */
-    @XmlEnumValue("secondWeek")
-    SECOND_WEEK("secondWeek"),
-
-    /**
-     * Third week of the month.
-     * 
-     */
-    @XmlEnumValue("thirdWeek")
-    THIRD_WEEK("thirdWeek"),
-
-    /**
-     * Fourth week of the month.
-     * 
-     */
-    @XmlEnumValue("fourthWeek")
-    FOURTH_WEEK("fourthWeek"),
-
-    /**
-     * Fifth week of the month.
-     * 
-     */
-    @XmlEnumValue("fifthWeek")
-    FIFTH_WEEK("fifthWeek"),
-
-    /**
-     * Sixth week of the month.
-     * 
-     */
-    @XmlEnumValue("sixthWeek")
-    SIXTH_WEEK("sixthWeek"),
-
-    /**
-     * Last calendar week within month, regardless of its actual number. The last
-     *             calendar week is the week beginning with Monday and containing the last of the month.
-     *           
-     * 
-     */
-    @XmlEnumValue("lastWeek")
-    LAST_WEEK("lastWeek"),
-    @XmlEnumValue("_extended")
-    __EXTENDED("_extended");
-    private final String value;
-
-    CalendarWeekWithinMonthEnum(String v) {
-        value = v;
-    }
-
-    public String value() {
+    public CalendarWeekWithinMonthEnum2 getValue() {
         return value;
     }
 
-    public static CalendarWeekWithinMonthEnum fromValue(String v) {
-        for (CalendarWeekWithinMonthEnum c: CalendarWeekWithinMonthEnum.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
+    /**
+     * Sets the value of the value property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CalendarWeekWithinMonthEnum2 }
+     *     
+     */
+    public void setValue(CalendarWeekWithinMonthEnum2 value) {
+        this.value = value;
+    }
+
+    /**
+     * Gets the value of the extendedValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExtendedValue() {
+        return extendedValue;
+    }
+
+    /**
+     * Sets the value of the extendedValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExtendedValue(String value) {
+        this.extendedValue = value;
     }
 
 }

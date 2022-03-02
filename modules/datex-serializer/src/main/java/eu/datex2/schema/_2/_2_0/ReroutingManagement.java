@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReroutingManagement", propOrder = {
+@XmlType(name = "ReroutingManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
     "reroutingManagementType",
     "reroutingItineraryDescription",
     "signedRerouting",
@@ -51,16 +51,23 @@ public class ReroutingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
     @XmlSchemaType(name = "string")
     protected List<ReroutingManagementTypeEnum> reroutingManagementType;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString reroutingItineraryDescription;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean signedRerouting;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String entry;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String exit;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String roadOrJunctionNumber;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Itinerary> alternativeRoute;
-    protected _ExtensionType reroutingManagementExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
+    protected ExtensionType reroutingManagementExtension;
 
     /**
      * Gets the value of the reroutingManagementType property.
@@ -245,10 +252,10 @@ public class ReroutingManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getReroutingManagementExtension() {
+    public ExtensionType getReroutingManagementExtension() {
         return reroutingManagementExtension;
     }
 
@@ -257,10 +264,10 @@ public class ReroutingManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setReroutingManagementExtension(_ExtensionType value) {
+    public void setReroutingManagementExtension(ExtensionType value) {
         this.reroutingManagementExtension = value;
     }
 

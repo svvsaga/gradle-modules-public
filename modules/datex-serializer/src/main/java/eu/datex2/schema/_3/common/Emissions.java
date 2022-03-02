@@ -34,29 +34,32 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Emissions", propOrder = {
+@XmlType(name = "Emissions", namespace = "http://datex2.eu/schema/3/common", propOrder = {
     "emissionClassificationEuro",
     "emissionClassificationOther",
     "emissionLevel",
-    "_EmissionsExtension"
+    "emissionsExtension"
 })
 public class Emissions {
 
-    protected _EmissionClassificationEuroEnum emissionClassificationEuro;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected EmissionClassificationEuroEnum emissionClassificationEuro;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<String> emissionClassificationOther;
-    protected _LowEmissionLevelEnum emissionLevel;
-    @XmlElement(name = "_emissionsExtension")
-    protected _ExtensionType _EmissionsExtension;
+    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
+    protected LowEmissionLevelEnum emissionLevel;
+    @XmlElement(name = "_emissionsExtension", namespace = "http://datex2.eu/schema/3/common")
+    protected ExtensionType emissionsExtension;
 
     /**
      * Gets the value of the emissionClassificationEuro property.
      * 
      * @return
      *     possible object is
-     *     {@link _EmissionClassificationEuroEnum }
+     *     {@link EmissionClassificationEuroEnum }
      *     
      */
-    public _EmissionClassificationEuroEnum getEmissionClassificationEuro() {
+    public EmissionClassificationEuroEnum getEmissionClassificationEuro() {
         return emissionClassificationEuro;
     }
 
@@ -65,10 +68,10 @@ public class Emissions {
      * 
      * @param value
      *     allowed object is
-     *     {@link _EmissionClassificationEuroEnum }
+     *     {@link EmissionClassificationEuroEnum }
      *     
      */
-    public void setEmissionClassificationEuro(_EmissionClassificationEuroEnum value) {
+    public void setEmissionClassificationEuro(EmissionClassificationEuroEnum value) {
         this.emissionClassificationEuro = value;
     }
 
@@ -106,10 +109,10 @@ public class Emissions {
      * 
      * @return
      *     possible object is
-     *     {@link _LowEmissionLevelEnum }
+     *     {@link LowEmissionLevelEnum }
      *     
      */
-    public _LowEmissionLevelEnum getEmissionLevel() {
+    public LowEmissionLevelEnum getEmissionLevel() {
         return emissionLevel;
     }
 
@@ -118,35 +121,35 @@ public class Emissions {
      * 
      * @param value
      *     allowed object is
-     *     {@link _LowEmissionLevelEnum }
+     *     {@link LowEmissionLevelEnum }
      *     
      */
-    public void setEmissionLevel(_LowEmissionLevelEnum value) {
+    public void setEmissionLevel(LowEmissionLevelEnum value) {
         this.emissionLevel = value;
     }
 
     /**
-     * Gets the value of the _EmissionsExtension property.
+     * Gets the value of the emissionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType get_EmissionsExtension() {
-        return _EmissionsExtension;
+    public ExtensionType getEmissionsExtension() {
+        return emissionsExtension;
     }
 
     /**
-     * Sets the value of the _EmissionsExtension property.
+     * Sets the value of the emissionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void set_EmissionsExtension(_ExtensionType value) {
-        this._EmissionsExtension = value;
+    public void setEmissionsExtension(ExtensionType value) {
+        this.emissionsExtension = value;
     }
 
 }

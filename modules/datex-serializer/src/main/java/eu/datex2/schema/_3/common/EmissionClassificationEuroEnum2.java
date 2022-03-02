@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "EmissionClassificationEuroEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "EmissionClassificationEuroEnum")
 @XmlEnum
 public enum EmissionClassificationEuroEnum2 {
 

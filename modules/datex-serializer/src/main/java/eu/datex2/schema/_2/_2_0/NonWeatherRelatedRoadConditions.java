@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NonWeatherRelatedRoadConditions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "NonWeatherRelatedRoadConditions", propOrder = {
     "nonWeatherRelatedRoadConditionType",
     "nonWeatherRelatedRoadConditionsExtension"
 })
@@ -39,10 +39,9 @@ public class NonWeatherRelatedRoadConditions
     extends RoadConditions
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<NonWeatherRelatedRoadConditionTypeEnum> nonWeatherRelatedRoadConditionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType nonWeatherRelatedRoadConditionsExtension;
 
     /**

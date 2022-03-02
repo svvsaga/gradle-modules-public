@@ -30,20 +30,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PermitsAndProhibitions", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PermitsAndProhibitions", propOrder = {
     "activity",
     "regulation",
     "permitsAndProhibitionsExtension"
 })
 public class PermitsAndProhibitions {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected RestAreaActivityEnum activity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected RegulationEnum regulation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType permitsAndProhibitionsExtension;
 
     /**

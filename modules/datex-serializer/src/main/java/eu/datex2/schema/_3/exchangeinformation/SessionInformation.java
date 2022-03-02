@@ -32,19 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SessionInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "SessionInformation", propOrder = {
     "sessionID",
     "startSession",
     "sessionInformationExtension"
 })
 public class SessionInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected String sessionID;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startSession;
-    @XmlElement(name = "_sessionInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_sessionInformationExtension")
     protected ExtensionType sessionInformationExtension;
 
     /**

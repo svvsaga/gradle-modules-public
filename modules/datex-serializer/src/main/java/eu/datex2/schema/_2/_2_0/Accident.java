@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Accident", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Accident", propOrder = {
     "accidentCause",
     "accidentType",
     "totalNumberOfPeopleInvolved",
@@ -52,25 +52,18 @@ public class Accident
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected AccidentCauseEnum accidentCause;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<AccidentTypeEnum> accidentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfPeopleInvolved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfVehiclesInvolved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Vehicle> vehicleInvolved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfVehiclesInvolved> groupOfVehiclesInvolved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType accidentExtension;
 
     /**

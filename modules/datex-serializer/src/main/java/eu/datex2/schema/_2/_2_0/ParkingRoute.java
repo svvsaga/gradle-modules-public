@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRoute", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingRoute", propOrder = {
     "parkingRouteColour",
     "parkingRouteExtension"
 })
@@ -39,9 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingRoute {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected RGBColour parkingRouteColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingRouteExtension;
 
     /**

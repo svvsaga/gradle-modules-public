@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MicrogramsConcentrationValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "MicrogramsConcentrationValue", propOrder = {
     "microgramsConcentration",
     "microgramsConcentrationValueExtension"
 })
@@ -40,9 +40,8 @@ public class MicrogramsConcentrationValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float microgramsConcentration;
-    @XmlElement(name = "_microgramsConcentrationValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_microgramsConcentrationValueExtension")
     protected ExtensionType microgramsConcentrationValueExtension;
 
     /**

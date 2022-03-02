@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AcceptedPaymentCards", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AcceptedPaymentCards", propOrder = {
     "paymentCards",
     "otherPaymentCards",
     "paymentCardBrands",
@@ -43,17 +43,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AcceptedPaymentCards {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<PaymentCardTypesEnum> paymentCards;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> otherPaymentCards;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<PaymentCardBrandsEnum> paymentCardBrands;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> otherPaymentCardBrands;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType acceptedPaymentCardsExtension;
 
     /**

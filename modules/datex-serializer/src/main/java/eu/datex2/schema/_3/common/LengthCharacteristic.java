@@ -31,18 +31,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LengthCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "LengthCharacteristic", propOrder = {
     "comparisonOperator",
     "vehicleLength",
     "lengthCharacteristicExtension"
 })
 public class LengthCharacteristic {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float vehicleLength;
-    @XmlElement(name = "_lengthCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_lengthCharacteristicExtension")
     protected ExtensionType lengthCharacteristicExtension;
 
     /**

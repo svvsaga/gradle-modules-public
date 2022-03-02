@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadInformation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "RoadInformation", propOrder = {
     "roadDestination",
     "roadName",
     "roadNumber",
@@ -41,13 +41,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RoadInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadDestination;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadNumber;
-    @XmlElement(name = "_roadInformationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_roadInformationExtension")
     protected ExtensionType roadInformationExtension;
 
     /**

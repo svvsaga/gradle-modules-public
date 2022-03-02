@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "TemperatureValue", propOrder = {
     "temperature",
     "temperatureValueExtension"
 })
@@ -38,9 +38,8 @@ public class TemperatureValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float temperature;
-    @XmlElement(name = "_temperatureValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_temperatureValueExtension")
     protected ExtensionType temperatureValueExtension;
 
     /**

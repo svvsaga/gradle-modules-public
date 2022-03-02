@@ -30,15 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Humidity", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Humidity", propOrder = {
     "relativeHumidity",
     "humidityExtension"
 })
 public class Humidity {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected PercentageValue relativeHumidity;
-    @XmlElement(name = "_humidityExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_humidityExtension")
     protected ExtensionType humidityExtension;
 
     /**

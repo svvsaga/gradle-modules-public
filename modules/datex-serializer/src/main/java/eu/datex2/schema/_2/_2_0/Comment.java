@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Comment", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Comment", propOrder = {
     "comment",
     "commentDateTime",
     "commentType",
@@ -40,15 +40,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Comment {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected MultilingualString comment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar commentDateTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CommentTypeEnum commentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType commentExtension;
 
     /**

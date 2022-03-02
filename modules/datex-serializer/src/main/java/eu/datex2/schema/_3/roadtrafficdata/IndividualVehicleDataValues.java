@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IndividualVehicleDataValues", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "IndividualVehicleDataValues", propOrder = {
     "arrivalTime",
     "distanceGap",
     "distanceHeadway",
@@ -62,29 +62,19 @@ public class IndividualVehicleDataValues
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar arrivalTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float distanceGap;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float distanceHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar exitTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float passageDuration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float presenceDuration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float speed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float timeGap;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float timeHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Vehicle individualVehicle;
-    @XmlElement(name = "_individualVehicleDataValuesExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_individualVehicleDataValuesExtension")
     protected ExtensionType individualVehicleDataValuesExtension;
 
     /**

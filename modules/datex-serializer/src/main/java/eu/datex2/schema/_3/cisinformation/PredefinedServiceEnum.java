@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PredefinedServiceEnum", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+@XmlType(name = "_PredefinedServiceEnum", propOrder = {
     "value"
 })
 public class PredefinedServiceEnum {

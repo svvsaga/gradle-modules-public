@@ -34,18 +34,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GddStructure", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "GddStructure", propOrder = {
     "gddPictogramIdentification",
     "gddPictogramAttributes",
     "gddStructureExtension"
 })
 public class GddStructure {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected GddPictogramIdentification gddPictogramIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected GddPictogramAttributes gddPictogramAttributes;
-    @XmlElement(name = "_gddStructureExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_gddStructureExtension")
     protected ExtensionType gddStructureExtension;
 
     /**

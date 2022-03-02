@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteTablePublication", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "MeasurementSiteTablePublication", propOrder = {
     "headerInformation",
     "measurementSiteTable",
     "measurementSiteTablePublicationExtension"
@@ -45,11 +45,11 @@ public class MeasurementSiteTablePublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected List<MeasurementSiteTable> measurementSiteTable;
-    @XmlElement(name = "_measurementSiteTablePublicationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_measurementSiteTablePublicationExtension")
     protected ExtensionType measurementSiteTablePublicationExtension;
 
     /**

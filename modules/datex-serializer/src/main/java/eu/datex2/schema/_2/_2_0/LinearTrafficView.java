@@ -33,18 +33,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearTrafficView", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "LinearTrafficView", propOrder = {
     "linearPredefinedLocationReference",
     "trafficViewRecord",
     "linearTrafficViewExtension"
 })
 public class LinearTrafficView {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PredefinedLocationVersionedReference linearPredefinedLocationReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<TrafficViewRecord> trafficViewRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType linearTrafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

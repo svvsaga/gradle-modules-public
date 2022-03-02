@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByCode", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearElementByCode", propOrder = {
     "linearElementIdentifier",
     "linearElementByCodeExtension"
 })
@@ -42,9 +42,9 @@ public class LinearElementByCode
     extends LinearElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String linearElementIdentifier;
-    @XmlElement(name = "_linearElementByCodeExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearElementByCodeExtension")
     protected ExtensionType linearElementByCodeExtension;
 
     /**

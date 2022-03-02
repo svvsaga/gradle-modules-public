@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FloatingPointMetreDistanceValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "FloatingPointMetreDistanceValue", propOrder = {
     "distance",
     "floatingPointMetreDistanceValueExtension"
 })
@@ -39,9 +39,8 @@ public class FloatingPointMetreDistanceValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float distance;
-    @XmlElement(name = "_floatingPointMetreDistanceValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_floatingPointMetreDistanceValueExtension")
     protected ExtensionType floatingPointMetreDistanceValueExtension;
 
     /**

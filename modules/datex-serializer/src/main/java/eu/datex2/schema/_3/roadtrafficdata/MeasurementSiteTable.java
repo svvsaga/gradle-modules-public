@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteTable", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "MeasurementSiteTable", propOrder = {
     "measurementSiteTableIdentification",
     "measurementSite",
     "informationManager",
@@ -50,13 +50,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSiteTable {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementSiteTableIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected List<MeasurementSite> measurementSite;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManager;
-    @XmlElement(name = "_measurementSiteTableExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_measurementSiteTableExtension")
     protected ExtensionType measurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "UpdateMethodEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+@XmlType(name = "UpdateMethodEnum")
 @XmlEnum
 public enum UpdateMethodEnum2 {
 

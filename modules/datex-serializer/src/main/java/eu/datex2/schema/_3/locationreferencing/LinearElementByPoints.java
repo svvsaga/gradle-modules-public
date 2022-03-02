@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByPoints", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearElementByPoints", propOrder = {
     "startPointOfLinearElement",
     "intermediatePointOnLinearElement",
     "endPointOfLinearElement",
@@ -46,13 +46,12 @@ public class LinearElementByPoints
     extends LinearElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected Referent startPointOfLinearElement;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<IntermediatePointOnLinearElement> intermediatePointOnLinearElement;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected Referent endPointOfLinearElement;
-    @XmlElement(name = "_linearElementByPointsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearElementByPointsExtension")
     protected ExtensionType linearElementByPointsExtension;
 
     /**

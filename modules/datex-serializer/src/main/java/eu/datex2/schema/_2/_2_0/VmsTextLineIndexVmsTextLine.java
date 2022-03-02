@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsTextLineIndexVmsTextLine", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_VmsTextLineIndexVmsTextLine", propOrder = {
     "vmsTextLine"
 })
 public class VmsTextLineIndexVmsTextLine {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected VmsTextLine vmsTextLine;
     @XmlAttribute(name = "lineIndex", required = true)
     protected int lineIndex;

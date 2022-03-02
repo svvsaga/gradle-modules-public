@@ -31,15 +31,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InformationManagedResourceList", namespace = "http://datex2.eu/schema/3/informationManagement", propOrder = {
+@XmlType(name = "InformationManagedResourceList", propOrder = {
     "elementReference",
     "informationManagedResourceListExtension"
 })
 public class InformationManagedResourceList {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement", required = true)
+    @XmlElement(required = true)
     protected List<ElementReference> elementReference;
-    @XmlElement(name = "_informationManagedResourceListExtension", namespace = "http://datex2.eu/schema/3/informationManagement")
+    @XmlElement(name = "_informationManagedResourceListExtension")
     protected ExtensionType informationManagedResourceListExtension;
 
     /**

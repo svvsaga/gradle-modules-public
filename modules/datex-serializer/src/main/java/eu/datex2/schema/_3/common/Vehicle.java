@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vehicle", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Vehicle", propOrder = {
     "anonymizedVehicleReference",
     "vehicleColour",
     "vehicleCountryOfOrigin",
@@ -60,31 +60,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Vehicle {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String anonymizedVehicleReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString vehicleColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String vehicleCountryOfOrigin;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String vehicleIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String vehicleManufacturer;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String vehicleModel;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String vehicleRegistrationPlateIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleStatusEnum vehicleStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleCharacteristics vehicleCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<AxleSpacing> axleSpacingOnVehicle;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<AxleWeight> specificAxleWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected HazardousMaterials hazardousGoodsAssociatedWithVehicle;
-    @XmlElement(name = "_vehicleExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_vehicleExtension")
     protected ExtensionType vehicleExtension;
 
     /**

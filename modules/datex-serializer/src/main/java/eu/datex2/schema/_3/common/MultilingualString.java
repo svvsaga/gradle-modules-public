@@ -39,12 +39,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MultilingualString", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "MultilingualString", propOrder = {
     "values"
 })
 public class MultilingualString {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected MultilingualString.Values values;
 
     /**
@@ -97,7 +97,7 @@ public class MultilingualString {
     })
     public static class Values {
 
-        @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+        @XmlElement(required = true)
         protected List<MultilingualStringValue> value;
 
         /**

@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangleLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrRectangleLocationReference", propOrder = {
     "openlrRectangle",
     "openlrRectangleLocationReferenceExtension"
 })
@@ -41,9 +41,9 @@ public class OpenlrRectangleLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrRectangle openlrRectangle;
-    @XmlElement(name = "_openlrRectangleLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrRectangleLocationReferenceExtension")
     protected ExtensionType openlrRectangleLocationReferenceExtension;
 
     /**

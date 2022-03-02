@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ProtocolTypeEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+@XmlType(name = "ProtocolTypeEnum")
 @XmlEnum
 public enum ProtocolTypeEnum2 {
 

@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficFlow", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficFlow", propOrder = {
     "axleFlow",
     "pcuFlow",
     "percentageLongVehicles",
@@ -55,23 +55,15 @@ public class TrafficFlow
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected AxleFlowValue axleFlow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected PcuFlowValue pcuFlow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected PercentageValue percentageLongVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleFlowValue vehicleFlow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleFlowValue normallyExpectedFlow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DailyTrafficFlowValue annualAverageDailyTraffic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DailyTrafficFlowValue monthlyAverageDailyTraffic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected AxleCharacteristics axleCharacteristics;
-    @XmlElement(name = "_trafficFlowExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficFlowExtension")
     protected ExtensionType trafficFlowExtension;
 
     /**

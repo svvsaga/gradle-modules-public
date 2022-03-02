@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfPeopleInvolved", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "GroupOfPeopleInvolved", propOrder = {
     "numberOfPeople",
     "injuryStatusType",
     "involvementRole",
@@ -46,16 +46,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GroupOfPeopleInvolved {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPeople;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InjuryStatusTypeEnum injuryStatusType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InvolvementRolesEnum involvementRole;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected PersonCategoryEnum categoryOfPeopleInvolved;
-    @XmlElement(name = "_groupOfPeopleInvolvedExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_groupOfPeopleInvolvedExtension")
     protected ExtensionType groupOfPeopleInvolvedExtension;
 
     /**

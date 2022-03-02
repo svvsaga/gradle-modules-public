@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicHoliday", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "PublicHoliday", propOrder = {
     "publicHolidayName",
     "publicHolidayExtension"
 })
@@ -40,9 +40,9 @@ public class PublicHoliday
     extends SpecialDay
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected MultilingualString publicHolidayName;
-    @XmlElement(name = "_publicHolidayExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_publicHolidayExtension")
     protected ExtensionType publicHolidayExtension;
 
     /**

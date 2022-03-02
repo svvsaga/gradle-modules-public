@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedItinerary", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PredefinedItinerary", propOrder = {
     "predefinedItineraryName",
     "itinerary",
     "predefinedLocation",
@@ -49,13 +49,10 @@ public class PredefinedItinerary
     extends PredefinedLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString predefinedItineraryName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Itinerary itinerary;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<PredefinedLocation> predefinedLocation;
-    @XmlElement(name = "_predefinedItineraryExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_predefinedItineraryExtension")
     protected ExtensionType predefinedItineraryExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

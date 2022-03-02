@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "InstanceOfDayEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "InstanceOfDayEnum")
 @XmlEnum
 public enum InstanceOfDayEnum2 {
 

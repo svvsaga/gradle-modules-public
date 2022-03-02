@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpeningTimes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OpeningTimes", propOrder = {
     "lastUpdated",
     "openAllYear",
     "available24Hours",
@@ -48,23 +48,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpeningTimes {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastUpdated;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openAllYear;
-    @XmlElement(name = "available24hours", namespace = "http://datex2.eu/schema/2/2_0")
+    @XmlElement(name = "available24hours")
     protected Boolean available24Hours;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openingTimesUnknown;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean openingTimesNotSpecified;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Validity validity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType openingTimesExtension;
 
     /**

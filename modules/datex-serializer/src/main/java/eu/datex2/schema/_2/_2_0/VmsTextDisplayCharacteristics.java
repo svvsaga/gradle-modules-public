@@ -4,7 +4,6 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -49,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsTextDisplayCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsTextDisplayCharacteristics", propOrder = {
     "textLanternsPresent",
     "textPageSequencingCapable",
     "textPixelsAcross",
@@ -74,60 +73,39 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsTextDisplayCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean textLanternsPresent;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean textPageSequencingCapable;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger textPixelsAcross;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger textPixelsDown;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textDisplayHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textDisplayWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfCharacters;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfRows;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String legendCodeListIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontSpacing;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontSpacing;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxTextLuminanceLevel;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfSequentialPages;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PositionAbsoluteEnum textPositionAbsolute;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textPositionX;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textPositionY;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsTextDisplayCharacteristicsExtension;
 
     /**

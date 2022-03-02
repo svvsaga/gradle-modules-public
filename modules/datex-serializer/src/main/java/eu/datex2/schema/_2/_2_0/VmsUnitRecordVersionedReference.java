@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsUnitRecordVersionedReference", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "_VmsUnitRecordVersionedReference")
 public class VmsUnitRecordVersionedReference
     extends VersionedReference
 {

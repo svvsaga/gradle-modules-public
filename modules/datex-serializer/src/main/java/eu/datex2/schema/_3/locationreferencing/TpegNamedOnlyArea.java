@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegNamedOnlyArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegNamedOnlyArea", propOrder = {
     "name",
     "tpegNamedOnlyAreaExtension"
 })
@@ -41,9 +41,9 @@ public class TpegNamedOnlyArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected List<TpegAreaDescriptor> name;
-    @XmlElement(name = "_tpegNamedOnlyAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegNamedOnlyAreaExtension")
     protected ExtensionType tpegNamedOnlyAreaExtension;
 
     /**

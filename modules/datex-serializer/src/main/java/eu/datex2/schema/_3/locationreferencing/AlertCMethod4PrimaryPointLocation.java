@@ -35,18 +35,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4PrimaryPointLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCMethod4PrimaryPointLocation", propOrder = {
     "alertCLocation",
     "offsetDistance",
     "alertCMethod4PrimaryPointLocationExtension"
 })
 public class AlertCMethod4PrimaryPointLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCLocation alertCLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OffsetDistance offsetDistance;
-    @XmlElement(name = "_alertCMethod4PrimaryPointLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCMethod4PrimaryPointLocationExtension")
     protected ExtensionType alertCMethod4PrimaryPointLocationExtension;
 
     /**

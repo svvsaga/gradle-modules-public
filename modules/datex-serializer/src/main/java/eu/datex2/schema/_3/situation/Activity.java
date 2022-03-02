@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Activity", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Activity", propOrder = {
     "mobilityOfActivity",
     "activityExtension"
 })
@@ -47,9 +47,8 @@ public abstract class Activity
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobilityOfActivity;
-    @XmlElement(name = "_activityExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_activityExtension")
     protected ExtensionType activityExtension;
 
     /**

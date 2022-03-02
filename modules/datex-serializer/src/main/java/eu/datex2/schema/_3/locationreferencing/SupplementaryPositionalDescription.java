@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPositionalDescription", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "SupplementaryPositionalDescription", propOrder = {
     "directionPurpose",
     "geographicDescriptor",
     "infrastructureDescriptor",
@@ -64,28 +64,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class SupplementaryPositionalDescription {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected DirectionPurposeEnum directionPurpose;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected GeographicCharacteristicEnum geographicDescriptor;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected InfrastructureDescriptorEnum infrastructureDescriptor;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float lengthAffected;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString locationDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected RelativePositionOnCarriagewayEnum positionOnCarriageway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequentialRampNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<Carriageway> carriageway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected NamedArea namedArea;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<RoadInformation> roadInformation;
-    @XmlElement(name = "_supplementaryPositionalDescriptionExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_supplementaryPositionalDescriptionExtension")
     protected ExtensionType supplementaryPositionalDescriptionExtension;
     @XmlAttribute(name = "locationPrecision")
     protected BigInteger locationPrecision;

@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TravelTimeTrendTypeEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "TravelTimeTrendTypeEnum")
 @XmlEnum
 public enum TravelTimeTrendTypeEnum {
 

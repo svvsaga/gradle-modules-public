@@ -29,16 +29,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingUsageScenarioStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingUsageScenarioStatus", propOrder = {
     "usageScenarioOperationStatus",
     "parkingUsageScenarioStatusExtension"
 })
 public class ParkingUsageScenarioStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected OperationStatusEnum usageScenarioOperationStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingUsageScenarioStatusExtension;
 
     /**

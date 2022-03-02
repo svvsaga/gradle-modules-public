@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChargeBand", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ChargeBand", propOrder = {
     "chargeCurrency",
     "maximumDuration",
     "chargeBandName",
@@ -54,25 +54,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ChargeBand {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected CurrencyEnum chargeCurrency;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumDuration;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargeBandName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<UserTypeEnum> applicableForUser;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<Charge> charge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod applicableForPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> applicableForVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingPermit> parkingPermit;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType chargeBandExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

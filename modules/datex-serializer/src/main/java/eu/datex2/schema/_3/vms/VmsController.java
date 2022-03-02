@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsController", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsController", propOrder = {
     "numberOfVms",
     "externalIdentifier",
     "ipAddress",
@@ -54,18 +54,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsController {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVms;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String externalIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String ipAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String electronicAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsControllerVmsIndexVms> vms;
-    @XmlElement(name = "_vmsControllerExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsControllerExtension")
     protected ExtensionType vmsControllerExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

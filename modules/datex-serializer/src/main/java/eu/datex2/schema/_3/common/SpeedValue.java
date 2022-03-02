@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "SpeedValue", propOrder = {
     "speed",
     "speedValueExtension"
 })
@@ -38,9 +38,8 @@ public class SpeedValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float speed;
-    @XmlElement(name = "_speedValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_speedValueExtension")
     protected ExtensionType speedValueExtension;
 
     /**

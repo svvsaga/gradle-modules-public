@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OpenlrPointLocationReference", propOrder = {
     "openlrGeoCoordinate",
     "openlrPoiWithAccessPoint",
     "openlrPointAlongLine",
@@ -38,13 +37,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpenlrPointLocationReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrGeoCoordinate openlrGeoCoordinate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrPoiWithAccessPoint openlrPoiWithAccessPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrPointAlongLine openlrPointAlongLine;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType openlrPointLocationReferenceExtension;
 
     /**

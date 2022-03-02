@@ -31,20 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subjects", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Subjects", propOrder = {
     "subjectTypeOfWorks",
     "numberOfSubjects",
     "subjectsExtension"
 })
 public class Subjects {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected SubjectTypeOfWorksEnum subjectTypeOfWorks;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubjects;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType subjectsExtension;
 
     /**

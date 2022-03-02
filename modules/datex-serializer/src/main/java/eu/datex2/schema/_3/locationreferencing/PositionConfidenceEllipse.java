@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PositionConfidenceEllipse", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PositionConfidenceEllipse", propOrder = {
     "semiMajorAxisLength",
     "semiMajorAxisLengthCodedError",
     "semiMinorAxisLength",
@@ -51,20 +51,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PositionConfidenceEllipse {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float semiMajorAxisLength;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionConfidenceCodedErrorEnum semiMajorAxisLengthCodedError;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float semiMinorAxisLength;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionConfidenceCodedErrorEnum semiMinorAxisLengthCodedError;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected Integer semiMajorAxisOrientation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Boolean semiMajorAxisOrientationError;
-    @XmlElement(name = "_positionConfidenceEllipseExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_positionConfidenceEllipseExtension")
     protected ExtensionType positionConfidenceEllipseExtension;
 
     /**

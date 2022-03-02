@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegIlcPointDescriptor", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegIlcPointDescriptor", propOrder = {
     "tpegIlcPointDescriptorType",
     "tpegIlcPointDescriptorExtension"
 })
@@ -40,9 +40,9 @@ public class TpegIlcPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected TpegLoc03IlcPointDescriptorSubtypeEnum tpegIlcPointDescriptorType;
-    @XmlElement(name = "_tpegIlcPointDescriptorExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegIlcPointDescriptorExtension")
     protected ExtensionType tpegIlcPointDescriptorExtension;
 
     /**

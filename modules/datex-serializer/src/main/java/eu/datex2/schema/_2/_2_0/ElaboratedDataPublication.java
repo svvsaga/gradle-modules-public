@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedDataPublication", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ElaboratedDataPublication", propOrder = {
     "forecastDefault",
     "periodDefault",
     "timeDefault",
@@ -50,20 +50,15 @@ public class ElaboratedDataPublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean forecastDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float periodDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ReferenceSettings referenceSettings;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<ElaboratedData> elaboratedData;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType elaboratedDataPublicationExtension;
 
     /**

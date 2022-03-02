@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsTextLine", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsTextLine", propOrder = {
     "vmsTextLine",
     "vmsTextLineLanguage",
     "vmsTextLineColour",
@@ -45,20 +45,15 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class VmsTextLine {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String vmsTextLine;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
     protected String vmsTextLineLanguage;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ColourEnum vmsTextLineColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean vmsTextLineFlashing;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsTextLineHtml;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsTextLineExtension;
 
     /**

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegFramedPoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegFramedPoint", propOrder = {
     "tpegFramedPointLocationType",
     "framedPoint",
     "to",
@@ -43,16 +43,15 @@ public class TpegFramedPoint
     extends TpegPointLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01FramedPointLocationSubtypeEnum tpegFramedPointLocationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected TpegNonJunctionPoint framedPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected TpegPoint to;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected TpegPoint from;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegFramedPointExtension;
 
     /**

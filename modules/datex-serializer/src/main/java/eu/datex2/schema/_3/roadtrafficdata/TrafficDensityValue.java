@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficDensityValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficDensityValue", propOrder = {
     "densityOfVehicles",
     "trafficDensityValueExtension"
 })
@@ -44,10 +44,10 @@ public class TrafficDensityValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger densityOfVehicles;
-    @XmlElement(name = "_trafficDensityValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficDensityValueExtension")
     protected ExtensionType trafficDensityValueExtension;
 
     /**

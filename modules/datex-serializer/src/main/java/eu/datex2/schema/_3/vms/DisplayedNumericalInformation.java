@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayedNumericalInformation", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "DisplayedNumericalInformation", propOrder = {
     "numericalInformationType",
     "numericValue",
     "unitOfMeasure",
@@ -42,13 +42,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DisplayedNumericalInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected DisplayedNumericalInformationTypeEnum numericalInformationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected BigDecimal numericValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected UnitOfMeasureEnum unitOfMeasure;
-    @XmlElement(name = "_displayedNumericalInformationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_displayedNumericalInformationExtension")
     protected ExtensionType displayedNumericalInformationExtension;
 
     /**

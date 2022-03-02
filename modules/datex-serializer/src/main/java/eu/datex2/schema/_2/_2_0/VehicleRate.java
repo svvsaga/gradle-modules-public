@@ -4,7 +4,6 @@ package eu.datex2.schema._2._2_0;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleRate", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VehicleRate", propOrder = {
     "measurementOrCalculationTime",
     "fillRate",
     "exitRate",
@@ -44,18 +43,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleRate {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementOrCalculationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue fillRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue exitRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleFlowValue vehicleFlowRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics measuredVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vehicleRateExtension;
 
     /**

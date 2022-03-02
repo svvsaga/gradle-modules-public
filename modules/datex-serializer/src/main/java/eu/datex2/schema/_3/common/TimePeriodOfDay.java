@@ -33,20 +33,20 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimePeriodOfDay", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "TimePeriodOfDay", propOrder = {
     "startTimeOfPeriod",
     "endTimeOfPeriod",
     "timePeriodOfDayExtension"
 })
 public class TimePeriodOfDay {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar startTimeOfPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar endTimeOfPeriod;
-    @XmlElement(name = "_timePeriodOfDayExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_timePeriodOfDayExtension")
     protected ExtensionType timePeriodOfDayExtension;
 
     /**

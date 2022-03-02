@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "WeatherRelatedRoadConditionTypeEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "WeatherRelatedRoadConditionTypeEnum")
 @XmlEnum
 public enum WeatherRelatedRoadConditionTypeEnum2 {
 

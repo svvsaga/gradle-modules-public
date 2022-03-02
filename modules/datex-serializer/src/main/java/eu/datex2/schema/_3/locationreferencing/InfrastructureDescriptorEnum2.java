@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "InfrastructureDescriptorEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "InfrastructureDescriptorEnum")
 @XmlEnum
 public enum InfrastructureDescriptorEnum2 {
 

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrBasePointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OpenlrBasePointLocation", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
     "openlrPositiveOffset",
@@ -49,20 +49,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class OpenlrBasePointLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrSideOfRoadEnum openlrSideOfRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected OpenlrOrientationEnum openlrOrientation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrPositiveOffset;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected OpenlrLocationReferencePoint openlrLocationReferencePoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType openlrBasePointLocationExtension;
 
     /**

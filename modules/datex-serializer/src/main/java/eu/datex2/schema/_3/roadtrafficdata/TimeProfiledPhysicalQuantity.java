@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimeProfiledPhysicalQuantity", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TimeProfiledPhysicalQuantity", propOrder = {
     "basicData",
     "timeProfiledPhysicalQuantityExtension"
 })
@@ -43,9 +43,8 @@ public class TimeProfiledPhysicalQuantity
     extends PhysicalQuantity
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<BasicData> basicData;
-    @XmlElement(name = "_timeProfiledPhysicalQuantityExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_timeProfiledPhysicalQuantityExtension")
     protected ExtensionType timeProfiledPhysicalQuantityExtension;
 
     /**

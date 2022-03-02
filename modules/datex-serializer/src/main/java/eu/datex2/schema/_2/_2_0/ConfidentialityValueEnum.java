@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ConfidentialityValueEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "ConfidentialityValueEnum")
 @XmlEnum
 public enum ConfidentialityValueEnum {
 

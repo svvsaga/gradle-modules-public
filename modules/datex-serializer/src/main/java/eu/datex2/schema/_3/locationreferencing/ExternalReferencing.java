@@ -33,18 +33,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExternalReferencing", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "ExternalReferencing", propOrder = {
     "externalLocationCode",
     "externalReferencingSystem",
     "externalReferencingExtension"
 })
 public class ExternalReferencing {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String externalLocationCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String externalReferencingSystem;
-    @XmlElement(name = "_externalReferencingExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_externalReferencingExtension")
     protected ExtensionType externalReferencingExtension;
 
     /**

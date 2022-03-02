@@ -31,18 +31,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InternationalIdentifier", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "InternationalIdentifier", propOrder = {
     "country",
     "nationalIdentifier",
     "internationalIdentifierExtension"
 })
 public class InternationalIdentifier {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected String country;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected String nationalIdentifier;
-    @XmlElement(name = "_internationalIdentifierExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_internationalIdentifierExtension")
     protected ExtensionType internationalIdentifierExtension;
 
     /**

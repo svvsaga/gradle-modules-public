@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PhysicalQuantityFaultEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "_PhysicalQuantityFaultEnum", propOrder = {
     "value"
 })
 public class PhysicalQuantityFaultEnum {

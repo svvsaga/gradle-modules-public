@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegDescriptor", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegDescriptor", propOrder = {
     "descriptor",
     "tpegDescriptorExtension"
 })
@@ -45,9 +45,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegDescriptor {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected MultilingualString descriptor;
-    @XmlElement(name = "_tpegDescriptorExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegDescriptorExtension")
     protected ExtensionType tpegDescriptorExtension;
 
     /**

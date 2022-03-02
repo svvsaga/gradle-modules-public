@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegGeometricArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegGeometricArea", propOrder = {
     "radius",
     "centrePoint",
     "name",
@@ -45,14 +45,13 @@ public class TpegGeometricArea
     extends TpegAreaLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger radius;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates centrePoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegAreaDescriptor name;
-    @XmlElement(name = "_tpegGeometricAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegGeometricAreaExtension")
     protected ExtensionType tpegGeometricAreaExtension;
 
     /**

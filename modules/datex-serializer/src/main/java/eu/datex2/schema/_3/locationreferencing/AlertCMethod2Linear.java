@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod2Linear", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCMethod2Linear", propOrder = {
     "alertCDirection",
     "alertCMethod2PrimaryPointLocation",
     "alertCMethod2SecondaryPointLocation",
@@ -46,13 +46,13 @@ public class AlertCMethod2Linear
     extends AlertCLinear
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCMethod2PrimaryPointLocation alertCMethod2PrimaryPointLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCMethod2SecondaryPointLocation alertCMethod2SecondaryPointLocation;
-    @XmlElement(name = "_alertCMethod2LinearExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCMethod2LinearExtension")
     protected ExtensionType alertCMethod2LinearExtension;
 
     /**

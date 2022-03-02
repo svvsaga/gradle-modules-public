@@ -35,18 +35,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlMultiPolygon", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "GmlMultiPolygon", propOrder = {
     "gmlAreaName",
     "gmlPolygon",
     "gmlMultiPolygonExtension"
 })
 public class GmlMultiPolygon {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString gmlAreaName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected List<GmlPolygon> gmlPolygon;
-    @XmlElement(name = "_gmlMultiPolygonExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_gmlMultiPolygonExtension")
     protected ExtensionType gmlMultiPolygonExtension;
 
     /**

@@ -36,20 +36,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrOffsets", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrOffsets", propOrder = {
     "openlrPositiveOffset",
     "openlrNegativeOffset",
     "openlrOffsetsExtension"
 })
 public class OpenlrOffsets {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrPositiveOffset;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNegativeOffset;
-    @XmlElement(name = "_openlrOffsetsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrOffsetsExtension")
     protected ExtensionType openlrOffsetsExtension;
 
     /**

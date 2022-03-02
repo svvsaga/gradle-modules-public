@@ -37,19 +37,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPathAttributes", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPathAttributes", propOrder = {
     "openlrLowestFrcToNextLRPoint",
     "openlrDistanceToNextLRPoint",
     "openlrPathAttributesExtension"
 })
 public class OpenlrPathAttributes {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrFunctionalRoadClassEnum openlrLowestFrcToNextLRPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrDistanceToNextLRPoint;
-    @XmlElement(name = "_openlrPathAttributesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPathAttributesExtension")
     protected ExtensionType openlrPathAttributesExtension;
 
     /**

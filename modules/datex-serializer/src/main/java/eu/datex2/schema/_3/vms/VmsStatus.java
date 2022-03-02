@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsStatus", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsStatus", propOrder = {
     "flashingLightsOn",
     "remainingPowerCapacity",
     "statusUpdateTime",
@@ -62,28 +62,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean flashingLightsOn;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float remainingPowerCapacity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar statusUpdateTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float sequencingInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected WorkingStatusEnum workingStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected VmsConfiguration vmsDynamicConfiguration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsStatusMessageIndexVmsMessage> vmsMessage;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location vmsLocationOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected ManagedLogicalLocation managedLogicalLocationOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsFault> vmsFault;
-    @XmlElement(name = "_vmsStatusExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsStatusExtension")
     protected ExtensionType vmsStatusExtension;
 
     /**

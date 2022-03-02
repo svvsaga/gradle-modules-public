@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficHeadway", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TrafficHeadway", propOrder = {
     "averageDistanceHeadway",
     "averageTimeHeadway",
     "trafficHeadwayExtension"
@@ -38,11 +37,8 @@ public class TrafficHeadway
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue averageTimeHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType trafficHeadwayExtension;
 
     /**

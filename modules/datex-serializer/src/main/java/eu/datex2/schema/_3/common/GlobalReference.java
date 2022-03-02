@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GlobalReference", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "GlobalReference", propOrder = {
     "externalPublicationIdentifier",
     "externalPublisher",
     "globalReferenceExtension"
@@ -47,11 +47,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class GlobalReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String externalPublicationIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected InternationalIdentifier externalPublisher;
-    @XmlElement(name = "_globalReferenceExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_globalReferenceExtension")
     protected ExtensionType globalReferenceExtension;
 
     /**

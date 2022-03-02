@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsDynamicCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsDynamicCharacteristics", propOrder = {
     "numberOfPictogramDisplayAreas",
     "vmsTextDisplayCharacteristics",
     "vmsPictogramDisplayCharacteristics",
@@ -42,14 +41,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsDynamicCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPictogramDisplayAreas;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsDynamicCharacteristicsExtension;
 
     /**

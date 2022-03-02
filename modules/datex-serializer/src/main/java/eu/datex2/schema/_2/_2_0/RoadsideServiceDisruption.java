@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadsideServiceDisruption", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "RoadsideServiceDisruption", propOrder = {
     "roadsideServiceDisruptionType",
     "roadsideServiceDisruptionExtension"
 })
@@ -39,10 +39,9 @@ public class RoadsideServiceDisruption
     extends NonRoadEventInformation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<RoadsideServiceDisruptionTypeEnum> roadsideServiceDisruptionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType roadsideServiceDisruptionExtension;
 
     /**

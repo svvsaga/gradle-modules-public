@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PredefinedItineraryVersionedReference", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "_PredefinedItineraryVersionedReference")
 public class PredefinedItineraryVersionedReference
     extends VersionedReference
 {

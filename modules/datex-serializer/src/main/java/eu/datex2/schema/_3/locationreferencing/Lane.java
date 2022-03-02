@@ -33,18 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Lane", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "Lane", propOrder = {
     "laneNumber",
     "laneUsage",
     "laneExtension"
 })
 public class Lane {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected BigInteger laneNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LaneEnum laneUsage;
-    @XmlElement(name = "_laneExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_laneExtension")
     protected ExtensionType laneExtension;
 
     /**

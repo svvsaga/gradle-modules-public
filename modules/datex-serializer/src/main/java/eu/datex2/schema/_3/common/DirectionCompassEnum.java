@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_DirectionCompassEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "_DirectionCompassEnum", propOrder = {
     "value"
 })
 public class DirectionCompassEnum {

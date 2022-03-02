@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "UrlLinkTypeEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "UrlLinkTypeEnum")
 @XmlEnum
 public enum UrlLinkTypeEnum2 {
 

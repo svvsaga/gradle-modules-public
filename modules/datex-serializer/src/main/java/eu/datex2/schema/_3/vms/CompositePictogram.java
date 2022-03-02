@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CompositePictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "CompositePictogram", propOrder = {
     "pictogramDescription",
     "regularPictogram",
     "compositePictogramExtension"
@@ -43,11 +43,11 @@ public class CompositePictogram
     extends Pictogram
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected CompositePictogramEnum pictogramDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected RegularPictogram regularPictogram;
-    @XmlElement(name = "_compositePictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_compositePictogramExtension")
     protected ExtensionType compositePictogramExtension;
 
     /**

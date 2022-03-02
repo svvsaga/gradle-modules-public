@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AreaLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AreaLocation", propOrder = {
     "areasAtWhichApplicable",
     "alertCArea",
     "tpegAreaLocation",
@@ -54,19 +54,13 @@ public class AreaLocation
     extends Location
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected AreaPlacesEnum areasAtWhichApplicable;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCArea> alertCArea;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegAreaLocation tpegAreaLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected NamedArea namedArea;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected GmlMultiPolygon gmlMultiPolygon;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrAreaLocationReference openlrAreaLocationReference;
-    @XmlElement(name = "_areaLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_areaLocationExtension")
     protected ExtensionType areaLocationExtension;
 
     /**

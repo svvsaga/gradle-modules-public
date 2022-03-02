@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -32,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSpace", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingSpace", propOrder = {
     "identicalToParkingSpace",
     "location",
     "parkingSpaceDimension",
@@ -42,13 +41,9 @@ public class ParkingSpace2
     extends ParkingSpaceBasics
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> identicalToParkingSpace;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location location;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Dimension parkingSpaceDimension;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingSpaceExtension;
 
     /**

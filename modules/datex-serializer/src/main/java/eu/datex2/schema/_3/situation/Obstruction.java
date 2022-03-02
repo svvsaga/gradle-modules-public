@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Obstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Obstruction", propOrder = {
     "numberOfObstructions",
     "mobilityOfObstruction",
     "obstructionExtension"
@@ -54,12 +54,10 @@ public abstract class Obstruction
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfObstructions;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobilityOfObstruction;
-    @XmlElement(name = "_obstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_obstructionExtension")
     protected ExtensionType obstructionExtension;
 
     /**

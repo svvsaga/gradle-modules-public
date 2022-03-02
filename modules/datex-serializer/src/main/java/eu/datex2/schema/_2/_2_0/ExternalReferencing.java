@@ -29,18 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExternalReferencing", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ExternalReferencing", propOrder = {
     "externalLocationCode",
     "externalReferencingSystem",
     "externalReferencingExtension"
 })
 public class ExternalReferencing {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String externalLocationCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String externalReferencingSystem;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType externalReferencingExtension;
 
     /**

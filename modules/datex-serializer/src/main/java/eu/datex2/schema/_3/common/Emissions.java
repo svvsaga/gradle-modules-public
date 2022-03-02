@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Emissions", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Emissions", propOrder = {
     "emissionClassificationEuro",
     "emissionClassificationOther",
     "emissionLevel",
@@ -42,13 +42,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Emissions {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected EmissionClassificationEuroEnum emissionClassificationEuro;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<String> emissionClassificationOther;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected LowEmissionLevelEnum emissionLevel;
-    @XmlElement(name = "_emissionsExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_emissionsExtension")
     protected ExtensionType emissionsExtension;
 
     /**

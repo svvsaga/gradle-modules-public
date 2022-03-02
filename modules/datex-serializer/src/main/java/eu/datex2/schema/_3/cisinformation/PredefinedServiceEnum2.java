@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PredefinedServiceEnum", namespace = "http://datex2.eu/schema/3/cisInformation")
+@XmlType(name = "PredefinedServiceEnum")
 @XmlEnum
 public enum PredefinedServiceEnum2 {
 

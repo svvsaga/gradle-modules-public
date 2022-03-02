@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRouteByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingRouteByReference", propOrder = {
     "parkingRouteReference",
     "parkingRouteByReferenceExtension"
 })
@@ -36,9 +36,8 @@ public class ParkingRouteByReference
     extends ParkingRoute
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingRouteDetailsVersionedReference parkingRouteReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingRouteByReferenceExtension;
 
     /**

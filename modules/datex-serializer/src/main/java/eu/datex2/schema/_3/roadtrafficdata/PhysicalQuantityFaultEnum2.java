@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PhysicalQuantityFaultEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+@XmlType(name = "PhysicalQuantityFaultEnum")
 @XmlEnum
 public enum PhysicalQuantityFaultEnum2 {
 

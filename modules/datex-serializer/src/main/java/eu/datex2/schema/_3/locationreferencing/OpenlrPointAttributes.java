@@ -33,18 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointAttributes", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPointAttributes", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
     "openlrPointAttributesExtension"
 })
 public class OpenlrPointAttributes {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrSideOfRoadEnum openlrSideOfRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrOrientationEnum openlrOrientation;
-    @XmlElement(name = "_openlrPointAttributesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPointAttributesExtension")
     protected ExtensionType openlrPointAttributesExtension;
 
     /**

@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicEvent", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "PublicEvent", propOrder = {
     "publicEventType",
     "venueName",
     "publicEventExtension"
@@ -43,11 +43,10 @@ public class PublicEvent
     extends Activity
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected PublicEventTypeEnum publicEventType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString venueName;
-    @XmlElement(name = "_publicEventExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_publicEventExtension")
     protected ExtensionType publicEventExtension;
 
     /**

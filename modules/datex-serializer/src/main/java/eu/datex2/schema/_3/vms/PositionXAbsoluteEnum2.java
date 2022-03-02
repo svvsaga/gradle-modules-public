@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PositionXAbsoluteEnum", namespace = "http://datex2.eu/schema/3/vms")
+@XmlType(name = "PositionXAbsoluteEnum")
 @XmlEnum
 public enum PositionXAbsoluteEnum2 {
 

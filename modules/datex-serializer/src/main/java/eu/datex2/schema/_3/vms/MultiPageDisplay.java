@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MultiPageDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "MultiPageDisplay", propOrder = {
     "sequenceGroupNumber",
     "displayAreaSettings",
     "multiPageDisplayExtension"
@@ -46,12 +46,10 @@ public class MultiPageDisplay
     extends DisplayAreaSettings
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequenceGroupNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<MultiPageDisplayPageNumberDisplayAreaSettings> displayAreaSettings;
-    @XmlElement(name = "_multiPageDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_multiPageDisplayExtension")
     protected ExtensionType multiPageDisplayExtension;
 
     /**

@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCPoint", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AlertCPoint", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
@@ -43,13 +43,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class AlertCPoint {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType alertCPointExtension;
 
     /**

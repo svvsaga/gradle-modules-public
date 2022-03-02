@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItineraryByIndexedLocations", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "ItineraryByIndexedLocations", propOrder = {
     "locationContainedInItinerary",
     "itineraryByIndexedLocationsExtension"
 })
@@ -43,9 +43,8 @@ public class ItineraryByIndexedLocations
     extends Itinerary
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<LocationContainedInItinerary> locationContainedInItinerary;
-    @XmlElement(name = "_itineraryByIndexedLocationsExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_itineraryByIndexedLocationsExtension")
     protected ExtensionType itineraryByIndexedLocationsExtension;
 
     /**

@@ -32,18 +32,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleCharacteristics", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "AxleCharacteristics", propOrder = {
     "maximumWeight",
     "minimumWeight",
     "axleCharacteristicsExtension"
 })
 public class AxleCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float maximumWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float minimumWeight;
-    @XmlElement(name = "_axleCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_axleCharacteristicsExtension")
     protected ExtensionType axleCharacteristicsExtension;
 
     /**

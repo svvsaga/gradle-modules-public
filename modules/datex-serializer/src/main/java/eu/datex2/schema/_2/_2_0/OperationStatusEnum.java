@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "OperationStatusEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "OperationStatusEnum")
 @XmlEnum
 public enum OperationStatusEnum {
 

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsText", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsText", propOrder = {
     "vmsLegendCode",
     "vmsTextImageUrl",
     "vmsTextLine",
@@ -41,14 +40,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsText {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsLegendCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String vmsTextImageUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsTextLineIndexVmsTextLine> vmsTextLine;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsTextExtension;
 
     /**

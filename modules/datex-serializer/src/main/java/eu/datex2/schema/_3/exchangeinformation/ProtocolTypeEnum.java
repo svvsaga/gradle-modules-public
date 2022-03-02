@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ProtocolTypeEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "_ProtocolTypeEnum", propOrder = {
     "value"
 })
 public class ProtocolTypeEnum {

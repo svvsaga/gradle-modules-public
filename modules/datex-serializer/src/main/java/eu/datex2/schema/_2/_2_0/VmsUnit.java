@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsUnit", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsUnit", propOrder = {
     "vmsUnitTableReference",
     "vmsUnitReference",
     "vms",
@@ -44,15 +44,12 @@ public class VmsUnit
     extends VmsSetting
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected VmsUnitTableVersionedReference vmsUnitTableReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected VmsUnitRecordVersionedReference vmsUnitReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsUnitVmsIndexVms> vms;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsUnitFault> vmsUnitFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsUnitExtension;
 
     /**

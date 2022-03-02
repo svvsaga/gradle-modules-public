@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleWeight", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AxleWeight", propOrder = {
     "axlePositionIdentifier",
     "axleWeight",
     "maximumPermittedAxleWeight",
@@ -40,14 +40,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AxleWeight {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axlePositionIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float axleWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumPermittedAxleWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType axleWeightExtension;
 
     /**

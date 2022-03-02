@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InstanceOfDayWithinMonth", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "InstanceOfDayWithinMonth", propOrder = {
     "applicableInstanceOfDayWithinMonth",
     "instanceOfDayWithinMonthExtension"
 })
@@ -42,9 +42,9 @@ public class InstanceOfDayWithinMonth
     extends DayWeekMonth
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected List<InstanceOfDayEnum> applicableInstanceOfDayWithinMonth;
-    @XmlElement(name = "_instanceOfDayWithinMonthExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_instanceOfDayWithinMonthExtension")
     protected ExtensionType instanceOfDayWithinMonthExtension;
 
     /**

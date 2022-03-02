@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsSupplementaryPanel", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsSupplementaryPanel", propOrder = {
     "supplementaryMessageDescription",
     "vmsSupplementaryPictogram",
     "vmsSupplementaryText",
@@ -38,13 +37,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsSupplementaryPanel {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString supplementaryMessageDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsSupplementaryPictogram vmsSupplementaryPictogram;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextLine vmsSupplementaryText;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsSupplementaryPanelExtension;
 
     /**

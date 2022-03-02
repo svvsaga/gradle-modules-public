@@ -70,7 +70,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PictogramEnum", namespace = "http://datex2.eu/schema/3/vms")
+@XmlType(name = "PictogramEnum")
 @XmlEnum
 public enum PictogramEnum2 {
 

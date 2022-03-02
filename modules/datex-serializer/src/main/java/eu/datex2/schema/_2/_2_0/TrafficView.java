@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficView", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TrafficView", propOrder = {
     "trafficViewTime",
     "predefinedNonOrderedLocationGroupReference",
     "linearTrafficView",
@@ -44,14 +44,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TrafficView {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar trafficViewTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<LinearTrafficView> linearTrafficView;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType trafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

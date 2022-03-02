@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -41,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VehicleCharacteristics", propOrder = {
     "fuelType",
     "loadType",
     "vehicleEquipment",
@@ -57,34 +56,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected FuelTypeEnum fuelType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LoadTypeEnum loadType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VehicleEquipmentEnum vehicleEquipment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<VehicleTypeEnum> vehicleType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VehicleUsageEnum vehicleUsage;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GrossWeightCharacteristic> grossWeightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<HeightCharacteristic> heightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<LengthCharacteristic> lengthCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<WidthCharacteristic> widthCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<HeaviestAxleWeightCharacteristic> heaviestAxleWeightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristicsExtensionType vehicleCharacteristicsExtension;
 
     /**

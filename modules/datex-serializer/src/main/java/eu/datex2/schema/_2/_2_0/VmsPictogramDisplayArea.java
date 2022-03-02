@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -31,18 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsPictogramDisplayArea", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsPictogramDisplayArea", propOrder = {
     "synchronizedSequencingWithTextPages",
     "vmsPictogram",
     "vmsPictogramDisplayAreaExtension"
 })
 public class VmsPictogramDisplayArea {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean synchronizedSequencingWithTextPages;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> vmsPictogram;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsPictogramDisplayAreaExtension;
 
     /**

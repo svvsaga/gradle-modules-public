@@ -20,7 +20,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TpegLoc01FramedPointLocationSubtypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "TpegLoc01FramedPointLocationSubtypeEnum")
 @XmlEnum
 public enum TpegLoc01FramedPointLocationSubtypeEnum2 {
 

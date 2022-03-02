@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -29,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfParkingSitesStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "GroupOfParkingSitesStatus", propOrder = {
     "groupOfParkingSitesStatus",
     "groupOfParkingSitesStatusExtension"
 })
@@ -37,10 +36,8 @@ public class GroupOfParkingSitesStatus
     extends ParkingRecordStatus
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected GroupOfParkingSitesStatusEnum groupOfParkingSitesStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType groupOfParkingSitesStatusExtension;
 
     /**

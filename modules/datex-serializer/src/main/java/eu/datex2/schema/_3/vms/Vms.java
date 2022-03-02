@@ -50,7 +50,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vms", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "Vms", propOrder = {
     "lanternsPresent",
     "description",
     "owner",
@@ -70,37 +70,23 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Vms {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean lanternsPresent;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString description;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString owner;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected PhysicalSupportEnum physicalSupport;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected VmsTypeEnum vmsType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String vmsTypeCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean dynamicallyConfigurable;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float heightAboveCarriageway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected DedicatedUsageEnum dedicatedUsage;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected VmsConfiguration vmsConfiguration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location vmsLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected ManagedLogicalLocation managedLogicalLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected UrlLink imageLink;
-    @XmlElement(name = "_vmsExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsExtension")
     protected ExtensionType vmsExtension;
 
     /**

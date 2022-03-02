@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -49,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSpaceBasics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingSpaceBasics", propOrder = {
     "parkingSpaceOrGroupIdentifier",
     "parkingFloorOrLevel",
     "accessibility",
@@ -75,49 +74,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingSpaceBasics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingSpaceOrGroupIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BigInteger parkingFloorOrLevel;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<AccessibilityEnum> accessibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSpaceAccessibilityEnum> parkingSpaceAccessibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSpacePhysicsEnum> parkingSpacePhysics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingModeEnum parkingMode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ReservationTypeEnum parkingReservation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumParkingDuration;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromPrimaryRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<OccupancyDetectionTypeEnum> parkingOccupanyDetectionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSecurityEnum> parkingSecurity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<DedicatedAccess> dedicatedAccess;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment onlyAssignedParking;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment assignedParkingAmongOthers;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment prohibitedParking;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility> parkingEquipmentOrServiceFacility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingSpaceBasicsScenarioIndexParkingUsageScenario> parkingUsageScenario;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingSpaceBasicsExtension;
 
     /**

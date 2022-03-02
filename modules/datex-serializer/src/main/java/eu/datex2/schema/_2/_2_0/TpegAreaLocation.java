@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegAreaLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegAreaLocation", propOrder = {
     "tpegAreaLocationType",
     "tpegHeight",
     "tpegAreaLocationExtension"
@@ -42,12 +42,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegAreaLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01AreaLocationSubtypeEnum tpegAreaLocationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegHeight tpegHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegAreaLocationExtension;
 
     /**

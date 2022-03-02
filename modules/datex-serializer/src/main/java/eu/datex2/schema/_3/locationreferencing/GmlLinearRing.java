@@ -31,14 +31,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlLinearRing", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "GmlLinearRing", propOrder = {
     "gmlLinearRingExtension"
 })
 public class GmlLinearRing
     extends GmlLineString
 {
 
-    @XmlElement(name = "_gmlLinearRingExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_gmlLinearRingExtension")
     protected ExtensionType gmlLinearRingExtension;
 
     /**

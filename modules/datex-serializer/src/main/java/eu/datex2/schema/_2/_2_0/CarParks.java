@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CarParks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "CarParks", propOrder = {
     "carParkConfiguration",
     "carParkIdentity",
     "carParkOccupancy",
@@ -56,34 +56,24 @@ public class CarParks
     extends NonRoadEventInformation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CarParkConfigurationEnum carParkConfiguration;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String carParkIdentity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float carParkOccupancy;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CarParkStatusEnum carParkStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger exitRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger fillRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVacantParkingSpaces;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger occupiedSpaces;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float queuingTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalCapacity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType carParksExtension;
 
     /**

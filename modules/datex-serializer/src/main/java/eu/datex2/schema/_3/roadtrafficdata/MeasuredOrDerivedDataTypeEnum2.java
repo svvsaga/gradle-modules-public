@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "MeasuredOrDerivedDataTypeEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+@XmlType(name = "MeasuredOrDerivedDataTypeEnum")
 @XmlEnum
 public enum MeasuredOrDerivedDataTypeEnum2 {
 

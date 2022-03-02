@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "WeightTypeEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "WeightTypeEnum")
 @XmlEnum
 public enum WeightTypeEnum2 {
 

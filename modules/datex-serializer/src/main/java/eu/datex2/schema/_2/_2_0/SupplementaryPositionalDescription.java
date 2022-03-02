@@ -7,7 +7,6 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -36,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPositionalDescription", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "SupplementaryPositionalDescription", propOrder = {
     "locationDescriptor",
     "sequentialRampNumber",
     "affectedCarriagewayAndLanes",
@@ -44,15 +43,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class SupplementaryPositionalDescription {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<LocationDescriptorEnum> locationDescriptor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequentialRampNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<AffectedCarriagewayAndLanes> affectedCarriagewayAndLanes;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType supplementaryPositionalDescriptionExtension;
     @XmlAttribute(name = "locationPrecision")
     protected BigInteger locationPrecision;

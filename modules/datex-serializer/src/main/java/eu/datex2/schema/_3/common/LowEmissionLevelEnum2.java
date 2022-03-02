@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "LowEmissionLevelEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "LowEmissionLevelEnum")
 @XmlEnum
 public enum LowEmissionLevelEnum2 {
 

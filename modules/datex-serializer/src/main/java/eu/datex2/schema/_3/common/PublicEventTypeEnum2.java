@@ -79,7 +79,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PublicEventTypeEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "PublicEventTypeEnum")
 @XmlEnum
 public enum PublicEventTypeEnum2 {
 

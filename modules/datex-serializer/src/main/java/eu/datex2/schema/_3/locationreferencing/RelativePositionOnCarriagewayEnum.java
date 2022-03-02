@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_RelativePositionOnCarriagewayEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "_RelativePositionOnCarriagewayEnum", propOrder = {
     "value"
 })
 public class RelativePositionOnCarriagewayEnum {

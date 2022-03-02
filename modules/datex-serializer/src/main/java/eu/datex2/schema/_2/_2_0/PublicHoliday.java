@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PublicHoliday", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PublicHoliday", propOrder = {
     "country",
     "countrySubdivision",
     "region",
@@ -43,19 +43,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PublicHoliday {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected CountryEnum country;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String countrySubdivision;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString region;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected PublicHolidayTypeEnum publicHolidayType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString publicHolidayName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType publicHolidayExtension;
 
     /**

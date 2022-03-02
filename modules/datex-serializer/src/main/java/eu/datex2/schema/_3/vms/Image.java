@@ -32,18 +32,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Image", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "Image", propOrder = {
     "imageData",
     "imageFormat",
     "imageExtension"
 })
 public class Image {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected byte[] imageData;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected ImageFormatEnum imageFormat;
-    @XmlElement(name = "_imageExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_imageExtension")
     protected ExtensionType imageExtension;
 
     /**

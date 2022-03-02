@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OperatorAction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "OperatorAction", propOrder = {
     "actionOrigin",
     "actionPlanIdentifier",
     "operatorActionStatus",
@@ -51,13 +51,10 @@ public abstract class OperatorAction
     extends SituationRecord
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected OperatorActionOriginEnum actionOrigin;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String actionPlanIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected OperatorActionStatusEnum operatorActionStatus;
-    @XmlElement(name = "_operatorActionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_operatorActionExtension")
     protected ExtensionType operatorActionExtension;
 
     /**

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalQuantityFault", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "PhysicalQuantityFault", propOrder = {
     "physicalQuantityFaultType",
     "physicalQuantityFaultExtension"
 })
@@ -40,9 +40,9 @@ public class PhysicalQuantityFault
     extends Fault
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected PhysicalQuantityFaultEnum physicalQuantityFaultType;
-    @XmlElement(name = "_physicalQuantityFaultExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_physicalQuantityFaultExtension")
     protected ExtensionType physicalQuantityFaultExtension;
 
     /**

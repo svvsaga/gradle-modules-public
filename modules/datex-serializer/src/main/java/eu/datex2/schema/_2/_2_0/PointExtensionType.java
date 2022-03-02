@@ -6,7 +6,6 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAnyElement;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
@@ -33,16 +32,14 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PointExtensionType", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_PointExtensionType", propOrder = {
     "pointExtended",
     "openlrExtendedPoint",
     "any"
 })
 public class PointExtensionType {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointExtended pointExtended;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpenlrExtendedPoint openlrExtendedPoint;
     @XmlAnyElement(lax = true)
     protected List<Object> any;

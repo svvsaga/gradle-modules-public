@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrecipitationDetail", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "PrecipitationDetail", propOrder = {
     "precipitationType",
     "precipitationIntensityGrade",
     "precipitationIntensity",
@@ -42,15 +42,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PrecipitationDetail {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PrecipitationTypeEnum precipitationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PrecipitationIntensityEnum precipitationIntensityGrade;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PrecipitationIntensityValue precipitationIntensity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue depositionDepth;
-    @XmlElement(name = "_precipitationDetailExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_precipitationDetailExtension")
     protected ExtensionType precipitationDetailExtension;
 
     /**

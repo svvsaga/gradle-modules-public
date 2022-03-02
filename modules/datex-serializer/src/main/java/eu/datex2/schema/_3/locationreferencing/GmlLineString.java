@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GmlLineString", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "GmlLineString", propOrder = {
     "posList",
     "gmlLineStringExtension"
 })
@@ -48,9 +48,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GmlLineString {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String posList;
-    @XmlElement(name = "_gmlLineStringExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_gmlLineStringExtension")
     protected ExtensionType gmlLineStringExtension;
     @XmlAttribute(name = "srsDimension")
     protected BigInteger srsDimension;

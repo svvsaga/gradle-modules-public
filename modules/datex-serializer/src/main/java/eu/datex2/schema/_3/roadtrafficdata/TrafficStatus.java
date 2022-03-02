@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficStatus", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficStatus", propOrder = {
     "trafficTrendType",
     "trafficStatus",
     "trafficStatusExtension"
@@ -44,11 +44,9 @@ public class TrafficStatus
     extends BasicData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficTrendTypeEnum trafficTrendType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficStatusValue trafficStatus;
-    @XmlElement(name = "_trafficStatusExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficStatusExtension")
     protected ExtensionType trafficStatusExtension;
 
     /**

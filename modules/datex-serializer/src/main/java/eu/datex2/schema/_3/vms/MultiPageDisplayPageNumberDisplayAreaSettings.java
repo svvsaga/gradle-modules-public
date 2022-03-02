@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_MultiPageDisplayPageNumberDisplayAreaSettings", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_MultiPageDisplayPageNumberDisplayAreaSettings", propOrder = {
     "displayAreaSettings"
 })
 public class MultiPageDisplayPageNumberDisplayAreaSettings {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected DisplayAreaSettings displayAreaSettings;
     @XmlAttribute(name = "pageNumber", required = true)
     protected int pageNumber;

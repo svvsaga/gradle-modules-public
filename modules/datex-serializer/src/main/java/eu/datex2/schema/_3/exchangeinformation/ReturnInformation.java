@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReturnInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "ReturnInformation", propOrder = {
     "returnStatus",
     "returnStatusReason",
     "codedInvalidityReason",
@@ -42,13 +42,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ReturnInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected ExchangeReturnEnum returnStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected MultilingualString returnStatusReason;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected List<InvalidityReasonEnum> codedInvalidityReason;
-    @XmlElement(name = "_returnInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_returnInformationExtension")
     protected ExtensionType returnInformationExtension;
 
     /**

@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisturbanceActivity", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "DisturbanceActivity", propOrder = {
     "disturbanceActivityType",
     "disturbanceActivityExtension"
 })
@@ -41,9 +41,9 @@ public class DisturbanceActivity
     extends Activity
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected DisturbanceActivityTypeEnum disturbanceActivityType;
-    @XmlElement(name = "_disturbanceActivityExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_disturbanceActivityExtension")
     protected ExtensionType disturbanceActivityExtension;
 
     /**

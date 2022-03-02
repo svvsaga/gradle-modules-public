@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceRequestCondition", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+@XmlType(name = "ServiceRequestCondition", propOrder = {
     "conditionDescription",
     "externalIdCondition",
     "referencedCondition",
@@ -46,15 +46,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ServiceRequestCondition {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected MultilingualString conditionDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<String> externalIdCondition;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<Reference> referencedCondition;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<VersionedReference> versionReferencedCondition;
-    @XmlElement(name = "_serviceRequestConditionExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    @XmlElement(name = "_serviceRequestConditionExtension")
     protected ExtensionType serviceRequestConditionExtension;
 
     /**

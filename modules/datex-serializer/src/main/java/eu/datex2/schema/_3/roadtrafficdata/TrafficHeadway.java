@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficHeadway", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficHeadway", propOrder = {
     "averageDistanceHeadway",
     "averageTimeHeadway",
     "trafficHeadwayExtension"
@@ -45,11 +45,9 @@ public class TrafficHeadway
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue averageTimeHeadway;
-    @XmlElement(name = "_trafficHeadwayExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficHeadwayExtension")
     protected ExtensionType trafficHeadwayExtension;
 
     /**

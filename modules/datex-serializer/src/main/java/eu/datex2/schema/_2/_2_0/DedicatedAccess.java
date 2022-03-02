@@ -31,19 +31,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DedicatedAccess", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "DedicatedAccess", propOrder = {
     "dedicatedAccess",
     "distanceFromParkingSpace",
     "dedicatedAccessExtension"
 })
 public class DedicatedAccess {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingAccessReference dedicatedAccess;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromParkingSpace;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType dedicatedAccessExtension;
 
     /**

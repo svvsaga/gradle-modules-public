@@ -35,18 +35,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangle", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrRectangle", propOrder = {
     "openlrLowerLeft",
     "openlrUpperRight",
     "openlrRectangleExtension"
 })
 public class OpenlrRectangle {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates openlrLowerLeft;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates openlrUpperRight;
-    @XmlElement(name = "_openlrRectangleExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrRectangleExtension")
     protected ExtensionType openlrRectangleExtension;
 
     /**

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SiteMeasurements", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "SiteMeasurements", propOrder = {
     "measurementSiteReference",
     "physicalQuantity",
     "measurementTimeDefault",
@@ -43,13 +43,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class SiteMeasurements {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected MeasurementSiteVersionedReference measurementSiteReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<SiteMeasurementsIndexPhysicalQuantity> physicalQuantity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected MeasurementOrCalculationTime measurementTimeDefault;
-    @XmlElement(name = "_siteMeasurementsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_siteMeasurementsExtension")
     protected ExtensionType siteMeasurementsExtension;
 
     /**

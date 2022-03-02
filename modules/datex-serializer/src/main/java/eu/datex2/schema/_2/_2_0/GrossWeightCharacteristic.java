@@ -30,19 +30,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GrossWeightCharacteristic", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "GrossWeightCharacteristic", propOrder = {
     "comparisonOperator",
     "grossVehicleWeight",
     "grossWeightCharacteristicExtension"
 })
 public class GrossWeightCharacteristic {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected float grossVehicleWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType grossWeightCharacteristicExtension;
 
     /**

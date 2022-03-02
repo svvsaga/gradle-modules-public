@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_GeneralInstructionToRoadUsersTypeEnum", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "_GeneralInstructionToRoadUsersTypeEnum", propOrder = {
     "value"
 })
 public class GeneralInstructionToRoadUsersTypeEnum {

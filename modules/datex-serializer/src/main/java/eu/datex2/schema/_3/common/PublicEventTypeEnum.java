@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PublicEventTypeEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "_PublicEventTypeEnum", propOrder = {
     "value"
 })
 public class PublicEventTypeEnum {

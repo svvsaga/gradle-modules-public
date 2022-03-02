@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPointLocationReference", propOrder = {
     "openlrPointLocationReferenceExtension"
 })
 @XmlSeeAlso({
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class OpenlrPointLocationReference {
 
-    @XmlElement(name = "_openlrPointLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPointLocationReferenceExtension")
     protected ExtensionType openlrPointLocationReferenceExtension;
 
     /**

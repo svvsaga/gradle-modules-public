@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "RoadSurfaceConditionInformation", propOrder = {
     "weatherRelatedRoadConditionType",
     "roadSurfaceConditionMeasurements",
     "roadSurfaceConditionInformationExtension"
@@ -46,11 +46,10 @@ public class RoadSurfaceConditionInformation
     extends WeatherData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
-    @XmlElement(name = "_roadSurfaceConditionInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_roadSurfaceConditionInformationExtension")
     protected ExtensionType roadSurfaceConditionInformationExtension;
 
     /**

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AnimalPresenceObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "AnimalPresenceObstruction", propOrder = {
     "alive",
     "animalPresenceType",
     "animalPresenceObstructionExtension"
@@ -41,11 +41,10 @@ public class AnimalPresenceObstruction
     extends Obstruction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean alive;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected AnimalPresenceTypeEnum animalPresenceType;
-    @XmlElement(name = "_animalPresenceObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_animalPresenceObstructionExtension")
     protected ExtensionType animalPresenceObstructionExtension;
 
     /**

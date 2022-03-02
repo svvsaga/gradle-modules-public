@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegLinearLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegLinearLocation", propOrder = {
     "tpegDirection",
     "tpegLinearLocationType",
     "to",
@@ -41,17 +41,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TpegLinearLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected DirectionEnum tpegDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc01LinearLocationSubtypeEnum tpegLinearLocationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected TpegPoint to;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected TpegPoint from;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegLinearLocationExtension;
 
     /**

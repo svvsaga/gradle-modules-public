@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "Pictogram", propOrder = {
     "customPictogramCode",
     "additionalDescription",
     "pictogramFlashing",
@@ -57,21 +57,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Pictogram {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String customPictogramCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString additionalDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramFlashing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramInInverseColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean viennaConventionCompliant;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected InformationTypeEnum pictogramInformationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected GddStructure gddStructure;
-    @XmlElement(name = "_pictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_pictogramExtension")
     protected ExtensionType pictogramExtension;
 
     /**

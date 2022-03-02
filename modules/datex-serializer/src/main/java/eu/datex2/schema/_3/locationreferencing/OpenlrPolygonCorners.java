@@ -35,15 +35,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPolygonCorners", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPolygonCorners", propOrder = {
     "openlrCoordinates",
     "openlrPolygonCornersExtension"
 })
 public class OpenlrPolygonCorners {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected List<PointCoordinates> openlrCoordinates;
-    @XmlElement(name = "_openlrPolygonCornersExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPolygonCornersExtension")
     protected ExtensionType openlrPolygonCornersExtension;
 
     /**

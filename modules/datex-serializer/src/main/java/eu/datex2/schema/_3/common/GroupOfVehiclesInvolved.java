@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfVehiclesInvolved", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "GroupOfVehiclesInvolved", propOrder = {
     "numberOfVehicles",
     "vehicleStatus",
     "vehicleCharacteristics",
@@ -43,14 +43,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GroupOfVehiclesInvolved {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleStatusEnum vehicleStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleCharacteristics vehicleCharacteristics;
-    @XmlElement(name = "_groupOfVehiclesInvolvedExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_groupOfVehiclesInvolvedExtension")
     protected ExtensionType groupOfVehiclesInvolvedExtension;
 
     /**

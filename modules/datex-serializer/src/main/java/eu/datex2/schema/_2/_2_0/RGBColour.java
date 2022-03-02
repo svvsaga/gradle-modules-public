@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RGBColour", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "RGBColour", propOrder = {
     "rgbRedValue",
     "rgbGreenValue",
     "rgbBlueValue",
@@ -42,18 +42,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RGBColour {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbRedValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbGreenValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger rgbBlueValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString colourName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType rgbColourExtension;
 
     /**

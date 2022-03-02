@@ -36,19 +36,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCLocation", propOrder = {
     "alertCLocationName",
     "specificLocation",
     "alertCLocationExtension"
 })
 public class AlertCLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString alertCLocationName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int specificLocation;
-    @XmlElement(name = "_alertCLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCLocationExtension")
     protected ExtensionType alertCLocationExtension;
 
     /**

@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunctionPointDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegJunctionPointDescriptor", propOrder = {
     "tpegJunctionPointDescriptorType",
     "tpegJunctionPointDescriptorExtension"
 })
@@ -37,10 +37,9 @@ public class TpegJunctionPointDescriptor
     extends TpegPointDescriptor
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03JunctionPointDescriptorSubtypeEnum tpegJunctionPointDescriptorType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegJunctionPointDescriptorExtension;
 
     /**

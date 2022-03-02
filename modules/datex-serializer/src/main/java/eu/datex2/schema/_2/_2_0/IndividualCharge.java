@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IndividualCharge", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "IndividualCharge", propOrder = {
     "chargeBandReference",
     "chargePaid",
     "chargeCurrency",
@@ -46,21 +46,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class IndividualCharge {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ChargeBandVersionedReference chargeBandReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected BigDecimal chargePaid;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CurrencyEnum chargeCurrency;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected MeansOfPaymentEnum usedMeansOfPayment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean withReservation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected UsedPaymentCard usedPaymentCard;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType individualChargeExtension;
 
     /**

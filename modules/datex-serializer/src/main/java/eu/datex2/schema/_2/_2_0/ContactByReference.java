@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContactByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ContactByReference", propOrder = {
     "contactReference",
     "contactByReferenceExtension"
 })
@@ -36,9 +36,8 @@ public class ContactByReference
     extends Contact
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ContactDetailsVersionedReference contactReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType contactByReferenceExtension;
 
     /**

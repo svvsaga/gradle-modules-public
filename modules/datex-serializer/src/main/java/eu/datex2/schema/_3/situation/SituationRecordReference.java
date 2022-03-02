@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationRecordReference", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "SituationRecordReference", propOrder = {
     "objectReference",
     "situationRecordReferenceExtension"
 })
@@ -40,9 +40,9 @@ public class SituationRecordReference
     extends GlobalReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected SituationRecordVersionedReference objectReference;
-    @XmlElement(name = "_situationRecordReferenceExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_situationRecordReferenceExtension")
     protected ExtensionType situationRecordReferenceExtension;
 
     /**

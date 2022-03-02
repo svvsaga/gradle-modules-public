@@ -28,15 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChargeBandByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ChargeBandByReference", propOrder = {
     "chargeBandReference",
     "chargeBandByReferenceExtension"
 })
 public class ChargeBandByReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ChargeBandVersionedReference chargeBandReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType chargeBandByReferenceExtension;
 
     /**

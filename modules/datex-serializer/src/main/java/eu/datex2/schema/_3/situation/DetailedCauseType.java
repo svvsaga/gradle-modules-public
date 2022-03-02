@@ -64,7 +64,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DetailedCauseType", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "DetailedCauseType", propOrder = {
     "abnormalTrafficType",
     "accidentType",
     "animalPresenceType",
@@ -96,61 +96,34 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DetailedCauseType {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected AbnormalTrafficTypeEnum abnormalTrafficType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<AccidentTypeEnum> accidentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected AnimalPresenceTypeEnum animalPresenceType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected AuthorityOperationTypeEnum authorityOperationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected ConstructionWorkTypeEnum constructionWorkType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DisturbanceActivityTypeEnum disturbanceActivityType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DrivingConditionTypeEnum drivingConditionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected EnvironmentalObstructionTypeEnum environmentalObstructionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InfrastructureDamageTypeEnum infrastructureDamageType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<NonWeatherRelatedRoadConditionTypeEnum> nonWeatherRelatedRoadConditionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<ObstructionTypeEnum> obstructionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected PublicEventTypeEnum publicEventType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<ReroutingManagementTypeEnum> reroutingManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<RoadMaintenanceTypeEnum> roadMaintenanceType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<RoadOperatorServiceDisruptionTypeEnum> roadOperatorServiceDisruptionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected RoadsideAssistanceTypeEnum roadsideAssistanceType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<ServiceDisruptionTypeEnum> roadsideServiceDisruptionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SpeedManagementTypeEnum speedManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected TransitServiceInformationEnum transitServiceInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected VehicleObstructionTypeEnum vehicleObstructionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
-    @XmlElement(name = "_detailedCauseTypeExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_detailedCauseTypeExtension")
     protected ExtensionType detailedCauseTypeExtension;
 
     /**

@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Validity", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Validity", propOrder = {
     "validityStatus",
     "overrunning",
     "validityTimeSpecification",
@@ -39,14 +39,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Validity {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ValidityStatusEnum validityStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean overrunning;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected OverallPeriod validityTimeSpecification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType validityExtension;
 
     /**

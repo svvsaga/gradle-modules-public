@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "DirectionEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "DirectionEnum")
 @XmlEnum
 public enum DirectionEnum2 {
 

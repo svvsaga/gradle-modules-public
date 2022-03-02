@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Period", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Period", propOrder = {
     "startOfPeriod",
     "endOfPeriod",
     "periodName",
@@ -52,21 +52,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Period {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar startOfPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar endOfPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString periodName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<TimePeriodOfDay> recurringTimePeriodOfDay;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<SpecialDay> recurringSpecialDay;
-    @XmlElement(name = "_periodExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_periodExtension")
     protected ExtensionType periodExtension;
 
     /**

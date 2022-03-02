@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Wind", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Wind", propOrder = {
     "windMeasurementHeight",
     "windSpeed",
     "maximumWindSpeed",
@@ -50,22 +50,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Wind {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger windMeasurementHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected WindSpeedValue windSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected WindSpeedValue maximumWindSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionBearingValue windDirectionBearing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionBearingValue maximumWindDirectionBearing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionCompassValue windDirectionCompass;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected DirectionCompassValue maximumWindDirectionCompass;
-    @XmlElement(name = "_windExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_windExtension")
     protected ExtensionType windExtension;
 
     /**

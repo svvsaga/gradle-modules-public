@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadOrCarriagewayOrLaneManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "RoadOrCarriagewayOrLaneManagement", propOrder = {
     "roadOrCarriagewayOrLaneManagementType",
     "minimumCarOccupancy",
     "roadOrCarriagewayOrLaneManagementExtension"
@@ -45,12 +45,11 @@ public class RoadOrCarriagewayOrLaneManagement
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minimumCarOccupancy;
-    @XmlElement(name = "_roadOrCarriagewayOrLaneManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_roadOrCarriagewayOrLaneManagementExtension")
     protected ExtensionType roadOrCarriagewayOrLaneManagementExtension;
 
     /**

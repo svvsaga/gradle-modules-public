@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfParkingSites", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "GroupOfParkingSites", propOrder = {
     "groupOfParkingSitesType",
     "parkingSiteByReference",
     "parkingSite",
@@ -43,14 +42,10 @@ public class GroupOfParkingSites
     extends ParkingRecord
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected GroupOfParkingSitesTypeEnum groupOfParkingSitesType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRecordVersionedReference> parkingSiteByReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingSite> parkingSite;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType groupOfParkingSitesExtension;
 
     /**

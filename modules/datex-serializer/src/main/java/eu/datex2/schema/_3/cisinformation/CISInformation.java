@@ -32,18 +32,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CISInformation", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+@XmlType(name = "CISInformation", propOrder = {
     "serviceFeedback",
     "serviceRequest",
     "cisInformationExtension"
 })
 public class CISInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<ServiceFeedback> serviceFeedback;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected List<ServiceRequest> serviceRequest;
-    @XmlElement(name = "_cisInformationExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    @XmlElement(name = "_cisInformationExtension")
     protected ExtensionType cisInformationExtension;
 
     /**

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -46,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsRecord", propOrder = {
     "vmsDescription",
     "vmsOwner",
     "vmsPhysicalMounting",
@@ -66,40 +65,24 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsRecord {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vmsDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString vmsOwner;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PhysicalMountingEnum vmsPhysicalMounting;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected VmsTypeEnum vmsType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsTypeCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPictogramDisplayAreas;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean dynamicallyConfigurableDisplayAreas;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsDisplayHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsDisplayWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsHeightAboveRoadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location vmsLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsManagedLogicalLocation vmsManagedLogicalLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected UrlLink backgroundImageUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsRecordExtension;
 
     /**

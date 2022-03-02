@@ -28,15 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod2SecondaryPointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AlertCMethod2SecondaryPointLocation", propOrder = {
     "alertCLocation",
     "alertCMethod2SecondaryPointLocationExtension"
 })
 public class AlertCMethod2SecondaryPointLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected AlertCLocation alertCLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType alertCMethod2SecondaryPointLocationExtension;
 
     /**

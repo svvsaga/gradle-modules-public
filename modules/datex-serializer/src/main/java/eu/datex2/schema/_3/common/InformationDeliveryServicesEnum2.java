@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "InformationDeliveryServicesEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "InformationDeliveryServicesEnum")
 @XmlEnum
 public enum InformationDeliveryServicesEnum2 {
 

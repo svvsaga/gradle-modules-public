@@ -27,7 +27,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "MessageInformationTypeEnum", namespace = "http://datex2.eu/schema/3/vms")
+@XmlType(name = "MessageInformationTypeEnum")
 @XmlEnum
 public enum MessageInformationTypeEnum2 {
 

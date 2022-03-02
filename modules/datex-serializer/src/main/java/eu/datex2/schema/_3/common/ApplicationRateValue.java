@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ApplicationRateValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "ApplicationRateValue", propOrder = {
     "applicationRate",
     "applicationRateValueExtension"
 })
@@ -38,9 +38,8 @@ public class ApplicationRateValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float applicationRate;
-    @XmlElement(name = "_applicationRateValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_applicationRateValueExtension")
     protected ExtensionType applicationRateValueExtension;
 
     /**

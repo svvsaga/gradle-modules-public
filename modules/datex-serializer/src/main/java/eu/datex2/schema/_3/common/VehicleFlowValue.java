@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleFlowValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "VehicleFlowValue", propOrder = {
     "vehicleFlowRate",
     "vehicleFlowValueExtension"
 })
@@ -40,10 +40,10 @@ public class VehicleFlowValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
-    @XmlElement(name = "_vehicleFlowValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_vehicleFlowValueExtension")
     protected ExtensionType vehicleFlowValueExtension;
 
     /**

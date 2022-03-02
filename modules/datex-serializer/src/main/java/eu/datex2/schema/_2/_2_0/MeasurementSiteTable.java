@@ -34,18 +34,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSiteTable", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "MeasurementSiteTable", propOrder = {
     "measurementSiteTableIdentification",
     "measurementSiteRecord",
     "measurementSiteTableExtension"
 })
 public class MeasurementSiteTable {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String measurementSiteTableIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<MeasurementSiteRecord> measurementSiteRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType measurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

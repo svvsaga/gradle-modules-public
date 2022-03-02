@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "SpeedManagement", propOrder = {
     "speedManagementType",
     "temporarySpeedLimit",
     "speedManagementExtension"
@@ -42,11 +42,9 @@ public class SpeedManagement
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SpeedManagementTypeEnum speedManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float temporarySpeedLimit;
-    @XmlElement(name = "_speedManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_speedManagementExtension")
     protected ExtensionType speedManagementExtension;
 
     /**

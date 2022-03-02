@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PointAlongLinearElement", propOrder = {
     "administrativeAreaOfPoint",
     "directionAtPoint",
     "directionRelativeAtPoint",
@@ -50,19 +50,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PointAlongLinearElement {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString administrativeAreaOfPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected DirectionEnum directionAtPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LinearDirectionEnum directionRelativeAtPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected HeightGradeEnum heightGradeOfPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected LinearElement linearElement;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected DistanceAlongLinearElement distanceAlongLinearElement;
-    @XmlElement(name = "_pointAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_pointAlongLinearElementExtension")
     protected ExtensionType pointAlongLinearElementExtension;
 
     /**

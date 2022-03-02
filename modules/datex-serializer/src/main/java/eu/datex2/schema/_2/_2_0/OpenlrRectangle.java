@@ -29,18 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrRectangle", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OpenlrRectangle", propOrder = {
     "openlrLowerLeft",
     "openlrUpperRight",
     "openlrRectangleExtension"
 })
 public class OpenlrRectangle {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates openlrLowerLeft;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates openlrUpperRight;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType openlrRectangleExtension;
 
     /**

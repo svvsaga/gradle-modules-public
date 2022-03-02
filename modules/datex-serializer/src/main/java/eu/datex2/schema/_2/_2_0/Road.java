@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -38,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Road", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Road", propOrder = {
     "nameOfRoad",
     "roadIdentifier",
     "typeOfRoad",
@@ -52,21 +51,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Road {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString nameOfRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString roadIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RoadTypeEnum typeOfRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> roadDestination;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> roadOrigination;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceToThisRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType roadExtension;
 
     /**

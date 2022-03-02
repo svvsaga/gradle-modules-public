@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TransitServiceTypeEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "TransitServiceTypeEnum")
 @XmlEnum
 public enum TransitServiceTypeEnum2 {
 

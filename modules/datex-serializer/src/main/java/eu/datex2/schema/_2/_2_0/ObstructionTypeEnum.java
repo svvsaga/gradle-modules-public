@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ObstructionTypeEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "ObstructionTypeEnum")
 @XmlEnum
 public enum ObstructionTypeEnum {
 

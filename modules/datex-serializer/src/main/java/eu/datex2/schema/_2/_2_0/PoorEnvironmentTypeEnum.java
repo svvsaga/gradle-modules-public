@@ -67,7 +67,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PoorEnvironmentTypeEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "PoorEnvironmentTypeEnum")
 @XmlEnum
 public enum PoorEnvironmentTypeEnum {
 

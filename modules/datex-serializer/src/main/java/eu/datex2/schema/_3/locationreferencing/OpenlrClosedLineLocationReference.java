@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrClosedLineLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrClosedLineLocationReference", propOrder = {
     "openlrLocationReferencePoint",
     "openlrLastLine",
     "openlrClosedLineLocationReferenceExtension"
@@ -46,11 +46,11 @@ public class OpenlrClosedLineLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected List<OpenlrLocationReferencePoint> openlrLocationReferencePoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLine;
-    @XmlElement(name = "_openlrClosedLineLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrClosedLineLocationReferenceExtension")
     protected ExtensionType openlrClosedLineLocationReferenceExtension;
 
     /**

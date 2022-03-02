@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElementByLineString", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearElementByLineString", propOrder = {
     "gmlLineString",
     "linearElementByLineStringExtension"
 })
@@ -39,9 +39,9 @@ public class LinearElementByLineString
     extends LinearElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected GmlLineString gmlLineString;
-    @XmlElement(name = "_linearElementByLineStringExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearElementByLineStringExtension")
     protected ExtensionType linearElementByLineStringExtension;
 
     /**

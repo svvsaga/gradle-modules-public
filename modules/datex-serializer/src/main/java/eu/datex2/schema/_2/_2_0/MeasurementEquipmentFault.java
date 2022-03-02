@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementEquipmentFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "MeasurementEquipmentFault", propOrder = {
     "measurementEquipmentFault",
     "measurementEquipmentFaultExtension"
 })
@@ -37,10 +37,9 @@ public class MeasurementEquipmentFault
     extends Fault
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected MeasurementEquipmentFaultEnum measurementEquipmentFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType measurementEquipmentFaultExtension;
 
     /**

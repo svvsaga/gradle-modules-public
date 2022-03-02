@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCLinear", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCLinear", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
@@ -49,13 +49,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class AlertCLinear {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(name = "_alertCLinearExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCLinearExtension")
     protected ExtensionType alertCLinearExtension;
 
     /**

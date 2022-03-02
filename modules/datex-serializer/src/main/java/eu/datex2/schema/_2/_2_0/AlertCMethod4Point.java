@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCMethod4Point", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AlertCMethod4Point", propOrder = {
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
     "alertCMethod4PointExtension"
@@ -38,11 +38,10 @@ public class AlertCMethod4Point
     extends AlertCPoint
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected AlertCDirection alertCDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType alertCMethod4PointExtension;
 
     /**

@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -31,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Temperature", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Temperature", propOrder = {
     "airTemperature",
     "dewPointTemperature",
     "maximumTemperature",
@@ -40,15 +39,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Temperature {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue airTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue dewPointTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue maximumTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TemperatureValue minimumTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType temperatureExtension;
 
     /**

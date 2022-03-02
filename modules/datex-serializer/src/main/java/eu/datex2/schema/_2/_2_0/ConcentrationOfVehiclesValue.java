@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConcentrationOfVehiclesValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ConcentrationOfVehiclesValue", propOrder = {
     "concentrationOfVehicles",
     "concentrationOfVehiclesValueExtension"
 })
@@ -38,10 +38,9 @@ public class ConcentrationOfVehiclesValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger concentrationOfVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType concentrationOfVehiclesValueExtension;
 
     /**

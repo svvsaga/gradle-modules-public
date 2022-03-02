@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointCoordinates", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PointCoordinates", propOrder = {
     "latitude",
     "longitude",
     "heightCoordinate",
@@ -49,17 +49,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PointCoordinates {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float latitude;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float longitude;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<HeightCoordinate> heightCoordinate;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionConfidenceEllipse positionConfidenceEllipse;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionAccuracy horizontalPositionAccuracy;
-    @XmlElement(name = "_pointCoordinatesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_pointCoordinatesExtension")
     protected ExtensionType pointCoordinatesExtension;
 
     /**

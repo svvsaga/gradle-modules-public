@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Impact", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Impact", propOrder = {
     "capacityRemaining",
     "numberOfLanesRestricted",
     "numberOfOperationalLanes",
@@ -51,21 +51,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Impact {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float capacityRemaining;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfLanesRestricted;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfOperationalLanes;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float residualLaneWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float residualRoadWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Delays delays;
-    @XmlElement(name = "_impactExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_impactExtension")
     protected ExtensionType impactExtension;
 
     /**

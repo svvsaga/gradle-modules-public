@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "OpenlrSideOfRoadEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "OpenlrSideOfRoadEnum")
 @XmlEnum
 public enum OpenlrSideOfRoadEnum2 {
 

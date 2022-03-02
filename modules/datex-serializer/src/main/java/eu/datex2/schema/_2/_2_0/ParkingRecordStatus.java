@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRecordStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingRecordStatus", propOrder = {
     "parkingRecordReference",
     "parkingStatusOriginTime",
     "parkingStatusDescription",
@@ -75,45 +75,31 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingRecordStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingRecordVersionedReference parkingRecordReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingStatusOriginTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingStatusDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float parkingQueueingTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingConditionsEnum parkingConditions;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", type = Boolean.class)
+    @XmlElement(type = Boolean.class)
     protected List<Boolean> blurredAvailability;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingFaultEnum> parkingFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<WinterEquipmentManagementTypeEnum> winterEquipmentManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus> parkingSpaceStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingOccupancy parkingOccupancy;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus> groupOfParkingSpacesStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingStatusValidity parkingStatusValidity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingThresholds overrideParkingThresholds;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus> parkingEquipmentOrServiceFacilityStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus> parkingUsageScenarioStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingAccessStatus> parkingAccessStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingRouteStatus> parkingRouteStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingRecordStatusExtension;
 
     /**

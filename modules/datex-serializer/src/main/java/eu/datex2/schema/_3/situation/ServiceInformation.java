@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceInformation", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "ServiceInformation", propOrder = {
     "serviceInformationExtension"
 })
 @XmlSeeAlso({
@@ -45,7 +45,7 @@ public abstract class ServiceInformation
     extends SituationRecord
 {
 
-    @XmlElement(name = "_serviceInformationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_serviceInformationExtension")
     protected ExtensionType serviceInformationExtension;
 
     /**

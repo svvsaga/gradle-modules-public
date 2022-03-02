@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Source", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Source", propOrder = {
     "sourceCountry",
     "sourceIdentification",
     "sourceName",
@@ -43,19 +42,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Source {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CountryEnum sourceCountry;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String sourceIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString sourceName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected SourceTypeEnum sourceType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean reliable;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType sourceExtension;
 
     /**

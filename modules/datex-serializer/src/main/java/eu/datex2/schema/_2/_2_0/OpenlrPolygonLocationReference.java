@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPolygonLocationReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OpenlrPolygonLocationReference", propOrder = {
     "openlrPolygonCorners",
     "openlrPolygonLocationReferenceExtension"
 })
@@ -36,9 +36,8 @@ public class OpenlrPolygonLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected OpenlrPolygonCorners openlrPolygonCorners;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType openlrPolygonLocationReferenceExtension;
 
     /**

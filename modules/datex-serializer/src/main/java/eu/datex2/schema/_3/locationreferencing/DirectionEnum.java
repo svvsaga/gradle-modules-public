@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_DirectionEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "_DirectionEnum", propOrder = {
     "value"
 })
 public class DirectionEnum {

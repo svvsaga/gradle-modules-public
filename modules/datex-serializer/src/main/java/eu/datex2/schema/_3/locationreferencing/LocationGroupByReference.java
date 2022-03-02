@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationGroupByReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LocationGroupByReference", propOrder = {
     "predefinedLocationGroupReference",
     "locationGroupByReferenceExtension"
 })
@@ -41,9 +41,9 @@ public class LocationGroupByReference
     extends LocationGroup
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
-    @XmlElement(name = "_locationGroupByReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_locationGroupByReferenceExtension")
     protected ExtensionType locationGroupByReferenceExtension;
 
     /**

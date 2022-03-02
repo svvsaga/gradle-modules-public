@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ReroutingManagementTypeEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "ReroutingManagementTypeEnum")
 @XmlEnum
 public enum ReroutingManagementTypeEnum2 {
 

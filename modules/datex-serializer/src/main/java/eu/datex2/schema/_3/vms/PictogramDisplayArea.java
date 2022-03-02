@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictogramDisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "PictogramDisplayArea", propOrder = {
     "pictogramCodeListIdentifier",
     "pictogramNumberOfColours",
     "pictogramDisplayAreaExtension"
@@ -43,12 +43,10 @@ public class PictogramDisplayArea
     extends DisplayArea
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String pictogramCodeListIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramNumberOfColours;
-    @XmlElement(name = "_pictogramDisplayAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_pictogramDisplayAreaExtension")
     protected ExtensionType pictogramDisplayAreaExtension;
 
     /**

@@ -33,18 +33,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegHeight", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegHeight", propOrder = {
     "height",
     "heightType",
     "tpegHeightExtension"
 })
 public class TpegHeight {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float height;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected TpegLoc04HeightTypeEnum heightType;
-    @XmlElement(name = "_tpegHeightExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegHeightExtension")
     protected ExtensionType tpegHeightExtension;
 
     /**

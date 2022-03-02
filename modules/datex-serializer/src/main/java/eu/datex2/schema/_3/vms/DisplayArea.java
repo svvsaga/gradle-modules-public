@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "DisplayArea", propOrder = {
     "sequencingCapable",
     "maxNumberOfSequentialPages",
     "positionXAbsolute",
@@ -62,24 +62,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DisplayArea {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean sequencingCapable;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfSequentialPages;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected PositionXAbsoluteEnum positionXAbsolute;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected PositionXRelativeEnum positionXRelativeToPrevious;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected PositionYAbsoluteEnum positionYAbsolute;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected PositionYRelativeEnum positionYRelativeToPrevious;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected DisplayGeometry displayGeometry;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<Lane> overriddenLaneAssociation;
-    @XmlElement(name = "_displayAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_displayAreaExtension")
     protected ExtensionType displayAreaExtension;
 
     /**

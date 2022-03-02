@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "InvalidityReasonEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+@XmlType(name = "InvalidityReasonEnum")
 @XmlEnum
 public enum InvalidityReasonEnum2 {
 

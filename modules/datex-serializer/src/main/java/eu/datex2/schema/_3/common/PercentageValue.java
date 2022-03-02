@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PercentageValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "PercentageValue", propOrder = {
     "percentage",
     "percentageValueExtension"
 })
@@ -38,9 +38,8 @@ public class PercentageValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float percentage;
-    @XmlElement(name = "_percentageValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_percentageValueExtension")
     protected ExtensionType percentageValueExtension;
 
     /**

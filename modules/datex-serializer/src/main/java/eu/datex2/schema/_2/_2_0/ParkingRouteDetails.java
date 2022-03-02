@@ -4,7 +4,6 @@ package eu.datex2.schema._2._2_0;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -38,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingRouteDetails", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingRouteDetails", propOrder = {
     "parkingRouteName",
     "parkingRouteType",
     "dynamicRouteManagement",
@@ -52,24 +51,16 @@ public class ParkingRouteDetails
     extends ParkingRoute
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingRouteName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingRouteTypeEnum parkingRouteType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean dynamicRouteManagement;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingRouteIconIndex;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DirectionEnum parkingRouteDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingRouteDirectionEnum parkingRouteDirection2;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations groupOfLocations;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingRouteDetailsExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

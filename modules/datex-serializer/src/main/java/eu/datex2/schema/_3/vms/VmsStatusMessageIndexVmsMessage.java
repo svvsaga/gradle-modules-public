@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsStatusMessageIndexVmsMessage", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_VmsStatusMessageIndexVmsMessage", propOrder = {
     "vmsMessage"
 })
 public class VmsStatusMessageIndexVmsMessage {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected VmsMessage vmsMessage;
     @XmlAttribute(name = "messageIndex", required = true)
     protected int messageIndex;

@@ -28,15 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogueReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "CatalogueReference", propOrder = {
     "keyCatalogueReference",
     "catalogueReferenceExtension"
 })
 public class CatalogueReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String keyCatalogueReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType catalogueReferenceExtension;
 
     /**

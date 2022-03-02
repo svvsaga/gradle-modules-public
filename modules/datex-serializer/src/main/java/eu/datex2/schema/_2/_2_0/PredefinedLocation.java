@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PredefinedLocation", propOrder = {
     "predefinedLocationName",
     "location",
     "predefinedLocationExtension"
@@ -41,11 +41,9 @@ public class PredefinedLocation
     extends PredefinedLocationContainer
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString predefinedLocationName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Location location;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType predefinedLocationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

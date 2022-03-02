@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedDataPublication", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "ElaboratedDataPublication", propOrder = {
     "forecastDefault",
     "periodDefault",
     "timeDefault",
@@ -58,22 +58,17 @@ public class ElaboratedDataPublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Boolean forecastDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float periodDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected ReferenceSettings referenceSettings;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected List<PhysicalQuantity> physicalQuantity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManager;
-    @XmlElement(name = "_elaboratedDataPublicationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_elaboratedDataPublicationExtension")
     protected ExtensionType elaboratedDataPublicationExtension;
 
     /**

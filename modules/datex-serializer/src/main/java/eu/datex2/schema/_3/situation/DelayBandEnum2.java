@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "DelayBandEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "DelayBandEnum")
 @XmlEnum
 public enum DelayBandEnum2 {
 

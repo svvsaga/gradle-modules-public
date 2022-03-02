@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -29,12 +28,11 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PeriodExtended", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PeriodExtended", propOrder = {
     "recurringSpecialDay"
 })
 public class PeriodExtended {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<SpecialDay> recurringSpecialDay;
 
     /**

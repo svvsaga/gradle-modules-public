@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WinterDrivingManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "WinterDrivingManagement", propOrder = {
     "winterEquipmentManagementType",
     "winterDrivingManagementExtension"
 })
@@ -41,9 +41,9 @@ public class WinterDrivingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
-    @XmlElement(name = "_winterDrivingManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_winterDrivingManagementExtension")
     protected ExtensionType winterDrivingManagementExtension;
 
     /**

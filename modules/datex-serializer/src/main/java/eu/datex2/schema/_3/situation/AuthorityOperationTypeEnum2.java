@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AuthorityOperationTypeEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "AuthorityOperationTypeEnum")
 @XmlEnum
 public enum AuthorityOperationTypeEnum2 {
 

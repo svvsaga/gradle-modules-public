@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -36,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IndividualVehicleDataValues", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "IndividualVehicleDataValues", propOrder = {
     "individualVehicleSpeed",
     "arrivalTime",
     "exitTime",
@@ -52,25 +51,15 @@ public class IndividualVehicleDataValues
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected SpeedValue individualVehicleSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DateTimeValue arrivalTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DateTimeValue exitTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue passageDurationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue presenceDurationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue timeGap;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected DurationValue timeHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue distanceGap;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FloatingPointMetreDistanceValue distanceHeadway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType individualVehicleDataValuesExtension;
 
     /**

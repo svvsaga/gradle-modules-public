@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DurationValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "DurationValue", propOrder = {
     "duration",
     "durationValueExtension"
 })
@@ -40,9 +40,8 @@ public class DurationValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected float duration;
-    @XmlElement(name = "_durationValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_durationValueExtension")
     protected ExtensionType durationValueExtension;
 
     /**

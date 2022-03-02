@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "VehicleProblemCauseEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "VehicleProblemCauseEnum")
 @XmlEnum
 public enum VehicleProblemCauseEnum2 {
 

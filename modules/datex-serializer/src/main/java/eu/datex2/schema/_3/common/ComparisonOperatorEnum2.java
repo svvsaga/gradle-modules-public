@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ComparisonOperatorEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "ComparisonOperatorEnum")
 @XmlEnum
 public enum ComparisonOperatorEnum2 {
 

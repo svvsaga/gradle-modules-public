@@ -31,18 +31,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureBelowOrAboveRoadSurface", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "TemperatureBelowOrAboveRoadSurface", propOrder = {
     "heightBelowOrAboveRoadSurface",
     "temperatureBelowOrAboveRoadSurface",
     "temperatureBelowOrAboveRoadSurfaceExtension"
 })
 public class TemperatureBelowOrAboveRoadSurface {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float heightBelowOrAboveRoadSurface;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected TemperatureValue temperatureBelowOrAboveRoadSurface;
-    @XmlElement(name = "_temperatureBelowOrAboveRoadSurfaceExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_temperatureBelowOrAboveRoadSurfaceExtension")
     protected ExtensionType temperatureBelowOrAboveRoadSurfaceExtension;
 
     /**

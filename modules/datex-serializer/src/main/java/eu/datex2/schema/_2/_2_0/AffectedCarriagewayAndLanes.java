@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AffectedCarriagewayAndLanes", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "AffectedCarriagewayAndLanes", propOrder = {
     "carriageway",
     "lane",
     "footpath",
@@ -43,17 +43,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AffectedCarriagewayAndLanes {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected CarriagewayEnum carriageway;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<LaneEnum> lane;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean footpath;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float lengthAffected;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType affectedCarriagewayAndLanesExtension;
 
     /**

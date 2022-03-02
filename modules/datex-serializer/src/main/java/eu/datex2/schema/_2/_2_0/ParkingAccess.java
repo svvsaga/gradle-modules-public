@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingAccess", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingAccess", propOrder = {
     "accessCategory",
     "accessName",
     "accessEquipment",
@@ -59,33 +59,22 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingAccess {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<AccessCategoryEnum> accessCategory;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString accessName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<AccessEquipmentEnum> accessEquipment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<AccessibilityEnum> accessibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String photoUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment accessOnlyAssignedFor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment accessAssignedAmongOthers;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAssignment accessProhibitedFor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Road> primaryRoad;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location location;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpeningTimes openingTimes;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingAccessExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

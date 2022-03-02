@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TextPage", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_TextPage", propOrder = {
     "vmsText"
 })
 public class TextPage {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected VmsText vmsText;
     @XmlAttribute(name = "pageNumber", required = true)
     protected int pageNumber;

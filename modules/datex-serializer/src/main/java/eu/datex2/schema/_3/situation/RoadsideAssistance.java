@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadsideAssistance", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "RoadsideAssistance", propOrder = {
     "roadsideAssistanceType",
     "roadsideAssistanceExtension"
 })
@@ -39,9 +39,9 @@ public class RoadsideAssistance
     extends OperatorAction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected RoadsideAssistanceTypeEnum roadsideAssistanceType;
-    @XmlElement(name = "_roadsideAssistanceExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_roadsideAssistanceExtension")
     protected ExtensionType roadsideAssistanceExtension;
 
     /**

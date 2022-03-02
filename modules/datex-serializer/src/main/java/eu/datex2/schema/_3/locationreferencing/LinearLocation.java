@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearLocation", propOrder = {
     "openlrLinear",
     "gmlLineString",
     "secondarySupplementaryDescription",
@@ -49,13 +49,10 @@ public class LinearLocation
     extends NetworkLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrLinear openlrLinear;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected GmlLineString gmlLineString;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected SupplementaryPositionalDescription secondarySupplementaryDescription;
-    @XmlElement(name = "_linearLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearLocationExtension")
     protected ExtensionType linearLocationExtension;
 
     /**

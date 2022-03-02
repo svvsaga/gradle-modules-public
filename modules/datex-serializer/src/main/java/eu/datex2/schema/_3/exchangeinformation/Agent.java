@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Agent", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "Agent", propOrder = {
     "address",
     "name",
     "referenceID",
@@ -44,17 +44,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Agent {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String address;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String name;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String referenceID;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String serviceURL;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected InternationalIdentifier internationalIdentifier;
-    @XmlElement(name = "_agentExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_agentExtension")
     protected ExtensionType agentExtension;
 
     /**

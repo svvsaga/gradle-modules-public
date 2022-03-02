@@ -36,18 +36,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SpeedPercentile", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "SpeedPercentile", propOrder = {
     "vehiclePercentage",
     "speedPercentile",
     "speedPercentileExtension"
 })
 public class SpeedPercentile {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected PercentageValue vehiclePercentage;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected SpeedValue speedPercentile;
-    @XmlElement(name = "_speedPercentileExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_speedPercentileExtension")
     protected ExtensionType speedPercentileExtension;
 
     /**

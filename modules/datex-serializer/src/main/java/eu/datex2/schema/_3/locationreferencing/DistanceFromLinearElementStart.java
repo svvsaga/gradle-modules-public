@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceFromLinearElementStart", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "DistanceFromLinearElementStart", propOrder = {
     "distanceAlong",
     "distanceFromLinearElementStartExtension"
 })
@@ -42,9 +42,8 @@ public class DistanceFromLinearElementStart
     extends DistanceAlongLinearElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float distanceAlong;
-    @XmlElement(name = "_distanceFromLinearElementStartExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_distanceFromLinearElementStartExtension")
     protected ExtensionType distanceFromLinearElementStartExtension;
 
     /**

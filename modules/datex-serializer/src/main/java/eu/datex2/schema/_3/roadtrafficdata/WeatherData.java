@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WeatherData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "WeatherData", propOrder = {
     "weatherDataExtension"
 })
 @XmlSeeAlso({
@@ -49,7 +49,7 @@ public abstract class WeatherData
     extends BasicData
 {
 
-    @XmlElement(name = "_weatherDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_weatherDataExtension")
     protected ExtensionType weatherDataExtension;
 
     /**

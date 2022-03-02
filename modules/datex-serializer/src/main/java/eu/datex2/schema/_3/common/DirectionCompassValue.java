@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DirectionCompassValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "DirectionCompassValue", propOrder = {
     "directionCompass",
     "directionCompassValueExtension"
 })
@@ -38,9 +38,9 @@ public class DirectionCompassValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected DirectionCompassEnum directionCompass;
-    @XmlElement(name = "_directionCompassValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_directionCompassValueExtension")
     protected ExtensionType directionCompassValueExtension;
 
     /**

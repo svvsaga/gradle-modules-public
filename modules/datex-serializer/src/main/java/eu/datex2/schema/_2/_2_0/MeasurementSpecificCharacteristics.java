@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSpecificCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "MeasurementSpecificCharacteristics", propOrder = {
     "accuracy",
     "period",
     "smoothingFactor",
@@ -45,21 +45,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSpecificCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float accuracy;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float period;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float smoothingFactor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LaneEnum specificLane;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VehicleCharacteristics specificVehicleCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType measurementSpecificCharacteristicsExtension;
 
     /**

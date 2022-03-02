@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementOrCalculationTime", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "MeasurementOrCalculationTime", propOrder = {
     "timeMeaning",
     "timeValue",
     "period",
@@ -49,14 +49,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementOrCalculationTime {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TimeMeaningEnum timeMeaning;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Period period;
-    @XmlElement(name = "_measurementOrCalculationTimeExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_measurementOrCalculationTimeExtension")
     protected ExtensionType measurementOrCalculationTimeExtension;
     @XmlAttribute(name = "timePrecision")
     protected TimePrecisionEnum2 timePrecision;

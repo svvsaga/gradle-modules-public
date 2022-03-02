@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralNetworkManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "GeneralNetworkManagement", propOrder = {
     "generalNetworkManagementType",
     "trafficManuallyDirectedBy",
     "generalNetworkManagementExtension"
@@ -43,11 +43,10 @@ public class GeneralNetworkManagement
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected PersonCategoryEnum trafficManuallyDirectedBy;
-    @XmlElement(name = "_generalNetworkManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_generalNetworkManagementExtension")
     protected ExtensionType generalNetworkManagementExtension;
 
     /**

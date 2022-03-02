@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PointLocation", propOrder = {
     "pointByCoordinates",
     "pointAlongLinearElement",
     "alertCPoint",
@@ -49,17 +49,12 @@ public class PointLocation
     extends NetworkLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PointByCoordinates pointByCoordinates;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<PointAlongLinearElement> pointAlongLinearElement;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCPoint> alertCPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegPointLocation tpegPointLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected OpenlrPointLocationReference openlrPointLocationReference;
-    @XmlElement(name = "_pointLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_pointLocationExtension")
     protected ExtensionType pointLocationExtension;
 
     /**

@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VisibilityInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VisibilityInformation", propOrder = {
     "visibility",
     "visibilityInformationExtension"
 })
@@ -36,9 +36,8 @@ public class VisibilityInformation
     extends WeatherData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Visibility visibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType visibilityInformationExtension;
 
     /**

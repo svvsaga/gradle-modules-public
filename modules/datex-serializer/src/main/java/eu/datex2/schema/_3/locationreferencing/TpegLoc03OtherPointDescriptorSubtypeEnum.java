@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TpegLoc03OtherPointDescriptorSubtypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "_TpegLoc03OtherPointDescriptorSubtypeEnum", propOrder = {
     "value"
 })
 public class TpegLoc03OtherPointDescriptorSubtypeEnum {

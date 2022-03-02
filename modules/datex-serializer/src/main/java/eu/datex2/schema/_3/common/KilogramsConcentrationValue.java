@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KilogramsConcentrationValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "KilogramsConcentrationValue", propOrder = {
     "kilogramsConcentration",
     "kilogramsConcentrationValueExtension"
 })
@@ -40,9 +40,8 @@ public class KilogramsConcentrationValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float kilogramsConcentration;
-    @XmlElement(name = "_kilogramsConcentrationValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_kilogramsConcentrationValueExtension")
     protected ExtensionType kilogramsConcentrationValueExtension;
 
     /**

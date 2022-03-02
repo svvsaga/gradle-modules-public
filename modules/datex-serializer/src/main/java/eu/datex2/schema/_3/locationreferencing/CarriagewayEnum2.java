@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "CarriagewayEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "CarriagewayEnum")
 @XmlEnum
 public enum CarriagewayEnum2 {
 

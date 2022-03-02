@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsControllerFaultEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_VmsControllerFaultEnum", propOrder = {
     "value"
 })
 public class VmsControllerFaultEnum {

@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegJunction", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegJunction", propOrder = {
     "pointCoordinates",
     "name",
     "ilc",
@@ -44,15 +44,12 @@ public class TpegJunction
     extends TpegPoint
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates pointCoordinates;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TpegJunctionPointDescriptor name;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<TpegIlcPointDescriptor> ilc;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<TpegOtherPointDescriptor> otherName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegJunctionExtension;
 
     /**

@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ExchangeReturnEnum", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+@XmlType(name = "ExchangeReturnEnum")
 @XmlEnum
 public enum ExchangeReturnEnum2 {
 

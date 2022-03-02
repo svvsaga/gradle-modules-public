@@ -32,18 +32,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "D2LogicalModel", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "D2LogicalModel", propOrder = {
     "exchange",
     "payloadPublication",
     "d2LogicalModelExtension"
 })
 public class D2LogicalModel {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Exchange exchange;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PayloadPublication payloadPublication;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType d2LogicalModelExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     @XmlSchemaType(name = "anySimpleType")

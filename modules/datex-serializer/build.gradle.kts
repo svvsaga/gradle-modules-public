@@ -11,7 +11,7 @@ jaxb {
             )
             outputDir = file("src/main/java")
             header = false
-            args = listOf("-npa", "-XautoNameResolution")
+            args = listOf("-XautoNameResolution")
         }
         register("Datex2") {
             schema = file(
@@ -19,7 +19,7 @@ jaxb {
             )
             outputDir = file("src/main/java")
             header = false
-            args = listOf("-npa", "-XautoNameResolution")
+            args = listOf("-XautoNameResolution")
         }
     }
 }
@@ -31,7 +31,7 @@ tasks.register("addRootElement") {
             commandLine(
                 "sed",
                 "-i.bak",
-                "s/^public class MessageContainer/@jakarta\\.xml\\.bind\\.annotation\\.XmlRootElement\\(namespace = \"http:\\/\\/datex2\\.eu\\/schema\\/3\\/messageContainer\"\\) public class MessageContainer/",
+                "s/^public class MessageContainer/@jakarta\\.xml\\.bind\\.annotation\\.XmlRootElement public class MessageContainer/",
                 "src/main/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java",
             )
         }

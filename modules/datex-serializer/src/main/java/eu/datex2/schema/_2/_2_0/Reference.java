@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Reference", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "Reference")
 @XmlSeeAlso({
     ParkingAccessReference.class
 })

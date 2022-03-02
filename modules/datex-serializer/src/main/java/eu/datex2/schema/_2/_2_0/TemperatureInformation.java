@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TemperatureInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TemperatureInformation", propOrder = {
     "temperature",
     "temperatureInformationExtension"
 })
@@ -36,9 +36,8 @@ public class TemperatureInformation
     extends WeatherData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Temperature temperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType temperatureInformationExtension;
 
     /**

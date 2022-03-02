@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PointDestination", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PointDestination", propOrder = {
     "pointLocation",
     "pointDestinationExtension"
 })
@@ -40,9 +40,9 @@ public class PointDestination
     extends Destination
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PointLocation pointLocation;
-    @XmlElement(name = "_pointDestinationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_pointDestinationExtension")
     protected ExtensionType pointDestinationExtension;
 
     /**

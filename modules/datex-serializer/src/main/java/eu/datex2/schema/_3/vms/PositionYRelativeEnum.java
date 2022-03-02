@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PositionYRelativeEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_PositionYRelativeEnum", propOrder = {
     "value"
 })
 public class PositionYRelativeEnum {

@@ -31,18 +31,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaviestAxleWeightCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "HeaviestAxleWeightCharacteristic", propOrder = {
     "comparisonOperator",
     "heaviestAxleWeight",
     "heaviestAxleWeightCharacteristicExtension"
 })
 public class HeaviestAxleWeightCharacteristic {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float heaviestAxleWeight;
-    @XmlElement(name = "_heaviestAxleWeightCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_heaviestAxleWeightCharacteristicExtension")
     protected ExtensionType heaviestAxleWeightCharacteristicExtension;
 
     /**

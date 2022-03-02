@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsControllerStatus", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsControllerStatus", propOrder = {
     "vmsControllerTableReference",
     "vmsControllerReference",
     "statusUpdateTime",
@@ -52,20 +52,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsControllerStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected VmsControllerTableVersionedReference vmsControllerTableReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected VmsControllerVersionedReference vmsControllerReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar statusUpdateTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsControllerStatusVmsIndexVmsStatus> vmsStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsControllerFault> vmsControllerFault;
-    @XmlElement(name = "_vmsControllerStatusExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsControllerStatusExtension")
     protected ExtensionType vmsControllerStatusExtension;
 
     /**

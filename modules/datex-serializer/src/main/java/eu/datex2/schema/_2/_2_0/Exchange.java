@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Exchange", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Exchange", propOrder = {
     "changedFlag",
     "clientIdentification",
     "deliveryBreak",
@@ -66,43 +66,28 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Exchange {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ChangedFlagEnum changedFlag;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String clientIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deliveryBreak;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DenyReasonEnum denyReason;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar historicalStartDate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar historicalStopDate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean keepAlive;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RequestTypeEnum requestType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ResponseEnum response;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String subscriptionReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected InternationalIdentifier supplierIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Target target;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Subscription subscription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<FilterReference> filterReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<CatalogueReference> catalogueReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType exchangeExtension;
 
     /**

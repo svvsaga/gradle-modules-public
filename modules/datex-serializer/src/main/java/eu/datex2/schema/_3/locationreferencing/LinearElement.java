@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearElement", propOrder = {
     "roadName",
     "roadNumber",
     "linearElementReferenceModel",
@@ -53,17 +53,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class LinearElement {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString roadName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String roadNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String linearElementReferenceModel;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected String linearElementReferenceModelVersion;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LinearElementNatureEnum linearElementNature;
-    @XmlElement(name = "_linearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearElementExtension")
     protected ExtensionType linearElementExtension;
 
     /**

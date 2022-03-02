@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryPictogram", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "SupplementaryPictogram", propOrder = {
     "pictogramDescription",
     "pictogramCode",
     "pictogramUrl",
@@ -53,20 +53,14 @@ public class SupplementaryPictogram
     extends SupplementaryInformationDisplay
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected SupplementalPictogramEnum pictogramDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String pictogramCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String pictogramUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString additionalDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean pictogramFlashing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected InformationTypeEnum pictogramInformationType;
-    @XmlElement(name = "_supplementaryPictogramExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_supplementaryPictogramExtension")
     protected ExtensionType supplementaryPictogramExtension;
 
     /**

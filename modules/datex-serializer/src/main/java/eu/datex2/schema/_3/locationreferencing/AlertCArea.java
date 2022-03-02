@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCArea", propOrder = {
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
@@ -43,15 +43,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AlertCArea {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationCountryCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected String alertCLocationTableVersion;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCLocation areaLocation;
-    @XmlElement(name = "_alertCAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCAreaExtension")
     protected ExtensionType alertCAreaExtension;
 
     /**

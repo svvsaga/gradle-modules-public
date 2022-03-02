@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Delays", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Delays", propOrder = {
     "delayBand",
     "delaysType",
     "delayTimeValue",
@@ -43,13 +43,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Delays {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DelayBandEnum delayBand;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DelaysTypeEnum delaysType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float delayTimeValue;
-    @XmlElement(name = "_delaysExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_delaysExtension")
     protected ExtensionType delaysExtension;
 
     /**

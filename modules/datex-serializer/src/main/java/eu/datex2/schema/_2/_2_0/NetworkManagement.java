@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkManagement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "NetworkManagement", propOrder = {
     "complianceOption",
     "applicableForTrafficDirection",
     "applicableForTrafficType",
@@ -58,23 +58,17 @@ public abstract class NetworkManagement
     extends OperatorAction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ComplianceOptionEnum complianceOption;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<DirectionEnum> applicableForTrafficDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<TrafficTypeEnum> applicableForTrafficType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<PlacesEnum> placesAtWhichApplicable;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean automaticallyInitiated;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType networkManagementExtension;
 
     /**

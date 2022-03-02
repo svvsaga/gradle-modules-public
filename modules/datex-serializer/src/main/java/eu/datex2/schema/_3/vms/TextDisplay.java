@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "TextDisplay", propOrder = {
     "textCode",
     "textImageUrl",
     "textLine",
@@ -48,14 +48,11 @@ public class TextDisplay
     extends DisplayAreaSettings
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String textCode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String textImageUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<TextDisplayLineIndexTextLine> textLine;
-    @XmlElement(name = "_textDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_textDisplayExtension")
     protected ExtensionType textDisplayExtension;
 
     /**

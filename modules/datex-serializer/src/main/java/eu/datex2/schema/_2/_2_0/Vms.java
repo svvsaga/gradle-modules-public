@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -38,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Vms", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Vms", propOrder = {
     "vmsWorking",
     "vmsMessageSequencingInterval",
     "vmsMessage",
@@ -52,25 +51,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Vms {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected boolean vmsWorking;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float vmsMessageSequencingInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsMessageIndexVmsMessage> vmsMessage;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TextDisplayAreaSettings textDisplayAreaSettings;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> pictogramDisplayAreaSettings;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Location vmsLocationOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsManagedLogicalLocation managedLogicalLocationOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VmsDynamicCharacteristics vmsDynamicCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsFault> vmsFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsExtension;
 
     /**

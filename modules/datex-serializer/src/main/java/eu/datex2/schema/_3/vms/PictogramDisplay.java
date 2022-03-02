@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PictogramDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "PictogramDisplay", propOrder = {
     "isPrimaryPictogram",
     "pictogramDisplayUrl",
     "pictogram",
@@ -50,18 +50,14 @@ public class PictogramDisplay
     extends DisplayAreaSettings
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isPrimaryPictogram;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "anyURI")
     protected String pictogramDisplayUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected Pictogram pictogram;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected SupplementaryInformationDisplay supplementaryInformationDisplay;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Image image;
-    @XmlElement(name = "_pictogramDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_pictogramDisplayExtension")
     protected ExtensionType pictogramDisplayExtension;
 
     /**

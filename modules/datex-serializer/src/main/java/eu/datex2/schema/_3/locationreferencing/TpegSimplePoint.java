@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegSimplePoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegSimplePoint", propOrder = {
     "tpegSimplePointLocationType",
     "point",
     "tpegSimplePointExtension"
@@ -43,11 +43,11 @@ public class TpegSimplePoint
     extends TpegPointLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected TpegLoc01SimplePointLocationSubtypeEnum tpegSimplePointLocationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected TpegPoint point;
-    @XmlElement(name = "_tpegSimplePointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegSimplePointExtension")
     protected ExtensionType tpegSimplePointExtension;
 
     /**

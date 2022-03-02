@@ -7,7 +7,6 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -39,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsUnitRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsUnitRecord", propOrder = {
     "numberOfVms",
     "vmsUnitIdentifier",
     "vmsUnitIPAddress",
@@ -49,18 +48,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsUnitRecord {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVms;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitIPAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitElectronicAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsUnitRecordVmsIndexVmsRecord> vmsRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsUnitRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

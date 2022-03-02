@@ -35,18 +35,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceSettings", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "ReferenceSettings", propOrder = {
     "predefinedLocationGroupReference",
     "trafficStatusDefault",
     "referenceSettingsExtension"
 })
 public class ReferenceSettings {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficStatusEnum trafficStatusDefault;
-    @XmlElement(name = "_referenceSettingsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_referenceSettingsExtension")
     protected ExtensionType referenceSettingsExtension;
 
     /**

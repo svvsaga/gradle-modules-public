@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DayWeekMonth", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "DayWeekMonth", propOrder = {
     "applicableDay",
     "applicableMonth",
     "dayWeekMonthExtension"
@@ -47,11 +47,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DayWeekMonth {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<DayEnum> applicableDay;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<MonthOfYearEnum> applicableMonth;
-    @XmlElement(name = "_dayWeekMonthExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_dayWeekMonthExtension")
     protected ExtensionType dayWeekMonthExtension;
 
     /**

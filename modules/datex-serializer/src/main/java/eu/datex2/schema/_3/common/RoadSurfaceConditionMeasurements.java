@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoadSurfaceConditionMeasurements", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "RoadSurfaceConditionMeasurements", propOrder = {
     "temperatureBelowOrAboveRoadSurface",
     "roadSurfaceTemperature",
     "protectionTemperature",
@@ -57,27 +57,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class RoadSurfaceConditionMeasurements {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<TemperatureBelowOrAboveRoadSurface> temperatureBelowOrAboveRoadSurface;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue roadSurfaceTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected TemperatureValue protectionTemperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected ApplicationRateValue deIcingApplicationRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected KilogramsConcentrationValue deIcingConcentration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FrictionValue friction;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue depthOfSnow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue waterFilmThickness;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FloatingPointMetreDistanceValue iceLayerThickness;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected PercentageValue icePercentage;
-    @XmlElement(name = "_roadSurfaceConditionMeasurementsExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_roadSurfaceConditionMeasurementsExtension")
     protected ExtensionType roadSurfaceConditionMeasurementsExtension;
 
     /**

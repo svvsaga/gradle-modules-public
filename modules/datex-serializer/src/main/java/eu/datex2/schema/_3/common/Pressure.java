@@ -30,15 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pressure", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Pressure", propOrder = {
     "pressureValue",
     "pressureExtension"
 })
 public class Pressure {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected PressureValue pressureValue;
-    @XmlElement(name = "_pressureExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_pressureExtension")
     protected ExtensionType pressureExtension;
 
     /**

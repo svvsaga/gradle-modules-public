@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NutsNamedArea", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "NutsNamedArea")
 public class NutsNamedArea
     extends NamedArea
 {

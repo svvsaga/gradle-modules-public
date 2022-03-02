@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TravelTimeTypeEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "_TravelTimeTypeEnum", propOrder = {
     "value"
 })
 public class TravelTimeTypeEnum {

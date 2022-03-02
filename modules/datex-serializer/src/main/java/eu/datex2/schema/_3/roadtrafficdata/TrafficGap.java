@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficGap", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficGap", propOrder = {
     "averageDistanceGap",
     "averageTimeGap",
     "trafficGapExtension"
@@ -44,11 +44,9 @@ public class TrafficGap
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected FloatingPointMetreDistanceValue averageDistanceGap;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue averageTimeGap;
-    @XmlElement(name = "_trafficGapExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficGapExtension")
     protected ExtensionType trafficGapExtension;
 
     /**

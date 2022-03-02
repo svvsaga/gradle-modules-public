@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NonOrderedLocationGroupByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "NonOrderedLocationGroupByReference", propOrder = {
     "predefinedNonOrderedLocationGroupReference",
     "nonOrderedLocationGroupByReferenceExtension"
 })
@@ -36,9 +36,8 @@ public class NonOrderedLocationGroupByReference
     extends NonOrderedLocations
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType nonOrderedLocationGroupByReferenceExtension;
 
     /**

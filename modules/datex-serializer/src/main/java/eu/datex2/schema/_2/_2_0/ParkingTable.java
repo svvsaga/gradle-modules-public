@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingTable", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingTable", propOrder = {
     "parkingTableName",
     "parkingTableVersionTime",
     "parkingRecord",
@@ -45,14 +45,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingTable {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingTableName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar parkingTableVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<ParkingRecord> parkingRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -33,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DayWeekMonth", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "DayWeekMonth", propOrder = {
     "applicableDay",
     "applicableWeek",
     "applicableMonth",
@@ -41,16 +40,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DayWeekMonth {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<DayEnum> applicableDay;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<WeekOfMonthEnum> applicableWeek;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<MonthOfYearEnum> applicableMonth;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType dayWeekMonthExtension;
 
     /**

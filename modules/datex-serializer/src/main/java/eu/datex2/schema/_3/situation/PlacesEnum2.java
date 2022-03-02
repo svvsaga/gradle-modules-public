@@ -55,7 +55,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PlacesEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "PlacesEnum")
 @XmlEnum
 public enum PlacesEnum2 {
 

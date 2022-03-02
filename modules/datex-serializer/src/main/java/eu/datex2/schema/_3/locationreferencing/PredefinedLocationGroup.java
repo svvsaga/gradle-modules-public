@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationGroup", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PredefinedLocationGroup", propOrder = {
     "predefinedLocationGroupName",
     "locationGroup",
     "predefinedLocation",
@@ -51,13 +51,10 @@ public class PredefinedLocationGroup
     extends PredefinedLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString predefinedLocationGroupName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LocationGroup locationGroup;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<PredefinedLocation> predefinedLocation;
-    @XmlElement(name = "_predefinedLocationGroupExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_predefinedLocationGroupExtension")
     protected ExtensionType predefinedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

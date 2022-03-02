@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrCircleLocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrCircleLocationReference", propOrder = {
     "openlrRadius",
     "openlrGeoCoordinate",
     "openlrCircleLocationReferenceExtension"
@@ -44,12 +44,12 @@ public class OpenlrCircleLocationReference
     extends OpenlrAreaLocationReference
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrRadius;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrGeoCoordinate openlrGeoCoordinate;
-    @XmlElement(name = "_openlrCircleLocationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrCircleLocationReferenceExtension")
     protected ExtensionType openlrCircleLocationReferenceExtension;
 
     /**

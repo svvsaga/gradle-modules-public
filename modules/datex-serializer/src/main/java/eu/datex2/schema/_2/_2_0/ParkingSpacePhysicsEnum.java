@@ -20,7 +20,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ParkingSpacePhysicsEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "ParkingSpacePhysicsEnum")
 @XmlEnum
 public enum ParkingSpacePhysicsEnum {
 

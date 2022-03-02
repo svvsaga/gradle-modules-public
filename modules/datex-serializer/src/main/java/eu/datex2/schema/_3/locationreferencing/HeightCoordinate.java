@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeightCoordinate", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "HeightCoordinate", propOrder = {
     "heightValue",
     "heightType",
     "altitudeConfidence",
@@ -43,15 +43,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class HeightCoordinate {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float heightValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected HeightTypeEnum heightType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected AltitudeConfidence altitudeConfidence;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionAccuracy verticalPositionAccuracy;
-    @XmlElement(name = "_heightCoordinateExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_heightCoordinateExtension")
     protected ExtensionType heightCoordinateExtension;
 
     /**

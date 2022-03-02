@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElementReference", namespace = "http://datex2.eu/schema/3/informationManagement", propOrder = {
+@XmlType(name = "ElementReference", propOrder = {
     "managementStatus",
     "reference",
     "versionedReference",
@@ -41,13 +41,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ElementReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement", required = true)
+    @XmlElement(required = true)
     protected ManagementTypeEnum managementStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement")
     protected Reference reference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/informationManagement")
     protected VersionedReference versionedReference;
-    @XmlElement(name = "_elementReferenceExtension", namespace = "http://datex2.eu/schema/3/informationManagement")
+    @XmlElement(name = "_elementReferenceExtension")
     protected ExtensionType elementReferenceExtension;
 
     /**

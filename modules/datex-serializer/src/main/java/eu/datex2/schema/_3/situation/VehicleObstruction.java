@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleObstruction", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "VehicleObstruction", propOrder = {
     "vehicleObstructionType",
     "involvedVehicleType",
     "vehicleProblemCause",
@@ -49,15 +49,12 @@ public class VehicleObstruction
     extends Obstruction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected VehicleObstructionTypeEnum vehicleObstructionType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected VehicleTypeEnum involvedVehicleType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected VehicleProblemCauseEnum vehicleProblemCause;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Vehicle> obstructingVehicle;
-    @XmlElement(name = "_vehicleObstructionExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_vehicleObstructionExtension")
     protected ExtensionType vehicleObstructionExtension;
 
     /**

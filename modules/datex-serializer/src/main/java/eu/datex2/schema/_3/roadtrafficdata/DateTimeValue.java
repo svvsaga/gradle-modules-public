@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DateTimeValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "DateTimeValue", propOrder = {
     "dateTime",
     "dateTimeValueExtension"
 })
@@ -42,10 +42,10 @@ public class DateTimeValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dateTime;
-    @XmlElement(name = "_dateTimeValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_dateTimeValueExtension")
     protected ExtensionType dateTimeValueExtension;
 
     /**

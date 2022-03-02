@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItineraryByReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ItineraryByReference", propOrder = {
     "predefinedItineraryReference",
     "itineraryByReferenceExtension"
 })
@@ -36,9 +36,8 @@ public class ItineraryByReference
     extends Itinerary
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PredefinedItineraryVersionedReference predefinedItineraryReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType itineraryByReferenceExtension;
 
     /**

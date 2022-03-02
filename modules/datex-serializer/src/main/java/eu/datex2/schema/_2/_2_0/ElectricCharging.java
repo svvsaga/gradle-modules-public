@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElectricCharging", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ElectricCharging", propOrder = {
     "chargingStationUsageType",
     "chargingStationModelType",
     "maximumCurrent",
@@ -48,21 +48,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ElectricCharging {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<ChargingStationUsageTypeEnum> chargingStationUsageType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargingStationModelType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float maximumCurrent;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", type = Float.class)
+    @XmlElement(type = Float.class)
     protected List<Float> voltage;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> chargingStationConnectorType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfChargingPoints;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType electricChargingExtension;
 
     /**

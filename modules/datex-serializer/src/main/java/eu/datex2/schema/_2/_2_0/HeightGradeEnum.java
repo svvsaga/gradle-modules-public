@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "HeightGradeEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "HeightGradeEnum")
 @XmlEnum
 public enum HeightGradeEnum {
 

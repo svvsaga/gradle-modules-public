@@ -4,7 +4,6 @@ package eu.datex2.schema._2._2_0;
 import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingEquipmentOrServiceFacilityStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingEquipmentOrServiceFacilityStatus", propOrder = {
     "numberOfEquipmentOrServiceFacilityOverride",
     "numberOfSubitemsOverride",
     "vacantEquipmentOrServiceFacilitySubitems",
@@ -44,22 +43,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingEquipmentOrServiceFacilityStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfEquipmentOrServiceFacilityOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubitemsOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vacantEquipmentOrServiceFacilitySubitems;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum serviceFacilityOpeningStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OperationStatusEnum equipmentOperationStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingEquipmentOrServiceFacilityStatusExtension;
 
     /**

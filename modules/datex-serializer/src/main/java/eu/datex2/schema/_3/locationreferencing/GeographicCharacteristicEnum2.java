@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "GeographicCharacteristicEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "GeographicCharacteristicEnum")
 @XmlEnum
 public enum GeographicCharacteristicEnum2 {
 

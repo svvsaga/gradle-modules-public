@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Conditions", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Conditions", propOrder = {
     "drivingConditionType",
     "conditionsExtension"
 })
@@ -45,9 +45,8 @@ public class Conditions
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DrivingConditionTypeEnum drivingConditionType;
-    @XmlElement(name = "_conditionsExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_conditionsExtension")
     protected ExtensionType conditionsExtension;
 
     /**

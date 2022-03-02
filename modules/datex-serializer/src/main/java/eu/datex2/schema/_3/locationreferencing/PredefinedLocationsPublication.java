@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedLocationsPublication", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PredefinedLocationsPublication", propOrder = {
     "headerInformation",
     "predefinedLocationReference",
     "predefinedLocationsPublicationExtension"
@@ -47,11 +47,11 @@ public class PredefinedLocationsPublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected List<PredefinedLocationReference> predefinedLocationReference;
-    @XmlElement(name = "_predefinedLocationsPublicationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_predefinedLocationsPublicationExtension")
     protected ExtensionType predefinedLocationsPublicationExtension;
 
     /**

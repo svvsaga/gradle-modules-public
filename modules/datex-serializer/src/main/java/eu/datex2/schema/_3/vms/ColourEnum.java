@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ColourEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_ColourEnum", propOrder = {
     "value"
 })
 public class ColourEnum {

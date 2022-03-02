@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingAccessStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingAccessStatus", propOrder = {
     "accessReference",
     "accessOpeningStatus",
     "accessFault",
@@ -41,15 +41,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingAccessStatus {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingAccessReference accessReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum accessOpeningStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingFaultEnum> accessFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingAccessStatusExtension;
 
     /**

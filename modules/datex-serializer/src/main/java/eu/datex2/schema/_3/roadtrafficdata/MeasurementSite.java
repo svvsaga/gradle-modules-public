@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSite", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "MeasurementSite", propOrder = {
     "measurementSiteRecordVersionTime",
     "measurementEquipmentReference",
     "measurementEquipmentTypeUsed",
@@ -65,27 +65,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSite {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementSiteRecordVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementEquipmentReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementEquipmentTypeUsed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementSiteName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measurementSiteNumberOfLanes;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected String measurementSiteIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<MeasurementSiteIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected LocationReference measurementSiteLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(name = "_measurementSiteExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_measurementSiteExtension")
     protected ExtensionType measurementSiteExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

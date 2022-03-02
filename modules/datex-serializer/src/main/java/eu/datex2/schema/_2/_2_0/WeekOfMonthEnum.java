@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "WeekOfMonthEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "WeekOfMonthEnum")
 @XmlEnum
 public enum WeekOfMonthEnum {
 

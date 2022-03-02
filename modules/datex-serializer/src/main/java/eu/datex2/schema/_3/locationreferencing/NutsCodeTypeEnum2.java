@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "NutsCodeTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "NutsCodeTypeEnum")
 @XmlEnum
 public enum NutsCodeTypeEnum2 {
 

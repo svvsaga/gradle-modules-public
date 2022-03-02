@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Carriageway", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "Carriageway", propOrder = {
     "carriageway",
     "originalNumberOfLanes",
     "lane",
@@ -46,13 +46,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Carriageway {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected CarriagewayEnum carriageway;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected BigInteger originalNumberOfLanes;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<Lane> lane;
-    @XmlElement(name = "_carriagewayExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_carriagewayExtension")
     protected ExtensionType carriagewayExtension;
 
     /**

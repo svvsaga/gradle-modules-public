@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedNonOrderedLocationGroup", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PredefinedNonOrderedLocationGroup", propOrder = {
     "predefinedNonOrderedLocationGroupName",
     "predefinedLocation",
     "predefinedNonOrderedLocationGroupExtension"
@@ -43,11 +43,9 @@ public class PredefinedNonOrderedLocationGroup
     extends PredefinedLocationContainer
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString predefinedNonOrderedLocationGroupName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<PredefinedLocation> predefinedLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType predefinedNonOrderedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

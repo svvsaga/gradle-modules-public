@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplementaryInformationDisplay", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "SupplementaryInformationDisplay", propOrder = {
     "supplementaryInformationDisplayExtension"
 })
 @XmlSeeAlso({
@@ -44,7 +44,7 @@ public abstract class SupplementaryInformationDisplay
     extends DisplayAreaSettings
 {
 
-    @XmlElement(name = "_supplementaryInformationDisplayExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_supplementaryInformationDisplayExtension")
     protected ExtensionType supplementaryInformationDisplayExtension;
 
     /**

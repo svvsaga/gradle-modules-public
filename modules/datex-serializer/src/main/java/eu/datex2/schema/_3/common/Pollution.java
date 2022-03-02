@@ -31,18 +31,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Pollution", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Pollution", propOrder = {
     "pollutantType",
     "pollutantConcentration",
     "pollutionExtension"
 })
 public class Pollution {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected PollutantTypeEnum pollutantType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MicrogramsConcentrationValue pollutantConcentration;
-    @XmlElement(name = "_pollutionExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_pollutionExtension")
     protected ExtensionType pollutionExtension;
 
     /**

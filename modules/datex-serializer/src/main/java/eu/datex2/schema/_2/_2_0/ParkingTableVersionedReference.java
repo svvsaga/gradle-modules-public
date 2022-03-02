@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ParkingTableVersionedReference", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "_ParkingTableVersionedReference")
 public class ParkingTableVersionedReference
     extends VersionedReference
 {

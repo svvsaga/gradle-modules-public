@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NamedArea", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "NamedArea", propOrder = {
     "namedAreaExtension"
 })
 @XmlSeeAlso({
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class NamedArea {
 
-    @XmlElement(name = "_namedAreaExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_namedAreaExtension")
     protected ExtensionType namedAreaExtension;
 
     /**

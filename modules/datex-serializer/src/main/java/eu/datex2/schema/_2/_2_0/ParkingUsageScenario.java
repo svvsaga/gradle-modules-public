@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingUsageScenario", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingUsageScenario", propOrder = {
     "parkingUsageScenario",
     "truckParkingDynamicManagement",
     "eventParkingType",
@@ -45,21 +45,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingUsageScenario {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ParkingUsageScenarioEnum parkingUsageScenario;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<TruckParkingDynamicManagementEnum> truckParkingDynamicManagement;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PublicEventTypeEnum eventParkingType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected PublicEventType2Enum eventParkingType2;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod scenarioAvailability;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingUsageScenarioExtension;
 
     /**

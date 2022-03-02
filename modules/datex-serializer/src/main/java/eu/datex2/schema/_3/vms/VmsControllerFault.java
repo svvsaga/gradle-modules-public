@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsControllerFault", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsControllerFault", propOrder = {
     "vmsControllerFault",
     "vmsControllerFaultExtension"
 })
@@ -42,9 +42,9 @@ public class VmsControllerFault
     extends Fault
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected VmsControllerFaultEnum vmsControllerFault;
-    @XmlElement(name = "_vmsControllerFaultExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsControllerFaultExtension")
     protected ExtensionType vmsControllerFaultExtension;
 
     /**

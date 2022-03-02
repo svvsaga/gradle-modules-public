@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subscription", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "Subscription", propOrder = {
     "name",
     "referenceID",
     "subscriptionStart",
@@ -50,22 +50,16 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Subscription {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String name;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Reference referenceID;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStart;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionEnd;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger deliveyFrequency;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Validity validity;
-    @XmlElement(name = "_subscriptionExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_subscriptionExtension")
     protected ExtensionType subscriptionExtension;
 
     /**

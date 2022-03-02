@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegPointLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegPointLocation", propOrder = {
     "tpegDirection",
     "tpegPointLocationExtension"
 })
@@ -40,10 +40,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegPointLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected DirectionEnum tpegDirection;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegPointLocationExtension;
 
     /**

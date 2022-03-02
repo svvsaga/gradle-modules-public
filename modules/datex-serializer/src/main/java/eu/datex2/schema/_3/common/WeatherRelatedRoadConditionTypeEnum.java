@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_WeatherRelatedRoadConditionTypeEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "_WeatherRelatedRoadConditionTypeEnum", propOrder = {
     "value"
 })
 public class WeatherRelatedRoadConditionTypeEnum {

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegPoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "TpegPoint", propOrder = {
     "tpegPointExtension"
 })
 @XmlSeeAlso({
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegPoint {
 
-    @XmlElement(name = "_tpegPointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_tpegPointExtension")
     protected ExtensionType tpegPointExtension;
 
     /**

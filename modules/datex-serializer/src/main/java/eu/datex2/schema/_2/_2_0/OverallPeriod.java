@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OverallPeriod", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OverallPeriod", propOrder = {
     "overallStartTime",
     "overallEndTime",
     "validPeriod",
@@ -44,17 +44,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OverallPeriod {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallStartTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar overallEndTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Period> validPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Period> exceptionPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType overallPeriodExtension;
 
     /**

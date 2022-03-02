@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ManagedLogicalLocation", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "ManagedLogicalLocation", propOrder = {
     "managedLogicalLocation",
     "distanceFromLogicalLocation",
     "managedLocation",
@@ -47,14 +47,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ManagedLogicalLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString managedLogicalLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromLogicalLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Location managedLocation;
-    @XmlElement(name = "_managedLogicalLocationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_managedLogicalLocationExtension")
     protected ExtensionType managedLogicalLocationExtension;
 
     /**

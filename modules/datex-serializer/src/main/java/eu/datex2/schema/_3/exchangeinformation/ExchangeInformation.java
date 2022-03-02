@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExchangeInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "ExchangeInformation", propOrder = {
     "messageType",
     "exchangeContext",
     "dynamicInformation",
@@ -45,13 +45,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ExchangeInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected MessageTypeEnum messageType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected ExchangeContext exchangeContext;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected DynamicInformation dynamicInformation;
-    @XmlElement(name = "_exchangeInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_exchangeInformationExtension")
     protected ExtensionType exchangeInformationExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;

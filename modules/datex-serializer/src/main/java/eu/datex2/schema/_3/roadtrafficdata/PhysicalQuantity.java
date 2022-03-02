@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalQuantity", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "PhysicalQuantity", propOrder = {
     "forecast",
     "measurementEquipmentTypeUsed",
     "pertinentLocation",
@@ -60,19 +60,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class PhysicalQuantity {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Boolean forecast;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MultilingualString measurementEquipmentTypeUsed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected LocationReference pertinentLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<PhysicalQuantityFault> physicalQuantityFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Source source;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(name = "_physicalQuantityExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_physicalQuantityExtension")
     protected ExtensionType physicalQuantityExtension;
 
     /**

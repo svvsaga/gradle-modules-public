@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficElement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "TrafficElement", propOrder = {
     "trafficConstrictionType",
     "trafficElementExtension"
 })
@@ -50,9 +50,8 @@ public abstract class TrafficElement
     extends SituationRecord
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected TrafficConstrictionTypeEnum trafficConstrictionType;
-    @XmlElement(name = "_trafficElementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_trafficElementExtension")
     protected ExtensionType trafficElementExtension;
 
     /**

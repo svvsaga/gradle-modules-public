@@ -30,14 +30,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPointAlongLine", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPointAlongLine", propOrder = {
     "openlrPointAlongLineExtension"
 })
 public class OpenlrPointAlongLine
     extends OpenlrBasePointLocation
 {
 
-    @XmlElement(name = "_openlrPointAlongLineExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPointAlongLineExtension")
     protected ExtensionType openlrPointAlongLineExtension;
 
     /**

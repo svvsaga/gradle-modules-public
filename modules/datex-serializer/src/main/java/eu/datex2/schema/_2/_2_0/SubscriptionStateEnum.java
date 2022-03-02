@@ -20,7 +20,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "SubscriptionStateEnum", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "SubscriptionStateEnum")
 @XmlEnum
 public enum SubscriptionStateEnum {
 

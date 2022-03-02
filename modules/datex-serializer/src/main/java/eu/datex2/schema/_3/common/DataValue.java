@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DataValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "DataValue", propOrder = {
     "dataError",
     "reasonForDataError",
     "dataValueExtension"
@@ -82,11 +82,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DataValue {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Boolean dataError;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString reasonForDataError;
-    @XmlElement(name = "_dataValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_dataValueExtension")
     protected ExtensionType dataValueExtension;
     @XmlAttribute(name = "accuracy")
     protected Float accuracy;

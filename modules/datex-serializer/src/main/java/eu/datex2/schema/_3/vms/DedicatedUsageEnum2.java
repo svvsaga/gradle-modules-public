@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "DedicatedUsageEnum", namespace = "http://datex2.eu/schema/3/vms")
+@XmlType(name = "DedicatedUsageEnum")
 @XmlEnum
 public enum DedicatedUsageEnum2 {
 

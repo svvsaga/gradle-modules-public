@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PolygonAreaIndexPointCoordinates", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_PolygonAreaIndexPointCoordinates", propOrder = {
     "pointCoordinates"
 })
 public class PolygonAreaIndexPointCoordinates {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates pointCoordinates;
     @XmlAttribute(name = "index", required = true)
     protected int index;

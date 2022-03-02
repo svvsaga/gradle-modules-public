@@ -33,19 +33,19 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NumberOfAxlesCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "NumberOfAxlesCharacteristic", propOrder = {
     "comparisonOperator",
     "numberOfAxles",
     "numberOfAxlesCharacteristicExtension"
 })
 public class NumberOfAxlesCharacteristic {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfAxles;
-    @XmlElement(name = "_numberOfAxlesCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_numberOfAxlesCharacteristicExtension")
     protected ExtensionType numberOfAxlesCharacteristicExtension;
 
     /**

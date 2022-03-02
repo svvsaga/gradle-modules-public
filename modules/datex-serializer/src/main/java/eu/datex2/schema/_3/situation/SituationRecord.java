@@ -64,7 +64,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationRecord", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "SituationRecord", propOrder = {
     "situationRecordCreationReference",
     "situationRecordCreationTime",
     "situationRecordObservationTime",
@@ -94,49 +94,35 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class SituationRecord {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String situationRecordCreationReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordCreationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordObservationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordFirstSupplierVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected ConfidentialityValueEnum confidentialityOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected ProbabilityOfOccurrenceEnum probabilityOfOccurrence;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SeverityEnum severity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean safetyRelatedMessage;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Source source;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected Validity validity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Impact impact;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Cause cause;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Comment> generalPublicComment;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Comment> nonGeneralPublicComment;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<UrlLink> urlLink;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected LocationReference locationReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InternationalIdentifier informationManagerOverride;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Impact impactOnOppositeDirection;
-    @XmlElement(name = "_situationRecordExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_situationRecordExtension")
     protected ExtensionType situationRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

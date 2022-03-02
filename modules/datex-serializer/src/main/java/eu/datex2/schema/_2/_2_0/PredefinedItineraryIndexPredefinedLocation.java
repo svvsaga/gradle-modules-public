@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PredefinedItineraryIndexPredefinedLocation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_PredefinedItineraryIndexPredefinedLocation", propOrder = {
     "predefinedLocation"
 })
 public class PredefinedItineraryIndexPredefinedLocation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected PredefinedLocation predefinedLocation;
     @XmlAttribute(name = "index", required = true)
     protected int index;

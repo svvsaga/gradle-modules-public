@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "LinearElementNatureEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "LinearElementNatureEnum")
 @XmlEnum
 public enum LinearElementNatureEnum2 {
 

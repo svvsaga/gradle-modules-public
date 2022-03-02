@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ImageFormatEnum", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_ImageFormatEnum", propOrder = {
     "value"
 })
 public class ImageFormatEnum {

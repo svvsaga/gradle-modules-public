@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficConcentration", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficConcentration", propOrder = {
     "density",
     "occupancy",
     "trafficConcentrationExtension"
@@ -42,11 +42,9 @@ public class TrafficConcentration
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TrafficDensityValue density;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected PercentageValue occupancy;
-    @XmlElement(name = "_trafficConcentrationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficConcentrationExtension")
     protected ExtensionType trafficConcentrationExtension;
 
     /**

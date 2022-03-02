@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Charge", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Charge", propOrder = {
     "charge",
     "chargeInterval",
     "chargeType",
@@ -51,27 +51,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Charge {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected BigDecimal charge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float chargeInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ChargeTypeEnum chargeType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString chargeTypeDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxIterationsOfCharge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minIterationsOfCharge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger chargeOrderIndex;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TimePeriodOfDay timePeriodOfDay;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType chargeExtension;
 
     /**

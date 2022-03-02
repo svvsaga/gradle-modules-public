@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TravelTimeData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TravelTimeData", propOrder = {
     "travelTimeTrendType",
     "travelTimeType",
     "vehicleType",
@@ -60,23 +60,15 @@ public class TravelTimeData
     extends BasicData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TravelTimeTrendTypeEnum travelTimeTrendType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected TravelTimeTypeEnum travelTimeType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<VehicleTypeEnum> vehicleType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue travelTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue freeFlowTravelTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue normallyExpectedTravelTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DurationValue travelTimeDelay;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue freeFlowSpeed;
-    @XmlElement(name = "_travelTimeDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_travelTimeDataExtension")
     protected ExtensionType travelTimeDataExtension;
 
     /**

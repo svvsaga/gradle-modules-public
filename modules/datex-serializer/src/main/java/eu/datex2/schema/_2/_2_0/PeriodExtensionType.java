@@ -6,7 +6,6 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAnyElement;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
@@ -32,13 +31,12 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PeriodExtensionType", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_PeriodExtensionType", propOrder = {
     "periodExtended",
     "any"
 })
 public class PeriodExtensionType {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PeriodExtended periodExtended;
     @XmlAnyElement(lax = true)
     protected List<Object> any;

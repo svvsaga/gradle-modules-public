@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BasicData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "BasicData", propOrder = {
     "measurementOrCalculationTime",
     "basicDataExtension"
 })
@@ -46,9 +46,8 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class BasicData {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected MeasurementOrCalculationTime measurementOrCalculationTime;
-    @XmlElement(name = "_basicDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_basicDataExtension")
     protected ExtensionType basicDataExtension;
 
     /**

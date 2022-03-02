@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DistanceAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "DistanceAlongLinearElement", propOrder = {
     "distanceAlongLinearElementExtension"
 })
 @XmlSeeAlso({
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DistanceAlongLinearElement {
 
-    @XmlElement(name = "_distanceAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_distanceAlongLinearElementExtension")
     protected ExtensionType distanceAlongLinearElementExtension;
 
     /**

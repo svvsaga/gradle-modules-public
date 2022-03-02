@@ -7,7 +7,6 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -42,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TariffsAndPayment", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TariffsAndPayment", propOrder = {
     "lastUpdated",
     "acceptedMeansOfPayment",
     "paymentMode",
@@ -57,31 +56,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class TariffsAndPayment {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastUpdated;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<MeansOfPaymentEnum> acceptedMeansOfPayment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingPaymentModeEnum> paymentMode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString paymentAdditionalDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean freeOfCharge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BigDecimal reservationFee;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ChargeBand> chargeBand;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ChargeBandByReference> chargeBandByReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected AcceptedPaymentCards acceptedPaymentCards;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tariffsAndPaymentExtension;
 
     /**

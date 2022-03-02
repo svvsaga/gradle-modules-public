@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertCDirection", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AlertCDirection", propOrder = {
     "alertCDirectionCoded",
     "alertCDirectionNamed",
     "alertCAffectedDirection",
@@ -43,13 +43,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AlertCDirection {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected AlertCDirectionEnum alertCDirectionCoded;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString alertCDirectionNamed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected LinearDirectionEnum alertCAffectedDirection;
-    @XmlElement(name = "_alertCDirectionExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_alertCDirectionExtension")
     protected ExtensionType alertCDirectionExtension;
 
     /**

@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReroutingManagement", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "ReroutingManagement", propOrder = {
     "reroutingManagementType",
     "reroutingItineraryDescription",
     "signedRerouting",
@@ -61,25 +61,17 @@ public class ReroutingManagement
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected List<ReroutingManagementTypeEnum> reroutingManagementType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString reroutingItineraryDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean signedRerouting;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String alternativeRouteIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String entry;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String exit;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String roadOrJunctionNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Itinerary> alternativeRoute;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Destination destination;
-    @XmlElement(name = "_reroutingManagementExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_reroutingManagementExtension")
     protected ExtensionType reroutingManagementExtension;
 
     /**

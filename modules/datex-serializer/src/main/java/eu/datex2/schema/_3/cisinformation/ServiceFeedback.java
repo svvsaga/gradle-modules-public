@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceFeedback", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+@XmlType(name = "ServiceFeedback", propOrder = {
     "serviceRequestFeedbackReason",
     "serviceRequestStatus",
     "serviceRequestReference",
@@ -44,15 +44,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ServiceFeedback {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected MultilingualString serviceRequestFeedbackReason;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected ServiceActionStatusEnum serviceRequestStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected VersionedReference serviceRequestReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected Agent serviceProvider;
-    @XmlElement(name = "_serviceFeedbackExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    @XmlElement(name = "_serviceFeedbackExtension")
     protected ExtensionType serviceFeedbackExtension;
 
     /**

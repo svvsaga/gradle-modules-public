@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ParkingSpace", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_ParkingSpace", propOrder = {
     "parkingSpaceBasics"
 })
 public class ParkingSpace {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingSpaceBasics parkingSpaceBasics;
     @XmlAttribute(name = "parkingSpaceIndex", required = true)
     protected int parkingSpaceIndex;

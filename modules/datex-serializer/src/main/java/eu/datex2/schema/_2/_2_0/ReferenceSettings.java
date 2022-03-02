@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -30,19 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceSettings", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ReferenceSettings", propOrder = {
     "predefinedNonOrderedLocationGroupReference",
     "trafficStatusDefault",
     "referenceSettingsExtension"
 })
 public class ReferenceSettings {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected TrafficStatusEnum trafficStatusDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType referenceSettingsExtension;
 
     /**

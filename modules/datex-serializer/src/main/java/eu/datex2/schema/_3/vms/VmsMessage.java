@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsMessage", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsMessage", propOrder = {
     "associatedTrafficManagementPlan",
     "messageSetBy",
     "setBySystem",
@@ -74,40 +74,25 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsMessage {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String associatedTrafficManagementPlan;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString messageSetBy;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean setBySystem;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString reasonForSetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected SettingReasonEnum codedReasonForSetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<MessageInformationTypeEnum> messageInformationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean primarySetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean mareNostrumCompliant;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeLastSet;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString requestedBy;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<SituationVersionedReference> relatedSituation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<SituationRecordVersionedReference> relatedSituationRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float distanceFromClosestSituationRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float sequencingInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<VmsMessageDisplayAreaIndexDisplayAreaSettings> displayAreaSettings;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Image image;
-    @XmlElement(name = "_vmsMessageExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsMessageExtension")
     protected ExtensionType vmsMessageExtension;
 
     /**

@@ -6,7 +6,6 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -41,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingStandardsAndSecurity", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingStandardsAndSecurity", propOrder = {
     "labelSecurityLevel",
     "labelServiceLevel",
     "labelSecurityLevelSelfAssessment",
@@ -56,34 +55,23 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingStandardsAndSecurity {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LABELSecurityLevelEnum labelSecurityLevel;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LABELServiceLevelEnum labelServiceLevel;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LABELSecurityLevelEnum labelSecurityLevelSelfAssessment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LABELServiceLevelEnum labelServiceLevelSelfAssessment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSecurityEnum> parkingSecurity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<MultilingualString> parkingAdditionalSecurity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<ParkingSupervisionEnum> parkingSupervision;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingSecurityNationalClassification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean certifiedSecureParking;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfCertification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingStandardsAndSecurityExtension;
 
     /**

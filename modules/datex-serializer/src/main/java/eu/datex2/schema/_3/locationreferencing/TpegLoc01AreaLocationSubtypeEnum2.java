@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TpegLoc01AreaLocationSubtypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "TpegLoc01AreaLocationSubtypeEnum")
 @XmlEnum
 public enum TpegLoc01AreaLocationSubtypeEnum2 {
 

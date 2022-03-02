@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExchangeContext", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "ExchangeContext", propOrder = {
     "codedExchangeProtocol",
     "exchangeSpecificationVersion",
     "operatingMode",
@@ -51,23 +51,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ExchangeContext {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected ProtocolTypeEnum codedExchangeProtocol;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected String exchangeSpecificationVersion;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected OperatingModeEnum operatingMode;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected UpdateMethodEnum updateMethod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected String nonCodedExchangeProtocol;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected Agent supplierOrCisRequester;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected List<Agent> clientOrCisProvider;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Subscription subscription;
-    @XmlElement(name = "_exchangeContextExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_exchangeContextExtension")
     protected ExtensionType exchangeContextExtension;
 
     /**

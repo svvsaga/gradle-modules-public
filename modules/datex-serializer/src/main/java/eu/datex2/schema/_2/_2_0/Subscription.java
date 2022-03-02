@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Subscription", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Subscription", propOrder = {
     "deleteSubscription",
     "deliveryInterval",
     "operatingMode",
@@ -56,32 +56,26 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Subscription {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deleteSubscription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float deliveryInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected OperatingModeEnum operatingMode;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStartTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected SubscriptionStateEnum subscriptionState;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar subscriptionStopTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected UpdateMethodEnum updateMethod;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<Target> target;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected FilterReference filterReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected CatalogueReference catalogueReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType subscriptionExtension;
 
     /**

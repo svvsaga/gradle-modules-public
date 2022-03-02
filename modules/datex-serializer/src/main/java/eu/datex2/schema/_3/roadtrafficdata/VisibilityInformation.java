@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VisibilityInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "VisibilityInformation", propOrder = {
     "visibility",
     "visibilityInformationExtension"
 })
@@ -40,9 +40,9 @@ public class VisibilityInformation
     extends WeatherData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected Visibility visibility;
-    @XmlElement(name = "_visibilityInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_visibilityInformationExtension")
     protected ExtensionType visibilityInformationExtension;
 
     /**

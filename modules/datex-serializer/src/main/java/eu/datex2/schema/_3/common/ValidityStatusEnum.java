@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ValidityStatusEnum", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "_ValidityStatusEnum", propOrder = {
     "value"
 })
 public class ValidityStatusEnum {

@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SingleRoadLinearLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "SingleRoadLinearLocation", propOrder = {
     "tpegLinearLocation",
     "alertCLinear",
     "linearWithinLinearElement",
@@ -48,13 +48,10 @@ public class SingleRoadLinearLocation
     extends LinearLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected TpegLinearLocation tpegLinearLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<AlertCLinear> alertCLinear;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected List<LinearWithinLinearElement> linearWithinLinearElement;
-    @XmlElement(name = "_singleRoadLinearLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_singleRoadLinearLocationExtension")
     protected ExtensionType singleRoadLinearLocationExtension;
 
     /**

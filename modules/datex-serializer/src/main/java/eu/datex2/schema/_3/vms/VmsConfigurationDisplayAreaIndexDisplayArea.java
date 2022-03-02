@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsConfigurationDisplayAreaIndexDisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_VmsConfigurationDisplayAreaIndexDisplayArea", propOrder = {
     "displayArea"
 })
 public class VmsConfigurationDisplayAreaIndexDisplayArea {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected DisplayArea displayArea;
     @XmlAttribute(name = "displayAreaIndex", required = true)
     protected int displayAreaIndex;

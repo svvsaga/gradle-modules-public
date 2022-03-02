@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PoorEnvironmentConditions", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "PoorEnvironmentConditions", propOrder = {
     "poorEnvironmentType",
     "precipitationDetail",
     "visibility",
@@ -63,23 +63,16 @@ public class PoorEnvironmentConditions
     extends Conditions
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected PrecipitationDetail precipitationDetail;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Visibility visibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Pollution pollution;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Temperature temperature;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Wind wind;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Humidity humidity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Pressure pressure;
-    @XmlElement(name = "_poorEnvironmentConditionsExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_poorEnvironmentConditionsExtension")
     protected ExtensionType poorEnvironmentConditionsExtension;
 
     /**

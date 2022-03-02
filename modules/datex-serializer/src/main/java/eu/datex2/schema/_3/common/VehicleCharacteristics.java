@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCharacteristics", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "VehicleCharacteristics", propOrder = {
     "fuelType",
     "loadType",
     "vehicleEquipment",
@@ -65,34 +65,21 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<FuelTypeEnum> fuelType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected LoadTypeEnum loadType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleEquipmentEnum vehicleEquipment;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<VehicleTypeEnum> vehicleType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected VehicleUsageEnum vehicleUsage;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger yearOfFirstRegistration;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<GrossWeightCharacteristic> grossWeightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<HeightCharacteristic> heightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<LengthCharacteristic> lengthCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<WidthCharacteristic> widthCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<HeaviestAxleWeightCharacteristic> heaviestAxleWeightCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected Emissions emissions;
-    @XmlElement(name = "_vehicleCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_vehicleCharacteristicsExtension")
     protected ExtensionType vehicleCharacteristicsExtension;
 
     /**

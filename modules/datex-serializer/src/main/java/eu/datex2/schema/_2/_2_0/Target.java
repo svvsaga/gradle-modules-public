@@ -29,18 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Target", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Target", propOrder = {
     "address",
     "protocol",
     "targetExtension"
 })
 public class Target {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String address;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String protocol;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType targetExtension;
 
     /**

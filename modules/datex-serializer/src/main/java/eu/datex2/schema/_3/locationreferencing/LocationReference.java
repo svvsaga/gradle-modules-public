@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LocationReference", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LocationReference", propOrder = {
     "locationReferenceExtension"
 })
 @XmlSeeAlso({
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class LocationReference {
 
-    @XmlElement(name = "_locationReferenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_locationReferenceExtension")
     protected ExtensionType locationReferenceExtension;
 
     /**

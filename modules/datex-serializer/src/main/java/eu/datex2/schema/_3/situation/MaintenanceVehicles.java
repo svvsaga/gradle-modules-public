@@ -36,19 +36,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MaintenanceVehicles", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "MaintenanceVehicles", propOrder = {
     "numberOfMaintenanceVehicles",
     "maintenanceVehicleActions",
     "maintenanceVehiclesExtension"
 })
 public class MaintenanceVehicles {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfMaintenanceVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
-    @XmlElement(name = "_maintenanceVehiclesExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_maintenanceVehiclesExtension")
     protected ExtensionType maintenanceVehiclesExtension;
 
     /**

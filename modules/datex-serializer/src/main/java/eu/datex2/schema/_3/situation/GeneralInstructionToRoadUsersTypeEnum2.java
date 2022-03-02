@@ -61,7 +61,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "GeneralInstructionToRoadUsersTypeEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "GeneralInstructionToRoadUsersTypeEnum")
 @XmlEnum
 public enum GeneralInstructionToRoadUsersTypeEnum2 {
 

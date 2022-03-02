@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DirectionBearingValue", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "DirectionBearingValue", propOrder = {
     "directionBearing",
     "directionBearingValueExtension"
 })
@@ -39,10 +39,9 @@ public class DirectionBearingValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int directionBearing;
-    @XmlElement(name = "_directionBearingValueExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_directionBearingValueExtension")
     protected ExtensionType directionBearingValueExtension;
 
     /**

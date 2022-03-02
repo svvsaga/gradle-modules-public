@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PositionAccuracy", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PositionAccuracy", propOrder = {
     "accuracyPercentile50",
     "accuracyPercentile75",
     "accuracyPercentile95",
@@ -41,13 +41,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class PositionAccuracy {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile50;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile75;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Float accuracyPercentile95;
-    @XmlElement(name = "_positionAccuracyExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_positionAccuracyExtension")
     protected ExtensionType positionAccuracyExtension;
 
     /**

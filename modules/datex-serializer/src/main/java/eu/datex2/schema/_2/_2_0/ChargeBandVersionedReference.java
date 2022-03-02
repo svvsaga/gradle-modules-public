@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ChargeBandVersionedReference", namespace = "http://datex2.eu/schema/2/2_0")
+@XmlType(name = "_ChargeBandVersionedReference")
 public class ChargeBandVersionedReference
     extends VersionedReference
 {

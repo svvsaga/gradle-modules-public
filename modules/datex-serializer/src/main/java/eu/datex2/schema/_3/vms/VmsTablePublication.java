@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsTablePublication", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "VmsTablePublication", propOrder = {
     "headerInformation",
     "vmsControllerTable",
     "vmsTablePublicationExtension"
@@ -47,11 +47,11 @@ public class VmsTablePublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected List<VmsControllerTable> vmsControllerTable;
-    @XmlElement(name = "_vmsTablePublicationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_vmsTablePublicationExtension")
     protected ExtensionType vmsTablePublicationExtension;
 
     /**

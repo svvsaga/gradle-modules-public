@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UrbanParkingSite", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "UrbanParkingSite", propOrder = {
     "urbanParkingSiteType",
     "parkingZone",
     "urbanParkingSiteExtension"
@@ -39,12 +39,10 @@ public class UrbanParkingSite
     extends ParkingSite
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected UrbanParkingSiteTypeEnum urbanParkingSiteType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString parkingZone;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType urbanParkingSiteExtension;
 
     /**

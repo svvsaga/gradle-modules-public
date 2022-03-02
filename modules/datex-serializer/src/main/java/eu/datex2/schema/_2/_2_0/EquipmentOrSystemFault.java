@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EquipmentOrSystemFault", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "EquipmentOrSystemFault", propOrder = {
     "equipmentOrSystemFaultType",
     "faultyEquipmentOrSystemType",
     "equipmentOrSystemFaultExtension"
@@ -39,13 +39,12 @@ public class EquipmentOrSystemFault
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType equipmentOrSystemFaultExtension;
 
     /**

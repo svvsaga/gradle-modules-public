@@ -34,18 +34,17 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Mobility", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Mobility", propOrder = {
     "mobilityType",
     "speed",
     "mobilityExtension"
 })
 public class Mobility {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected MobilityTypeEnum mobilityType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Float speed;
-    @XmlElement(name = "_mobilityExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_mobilityExtension")
     protected ExtensionType mobilityExtension;
 
     /**

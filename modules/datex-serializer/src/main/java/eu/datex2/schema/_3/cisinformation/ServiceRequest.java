@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceRequest", namespace = "http://datex2.eu/schema/3/cisInformation", propOrder = {
+@XmlType(name = "ServiceRequest", propOrder = {
     "elementToProcessReference",
     "elementToProcessVersionedReference",
     "expiryTime",
@@ -69,35 +69,28 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ServiceRequest {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected Reference elementToProcessReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected VersionedReference elementToProcessVersionedReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected VersionedReference expiryTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String externalReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String notPredefinedServiceName;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected PredefinedServiceEnum predefinedService;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected ServiceActionEnum requestedAction;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar servicerRequestCreationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar servicerRequestVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected String customServiceParameter;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected Agent serviceRequester;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation", required = true)
+    @XmlElement(required = true)
     protected List<Agent> serviceProvider;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/cisInformation")
     protected ServiceRequestCondition serviceRequestCondition;
-    @XmlElement(name = "_serviceRequestExtension", namespace = "http://datex2.eu/schema/3/cisInformation")
+    @XmlElement(name = "_serviceRequestExtension")
     protected ExtensionType serviceRequestExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

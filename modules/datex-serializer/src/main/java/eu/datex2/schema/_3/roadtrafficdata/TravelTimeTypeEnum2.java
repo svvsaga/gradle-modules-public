@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "TravelTimeTypeEnum", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+@XmlType(name = "TravelTimeTypeEnum")
 @XmlEnum
 public enum TravelTimeTypeEnum2 {
 

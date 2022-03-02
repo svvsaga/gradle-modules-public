@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -35,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingSiteStatus", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingSiteStatus", propOrder = {
     "parkingSiteStatus",
     "parkingSiteOpeningStatus",
     "parkingSiteOvercrowdingStatus",
@@ -46,18 +45,13 @@ public class ParkingSiteStatus
     extends ParkingRecordStatus
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingSiteStatusEnum parkingSiteStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected OpeningStatusEnum parkingSiteOpeningStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected ParkingSiteOvercrowdingStatusEnum parkingSiteOvercrowdingStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<BigInteger> parkingSiteFullAtFloor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingSiteStatusExtension;
 
     /**

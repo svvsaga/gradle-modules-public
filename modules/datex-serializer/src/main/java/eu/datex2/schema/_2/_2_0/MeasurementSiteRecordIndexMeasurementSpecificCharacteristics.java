@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics", propOrder = {
     "measurementSpecificCharacteristics"
 })
 public class MeasurementSiteRecordIndexMeasurementSpecificCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected MeasurementSpecificCharacteristics measurementSpecificCharacteristics;
     @XmlAttribute(name = "index", required = true)
     protected int index;

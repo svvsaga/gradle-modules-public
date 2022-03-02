@@ -72,7 +72,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "SubdivisionTypeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "SubdivisionTypeEnum")
 @XmlEnum
 public enum SubdivisionTypeEnum2 {
 

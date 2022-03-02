@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TransitInformation", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TransitInformation", propOrder = {
     "journeyDestination",
     "journeyOrigin",
     "journeyReference",
@@ -48,22 +48,17 @@ public class TransitInformation
     extends NonRoadEventInformation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString journeyDestination;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString journeyOrigin;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String journeyReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TransitServiceInformationEnum transitServiceInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TransitServiceTypeEnum transitServiceType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar scheduledDepartureTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType transitInformationExtension;
 
     /**

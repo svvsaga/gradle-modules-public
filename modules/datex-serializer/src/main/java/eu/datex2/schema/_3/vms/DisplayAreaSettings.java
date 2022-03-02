@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayAreaSettings", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "DisplayAreaSettings", propOrder = {
     "isBlank",
     "legallyBinding",
     "legalBasis",
@@ -49,13 +49,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DisplayAreaSettings {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isBlank;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean legallyBinding;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected MultilingualString legalBasis;
-    @XmlElement(name = "_displayAreaSettingsExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_displayAreaSettingsExtension")
     protected ExtensionType displayAreaSettingsExtension;
 
     /**

@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ProbabilityOfOccurrenceEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "ProbabilityOfOccurrenceEnum")
 @XmlEnum
 public enum ProbabilityOfOccurrenceEnum2 {
 

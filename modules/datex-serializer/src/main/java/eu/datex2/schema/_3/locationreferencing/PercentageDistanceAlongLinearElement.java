@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PercentageDistanceAlongLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "PercentageDistanceAlongLinearElement", propOrder = {
     "percentageDistanceAlong",
     "percentageDistanceAlongLinearElementExtension"
 })
@@ -42,9 +42,8 @@ public class PercentageDistanceAlongLinearElement
     extends DistanceAlongLinearElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected float percentageDistanceAlong;
-    @XmlElement(name = "_percentageDistanceAlongLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_percentageDistanceAlongLinearElementExtension")
     protected ExtensionType percentageDistanceAlongLinearElementExtension;
 
     /**

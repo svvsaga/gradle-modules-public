@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -36,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Roadworks", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Roadworks", propOrder = {
     "roadworksDuration",
     "roadworksScale",
     "underTraffic",
@@ -54,23 +53,15 @@ public abstract class Roadworks
     extends OperatorAction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RoadworksDurationEnum roadworksDuration;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected RoadworksScaleEnum roadworksScale;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean underTraffic;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean urgentRoadworks;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Mobility mobility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Subjects subjects;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MaintenanceVehicles maintenanceVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType roadworksExtension;
 
     /**

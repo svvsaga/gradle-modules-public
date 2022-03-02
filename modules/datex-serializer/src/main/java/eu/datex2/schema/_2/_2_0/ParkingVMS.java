@@ -31,18 +31,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingVMS", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingVMS", propOrder = {
     "vmsUnitUsedToManageParking",
     "vmsOperator",
     "parkingVMSExtension"
 })
 public class ParkingVMS {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected VmsUnitRecordVersionedReference vmsUnitUsedToManageParking;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Contact> vmsOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingVMSExtension;
 
     /**

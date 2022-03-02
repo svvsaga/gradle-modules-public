@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UrlLink", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "UrlLink", propOrder = {
     "urlLinkAddress",
     "urlLinkDescription",
     "urlLinkType",
@@ -39,15 +39,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class UrlLink {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "anyURI")
     protected String urlLinkAddress;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString urlLinkDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected UrlLinkTypeEnum urlLinkType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType urlLinkExtension;
 
     /**

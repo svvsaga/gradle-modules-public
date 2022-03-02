@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextDisplayArea", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "TextDisplayArea", propOrder = {
     "proportionalFont",
     "maxNumberOfCharacters",
     "maxNumberOfRows",
@@ -59,35 +59,25 @@ public class TextDisplayArea
     extends DisplayArea
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean proportionalFont;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfCharacters;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfRows;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String textCodeListIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxFontSpacing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontSpacing;
-    @XmlElement(name = "_textDisplayAreaExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_textDisplayAreaExtension")
     protected ExtensionType textDisplayAreaExtension;
 
     /**

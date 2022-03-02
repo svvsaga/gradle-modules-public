@@ -7,7 +7,6 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -40,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehicleCountAndRate", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VehicleCountAndRate", propOrder = {
     "measurementSiteReference",
     "measuredValueIndex",
     "dedicatedAccess",
@@ -53,26 +52,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VehicleCountAndRate {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MeasurementSiteRecordVersionedReference measurementSiteReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measuredValueIndex;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ParkingAccessReference dedicatedAccess;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementTimeDefault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar lastCalibration;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean coveringPetrolStationArea;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCountWithinInterval> vehicleCountWithinInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleRate> vehicleRate;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vehicleCountAndRateExtension;
 
     /**

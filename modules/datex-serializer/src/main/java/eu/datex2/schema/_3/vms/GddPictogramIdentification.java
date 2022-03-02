@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GddPictogramIdentification", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "GddPictogramIdentification", propOrder = {
     "country",
     "serviceCategory",
     "pictogramCategoryCode",
@@ -45,14 +45,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GddPictogramIdentification {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected String country;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected GddServiceCategoryEnum serviceCategory;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger pictogramCategoryCode;
-    @XmlElement(name = "_gddPictogramIdentificationExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_gddPictogramIdentificationExtension")
     protected ExtensionType gddPictogramIdentificationExtension;
 
     /**

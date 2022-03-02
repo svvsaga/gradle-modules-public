@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SituationPublication", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "SituationPublication", propOrder = {
     "situation",
     "situationPublicationExtension"
 })
@@ -42,9 +42,8 @@ public class SituationPublication
     extends PayloadPublication
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<Situation> situation;
-    @XmlElement(name = "_situationPublicationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_situationPublicationExtension")
     protected ExtensionType situationPublicationExtension;
 
     /**

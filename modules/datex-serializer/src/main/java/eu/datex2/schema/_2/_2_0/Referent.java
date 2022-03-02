@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Referent", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Referent", propOrder = {
     "referentIdentifier",
     "referentName",
     "referentType",
@@ -43,18 +43,14 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Referent {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String referentIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String referentName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ReferentTypeEnum referentType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString referentDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected PointCoordinates pointCoordinates;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType referentExtension;
 
     /**

@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_MeasurementSiteVersionedReference", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+@XmlType(name = "_MeasurementSiteVersionedReference")
 public class MeasurementSiteVersionedReference
     extends VersionedReference
 {

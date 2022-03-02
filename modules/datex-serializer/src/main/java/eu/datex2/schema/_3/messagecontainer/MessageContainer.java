@@ -44,24 +44,21 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MessageContainer", namespace = "http://datex2.eu/schema/3/messageContainer", propOrder = {
+@XmlType(name = "MessageContainer", propOrder = {
     "payload",
     "cisInformation",
     "exchangeInformation",
     "informationManagement",
     "messageContainerExtension"
 })
-@jakarta.xml.bind.annotation.XmlRootElement(namespace = "http://datex2.eu/schema/3/messageContainer") public class MessageContainer {
+@jakarta.xml.bind.annotation.XmlRootElement public class MessageContainer {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected List<PayloadPublication> payload;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected CISInformation cisInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer", required = true)
+    @XmlElement(required = true)
     protected ExchangeInformation exchangeInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected InformationManagement informationManagement;
-    @XmlElement(name = "_messageContainerExtension", namespace = "http://datex2.eu/schema/3/messageContainer")
+    @XmlElement(name = "_messageContainerExtension")
     protected ExtensionType messageContainerExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;

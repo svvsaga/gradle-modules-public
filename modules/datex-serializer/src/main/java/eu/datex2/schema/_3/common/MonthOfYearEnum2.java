@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "MonthOfYearEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "MonthOfYearEnum")
 @XmlEnum
 public enum MonthOfYearEnum2 {
 

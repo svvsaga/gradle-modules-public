@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericSituationRecord", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "GenericSituationRecord", propOrder = {
     "genericSituationRecordName",
     "genericSituationRecordExtension"
 })
@@ -36,9 +36,8 @@ public abstract class GenericSituationRecord
     extends SituationRecord
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String genericSituationRecordName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType genericSituationRecordExtension;
 
     /**

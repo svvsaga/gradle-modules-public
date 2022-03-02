@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GrossWeightCharacteristic", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "GrossWeightCharacteristic", propOrder = {
     "comparisonOperator",
     "grossVehicleWeight",
     "typeOfWeight",
@@ -40,13 +40,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GrossWeightCharacteristic {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected ComparisonOperatorEnum comparisonOperator;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float grossVehicleWeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected WeightTypeEnum typeOfWeight;
-    @XmlElement(name = "_grossWeightCharacteristicExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_grossWeightCharacteristicExtension")
     protected ExtensionType grossWeightCharacteristicExtension;
 
     /**

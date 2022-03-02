@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_IntermediatePointOnLinearElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "_IntermediatePointOnLinearElement", propOrder = {
     "referent"
 })
 public class IntermediatePointOnLinearElement {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Referent referent;
     @XmlAttribute(name = "index", required = true)
     protected int index;

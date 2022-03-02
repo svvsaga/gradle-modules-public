@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DailyTrafficFlowValue", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "DailyTrafficFlowValue", propOrder = {
     "vehicleFlowRate",
     "dailyTrafficFlowValueExtension"
 })
@@ -42,10 +42,10 @@ public class DailyTrafficFlowValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
-    @XmlElement(name = "_dailyTrafficFlowValueExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_dailyTrafficFlowValueExtension")
     protected ExtensionType dailyTrafficFlowValueExtension;
 
     /**

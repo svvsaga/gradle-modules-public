@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DisplayGeometry", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "DisplayGeometry", propOrder = {
     "pixelsAcross",
     "pixelsDown",
     "displayHeight",
@@ -49,21 +49,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DisplayGeometry {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pixelsAcross;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pixelsDown;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float displayWidth;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float positionX;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Float positionY;
-    @XmlElement(name = "_displayGeometryExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_displayGeometryExtension")
     protected ExtensionType displayGeometryExtension;
 
     /**

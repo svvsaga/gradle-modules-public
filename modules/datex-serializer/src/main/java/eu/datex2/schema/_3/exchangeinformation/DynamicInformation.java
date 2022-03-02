@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DynamicInformation", namespace = "http://datex2.eu/schema/3/exchangeInformation", propOrder = {
+@XmlType(name = "DynamicInformation", propOrder = {
     "exchangeStatus",
     "exchangeStatusDescription",
     "completedPaylod",
@@ -51,23 +51,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DynamicInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     protected ExchangeStatusEnum exchangeStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected MultilingualString exchangeStatusDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected Boolean completedPaylod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger messageSequencingNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar messageGenerationTimestamp;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected ReturnInformation returnInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/exchangeInformation")
     protected SessionInformation sessionInformation;
-    @XmlElement(name = "_dynamicInformationExtension", namespace = "http://datex2.eu/schema/3/exchangeInformation")
+    @XmlElement(name = "_dynamicInformationExtension")
     protected ExtensionType dynamicInformationExtension;
 
     /**

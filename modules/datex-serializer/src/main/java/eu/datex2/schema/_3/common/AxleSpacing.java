@@ -35,19 +35,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AxleSpacing", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "AxleSpacing", propOrder = {
     "axleSpacing",
     "axleSpacingSequenceIdentifier",
     "axleSpacingExtension"
 })
 public class AxleSpacing {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected float axleSpacing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleSpacingSequenceIdentifier;
-    @XmlElement(name = "_axleSpacingExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_axleSpacingExtension")
     protected ExtensionType axleSpacingExtension;
 
     /**

@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Situation", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Situation", propOrder = {
     "overallSeverity",
     "situationVersionTime",
     "headerInformation",
@@ -60,22 +60,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Situation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SeverityEnum overallSeverity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationVersionTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected HeaderInformation headerInformation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation", required = true)
+    @XmlElement(required = true)
     protected List<SituationRecord> situationRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected List<SituationReference> relatedSituation;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected InternationalIdentifier informationManager;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SituationRecord situationSummary;
-    @XmlElement(name = "_situationExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_situationExtension")
     protected ExtensionType situationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GroupOfParkingSpaces", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "GroupOfParkingSpaces", propOrder = {
     "parkingNumberOfSpaces",
     "parkingTypeOfGroup",
     "identicalToGroup",
@@ -56,27 +56,19 @@ public class GroupOfParkingSpaces2
     extends ParkingSpaceBasics
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger parkingNumberOfSpaces;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ParkingTypeOfGroup parkingTypeOfGroup;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> identicalToGroup;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> realSubsetOfGroup;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Dimension minimumParkingSpaceDimension;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Dimension dimensionOfGroup;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Dimension maximumParkingSpaceDimension;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<GroupOfParkingSpacesParkingSpaceIndexParkingSpace> parkingSpace;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations groupOfLocations;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType groupOfParkingSpacesExtension;
 
     /**

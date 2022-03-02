@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "SettingReasonEnum", namespace = "http://datex2.eu/schema/3/vms")
+@XmlType(name = "SettingReasonEnum")
 @XmlEnum
 public enum SettingReasonEnum2 {
 

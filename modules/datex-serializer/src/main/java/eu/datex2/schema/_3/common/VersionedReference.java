@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VersionedReference", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "VersionedReference")
 @XmlSeeAlso({
     eu.datex2.schema._3.vms.SituationRecordVersionedReference.class,
     eu.datex2.schema._3.vms.SituationVersionedReference.class,

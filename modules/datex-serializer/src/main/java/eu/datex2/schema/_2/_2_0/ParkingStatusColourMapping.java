@@ -30,19 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingStatusColourMapping", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingStatusColourMapping", propOrder = {
     "parkingSiteStatus",
     "rgbColour",
     "parkingStatusColourMappingExtension"
 })
 public class ParkingStatusColourMapping {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ParkingSiteStatusEnum parkingSiteStatus;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected RGBColour rgbColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingStatusColourMappingExtension;
 
     /**

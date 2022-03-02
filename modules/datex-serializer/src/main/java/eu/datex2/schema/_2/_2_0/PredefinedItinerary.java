@@ -6,7 +6,6 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PredefinedItinerary", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "PredefinedItinerary", propOrder = {
     "predefinedItineraryName",
     "predefinedLocation",
     "predefinedItineraryExtension"
@@ -43,11 +42,8 @@ public class PredefinedItinerary
     extends PredefinedLocationContainer
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString predefinedItineraryName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<PredefinedItineraryIndexPredefinedLocation> predefinedLocation;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType predefinedItineraryExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

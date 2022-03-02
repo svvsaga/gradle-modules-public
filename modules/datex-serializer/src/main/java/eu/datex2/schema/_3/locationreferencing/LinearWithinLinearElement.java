@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearWithinLinearElement", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "LinearWithinLinearElement", propOrder = {
     "administrativeAreaOfLinearSection",
     "directionOnLinearSection",
     "directionRelativeOnLinearSection",
@@ -52,21 +52,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class LinearWithinLinearElement {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected MultilingualString administrativeAreaOfLinearSection;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected DirectionEnum directionOnLinearSection;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected LinearDirectionEnum directionRelativeOnLinearSection;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected HeightGradeEnum heightGradeOfLinearSection;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected LinearElement linearElement;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected DistanceAlongLinearElement fromPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected DistanceAlongLinearElement toPoint;
-    @XmlElement(name = "_linearWithinLinearElementExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_linearWithinLinearElementExtension")
     protected ExtensionType linearWithinLinearElementExtension;
 
     /**

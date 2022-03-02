@@ -29,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TpegDescriptor", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "TpegDescriptor", propOrder = {
     "descriptor",
     "tpegDescriptorExtension"
 })
@@ -39,9 +39,8 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegDescriptor {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected MultilingualString descriptor;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType tpegDescriptorExtension;
 
     /**

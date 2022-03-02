@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PressureInformation", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "PressureInformation", propOrder = {
     "pressure",
     "pressureInformationExtension"
 })
@@ -40,9 +40,9 @@ public class PressureInformation
     extends WeatherData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected Pressure pressure;
-    @XmlElement(name = "_pressureInformationExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_pressureInformationExtension")
     protected ExtensionType pressureInformationExtension;
 
     /**

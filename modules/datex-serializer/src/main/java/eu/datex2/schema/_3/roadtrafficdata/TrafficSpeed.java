@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficSpeed", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficSpeed", propOrder = {
     "averageVehicleSpeed",
     "speedPercentile",
     "normallyExpectedSpeed",
@@ -50,17 +50,12 @@ public class TrafficSpeed
     extends TrafficData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue averageVehicleSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<SpeedPercentile> speedPercentile;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue normallyExpectedSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue minimumSpeed;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected SpeedValue maximumSpeed;
-    @XmlElement(name = "_trafficSpeedExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficSpeedExtension")
     protected ExtensionType trafficSpeedExtension;
 
     /**

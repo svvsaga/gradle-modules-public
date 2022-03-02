@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MeasurementSpecificCharacteristics", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "MeasurementSpecificCharacteristics", propOrder = {
     "accuracy",
     "computationMethod",
     "defaultMeasurementHeight",
@@ -63,27 +63,18 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class MeasurementSpecificCharacteristics {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float accuracy;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected ComputationMethodEnum computationMethod;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float defaultMeasurementHeight;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected DirectionEnum measurementSide;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float period;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected Float smoothingFactor;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData", required = true)
+    @XmlElement(required = true)
     protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleCharacteristics specificVehicleCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected List<Lane> specificLane;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected AxleCharacteristics axleCharacteristics;
-    @XmlElement(name = "_measurementSpecificCharacteristicsExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_measurementSpecificCharacteristicsExtension")
     protected ExtensionType measurementSpecificCharacteristicsExtension;
 
     /**

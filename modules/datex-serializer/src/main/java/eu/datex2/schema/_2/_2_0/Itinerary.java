@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -31,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Itinerary", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "Itinerary", propOrder = {
     "routeDestination",
     "itineraryExtension"
 })
@@ -43,9 +42,7 @@ public abstract class Itinerary
     extends GroupOfLocations
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<Destination> routeDestination;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType itineraryExtension;
 
     /**

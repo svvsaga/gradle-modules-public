@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkLocation", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "NetworkLocation", propOrder = {
     "supplementaryPositionalDescription",
     "destination",
     "networkLocationExtension"
@@ -47,11 +47,9 @@ public abstract class NetworkLocation
     extends Location
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected SupplementaryPositionalDescription supplementaryPositionalDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected Destination destination;
-    @XmlElement(name = "_networkLocationExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_networkLocationExtension")
     protected ExtensionType networkLocationExtension;
 
     /**

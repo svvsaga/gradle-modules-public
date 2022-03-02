@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NamedArea", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "NamedArea", propOrder = {
     "rest"
 })
 @XmlSeeAlso({

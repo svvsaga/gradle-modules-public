@@ -33,18 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AltitudeConfidence", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "AltitudeConfidence", propOrder = {
     "altitudeAccuracyCodedValue",
     "altitudeAccuracyCodedError",
     "altitudeConfidenceExtension"
 })
 public class AltitudeConfidence {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected AltitudeAccuracyEnum altitudeAccuracyCodedValue;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     protected PositionConfidenceCodedErrorEnum altitudeAccuracyCodedError;
-    @XmlElement(name = "_altitudeConfidenceExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_altitudeConfidenceExtension")
     protected ExtensionType altitudeConfidenceExtension;
 
     /**

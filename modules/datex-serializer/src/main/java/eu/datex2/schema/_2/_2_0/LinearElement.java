@@ -3,7 +3,6 @@ package eu.datex2.schema._2._2_0;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LinearElement", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "LinearElement", propOrder = {
     "roadName",
     "roadNumber",
     "linearElementReferenceModel",
@@ -48,18 +47,12 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class LinearElement {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString roadName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String roadNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String linearElementReferenceModel;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String linearElementReferenceModelVersion;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected LinearElementNatureEnum linearElementNature;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType linearElementExtension;
 
     /**

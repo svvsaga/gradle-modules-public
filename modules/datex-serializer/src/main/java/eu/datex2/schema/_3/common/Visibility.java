@@ -30,15 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Visibility", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Visibility", propOrder = {
     "minimumVisibilityDistance",
     "visibilityExtension"
 })
 public class Visibility {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected IntegerMetreDistanceValue minimumVisibilityDistance;
-    @XmlElement(name = "_visibilityExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_visibilityExtension")
     protected ExtensionType visibilityExtension;
 
     /**

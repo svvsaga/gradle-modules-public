@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbnormalTraffic", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "AbnormalTraffic", propOrder = {
     "abnormalTrafficType",
     "numberOfVehiclesWaiting",
     "queueLength",
@@ -52,21 +52,15 @@ public class AbnormalTraffic
     extends TrafficElement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected AbnormalTrafficTypeEnum abnormalTrafficType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehiclesWaiting;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger queueLength;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected RelativeTrafficFlowEnum relativeTrafficFlow;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected TrafficFlowCharacteristicsEnum trafficFlowCharacteristics;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected TrafficTrendTypeEnum trafficTrendType;
-    @XmlElement(name = "_abnormalTrafficExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_abnormalTrafficExtension")
     protected ExtensionType abnormalTrafficExtension;
 
     /**

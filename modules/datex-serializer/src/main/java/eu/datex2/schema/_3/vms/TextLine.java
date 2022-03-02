@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TextLine", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "TextLine", propOrder = {
     "textLine",
     "lineColour",
     "lineFlashing",
@@ -56,19 +56,14 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class TextLine {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected String textLine;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected ColourEnum lineColour;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean lineFlashing;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected String lineHtml;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected Boolean isExactTextOnSign;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms")
     protected List<InformationTypeEnum> textInformationType;
-    @XmlElement(name = "_textLineExtension", namespace = "http://datex2.eu/schema/3/vms")
+    @XmlElement(name = "_textLineExtension")
     protected ExtensionType textLineExtension;
     @XmlAttribute(name = "lineLanguage")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

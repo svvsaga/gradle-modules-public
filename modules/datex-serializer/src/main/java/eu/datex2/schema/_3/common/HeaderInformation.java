@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HeaderInformation", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "HeaderInformation", propOrder = {
     "confidentiality",
     "allowedDeliveryChannel",
     "informationStatus",
@@ -43,13 +43,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class HeaderInformation {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected ConfidentialityValueEnum confidentiality;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected List<InformationDeliveryServicesEnum> allowedDeliveryChannel;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected InformationStatusEnum informationStatus;
-    @XmlElement(name = "_headerInformationExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_headerInformationExtension")
     protected ExtensionType headerInformationExtension;
 
     /**

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
@@ -46,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingEquipmentOrServiceFacility", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingEquipmentOrServiceFacility", propOrder = {
     "equipmentOrServiceFacilityIdentifier",
     "availability",
     "numberOfEquipmentOrServiceFacility",
@@ -69,40 +68,25 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class ParkingEquipmentOrServiceFacility {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> equipmentOrServiceFacilityIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected AvailabilityEnum availability;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfEquipmentOrServiceFacility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString additionalDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString otherEquipmentOrServiceFacility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<AccessibilityEnum> accessibility;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString nameOrBrand;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString comment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "anyURI")
     protected String photoUrl;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<UserTypeEnum> applicableForUser;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OpeningTimes availabilityAndOpeningTimes;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected TariffsAndPayment tariffsAndPayment;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected GroupOfLocations groupOfLocations;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VehicleCharacteristics> applicableForVehicles;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingEquipmentOrServiceFacilityExtension;
 
     /**

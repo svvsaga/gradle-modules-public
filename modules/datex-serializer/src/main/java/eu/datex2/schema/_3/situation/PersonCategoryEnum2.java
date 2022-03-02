@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "PersonCategoryEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "PersonCategoryEnum")
 @XmlEnum
 public enum PersonCategoryEnum2 {
 

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "GeneralInstructionOrMessageToRoadUsers", propOrder = {
     "generalInstructionToRoadUsersType",
     "generalMessageToRoadUsers",
     "generalInstructionOrMessageToRoadUsersExtension"
@@ -44,11 +44,9 @@ public class GeneralInstructionOrMessageToRoadUsers
     extends NetworkManagement
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString generalMessageToRoadUsers;
-    @XmlElement(name = "_generalInstructionOrMessageToRoadUsersExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_generalInstructionOrMessageToRoadUsersExtension")
     protected ExtensionType generalInstructionOrMessageToRoadUsersExtension;
 
     /**

@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsMessage", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsMessage", propOrder = {
     "associatedManagementOrDiversionPlan",
     "messageSetBy",
     "setBySystem",
@@ -68,42 +68,26 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class VmsMessage {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String associatedManagementOrDiversionPlan;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString messageSetBy;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean setBySystem;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString reasonForSetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected CodedReasonForSettingMessageEnum codedReasonForSetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected List<VmsMessageInformationTypeEnum> vmsMessageInformationType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean primarySetting;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean mareNostrumCompliant;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeLastSet;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected MultilingualString requestedBy;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VersionedReference situationToWhichMessageIsRelated;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected VersionedReference situationRecordToWhichMessageIsRelated;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float distanceFromSituationRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float textPictogramSequencingInterval;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<TextPage> textPage;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> vmsPictogramDisplayArea;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsMessageExtension;
 
     /**

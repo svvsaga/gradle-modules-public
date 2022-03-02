@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingVehicle", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingVehicle", propOrder = {
     "parkingRecordReference",
     "parkingSpaceReference",
     "groupOfParkingSpacesReference",
@@ -51,21 +51,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingVehicle {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected ParkingRecordVersionedReference parkingRecordReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingSpaceReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<String> groupOfParkingSpacesReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ParkingPermit> parkingPermit;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected Vehicle vehicle;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected IndividualCharge individualCharge;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected OverallPeriod parkingPeriod;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingVehicleExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

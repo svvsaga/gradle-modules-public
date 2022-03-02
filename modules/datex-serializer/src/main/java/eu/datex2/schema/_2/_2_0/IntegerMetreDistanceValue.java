@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IntegerMetreDistanceValue", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "IntegerMetreDistanceValue", propOrder = {
     "integerMetreDistance",
     "integerMetreDistanceValueExtension"
 })
@@ -38,10 +38,9 @@ public class IntegerMetreDistanceValue
     extends DataValue
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger integerMetreDistance;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType integerMetreDistanceValueExtension;
 
     /**

@@ -49,7 +49,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "DisturbanceActivityTypeEnum", namespace = "http://datex2.eu/schema/3/situation")
+@XmlType(name = "DisturbanceActivityTypeEnum")
 @XmlEnum
 public enum DisturbanceActivityTypeEnum2 {
 

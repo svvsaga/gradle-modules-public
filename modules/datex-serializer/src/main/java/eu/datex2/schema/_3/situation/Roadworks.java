@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Roadworks", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Roadworks", propOrder = {
     "publicTransportAlternative",
     "roadworksDurationClassification",
     "roadworksIdentifier",
@@ -63,25 +63,16 @@ public abstract class Roadworks
     extends OperatorAction
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString publicTransportAlternative;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected RoadworksDurationEnum roadworksDurationClassification;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected String roadworksIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected RoadworksScaleEnum roadworksScale;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean underTraffic;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Boolean urgentRoadworks;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Mobility mobility;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected Subjects subjects;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MaintenanceVehicles maintenanceVehicles;
-    @XmlElement(name = "_roadworksExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_roadworksExtension")
     protected ExtensionType roadworksExtension;
 
     /**

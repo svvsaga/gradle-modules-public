@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ComputationMethodEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "ComputationMethodEnum")
 @XmlEnum
 public enum ComputationMethodEnum2 {
 

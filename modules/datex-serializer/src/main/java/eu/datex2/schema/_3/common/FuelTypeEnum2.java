@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "FuelTypeEnum", namespace = "http://datex2.eu/schema/3/common")
+@XmlType(name = "FuelTypeEnum")
 @XmlEnum
 public enum FuelTypeEnum2 {
 

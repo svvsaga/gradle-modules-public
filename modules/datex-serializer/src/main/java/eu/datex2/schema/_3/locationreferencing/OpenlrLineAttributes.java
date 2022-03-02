@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrLineAttributes", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrLineAttributes", propOrder = {
     "openlrFunctionalRoadClass",
     "openlrFormOfWay",
     "openlrBearing",
@@ -44,14 +44,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class OpenlrLineAttributes {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrFunctionalRoadClassEnum openlrFunctionalRoadClass;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected OpenlrFormOfWayEnum openlrFormOfWay;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int openlrBearing;
-    @XmlElement(name = "_openlrLineAttributesExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrLineAttributesExtension")
     protected ExtensionType openlrLineAttributesExtension;
 
     /**

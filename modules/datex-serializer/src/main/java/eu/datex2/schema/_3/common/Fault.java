@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fault", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "Fault", propOrder = {
     "faultIdentifier",
     "faultDescription",
     "faultCreationTime",
@@ -60,23 +60,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Fault {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String faultIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString faultDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultCreationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultLastUpdateTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FaultSeverityEnum faultImpactSeverity;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected FaultUrgencyEnum faultUrgencyToRectify;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String manufacturerFaultCode;
-    @XmlElement(name = "_faultExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_faultExtension")
     protected ExtensionType faultExtension;
 
     /**

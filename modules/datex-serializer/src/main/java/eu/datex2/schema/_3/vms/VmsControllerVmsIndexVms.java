@@ -29,12 +29,12 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VmsControllerVmsIndexVms", namespace = "http://datex2.eu/schema/3/vms", propOrder = {
+@XmlType(name = "_VmsControllerVmsIndexVms", propOrder = {
     "vms"
 })
 public class VmsControllerVmsIndexVms {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/vms", required = true)
+    @XmlElement(required = true)
     protected Vms vms;
     @XmlAttribute(name = "vmsIndex", required = true)
     protected int vmsIndex;

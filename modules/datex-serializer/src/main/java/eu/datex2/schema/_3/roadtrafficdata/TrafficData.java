@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrafficData", namespace = "http://datex2.eu/schema/3/roadTrafficData", propOrder = {
+@XmlType(name = "TrafficData", propOrder = {
     "forVehiclesWithCharacteristicsOf",
     "trafficDataExtension"
 })
@@ -51,9 +51,8 @@ public abstract class TrafficData
     extends BasicData
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/roadTrafficData")
     protected VehicleCharacteristics forVehiclesWithCharacteristicsOf;
-    @XmlElement(name = "_trafficDataExtension", namespace = "http://datex2.eu/schema/3/roadTrafficData")
+    @XmlElement(name = "_trafficDataExtension")
     protected ExtensionType trafficDataExtension;
 
     /**

@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Cause", namespace = "http://datex2.eu/schema/3/situation", propOrder = {
+@XmlType(name = "Cause", propOrder = {
     "causeDescription",
     "causeType",
     "detailedCauseType",
@@ -44,15 +44,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Cause {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected MultilingualString causeDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected CauseTypeEnum causeType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected DetailedCauseType detailedCauseType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/situation")
     protected SituationRecordReference managedCause;
-    @XmlElement(name = "_causeExtension", namespace = "http://datex2.eu/schema/3/situation")
+    @XmlElement(name = "_causeExtension")
     protected ExtensionType causeExtension;
 
     /**

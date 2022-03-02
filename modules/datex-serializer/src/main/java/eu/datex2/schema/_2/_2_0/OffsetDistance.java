@@ -30,16 +30,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OffsetDistance", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "OffsetDistance", propOrder = {
     "offsetDistance",
     "offsetDistanceExtension"
 })
 public class OffsetDistance {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger offsetDistance;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType offsetDistanceExtension;
 
     /**

@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "HeightGradeEnum", namespace = "http://datex2.eu/schema/3/locationReferencing")
+@XmlType(name = "HeightGradeEnum")
 @XmlEnum
 public enum HeightGradeEnum2 {
 

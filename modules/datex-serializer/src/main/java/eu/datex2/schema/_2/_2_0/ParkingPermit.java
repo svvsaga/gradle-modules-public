@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ParkingPermit", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ParkingPermit", propOrder = {
     "parkingPermitType",
     "parkingPermitScheme",
     "parkingPermitIdentifier",
@@ -39,14 +39,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParkingPermit {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected PermitTypeEnum parkingPermitType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingPermitScheme;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String parkingPermitIdentifier;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType parkingPermitExtension;
 
     /**

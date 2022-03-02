@@ -54,7 +54,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PayloadPublication", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "PayloadPublication", propOrder = {
     "feedDescription",
     "feedType",
     "publicationTime",
@@ -73,16 +73,14 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public abstract class PayloadPublication {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected MultilingualString feedDescription;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common")
     protected String feedType;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar publicationTime;
-    @XmlElement(namespace = "http://datex2.eu/schema/3/common", required = true)
+    @XmlElement(required = true)
     protected InternationalIdentifier publicationCreator;
-    @XmlElement(name = "_payloadPublicationExtension", namespace = "http://datex2.eu/schema/3/common")
+    @XmlElement(name = "_payloadPublicationExtension")
     protected ExtensionType payloadPublicationExtension;
     @XmlAttribute(name = "lang", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

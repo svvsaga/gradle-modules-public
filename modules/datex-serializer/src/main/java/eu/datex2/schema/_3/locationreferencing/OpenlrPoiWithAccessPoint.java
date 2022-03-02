@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OpenlrPoiWithAccessPoint", namespace = "http://datex2.eu/schema/3/locationReferencing", propOrder = {
+@XmlType(name = "OpenlrPoiWithAccessPoint", propOrder = {
     "openlrCoordinates",
     "openlrPoiWithAccessPointExtension"
 })
@@ -42,9 +42,9 @@ public class OpenlrPoiWithAccessPoint
     extends OpenlrBasePointLocation
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/3/locationReferencing", required = true)
+    @XmlElement(required = true)
     protected PointCoordinates openlrCoordinates;
-    @XmlElement(name = "_openlrPoiWithAccessPointExtension", namespace = "http://datex2.eu/schema/3/locationReferencing")
+    @XmlElement(name = "_openlrPoiWithAccessPointExtension")
     protected ExtensionType openlrPoiWithAccessPointExtension;
 
     /**

@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HazardousMaterials", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "HazardousMaterials", propOrder = {
     "chemicalName",
     "dangerousGoodsFlashPoint",
     "dangerousGoodsRegulations",
@@ -54,29 +54,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class HazardousMaterials {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected MultilingualString chemicalName;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float dangerousGoodsFlashPoint;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "string")
     protected DangerousGoodsRegulationsEnum dangerousGoodsRegulations;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String hazardCodeIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger hazardCodeVersionNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String hazardSubstanceItemPageNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String tremCardNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String undgNumber;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float volumeOfDangerousGoods;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Float weightOfDangerousGoods;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType hazardousMaterialsExtension;
 
     /**

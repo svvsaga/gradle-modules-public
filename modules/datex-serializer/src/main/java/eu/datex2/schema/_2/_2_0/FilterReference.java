@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FilterReference", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "FilterReference", propOrder = {
     "deleteFilter",
     "filterOperationApproved",
     "keyFilterReference",
@@ -38,13 +38,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class FilterReference {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean deleteFilter;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean filterOperationApproved;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected String keyFilterReference;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType filterReferenceExtension;
 
     /**

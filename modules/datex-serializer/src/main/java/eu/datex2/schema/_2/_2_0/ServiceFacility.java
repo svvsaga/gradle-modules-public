@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceFacility", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ServiceFacility", propOrder = {
     "serviceFacilityType",
     "numberOfSubitems",
     "distanceFromParkingSite",
@@ -42,16 +42,13 @@ public class ServiceFacility
     extends ParkingEquipmentOrServiceFacility
 {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ServiceFacilityTypeEnum serviceFacilityType;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubitems;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromParkingSite;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType serviceFacilityExtension;
 
     /**

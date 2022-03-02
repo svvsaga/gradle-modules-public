@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -34,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ElaboratedData", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "ElaboratedData", propOrder = {
     "forecast",
     "source",
     "validity",
@@ -44,17 +43,11 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ElaboratedData {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Boolean forecast;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Source source;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected Validity validity;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected List<ElaboratedDataFault> elaboratedDataFault;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected BasicData basicData;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType elaboratedDataExtension;
 
     /**

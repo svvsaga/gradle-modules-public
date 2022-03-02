@@ -34,18 +34,16 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VmsUnitTable", namespace = "http://datex2.eu/schema/2/2_0", propOrder = {
+@XmlType(name = "VmsUnitTable", propOrder = {
     "vmsUnitTableIdentification",
     "vmsUnitRecord",
     "vmsUnitTableExtension"
 })
 public class VmsUnitTable {
 
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected String vmsUnitTableIdentification;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0", required = true)
+    @XmlElement(required = true)
     protected List<VmsUnitRecord> vmsUnitRecord;
-    @XmlElement(namespace = "http://datex2.eu/schema/2/2_0")
     protected ExtensionType vmsUnitTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;

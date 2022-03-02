@@ -30,7 +30,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ExtensionType", namespace = "http://datex2.eu/schema/3/common", propOrder = {
+@XmlType(name = "_ExtensionType", propOrder = {
     "any"
 })
 public class ExtensionType {

@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "informationManagement",
     "messageContainerExtension"
 })
-@jakarta.xml.bind.annotation.XmlRootElement public class MessageContainer {
+@jakarta.xml.bind.annotation.XmlRootElement(namespace = "http://datex2.eu/schema/3/messageContainer") public class MessageContainer {
 
     @XmlElement(namespace = "http://datex2.eu/schema/3/messageContainer")
     protected List<PayloadPublication> payload;

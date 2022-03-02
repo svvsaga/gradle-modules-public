@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="measurementSide" type="{http://datex2.eu/schema/2/2_0}DirectionEnum" minOccurs="0"/&gt;
  *         &lt;element name="measurementSpecificCharacteristics" type="{http://datex2.eu/schema/2/2_0}_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="measurementSiteLocation" type="{http://datex2.eu/schema/2/2_0}GroupOfLocations"/&gt;
- *         &lt;element name="measurementSiteRecordExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="measurementSiteRecordExtension" type="{http://datex2.eu/schema/2/2_0}_MeasurementSiteRecordExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
  *       &lt;attribute name="version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
@@ -75,7 +75,7 @@ public class MeasurementSiteRecord {
     protected List<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
     @XmlElement(required = true)
     protected GroupOfLocations measurementSiteLocation;
-    protected ExtensionType measurementSiteRecordExtension;
+    protected MeasurementSiteRecordExtensionType measurementSiteRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -331,10 +331,10 @@ public class MeasurementSiteRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link MeasurementSiteRecordExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteRecordExtension() {
+    public MeasurementSiteRecordExtensionType getMeasurementSiteRecordExtension() {
         return measurementSiteRecordExtension;
     }
 
@@ -343,10 +343,10 @@ public class MeasurementSiteRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link MeasurementSiteRecordExtensionType }
      *     
      */
-    public void setMeasurementSiteRecordExtension(ExtensionType value) {
+    public void setMeasurementSiteRecordExtension(MeasurementSiteRecordExtensionType value) {
         this.measurementSiteRecordExtension = value;
     }
 

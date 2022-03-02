@@ -21,6 +21,7 @@ import org.w3c.dom.Element;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="openlrExtendedLinear" type="{http://datex2.eu/schema/2/2_0}OpenlrExtendedLinear" minOccurs="0"/&gt;
+ *         &lt;element name="linearLineStringExtension" type="{http://datex2.eu/schema/2/2_0}LinearLineStringExtension" minOccurs="0"/&gt;
  *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -33,11 +34,13 @@ import org.w3c.dom.Element;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "_LinearExtensionType", propOrder = {
     "openlrExtendedLinear",
+    "linearLineStringExtension",
     "any"
 })
 public class LinearExtensionType {
 
     protected OpenlrExtendedLinear openlrExtendedLinear;
+    protected LinearLineStringExtension linearLineStringExtension;
     @XmlAnyElement(lax = true)
     protected List<Object> any;
 
@@ -63,6 +66,30 @@ public class LinearExtensionType {
      */
     public void setOpenlrExtendedLinear(OpenlrExtendedLinear value) {
         this.openlrExtendedLinear = value;
+    }
+
+    /**
+     * Gets the value of the linearLineStringExtension property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link LinearLineStringExtension }
+     *     
+     */
+    public LinearLineStringExtension getLinearLineStringExtension() {
+        return linearLineStringExtension;
+    }
+
+    /**
+     * Sets the value of the linearLineStringExtension property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LinearLineStringExtension }
+     *     
+     */
+    public void setLinearLineStringExtension(LinearLineStringExtension value) {
+        this.linearLineStringExtension = value;
     }
 
     /**

@@ -20,8 +20,7 @@ import org.w3c.dom.Element;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="areaExtended" type="{http://datex2.eu/schema/2/2_0}AreaExtended" minOccurs="0"/&gt;
- *         &lt;element name="openlrExtendedArea" type="{http://datex2.eu/schema/2/2_0}OpenlrExtendedArea" minOccurs="0"/&gt;
+ *         &lt;element name="areaMultiPolygonExtension" type="{http://datex2.eu/schema/2/2_0}AreaMultiPolygonExtension" minOccurs="0"/&gt;
  *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -33,63 +32,37 @@ import org.w3c.dom.Element;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "_AreaExtensionType", propOrder = {
-    "areaExtended",
-    "openlrExtendedArea",
+    "areaMultiPolygonExtension",
     "any"
 })
 public class AreaExtensionType {
 
-    protected AreaExtended areaExtended;
-    protected OpenlrExtendedArea openlrExtendedArea;
+    protected AreaMultiPolygonExtension areaMultiPolygonExtension;
     @XmlAnyElement(lax = true)
     protected List<Object> any;
 
     /**
-     * Gets the value of the areaExtended property.
+     * Gets the value of the areaMultiPolygonExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link AreaExtended }
+     *     {@link AreaMultiPolygonExtension }
      *     
      */
-    public AreaExtended getAreaExtended() {
-        return areaExtended;
+    public AreaMultiPolygonExtension getAreaMultiPolygonExtension() {
+        return areaMultiPolygonExtension;
     }
 
     /**
-     * Sets the value of the areaExtended property.
+     * Sets the value of the areaMultiPolygonExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link AreaExtended }
+     *     {@link AreaMultiPolygonExtension }
      *     
      */
-    public void setAreaExtended(AreaExtended value) {
-        this.areaExtended = value;
-    }
-
-    /**
-     * Gets the value of the openlrExtendedArea property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OpenlrExtendedArea }
-     *     
-     */
-    public OpenlrExtendedArea getOpenlrExtendedArea() {
-        return openlrExtendedArea;
-    }
-
-    /**
-     * Sets the value of the openlrExtendedArea property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OpenlrExtendedArea }
-     *     
-     */
-    public void setOpenlrExtendedArea(OpenlrExtendedArea value) {
-        this.openlrExtendedArea = value;
+    public void setAreaMultiPolygonExtension(AreaMultiPolygonExtension value) {
+        this.areaMultiPolygonExtension = value;
     }
 
     /**

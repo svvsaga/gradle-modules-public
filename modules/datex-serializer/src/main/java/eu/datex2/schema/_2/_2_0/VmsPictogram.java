@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="weightPerAxleAttribute" type="{http://datex2.eu/schema/2/2_0}Tonnes" minOccurs="0"/&gt;
  *         &lt;element name="widthAttribute" type="{http://datex2.eu/schema/2/2_0}MetresAsFloat" minOccurs="0"/&gt;
  *         &lt;element name="vmsSupplementaryPanel" type="{http://datex2.eu/schema/2/2_0}VmsSupplementaryPanel" minOccurs="0"/&gt;
- *         &lt;element name="vmsPictogramExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="vmsPictogramExtension" type="{http://datex2.eu/schema/2/2_0}_VmsPictogramExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -86,7 +86,7 @@ public class VmsPictogram {
     protected Float weightPerAxleAttribute;
     protected Float widthAttribute;
     protected VmsSupplementaryPanel vmsSupplementaryPanel;
-    protected ExtensionType vmsPictogramExtension;
+    protected VmsPictogramExtensionType vmsPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
@@ -474,10 +474,10 @@ public class VmsPictogram {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link VmsPictogramExtensionType }
      *     
      */
-    public ExtensionType getVmsPictogramExtension() {
+    public VmsPictogramExtensionType getVmsPictogramExtension() {
         return vmsPictogramExtension;
     }
 
@@ -486,10 +486,10 @@ public class VmsPictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link VmsPictogramExtensionType }
      *     
      */
-    public void setVmsPictogramExtension(ExtensionType value) {
+    public void setVmsPictogramExtension(VmsPictogramExtensionType value) {
         this.vmsPictogramExtension = value;
     }
 

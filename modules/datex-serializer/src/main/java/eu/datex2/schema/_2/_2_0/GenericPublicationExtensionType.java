@@ -20,9 +20,9 @@ import org.w3c.dom.Element;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="parkingTablePublication" type="{http://datex2.eu/schema/2/2_0}ParkingTablePublication" minOccurs="0"/&gt;
- *         &lt;element name="parkingVehiclesPublication" type="{http://datex2.eu/schema/2/2_0}ParkingVehiclesPublication" minOccurs="0"/&gt;
- *         &lt;element name="parkingStatusPublication" type="{http://datex2.eu/schema/2/2_0}ParkingStatusPublication" minOccurs="0"/&gt;
+ *         &lt;element name="cctvStatusPublication" type="{http://datex2.eu/schema/2/2_0}CctvStatusPublication" minOccurs="0"/&gt;
+ *         &lt;element name="cctvSiteTablePublication" type="{http://datex2.eu/schema/2/2_0}CctvSiteTablePublication" minOccurs="0"/&gt;
+ *         &lt;element name="alertCLocationCodeTablePublication" type="{http://datex2.eu/schema/2/2_0}AlertCLocationCodeTablePublication" minOccurs="0"/&gt;
  *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -34,89 +34,89 @@ import org.w3c.dom.Element;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "_GenericPublicationExtensionType", propOrder = {
-    "parkingTablePublication",
-    "parkingVehiclesPublication",
-    "parkingStatusPublication",
+    "cctvStatusPublication",
+    "cctvSiteTablePublication",
+    "alertCLocationCodeTablePublication",
     "any"
 })
 public class GenericPublicationExtensionType {
 
-    protected ParkingTablePublication parkingTablePublication;
-    protected ParkingVehiclesPublication parkingVehiclesPublication;
-    protected ParkingStatusPublication parkingStatusPublication;
+    protected CctvStatusPublication cctvStatusPublication;
+    protected CctvSiteTablePublication cctvSiteTablePublication;
+    protected AlertCLocationCodeTablePublication alertCLocationCodeTablePublication;
     @XmlAnyElement(lax = true)
     protected List<Object> any;
 
     /**
-     * Gets the value of the parkingTablePublication property.
+     * Gets the value of the cctvStatusPublication property.
      * 
      * @return
      *     possible object is
-     *     {@link ParkingTablePublication }
+     *     {@link CctvStatusPublication }
      *     
      */
-    public ParkingTablePublication getParkingTablePublication() {
-        return parkingTablePublication;
+    public CctvStatusPublication getCctvStatusPublication() {
+        return cctvStatusPublication;
     }
 
     /**
-     * Sets the value of the parkingTablePublication property.
+     * Sets the value of the cctvStatusPublication property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ParkingTablePublication }
+     *     {@link CctvStatusPublication }
      *     
      */
-    public void setParkingTablePublication(ParkingTablePublication value) {
-        this.parkingTablePublication = value;
+    public void setCctvStatusPublication(CctvStatusPublication value) {
+        this.cctvStatusPublication = value;
     }
 
     /**
-     * Gets the value of the parkingVehiclesPublication property.
+     * Gets the value of the cctvSiteTablePublication property.
      * 
      * @return
      *     possible object is
-     *     {@link ParkingVehiclesPublication }
+     *     {@link CctvSiteTablePublication }
      *     
      */
-    public ParkingVehiclesPublication getParkingVehiclesPublication() {
-        return parkingVehiclesPublication;
+    public CctvSiteTablePublication getCctvSiteTablePublication() {
+        return cctvSiteTablePublication;
     }
 
     /**
-     * Sets the value of the parkingVehiclesPublication property.
+     * Sets the value of the cctvSiteTablePublication property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ParkingVehiclesPublication }
+     *     {@link CctvSiteTablePublication }
      *     
      */
-    public void setParkingVehiclesPublication(ParkingVehiclesPublication value) {
-        this.parkingVehiclesPublication = value;
+    public void setCctvSiteTablePublication(CctvSiteTablePublication value) {
+        this.cctvSiteTablePublication = value;
     }
 
     /**
-     * Gets the value of the parkingStatusPublication property.
+     * Gets the value of the alertCLocationCodeTablePublication property.
      * 
      * @return
      *     possible object is
-     *     {@link ParkingStatusPublication }
+     *     {@link AlertCLocationCodeTablePublication }
      *     
      */
-    public ParkingStatusPublication getParkingStatusPublication() {
-        return parkingStatusPublication;
+    public AlertCLocationCodeTablePublication getAlertCLocationCodeTablePublication() {
+        return alertCLocationCodeTablePublication;
     }
 
     /**
-     * Sets the value of the parkingStatusPublication property.
+     * Sets the value of the alertCLocationCodeTablePublication property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ParkingStatusPublication }
+     *     {@link AlertCLocationCodeTablePublication }
      *     
      */
-    public void setParkingStatusPublication(ParkingStatusPublication value) {
-        this.parkingStatusPublication = value;
+    public void setAlertCLocationCodeTablePublication(AlertCLocationCodeTablePublication value) {
+        this.alertCLocationCodeTablePublication = value;
     }
 
     /**

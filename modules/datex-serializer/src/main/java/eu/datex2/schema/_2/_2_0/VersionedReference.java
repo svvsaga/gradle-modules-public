@@ -29,13 +29,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VersionedReference")
 @XmlSeeAlso({
-    ChargeBandVersionedReference.class,
-    ContactDetailsVersionedReference.class,
+    CctvCameraListVersionedReference.class,
+    CctvCameraMetadataRecordVersionedReference.class,
     MeasurementSiteRecordVersionedReference.class,
     MeasurementSiteTableVersionedReference.class,
-    ParkingRecordVersionedReference.class,
-    ParkingRouteDetailsVersionedReference.class,
-    ParkingTableVersionedReference.class,
     PredefinedItineraryVersionedReference.class,
     PredefinedLocationVersionedReference.class,
     PredefinedNonOrderedLocationGroupVersionedReference.class,

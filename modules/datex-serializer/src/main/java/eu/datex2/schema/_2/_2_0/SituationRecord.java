@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="urlLink" type="{http://datex2.eu/schema/2/2_0}UrlLink" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="groupOfLocations" type="{http://datex2.eu/schema/2/2_0}GroupOfLocations"/&gt;
  *         &lt;element name="management" type="{http://datex2.eu/schema/2/2_0}Management" minOccurs="0"/&gt;
- *         &lt;element name="situationRecordExtension" type="{http://datex2.eu/schema/2/2_0}_SituationRecordExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="situationRecordExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
  *       &lt;attribute name="version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
@@ -109,7 +109,7 @@ public abstract class SituationRecord {
     @XmlElement(required = true)
     protected GroupOfLocations groupOfLocations;
     protected Management management;
-    protected SituationRecordExtensionType situationRecordExtension;
+    protected ExtensionType situationRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -543,10 +543,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link SituationRecordExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public SituationRecordExtensionType getSituationRecordExtension() {
+    public ExtensionType getSituationRecordExtension() {
         return situationRecordExtension;
     }
 
@@ -555,10 +555,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link SituationRecordExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSituationRecordExtension(SituationRecordExtensionType value) {
+    public void setSituationRecordExtension(ExtensionType value) {
         this.situationRecordExtension = value;
     }
 

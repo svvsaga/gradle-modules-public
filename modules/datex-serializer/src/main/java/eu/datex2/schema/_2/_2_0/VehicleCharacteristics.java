@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="widthCharacteristic" type="{http://datex2.eu/schema/2/2_0}WidthCharacteristic" maxOccurs="2" minOccurs="0"/&gt;
  *         &lt;element name="heaviestAxleWeightCharacteristic" type="{http://datex2.eu/schema/2/2_0}HeaviestAxleWeightCharacteristic" maxOccurs="2" minOccurs="0"/&gt;
  *         &lt;element name="numberOfAxlesCharacteristic" type="{http://datex2.eu/schema/2/2_0}NumberOfAxlesCharacteristic" maxOccurs="2" minOccurs="0"/&gt;
- *         &lt;element name="vehicleCharacteristicsExtension" type="{http://datex2.eu/schema/2/2_0}_VehicleCharacteristicsExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="vehicleCharacteristicsExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -72,7 +72,7 @@ public class VehicleCharacteristics {
     protected List<WidthCharacteristic> widthCharacteristic;
     protected List<HeaviestAxleWeightCharacteristic> heaviestAxleWeightCharacteristic;
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
-    protected VehicleCharacteristicsExtensionType vehicleCharacteristicsExtension;
+    protected ExtensionType vehicleCharacteristicsExtension;
 
     /**
      * Gets the value of the fuelType property.
@@ -378,10 +378,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleCharacteristicsExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public VehicleCharacteristicsExtensionType getVehicleCharacteristicsExtension() {
+    public ExtensionType getVehicleCharacteristicsExtension() {
         return vehicleCharacteristicsExtension;
     }
 
@@ -390,10 +390,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleCharacteristicsExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleCharacteristicsExtension(VehicleCharacteristicsExtensionType value) {
+    public void setVehicleCharacteristicsExtension(ExtensionType value) {
         this.vehicleCharacteristicsExtension = value;
     }
 

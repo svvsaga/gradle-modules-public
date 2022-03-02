@@ -15,7 +15,7 @@ jaxb {
         }
         register("Datex2") {
             schema = file(
-                "../datex-schemas/src/main/resources/DATEXIISchema_2_2_3.xsd",
+                "../datex-schemas/src/main/resources/DATEXIISchema_2_2_0.xsd",
             )
             outputDir = file("src/main/java")
             header = false

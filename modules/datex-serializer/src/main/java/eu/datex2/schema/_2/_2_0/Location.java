@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="externalReferencing" type="{http://datex2.eu/schema/2/2_0}ExternalReferencing" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="locationForDisplay" type="{http://datex2.eu/schema/2/2_0}PointCoordinates" minOccurs="0"/&gt;
- *         &lt;element name="locationExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="locationExtension" type="{http://datex2.eu/schema/2/2_0}_LocationExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -47,7 +47,7 @@ public abstract class Location
 
     protected List<ExternalReferencing> externalReferencing;
     protected PointCoordinates locationForDisplay;
-    protected ExtensionType locationExtension;
+    protected LocationExtensionType locationExtension;
 
     /**
      * Gets the value of the externalReferencing property.
@@ -107,10 +107,10 @@ public abstract class Location
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link LocationExtensionType }
      *     
      */
-    public ExtensionType getLocationExtension() {
+    public LocationExtensionType getLocationExtension() {
         return locationExtension;
     }
 
@@ -119,10 +119,10 @@ public abstract class Location
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link LocationExtensionType }
      *     
      */
-    public void setLocationExtension(ExtensionType value) {
+    public void setLocationExtension(LocationExtensionType value) {
         this.locationExtension = value;
     }
 

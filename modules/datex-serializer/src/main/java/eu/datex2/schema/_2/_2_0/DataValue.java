@@ -52,17 +52,16 @@ import jakarta.xml.bind.annotation.XmlType;
     DirectionCompassValue.class,
     DurationValue.class,
     FloatingPointMetreDistanceValue.class,
+    FrictionValue.class,
     IntegerMetreDistanceValue.class,
     KilogramsConcentrationValue.class,
     MicrogramsConcentrationValue.class,
-    OccupancyChangeValue.class,
     PcuFlowValue.class,
     PercentageValue.class,
     PrecipitationIntensityValue.class,
     SpeedValue.class,
     TemperatureValue.class,
     TrafficStatusValue.class,
-    VehicleCountValue.class,
     VehicleFlowValue.class
 })
 public abstract class DataValue {

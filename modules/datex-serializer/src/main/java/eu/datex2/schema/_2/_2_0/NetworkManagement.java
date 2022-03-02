@@ -27,7 +27,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="placesAtWhichApplicable" type="{http://datex2.eu/schema/2/2_0}PlacesEnum" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="automaticallyInitiated" type="{http://datex2.eu/schema/2/2_0}Boolean" minOccurs="0"/&gt;
  *         &lt;element name="forVehiclesWithCharacteristicsOf" type="{http://datex2.eu/schema/2/2_0}VehicleCharacteristics" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="networkManagementExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="networkManagementExtension" type="{http://datex2.eu/schema/2/2_0}_NetworkManagementExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -69,7 +69,7 @@ public abstract class NetworkManagement
     protected List<PlacesEnum> placesAtWhichApplicable;
     protected Boolean automaticallyInitiated;
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
-    protected ExtensionType networkManagementExtension;
+    protected NetworkManagementExtensionType networkManagementExtension;
 
     /**
      * Gets the value of the complianceOption property.
@@ -240,10 +240,10 @@ public abstract class NetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link NetworkManagementExtensionType }
      *     
      */
-    public ExtensionType getNetworkManagementExtension() {
+    public NetworkManagementExtensionType getNetworkManagementExtension() {
         return networkManagementExtension;
     }
 
@@ -252,10 +252,10 @@ public abstract class NetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link NetworkManagementExtensionType }
      *     
      */
-    public void setNetworkManagementExtension(ExtensionType value) {
+    public void setNetworkManagementExtension(NetworkManagementExtensionType value) {
         this.networkManagementExtension = value;
     }
 

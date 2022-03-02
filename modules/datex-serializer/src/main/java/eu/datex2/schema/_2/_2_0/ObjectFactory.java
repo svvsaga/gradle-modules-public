@@ -58,19 +58,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ChargeBandVersionedReference }
+     * Create an instance of {@link CctvCameraListVersionedReference }
      * 
      */
-    public ChargeBandVersionedReference createChargeBandVersionedReference() {
-        return new ChargeBandVersionedReference();
+    public CctvCameraListVersionedReference createCctvCameraListVersionedReference() {
+        return new CctvCameraListVersionedReference();
     }
 
     /**
-     * Create an instance of {@link ContactDetailsVersionedReference }
+     * Create an instance of {@link CctvCameraMetadataRecordVersionedReference }
      * 
      */
-    public ContactDetailsVersionedReference createContactDetailsVersionedReference() {
-        return new ContactDetailsVersionedReference();
+    public CctvCameraMetadataRecordVersionedReference createCctvCameraMetadataRecordVersionedReference() {
+        return new CctvCameraMetadataRecordVersionedReference();
     }
 
     /**
@@ -87,22 +87,6 @@ public class ObjectFactory {
      */
     public GenericPublicationExtensionType createGenericPublicationExtensionType() {
         return new GenericPublicationExtensionType();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSpaces }
-     * 
-     */
-    public GroupOfParkingSpaces createGroupOfParkingSpaces() {
-        return new GroupOfParkingSpaces();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSpacesParkingSpaceIndexParkingSpace }
-     * 
-     */
-    public GroupOfParkingSpacesParkingSpaceIndexParkingSpace createGroupOfParkingSpacesParkingSpaceIndexParkingSpace() {
-        return new GroupOfParkingSpacesParkingSpaceIndexParkingSpace();
     }
 
     /**
@@ -130,6 +114,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link LocationExtensionType }
+     * 
+     */
+    public LocationExtensionType createLocationExtensionType() {
+        return new LocationExtensionType();
+    }
+
+    /**
+     * Create an instance of {@link MeasurementSiteRecordExtensionType }
+     * 
+     */
+    public MeasurementSiteRecordExtensionType createMeasurementSiteRecordExtensionType() {
+        return new MeasurementSiteRecordExtensionType();
+    }
+
+    /**
      * Create an instance of {@link MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
      * 
      */
@@ -154,115 +154,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ParkingAccessReference }
+     * Create an instance of {@link NetworkManagementExtensionType }
      * 
      */
-    public ParkingAccessReference createParkingAccessReference() {
-        return new ParkingAccessReference();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
-     * 
-     */
-    public ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility createParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
-        return new ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus }
-     * 
-     */
-    public ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus createParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus() {
-        return new ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus }
-     * 
-     */
-    public ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus createParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus() {
-        return new ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus }
-     * 
-     */
-    public ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus createParkingRecordStatusParkingSpaceIndexParkingSpaceStatus() {
-        return new ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus }
-     * 
-     */
-    public ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus createParkingRecordStatusScenarioIndexParkingUsageScenarioStatus() {
-        return new ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRecordVersionedReference }
-     * 
-     */
-    public ParkingRecordVersionedReference createParkingRecordVersionedReference() {
-        return new ParkingRecordVersionedReference();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRouteDetailsVersionedReference }
-     * 
-     */
-    public ParkingRouteDetailsVersionedReference createParkingRouteDetailsVersionedReference() {
-        return new ParkingRouteDetailsVersionedReference();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSiteScenarioIndexParkingUsageScenario }
-     * 
-     */
-    public ParkingSiteScenarioIndexParkingUsageScenario createParkingSiteScenarioIndexParkingUsageScenario() {
-        return new ParkingSiteScenarioIndexParkingUsageScenario();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSpace }
-     * 
-     */
-    public ParkingSpace createParkingSpace() {
-        return new ParkingSpace();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility }
-     * 
-     */
-    public ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility createParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility() {
-        return new ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSpaceBasicsScenarioIndexParkingUsageScenario }
-     * 
-     */
-    public ParkingSpaceBasicsScenarioIndexParkingUsageScenario createParkingSpaceBasicsScenarioIndexParkingUsageScenario() {
-        return new ParkingSpaceBasicsScenarioIndexParkingUsageScenario();
-    }
-
-    /**
-     * Create an instance of {@link ParkingTableVersionedReference }
-     * 
-     */
-    public ParkingTableVersionedReference createParkingTableVersionedReference() {
-        return new ParkingTableVersionedReference();
-    }
-
-    /**
-     * Create an instance of {@link PeriodExtensionType }
-     * 
-     */
-    public PeriodExtensionType createPeriodExtensionType() {
-        return new PeriodExtensionType();
+    public NetworkManagementExtensionType createNetworkManagementExtensionType() {
+        return new NetworkManagementExtensionType();
     }
 
     /**
@@ -271,14 +167,6 @@ public class ObjectFactory {
      */
     public PointExtensionType createPointExtensionType() {
         return new PointExtensionType();
-    }
-
-    /**
-     * Create an instance of {@link PolygonAreaIndexPointCoordinates }
-     * 
-     */
-    public PolygonAreaIndexPointCoordinates createPolygonAreaIndexPointCoordinates() {
-        return new PolygonAreaIndexPointCoordinates();
     }
 
     /**
@@ -314,19 +202,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RoadSurfaceConditionMeasurementsExtensionType }
+     * 
+     */
+    public RoadSurfaceConditionMeasurementsExtensionType createRoadSurfaceConditionMeasurementsExtensionType() {
+        return new RoadSurfaceConditionMeasurementsExtensionType();
+    }
+
+    /**
      * Create an instance of {@link SiteMeasurementsIndexMeasuredValue }
      * 
      */
     public SiteMeasurementsIndexMeasuredValue createSiteMeasurementsIndexMeasuredValue() {
         return new SiteMeasurementsIndexMeasuredValue();
-    }
-
-    /**
-     * Create an instance of {@link SituationRecordExtensionType }
-     * 
-     */
-    public SituationRecordExtensionType createSituationRecordExtensionType() {
-        return new SituationRecordExtensionType();
     }
 
     /**
@@ -351,14 +239,6 @@ public class ObjectFactory {
      */
     public TextPage createTextPage() {
         return new TextPage();
-    }
-
-    /**
-     * Create an instance of {@link VehicleCharacteristicsExtensionType }
-     * 
-     */
-    public VehicleCharacteristicsExtensionType createVehicleCharacteristicsExtensionType() {
-        return new VehicleCharacteristicsExtensionType();
     }
 
     /**
@@ -399,6 +279,14 @@ public class ObjectFactory {
      */
     public VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram createVmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram() {
         return new VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram();
+    }
+
+    /**
+     * Create an instance of {@link VmsPictogramExtensionType }
+     * 
+     */
+    public VmsPictogramExtensionType createVmsPictogramExtensionType() {
+        return new VmsPictogramExtensionType();
     }
 
     /**
@@ -458,14 +346,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AcceptedPaymentCards }
-     * 
-     */
-    public AcceptedPaymentCards createAcceptedPaymentCards() {
-        return new AcceptedPaymentCards();
-    }
-
-    /**
      * Create an instance of {@link Accident }
      * 
      */
@@ -511,6 +391,30 @@ public class ObjectFactory {
      */
     public AlertCLocation createAlertCLocation() {
         return new AlertCLocation();
+    }
+
+    /**
+     * Create an instance of {@link AlertCLocationCodeRow }
+     * 
+     */
+    public AlertCLocationCodeRow createAlertCLocationCodeRow() {
+        return new AlertCLocationCodeRow();
+    }
+
+    /**
+     * Create an instance of {@link AlertCLocationCodeTable }
+     * 
+     */
+    public AlertCLocationCodeTable createAlertCLocationCodeTable() {
+        return new AlertCLocationCodeTable();
+    }
+
+    /**
+     * Create an instance of {@link AlertCLocationCodeTablePublication }
+     * 
+     */
+    public AlertCLocationCodeTablePublication createAlertCLocationCodeTablePublication() {
+        return new AlertCLocationCodeTablePublication();
     }
 
     /**
@@ -610,11 +514,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AreaExtended }
+     * Create an instance of {@link AreaMultiPolygonExtension }
      * 
      */
-    public AreaExtended createAreaExtended() {
-        return new AreaExtended();
+    public AreaMultiPolygonExtension createAreaMultiPolygonExtension() {
+        return new AreaMultiPolygonExtension();
+    }
+
+    /**
+     * Create an instance of {@link Association }
+     * 
+     */
+    public Association createAssociation() {
+        return new Association();
+    }
+
+    /**
+     * Create an instance of {@link Attribute }
+     * 
+     */
+    public Attribute createAttribute() {
+        return new Attribute();
     }
 
     /**
@@ -666,27 +586,139 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Charge }
+     * Create an instance of {@link CctvCameraControlData }
      * 
      */
-    public Charge createCharge() {
-        return new Charge();
+    public CctvCameraControlData createCctvCameraControlData() {
+        return new CctvCameraControlData();
     }
 
     /**
-     * Create an instance of {@link ChargeBand }
+     * Create an instance of {@link CctvCameraControlLimits }
      * 
      */
-    public ChargeBand createChargeBand() {
-        return new ChargeBand();
+    public CctvCameraControlLimits createCctvCameraControlLimits() {
+        return new CctvCameraControlLimits();
     }
 
     /**
-     * Create an instance of {@link ChargeBandByReference }
+     * Create an instance of {@link CctvCameraControlStatus }
      * 
      */
-    public ChargeBandByReference createChargeBandByReference() {
-        return new ChargeBandByReference();
+    public CctvCameraControlStatus createCctvCameraControlStatus() {
+        return new CctvCameraControlStatus();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraList }
+     * 
+     */
+    public CctvCameraList createCctvCameraList() {
+        return new CctvCameraList();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraMetadataRecord }
+     * 
+     */
+    public CctvCameraMetadataRecord createCctvCameraMetadataRecord() {
+        return new CctvCameraMetadataRecord();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraNonDwellZone }
+     * 
+     */
+    public CctvCameraNonDwellZone createCctvCameraNonDwellZone() {
+        return new CctvCameraNonDwellZone();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraPresets }
+     * 
+     */
+    public CctvCameraPresets createCctvCameraPresets() {
+        return new CctvCameraPresets();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraStatus }
+     * 
+     */
+    public CctvCameraStatus createCctvCameraStatus() {
+        return new CctvCameraStatus();
+    }
+
+    /**
+     * Create an instance of {@link CctvCameraTrueNorthPosition }
+     * 
+     */
+    public CctvCameraTrueNorthPosition createCctvCameraTrueNorthPosition() {
+        return new CctvCameraTrueNorthPosition();
+    }
+
+    /**
+     * Create an instance of {@link CctvGeographicArea }
+     * 
+     */
+    public CctvGeographicArea createCctvGeographicArea() {
+        return new CctvGeographicArea();
+    }
+
+    /**
+     * Create an instance of {@link CctvSiteTablePublication }
+     * 
+     */
+    public CctvSiteTablePublication createCctvSiteTablePublication() {
+        return new CctvSiteTablePublication();
+    }
+
+    /**
+     * Create an instance of {@link CctvStatusPublication }
+     * 
+     */
+    public CctvStatusPublication createCctvStatusPublication() {
+        return new CctvStatusPublication();
+    }
+
+    /**
+     * Create an instance of {@link CctvStillImageService }
+     * 
+     */
+    public CctvStillImageService createCctvStillImageService() {
+        return new CctvStillImageService();
+    }
+
+    /**
+     * Create an instance of {@link CctvStillImageServiceStatus }
+     * 
+     */
+    public CctvStillImageServiceStatus createCctvStillImageServiceStatus() {
+        return new CctvStillImageServiceStatus();
+    }
+
+    /**
+     * Create an instance of {@link CctvVideoService }
+     * 
+     */
+    public CctvVideoService createCctvVideoService() {
+        return new CctvVideoService();
+    }
+
+    /**
+     * Create an instance of {@link CctvVideoServiceStatus }
+     * 
+     */
+    public CctvVideoServiceStatus createCctvVideoServiceStatus() {
+        return new CctvVideoServiceStatus();
+    }
+
+    /**
+     * Create an instance of {@link Class }
+     * 
+     */
+    public Class createClass() {
+        return new Class();
     }
 
     /**
@@ -722,27 +754,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Contact }
+     * Create an instance of {@link DataDictionary }
      * 
      */
-    public Contact createContact() {
-        return new Contact();
+    public DataDictionary createDataDictionary() {
+        return new DataDictionary();
     }
 
     /**
-     * Create an instance of {@link ContactByReference }
+     * Create an instance of {@link DataDictionaryPublication }
      * 
      */
-    public ContactByReference createContactByReference() {
-        return new ContactByReference();
-    }
-
-    /**
-     * Create an instance of {@link ContactDetails }
-     * 
-     */
-    public ContactDetails createContactDetails() {
-        return new ContactDetails();
+    public DataDictionaryPublication createDataDictionaryPublication() {
+        return new DataDictionaryPublication();
     }
 
     /**
@@ -762,27 +786,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DedicatedAccess }
-     * 
-     */
-    public DedicatedAccess createDedicatedAccess() {
-        return new DedicatedAccess();
-    }
-
-    /**
      * Create an instance of {@link Delays }
      * 
      */
     public Delays createDelays() {
         return new Delays();
-    }
-
-    /**
-     * Create an instance of {@link Dimension }
-     * 
-     */
-    public Dimension createDimension() {
-        return new Dimension();
     }
 
     /**
@@ -858,11 +866,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ElectricCharging }
+     * Create an instance of {@link Enumeration }
      * 
      */
-    public ElectricCharging createElectricCharging() {
-        return new ElectricCharging();
+    public Enumeration createEnumeration() {
+        return new Enumeration();
+    }
+
+    /**
+     * Create an instance of {@link EnumerationLitteral }
+     * 
+     */
+    public EnumerationLitteral createEnumerationLitteral() {
+        return new EnumerationLitteral();
     }
 
     /**
@@ -871,14 +887,6 @@ public class ObjectFactory {
      */
     public EnvironmentalObstruction createEnvironmentalObstruction() {
         return new EnvironmentalObstruction();
-    }
-
-    /**
-     * Create an instance of {@link Equipment }
-     * 
-     */
-    public Equipment createEquipment() {
-        return new Equipment();
     }
 
     /**
@@ -938,6 +946,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FrictionExtension }
+     * 
+     */
+    public FrictionExtension createFrictionExtension() {
+        return new FrictionExtension();
+    }
+
+    /**
+     * Create an instance of {@link FrictionValue }
+     * 
+     */
+    public FrictionValue createFrictionValue() {
+        return new FrictionValue();
+    }
+
+    /**
      * Create an instance of {@link GeneralInstructionOrMessageToRoadUsers }
      * 
      */
@@ -970,43 +994,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GMLLinearRing }
+     * 
+     */
+    public GMLLinearRing createGMLLinearRing() {
+        return new GMLLinearRing();
+    }
+
+    /**
+     * Create an instance of {@link GMLLineString }
+     * 
+     */
+    public GMLLineString createGMLLineString() {
+        return new GMLLineString();
+    }
+
+    /**
+     * Create an instance of {@link GMLMultiPolygon }
+     * 
+     */
+    public GMLMultiPolygon createGMLMultiPolygon() {
+        return new GMLMultiPolygon();
+    }
+
+    /**
+     * Create an instance of {@link GMLPolygon }
+     * 
+     */
+    public GMLPolygon createGMLPolygon() {
+        return new GMLPolygon();
+    }
+
+    /**
      * Create an instance of {@link GrossWeightCharacteristic }
      * 
      */
     public GrossWeightCharacteristic createGrossWeightCharacteristic() {
         return new GrossWeightCharacteristic();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSites }
-     * 
-     */
-    public GroupOfParkingSites createGroupOfParkingSites() {
-        return new GroupOfParkingSites();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSitesStatus }
-     * 
-     */
-    public GroupOfParkingSitesStatus createGroupOfParkingSitesStatus() {
-        return new GroupOfParkingSitesStatus();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSpaces2 }
-     * 
-     */
-    public GroupOfParkingSpaces2 createGroupOfParkingSpaces2() {
-        return new GroupOfParkingSpaces2();
-    }
-
-    /**
-     * Create an instance of {@link GroupOfParkingSpacesStatus }
-     * 
-     */
-    public GroupOfParkingSpacesStatus createGroupOfParkingSpacesStatus() {
-        return new GroupOfParkingSpacesStatus();
     }
 
     /**
@@ -1082,14 +1106,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link IndividualCharge }
-     * 
-     */
-    public IndividualCharge createIndividualCharge() {
-        return new IndividualCharge();
-    }
-
-    /**
      * Create an instance of {@link IndividualVehicleDataValues }
      * 
      */
@@ -1122,14 +1138,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InterUrbanParkingSite }
-     * 
-     */
-    public InterUrbanParkingSite createInterUrbanParkingSite() {
-        return new InterUrbanParkingSite();
-    }
-
-    /**
      * Create an instance of {@link ItineraryByIndexedLocations }
      * 
      */
@@ -1143,14 +1151,6 @@ public class ObjectFactory {
      */
     public ItineraryByReference createItineraryByReference() {
         return new ItineraryByReference();
-    }
-
-    /**
-     * Create an instance of {@link Junction }
-     * 
-     */
-    public Junction createJunction() {
-        return new Junction();
     }
 
     /**
@@ -1210,6 +1210,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link LinearLineStringExtension }
+     * 
+     */
+    public LinearLineStringExtension createLinearLineStringExtension() {
+        return new LinearLineStringExtension();
+    }
+
+    /**
      * Create an instance of {@link LinearTrafficView }
      * 
      */
@@ -1239,6 +1247,14 @@ public class ObjectFactory {
      */
     public LocationCharacteristicsOverride createLocationCharacteristicsOverride() {
         return new LocationCharacteristicsOverride();
+    }
+
+    /**
+     * Create an instance of {@link LocationExtension }
+     * 
+     */
+    public LocationExtension createLocationExtension() {
+        return new LocationExtension();
     }
 
     /**
@@ -1306,6 +1322,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link MeasurementSiteRecordExtension }
+     * 
+     */
+    public MeasurementSiteRecordExtension createMeasurementSiteRecordExtension() {
+        return new MeasurementSiteRecordExtension();
+    }
+
+    /**
      * Create an instance of {@link MeasurementSiteTable }
      * 
      */
@@ -1354,11 +1378,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NamedArea }
+     * Create an instance of {@link NetworkManagementExtension }
      * 
      */
-    public NamedArea createNamedArea() {
-        return new NamedArea();
+    public NetworkManagementExtension createNetworkManagementExtension() {
+        return new NetworkManagementExtension();
     }
 
     /**
@@ -1402,59 +1426,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OccupancyChangeValue }
-     * 
-     */
-    public OccupancyChangeValue createOccupancyChangeValue() {
-        return new OccupancyChangeValue();
-    }
-
-    /**
      * Create an instance of {@link OffsetDistance }
      * 
      */
     public OffsetDistance createOffsetDistance() {
         return new OffsetDistance();
-    }
-
-    /**
-     * Create an instance of {@link OpeningTimes }
-     * 
-     */
-    public OpeningTimes createOpeningTimes() {
-        return new OpeningTimes();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrAreaLocationReference }
-     * 
-     */
-    public OpenlrAreaLocationReference createOpenlrAreaLocationReference() {
-        return new OpenlrAreaLocationReference();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrCircleLocationReference }
-     * 
-     */
-    public OpenlrCircleLocationReference createOpenlrCircleLocationReference() {
-        return new OpenlrCircleLocationReference();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrClosedLineLocationReference }
-     * 
-     */
-    public OpenlrClosedLineLocationReference createOpenlrClosedLineLocationReference() {
-        return new OpenlrClosedLineLocationReference();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrExtendedArea }
-     * 
-     */
-    public OpenlrExtendedArea createOpenlrExtendedArea() {
-        return new OpenlrExtendedArea();
     }
 
     /**
@@ -1479,22 +1455,6 @@ public class ObjectFactory {
      */
     public OpenlrGeoCoordinate createOpenlrGeoCoordinate() {
         return new OpenlrGeoCoordinate();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrGridAttributes }
-     * 
-     */
-    public OpenlrGridAttributes createOpenlrGridAttributes() {
-        return new OpenlrGridAttributes();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrGridLocationReference }
-     * 
-     */
-    public OpenlrGridLocationReference createOpenlrGridLocationReference() {
-        return new OpenlrGridLocationReference();
     }
 
     /**
@@ -1570,38 +1530,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OpenlrPolygonCorners }
-     * 
-     */
-    public OpenlrPolygonCorners createOpenlrPolygonCorners() {
-        return new OpenlrPolygonCorners();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrPolygonLocationReference }
-     * 
-     */
-    public OpenlrPolygonLocationReference createOpenlrPolygonLocationReference() {
-        return new OpenlrPolygonLocationReference();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrRectangle }
-     * 
-     */
-    public OpenlrRectangle createOpenlrRectangle() {
-        return new OpenlrRectangle();
-    }
-
-    /**
-     * Create an instance of {@link OpenlrRectangleLocationReference }
-     * 
-     */
-    public OpenlrRectangleLocationReference createOpenlrRectangleLocationReference() {
-        return new OpenlrRectangleLocationReference();
-    }
-
-    /**
      * Create an instance of {@link OperatorAction }
      * 
      */
@@ -1618,195 +1546,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ParkingAccess }
+     * Create an instance of {@link Package }
      * 
      */
-    public ParkingAccess createParkingAccess() {
-        return new ParkingAccess();
-    }
-
-    /**
-     * Create an instance of {@link ParkingAccessStatus }
-     * 
-     */
-    public ParkingAccessStatus createParkingAccessStatus() {
-        return new ParkingAccessStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingAssignment }
-     * 
-     */
-    public ParkingAssignment createParkingAssignment() {
-        return new ParkingAssignment();
-    }
-
-    /**
-     * Create an instance of {@link ParkingEquipmentOrServiceFacilityStatus }
-     * 
-     */
-    public ParkingEquipmentOrServiceFacilityStatus createParkingEquipmentOrServiceFacilityStatus() {
-        return new ParkingEquipmentOrServiceFacilityStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingOccupancy }
-     * 
-     */
-    public ParkingOccupancy createParkingOccupancy() {
-        return new ParkingOccupancy();
-    }
-
-    /**
-     * Create an instance of {@link ParkingPermit }
-     * 
-     */
-    public ParkingPermit createParkingPermit() {
-        return new ParkingPermit();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRouteByReference }
-     * 
-     */
-    public ParkingRouteByReference createParkingRouteByReference() {
-        return new ParkingRouteByReference();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRouteDetails }
-     * 
-     */
-    public ParkingRouteDetails createParkingRouteDetails() {
-        return new ParkingRouteDetails();
-    }
-
-    /**
-     * Create an instance of {@link ParkingRouteStatus }
-     * 
-     */
-    public ParkingRouteStatus createParkingRouteStatus() {
-        return new ParkingRouteStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSiteStatus }
-     * 
-     */
-    public ParkingSiteStatus createParkingSiteStatus() {
-        return new ParkingSiteStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSpace2 }
-     * 
-     */
-    public ParkingSpace2 createParkingSpace2() {
-        return new ParkingSpace2();
-    }
-
-    /**
-     * Create an instance of {@link ParkingSpaceStatus }
-     * 
-     */
-    public ParkingSpaceStatus createParkingSpaceStatus() {
-        return new ParkingSpaceStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingStandardsAndSecurity }
-     * 
-     */
-    public ParkingStandardsAndSecurity createParkingStandardsAndSecurity() {
-        return new ParkingStandardsAndSecurity();
-    }
-
-    /**
-     * Create an instance of {@link ParkingStatusColourMapping }
-     * 
-     */
-    public ParkingStatusColourMapping createParkingStatusColourMapping() {
-        return new ParkingStatusColourMapping();
-    }
-
-    /**
-     * Create an instance of {@link ParkingStatusPublication }
-     * 
-     */
-    public ParkingStatusPublication createParkingStatusPublication() {
-        return new ParkingStatusPublication();
-    }
-
-    /**
-     * Create an instance of {@link ParkingStatusValidity }
-     * 
-     */
-    public ParkingStatusValidity createParkingStatusValidity() {
-        return new ParkingStatusValidity();
-    }
-
-    /**
-     * Create an instance of {@link ParkingTable }
-     * 
-     */
-    public ParkingTable createParkingTable() {
-        return new ParkingTable();
-    }
-
-    /**
-     * Create an instance of {@link ParkingTablePublication }
-     * 
-     */
-    public ParkingTablePublication createParkingTablePublication() {
-        return new ParkingTablePublication();
-    }
-
-    /**
-     * Create an instance of {@link ParkingThresholds }
-     * 
-     */
-    public ParkingThresholds createParkingThresholds() {
-        return new ParkingThresholds();
-    }
-
-    /**
-     * Create an instance of {@link ParkingUsageScenario }
-     * 
-     */
-    public ParkingUsageScenario createParkingUsageScenario() {
-        return new ParkingUsageScenario();
-    }
-
-    /**
-     * Create an instance of {@link ParkingUsageScenarioStatus }
-     * 
-     */
-    public ParkingUsageScenarioStatus createParkingUsageScenarioStatus() {
-        return new ParkingUsageScenarioStatus();
-    }
-
-    /**
-     * Create an instance of {@link ParkingVehicle }
-     * 
-     */
-    public ParkingVehicle createParkingVehicle() {
-        return new ParkingVehicle();
-    }
-
-    /**
-     * Create an instance of {@link ParkingVehiclesPublication }
-     * 
-     */
-    public ParkingVehiclesPublication createParkingVehiclesPublication() {
-        return new ParkingVehiclesPublication();
-    }
-
-    /**
-     * Create an instance of {@link ParkingVMS }
-     * 
-     */
-    public ParkingVMS createParkingVMS() {
-        return new ParkingVMS();
+    public Package createPackage() {
+        return new Package();
     }
 
     /**
@@ -1839,22 +1583,6 @@ public class ObjectFactory {
      */
     public Period createPeriod() {
         return new Period();
-    }
-
-    /**
-     * Create an instance of {@link PeriodExtended }
-     * 
-     */
-    public PeriodExtended createPeriodExtended() {
-        return new PeriodExtended();
-    }
-
-    /**
-     * Create an instance of {@link PermitsAndProhibitions }
-     * 
-     */
-    public PermitsAndProhibitions createPermitsAndProhibitions() {
-        return new PermitsAndProhibitions();
     }
 
     /**
@@ -1906,14 +1634,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PointExtended }
-     * 
-     */
-    public PointExtended createPointExtended() {
-        return new PointExtended();
-    }
-
-    /**
      * Create an instance of {@link Pollution }
      * 
      */
@@ -1927,14 +1647,6 @@ public class ObjectFactory {
      */
     public PollutionInformation createPollutionInformation() {
         return new PollutionInformation();
-    }
-
-    /**
-     * Create an instance of {@link PolygonArea }
-     * 
-     */
-    public PolygonArea createPolygonArea() {
-        return new PolygonArea();
     }
 
     /**
@@ -2002,27 +1714,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PrimaryConrolResponsibility }
+     * 
+     */
+    public PrimaryConrolResponsibility createPrimaryConrolResponsibility() {
+        return new PrimaryConrolResponsibility();
+    }
+
+    /**
      * Create an instance of {@link PublicEvent }
      * 
      */
     public PublicEvent createPublicEvent() {
         return new PublicEvent();
-    }
-
-    /**
-     * Create an instance of {@link PublicHoliday }
-     * 
-     */
-    public PublicHoliday createPublicHoliday() {
-        return new PublicHoliday();
-    }
-
-    /**
-     * Create an instance of {@link Reference }
-     * 
-     */
-    public Reference createReference() {
-        return new Reference();
     }
 
     /**
@@ -2047,30 +1751,6 @@ public class ObjectFactory {
      */
     public ReroutingManagement createReroutingManagement() {
         return new ReroutingManagement();
-    }
-
-    /**
-     * Create an instance of {@link RGBColour }
-     * 
-     */
-    public RGBColour createRGBColour() {
-        return new RGBColour();
-    }
-
-    /**
-     * Create an instance of {@link Road }
-     * 
-     */
-    public Road createRoad() {
-        return new Road();
-    }
-
-    /**
-     * Create an instance of {@link RoadNode }
-     * 
-     */
-    public RoadNode createRoadNode() {
-        return new RoadNode();
     }
 
     /**
@@ -2122,14 +1802,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ServiceFacility }
-     * 
-     */
-    public ServiceFacility createServiceFacility() {
-        return new ServiceFacility();
-    }
-
-    /**
      * Create an instance of {@link SignSetting }
      * 
      */
@@ -2162,35 +1834,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SituationRecordExtendedApproved }
-     * 
-     */
-    public SituationRecordExtendedApproved createSituationRecordExtendedApproved() {
-        return new SituationRecordExtendedApproved();
-    }
-
-    /**
      * Create an instance of {@link Source }
      * 
      */
     public Source createSource() {
         return new Source();
-    }
-
-    /**
-     * Create an instance of {@link SpecialDay }
-     * 
-     */
-    public SpecialDay createSpecialDay() {
-        return new SpecialDay();
-    }
-
-    /**
-     * Create an instance of {@link SpecialLocationParkingSite }
-     * 
-     */
-    public SpecialLocationParkingSite createSpecialLocationParkingSite() {
-        return new SpecialLocationParkingSite();
     }
 
     /**
@@ -2247,14 +1895,6 @@ public class ObjectFactory {
      */
     public Target createTarget() {
         return new Target();
-    }
-
-    /**
-     * Create an instance of {@link TariffsAndPayment }
-     * 
-     */
-    public TariffsAndPayment createTariffsAndPayment() {
-        return new TariffsAndPayment();
     }
 
     /**
@@ -2482,27 +2122,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UrbanParkingSite }
-     * 
-     */
-    public UrbanParkingSite createUrbanParkingSite() {
-        return new UrbanParkingSite();
-    }
-
-    /**
      * Create an instance of {@link UrlLink }
      * 
      */
     public UrlLink createUrlLink() {
         return new UrlLink();
-    }
-
-    /**
-     * Create an instance of {@link UsedPaymentCard }
-     * 
-     */
-    public UsedPaymentCard createUsedPaymentCard() {
-        return new UsedPaymentCard();
     }
 
     /**
@@ -2530,38 +2154,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VehicleCharacteristicsExtended }
-     * 
-     */
-    public VehicleCharacteristicsExtended createVehicleCharacteristicsExtended() {
-        return new VehicleCharacteristicsExtended();
-    }
-
-    /**
-     * Create an instance of {@link VehicleCountAndRate }
-     * 
-     */
-    public VehicleCountAndRate createVehicleCountAndRate() {
-        return new VehicleCountAndRate();
-    }
-
-    /**
-     * Create an instance of {@link VehicleCountValue }
-     * 
-     */
-    public VehicleCountValue createVehicleCountValue() {
-        return new VehicleCountValue();
-    }
-
-    /**
-     * Create an instance of {@link VehicleCountWithinInterval }
-     * 
-     */
-    public VehicleCountWithinInterval createVehicleCountWithinInterval() {
-        return new VehicleCountWithinInterval();
-    }
-
-    /**
      * Create an instance of {@link VehicleFlowValue }
      * 
      */
@@ -2575,14 +2167,6 @@ public class ObjectFactory {
      */
     public VehicleObstruction createVehicleObstruction() {
         return new VehicleObstruction();
-    }
-
-    /**
-     * Create an instance of {@link VehicleRate }
-     * 
-     */
-    public VehicleRate createVehicleRate() {
-        return new VehicleRate();
     }
 
     /**
@@ -2671,6 +2255,14 @@ public class ObjectFactory {
      */
     public VmsPictogramDisplayCharacteristics createVmsPictogramDisplayCharacteristics() {
         return new VmsPictogramDisplayCharacteristics();
+    }
+
+    /**
+     * Create an instance of {@link VmsPictogramImageExtension }
+     * 
+     */
+    public VmsPictogramImageExtension createVmsPictogramImageExtension() {
+        return new VmsPictogramImageExtension();
     }
 
     /**

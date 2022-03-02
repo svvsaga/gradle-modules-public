@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="periodName" type="{http://datex2.eu/schema/2/2_0}MultilingualString" minOccurs="0"/&gt;
  *         &lt;element name="recurringTimePeriodOfDay" type="{http://datex2.eu/schema/2/2_0}TimePeriodOfDay" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="recurringDayWeekMonthPeriod" type="{http://datex2.eu/schema/2/2_0}DayWeekMonth" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="periodExtension" type="{http://datex2.eu/schema/2/2_0}_PeriodExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="periodExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -52,7 +52,7 @@ public class Period {
     protected MultilingualString periodName;
     protected List<TimePeriodOfDay> recurringTimePeriodOfDay;
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
-    protected PeriodExtensionType periodExtension;
+    protected ExtensionType periodExtension;
 
     /**
      * Gets the value of the startOfPeriod property.
@@ -189,10 +189,10 @@ public class Period {
      * 
      * @return
      *     possible object is
-     *     {@link PeriodExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public PeriodExtensionType getPeriodExtension() {
+    public ExtensionType getPeriodExtension() {
         return periodExtension;
     }
 
@@ -201,10 +201,10 @@ public class Period {
      * 
      * @param value
      *     allowed object is
-     *     {@link PeriodExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPeriodExtension(PeriodExtensionType value) {
+    public void setPeriodExtension(ExtensionType value) {
         this.periodExtension = value;
     }
 

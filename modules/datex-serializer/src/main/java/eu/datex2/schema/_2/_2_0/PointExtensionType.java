@@ -20,7 +20,6 @@ import org.w3c.dom.Element;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="pointExtended" type="{http://datex2.eu/schema/2/2_0}PointExtended" minOccurs="0"/&gt;
  *         &lt;element name="openlrExtendedPoint" type="{http://datex2.eu/schema/2/2_0}OpenlrExtendedPoint" minOccurs="0"/&gt;
  *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
@@ -33,40 +32,14 @@ import org.w3c.dom.Element;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "_PointExtensionType", propOrder = {
-    "pointExtended",
     "openlrExtendedPoint",
     "any"
 })
 public class PointExtensionType {
 
-    protected PointExtended pointExtended;
     protected OpenlrExtendedPoint openlrExtendedPoint;
     @XmlAnyElement(lax = true)
     protected List<Object> any;
-
-    /**
-     * Gets the value of the pointExtended property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PointExtended }
-     *     
-     */
-    public PointExtended getPointExtended() {
-        return pointExtended;
-    }
-
-    /**
-     * Sets the value of the pointExtended property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PointExtended }
-     *     
-     */
-    public void setPointExtended(PointExtended value) {
-        this.pointExtended = value;
-    }
 
     /**
      * Gets the value of the openlrExtendedPoint property.

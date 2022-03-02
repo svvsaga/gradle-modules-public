@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="deIcingConcentration" type="{http://datex2.eu/schema/2/2_0}KilogramsConcentrationValue" minOccurs="0"/&gt;
  *         &lt;element name="depthOfSnow" type="{http://datex2.eu/schema/2/2_0}FloatingPointMetreDistanceValue" minOccurs="0"/&gt;
  *         &lt;element name="waterFilmThickness" type="{http://datex2.eu/schema/2/2_0}FloatingPointMetreDistanceValue" minOccurs="0"/&gt;
- *         &lt;element name="roadSurfaceConditionMeasurementsExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="roadSurfaceConditionMeasurementsExtension" type="{http://datex2.eu/schema/2/2_0}_RoadSurfaceConditionMeasurementsExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -49,7 +49,7 @@ public class RoadSurfaceConditionMeasurements {
     protected KilogramsConcentrationValue deIcingConcentration;
     protected FloatingPointMetreDistanceValue depthOfSnow;
     protected FloatingPointMetreDistanceValue waterFilmThickness;
-    protected ExtensionType roadSurfaceConditionMeasurementsExtension;
+    protected RoadSurfaceConditionMeasurementsExtensionType roadSurfaceConditionMeasurementsExtension;
 
     /**
      * Gets the value of the roadSurfaceTemperature property.
@@ -200,10 +200,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link RoadSurfaceConditionMeasurementsExtensionType }
      *     
      */
-    public ExtensionType getRoadSurfaceConditionMeasurementsExtension() {
+    public RoadSurfaceConditionMeasurementsExtensionType getRoadSurfaceConditionMeasurementsExtension() {
         return roadSurfaceConditionMeasurementsExtension;
     }
 
@@ -212,10 +212,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link RoadSurfaceConditionMeasurementsExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
+    public void setRoadSurfaceConditionMeasurementsExtension(RoadSurfaceConditionMeasurementsExtensionType value) {
         this.roadSurfaceConditionMeasurementsExtension = value;
     }
 

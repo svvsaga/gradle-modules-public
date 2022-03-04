@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Holds common data that are used both in OpenlrPointAccessPoint and OpenlrPointAlongLine.
- *       
- * 
  * <p>Java class for OpenlrBasePointLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

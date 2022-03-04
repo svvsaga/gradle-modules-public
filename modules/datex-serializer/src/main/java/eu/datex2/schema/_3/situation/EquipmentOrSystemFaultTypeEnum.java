@@ -37,8 +37,7 @@ public class EquipmentOrSystemFaultTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of fault, malfunctioning or non operational conditions of equipment or systems.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

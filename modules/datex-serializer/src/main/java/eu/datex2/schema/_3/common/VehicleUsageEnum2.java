@@ -35,92 +35,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VehicleUsageEnum2 {
 
-
-    /**
-     * Vehicle used for agricultural purposes.
-     * 
-     */
     @XmlEnumValue("agricultural")
     AGRICULTURAL("agricultural"),
-
-    /**
-     * Vehicles operated by a car-sharing company.
-     * 
-     */
     @XmlEnumValue("carSharing")
     CAR_SHARING("carSharing"),
-
-    /**
-     * Vehicles that are used to deliver goods in a city area.
-     * 
-     */
     @XmlEnumValue("cityLogistics")
     CITY_LOGISTICS("cityLogistics"),
-
-    /**
-     * Vehicle which is limited to non-private usage or public transport usage.
-     *           
-     * 
-     */
     @XmlEnumValue("commercial")
     COMMERCIAL("commercial"),
-
-    /**
-     * Vehicle used by the emergency services.
-     * 
-     */
     @XmlEnumValue("emergencyServices")
     EMERGENCY_SERVICES("emergencyServices"),
-
-    /**
-     * Vehicle used by the military.
-     * 
-     */
     @XmlEnumValue("military")
     MILITARY("military"),
-
-    /**
-     * Vehicle used for non-commercial or private purposes.
-     * 
-     */
     @XmlEnumValue("nonCommercial")
     NON_COMMERCIAL("nonCommercial"),
-
-    /**
-     * Vehicle used as part of a patrol service, e.g. road operator or automobile
-     *             association patrol vehicle.
-     *           
-     * 
-     */
     @XmlEnumValue("patrol")
     PATROL("patrol"),
-
-    /**
-     * Vehicle used to provide a recovery service.
-     * 
-     */
     @XmlEnumValue("recoveryServices")
     RECOVERY_SERVICES("recoveryServices"),
-
-    /**
-     * Vehicle used for road maintenance or construction work purposes.
-     *           
-     * 
-     */
     @XmlEnumValue("roadMaintenanceOrConstruction")
     ROAD_MAINTENANCE_OR_CONSTRUCTION("roadMaintenanceOrConstruction"),
-
-    /**
-     * Vehicle used by the road operator.
-     * 
-     */
     @XmlEnumValue("roadOperator")
     ROAD_OPERATOR("roadOperator"),
-
-    /**
-     * Vehicle used to provide an authorised taxi service.
-     * 
-     */
     @XmlEnumValue("taxi")
     TAXI("taxi"),
     @XmlEnumValue("_extended")

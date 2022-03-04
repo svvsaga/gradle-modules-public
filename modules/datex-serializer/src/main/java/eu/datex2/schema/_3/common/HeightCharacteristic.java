@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Height characteristic of a vehicle.
- * 
  * <p>Java class for HeightCharacteristic complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

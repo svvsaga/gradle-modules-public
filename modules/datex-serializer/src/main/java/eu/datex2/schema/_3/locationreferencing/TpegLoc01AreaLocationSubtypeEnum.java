@@ -37,7 +37,7 @@ public class TpegLoc01AreaLocationSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of area.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

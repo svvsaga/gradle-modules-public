@@ -34,86 +34,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum NonWeatherRelatedRoadConditionTypeEnum2 {
 
-
-    /**
-     * Increased skid risk due to diesel on the road.
-     * 
-     */
     @XmlEnumValue("dieselOnRoad")
     DIESEL_ON_ROAD("dieselOnRoad"),
-
-    /**
-     * Increased skid risk due to leaves on road.
-     * 
-     */
     @XmlEnumValue("leavesOnRoad")
     LEAVES_ON_ROAD("leavesOnRoad"),
-
-    /**
-     * Increased skid risk and injury risk due to loose chippings on road.
-     *           
-     * 
-     */
     @XmlEnumValue("looseChippings")
     LOOSE_CHIPPINGS("looseChippings"),
-
-    /**
-     * Increased skid risk due to loose sand on road.
-     * 
-     */
     @XmlEnumValue("looseSandOnRoad")
     LOOSE_SAND_ON_ROAD("looseSandOnRoad"),
-
-    /**
-     * Increased skid risk due to mud on road.
-     * 
-     */
     @XmlEnumValue("mudOnRoad")
     MUD_ON_ROAD("mudOnRoad"),
-
-    /**
-     * Increased skid risk due to oil on road.
-     * 
-     */
     @XmlEnumValue("oilOnRoad")
     OIL_ON_ROAD("oilOnRoad"),
-
-    /**
-     * Increased skid risk due to petrol on road.
-     * 
-     */
     @XmlEnumValue("petrolOnRoad")
     PETROL_ON_ROAD("petrolOnRoad"),
-
-    /**
-     * Road markings are not present due to maintenance works in progress
-     *           
-     * 
-     */
     @XmlEnumValue("roadMarkingNotPresent")
     ROAD_MARKING_NOT_PRESENT("roadMarkingNotPresent"),
-
-    /**
-     * The road surface is damaged, severely rutted or potholed (i.e. it is in a poor
-     *             state of repair).
-     *           
-     * 
-     */
     @XmlEnumValue("roadSurfaceInPoorCondition")
     ROAD_SURFACE_IN_POOR_CONDITION("roadSurfaceInPoorCondition"),
-
-    /**
-     * The road surface is slippery due to an unspecified non-weather related cause.
-     *           
-     * 
-     */
     @XmlEnumValue("slipperyRoad")
     SLIPPERY_ROAD("slipperyRoad"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

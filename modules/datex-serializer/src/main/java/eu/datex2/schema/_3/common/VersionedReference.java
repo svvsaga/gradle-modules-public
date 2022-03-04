@@ -1,6 +1,8 @@
 
 package eu.datex2.schema._3.common;
 
+import eu.datex2.schema._3.cctvextension.CctvCameraListVersionedReference;
+import eu.datex2.schema._3.cctvextension.CctvCameraMetadataRecordVersionedReference;
 import eu.datex2.schema._3.locationreferencing.PredefinedItineraryVersionedReference;
 import eu.datex2.schema._3.locationreferencing.PredefinedLocationVersionedReference;
 import eu.datex2.schema._3.roadtrafficdata.MeasurementSiteTableVersionedReference;
@@ -35,13 +37,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VersionedReference")
 @XmlSeeAlso({
+    CctvCameraListVersionedReference.class,
+    CctvCameraMetadataRecordVersionedReference.class,
+    PredefinedItineraryVersionedReference.class,
+    eu.datex2.schema._3.locationreferencing.PredefinedLocationGroupVersionedReference.class,
+    PredefinedLocationVersionedReference.class,
     eu.datex2.schema._3.vms.SituationRecordVersionedReference.class,
     eu.datex2.schema._3.vms.SituationVersionedReference.class,
     VmsControllerTableVersionedReference.class,
     VmsControllerVersionedReference.class,
-    PredefinedItineraryVersionedReference.class,
-    eu.datex2.schema._3.locationreferencing.PredefinedLocationGroupVersionedReference.class,
-    PredefinedLocationVersionedReference.class,
     eu.datex2.schema._3.situation.SituationRecordVersionedReference.class,
     eu.datex2.schema._3.situation.SituationVersionedReference.class,
     MeasurementSiteTableVersionedReference.class,

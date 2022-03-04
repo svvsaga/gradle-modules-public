@@ -37,8 +37,7 @@ public class TrafficConstrictionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of constriction to which traffic is subjected as a result of an event.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

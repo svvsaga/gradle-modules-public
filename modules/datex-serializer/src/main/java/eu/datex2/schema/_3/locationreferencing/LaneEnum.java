@@ -37,7 +37,7 @@ public class LaneEnum {
     protected String extendedValue;
 
     /**
-     * List of descriptors identifying specific lanes.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

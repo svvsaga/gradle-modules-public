@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the status of traffic conditions on a section of road in
- *         a specified direction.
- *       
- * 
  * <p>Java class for TrafficStatusValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

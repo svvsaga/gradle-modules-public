@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Third coordinate for points defined geodetically
- * 
  * <p>Java class for HeightCoordinate complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

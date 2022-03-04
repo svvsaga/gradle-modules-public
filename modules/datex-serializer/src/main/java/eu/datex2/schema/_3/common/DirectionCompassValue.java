@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of direction as a point of the compass.
- * 
  * <p>Java class for DirectionCompassValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

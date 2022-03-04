@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing one or more VMS controller unit tables each comprising a set of
- *         records which hold details of VMS controller units.
- *       
- * 
  * <p>Java class for VmsTablePublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

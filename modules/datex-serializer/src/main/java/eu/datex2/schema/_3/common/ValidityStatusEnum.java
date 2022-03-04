@@ -37,8 +37,7 @@ public class ValidityStatusEnum {
     protected String extendedValue;
 
     /**
-     * Values of validity status that can be assigned to a described event, action or item.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

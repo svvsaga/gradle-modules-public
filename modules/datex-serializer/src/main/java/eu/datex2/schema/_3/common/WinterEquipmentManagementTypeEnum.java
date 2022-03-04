@@ -37,7 +37,7 @@ public class WinterEquipmentManagementTypeEnum {
     protected String extendedValue;
 
     /**
-     * Instructions relating to the use of winter equipment.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

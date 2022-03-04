@@ -32,67 +32,22 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RoadsideAssistanceTypeEnum2 {
 
-
-    /**
-     * Air ambulance assistance.
-     * 
-     */
     @XmlEnumValue("airAmbulance")
     AIR_AMBULANCE("airAmbulance"),
-
-    /**
-     * Bus passenger assistance.
-     * 
-     */
     @XmlEnumValue("busPassengerAssistance")
     BUS_PASSENGER_ASSISTANCE("busPassengerAssistance"),
-
-    /**
-     * Emergency services assistance.
-     * 
-     */
     @XmlEnumValue("emergencyServices")
     EMERGENCY_SERVICES("emergencyServices"),
-
-    /**
-     * First aid assistance.
-     * 
-     */
     @XmlEnumValue("firstAid")
     FIRST_AID("firstAid"),
-
-    /**
-     * Food delivery.
-     * 
-     */
     @XmlEnumValue("foodDelivery")
     FOOD_DELIVERY("foodDelivery"),
-
-    /**
-     * Helicopter rescue.
-     * 
-     */
     @XmlEnumValue("helicopterRescue")
     HELICOPTER_RESCUE("helicopterRescue"),
-
-    /**
-     * Vehicle repair assistance.
-     * 
-     */
     @XmlEnumValue("vehicleRepair")
     VEHICLE_REPAIR("vehicleRepair"),
-
-    /**
-     * Vehicle recovery.
-     * 
-     */
     @XmlEnumValue("vehicleRecovery")
     VEHICLE_RECOVERY("vehicleRecovery"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

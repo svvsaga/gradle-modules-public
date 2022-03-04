@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The sequence of location reference points is terminated by a last location reference
- *         point.
- *       
- * 
  * <p>Java class for OpenlrLastLocationReferencePoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

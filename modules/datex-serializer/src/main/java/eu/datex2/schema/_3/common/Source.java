@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of the source from which the information was obtained.
- * 
  * <p>Java class for Source complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class CollisionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Identifies a type of collision
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

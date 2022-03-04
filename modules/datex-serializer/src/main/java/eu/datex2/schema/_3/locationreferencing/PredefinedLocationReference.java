@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A location reference which is predefined and may be realised by a predefined itinerary,
- *         non-ordered group of locations or single location.
- *       
- * 
  * <p>Java class for PredefinedLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -14,10 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Provides the current status and settings of the VMS and the currently displayed
- *         information.
- *       
- * 
  * <p>Java class for VmsStatus complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

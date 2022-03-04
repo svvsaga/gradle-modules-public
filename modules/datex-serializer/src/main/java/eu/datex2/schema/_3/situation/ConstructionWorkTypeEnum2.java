@@ -28,42 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ConstructionWorkTypeEnum2 {
 
-
-    /**
-     * Blasting or quarrying work at the specified location.
-     * 
-     */
     @XmlEnumValue("blastingWork")
     BLASTING_WORK("blastingWork"),
-
-    /**
-     * Construction work of a general nature at the specified location.
-     *           
-     * 
-     */
     @XmlEnumValue("constructionWork")
     CONSTRUCTION_WORK("constructionWork"),
-
-    /**
-     * Demolition work associated with the construction work.
-     * 
-     */
     @XmlEnumValue("demolitionWork")
     DEMOLITION_WORK("demolitionWork"),
-
-    /**
-     * Construction work associated with improvements to the road or its layout or with
-     *             it upgrading.
-     *           
-     * 
-     */
     @XmlEnumValue("roadImprovementOrUpgrading")
     ROAD_IMPROVEMENT_OR_UPGRADING("roadImprovementOrUpgrading"),
-
-    /**
-     * Road widening work at the specified location.
-     * 
-     */
     @XmlEnumValue("roadWideningWork")
     ROAD_WIDENING_WORK("roadWideningWork"),
     @XmlEnumValue("_extended")

@@ -11,9 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The OpenLR method of area definition by providing a center position and a radius
- *       
- * 
  * <p>Java class for OpenlrCircleLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

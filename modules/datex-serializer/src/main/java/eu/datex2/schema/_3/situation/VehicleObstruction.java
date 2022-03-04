@@ -13,8 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An obstruction on the road caused by one or more vehicles.
- * 
  * <p>Java class for VehicleObstruction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

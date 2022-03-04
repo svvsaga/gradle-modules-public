@@ -1,7 +1,6 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import java.math.BigInteger;
 import javax.xml.datatype.XMLGregorianCalendar;
 import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
@@ -25,10 +24,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="exchangeStatus" type="{http://datex2.eu/schema/3/exchangeInformation}_ExchangeStatusEnum"/&gt;
  *         &lt;element name="exchangeStatusDescription" type="{http://datex2.eu/schema/3/common}MultilingualString" minOccurs="0"/&gt;
  *         &lt;element name="completedPaylod" type="{http://datex2.eu/schema/3/common}Boolean" minOccurs="0"/&gt;
- *         &lt;element name="messageSequencingNumber" type="{http://datex2.eu/schema/3/common}NonNegativeInteger" minOccurs="0"/&gt;
  *         &lt;element name="messageGenerationTimestamp" type="{http://datex2.eu/schema/3/common}DateTime"/&gt;
  *         &lt;element name="returnInformation" type="{http://datex2.eu/schema/3/exchangeInformation}ReturnInformation" minOccurs="0"/&gt;
- *         &lt;element name="sessionInformation" type="{http://datex2.eu/schema/3/exchangeInformation}SessionInformation" minOccurs="0"/&gt;
  *         &lt;element name="_dynamicInformationExtension" type="{http://datex2.eu/schema/3/common}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -43,10 +40,8 @@ import jakarta.xml.bind.annotation.XmlType;
     "exchangeStatus",
     "exchangeStatusDescription",
     "completedPaylod",
-    "messageSequencingNumber",
     "messageGenerationTimestamp",
     "returnInformation",
-    "sessionInformation",
     "dynamicInformationExtension"
 })
 public class DynamicInformation {
@@ -55,13 +50,10 @@ public class DynamicInformation {
     protected ExchangeStatusEnum exchangeStatus;
     protected MultilingualString exchangeStatusDescription;
     protected Boolean completedPaylod;
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger messageSequencingNumber;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar messageGenerationTimestamp;
     protected ReturnInformation returnInformation;
-    protected SessionInformation sessionInformation;
     @XmlElement(name = "_dynamicInformationExtension")
     protected ExtensionType dynamicInformationExtension;
 
@@ -138,30 +130,6 @@ public class DynamicInformation {
     }
 
     /**
-     * Gets the value of the messageSequencingNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getMessageSequencingNumber() {
-        return messageSequencingNumber;
-    }
-
-    /**
-     * Sets the value of the messageSequencingNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setMessageSequencingNumber(BigInteger value) {
-        this.messageSequencingNumber = value;
-    }
-
-    /**
      * Gets the value of the messageGenerationTimestamp property.
      * 
      * @return
@@ -207,30 +175,6 @@ public class DynamicInformation {
      */
     public void setReturnInformation(ReturnInformation value) {
         this.returnInformation = value;
-    }
-
-    /**
-     * Gets the value of the sessionInformation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SessionInformation }
-     *     
-     */
-    public SessionInformation getSessionInformation() {
-        return sessionInformation;
-    }
-
-    /**
-     * Sets the value of the sessionInformation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SessionInformation }
-     *     
-     */
-    public void setSessionInformation(SessionInformation value) {
-        this.sessionInformation = value;
     }
 
     /**

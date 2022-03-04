@@ -37,7 +37,7 @@ public class OpenlrFunctionalRoadClassEnum {
     protected String extendedValue;
 
     /**
-     * Enemuration of functional road class
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -27,35 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TrafficTrendTypeEnum2 {
 
-
-    /**
-     * Traffic conditions are changing from free-flow to heavy or slow service levels.
-     *             Queues may also be expected.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficBuildingUp")
     TRAFFIC_BUILDING_UP("trafficBuildingUp"),
-
-    /**
-     * Traffic conditions are changing from heavy or slow service levels to free-flow.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficEasing")
     TRAFFIC_EASING("trafficEasing"),
-
-    /**
-     * Traffic conditions are currently stable.
-     * 
-     */
     @XmlEnumValue("trafficStable")
     TRAFFIC_STABLE("trafficStable"),
-
-    /**
-     * The trend of traffic conditions is currently unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

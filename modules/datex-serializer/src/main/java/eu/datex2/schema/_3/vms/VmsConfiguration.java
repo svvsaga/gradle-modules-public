@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Describes the current configuration and characteristics of a VMS, whether it is statically
- *         or dynamically configured.
- *       
- * 
  * <p>Java class for VmsConfiguration complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

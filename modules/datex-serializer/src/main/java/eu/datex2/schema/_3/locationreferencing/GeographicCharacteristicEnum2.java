@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum GeographicCharacteristicEnum2 {
 
-
-    /**
-     * Around a bend in the road.
-     * 
-     */
     @XmlEnumValue("aroundABendInRoad")
     AROUND_A_BEND_IN_ROAD("aroundABendInRoad"),
-
-    /**
-     * On border crossing.
-     * 
-     */
     @XmlEnumValue("onBorder")
     ON_BORDER("onBorder"),
-
-    /**
-     * On mountain pass.
-     * 
-     */
     @XmlEnumValue("onPass")
     ON_PASS("onPass"),
-
-    /**
-     * Over the crest of a hill.
-     * 
-     */
     @XmlEnumValue("overCrestOfHill")
     OVER_CREST_OF_HILL("overCrestOfHill"),
     @XmlEnumValue("_extended")

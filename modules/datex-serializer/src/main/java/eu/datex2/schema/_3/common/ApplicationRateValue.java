@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the application rate of a substance.
- * 
  * <p>Java class for ApplicationRateValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

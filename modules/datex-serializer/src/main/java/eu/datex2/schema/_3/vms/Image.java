@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An image, with encoded data and identification of format
- * 
  * <p>Java class for Image complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class LowEmissionLevelEnum {
     protected String extendedValue;
 
     /**
-     * The emission level of a vehicle.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

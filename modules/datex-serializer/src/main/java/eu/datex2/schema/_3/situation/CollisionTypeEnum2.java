@@ -31,65 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum CollisionTypeEnum2 {
 
-
-    /**
-     * Collision of vehicle with one or more animals.
-     * 
-     */
     @XmlEnumValue("collisionWithAnimal")
     COLLISION_WITH_ANIMAL("collisionWithAnimal"),
-
-    /**
-     * Collision of vehicle with an object of a stationary nature.
-     * 
-     */
     @XmlEnumValue("collisionWithObstacle")
     COLLISION_WITH_OBSTACLE("collisionWithObstacle"),
-
-    /**
-     * Collision of vehicle with one or more pedestrians.
-     * 
-     */
     @XmlEnumValue("collisionWithPerson")
     COLLISION_WITH_PERSON("collisionWithPerson"),
-
-    /**
-     * Collision of vehicle with another vehicle head on.
-     * 
-     */
     @XmlEnumValue("headOnCollision")
     HEAD_ON_COLLISION("headOnCollision"),
-
-    /**
-     * Collision of vehicle with another vehicle either head on or sideways.
-     *           
-     * 
-     */
     @XmlEnumValue("headOnOrSideCollision")
     HEAD_ON_OR_SIDE_COLLISION("headOnOrSideCollision"),
-
-    /**
-     * Collision involving multiple vehicles
-     * 
-     */
     @XmlEnumValue("multipleVehicleCollision")
     MULTIPLE_VEHICLE_COLLISION("multipleVehicleCollision"),
-
-    /**
-     * Includes all accidents where one or more vehicles have collided with the rear of
-     *             one or more other vehicles.
-     *           
-     * 
-     */
     @XmlEnumValue("rearCollision")
     REAR_COLLISION("rearCollision"),
-
-    /**
-     * Includes all accidents where one or more vehicles have collided with the side of
-     *             one or more other vehicles.
-     *           
-     * 
-     */
     @XmlEnumValue("sideCollision")
     SIDE_COLLISION("sideCollision"),
     @XmlEnumValue("_extended")

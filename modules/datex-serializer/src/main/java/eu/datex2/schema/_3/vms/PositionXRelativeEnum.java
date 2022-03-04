@@ -37,7 +37,7 @@ public class PositionXRelativeEnum {
     protected String extendedValue;
 
     /**
-     * Relative horizontal positions of one item to another.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

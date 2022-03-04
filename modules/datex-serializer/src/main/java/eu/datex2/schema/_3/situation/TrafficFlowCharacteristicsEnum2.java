@@ -27,37 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TrafficFlowCharacteristicsEnum2 {
 
-
-    /**
-     * Traffic flow is of an irregular nature, subject to sudden changes in rates.
-     *           
-     * 
-     */
     @XmlEnumValue("erraticFlow")
     ERRATIC_FLOW("erraticFlow"),
-
-    /**
-     * Traffic flow is smooth.
-     * 
-     */
     @XmlEnumValue("smoothFlow")
     SMOOTH_FLOW("smoothFlow"),
-
-    /**
-     * Traffic flow is of a stop and go nature with queues forming and ending
-     *             continuously on the specified section of road.
-     *           
-     * 
-     */
     @XmlEnumValue("stopAndGo")
     STOP_AND_GO("stopAndGo"),
-
-    /**
-     * Traffic is blocked at the specified location and in the specified direction due to
-     *             an unplanned event.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficBlocked")
     TRAFFIC_BLOCKED("trafficBlocked"),
     @XmlEnumValue("_extended")

@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A geographic or geometric area defined by a TPEG-Loc structure which may include height
- *         information for additional geospatial discrimination.
- *       
- * 
  * <p>Java class for TpegAreaLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

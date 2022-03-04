@@ -37,9 +37,7 @@ public class RelativeTrafficFlowEnum {
     protected String extendedValue;
 
     /**
-     * Levels of assessment of the traffic flow conditions relative to normally expected
-     *         conditions at this date/time.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

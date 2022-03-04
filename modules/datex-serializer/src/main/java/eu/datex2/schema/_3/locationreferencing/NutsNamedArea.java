@@ -7,10 +7,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The NUTS-Code representation for the named area (Nomenclature of territorial units for
- *         statistics) or its LAU code representation (Local Administrative Unit).
- *       
- * 
  * <p>Java class for NutsNamedArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class TpegLoc04HeightTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of height.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

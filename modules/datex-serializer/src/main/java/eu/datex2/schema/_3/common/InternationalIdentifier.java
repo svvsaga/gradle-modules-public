@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifier/name whose range is specific to the particular country.
- * 
  * <p>Java class for InternationalIdentifier complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

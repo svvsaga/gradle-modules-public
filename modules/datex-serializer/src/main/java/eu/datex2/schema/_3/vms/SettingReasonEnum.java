@@ -37,7 +37,7 @@ public class SettingReasonEnum {
     protected String extendedValue;
 
     /**
-     * Coded reasons why a message has been selected for display on the sign.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

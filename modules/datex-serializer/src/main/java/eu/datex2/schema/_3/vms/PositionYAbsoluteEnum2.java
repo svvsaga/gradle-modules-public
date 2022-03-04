@@ -26,25 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PositionYAbsoluteEnum2 {
 
-
-    /**
-     * At the top of the assigned space.
-     * 
-     */
     @XmlEnumValue("atTop")
     AT_TOP("atTop"),
-
-    /**
-     * In the middle of the assigned space.
-     * 
-     */
     @XmlEnumValue("inTheMiddle")
     IN_THE_MIDDLE("inTheMiddle"),
-
-    /**
-     * At the bottom of the assigned space.
-     * 
-     */
     @XmlEnumValue("atBottom")
     AT_BOTTOM("atBottom"),
     @XmlEnumValue("_extended")

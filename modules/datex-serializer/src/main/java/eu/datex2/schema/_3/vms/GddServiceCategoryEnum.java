@@ -37,9 +37,7 @@ public class GddServiceCategoryEnum {
     protected String extendedValue;
 
     /**
-     * Type of service offered by the pictogram, as defined in ISO 14823 Graphic Data Dictionary
-     *         (GDD)
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

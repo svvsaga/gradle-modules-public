@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Roadworks involving the construction of new infrastructure.
- * 
  * <p>Java class for ConstructionWorks complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

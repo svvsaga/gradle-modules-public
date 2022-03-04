@@ -28,52 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ReferentTypeEnum2 {
 
-
-    /**
-     * A boundary between two jurisdictional or administrative areas. These may be legal
-     *             boundaries such as between counties or countries, maintenance responsibility boundaries or
-     *             control boundaries.
-     *           
-     * 
-     */
     @XmlEnumValue("boundary")
     BOUNDARY("boundary"),
-
-    /**
-     * A crossing of two or more roads where the precise point of intersection is defined
-     *             according to specific business rules.
-     *           
-     * 
-     */
     @XmlEnumValue("intersection")
     INTERSECTION("intersection"),
-
-    /**
-     * A marker which is usually but not necessarily physical that is one of a sequence
-     *             which are spaced out along the linear object (road) to provide a location reference. The spacing
-     *             of markers is not necessarily even.
-     *           
-     * 
-     */
     @XmlEnumValue("referenceMarker")
     REFERENCE_MARKER("referenceMarker"),
-
-    /**
-     * A visible identifiable physical landmark either alongside or close to the linear
-     *             object.
-     *           
-     * 
-     */
     @XmlEnumValue("landmark")
     LANDMARK("landmark"),
-
-    /**
-     * A topological node defined on a road network. Such nodes may delineate the
-     *             segmentation of the road network according to defined business rules or may constitute a purely
-     *             topological representation of a road network.
-     *           
-     * 
-     */
     @XmlEnumValue("roadNode")
     ROAD_NODE("roadNode"),
     @XmlEnumValue("_extended")

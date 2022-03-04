@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Actions that an authorised operator can decide to implement to prevent or help correct
- *         dangerous or poor driving conditions, or any actions affecting normal operation of a road.
- *       
- * 
  * <p>Java class for OperatorAction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

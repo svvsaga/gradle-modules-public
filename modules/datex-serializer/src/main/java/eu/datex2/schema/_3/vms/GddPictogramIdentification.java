@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Group of codes that uniquely identifies a kind of pictogram, according to the ISO 14823
- *         Graphic Data Dictionary
- *       
- * 
  * <p>Java class for GddPictogramIdentification complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

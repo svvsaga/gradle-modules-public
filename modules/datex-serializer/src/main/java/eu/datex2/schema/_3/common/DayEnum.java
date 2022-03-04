@@ -37,7 +37,7 @@ public class DayEnum {
     protected String extendedValue;
 
     /**
-     * Days of the week.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * General instruction and/or message that is issued by the network/road operator which is
- *         applicable to drivers and sometimes passengers.
- *       
- * 
  * <p>Java class for GeneralInstructionOrMessageToRoadUsers complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

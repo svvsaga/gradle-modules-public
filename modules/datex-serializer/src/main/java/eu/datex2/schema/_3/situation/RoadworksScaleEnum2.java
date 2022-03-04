@@ -26,28 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RoadworksScaleEnum2 {
 
-
-    /**
-     * The roadworks scale is major according to the responsible road operator.
-     *           
-     * 
-     */
     @XmlEnumValue("major")
     MAJOR("major"),
-
-    /**
-     * The roadworks scale is medium according to the responsible road operator.
-     *           
-     * 
-     */
     @XmlEnumValue("medium")
     MEDIUM("medium"),
-
-    /**
-     * The roadworks scale is minor according to the responsible road operator.
-     *           
-     * 
-     */
     @XmlEnumValue("minor")
     MINOR("minor"),
     @XmlEnumValue("_extended")

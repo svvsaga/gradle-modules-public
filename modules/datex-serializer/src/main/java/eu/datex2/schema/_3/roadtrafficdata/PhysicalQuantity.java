@@ -16,10 +16,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated physical quantity, with related properties explaining its
- *         context, meaning or status
- *       
- * 
  * <p>Java class for PhysicalQuantity complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

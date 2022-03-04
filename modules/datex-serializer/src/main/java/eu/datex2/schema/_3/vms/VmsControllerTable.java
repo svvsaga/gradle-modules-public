@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A versioned VMS controller unit table comprising a number of data records, each record
- *         defining the characteristics of a specific deployed variable message sign controller unit.
- *       
- * 
  * <p>Java class for VmsControllerTable complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

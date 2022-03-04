@@ -25,21 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OperatorActionOriginEnum2 {
 
-
-    /**
-     * Operator action originated externally to the authority which is taking the
-     *             action.
-     *           
-     * 
-     */
     @XmlEnumValue("external")
     EXTERNAL("external"),
-
-    /**
-     * Operator action originated within the authority which is taking the action.
-     *           
-     * 
-     */
     @XmlEnumValue("internal")
     INTERNAL("internal"),
     @XmlEnumValue("_extended")

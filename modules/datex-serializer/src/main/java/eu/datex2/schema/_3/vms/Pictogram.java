@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A main pictogram displayable on the VMS panel. Note a main pictogram may have an
- *         associated supplementary panel which may itself contain a further pictogram and line of text.
- *       
- * 
  * <p>Java class for Pictogram complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

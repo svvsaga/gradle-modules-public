@@ -37,7 +37,7 @@ public class FaultSeverityEnum {
     protected String extendedValue;
 
     /**
-     * Classification of the severity of faults.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,7 +37,7 @@ public class LinearElementNatureEnum {
     protected String extendedValue;
 
     /**
-     * List of indicative natures of linear elements.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,8 +37,7 @@ public class TpegLoc01FramedPointLocationSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of points on the road network framed by two other points on the same road.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

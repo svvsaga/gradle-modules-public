@@ -27,36 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum MaintenanceVehicleActionsEnum2 {
 
-
-    /**
-     * Maintenance vehicles are performing maintenance action
-     * 
-     */
     @XmlEnumValue("maintenanceAction")
     MAINTENANCE_ACTION("maintenanceAction"),
-
-    /**
-     * Maintenance vehicles are merging into the traffic flow creating a potential hazard
-     *             for road users.
-     *           
-     * 
-     */
     @XmlEnumValue("maintenanceVehiclesMergingIntoTrafficFlow")
     MAINTENANCE_VEHICLES_MERGING_INTO_TRAFFIC_FLOW("maintenanceVehiclesMergingIntoTrafficFlow"),
-
-    /**
-     * Maintenance vehicles are slow moving.
-     * 
-     */
     @XmlEnumValue("slowMoving")
     SLOW_MOVING("slowMoving"),
-
-    /**
-     * Maintenance vehicles are stopping to service equipments on or next to the
-     *             roadway.
-     *           
-     * 
-     */
     @XmlEnumValue("stoppingToServiceEquipments")
     STOPPING_TO_SERVICE_EQUIPMENTS("stoppingToServiceEquipments"),
     @XmlEnumValue("_extended")

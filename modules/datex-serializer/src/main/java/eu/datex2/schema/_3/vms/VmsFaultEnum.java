@@ -37,7 +37,7 @@ public class VmsFaultEnum {
     protected String extendedValue;
 
     /**
-     * Types of variable message sign faults.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

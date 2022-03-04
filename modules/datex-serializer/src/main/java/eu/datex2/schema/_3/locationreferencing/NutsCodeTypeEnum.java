@@ -37,9 +37,7 @@ public class NutsCodeTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of NUTS codes (Nomenclature of territorial units for statistics) including LAU codes
-     *         (Local Administrative Units).
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

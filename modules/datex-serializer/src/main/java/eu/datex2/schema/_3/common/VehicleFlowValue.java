@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the flow rate of vehicles.
- * 
  * <p>Java class for VehicleFlowValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

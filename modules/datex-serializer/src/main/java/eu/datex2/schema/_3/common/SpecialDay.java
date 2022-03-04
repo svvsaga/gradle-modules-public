@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of a special type of day, possibly also a public holiday. Can be country or
- *         region specific.
- *       
- * 
  * <p>Java class for SpecialDay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Graphic Data Dictionary structure, to identify a pictogram by code and optional
- *         supplementary attributes
- *       
- * 
  * <p>Java class for GddStructure complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

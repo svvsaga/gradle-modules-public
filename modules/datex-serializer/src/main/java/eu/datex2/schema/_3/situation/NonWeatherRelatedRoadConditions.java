@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Road surface conditions that are not related to the weather but which may affect driving
- *         conditions.
- *       
- * 
  * <p>Java class for NonWeatherRelatedRoadConditions complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

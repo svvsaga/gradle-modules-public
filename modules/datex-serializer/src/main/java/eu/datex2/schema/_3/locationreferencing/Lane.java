@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Indicates a specific lane or group of lanes.
- * 
  * <p>Java class for Lane complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

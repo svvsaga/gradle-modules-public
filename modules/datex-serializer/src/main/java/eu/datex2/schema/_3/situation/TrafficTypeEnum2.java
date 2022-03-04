@@ -36,98 +36,30 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TrafficTypeEnum2 {
 
-
-    /**
-     * Traffic destined for local access only.
-     * 
-     */
     @XmlEnumValue("accessOnlyTraffic")
     ACCESS_ONLY_TRAFFIC("accessOnlyTraffic"),
-
-    /**
-     * Traffic destined for the airport.
-     * 
-     */
     @XmlEnumValue("destinedForAirport")
     DESTINED_FOR_AIRPORT("destinedForAirport"),
-
-    /**
-     * Traffic destined for airport arrivals.
-     * 
-     */
     @XmlEnumValue("destinedForAirportArrivals")
     DESTINED_FOR_AIRPORT_ARRIVALS("destinedForAirportArrivals"),
-
-    /**
-     * Traffic destined for airport departures.
-     * 
-     */
     @XmlEnumValue("destinedForAirportDepartures")
     DESTINED_FOR_AIRPORT_DEPARTURES("destinedForAirportDepartures"),
-
-    /**
-     * Traffic destined for the ferry service.
-     * 
-     */
     @XmlEnumValue("destinedForFerryService")
     DESTINED_FOR_FERRY_SERVICE("destinedForFerryService"),
-
-    /**
-     * Traffic destined for the rail service.
-     * 
-     */
     @XmlEnumValue("destinedForRailService")
     DESTINED_FOR_RAIL_SERVICE("destinedForRailService"),
-
-    /**
-     * Traffic heading towards holiday destinations.
-     * 
-     */
     @XmlEnumValue("holidayTraffic")
     HOLIDAY_TRAFFIC("holidayTraffic"),
-
-    /**
-     * Traffic heading towards local destinations.
-     * 
-     */
     @XmlEnumValue("localTraffic")
     LOCAL_TRAFFIC("localTraffic"),
-
-    /**
-     * Traffic heading towards destinations which are a long distance away.
-     *           
-     * 
-     */
     @XmlEnumValue("longDistanceTraffic")
     LONG_DISTANCE_TRAFFIC("longDistanceTraffic"),
-
-    /**
-     * Traffic heading towards local regional destinations.
-     * 
-     */
     @XmlEnumValue("regionalTraffic")
     REGIONAL_TRAFFIC("regionalTraffic"),
-
-    /**
-     * Local residents only traffic.
-     * 
-     */
     @XmlEnumValue("residentsOnlyTraffic")
     RESIDENTS_ONLY_TRAFFIC("residentsOnlyTraffic"),
-
-    /**
-     * Traffic which is not for local access, i.e. traffic not destined for local town,
-     *             city or built up area but for transit though the area.
-     *           
-     * 
-     */
     @XmlEnumValue("throughTraffic")
     THROUGH_TRAFFIC("throughTraffic"),
-
-    /**
-     * Traffic heading towards local visitor attraction.
-     * 
-     */
     @XmlEnumValue("visitorTraffic")
     VISITOR_TRAFFIC("visitorTraffic"),
     @XmlEnumValue("_extended")

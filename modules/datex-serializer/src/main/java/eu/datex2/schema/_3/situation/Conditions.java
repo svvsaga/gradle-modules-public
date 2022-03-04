@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Any conditions which have the potential to degrade normal driving conditions.
- *       
- * 
  * <p>Java class for Conditions complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

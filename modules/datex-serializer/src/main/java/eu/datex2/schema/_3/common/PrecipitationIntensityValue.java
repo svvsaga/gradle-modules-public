@@ -8,9 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the accumulation rate of precipitation.
- *       
- * 
  * <p>Java class for PrecipitationIntensityValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

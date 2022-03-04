@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Deliberate human action of either a public disorder nature or of a situation alert type
- *         which could disrupt traffic.
- *       
- * 
  * <p>Java class for DisturbanceActivity complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

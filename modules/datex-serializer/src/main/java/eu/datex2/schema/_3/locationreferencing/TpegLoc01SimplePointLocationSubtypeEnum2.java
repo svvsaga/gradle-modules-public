@@ -25,20 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc01SimplePointLocationSubtypeEnum2 {
 
-
-    /**
-     * An point on the road network at which one or more roads intersect.
-     *           
-     * 
-     */
     @XmlEnumValue("intersection")
     INTERSECTION("intersection"),
-
-    /**
-     * A point on the road network which is not at a junction or intersection.
-     *           
-     * 
-     */
     @XmlEnumValue("nonLinkedPoint")
     NON_LINKED_POINT("nonLinkedPoint"),
     @XmlEnumValue("_extended")

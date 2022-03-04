@@ -37,7 +37,7 @@ public class SpecialDayTypeEnum {
     protected String extendedValue;
 
     /**
-     * Collection of special types of days.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

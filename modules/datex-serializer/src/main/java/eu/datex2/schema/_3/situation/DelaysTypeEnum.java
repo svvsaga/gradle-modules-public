@@ -37,7 +37,7 @@ public class DelaysTypeEnum {
     protected String extendedValue;
 
     /**
-     * Course classifications of a delay.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

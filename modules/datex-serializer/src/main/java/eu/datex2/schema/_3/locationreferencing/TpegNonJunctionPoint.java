@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A point on the road network which is not a road junction point.
- * 
  * <p>Java class for TpegNonJunctionPoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

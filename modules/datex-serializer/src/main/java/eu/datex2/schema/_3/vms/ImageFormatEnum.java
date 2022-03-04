@@ -37,7 +37,7 @@ public class ImageFormatEnum {
     protected String extendedValue;
 
     /**
-     * Identifies an image format
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,7 +37,7 @@ public class UnitOfMeasureEnum {
     protected String extendedValue;
 
     /**
-     * Identifies a unit of measure for a physical quantity
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

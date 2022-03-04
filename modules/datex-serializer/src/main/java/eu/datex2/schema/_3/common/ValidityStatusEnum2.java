@@ -27,40 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ValidityStatusEnum2 {
 
-
-    /**
-     * The described event, action or item is currently active regardless of the
-     *             definition of the validity time specification.
-     *           
-     * 
-     */
     @XmlEnumValue("active")
     ACTIVE("active"),
-
-    /**
-     * The described event, action or item is currently planned regardless of the
-     *             definition of the validity time specification.
-     *           
-     * 
-     */
     @XmlEnumValue("planned")
     PLANNED("planned"),
-
-    /**
-     * The described event, action or item is currently suspended, that is inactive,
-     *             regardless of the definition of the validity time specification.
-     *           
-     * 
-     */
     @XmlEnumValue("suspended")
     SUSPENDED("suspended"),
-
-    /**
-     * The validity status of the described event, action or item is in accordance with
-     *             the definition of the validity time specification.
-     *           
-     * 
-     */
     @XmlEnumValue("definedByValidityTimeSpec")
     DEFINED_BY_VALIDITY_TIME_SPEC("definedByValidityTimeSpec"),
     @XmlEnumValue("_extended")

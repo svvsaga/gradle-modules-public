@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Roadworks involving the maintenance or installation of infrastructure.
- * 
  * <p>Java class for MaintenanceWorks complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

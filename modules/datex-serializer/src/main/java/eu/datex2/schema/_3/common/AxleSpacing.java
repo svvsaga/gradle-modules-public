@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The spacing details between the axle sets of an individual vehicle numbered from the front
- *         to the back of the vehicle.
- *       
- * 
  * <p>Java class for AxleSpacing complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

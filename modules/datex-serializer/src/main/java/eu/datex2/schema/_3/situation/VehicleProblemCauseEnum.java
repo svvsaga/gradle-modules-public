@@ -37,7 +37,7 @@ public class VehicleProblemCauseEnum {
     protected String extendedValue;
 
     /**
-     * The component of the vehicle that has caused a problem
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

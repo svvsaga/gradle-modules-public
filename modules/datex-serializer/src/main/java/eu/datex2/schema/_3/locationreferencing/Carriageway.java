@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Supplementary positional information which details carriageway and lane locations. Several
- *         instances may exist where the element being described extends over more than one carriageway.
- *       
- * 
  * <p>Java class for Carriageway complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

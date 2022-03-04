@@ -8,9 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of distance in metres in a floating point format.
- *       
- * 
  * <p>Java class for FloatingPointMetreDistanceValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class ConstructionWorkTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of works relating to construction.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

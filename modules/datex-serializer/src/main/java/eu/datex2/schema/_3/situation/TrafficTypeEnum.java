@@ -37,7 +37,7 @@ public class TrafficTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of traffic, mostly classified by its destination type.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

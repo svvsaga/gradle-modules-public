@@ -37,7 +37,7 @@ public class OpenlrFormOfWayEnum {
     protected String extendedValue;
 
     /**
-     * Enumeration of for of way
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

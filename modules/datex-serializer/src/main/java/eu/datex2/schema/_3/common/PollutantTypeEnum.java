@@ -37,7 +37,7 @@ public class PollutantTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of pollutant that can be measured in the atmosphere.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

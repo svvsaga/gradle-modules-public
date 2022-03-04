@@ -37,7 +37,7 @@ public class PositionConfidenceCodedErrorEnum {
     protected String extendedValue;
 
     /**
-     * Error code for horizontal or vertical position confidence
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

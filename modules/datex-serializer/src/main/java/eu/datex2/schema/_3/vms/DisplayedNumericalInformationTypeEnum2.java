@@ -32,67 +32,22 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DisplayedNumericalInformationTypeEnum2 {
 
-
-    /**
-     * A distance
-     * 
-     */
     @XmlEnumValue("distance")
     DISTANCE("distance"),
-
-    /**
-     * A height e.g. for a vehicle height restriction
-     * 
-     */
     @XmlEnumValue("height")
     HEIGHT("height"),
-
-    /**
-     * A length e.g. for a vehicle length restriction
-     * 
-     */
     @XmlEnumValue("length")
     LENGTH("length"),
-
-    /**
-     * A rate of incline
-     * 
-     */
     @XmlEnumValue("rateOfIncline")
     RATE_OF_INCLINE("rateOfIncline"),
-
-    /**
-     * A road section length
-     * 
-     */
     @XmlEnumValue("sectionLength")
     SECTION_LENGTH("sectionLength"),
-
-    /**
-     * A speed e.g. for a vehicle speed limit
-     * 
-     */
     @XmlEnumValue("speed")
     SPEED("speed"),
-
-    /**
-     * A weight e.g. for a vehicle weight restriction
-     * 
-     */
     @XmlEnumValue("weight")
     WEIGHT("weight"),
-
-    /**
-     * An axle weight e.g. for an axle weight restriction
-     * 
-     */
     @XmlEnumValue("weightPerAxle")
     WEIGHT_PER_AXLE("weightPerAxle"),
-
-    /**
-     * A width e.g. for a vehicle width restriction
-     * 
-     */
     @XmlEnumValue("width")
     WIDTH("width"),
     @XmlEnumValue("_extended")

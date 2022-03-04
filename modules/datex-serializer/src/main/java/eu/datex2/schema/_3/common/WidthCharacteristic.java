@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Width characteristic of a vehicle.
- * 
  * <p>Java class for WidthCharacteristic complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

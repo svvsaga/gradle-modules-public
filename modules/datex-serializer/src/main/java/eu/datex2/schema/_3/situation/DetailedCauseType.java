@@ -14,10 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The type of influence that may be the cause of components of a situation. At least one
- *         attribute must be populated.
- *       
- * 
  * <p>Java class for DetailedCauseType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

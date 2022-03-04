@@ -37,7 +37,7 @@ public class RoadOrCarriagewayOrLaneManagementTypeEnum {
     protected String extendedValue;
 
     /**
-     * Management actions relating to road, carriageway or lane usage.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

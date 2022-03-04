@@ -37,9 +37,7 @@ public class SeverityEnum {
     protected String extendedValue;
 
     /**
-     * Levels of severity of a situation as whole assessed by the impact that the situation may
-     *         have on traffic flow as perceived by the supplier.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

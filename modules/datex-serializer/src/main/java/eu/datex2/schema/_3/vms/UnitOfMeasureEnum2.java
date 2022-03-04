@@ -33,74 +33,24 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum UnitOfMeasureEnum2 {
 
-
-    /**
-     * The imperial unit feet
-     * 
-     */
     @XmlEnumValue("feet")
     FEET("feet"),
-
-    /**
-     * The imperial units feet and inches
-     * 
-     */
     @XmlEnumValue("feetAndInches")
     FEET_AND_INCHES("feetAndInches"),
-
-    /**
-     * The metric unit kilometres
-     * 
-     */
     @XmlEnumValue("kilometres")
     KILOMETRES("kilometres"),
-
-    /**
-     * The unit kilometres per hour
-     * 
-     */
     @XmlEnumValue("kilometresPerHour")
     KILOMETRES_PER_HOUR("kilometresPerHour"),
-
-    /**
-     * The metric unit metres
-     * 
-     */
     @XmlEnumValue("metres")
     METRES("metres"),
-
-    /**
-     * The imperial unit miles
-     * 
-     */
     @XmlEnumValue("miles")
     MILES("miles"),
-
-    /**
-     * The unit miles per hour
-     * 
-     */
     @XmlEnumValue("milesPerHour")
     MILES_PER_HOUR("milesPerHour"),
-
-    /**
-     * A percentage
-     * 
-     */
     @XmlEnumValue("percentage")
     PERCENTAGE("percentage"),
-
-    /**
-     * The metric unit tonnes
-     * 
-     */
     @XmlEnumValue("tonnes")
     TONNES("tonnes"),
-
-    /**
-     * The imperial unit yards
-     * 
-     */
     @XmlEnumValue("yards")
     YARDS("yards"),
     @XmlEnumValue("_extended")

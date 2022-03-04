@@ -31,60 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InvolvementRolesEnum2 {
 
-
-    /**
-     * Cyclist.
-     * 
-     */
     @XmlEnumValue("cyclist")
     CYCLIST("cyclist"),
-
-    /**
-     * Motorcyclist
-     * 
-     */
     @XmlEnumValue("motorcyclist")
     MOTORCYCLIST("motorcyclist"),
-
-    /**
-     * Pedestrian.
-     * 
-     */
     @XmlEnumValue("pedestrian")
     PEDESTRIAN("pedestrian"),
-
-    /**
-     * Involvement role is unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Vehicle driver.
-     * 
-     */
     @XmlEnumValue("vehicleDriver")
     VEHICLE_DRIVER("vehicleDriver"),
-
-    /**
-     * Vehicle occupant (driver or passenger not specified).
-     * 
-     */
     @XmlEnumValue("vehicleOccupant")
     VEHICLE_OCCUPANT("vehicleOccupant"),
-
-    /**
-     * Vehicle passenger.
-     * 
-     */
     @XmlEnumValue("vehiclePassenger")
     VEHICLE_PASSENGER("vehiclePassenger"),
-
-    /**
-     * Witness.
-     * 
-     */
     @XmlEnumValue("witness")
     WITNESS("witness"),
     @XmlEnumValue("_extended")

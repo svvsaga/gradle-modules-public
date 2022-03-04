@@ -37,7 +37,7 @@ public class AltitudeAccuracyEnum {
     protected String extendedValue;
 
     /**
-     * Coded level of vertical accuracy
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

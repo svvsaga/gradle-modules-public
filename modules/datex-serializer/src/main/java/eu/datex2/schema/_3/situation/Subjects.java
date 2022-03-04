@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The subjects with which the roadworks are associated.
- * 
  * <p>Java class for Subjects complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

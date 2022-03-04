@@ -11,11 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Location representing a geographic or geometric defined area which may be qualified by
- *         height information to provide additional geospatial discrimination (e.g. for snow in an area but only
- *         above a certain altitude).
- *       
- * 
  * <p>Java class for AreaLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

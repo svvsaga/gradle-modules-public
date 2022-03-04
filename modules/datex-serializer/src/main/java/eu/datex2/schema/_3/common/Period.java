@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A continuous time period or a set of discontinuous time periods defined by the
- *         intersection of a set of criteria all within an overall delimiting interval.
- *       
- * 
  * <p>Java class for Period complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

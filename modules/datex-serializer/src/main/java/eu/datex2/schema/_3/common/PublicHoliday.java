@@ -8,10 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of a specific public holiday in case specialDayType is set to
- *         'publicHoliday'.
- *       
- * 
  * <p>Java class for PublicHoliday complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

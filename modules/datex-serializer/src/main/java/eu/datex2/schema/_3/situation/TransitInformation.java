@@ -12,11 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The availability of transit services and information relating to their departures. This is
- *         limited to those transit services which are of direct relevance to road users, e.g. connecting rail or
- *         ferry services.
- *       
- * 
  * <p>Java class for TransitInformation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

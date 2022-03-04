@@ -37,7 +37,7 @@ public class SpeedManagementTypeEnum {
     protected String extendedValue;
 
     /**
-     * Management actions relating to speed.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,102 +37,32 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PersonCategoryEnum2 {
 
-
-    /**
-     * Adult.
-     * 
-     */
     @XmlEnumValue("adult")
     ADULT("adult"),
-
-    /**
-     * Child (age 4 to 17).
-     * 
-     */
     @XmlEnumValue("child")
     CHILD("child"),
-
-    /**
-     * A member of the emergency services, other than the police.
-     * 
-     */
     @XmlEnumValue("emergencyServicesPerson")
     EMERGENCY_SERVICES_PERSON("emergencyServicesPerson"),
-
-    /**
-     * A member of the fire service.
-     * 
-     */
     @XmlEnumValue("fireman")
     FIREMAN("fireman"),
-
-    /**
-     * Infant (age 0 to 3).
-     * 
-     */
     @XmlEnumValue("infant")
     INFANT("infant"),
-
-    /**
-     * A member of the medical service.
-     * 
-     */
     @XmlEnumValue("medicalStaff")
     MEDICAL_STAFF("medicalStaff"),
-
-    /**
-     * A member of the general public.
-     * 
-     */
     @XmlEnumValue("memberOfThePublic")
     MEMBER_OF_THE_PUBLIC("memberOfThePublic"),
-
-    /**
-     * A member of the police force.
-     * 
-     */
     @XmlEnumValue("policeman")
     POLICEMAN("policeman"),
-
-    /**
-     * A politician.
-     * 
-     */
     @XmlEnumValue("politician")
     POLITICIAN("politician"),
-
-    /**
-     * A passenger on or from a public transport vehicle.
-     * 
-     */
     @XmlEnumValue("publicTransportPassenger")
     PUBLIC_TRANSPORT_PASSENGER("publicTransportPassenger"),
-
-    /**
-     * A sick person.
-     * 
-     */
     @XmlEnumValue("sickPerson")
     SICK_PERSON("sickPerson"),
-
-    /**
-     * A traffic patrol officer of the road authority.
-     * 
-     */
     @XmlEnumValue("trafficOfficer")
     TRAFFIC_OFFICER("trafficOfficer"),
-
-    /**
-     * A member of the local traffic warden service.
-     * 
-     */
     @XmlEnumValue("trafficWarden")
     TRAFFIC_WARDEN("trafficWarden"),
-
-    /**
-     * A very important person.
-     * 
-     */
     @XmlEnumValue("veryImportantPerson")
     VERY_IMPORTANT_PERSON("veryImportantPerson"),
     @XmlEnumValue("_extended")

@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Measurements of atmospheric humidity.
- * 
  * <p>Java class for HumidityInformation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

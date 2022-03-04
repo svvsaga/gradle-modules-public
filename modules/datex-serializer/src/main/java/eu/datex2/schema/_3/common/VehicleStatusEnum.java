@@ -37,7 +37,7 @@ public class VehicleStatusEnum {
     protected String extendedValue;
 
     /**
-     * The status of a vehicle.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

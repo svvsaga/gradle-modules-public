@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of road side assistance required or being given.
- * 
  * <p>Java class for RoadsideAssistance complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

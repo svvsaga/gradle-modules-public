@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:ext="http://datex2.eu/schema/3/extension" version="3.1" targetNamespace="http://datex2.eu/schema/3/extension" xmlns:alc="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:cctv="http://datex2.eu/schema/3/cctvExtension" xmlns:dd="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/dataDictionaryExtension" schemaLocation="DATEXII_3_DataDictionaryExtension.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/cctvExtension" schemaLocation="DATEXII_3_CCTVExtension.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" schemaLocation="DATEXII_3_AlertCLocationCodeTableExtension.xsd" />
+  <xs:simpleType name="NamedAreaCode">
+    <xs:restriction base="com:String" />
+  </xs:simpleType>
+  <xs:complexType name="NamedAreaExtended">
+    <xs:sequence>
+      <xs:element name="namedAreaCode" type="ext:NamedAreaCode" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

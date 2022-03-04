@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An obstruction on the road resulting from the failure or damage of infrastructure on,
- *         under, above or close to the road.
- *       
- * 
  * <p>Java class for InfrastructureDamageObstruction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

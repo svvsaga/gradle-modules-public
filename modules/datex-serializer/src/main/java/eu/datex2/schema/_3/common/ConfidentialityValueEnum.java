@@ -37,7 +37,7 @@ public class ConfidentialityValueEnum {
     protected String extendedValue;
 
     /**
-     * Values of confidentiality.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

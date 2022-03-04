@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The logical location (e.g. a car park, a section of road, a junction etc.) which a VMS
- *         contributes to the management of.
- *       
- * 
  * <p>Java class for ManagedLogicalLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class TrafficTrendTypeEnum {
     protected String extendedValue;
 
     /**
-     * List of terms used to describe the trend in traffic conditions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

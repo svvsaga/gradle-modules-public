@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Road, carriageway or lane management action that is instigated by the network/road
- *         operator.
- *       
- * 
  * <p>Java class for RoadOrCarriagewayOrLaneManagement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

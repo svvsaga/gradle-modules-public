@@ -37,7 +37,7 @@ public class VmsControllerFaultEnum {
     protected String extendedValue;
 
     /**
-     * Types of variable message sign controller faults.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

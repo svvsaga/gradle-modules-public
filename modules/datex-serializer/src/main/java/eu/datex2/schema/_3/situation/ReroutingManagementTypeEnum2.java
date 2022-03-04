@@ -33,85 +33,24 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ReroutingManagementTypeEnum2 {
 
-
-    /**
-     * Do not follow diversion signs.
-     * 
-     */
     @XmlEnumValue("doNotFollowDiversionSigns")
     DO_NOT_FOLLOW_DIVERSION_SIGNS("doNotFollowDiversionSigns"),
-
-    /**
-     * Rerouted traffic is not to use the specified entry onto the identified road to
-     *             commence the alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("doNotUseEntry")
     DO_NOT_USE_ENTRY("doNotUseEntry"),
-
-    /**
-     * Rerouted traffic is not to use the specified exit from the identified road to
-     *             commence the alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("doNotUseExit")
     DO_NOT_USE_EXIT("doNotUseExit"),
-
-    /**
-     * Rerouted traffic is not to use the specified intersection or junction.
-     *           
-     * 
-     */
     @XmlEnumValue("doNotUseIntersectionOrJunction")
     DO_NOT_USE_INTERSECTION_OR_JUNCTION("doNotUseIntersectionOrJunction"),
-
-    /**
-     * Rerouted traffic is to follow the diversion signs.
-     * 
-     */
     @XmlEnumValue("followDiversionSigns")
     FOLLOW_DIVERSION_SIGNS("followDiversionSigns"),
-
-    /**
-     * Rerouted traffic is to follow local diversion.
-     * 
-     */
     @XmlEnumValue("followLocalDiversion")
     FOLLOW_LOCAL_DIVERSION("followLocalDiversion"),
-
-    /**
-     * Rerouted traffic is to follow the special diversion markers.
-     * 
-     */
     @XmlEnumValue("followSpecialMarkers")
     FOLLOW_SPECIAL_MARKERS("followSpecialMarkers"),
-
-    /**
-     * Rerouted traffic is to use the specified entry onto the identified road to
-     *             commence the alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("useEntry")
     USE_ENTRY("useEntry"),
-
-    /**
-     * Rerouted traffic is to use the specified exit from the identified road to commence
-     *             the alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("useExit")
     USE_EXIT("useExit"),
-
-    /**
-     * Rerouted traffic is to use the specified intersection or junction to commence the
-     *             alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("useIntersectionOrJunction")
     USE_INTERSECTION_OR_JUNCTION("useIntersectionOrJunction"),
     @XmlEnumValue("_extended")

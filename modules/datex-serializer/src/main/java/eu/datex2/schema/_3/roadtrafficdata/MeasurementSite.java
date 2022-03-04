@@ -18,9 +18,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable single measurement site entry/record in the measurement site table.
- *       
- * 
  * <p>Java class for MeasurementSite complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

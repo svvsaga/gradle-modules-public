@@ -30,58 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TravelTimeTypeEnum2 {
 
-
-    /**
-     * Travel time is derived from the best out of a monitored sample.
-     * 
-     */
     @XmlEnumValue("best")
     BEST("best"),
-
-    /**
-     * Travel time is an automated estimate.
-     * 
-     */
     @XmlEnumValue("estimated")
     ESTIMATED("estimated"),
-
-    /**
-     * Travel time is derived from instantaneous measurements.
-     * 
-     */
     @XmlEnumValue("instantaneous")
     INSTANTANEOUS("instantaneous"),
-
-    /**
-     * Travel time is reconstituted from other measurements.
-     * 
-     */
     @XmlEnumValue("reconstituted")
     RECONSTITUTED("reconstituted"),
-
-    /**
-     * Travel time is the output of a predictor, for example a blend of current and
-     *             historical data, or a traffic flow model using current measurements.
-     *           
-     * 
-     */
     @XmlEnumValue("predictor")
     PREDICTOR("predictor"),
-
-    /**
-     * Travel time is based on past observations, without use of current measurements.
-     *           
-     * 
-     */
     @XmlEnumValue("profile")
     PROFILE("profile"),
-
-    /**
-     * Travel time is the sum of current travel times on subsections of the specified
-     *             location.
-     *           
-     * 
-     */
     @XmlEnumValue("sum")
     SUM("sum"),
     @XmlEnumValue("_extended")

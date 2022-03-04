@@ -134,6 +134,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GenericPublicationExtensionType }
+     * 
+     */
+    public GenericPublicationExtensionType createGenericPublicationExtensionType() {
+        return new GenericPublicationExtensionType();
+    }
+
+    /**
      * Create an instance of {@link InformationDeliveryServicesEnum }
      * 
      */

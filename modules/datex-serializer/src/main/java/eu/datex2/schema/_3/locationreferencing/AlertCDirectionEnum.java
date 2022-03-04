@@ -37,9 +37,7 @@ public class AlertCDirectionEnum {
     protected String extendedValue;
 
     /**
-     * Direction used to reach the primary location from the secondary location in ALERT-C
-     *         location table, as defined in CEN ISO 14819-1
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

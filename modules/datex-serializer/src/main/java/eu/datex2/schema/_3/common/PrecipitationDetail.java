@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of precipitation (rain, snow etc.).
- * 
  * <p>Java class for PrecipitationDetail complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -36,106 +36,30 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AccidentTypeEnum2 {
 
-
-    /**
-     * Accidents are situations in which one or more vehicles lose control and do not
-     *             recover. They include collisions between vehicle(s) or other road user(s), between vehicle(s)
-     *             and fixed obstacle(s), or they result from a vehicle running off the road.
-     *           
-     * 
-     */
     @XmlEnumValue("accident")
     ACCIDENT("accident"),
-
-    /**
-     * Includes all accidents involving at least one vehicle believed to be carrying
-     *             materials, which could present an additional hazard to road users.
-     *           
-     * 
-     */
     @XmlEnumValue("accidentInvolvingHazardousMaterials")
     ACCIDENT_INVOLVING_HAZARDOUS_MATERIALS("accidentInvolvingHazardousMaterials"),
-
-    /**
-     * Includes all accidents involving at least one heavy goods vehicle.
-     *           
-     * 
-     */
     @XmlEnumValue("accidentInvolvingHeavyLorries")
     ACCIDENT_INVOLVING_HEAVY_LORRIES("accidentInvolvingHeavyLorries"),
-
-    /**
-     * Includes all accidents involving at least one mass transit vehicle.
-     *           
-     * 
-     */
     @XmlEnumValue("accidentInvolvingMassTransitVehicle")
     ACCIDENT_INVOLVING_MASS_TRANSIT_VEHICLE("accidentInvolvingMassTransitVehicle"),
-
-    /**
-     * Includes all accidents involving public transport
-     * 
-     */
     @XmlEnumValue("accidentInvolvingPublicTransport")
     ACCIDENT_INVOLVING_PUBLIC_TRANSPORT("accidentInvolvingPublicTransport"),
-
-    /**
-     * Accident involving radioactive material.
-     * 
-     */
     @XmlEnumValue("accidentInvolvingRadioactiveMaterial")
     ACCIDENT_INVOLVING_RADIOACTIVE_MATERIAL("accidentInvolvingRadioactiveMaterial"),
-
-    /**
-     * Includes all accidents involving collision with a train.
-     * 
-     */
     @XmlEnumValue("accidentInvolvingTrain")
     ACCIDENT_INVOLVING_TRAIN("accidentInvolvingTrain"),
-
-    /**
-     * Collision of vehicle with another object of unspecified type.
-     * 
-     */
     @XmlEnumValue("collision")
     COLLISION("collision"),
-
-    /**
-     * Includes all accidents involving three or more vehicles.
-     * 
-     */
     @XmlEnumValue("multipleVehicleAccident")
     MULTIPLE_VEHICLE_ACCIDENT("multipleVehicleAccident"),
-
-    /**
-     * Includes all situations resulting from vehicles avoiding or being distracted by
-     *             earlier accidents.
-     *           
-     * 
-     */
     @XmlEnumValue("secondaryAccident")
     SECONDARY_ACCIDENT("secondaryAccident"),
-
-    /**
-     * Includes all accidents believed to involve fatality or injury expected to require
-     *             overnight hospitalisation.
-     *           
-     * 
-     */
     @XmlEnumValue("seriousInjuryOrFatalAccident")
     SERIOUS_INJURY_OR_FATAL_ACCIDENT("seriousInjuryOrFatalAccident"),
-
-    /**
-     * A vehicle is stuck under a bridge.
-     * 
-     */
     @XmlEnumValue("vehicleStuckUnderBridge")
     VEHICLE_STUCK_UNDER_BRIDGE("vehicleStuckUnderBridge"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

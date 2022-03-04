@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of a continuous period of time within a 24 hour period.
- * 
  * <p>Java class for TimePeriodOfDay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

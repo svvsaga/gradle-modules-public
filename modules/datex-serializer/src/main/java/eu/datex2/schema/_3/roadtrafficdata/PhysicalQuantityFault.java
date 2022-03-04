@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of a fault related to the derivation of a quantity
- * 
  * <p>Java class for PhysicalQuantityFault complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

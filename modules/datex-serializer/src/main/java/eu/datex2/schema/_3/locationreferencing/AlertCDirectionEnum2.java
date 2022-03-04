@@ -25,24 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AlertCDirectionEnum2 {
 
-
-    /**
-     * The direction of navigation in an ALERT-C table that corresponds to the negative
-     *             offset usage to go from the secondary location to the primary location within the ALERT-C
-     *             location table.
-     *           
-     * 
-     */
     @XmlEnumValue("negative")
     NEGATIVE("negative"),
-
-    /**
-     * The direction of navigation in an ALERT-C table that corresponds to the negative
-     *             offset usage to go from the secondary location to the primary location within the ALERT-C
-     *             location table.
-     *           
-     * 
-     */
     @XmlEnumValue("positive")
     POSITIVE("positive"),
     @XmlEnumValue("_extended")

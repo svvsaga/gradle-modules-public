@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A composite pictogram representing a diagrammatic schema in association with an embedded
- *         regular sign.
- *       
- * 
  * <p>Java class for CompositePictogram complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

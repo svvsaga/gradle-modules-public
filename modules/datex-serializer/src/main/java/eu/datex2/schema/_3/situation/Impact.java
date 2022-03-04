@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An assessment of the impact that an event or operator action defined by the situation
- *         record has on the driving conditions.
- *       
- * 
  * <p>Java class for Impact complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

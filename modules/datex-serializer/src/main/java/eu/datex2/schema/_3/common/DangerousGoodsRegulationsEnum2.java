@@ -27,39 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DangerousGoodsRegulationsEnum2 {
 
-
-    /**
-     * European agreement on the international carriage of dangerous goods on road.
-     *           
-     * 
-     */
     @XmlEnumValue("adr")
     ADR("adr"),
-
-    /**
-     * Regulations covering the international transportation of dangerous goods issued by
-     *             the International Air Transport Association and the International Civil Aviation Organisation.
-     *           
-     * 
-     */
     @XmlEnumValue("iataIcao")
     IATA_ICAO("iataIcao"),
-
-    /**
-     * Regulations regarding the transportation of dangerous goods on ocean-going vessels
-     *             issued by the International Maritime Organisation.
-     *           
-     * 
-     */
     @XmlEnumValue("imoImdg")
     IMO_IMDG("imoImdg"),
-
-    /**
-     * International regulations concerning the international carriage of dangerous goods
-     *             by rail.
-     *           
-     * 
-     */
     @XmlEnumValue("railroadDangerousGoodsBook")
     RAILROAD_DANGEROUS_GOODS_BOOK("railroadDangerousGoodsBook"),
     @XmlEnumValue("_extended")

@@ -37,7 +37,7 @@ public class TravelTimeTypeEnum {
     protected String extendedValue;
 
     /**
-     * List of ways in which travel times are derived.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

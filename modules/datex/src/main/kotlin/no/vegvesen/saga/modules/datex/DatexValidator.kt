@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
 import arrow.core.Either
+import arrow.core.flatMap
 import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
@@ -46,16 +47,21 @@ class DatexValidator : Logging {
             SchemaFactory.newDefaultInstance().newSchema(fetchDatex3SchemaFiles())
 
         private fun fetchDatex3SchemaFiles(): Array<Source> = listOf(
-            "/DatexII_3/DATEXII_3_D2Payload.xsd",
+            "/DatexII_3/DATEXII_3_AlertCLocationCodeTableExtension.xsd",
+            "/DatexII_3/DATEXII_3_CCTVExtension.xsd",
+            "/DatexII_3/DATEXII_3_CISInformation.xsd",
             "/DatexII_3/DATEXII_3_Common.xsd",
+            "/DatexII_3/DATEXII_3_D2Payload.xsd",
+            "/DatexII_3/DATEXII_3_DataDictionaryExtension.xsd",
+            "/DatexII_3/DATEXII_3_ExchangeInformation.xsd",
+            "/DatexII_3/DATEXII_3_Extension.xsd",
+            "/DatexII_3/DATEXII_3_InformationManagement.xsd",
             "/DatexII_3/DATEXII_3_LocationReferencing.xsd",
+            "/DatexII_3/DATEXII_3_MessageContainer.xsd",
+            "/DatexII_3/DATEXII_3_Parking.xsd",
             "/DatexII_3/DATEXII_3_RoadTrafficData.xsd",
             "/DatexII_3/DATEXII_3_Situation.xsd",
             "/DatexII_3/DATEXII_3_Vms.xsd",
-            "/DatexII_3/DATEXII_3_ExchangeInformation.xsd",
-            "/DatexII_3/DATEXII_3_InformationManagement.xsd",
-            "/DatexII_3/DATEXII_3_MessageContainer.xsd",
-            "/DatexII_3/DATEXII_3_CISInformation.xsd",
         ).map { StreamSource(Companion::class.java.getResource(it)!!.toExternalForm()) }
             .toTypedArray()
     }
@@ -71,7 +77,14 @@ class DatexValidator : Logging {
     }.handleErrorWith { handleDatex3ValidationExceptions(doc, it) }
 
     fun validateDatexDoc(doc: XmlString): Either<DatexError.ValidationError, DatexVersion> =
-        tryDatex2Validation(doc).handleErrorWith { tryDatex3Validation(doc) }
+        findDatexVersion(doc)
+            .mapLeft { DatexError.ValidationError(it.localizedMessage, doc) }
+            .flatMap { version ->
+                when (version) {
+                    DatexVersion.DATEX_2 -> tryDatex2Validation(doc)
+                    DatexVersion.DATEX_3 -> tryDatex3Validation(doc)
+                }
+            }
 }
 
 private fun handleDatex2ValidationExceptions(doc: XmlString, exception: Throwable) =

@@ -43,148 +43,44 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AccidentCauseEnum2 {
 
-
-    /**
-     * Avoidance of obstacles on the roadway.
-     * 
-     */
     @XmlEnumValue("avoidanceOfObstacles")
     AVOIDANCE_OF_OBSTACLES("avoidanceOfObstacles"),
-
-    /**
-     * Driver distraction.
-     * 
-     */
     @XmlEnumValue("driverDistraction")
     DRIVER_DISTRACTION("driverDistraction"),
-
-    /**
-     * Driver under the influence of drugs.
-     * 
-     */
     @XmlEnumValue("driverDrugAbuse")
     DRIVER_DRUG_ABUSE("driverDrugAbuse"),
-
-    /**
-     * Driver illness.
-     * 
-     */
     @XmlEnumValue("driverIllness")
     DRIVER_ILLNESS("driverIllness"),
-
-    /**
-     * Loss of vehicle control due to excessive vehicle speed.
-     * 
-     */
     @XmlEnumValue("exceedingSpeedsLimits")
     EXCEEDING_SPEEDS_LIMITS("exceedingSpeedsLimits"),
-
-    /**
-     * Driver abilities reduced due to driving under the influence of alcohol. Alcohol
-     *             levels above nationally accepted limit.
-     *           
-     * 
-     */
     @XmlEnumValue("excessAlcohol")
     EXCESS_ALCOHOL("excessAlcohol"),
-
-    /**
-     * Excessive tiredness of the driver.
-     * 
-     */
     @XmlEnumValue("excessiveDriverTiredness")
     EXCESSIVE_DRIVER_TIREDNESS("excessiveDriverTiredness"),
-
-    /**
-     * A driving manoeuvre which was not permitted.
-     * 
-     */
     @XmlEnumValue("impermissibleManoeuvre")
     IMPERMISSIBLE_MANOEUVRE("impermissibleManoeuvre"),
-
-    /**
-     * Limited or impaired visibility.
-     * 
-     */
     @XmlEnumValue("limitedVisibility")
     LIMITED_VISIBILITY("limitedVisibility"),
-
-    /**
-     * Not keeping a safe distance from the vehicle in front.
-     * 
-     */
     @XmlEnumValue("notKeepingASafeDistance")
     NOT_KEEPING_A_SAFE_DISTANCE("notKeepingASafeDistance"),
-
-    /**
-     * Driving on the wrong side of the road.
-     * 
-     */
     @XmlEnumValue("onTheWrongSideOfTheRoad")
     ON_THE_WRONG_SIDE_OF_THE_ROAD("onTheWrongSideOfTheRoad"),
-
-    /**
-     * Pedestrian in the roadway.
-     * 
-     */
     @XmlEnumValue("pedestrianInRoad")
     PEDESTRIAN_IN_ROAD("pedestrianInRoad"),
-
-    /**
-     * Not keeping to lane.
-     * 
-     */
     @XmlEnumValue("poorLaneAdherence")
     POOR_LANE_ADHERENCE("poorLaneAdherence"),
-
-    /**
-     * Poor judgement when merging at an entry or exit point of a carriageway or
-     *             junction.
-     *           
-     * 
-     */
     @XmlEnumValue("poorMergeEntryOrExitJudgement")
     POOR_MERGE_ENTRY_OR_EXIT_JUDGEMENT("poorMergeEntryOrExitJudgement"),
-
-    /**
-     * Poor road surface condition.
-     * 
-     */
     @XmlEnumValue("poorRoadSurfaceCondition")
     POOR_ROAD_SURFACE_CONDITION("poorRoadSurfaceCondition"),
-
-    /**
-     * Poor road surface adherence.
-     * 
-     */
     @XmlEnumValue("poorSurfaceAdherence")
     POOR_SURFACE_ADHERENCE("poorSurfaceAdherence"),
-
-    /**
-     * Undisclosed cause.
-     * 
-     */
     @XmlEnumValue("undisclosed")
     UNDISCLOSED("undisclosed"),
-
-    /**
-     * Unknown cause.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Malfunction or failure of vehicle function.
-     * 
-     */
     @XmlEnumValue("vehicleFailure")
     VEHICLE_FAILURE("vehicleFailure"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

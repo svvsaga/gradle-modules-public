@@ -14,9 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Rerouting management action that is issued by the network/road operator.
- *       
- * 
  * <p>Java class for ReroutingManagement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

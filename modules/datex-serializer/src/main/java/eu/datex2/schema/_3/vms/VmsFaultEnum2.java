@@ -29,48 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VmsFaultEnum2 {
 
-
-    /**
-     * Incorrect message is being displayed.
-     * 
-     */
     @XmlEnumValue("incorrectMessageDisplayed")
     INCORRECT_MESSAGE_DISPLAYED("incorrectMessageDisplayed"),
-
-    /**
-     * Incorrect pictogram is being displayed.
-     * 
-     */
     @XmlEnumValue("incorrectPictogramDisplayed")
     INCORRECT_PICTOGRAM_DISPLAYED("incorrectPictogramDisplayed"),
-
-    /**
-     * Not currently in service (e.g. intentionally disconnected or switched off during
-     *             roadworks).
-     *           
-     * 
-     */
     @XmlEnumValue("outOfService")
     OUT_OF_SERVICE("outOfService"),
-
-    /**
-     * Unable to clear down information displayed on VMS.
-     * 
-     */
     @XmlEnumValue("unableToClearDown")
     UNABLE_TO_CLEAR_DOWN("unableToClearDown"),
-
-    /**
-     * Unknown VMS fault.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

@@ -28,40 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ComputationMethodEnum2 {
 
-
-    /**
-     * Arithmetic average of sample values based on a fixed number of samples.
-     *           
-     * 
-     */
     @XmlEnumValue("arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples")
     ARITHMETIC_AVERAGE_OF_SAMPLES_BASED_ON_A_FIXED_NUMBER_OF_SAMPLES("arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples"),
-
-    /**
-     * Arithmetic average of sample values in a time period.
-     * 
-     */
     @XmlEnumValue("arithmeticAverageOfSamplesInATimePeriod")
     ARITHMETIC_AVERAGE_OF_SAMPLES_IN_A_TIME_PERIOD("arithmeticAverageOfSamplesInATimePeriod"),
-
-    /**
-     * Harmonic average of sample values in a time period.
-     * 
-     */
     @XmlEnumValue("harmonicAverageOfSamplesInATimePeriod")
     HARMONIC_AVERAGE_OF_SAMPLES_IN_A_TIME_PERIOD("harmonicAverageOfSamplesInATimePeriod"),
-
-    /**
-     * Median of sample values taken over a time period.
-     * 
-     */
     @XmlEnumValue("medianOfSamplesInATimePeriod")
     MEDIAN_OF_SAMPLES_IN_A_TIME_PERIOD("medianOfSamplesInATimePeriod"),
-
-    /**
-     * Moving average of sample values.
-     * 
-     */
     @XmlEnumValue("movingAverageOfSamples")
     MOVING_AVERAGE_OF_SAMPLES("movingAverageOfSamples"),
     @XmlEnumValue("_extended")

@@ -30,64 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OperatorActionStatusEnum2 {
 
-
-    /**
-     * A request, either internal or external, has been received to implement an action.
-     *             It has neither been approved nor has any activity yet been undertaken to implement the action.
-     *           
-     * 
-     */
     @XmlEnumValue("requested")
     REQUESTED("requested"),
-
-    /**
-     * The action has been approved by the recipient of the request but activity to
-     *             implement the action has not yet commenced.
-     *           
-     * 
-     */
     @XmlEnumValue("approved")
     APPROVED("approved"),
-
-    /**
-     * The action is in the process of being implemented.
-     * 
-     */
     @XmlEnumValue("beingImplemented")
     BEING_IMPLEMENTED("beingImplemented"),
-
-    /**
-     * The action is fully implemented.
-     * 
-     */
     @XmlEnumValue("implemented")
     IMPLEMENTED("implemented"),
-
-    /**
-     * The action has been rejected by the recipient of the request and hence is not
-     *             implemented.
-     *           
-     * 
-     */
     @XmlEnumValue("rejected")
     REJECTED("rejected"),
-
-    /**
-     * A request, either internal or external, has been received to terminate the action,
-     *             but activity to terminate the action has not yet commenced.
-     *           
-     * 
-     */
     @XmlEnumValue("terminationRequested")
     TERMINATION_REQUESTED("terminationRequested"),
-
-    /**
-     * The action is in the process of being terminated either because the action has
-     *             reached the end of its validity period or because new circumstances have arisen and its
-     *             termination has been requested, e.g. because of a traffic jam on the alternative route.
-     *           
-     * 
-     */
     @XmlEnumValue("beingTerminated")
     BEING_TERMINATED("beingTerminated"),
     @XmlEnumValue("_extended")

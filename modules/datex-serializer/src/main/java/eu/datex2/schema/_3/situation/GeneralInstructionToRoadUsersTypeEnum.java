@@ -37,10 +37,7 @@ public class GeneralInstructionToRoadUsersTypeEnum {
     protected String extendedValue;
 
     /**
-     * General instructions that may be issued to road users (specifically drivers and sometimes
-     *         passengers) by an operator or operational system in support of network management activities or
-     *         emergency situations.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

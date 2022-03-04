@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Winter driving management action that is instigated by the network/road operator.
- *       
- * 
  * <p>Java class for WinterDrivingManagement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

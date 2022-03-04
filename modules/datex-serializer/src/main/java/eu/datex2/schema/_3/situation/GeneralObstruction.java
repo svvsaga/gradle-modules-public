@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Any stationary or moving obstacle of a physical nature, other than of an animal, vehicle,
- *         environmental, or damaged equipment nature.
- *       
- * 
  * <p>Java class for GeneralObstruction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

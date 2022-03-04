@@ -26,25 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TravelTimeTrendTypeEnum2 {
 
-
-    /**
-     * Travel times are decreasing.
-     * 
-     */
     @XmlEnumValue("decreasing")
     DECREASING("decreasing"),
-
-    /**
-     * Travel times are increasing.
-     * 
-     */
     @XmlEnumValue("increasing")
     INCREASING("increasing"),
-
-    /**
-     * Travel times are stable.
-     * 
-     */
     @XmlEnumValue("stable")
     STABLE("stable"),
     @XmlEnumValue("_extended")

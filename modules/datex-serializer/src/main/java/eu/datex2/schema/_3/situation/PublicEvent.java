@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Organised public event which could disrupt traffic.
- * 
  * <p>Java class for PublicEvent complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

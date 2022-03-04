@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A group of (i.e. more than one) physically separate locations which have no specific order
- *         and where each location is explicitly listed.
- *       
- * 
  * <p>Java class for LocationGroupByList complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,7 +20,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;extension base="{http://datex2.eu/schema/3/locationReferencing}LocationGroup"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="locationContainedInGroup" type="{http://datex2.eu/schema/3/locationReferencing}Location" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="locationContainedInGroup" type="{http://datex2.eu/schema/3/locationReferencing}Location" maxOccurs="unbounded" minOccurs="2"/&gt;
  *         &lt;element name="_locationGroupByListExtension" type="{http://datex2.eu/schema/3/common}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;

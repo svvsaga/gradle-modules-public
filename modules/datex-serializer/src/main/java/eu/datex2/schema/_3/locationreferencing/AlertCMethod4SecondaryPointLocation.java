@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The point (called Secondary point) which is at the upstream end of a linear road section.
- *         The point is specified by a reference to a point in a pre-defined Alert-C location table plus a
- *         non-negative offset distance.
- *       
- * 
  * <p>Java class for AlertCMethod4SecondaryPointLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

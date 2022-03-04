@@ -37,7 +37,7 @@ public class CommentTypeEnum {
     protected String extendedValue;
 
     /**
-     * Classification of comment types.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

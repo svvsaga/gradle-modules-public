@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of an instant in time.
- * 
  * <p>Java class for DateTimeValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Measured or calculated data values relating to individual vehicles derived from detectors
- *         at the specified measurement site.
- *       
- * 
  * <p>Java class for IndividualVehicleDataValues complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

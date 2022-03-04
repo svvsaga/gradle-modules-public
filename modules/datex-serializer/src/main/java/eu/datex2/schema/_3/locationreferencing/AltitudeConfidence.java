@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Evaluation of the altitude confidence assessed according to ETSI ISO 102894-2
- *       
- * 
  * <p>Java class for AltitudeConfidence complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

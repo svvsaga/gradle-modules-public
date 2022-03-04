@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A geo-coordinate pair is a position in a map defined by its longitude and latitude
- *         coordinate values.
- *       
- * 
  * <p>Java class for OpenlrGeoCoordinate complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

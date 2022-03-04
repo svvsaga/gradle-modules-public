@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * OpenLR line location reference
- * 
  * <p>Java class for OpenlrLinear complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

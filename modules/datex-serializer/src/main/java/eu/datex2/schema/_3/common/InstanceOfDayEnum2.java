@@ -29,48 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InstanceOfDayEnum2 {
 
-
-    /**
-     * First instance of specified day of week in month.
-     * 
-     */
     @XmlEnumValue("firstInstance")
     FIRST_INSTANCE("firstInstance"),
-
-    /**
-     * Second instance of specified day of week in month.
-     * 
-     */
     @XmlEnumValue("secondInstance")
     SECOND_INSTANCE("secondInstance"),
-
-    /**
-     * Third instance of specified day of week in month.
-     * 
-     */
     @XmlEnumValue("thirdInstance")
     THIRD_INSTANCE("thirdInstance"),
-
-    /**
-     * Fourth instance of specified day of week in month.
-     * 
-     */
     @XmlEnumValue("fourthInstance")
     FOURTH_INSTANCE("fourthInstance"),
-
-    /**
-     * Fifth instance of specified day of week in month.
-     * 
-     */
     @XmlEnumValue("fifthInstance")
     FIFTH_INSTANCE("fifthInstance"),
-
-    /**
-     * Last instance of specified day of week in month (regardless its actual instance
-     *             number).
-     *           
-     * 
-     */
     @XmlEnumValue("lastInstance")
     LAST_INSTANCE("lastInstance"),
     @XmlEnumValue("_extended")

@@ -37,8 +37,7 @@ public class PhysicalQuantityFaultEnum {
     protected String extendedValue;
 
     /**
-     * Types of faults that may affect the measurement or calculation of physical quantities
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

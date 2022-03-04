@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The OpenLR method of area definition by providing points that bound the area
- *       
- * 
  * <p>Java class for OpenlrPolygonLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class TrafficFlowCharacteristicsEnum {
     protected String extendedValue;
 
     /**
-     * Types of consistency (steadiness) of traffic flow.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

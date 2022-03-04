@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Network management action that is instigated either manually or automatically by the
- *         network/road operator. Compliance with any resulting control may be advisory or mandatory.
- *       
- * 
  * <p>Java class for GeneralNetworkManagement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class TpegLoc01SimplePointLocationSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of simple point.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

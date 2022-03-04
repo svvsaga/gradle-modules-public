@@ -29,53 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SettingReasonEnum2 {
 
-
-    /**
-     * Message selected as the result of a situation occuring either on or off the road
-     *             which might affect road users.
-     *           
-     * 
-     */
     @XmlEnumValue("situation")
     SITUATION("situation"),
-
-    /**
-     * Message selected by operator as the result of an unmanaged event or situation.
-     *           
-     * 
-     */
     @XmlEnumValue("operatorCreated")
     OPERATOR_CREATED("operatorCreated"),
-
-    /**
-     * Message selected as part of the implementation of a traffic management action.
-     *             This can be part of a specific traffic management or diversion plan.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficManagement")
     TRAFFIC_MANAGEMENT("trafficManagement"),
-
-    /**
-     * The VMS is currently selected to display travel times.
-     * 
-     */
     @XmlEnumValue("travelTime")
     TRAVEL_TIME("travelTime"),
-
-    /**
-     * The VMS is currently selected to display a campaign message.
-     * 
-     */
     @XmlEnumValue("campaign")
     CAMPAIGN("campaign"),
-
-    /**
-     * The VMS is currently selected to display default information (e.g. time, date,
-     *             temperature).
-     *           
-     * 
-     */
     @XmlEnumValue("default")
     DEFAULT("default"),
     @XmlEnumValue("_extended")

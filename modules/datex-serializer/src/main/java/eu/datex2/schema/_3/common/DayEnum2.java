@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DayEnum2 {
 
-
-    /**
-     * Monday.
-     * 
-     */
     @XmlEnumValue("monday")
     MONDAY("monday"),
-
-    /**
-     * Tuesday.
-     * 
-     */
     @XmlEnumValue("tuesday")
     TUESDAY("tuesday"),
-
-    /**
-     * Wednesday.
-     * 
-     */
     @XmlEnumValue("wednesday")
     WEDNESDAY("wednesday"),
-
-    /**
-     * Thursday.
-     * 
-     */
     @XmlEnumValue("thursday")
     THURSDAY("thursday"),
-
-    /**
-     * Friday.
-     * 
-     */
     @XmlEnumValue("friday")
     FRIDAY("friday"),
-
-    /**
-     * Saturday.
-     * 
-     */
     @XmlEnumValue("saturday")
     SATURDAY("saturday"),
-
-    /**
-     * Sunday.
-     * 
-     */
     @XmlEnumValue("sunday")
     SUNDAY("sunday"),
     @XmlEnumValue("_extended")

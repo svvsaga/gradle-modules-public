@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SeverityEnum2 {
 
-
-    /**
-     * Perceived by supplier as being of the highest level.
-     * 
-     */
     @XmlEnumValue("highest")
     HIGHEST("highest"),
-
-    /**
-     * Perceived by supplier as being of a high level.
-     * 
-     */
     @XmlEnumValue("high")
     HIGH("high"),
-
-    /**
-     * Perceived by supplier as being of a medium level.
-     * 
-     */
     @XmlEnumValue("medium")
     MEDIUM("medium"),
-
-    /**
-     * Perceived by supplier as being of a low level.
-     * 
-     */
     @XmlEnumValue("low")
     LOW("low"),
-
-    /**
-     * Perceived by supplier as being of the lowest discernible level.
-     * 
-     */
     @XmlEnumValue("lowest")
     LOWEST("lowest"),
-
-    /**
-     * Perceived by supplier as having a severity rating of none.
-     * 
-     */
     @XmlEnumValue("none")
     NONE("none"),
-
-    /**
-     * Perceived by supplier as being of an unknown level.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

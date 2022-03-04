@@ -37,7 +37,7 @@ public class DisplayedNumericalInformationTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of numerical information displayed
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

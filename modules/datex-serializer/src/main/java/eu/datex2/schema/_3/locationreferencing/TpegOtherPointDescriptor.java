@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * General descriptor for describing a point.
- * 
  * <p>Java class for TpegOtherPointDescriptor complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

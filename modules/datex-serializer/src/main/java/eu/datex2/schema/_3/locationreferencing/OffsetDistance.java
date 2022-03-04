@@ -11,9 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The non-negative offset distance from the ALERT-C referenced point to the actual point.
- *       
- * 
  * <p>Java class for OffsetDistance complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

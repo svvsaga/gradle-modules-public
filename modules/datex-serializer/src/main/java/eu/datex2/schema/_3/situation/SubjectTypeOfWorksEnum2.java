@@ -58,254 +58,74 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SubjectTypeOfWorksEnum2 {
 
-
-    /**
-     * Bridge on, over or under the highway.
-     * 
-     */
     @XmlEnumValue("bridge")
     BRIDGE("bridge"),
-
-    /**
-     * Buried cables under or along the highway.
-     * 
-     */
     @XmlEnumValue("buriedCables")
     BURIED_CABLES("buriedCables"),
-
-    /**
-     * Unspecified buried services on, under or along the highway.
-     * 
-     */
     @XmlEnumValue("buriedServices")
     BURIED_SERVICES("buriedServices"),
-
-    /**
-     * Crash barrier.
-     * 
-     */
     @XmlEnumValue("crashBarrier")
     CRASH_BARRIER("crashBarrier"),
-
-    /**
-     * Cycle track adjacent to the road
-     * 
-     */
     @XmlEnumValue("cycleTrack")
     CYCLE_TRACK("cycleTrack"),
-
-    /**
-     * a footpath
-     * 
-     */
     @XmlEnumValue("footpath")
     FOOTPATH("footpath"),
-
-    /**
-     * Gallery.
-     * 
-     */
     @XmlEnumValue("gallery")
     GALLERY("gallery"),
-
-    /**
-     * Gantry over or above the roadway.
-     * 
-     */
     @XmlEnumValue("gantry")
     GANTRY("gantry"),
-
-    /**
-     * Gas mains.
-     * 
-     */
     @XmlEnumValue("gasMainWork")
     GAS_MAIN_WORK("gasMainWork"),
-
-    /**
-     * a heating pipe
-     * 
-     */
     @XmlEnumValue("heatingPipe")
     HEATING_PIPE("heatingPipe"),
-
-    /**
-     * Motorway or major road interchange.
-     * 
-     */
     @XmlEnumValue("interchange")
     INTERCHANGE("interchange"),
-
-    /**
-     * Motorway or major road junction.
-     * 
-     */
     @XmlEnumValue("junction")
     JUNCTION("junction"),
-
-    /**
-     * Level-crossing or associated equipment.
-     * 
-     */
     @XmlEnumValue("levelCrossing")
     LEVEL_CROSSING("levelCrossing"),
-
-    /**
-     * Road lighting system.
-     * 
-     */
     @XmlEnumValue("lightingSystem")
     LIGHTING_SYSTEM("lightingSystem"),
-
-    /**
-     * lock on a waterway adjacent to the road
-     * 
-     */
     @XmlEnumValue("lock")
     LOCK("lock"),
-
-    /**
-     * Equipment used for determining traffic measurements.
-     * 
-     */
     @XmlEnumValue("measurementEquipment")
     MEASUREMENT_EQUIPMENT("measurementEquipment"),
-
-    /**
-     * passenger railway system, typically underground, in a metropolitan area
-     *           
-     * 
-     */
     @XmlEnumValue("metro")
     METRO("metro"),
-
-    /**
-     * Installations along the roadway designed to reduce road noise in the surrounding
-     *             environment.
-     *           
-     * 
-     */
     @XmlEnumValue("noiseProtection")
     NOISE_PROTECTION("noiseProtection"),
-
-    /**
-     * parking facilities
-     * 
-     */
     @XmlEnumValue("parking")
     PARKING("parking"),
-
-    /**
-     * public transport infrastructure
-     * 
-     */
     @XmlEnumValue("publicTransportInfrastructure")
     PUBLIC_TRANSPORT_INFRASTRUCTURE("publicTransportInfrastructure"),
-
-    /**
-     * public transport stop (including but not limited to bus stops, trams stops, taxi
-     *             stops)
-     *           
-     * 
-     */
     @XmlEnumValue("publicTransportStop")
     PUBLIC_TRANSPORT_STOP("publicTransportStop"),
-
-    /**
-     * Road.
-     * 
-     */
     @XmlEnumValue("road")
     ROAD("road"),
-
-    /**
-     * Road signs.
-     * 
-     */
     @XmlEnumValue("roadSigns")
     ROAD_SIGNS("roadSigns"),
-
-    /**
-     * Roadside drains.
-     * 
-     */
     @XmlEnumValue("roadsideDrains")
     ROADSIDE_DRAINS("roadsideDrains"),
-
-    /**
-     * Roadside embankment.
-     * 
-     */
     @XmlEnumValue("roadsideEmbankment")
     ROADSIDE_EMBANKMENT("roadsideEmbankment"),
-
-    /**
-     * Roadside equipment.
-     * 
-     */
     @XmlEnumValue("roadsideEquipment")
     ROADSIDE_EQUIPMENT("roadsideEquipment"),
-
-    /**
-     * Roundabout.
-     * 
-     */
     @XmlEnumValue("roundabout")
     ROUNDABOUT("roundabout"),
-
-    /**
-     * a sewer
-     * 
-     */
     @XmlEnumValue("sewer")
     SEWER("sewer"),
-
-    /**
-     * street parking places
-     * 
-     */
     @XmlEnumValue("streetParking")
     STREET_PARKING("streetParking"),
-
-    /**
-     * Toll gate.
-     * 
-     */
     @XmlEnumValue("tollGate")
     TOLL_GATE("tollGate"),
-
-    /**
-     * traffic signals
-     * 
-     */
     @XmlEnumValue("trafficSignals")
     TRAFFIC_SIGNALS("trafficSignals"),
-
-    /**
-     * Road tunnel.
-     * 
-     */
     @XmlEnumValue("tunnel")
     TUNNEL("tunnel"),
-
-    /**
-     * bank of a waterway adjacent to the road
-     * 
-     */
     @XmlEnumValue("waterBank")
     WATER_BANK("waterBank"),
-
-    /**
-     * Water main under or along the highway.
-     * 
-     */
     @XmlEnumValue("waterMain")
     WATER_MAIN("waterMain"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

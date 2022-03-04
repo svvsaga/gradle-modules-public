@@ -35,88 +35,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc04HeightTypeEnum2 {
 
-
-    /**
-     * Height above specified location.
-     * 
-     */
     @XmlEnumValue("above")
     ABOVE("above"),
-
-    /**
-     * Height above mean sea high water level.
-     * 
-     */
     @XmlEnumValue("aboveSeaLevel")
     ABOVE_SEA_LEVEL("aboveSeaLevel"),
-
-    /**
-     * Height above street level.
-     * 
-     */
     @XmlEnumValue("aboveStreetLevel")
     ABOVE_STREET_LEVEL("aboveStreetLevel"),
-
-    /**
-     * At height of specified location.
-     * 
-     */
     @XmlEnumValue("at")
     AT("at"),
-
-    /**
-     * At mean sea high water level.
-     * 
-     */
     @XmlEnumValue("atSeaLevel")
     AT_SEA_LEVEL("atSeaLevel"),
-
-    /**
-     * At street level.
-     * 
-     */
     @XmlEnumValue("atStreetLevel")
     AT_STREET_LEVEL("atStreetLevel"),
-
-    /**
-     * Height below specified location.
-     * 
-     */
     @XmlEnumValue("below")
     BELOW("below"),
-
-    /**
-     * Height below mean sea high water level.
-     * 
-     */
     @XmlEnumValue("belowSeaLevel")
     BELOW_SEA_LEVEL("belowSeaLevel"),
-
-    /**
-     * Height below street level.
-     * 
-     */
     @XmlEnumValue("belowStreetLevel")
     BELOW_STREET_LEVEL("belowStreetLevel"),
-
-    /**
-     * Undefined height reference.
-     * 
-     */
     @XmlEnumValue("undefined")
     UNDEFINED("undefined"),
-
-    /**
-     * Unknown height reference.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

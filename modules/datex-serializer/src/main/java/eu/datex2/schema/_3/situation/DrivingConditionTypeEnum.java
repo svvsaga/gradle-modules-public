@@ -37,7 +37,7 @@ public class DrivingConditionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of the perceived driving conditions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

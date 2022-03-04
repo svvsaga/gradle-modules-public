@@ -37,7 +37,7 @@ public class FuelTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of fuel used by a vehicle.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

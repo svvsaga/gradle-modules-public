@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Horizontal position accuracy parameters defined according to EN 16803-1
- * 
  * <p>Java class for PositionAccuracy complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

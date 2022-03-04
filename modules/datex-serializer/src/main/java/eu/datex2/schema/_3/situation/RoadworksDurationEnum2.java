@@ -26,31 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RoadworksDurationEnum2 {
 
-
-    /**
-     * The roadworks are expected to last for a long term (according to a classification
-     *             scheme used by the responsible road operator)
-     *           
-     * 
-     */
     @XmlEnumValue("longTerm")
     LONG_TERM("longTerm"),
-
-    /**
-     * The roadworks are expected to last for a medium term (according to a
-     *             classification scheme used by the responsible road operator)
-     *           
-     * 
-     */
     @XmlEnumValue("mediumTerm")
     MEDIUM_TERM("mediumTerm"),
-
-    /**
-     * The roadworks are expected to last for a short term (according to a classification
-     *             scheme used by the responsible road operator)
-     *           
-     * 
-     */
     @XmlEnumValue("shortTerm")
     SHORT_TERM("shortTerm"),
     @XmlEnumValue("_extended")

@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An indication of whether the associated instance of a SituationRecord is mobile (e.g. a
- *         march or parade moving along a road) or stationary.
- *       
- * 
  * <p>Java class for Mobility complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

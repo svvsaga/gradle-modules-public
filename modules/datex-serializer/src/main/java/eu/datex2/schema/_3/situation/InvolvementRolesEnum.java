@@ -37,7 +37,7 @@ public class InvolvementRolesEnum {
     protected String extendedValue;
 
     /**
-     * Involvement role of a person in event.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

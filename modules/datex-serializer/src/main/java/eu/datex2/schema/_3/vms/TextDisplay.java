@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A page of text (comprising one or more ordered lines) that are displayed simultaneously on
- *         the VMS.
- *       
- * 
  * <p>Java class for TextDisplay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

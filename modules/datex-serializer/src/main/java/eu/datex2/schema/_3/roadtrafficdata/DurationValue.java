@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of a period of time.
- * 
  * <p>Java class for DurationValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

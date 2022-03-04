@@ -37,7 +37,7 @@ public class WeatherRelatedRoadConditionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of road surface conditions which are related to the weather.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

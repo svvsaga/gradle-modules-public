@@ -50,201 +50,58 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum EquipmentOrSystemTypeEnum2 {
 
-
-    /**
-     * Automatic number plate recognition cameras.
-     * 
-     */
     @XmlEnumValue("anprCameras")
     ANPR_CAMERAS("anprCameras"),
-
-    /**
-     * Automated toll system.
-     * 
-     */
     @XmlEnumValue("automatedTollSystem")
     AUTOMATED_TOLL_SYSTEM("automatedTollSystem"),
-
-    /**
-     * Closed-circuit television cameras.
-     * 
-     */
     @XmlEnumValue("cctvCameras")
     CCTV_CAMERAS("cctvCameras"),
-
-    /**
-     * Emergency roadside telephones.
-     * 
-     */
     @XmlEnumValue("emergencyRoadsideTelephones")
     EMERGENCY_ROADSIDE_TELEPHONES("emergencyRoadsideTelephones"),
-
-    /**
-     * Fire detection equipment
-     * 
-     */
     @XmlEnumValue("fireDetectionEquipment")
     FIRE_DETECTION_EQUIPMENT("fireDetectionEquipment"),
-
-    /**
-     * Gallery lights.
-     * 
-     */
     @XmlEnumValue("galleryLights")
     GALLERY_LIGHTS("galleryLights"),
-
-    /**
-     * Signs used to control lane usage (e.g. in tidal flow systems or hard shoulder
-     *             running).
-     *           
-     * 
-     */
     @XmlEnumValue("laneControlSigns")
     LANE_CONTROL_SIGNS("laneControlSigns"),
-
-    /**
-     * Level crossing (barriers and signals).
-     * 
-     */
     @XmlEnumValue("levelCrossing")
     LEVEL_CROSSING("levelCrossing"),
-
-    /**
-     * Matrix signs. These normally comprise a symbol display area surrounded by four
-     *             lights (usually amber) which flash when a symbol is displayed.
-     *           
-     * 
-     */
     @XmlEnumValue("matrixSigns")
     MATRIX_SIGNS("matrixSigns"),
-
-    /**
-     * Ramp control equipment.
-     * 
-     */
     @XmlEnumValue("rampControls")
     RAMP_CONTROLS("rampControls"),
-
-    /**
-     * Roadside communications system which is used by one or more roadside equipments or
-     *             systems.
-     *           
-     * 
-     */
     @XmlEnumValue("roadsideCommunicationsSystem")
     ROADSIDE_COMMUNICATIONS_SYSTEM("roadsideCommunicationsSystem"),
-
-    /**
-     * Roadside power system which is used by one or more roadside equipments or
-     *             systems.
-     *           
-     * 
-     */
     @XmlEnumValue("roadsidePowerSystem")
     ROADSIDE_POWER_SYSTEM("roadsidePowerSystem"),
-
-    /**
-     * Signs used to control traffic speed.
-     * 
-     */
     @XmlEnumValue("speedControlSigns")
     SPEED_CONTROL_SIGNS("speedControlSigns"),
-
-    /**
-     * Street or road lighting.
-     * 
-     */
     @XmlEnumValue("streetLighting")
     STREET_LIGHTING("streetLighting"),
-
-    /**
-     * Temporary traffic lights.
-     * 
-     */
     @XmlEnumValue("temporaryTrafficLights")
     TEMPORARY_TRAFFIC_LIGHTS("temporaryTrafficLights"),
-
-    /**
-     * Toll gates.
-     * 
-     */
     @XmlEnumValue("tollGates")
     TOLL_GATES("tollGates"),
-
-    /**
-     * Sets of traffic lights.
-     * 
-     */
     @XmlEnumValue("trafficLightSets")
     TRAFFIC_LIGHT_SETS("trafficLightSets"),
-
-    /**
-     * Traffic signals.
-     * 
-     */
     @XmlEnumValue("trafficSignals")
     TRAFFIC_SIGNALS("trafficSignals"),
-
-    /**
-     * Tunnel emergency telephones
-     * 
-     */
     @XmlEnumValue("tunnelEmergencyPhones")
     TUNNEL_EMERGENCY_PHONES("tunnelEmergencyPhones"),
-
-    /**
-     * Tunnel fire fighting equipment
-     * 
-     */
     @XmlEnumValue("tunnelFireFightingEquipment")
     TUNNEL_FIRE_FIGHTING_EQUIPMENT("tunnelFireFightingEquipment"),
-
-    /**
-     * Tunnel lights.
-     * 
-     */
     @XmlEnumValue("tunnelLights")
     TUNNEL_LIGHTS("tunnelLights"),
-
-    /**
-     * Tunnel mobile coverage communication equipment
-     * 
-     */
     @XmlEnumValue("tunnelMobileCommunication")
     TUNNEL_MOBILE_COMMUNICATION("tunnelMobileCommunication"),
-
-    /**
-     * Tunnel radio communication equipment
-     * 
-     */
     @XmlEnumValue("tunnelRadioCommunication")
     TUNNEL_RADIO_COMMUNICATION("tunnelRadioCommunication"),
-
-    /**
-     * Any tunnel safety system
-     * 
-     */
     @XmlEnumValue("tunnelSafetySystem")
     TUNNEL_SAFETY_SYSTEM("tunnelSafetySystem"),
-
-    /**
-     * Tunnel ventilation system.
-     * 
-     */
     @XmlEnumValue("tunnelVentilation")
     TUNNEL_VENTILATION("tunnelVentilation"),
-
-    /**
-     * Variable message signs.
-     * 
-     */
     @XmlEnumValue("variableMessageSigns")
     VARIABLE_MESSAGE_SIGNS("variableMessageSigns"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

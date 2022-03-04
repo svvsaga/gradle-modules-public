@@ -37,7 +37,7 @@ public class SourceTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of sources from which situation information may be derived.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

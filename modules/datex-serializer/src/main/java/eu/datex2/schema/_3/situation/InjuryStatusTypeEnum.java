@@ -37,7 +37,7 @@ public class InjuryStatusTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of injury status of people.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

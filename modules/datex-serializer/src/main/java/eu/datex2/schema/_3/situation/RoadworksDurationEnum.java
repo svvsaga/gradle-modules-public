@@ -37,7 +37,7 @@ public class RoadworksDurationEnum {
     protected String extendedValue;
 
     /**
-     * Expected durations of roadworks in general terms.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

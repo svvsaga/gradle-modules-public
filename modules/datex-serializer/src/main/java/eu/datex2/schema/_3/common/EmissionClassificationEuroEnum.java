@@ -37,10 +37,7 @@ public class EmissionClassificationEuroEnum {
     protected String extendedValue;
 
     /**
-     * Classification of emission according to the Euro emission classification (based on
-     *         serveral amendments on 1970 Directive 70/220/EEC). Note htat vehicleType as well as fuelType are
-     *         mandatory to provide to make this classification explicit.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

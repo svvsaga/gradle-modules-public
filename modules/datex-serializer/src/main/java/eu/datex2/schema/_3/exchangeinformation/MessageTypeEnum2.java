@@ -18,8 +18,6 @@ import jakarta.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="keepAlive"/&gt;
  *     &lt;enumeration value="closeSession"/&gt;
  *     &lt;enumeration value="return"/&gt;
- *     &lt;enumeration value="CISServiceRequest"/&gt;
- *     &lt;enumeration value="CISFeedback"/&gt;
  *     &lt;enumeration value="_extended"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
@@ -40,10 +38,6 @@ public enum MessageTypeEnum2 {
     CLOSE_SESSION("closeSession"),
     @XmlEnumValue("return")
     RETURN("return"),
-    @XmlEnumValue("CISServiceRequest")
-    CIS_SERVICE_REQUEST("CISServiceRequest"),
-    @XmlEnumValue("CISFeedback")
-    CIS_FEEDBACK("CISFeedback"),
     @XmlEnumValue("_extended")
     EXTENDED("_extended");
     private final String value;

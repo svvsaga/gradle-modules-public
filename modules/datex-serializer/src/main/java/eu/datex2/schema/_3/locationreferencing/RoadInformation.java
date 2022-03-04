@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Information on a road
- * 
  * <p>Java class for RoadInformation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

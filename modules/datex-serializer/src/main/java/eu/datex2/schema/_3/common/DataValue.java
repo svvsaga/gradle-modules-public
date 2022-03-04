@@ -18,11 +18,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A data value of something that can be measured or calculated. Any provided meta-data
- *         values specified in the attributes override any specified generic characteristics such as defined for a
- *         specific measurement in the MeasurementSiteTable.
- *       
- * 
  * <p>Java class for DataValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

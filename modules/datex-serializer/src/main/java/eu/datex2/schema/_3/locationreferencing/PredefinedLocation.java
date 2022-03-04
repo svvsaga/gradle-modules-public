@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable versioned instance of a single predefined location.
- * 
  * <p>Java class for PredefinedLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

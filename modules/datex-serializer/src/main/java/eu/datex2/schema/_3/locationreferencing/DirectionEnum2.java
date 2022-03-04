@@ -43,152 +43,44 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DirectionEnum2 {
 
-
-    /**
-     * Same direction as the normal direction of flow at this point on the road
-     *             network.
-     *           
-     * 
-     */
     @XmlEnumValue("aligned")
     ALIGNED("aligned"),
-
-    /**
-     * All directions (where more than two are applicable) at this point on the road
-     *             network.
-     *           
-     * 
-     */
     @XmlEnumValue("allDirections")
     ALL_DIRECTIONS("allDirections"),
-
-    /**
-     * Anti-clockwise.
-     * 
-     */
     @XmlEnumValue("anticlockwise")
     ANTICLOCKWISE("anticlockwise"),
-
-    /**
-     * Both directions that are applicable at this point on the road network.
-     *           
-     * 
-     */
     @XmlEnumValue("bothWays")
     BOTH_WAYS("bothWays"),
-
-    /**
-     * Clockwise.
-     * 
-     */
     @XmlEnumValue("clockwise")
     CLOCKWISE("clockwise"),
-
-    /**
-     * Inner ring direction.
-     * 
-     */
     @XmlEnumValue("innerRing")
     INNER_RING("innerRing"),
-
-    /**
-     * Outer ring direction.
-     * 
-     */
     @XmlEnumValue("outerRing")
     OUTER_RING("outerRing"),
-
-    /**
-     * East bound general direction.
-     * 
-     */
     @XmlEnumValue("eastBound")
     EAST_BOUND("eastBound"),
-
-    /**
-     * North bound general direction.
-     * 
-     */
     @XmlEnumValue("northBound")
     NORTH_BOUND("northBound"),
-
-    /**
-     * North east bound general direction.
-     * 
-     */
     @XmlEnumValue("northEastBound")
     NORTH_EAST_BOUND("northEastBound"),
-
-    /**
-     * North west bound general direction.
-     * 
-     */
     @XmlEnumValue("northWestBound")
     NORTH_WEST_BOUND("northWestBound"),
-
-    /**
-     * South bound general direction.
-     * 
-     */
     @XmlEnumValue("southBound")
     SOUTH_BOUND("southBound"),
-
-    /**
-     * South east bound general direction.
-     * 
-     */
     @XmlEnumValue("southEastBound")
     SOUTH_EAST_BOUND("southEastBound"),
-
-    /**
-     * South west bound general direction.
-     * 
-     */
     @XmlEnumValue("southWestBound")
     SOUTH_WEST_BOUND("southWestBound"),
-
-    /**
-     * West bound general direction.
-     * 
-     */
     @XmlEnumValue("westBound")
     WEST_BOUND("westBound"),
-
-    /**
-     * Heading towards town centre direction of travel.
-     * 
-     */
     @XmlEnumValue("inboundTowardsTown")
     INBOUND_TOWARDS_TOWN("inboundTowardsTown"),
-
-    /**
-     * Heading out of or away from the town centre direction of travel.
-     *           
-     * 
-     */
     @XmlEnumValue("outboundFromTown")
     OUTBOUND_FROM_TOWN("outboundFromTown"),
-
-    /**
-     * Opposite direction to the normal direction of flow at this point on the road
-     *             network.
-     *           
-     * 
-     */
     @XmlEnumValue("opposite")
     OPPOSITE("opposite"),
-
-    /**
-     * Direction is unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

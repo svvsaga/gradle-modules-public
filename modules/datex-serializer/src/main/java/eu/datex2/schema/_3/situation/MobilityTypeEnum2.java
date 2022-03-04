@@ -26,26 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum MobilityTypeEnum2 {
 
-
-    /**
-     * The described element of a situation is moving.
-     * 
-     */
     @XmlEnumValue("mobile")
     MOBILE("mobile"),
-
-    /**
-     * The described element of a situation is stationary.
-     * 
-     */
     @XmlEnumValue("stationary")
     STATIONARY("stationary"),
-
-    /**
-     * The mobility of the described element of a situation is unknown.
-     *           
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

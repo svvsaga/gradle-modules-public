@@ -37,7 +37,7 @@ public class TransitServiceInformationEnum {
     protected String extendedValue;
 
     /**
-     * Types of public transport information.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

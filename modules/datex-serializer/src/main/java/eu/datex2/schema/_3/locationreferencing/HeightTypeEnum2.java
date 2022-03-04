@@ -26,30 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum HeightTypeEnum2 {
 
-
-    /**
-     * Value measured vertically above the reference ellipsoid
-     * 
-     */
     @XmlEnumValue("ellipsoidalHeight")
     ELLIPSOIDAL_HEIGHT("ellipsoidalHeight"),
-
-    /**
-     * Height type corresponding a value measured along direction of gravity above the
-     *             reference geoid i.e. equipotential surface of the Earth's gravity field which globally
-     *             approximates mean sea level.
-     *           
-     * 
-     */
     @XmlEnumValue("gravityRelatedHeight")
     GRAVITY_RELATED_HEIGHT("gravityRelatedHeight"),
-
-    /**
-     * Height type corresponding to value masured vertically above the ground level at
-     *             this point.
-     *           
-     * 
-     */
     @XmlEnumValue("relativeHeight")
     RELATIVE_HEIGHT("relativeHeight"),
     @XmlEnumValue("_extended")

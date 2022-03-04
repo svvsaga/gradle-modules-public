@@ -37,7 +37,7 @@ public class ComplianceOptionEnum {
     protected String extendedValue;
 
     /**
-     * Types of compliance.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

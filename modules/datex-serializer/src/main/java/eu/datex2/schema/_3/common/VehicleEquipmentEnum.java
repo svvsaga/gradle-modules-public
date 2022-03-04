@@ -37,7 +37,7 @@ public class VehicleEquipmentEnum {
     protected String extendedValue;
 
     /**
-     * Types of vehicle equipment in use or on board.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

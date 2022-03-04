@@ -37,7 +37,7 @@ public class PrecipitationIntensityEnum {
     protected String extendedValue;
 
     /**
-     * Intensity of precipitation.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

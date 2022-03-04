@@ -29,46 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VehicleEquipmentEnum2 {
 
-
-    /**
-     * Vehicle not using snow chains.
-     * 
-     */
     @XmlEnumValue("notUsingSnowChains")
     NOT_USING_SNOW_CHAINS("notUsingSnowChains"),
-
-    /**
-     * Vehicle not using either snow tyres or snow chains.
-     * 
-     */
     @XmlEnumValue("notUsingSnowChainsOrTyres")
     NOT_USING_SNOW_CHAINS_OR_TYRES("notUsingSnowChainsOrTyres"),
-
-    /**
-     * Vehicle using snow chains.
-     * 
-     */
     @XmlEnumValue("snowChainsInUse")
     SNOW_CHAINS_IN_USE("snowChainsInUse"),
-
-    /**
-     * Vehicle using snow tyres.
-     * 
-     */
     @XmlEnumValue("snowTyresInUse")
     SNOW_TYRES_IN_USE("snowTyresInUse"),
-
-    /**
-     * Vehicle using snow tyres or snow chains.
-     * 
-     */
     @XmlEnumValue("snowChainsOrTyresInUse")
     SNOW_CHAINS_OR_TYRES_IN_USE("snowChainsOrTyresInUse"),
-
-    /**
-     * Vehicle which is not carrying on board snow tyres or chains.
-     * 
-     */
     @XmlEnumValue("withoutSnowTyresOrChainsOnBoard")
     WITHOUT_SNOW_TYRES_OR_CHAINS_ON_BOARD("withoutSnowTyresOrChainsOnBoard"),
     @XmlEnumValue("_extended")

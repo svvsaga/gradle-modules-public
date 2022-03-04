@@ -37,8 +37,7 @@ public class TimeMeaningEnum {
     protected String extendedValue;
 
     /**
-     * Explains the meaning of a specific time value with respect to a time period
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

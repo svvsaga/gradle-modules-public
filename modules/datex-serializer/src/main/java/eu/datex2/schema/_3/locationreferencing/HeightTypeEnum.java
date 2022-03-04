@@ -37,7 +37,7 @@ public class HeightTypeEnum {
     protected String extendedValue;
 
     /**
-     * Coded value for type of height
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

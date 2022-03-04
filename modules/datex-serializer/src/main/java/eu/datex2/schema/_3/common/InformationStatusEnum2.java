@@ -27,37 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InformationStatusEnum2 {
 
-
-    /**
-     * The information is real. It is not a test or exercise.
-     * 
-     */
     @XmlEnumValue("real")
     REAL("real"),
-
-    /**
-     * The information is part of an exercise which is for testing security.
-     *           
-     * 
-     */
     @XmlEnumValue("securityExercise")
     SECURITY_EXERCISE("securityExercise"),
-
-    /**
-     * The information is part of an exercise which includes tests of associated
-     *             technical subsystems.
-     *           
-     * 
-     */
     @XmlEnumValue("technicalExercise")
     TECHNICAL_EXERCISE("technicalExercise"),
-
-    /**
-     * The information is part of a test for checking the exchange of this type of
-     *             information.
-     *           
-     * 
-     */
     @XmlEnumValue("test")
     TEST("test"),
     @XmlEnumValue("_extended")

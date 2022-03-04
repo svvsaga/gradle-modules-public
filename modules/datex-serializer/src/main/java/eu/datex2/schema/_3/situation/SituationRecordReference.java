@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Reference to a SituationRecord
- * 
  * <p>Java class for SituationRecordReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

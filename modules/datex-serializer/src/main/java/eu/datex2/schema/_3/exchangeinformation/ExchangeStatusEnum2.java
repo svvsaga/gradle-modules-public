@@ -13,11 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="ExchangeStatusEnum"&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="closingSession"/&gt;
- *     &lt;enumeration value="offline"/&gt;
- *     &lt;enumeration value="online"/&gt;
- *     &lt;enumeration value="openingSession"/&gt;
- *     &lt;enumeration value="resuming"/&gt;
  *     &lt;enumeration value="undefined"/&gt;
  *     &lt;enumeration value="_extended"/&gt;
  *   &lt;/restriction&gt;
@@ -29,16 +24,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ExchangeStatusEnum2 {
 
-    @XmlEnumValue("closingSession")
-    CLOSING_SESSION("closingSession"),
-    @XmlEnumValue("offline")
-    OFFLINE("offline"),
-    @XmlEnumValue("online")
-    ONLINE("online"),
-    @XmlEnumValue("openingSession")
-    OPENING_SESSION("openingSession"),
-    @XmlEnumValue("resuming")
-    RESUMING("resuming"),
     @XmlEnumValue("undefined")
     UNDEFINED("undefined"),
     @XmlEnumValue("_extended")

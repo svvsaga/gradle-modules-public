@@ -13,8 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable versioned instance of a predefined itinerary.
- * 
  * <p>Java class for PredefinedItinerary complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

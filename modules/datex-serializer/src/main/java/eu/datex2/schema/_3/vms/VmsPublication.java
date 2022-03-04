@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing the current status and settings of one or more VMS controller
- *         units, each unit controlling one or more individual variable message signs.
- *       
- * 
  * <p>Java class for VmsPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

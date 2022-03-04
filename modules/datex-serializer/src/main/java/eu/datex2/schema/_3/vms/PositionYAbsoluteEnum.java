@@ -37,7 +37,7 @@ public class PositionYAbsoluteEnum {
     protected String extendedValue;
 
     /**
-     * Absolute verticals positions of an item within an assigned space.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

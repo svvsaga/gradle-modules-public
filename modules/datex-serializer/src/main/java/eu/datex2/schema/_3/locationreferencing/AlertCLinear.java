@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear section along a road defined between two points on the road by reference to a
- *         pre-defined ALERT-C location table.
- *       
- * 
  * <p>Java class for AlertCLinear complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

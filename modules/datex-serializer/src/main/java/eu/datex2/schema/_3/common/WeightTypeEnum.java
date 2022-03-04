@@ -37,7 +37,7 @@ public class WeightTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of weight - describing the meaning of a vehicle weight value
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

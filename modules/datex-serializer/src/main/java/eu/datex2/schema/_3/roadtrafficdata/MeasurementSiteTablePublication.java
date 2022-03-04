@@ -13,8 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing one or more Measurement Site Tables.
- * 
  * <p>Java class for MeasurementSiteTablePublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of daily traffic flow
- * 
  * <p>Java class for DailyTrafficFlowValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

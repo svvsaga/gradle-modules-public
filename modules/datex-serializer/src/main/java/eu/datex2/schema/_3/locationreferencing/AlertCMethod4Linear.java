@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear section along a road between two points, primary and secondary, which are
- *         pre-defined ALERT-C locations plus offset distance. Direction is FROM the secondary point TO the primary
- *         point, i.e. the primary point is downstream of the secondary point.
- *       
- * 
  * <p>Java class for AlertCMethod4Linear complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

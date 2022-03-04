@@ -34,83 +34,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc03AreaDescriptorSubtypeEnum2 {
 
-
-    /**
-     * Name of an administrative area.
-     * 
-     */
     @XmlEnumValue("administrativeAreaName")
     ADMINISTRATIVE_AREA_NAME("administrativeAreaName"),
-
-    /**
-     * Reference name by which administrative area is known.
-     * 
-     */
     @XmlEnumValue("administrativeReferenceName")
     ADMINISTRATIVE_REFERENCE_NAME("administrativeReferenceName"),
-
-    /**
-     * Name of an area.
-     * 
-     */
     @XmlEnumValue("areaName")
     AREA_NAME("areaName"),
-
-    /**
-     * Name of a county (administrative sub-division).
-     * 
-     */
     @XmlEnumValue("countyName")
     COUNTY_NAME("countyName"),
-
-    /**
-     * Name of a lake.
-     * 
-     */
     @XmlEnumValue("lakeName")
     LAKE_NAME("lakeName"),
-
-    /**
-     * Name of a nation (e.g. Wales) which is a sub-division of a ISO recognised
-     *             country.
-     *           
-     * 
-     */
     @XmlEnumValue("nationName")
     NATION_NAME("nationName"),
-
-    /**
-     * Name of a police force control area.
-     * 
-     */
     @XmlEnumValue("policeForceControlAreaName")
     POLICE_FORCE_CONTROL_AREA_NAME("policeForceControlAreaName"),
-
-    /**
-     * Name of a geographic region.
-     * 
-     */
     @XmlEnumValue("regionName")
     REGION_NAME("regionName"),
-
-    /**
-     * Name of a sea.
-     * 
-     */
     @XmlEnumValue("seaName")
     SEA_NAME("seaName"),
-
-    /**
-     * Name of a town.
-     * 
-     */
     @XmlEnumValue("townName")
     TOWN_NAME("townName"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

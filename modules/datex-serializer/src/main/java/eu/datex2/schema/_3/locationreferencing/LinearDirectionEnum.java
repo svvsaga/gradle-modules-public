@@ -37,9 +37,7 @@ public class LinearDirectionEnum {
     protected String extendedValue;
 
     /**
-     * Directions of traffic flow relative to the direction in which the linear element is
-     *         defined.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

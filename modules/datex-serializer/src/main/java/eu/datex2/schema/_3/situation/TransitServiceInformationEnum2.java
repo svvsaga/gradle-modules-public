@@ -45,169 +45,48 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TransitServiceInformationEnum2 {
 
-
-    /**
-     * Public transport, park-and-ride, rail or bus services are cancelled.
-     *           
-     * 
-     */
     @XmlEnumValue("cancellations")
     CANCELLATIONS("cancellations"),
-
-    /**
-     * The specified service is delayed due to bad weather.
-     * 
-     */
     @XmlEnumValue("delayDueToBadWeather")
     DELAY_DUE_TO_BAD_WEATHER("delayDueToBadWeather"),
-
-    /**
-     * The specified service is delayed due to the need for repairs.
-     * 
-     */
     @XmlEnumValue("delayDueToRepairs")
     DELAY_DUE_TO_REPAIRS("delayDueToRepairs"),
-
-    /**
-     * The specified public transport service will be delayed until further notice.
-     *           
-     * 
-     */
     @XmlEnumValue("delayedUntilFurtherNotice")
     DELAYED_UNTIL_FURTHER_NOTICE("delayedUntilFurtherNotice"),
-
-    /**
-     * The departure of the specified ferry service is delayed due to flotsam.
-     *           
-     * 
-     */
     @XmlEnumValue("delaysDueToFlotsam")
     DELAYS_DUE_TO_FLOTSAM("delaysDueToFlotsam"),
-
-    /**
-     * The departure of the specified service is on schedule.
-     * 
-     */
     @XmlEnumValue("departureOnSchedule")
     DEPARTURE_ON_SCHEDULE("departureOnSchedule"),
-
-    /**
-     * The ferry service has been replaced by an ice road.
-     * 
-     */
     @XmlEnumValue("ferryReplacedByIceRoad")
     FERRY_REPLACED_BY_ICE_ROAD("ferryReplacedByIceRoad"),
-
-    /**
-     * A shuttle service is operating at no charge between specified locations.
-     *           
-     * 
-     */
     @XmlEnumValue("freeShuttleServiceOperating")
     FREE_SHUTTLE_SERVICE_OPERATING("freeShuttleServiceOperating"),
-
-    /**
-     * The information service relating to the specified transport system is not
-     *             currently available.
-     *           
-     * 
-     */
     @XmlEnumValue("informationServiceNotAvailable")
     INFORMATION_SERVICE_NOT_AVAILABLE("informationServiceNotAvailable"),
-
-    /**
-     * The specified service is subject to irregular delays.
-     * 
-     */
     @XmlEnumValue("irregularServiceDelays")
     IRREGULAR_SERVICE_DELAYS("irregularServiceDelays"),
-
-    /**
-     * The load capacity for the specified service has been changed.
-     * 
-     */
     @XmlEnumValue("loadCapacityChanged")
     LOAD_CAPACITY_CHANGED("loadCapacityChanged"),
-
-    /**
-     * Long vehicles are subject to restrictions on the specified service.
-     *           
-     * 
-     */
     @XmlEnumValue("restrictionsForLongerVehicles")
     RESTRICTIONS_FOR_LONGER_VEHICLES("restrictionsForLongerVehicles"),
-
-    /**
-     * The specified service is subject to delays.
-     * 
-     */
     @XmlEnumValue("serviceDelays")
     SERVICE_DELAYS("serviceDelays"),
-
-    /**
-     * The specified service is subject to delays whose predicted duration cannot be
-     *             estimated accurately.
-     *           
-     * 
-     */
     @XmlEnumValue("serviceDelaysOfUncertainDuration")
     SERVICE_DELAYS_OF_UNCERTAIN_DURATION("serviceDelaysOfUncertainDuration"),
-
-    /**
-     * The departure of the specified service is fully booked.
-     * 
-     */
     @XmlEnumValue("serviceFullyBooked")
     SERVICE_FULLY_BOOKED("serviceFullyBooked"),
-
-    /**
-     * The specified service is not operating.
-     * 
-     */
     @XmlEnumValue("serviceNotOperating")
     SERVICE_NOT_OPERATING("serviceNotOperating"),
-
-    /**
-     * The specified service is not operating but an alternative service is available.
-     *           
-     * 
-     */
     @XmlEnumValue("serviceNotOperatingSubstituteServiceAvailable")
     SERVICE_NOT_OPERATING_SUBSTITUTE_SERVICE_AVAILABLE("serviceNotOperatingSubstituteServiceAvailable"),
-
-    /**
-     * The specified service has been suspended.
-     * 
-     */
     @XmlEnumValue("serviceSuspended")
     SERVICE_SUSPENDED("serviceSuspended"),
-
-    /**
-     * The specified service has been cancelled.
-     * 
-     */
     @XmlEnumValue("serviceWithdrawn")
     SERVICE_WITHDRAWN("serviceWithdrawn"),
-
-    /**
-     * A shuttle service is operating between the specified locations.
-     * 
-     */
     @XmlEnumValue("shuttleServiceOperating")
     SHUTTLE_SERVICE_OPERATING("shuttleServiceOperating"),
-
-    /**
-     * The timetable for the specified service is subject to temporary changes.
-     *           
-     * 
-     */
     @XmlEnumValue("temporaryChangesToTimetables")
     TEMPORARY_CHANGES_TO_TIMETABLES("temporaryChangesToTimetables"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

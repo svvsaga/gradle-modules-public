@@ -13,11 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Derived/computed travel time information relating to a linear section of the road network;
- *         forecast = true means a forecast for a vehicle at the start of the specified location, forecast = false
- *         means calculation/measurement at the end.
- *       
- * 
  * <p>Java class for TravelTimeData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

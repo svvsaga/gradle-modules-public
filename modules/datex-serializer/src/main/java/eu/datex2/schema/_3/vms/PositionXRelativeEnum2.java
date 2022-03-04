@@ -28,41 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PositionXRelativeEnum2 {
 
-
-    /**
-     * Positioned to the left of relative item.
-     * 
-     */
     @XmlEnumValue("toTheLeft")
     TO_THE_LEFT("toTheLeft"),
-
-    /**
-     * The left side of the area is aligned on the left side of the relative area.
-     *           
-     * 
-     */
     @XmlEnumValue("alignedOnTheLeftSide")
     ALIGNED_ON_THE_LEFT_SIDE("alignedOnTheLeftSide"),
-
-    /**
-     * The area is vertically centred on the relative area.
-     * 
-     */
     @XmlEnumValue("centred")
     CENTRED("centred"),
-
-    /**
-     * The right side of the area is aligned on the right side of the relative area.
-     *           
-     * 
-     */
     @XmlEnumValue("alignedOnTheRightSide")
     ALIGNED_ON_THE_RIGHT_SIDE("alignedOnTheRightSide"),
-
-    /**
-     * Positioned to the right of relative item.
-     * 
-     */
     @XmlEnumValue("toTheRight")
     TO_THE_RIGHT("toTheRight"),
     @XmlEnumValue("_extended")

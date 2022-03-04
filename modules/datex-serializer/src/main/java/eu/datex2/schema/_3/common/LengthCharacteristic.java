@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Length characteristic of a vehicle.
- * 
  * <p>Java class for LengthCharacteristic complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of percentage (from an observation set) of vehicles whose speeds fall below a
- *         stated value.
- *       
- * 
  * <p>Java class for SpeedPercentile complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

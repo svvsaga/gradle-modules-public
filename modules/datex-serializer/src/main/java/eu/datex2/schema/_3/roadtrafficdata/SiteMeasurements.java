@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measurement data set derived from a specific measurement site.
- * 
  * <p>Java class for SiteMeasurements complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

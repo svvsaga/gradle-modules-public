@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Multiple (i.e. more than one) physically separate locations which are ordered that
- *         constitute an itinerary or route where they are defined by reference to a predefined itinerary.
- *       
- * 
  * <p>Java class for ItineraryByReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

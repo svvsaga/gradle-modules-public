@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DelayBandEnum2 {
 
-
-    /**
-     * Negligible delay.
-     * 
-     */
     @XmlEnumValue("negligible")
     NEGLIGIBLE("negligible"),
-
-    /**
-     * Delay up to ten minutes.
-     * 
-     */
     @XmlEnumValue("upToTenMinutes")
     UP_TO_TEN_MINUTES("upToTenMinutes"),
-
-    /**
-     * Delay between ten minutes and thirty minutes.
-     * 
-     */
     @XmlEnumValue("betweenTenMinutesAndThirtyMinutes")
     BETWEEN_TEN_MINUTES_AND_THIRTY_MINUTES("betweenTenMinutesAndThirtyMinutes"),
-
-    /**
-     * Delay between thirty minutes and one hour.
-     * 
-     */
     @XmlEnumValue("betweenThirtyMinutesAndOneHour")
     BETWEEN_THIRTY_MINUTES_AND_ONE_HOUR("betweenThirtyMinutesAndOneHour"),
-
-    /**
-     * Delay between one hour and three hours.
-     * 
-     */
     @XmlEnumValue("betweenOneHourAndThreeHours")
     BETWEEN_ONE_HOUR_AND_THREE_HOURS("betweenOneHourAndThreeHours"),
-
-    /**
-     * Delay between three hours and six hours.
-     * 
-     */
     @XmlEnumValue("betweenThreeHoursAndSixHours")
     BETWEEN_THREE_HOURS_AND_SIX_HOURS("betweenThreeHoursAndSixHours"),
-
-    /**
-     * Delay longer than six hours.
-     * 
-     */
     @XmlEnumValue("longerThanSixHours")
     LONGER_THAN_SIX_HOURS("longerThanSixHours"),
     @XmlEnumValue("_extended")

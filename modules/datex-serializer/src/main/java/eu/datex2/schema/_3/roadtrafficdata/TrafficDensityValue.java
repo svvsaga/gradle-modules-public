@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the density of vehicles on a unit stretch of road in a
- *         given direction.
- *       
- * 
  * <p>Java class for TrafficDensityValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

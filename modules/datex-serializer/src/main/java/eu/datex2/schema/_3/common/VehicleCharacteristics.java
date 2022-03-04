@@ -12,9 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The characteristics of a vehicle, e.g. lorry of gross weight greater than 30 tonnes.
- *       
- * 
  * <p>Java class for VehicleCharacteristics complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

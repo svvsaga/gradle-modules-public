@@ -27,34 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DelaysTypeEnum2 {
 
-
-    /**
-     * Delays on the road network as a result of any situation which causes hold-ups.
-     *           
-     * 
-     */
     @XmlEnumValue("delays")
     DELAYS("delays"),
-
-    /**
-     * Delays on the road network whose predicted duration cannot be estimated.
-     *           
-     * 
-     */
     @XmlEnumValue("delaysOfUncertainDuration")
     DELAYS_OF_UNCERTAIN_DURATION("delaysOfUncertainDuration"),
-
-    /**
-     * Delays on the road network of unusual severity.
-     * 
-     */
     @XmlEnumValue("longDelays")
     LONG_DELAYS("longDelays"),
-
-    /**
-     * Delays on the road network of abnormally unusual severity.
-     * 
-     */
     @XmlEnumValue("veryLongDelays")
     VERY_LONG_DELAYS("veryLongDelays"),
     @XmlEnumValue("_extended")

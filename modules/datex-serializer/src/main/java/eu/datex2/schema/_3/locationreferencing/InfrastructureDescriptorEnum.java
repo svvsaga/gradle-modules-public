@@ -37,8 +37,7 @@ public class InfrastructureDescriptorEnum {
     protected String extendedValue;
 
     /**
-     * Descriptor identifying infrastructure to help to identify a specific location.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

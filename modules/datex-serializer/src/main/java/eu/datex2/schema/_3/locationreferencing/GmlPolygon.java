@@ -11,9 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Planar surface defined by 1 exterior boundary and 0 or more interior boundaries
- *       
- * 
  * <p>Java class for GmlPolygon complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

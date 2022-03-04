@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Averaged measurements or calculations of traffic gap i.e. the distance or time interval
- *         between vehicles, measured between the rear of one vehicle and the front of the following vehicle.
- *       
- * 
  * <p>Java class for TrafficGap complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

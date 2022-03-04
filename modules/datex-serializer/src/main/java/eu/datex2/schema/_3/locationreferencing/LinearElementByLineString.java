@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear element defined by a line string (class GmlLineString).
- * 
  * <p>Java class for LinearElementByLineString complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

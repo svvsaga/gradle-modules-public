@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The basis of a location reference is a sequence of location reference points (LRPs).
- *       
- * 
  * <p>Java class for OpenlrLocationReferencePoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

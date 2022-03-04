@@ -37,7 +37,7 @@ public class DirectionCompassEnum {
     protected String extendedValue;
 
     /**
-     * Cardinal direction points of the compass.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

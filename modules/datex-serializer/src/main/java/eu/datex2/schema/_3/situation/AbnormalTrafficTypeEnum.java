@@ -37,9 +37,7 @@ public class AbnormalTrafficTypeEnum {
     protected String extendedValue;
 
     /**
-     * Descriptive terms for abnormal traffic conditions specifically relating to the nature of
-     *         the traffic movement, implying levels of service.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,7 +37,7 @@ public class VmsTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of variable message sign.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

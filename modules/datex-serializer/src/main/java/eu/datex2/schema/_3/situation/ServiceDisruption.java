@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of disruption to normal services which may include roadside services such as those
- *         available at designated service areas, or any other relevant services such as nearby parking.
- *       
- * 
  * <p>Java class for ServiceDisruption complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

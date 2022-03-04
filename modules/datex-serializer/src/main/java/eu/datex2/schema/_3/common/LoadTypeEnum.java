@@ -37,7 +37,7 @@ public class LoadTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of load carried by a vehicle.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -37,8 +37,7 @@ public class EquipmentOrSystemTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of equipment and systems used to support the operation of the road network.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

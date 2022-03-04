@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Variable message sign - a display panel used to display one or more messages (text,
- *         symbols, pictograms or combinations) that can be changed or switched on or off as required
- *       
- * 
  * <p>Java class for Vms complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

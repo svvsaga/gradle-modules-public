@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of atmospheric temperature.
- * 
  * <p>Java class for Temperature complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

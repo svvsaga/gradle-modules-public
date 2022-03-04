@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A descriptor for describing a point at a junction on a road network.
- * 
  * <p>Java class for TpegJunctionPointDescriptor complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

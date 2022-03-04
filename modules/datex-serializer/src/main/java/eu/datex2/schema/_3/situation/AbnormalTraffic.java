@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A traffic condition which is not normal.
- * 
  * <p>Java class for AbnormalTraffic complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -29,46 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ColourEnum2 {
 
-
-    /**
-     * The colour amber.
-     * 
-     */
     @XmlEnumValue("amber")
     AMBER("amber"),
-
-    /**
-     * The colour blue.
-     * 
-     */
     @XmlEnumValue("blue")
     BLUE("blue"),
-
-    /**
-     * The colour green.
-     * 
-     */
     @XmlEnumValue("green")
     GREEN("green"),
-
-    /**
-     * The colour red.
-     * 
-     */
     @XmlEnumValue("red")
     RED("red"),
-
-    /**
-     * The colour white.
-     * 
-     */
     @XmlEnumValue("white")
     WHITE("white"),
-
-    /**
-     * The colour white-yellow.
-     * 
-     */
     @XmlEnumValue("whiteYellow")
     WHITE_YELLOW("whiteYellow"),
     @XmlEnumValue("_extended")

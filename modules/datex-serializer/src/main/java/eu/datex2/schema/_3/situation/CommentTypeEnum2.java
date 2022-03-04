@@ -30,63 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum CommentTypeEnum2 {
 
-
-    /**
-     * A free text human oriented note describing details of abnormal load movements
-     *             associated with the SituationRecord.
-     *           
-     * 
-     */
     @XmlEnumValue("abnormalLoadMovementNote")
     ABNORMAL_LOAD_MOVEMENT_NOTE("abnormalLoadMovementNote"),
-
-    /**
-     * A free text human oriented note describing the way the information in the
-     *             SituationRecord has been or should be processed.
-     *           
-     * 
-     */
     @XmlEnumValue("dataProcessingNote")
     DATA_PROCESSING_NOTE("dataProcessingNote"),
-
-    /**
-     * A free text human oriented description of the situation element defined by the
-     *             SituationRecord.
-     *           
-     * 
-     */
     @XmlEnumValue("description")
     DESCRIPTION("description"),
-
-    /**
-     * A free text human oriented note that supports internal traffic control operations
-     *             relating to the situation element defined by the SituationRecord.
-     *           
-     * 
-     */
     @XmlEnumValue("internalNote")
     INTERNAL_NOTE("internalNote"),
-
-    /**
-     * Human-readable name by which the associated roadworks is known
-     * 
-     */
     @XmlEnumValue("roadworksName")
     ROADWORKS_NAME("roadworksName"),
-
-    /**
-     * A free text human oriented warning relating to the SituationRecord, such as
-     *             advising the recipient that an advanced warning on VMS should be activated.
-     *           
-     * 
-     */
     @XmlEnumValue("warning")
     WARNING("warning"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

@@ -28,41 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AnimalPresenceTypeEnum2 {
 
-
-    /**
-     * Traffic may be disrupted due to animals on the roadway.
-     * 
-     */
     @XmlEnumValue("animalsOnTheRoad")
     ANIMALS_ON_THE_ROAD("animalsOnTheRoad"),
-
-    /**
-     * Traffic may be disrupted due to a herd of animals on the roadway.
-     *           
-     * 
-     */
     @XmlEnumValue("herdOfAnimalsOnTheRoad")
     HERD_OF_ANIMALS_ON_THE_ROAD("herdOfAnimalsOnTheRoad"),
-
-    /**
-     * Traffic may be disrupted due to large animals on the roadway.
-     * 
-     */
     @XmlEnumValue("largeAnimalsOnTheRoad")
     LARGE_ANIMALS_ON_THE_ROAD("largeAnimalsOnTheRoad"),
-
-    /**
-     * Small animals (that may fit underneath vehicle frames) are on the road
-     *           
-     * 
-     */
     @XmlEnumValue("smallAnimalsOnTheRoad")
     SMALL_ANIMALS_ON_THE_ROAD("smallAnimalsOnTheRoad"),
-
-    /**
-     * Wild animals (not controlled by humans) are on the road
-     * 
-     */
     @XmlEnumValue("wildAnimalsOnTheRoad")
     WILD_ANIMALS_ON_THE_ROAD("wildAnimalsOnTheRoad"),
     @XmlEnumValue("_extended")

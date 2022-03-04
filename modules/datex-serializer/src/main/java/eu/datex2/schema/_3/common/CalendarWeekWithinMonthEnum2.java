@@ -30,58 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum CalendarWeekWithinMonthEnum2 {
 
-
-    /**
-     * Calendar week containing the first of the month. Several days of the first week of
-     *             the month may occur in the previous calendar month. By construction, the last week of a
-     *             preceding month can also be the first week of a subsequent month.
-     *           
-     * 
-     */
     @XmlEnumValue("firstWeek")
     FIRST_WEEK("firstWeek"),
-
-    /**
-     * Second week of the month.
-     * 
-     */
     @XmlEnumValue("secondWeek")
     SECOND_WEEK("secondWeek"),
-
-    /**
-     * Third week of the month.
-     * 
-     */
     @XmlEnumValue("thirdWeek")
     THIRD_WEEK("thirdWeek"),
-
-    /**
-     * Fourth week of the month.
-     * 
-     */
     @XmlEnumValue("fourthWeek")
     FOURTH_WEEK("fourthWeek"),
-
-    /**
-     * Fifth week of the month.
-     * 
-     */
     @XmlEnumValue("fifthWeek")
     FIFTH_WEEK("fifthWeek"),
-
-    /**
-     * Sixth week of the month.
-     * 
-     */
     @XmlEnumValue("sixthWeek")
     SIXTH_WEEK("sixthWeek"),
-
-    /**
-     * Last calendar week within month, regardless of its actual number. The last
-     *             calendar week is the week beginning with Monday and containing the last of the month.
-     *           
-     * 
-     */
     @XmlEnumValue("lastWeek")
     LAST_WEEK("lastWeek"),
     @XmlEnumValue("_extended")

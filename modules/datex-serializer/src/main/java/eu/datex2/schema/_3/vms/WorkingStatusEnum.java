@@ -37,7 +37,7 @@ public class WorkingStatusEnum {
     protected String extendedValue;
 
     /**
-     * Identifies the working status of a VMS.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

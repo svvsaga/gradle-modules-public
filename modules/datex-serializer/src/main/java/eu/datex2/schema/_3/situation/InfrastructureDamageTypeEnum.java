@@ -37,8 +37,7 @@ public class InfrastructureDamageTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of infrastructure damage which may have an effect on the road network.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

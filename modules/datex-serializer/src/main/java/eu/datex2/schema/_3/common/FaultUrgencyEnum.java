@@ -37,7 +37,7 @@ public class FaultUrgencyEnum {
     protected String extendedValue;
 
     /**
-     * Classification of the urgency to rectify a fault.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

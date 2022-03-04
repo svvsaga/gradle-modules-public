@@ -41,134 +41,40 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AreaPlacesEnum2 {
 
-
-    /**
-     * At national borders
-     * 
-     */
     @XmlEnumValue("atBorders")
     AT_BORDERS("atBorders"),
-
-    /**
-     * At high altitudes
-     * 
-     */
     @XmlEnumValue("atHighAltitudes")
     AT_HIGH_ALTITUDES("atHighAltitudes"),
-
-    /**
-     * In built up areas, i.e. villages, towns and cities
-     * 
-     */
     @XmlEnumValue("inBuiltUpAreas")
     IN_BUILT_UP_AREAS("inBuiltUpAreas"),
-
-    /**
-     * On sections of the road where it runs through or adjacent to forested areas
-     *           
-     * 
-     */
     @XmlEnumValue("inForestedAreas")
     IN_FORESTED_AREAS("inForestedAreas"),
-
-    /**
-     * In galleries
-     * 
-     */
     @XmlEnumValue("inGalleries")
     IN_GALLERIES("inGalleries"),
-
-    /**
-     * In low-lying areas
-     * 
-     */
     @XmlEnumValue("inLowLyingAreas")
     IN_LOW_LYING_AREAS("inLowLyingAreas"),
-
-    /**
-     * In rural areas, i.e. outside villages, towns and cities
-     * 
-     */
     @XmlEnumValue("inRuralAreas")
     IN_RURAL_AREAS("inRuralAreas"),
-
-    /**
-     * In shaded areas
-     * 
-     */
     @XmlEnumValue("inShadedAreas")
     IN_SHADED_AREAS("inShadedAreas"),
-
-    /**
-     * In the city centre areas
-     * 
-     */
     @XmlEnumValue("inTheInnerCityAreas")
     IN_THE_INNER_CITY_AREAS("inTheInnerCityAreas"),
-
-    /**
-     * In tunnels
-     * 
-     */
     @XmlEnumValue("inTunnels")
     IN_TUNNELS("inTunnels"),
-
-    /**
-     * On bridges
-     * 
-     */
     @XmlEnumValue("onBridges")
     ON_BRIDGES("onBridges"),
-
-    /**
-     * On downhill sections of the road
-     * 
-     */
     @XmlEnumValue("onDownhillSections")
     ON_DOWNHILL_SECTIONS("onDownhillSections"),
-
-    /**
-     * On elevated sections of the road
-     * 
-     */
     @XmlEnumValue("onElevatedSections")
     ON_ELEVATED_SECTIONS("onElevatedSections"),
-
-    /**
-     * On entering or leaving tunnels
-     * 
-     */
     @XmlEnumValue("onEnteringOrLeavingTunnels")
     ON_ENTERING_OR_LEAVING_TUNNELS("onEnteringOrLeavingTunnels"),
-
-    /**
-     * On flyover sections of the road, i.e. sections of the road which pass over another
-     *             road
-     *           
-     * 
-     */
     @XmlEnumValue("onFlyovers")
     ON_FLYOVERS("onFlyovers"),
-
-    /**
-     * On mountain passes
-     * 
-     */
     @XmlEnumValue("onPasses")
     ON_PASSES("onPasses"),
-
-    /**
-     * On underground sections of the road
-     * 
-     */
     @XmlEnumValue("onUndergroundSections")
     ON_UNDERGROUND_SECTIONS("onUndergroundSections"),
-
-    /**
-     * On underpasses, i.e. sections of the road which pass under another road
-     *           
-     * 
-     */
     @XmlEnumValue("onUnderpasses")
     ON_UNDERPASSES("onUnderpasses"),
     @XmlEnumValue("_extended")

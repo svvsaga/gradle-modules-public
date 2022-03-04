@@ -16,8 +16,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing one or more elaborated data sets.
- * 
  * <p>Java class for ElaboratedDataPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

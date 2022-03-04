@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the flow rate of passenger car units.
- * 
  * <p>Java class for PcuFlowValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

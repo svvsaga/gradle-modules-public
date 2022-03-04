@@ -37,8 +37,7 @@ public class PictogramEnum {
     protected String extendedValue;
 
     /**
-     * Types of pictogram not currently covered by ISO 14823 Graphic Data Dictionary
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

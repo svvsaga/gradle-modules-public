@@ -27,42 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum LinearDirectionEnum2 {
 
-
-    /**
-     * Indicates that both directions of traffic flow are affected by the situation or
-     *             relate to the traffic data.
-     *           
-     * 
-     */
     @XmlEnumValue("both")
     BOTH("both"),
-
-    /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is in the opposite sense to the direction in which the linear element is
-     *             defined.
-     *           
-     * 
-     */
     @XmlEnumValue("opposite")
     OPPOSITE("opposite"),
-
-    /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is in the same sense as the direction in which the linear element is
-     *             defined.
-     *           
-     * 
-     */
     @XmlEnumValue("aligned")
     ALIGNED("aligned"),
-
-    /**
-     * Indicates that the direction of traffic flow affected by the situation or related
-     *             to the traffic data is unknown.
-     *           
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

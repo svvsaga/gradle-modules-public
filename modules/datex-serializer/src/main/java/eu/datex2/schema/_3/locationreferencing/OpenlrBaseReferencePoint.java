@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Base class used to hold data about a reference point.
- * 
  * <p>Java class for OpenlrBaseReferencePoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

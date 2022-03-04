@@ -25,18 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum WeightTypeEnum2 {
 
-
-    /**
-     * The weight is the actual weight of a specific vehicle
-     * 
-     */
     @XmlEnumValue("actual")
     ACTUAL("actual"),
-
-    /**
-     * The weight is the maximum permitted weight for a vehicle
-     * 
-     */
     @XmlEnumValue("maximumPermitted")
     MAXIMUM_PERMITTED("maximumPermitted"),
     @XmlEnumValue("_extended")

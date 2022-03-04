@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The specification of a destination. This may be either a point location or an area
- *         location.
- *       
- * 
  * <p>Java class for Destination complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

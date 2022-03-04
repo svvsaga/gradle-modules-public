@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The details of the delays being caused by the situation element defined in the situation
- *         record. It is recommended to only use one of the optional attributes to avoid confusion.
- *       
- * 
  * <p>Java class for Delays complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

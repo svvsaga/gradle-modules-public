@@ -32,77 +32,22 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum GeneralNetworkManagementTypeEnum2 {
 
-
-    /**
-     * The bridge at the specified location has swung or lifted and is therefore
-     *             temporarily closed to traffic.
-     *           
-     * 
-     */
     @XmlEnumValue("bridgeSwingInOperation")
     BRIDGE_SWING_IN_OPERATION("bridgeSwingInOperation"),
-
-    /**
-     * A vehicle convoy service is in operation, for example with a snowplough running
-     *             ahead due to bad weather conditions.
-     *           
-     * 
-     */
     @XmlEnumValue("convoyService")
     CONVOY_SERVICE("convoyService"),
-
-    /**
-     * Signs are being put out before or around an obstacle to protect drivers.
-     *           
-     * 
-     */
     @XmlEnumValue("obstacleSignalling")
     OBSTACLE_SIGNALLING("obstacleSignalling"),
-
-    /**
-     * Ramp metering is now active at the specified location.
-     * 
-     */
     @XmlEnumValue("rampMeteringInOperation")
     RAMP_METERING_IN_OPERATION("rampMeteringInOperation"),
-
-    /**
-     * Traffic is being controlled by temporary traffic lights (red-yellow-green or
-     *             red-green).
-     *           
-     * 
-     */
     @XmlEnumValue("temporaryTrafficLights")
     TEMPORARY_TRAFFIC_LIGHTS("temporaryTrafficLights"),
-
-    /**
-     * Toll gates are open with no fee collection at the specified location.
-     *           
-     * 
-     */
     @XmlEnumValue("tollGatesOpen")
     TOLL_GATES_OPEN("tollGatesOpen"),
-
-    /**
-     * Traffic is being manually directed.
-     * 
-     */
     @XmlEnumValue("trafficBeingManuallyDirected")
     TRAFFIC_BEING_MANUALLY_DIRECTED("trafficBeingManuallyDirected"),
-
-    /**
-     * Traffic in the specified direction is temporarily held up due to an unplanned
-     *             event (e.g. for clearance of wreckage following an accident).
-     *           
-     * 
-     */
     @XmlEnumValue("trafficHeld")
     TRAFFIC_HELD("trafficHeld"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

@@ -13,8 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of the maintenance vehicles involved in the roadworks activity.
- * 
  * <p>Java class for MaintenanceVehicles complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

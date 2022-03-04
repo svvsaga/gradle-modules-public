@@ -37,7 +37,7 @@ public class InformationStatusEnum {
     protected String extendedValue;
 
     /**
-     * Status of the related information (i.e. real, test or exercise).
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

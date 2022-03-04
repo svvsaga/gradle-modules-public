@@ -16,11 +16,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable instance of a traffic/travel situation comprising one or more
- *         traffic/travel circumstances which are linked by one or more causal relationships. Each traffic/travel
- *         circumstance is represented by a Situation Record.
- *       
- * 
  * <p>Java class for Situation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

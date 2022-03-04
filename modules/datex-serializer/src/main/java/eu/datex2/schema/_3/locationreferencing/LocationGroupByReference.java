@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A group of (i.e. more than one) physically separate locations which have no specific order
- *         that are defined by reference to a predefined non ordered location group.
- *       
- * 
  * <p>Java class for LocationGroupByReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

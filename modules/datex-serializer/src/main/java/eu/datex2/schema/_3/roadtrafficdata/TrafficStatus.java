@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The status of traffic conditions on a specific section or at a specific point on the road
- *         network.
- *       
- * 
  * <p>Java class for TrafficStatus complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

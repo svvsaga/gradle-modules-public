@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The weight details of a specific axle on the vehicle.
- * 
  * <p>Java class for AxleWeight complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

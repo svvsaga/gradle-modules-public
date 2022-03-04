@@ -24,11 +24,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc03JunctionPointDescriptorSubtypeEnum2 {
 
-
-    /**
-     * Name of a road network junction where two or more roads join.
-     * 
-     */
     @XmlEnumValue("junctionName")
     JUNCTION_NAME("junctionName"),
     @XmlEnumValue("_extended")

@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Data that are either measured or calculated at the same time or over the same time
- *         period.
- *       
- * 
  * <p>Java class for BasicData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

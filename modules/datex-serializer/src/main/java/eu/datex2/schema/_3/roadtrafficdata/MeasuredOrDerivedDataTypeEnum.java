@@ -37,7 +37,7 @@ public class MeasuredOrDerivedDataTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of measured or derived data.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

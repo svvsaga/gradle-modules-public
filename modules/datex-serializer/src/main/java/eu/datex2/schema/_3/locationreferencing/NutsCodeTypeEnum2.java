@@ -28,39 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum NutsCodeTypeEnum2 {
 
-
-    /**
-     * NUTS 1 code
-     * 
-     */
     @XmlEnumValue("nuts1Code")
     NUTS_1_CODE("nuts1Code"),
-
-    /**
-     * NUTS 2 code
-     * 
-     */
     @XmlEnumValue("nuts2Code")
     NUTS_2_CODE("nuts2Code"),
-
-    /**
-     * NUTS 3 code
-     * 
-     */
     @XmlEnumValue("nuts3Code")
     NUTS_3_CODE("nuts3Code"),
-
-    /**
-     * LAU 1 code
-     * 
-     */
     @XmlEnumValue("lau1Code")
     LAU_1_CODE("lau1Code"),
-
-    /**
-     * LAU 2 code
-     * 
-     */
     @XmlEnumValue("lau2Code")
     LAU_2_CODE("lau2Code"),
     @XmlEnumValue("_extended")

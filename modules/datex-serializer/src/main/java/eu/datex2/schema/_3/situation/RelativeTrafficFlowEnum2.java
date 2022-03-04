@@ -28,48 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RelativeTrafficFlowEnum2 {
 
-
-    /**
-     * Traffic is very much heavier than normally expected at the specified location at
-     *             this date/time.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficVeryMuchHeavierThanNormal")
     TRAFFIC_VERY_MUCH_HEAVIER_THAN_NORMAL("trafficVeryMuchHeavierThanNormal"),
-
-    /**
-     * Traffic is heavier than normally expected at the specified location at this
-     *             date/time.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficHeavierThanNormal")
     TRAFFIC_HEAVIER_THAN_NORMAL("trafficHeavierThanNormal"),
-
-    /**
-     * Traffic flow is normal at the specified location at this date/time.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficFlowNormal")
     TRAFFIC_FLOW_NORMAL("trafficFlowNormal"),
-
-    /**
-     * Traffic is lighter than normally expected at the specified location at this
-     *             date/time.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficLighterThanNormal")
     TRAFFIC_LIGHTER_THAN_NORMAL("trafficLighterThanNormal"),
-
-    /**
-     * Traffic is very much lighter than normally expected at the specified location at
-     *             this date/time.
-     *           
-     * 
-     */
     @XmlEnumValue("trafficVeryMuchLighterThanNormal")
     TRAFFIC_VERY_MUCH_LIGHTER_THAN_NORMAL("trafficVeryMuchLighterThanNormal"),
     @XmlEnumValue("_extended")

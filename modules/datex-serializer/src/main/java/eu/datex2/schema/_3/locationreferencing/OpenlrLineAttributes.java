@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Line attributes are part of a location reference point and consists of functional road
- *         class (FRC),form of way (FOW) and bearing (BEAR) data.
- *       
- * 
  * <p>Java class for OpenlrLineAttributes complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

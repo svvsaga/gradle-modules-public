@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of default values for locations on the road network. Where a default status
- *         value is supplied, it shall apply for all specified locations, unless the publication includes an
- *         additional status value for a specified location.
- *       
- * 
  * <p>Java class for ReferenceSettings complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

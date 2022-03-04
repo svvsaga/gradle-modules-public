@@ -12,11 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Line string based on GML (EN ISO 19136) definition: a curve defined by a series of two or
- *         more coordinate tuples. Unlike GML may be self-intersecting. If srsName attribute is not present,
- *         posList is assumed to use "ETRS89-LatLonh" reference system.
- *       
- * 
  * <p>Java class for GmlLineString complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

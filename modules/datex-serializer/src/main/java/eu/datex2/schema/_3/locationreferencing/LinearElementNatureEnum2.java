@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum LinearElementNatureEnum2 {
 
-
-    /**
-     * The nature of the linear element is a road.
-     * 
-     */
     @XmlEnumValue("road")
     ROAD("road"),
-
-    /**
-     * The nature of the linear element is a section of a road.
-     * 
-     */
     @XmlEnumValue("roadSection")
     ROAD_SECTION("roadSection"),
-
-    /**
-     * The nature of the linear element is a slip road.
-     * 
-     */
     @XmlEnumValue("slipRoad")
     SLIP_ROAD("slipRoad"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

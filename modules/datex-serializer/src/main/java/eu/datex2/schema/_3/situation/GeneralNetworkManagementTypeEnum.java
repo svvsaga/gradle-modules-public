@@ -37,7 +37,7 @@ public class GeneralNetworkManagementTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of network management actions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Offsets are used to locate the start and end of a location more precisely than bounding to
- *         the nodes in a network.
- *       
- * 
  * <p>Java class for OpenlrOffsets complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

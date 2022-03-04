@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An event which is not planned by the traffic operator, which is affecting, or has the
- *         potential to affect traffic flow.
- *       
- * 
  * <p>Java class for TrafficElement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

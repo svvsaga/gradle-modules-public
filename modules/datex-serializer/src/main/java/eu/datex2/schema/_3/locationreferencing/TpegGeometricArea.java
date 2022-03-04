@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A geometric area defined by a centre point and a radius.
- * 
  * <p>Java class for TpegGeometricArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

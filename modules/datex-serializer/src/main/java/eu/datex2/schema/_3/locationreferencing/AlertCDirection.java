@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The direction of traffic flow along the road to which the information relates.
- *       
- * 
  * <p>Java class for AlertCDirection complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

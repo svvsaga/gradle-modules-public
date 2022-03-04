@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Location representing a linear section with optional directionality defined between two
- *         points.
- *       
- * 
  * <p>Java class for LinearLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

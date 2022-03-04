@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing one or more measurement data sets, each set being measured at a
- *         single measurement site.
- *       
- * 
  * <p>Java class for MeasuredDataPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

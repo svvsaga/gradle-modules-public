@@ -37,7 +37,7 @@ public class DisturbanceActivityTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of disturbance activities.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

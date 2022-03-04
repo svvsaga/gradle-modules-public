@@ -32,71 +32,22 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SpecialDayTypeEnum2 {
 
-
-    /**
-     * The day preceding a public holiday.
-     * 
-     */
     @XmlEnumValue("dayBeforePublicHoliday")
     DAY_BEFORE_PUBLIC_HOLIDAY("dayBeforePublicHoliday"),
-
-    /**
-     * A public holiday in general. You may use the PublicHoliday class to refer on a
-     *             specific public holiday.
-     *           
-     * 
-     */
     @XmlEnumValue("publicHoliday")
     PUBLIC_HOLIDAY("publicHoliday"),
-
-    /**
-     * A day following a public holiday.
-     * 
-     */
     @XmlEnumValue("dayFollowingPublicHoliday")
     DAY_FOLLOWING_PUBLIC_HOLIDAY("dayFollowingPublicHoliday"),
-
-    /**
-     * A day between a public holiday and the weekend.
-     * 
-     */
     @XmlEnumValue("longWeekendDay")
     LONG_WEEKEND_DAY("longWeekendDay"),
-
-    /**
-     * A holiday in lieu of a public holiday that falls on a weekend.
-     * 
-     */
     @XmlEnumValue("inLieuOfPublicHoliday")
     IN_LIEU_OF_PUBLIC_HOLIDAY("inLieuOfPublicHoliday"),
-
-    /**
-     * A school day.
-     * 
-     */
     @XmlEnumValue("schoolDay")
     SCHOOL_DAY("schoolDay"),
-
-    /**
-     * A day within the school holidays.
-     * 
-     */
     @XmlEnumValue("schoolHolidays")
     SCHOOL_HOLIDAYS("schoolHolidays"),
-
-    /**
-     * A day of a public event. You may use the publicEvent attribute to specify the
-     *             corresponding event.
-     *           
-     * 
-     */
     @XmlEnumValue("publicEventDay")
     PUBLIC_EVENT_DAY("publicEventDay"),
-
-    /**
-     * Some other special day.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

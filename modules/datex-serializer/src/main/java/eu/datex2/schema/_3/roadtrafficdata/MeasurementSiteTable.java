@@ -13,11 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A Measurement Site Table comprising a number of sets of data, each describing the location
- *         from where a stream of measured data may be derived. Each location is known as a "measurement site"
- *         which can be a point, a linear road section or an area.
- *       
- * 
  * <p>Java class for MeasurementSiteTable complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -3,7 +3,6 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An area defined by a name and/or in terms of known boundaries, such as country or county
- *         boundaries or allocated control area of particular authority. The attributes do not form a union;
- *         instead, the smallest intersection forms the resulting area.
- *       
- * 
  * <p>Java class for NamedArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -32,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="areaName" type="{http://datex2.eu/schema/3/common}MultilingualString"/&gt;
  *         &lt;element name="namedAreaType" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaTypeEnum" minOccurs="0"/&gt;
  *         &lt;element name="country" type="{http://datex2.eu/schema/3/common}CountryCode" minOccurs="0"/&gt;
- *         &lt;element name="_namedAreaExtension" type="{http://datex2.eu/schema/3/common}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="_namedAreaExtension" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -67,8 +61,8 @@ public class NamedArea
      * <p>
      * You are getting this "catch-all" property because of the following reason: 
      * The field name "NamedAreaExtension" is used by two different parts of a schema. See: 
-     * line 2147 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_LocationReferencing.xsd
-     * line 2068 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_Common.xsd
+     * line 900 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_LocationReferencing.xsd
+     * line 831 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_Common.xsd
      * <p>
      * To get rid of this property, apply a property customization to one 
      * of both of the following declarations to change their names: 
@@ -89,8 +83,8 @@ public class NamedArea
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
      * {@link JAXBElement }{@code <}{@link MultilingualString }{@code >}
+     * {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
      * {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * 

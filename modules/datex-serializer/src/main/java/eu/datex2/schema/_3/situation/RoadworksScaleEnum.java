@@ -37,9 +37,7 @@ public class RoadworksScaleEnum {
     protected String extendedValue;
 
     /**
-     * Grade of complexity of the roadworks according to the responsible road operator. For
-     *         example determined by size, duration and/or traffic disruption.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

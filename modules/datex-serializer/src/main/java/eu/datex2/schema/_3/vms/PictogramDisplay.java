@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A display of a pictogram on one area on a VMS, potentially with associated supplemental
- *         information or instructions.
- *       
- * 
  * <p>Java class for PictogramDisplay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -29,46 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TimePrecisionEnum2 {
 
-
-    /**
-     * Time given to the nearest tenth of a second.
-     * 
-     */
     @XmlEnumValue("tenthsOfSecond")
     TENTHS_OF_SECOND("tenthsOfSecond"),
-
-    /**
-     * Time given to the nearest second.
-     * 
-     */
     @XmlEnumValue("second")
     SECOND("second"),
-
-    /**
-     * Time given to the nearest minute.
-     * 
-     */
     @XmlEnumValue("minute")
     MINUTE("minute"),
-
-    /**
-     * Time given to the nearest quarter hour.
-     * 
-     */
     @XmlEnumValue("quarterHour")
     QUARTER_HOUR("quarterHour"),
-
-    /**
-     * Time given to the nearest half hour.
-     * 
-     */
     @XmlEnumValue("halfHour")
     HALF_HOUR("halfHour"),
-
-    /**
-     * Time given to the nearest hour.
-     * 
-     */
     @XmlEnumValue("hour")
     HOUR("hour"),
     @XmlEnumValue("_extended")

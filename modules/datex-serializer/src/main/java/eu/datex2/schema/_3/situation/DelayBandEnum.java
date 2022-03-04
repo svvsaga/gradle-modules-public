@@ -37,8 +37,7 @@ public class DelayBandEnum {
     protected String extendedValue;
 
     /**
-     * Classifications of a delay banded by length (i.e. the additional travel time).
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

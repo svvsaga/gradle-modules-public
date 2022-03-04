@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Measured or derived values relating to traffic or individual vehicle movements on a
- *         specific section or at a specific point on the road network.
- *       
- * 
  * <p>Java class for TrafficData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

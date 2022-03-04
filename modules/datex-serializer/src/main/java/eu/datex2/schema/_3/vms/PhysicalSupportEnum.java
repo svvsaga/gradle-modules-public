@@ -37,8 +37,7 @@ public class PhysicalSupportEnum {
     protected String extendedValue;
 
     /**
-     * The ways in which equipments such as VMS are mounted or deployed on the road.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

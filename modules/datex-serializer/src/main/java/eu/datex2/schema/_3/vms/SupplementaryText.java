@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Text used in a supplementary display associated with a pictogram
- * 
  * <p>Java class for SupplementaryText complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

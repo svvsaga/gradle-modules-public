@@ -25,20 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum LowEmissionLevelEnum2 {
 
-
-    /**
-     * Vehicles with low level emission.
-     * 
-     */
     @XmlEnumValue("lowLevelEmission")
     LOW_LEVEL_EMISSION("lowLevelEmission"),
-
-    /**
-     * Only vehicles that do not produce emissions (e.g. electric driven). Hybrid driven
-     *             cars are allowed, when they switch to emission free mode within the considered situation.
-     *           
-     * 
-     */
     @XmlEnumValue("freeOfEmission")
     FREE_OF_EMISSION("freeOfEmission"),
     @XmlEnumValue("_extended")

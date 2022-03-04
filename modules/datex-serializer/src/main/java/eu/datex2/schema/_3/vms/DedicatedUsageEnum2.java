@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DedicatedUsageEnum2 {
 
-
-    /**
-     * Dedicated to displaying energy information
-     * 
-     */
     @XmlEnumValue("energyInformation")
     ENERGY_INFORMATION("energyInformation"),
-
-    /**
-     * Dedicated to an inspection area
-     * 
-     */
     @XmlEnumValue("inspectionArea")
     INSPECTION_AREA("inspectionArea"),
-
-    /**
-     * Dedicated to the purpose of lane control
-     * 
-     */
     @XmlEnumValue("laneControlSystem")
     LANE_CONTROL_SYSTEM("laneControlSystem"),
-
-    /**
-     * Dedicated to displaying parking information
-     * 
-     */
     @XmlEnumValue("parkingInformation")
     PARKING_INFORMATION("parkingInformation"),
-
-    /**
-     * Dedicated to ramp metering
-     * 
-     */
     @XmlEnumValue("rampMetering")
     RAMP_METERING("rampMetering"),
-
-    /**
-     * Dedicated to tunnel management
-     * 
-     */
     @XmlEnumValue("tunnelManagement")
     TUNNEL_MANAGEMENT("tunnelManagement"),
-
-    /**
-     * Other dedicated usage
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

@@ -37,7 +37,7 @@ public class MonthOfYearEnum {
     protected String extendedValue;
 
     /**
-     * A list of the months of the year.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

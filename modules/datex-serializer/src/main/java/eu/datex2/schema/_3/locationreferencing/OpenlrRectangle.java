@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Area delimited by a rectangle defined by the geodetic co-ordinates of the two ends of its
- *         diagonal from south-west to north-east (the rectangle having two sides that are parallel to lines of
- *         latitude)
- *       
- * 
  * <p>Java class for OpenlrRectangle complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

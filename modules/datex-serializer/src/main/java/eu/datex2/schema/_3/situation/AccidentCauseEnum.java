@@ -37,7 +37,7 @@ public class AccidentCauseEnum {
     protected String extendedValue;
 
     /**
-     * Collection of the type of accident causes.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

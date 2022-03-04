@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of atmospheric pressure.
- * 
  * <p>Java class for PressureValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

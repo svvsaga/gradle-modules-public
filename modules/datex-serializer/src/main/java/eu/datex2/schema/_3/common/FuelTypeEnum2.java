@@ -41,130 +41,40 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum FuelTypeEnum2 {
 
-
-    /**
-     * All sort of fuel is accepted.
-     * 
-     */
     @XmlEnumValue("all")
     ALL("all"),
-
-    /**
-     * Battery.
-     * 
-     */
     @XmlEnumValue("battery")
     BATTERY("battery"),
-
-    /**
-     * Biodiesel.
-     * 
-     */
     @XmlEnumValue("biodiesel")
     BIODIESEL("biodiesel"),
-
-    /**
-     * Fuel used for compression-ignition (CI) engines.
-     * 
-     */
     @XmlEnumValue("diesel")
     DIESEL("diesel"),
-
-    /**
-     * Diesel and battery hybrid.
-     * 
-     */
     @XmlEnumValue("dieselBatteryHybrid")
     DIESEL_BATTERY_HYBRID("dieselBatteryHybrid"),
-
-    /**
-     * Ethanol.
-     * 
-     */
     @XmlEnumValue("ethanol")
     ETHANOL("ethanol"),
-
-    /**
-     * Hydrogen.
-     * 
-     */
     @XmlEnumValue("hydrogen")
     HYDROGEN("hydrogen"),
-
-    /**
-     * Liquid gas of any type including LPG.
-     * 
-     */
     @XmlEnumValue("liquidGas")
     LIQUID_GAS("liquidGas"),
-
-    /**
-     * Liquid petroleum gas.
-     * 
-     */
     @XmlEnumValue("lpg")
     LPG("lpg"),
-
-    /**
-     * Methane gas.
-     * 
-     */
     @XmlEnumValue("methane")
     METHANE("methane"),
-
-    /**
-     * Fuel used for positive-ignition (PI) engines.
-     * 
-     */
     @XmlEnumValue("petrol")
     PETROL("petrol"),
-
-    /**
-     * Petrol with 95 octane.
-     * 
-     */
     @XmlEnumValue("petrol95Octane")
     PETROL_95_OCTANE("petrol95Octane"),
-
-    /**
-     * Petrol with 98 octane.
-     * 
-     */
     @XmlEnumValue("petrol98Octane")
     PETROL_98_OCTANE("petrol98Octane"),
-
-    /**
-     * Petrol and battery hybrid.
-     * 
-     */
     @XmlEnumValue("petrolBatteryHybrid")
     PETROL_BATTERY_HYBRID("petrolBatteryHybrid"),
-
-    /**
-     * Leaded petrol.
-     * 
-     */
     @XmlEnumValue("petrolLeaded")
     PETROL_LEADED("petrolLeaded"),
-
-    /**
-     * Unleaded petrol.
-     * 
-     */
     @XmlEnumValue("petrolUnleaded")
     PETROL_UNLEADED("petrolUnleaded"),
-
-    /**
-     * The sort of fuel is not known.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Other.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

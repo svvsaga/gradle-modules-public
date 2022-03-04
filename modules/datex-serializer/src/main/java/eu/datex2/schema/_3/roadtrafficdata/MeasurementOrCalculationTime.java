@@ -14,10 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Describes the time at which a measured or calculated value or set of values was measured
- *         or calculated. It may be a future time at which a data value is predicted to apply.
- *       
- * 
  * <p>Java class for MeasurementOrCalculationTime complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

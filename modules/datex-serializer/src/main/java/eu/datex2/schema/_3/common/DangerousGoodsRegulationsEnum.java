@@ -37,7 +37,7 @@ public class DangerousGoodsRegulationsEnum {
     protected String extendedValue;
 
     /**
-     * Types of dangerous goods regulations.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

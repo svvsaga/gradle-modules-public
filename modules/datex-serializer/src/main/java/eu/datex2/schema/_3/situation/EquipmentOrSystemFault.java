@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Equipment or system which is faulty, malfunctioning or not in a fully operational state
- *         that may be of interest or concern to road operators and road users.
- *       
- * 
  * <p>Java class for EquipmentOrSystemFault complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

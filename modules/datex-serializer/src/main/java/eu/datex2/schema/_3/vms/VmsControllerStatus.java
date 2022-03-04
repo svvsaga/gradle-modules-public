@@ -14,8 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Status of a VMS controller unit
- * 
  * <p>Java class for VmsControllerStatus complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

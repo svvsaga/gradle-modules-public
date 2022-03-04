@@ -13,9 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Measurements of road surface conditions which are related to the weather.
- *       
- * 
  * <p>Java class for RoadSurfaceConditionInformation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

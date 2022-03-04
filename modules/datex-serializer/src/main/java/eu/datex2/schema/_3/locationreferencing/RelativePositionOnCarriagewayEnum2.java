@@ -26,25 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RelativePositionOnCarriagewayEnum2 {
 
-
-    /**
-     * In the centre of the roadway.
-     * 
-     */
     @XmlEnumValue("inTheCentre")
     IN_THE_CENTRE("inTheCentre"),
-
-    /**
-     * On the left of the roadway.
-     * 
-     */
     @XmlEnumValue("onTheLeft")
     ON_THE_LEFT("onTheLeft"),
-
-    /**
-     * On the right of the roadway.
-     * 
-     */
     @XmlEnumValue("onTheRight")
     ON_THE_RIGHT("onTheRight"),
     @XmlEnumValue("_extended")

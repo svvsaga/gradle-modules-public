@@ -15,8 +15,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Configuration (static or dynamic) of a display area.
- * 
  * <p>Java class for DisplayArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

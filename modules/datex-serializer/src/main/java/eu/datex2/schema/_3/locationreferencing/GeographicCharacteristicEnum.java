@@ -37,7 +37,7 @@ public class GeographicCharacteristicEnum {
     protected String extendedValue;
 
     /**
-     * Descriptor to help to identify a specific location.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

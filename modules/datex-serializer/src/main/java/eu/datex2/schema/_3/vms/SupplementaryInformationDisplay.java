@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A display of information or a regulatory instruction which is supplemental to the
- *         associated pictogram, comprising either an additional line of text or a pictogram or both.
- *       
- * 
  * <p>Java class for SupplementaryInformationDisplay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

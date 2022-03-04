@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VmsControllerFaultEnum2 {
 
-
-    /**
-     * Comunications failure affecting VMS controller
-     * 
-     */
     @XmlEnumValue("communicationsFailure")
     COMMUNICATIONS_FAILURE("communicationsFailure"),
-
-    /**
-     * Power to VMS controller has failed.
-     * 
-     */
     @XmlEnumValue("powerFailure")
     POWER_FAILURE("powerFailure"),
-
-    /**
-     * unknown
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * unknown
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

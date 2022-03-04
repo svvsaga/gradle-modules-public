@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A display of pictograms or text on one area on a VMS.
- * 
  * <p>Java class for DisplayAreaSettings complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

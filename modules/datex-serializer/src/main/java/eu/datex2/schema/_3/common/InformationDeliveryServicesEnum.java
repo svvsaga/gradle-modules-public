@@ -37,9 +37,7 @@ public class InformationDeliveryServicesEnum {
     protected String extendedValue;
 
     /**
-     * List of service channels or devices on which information or data exchanged can be
-     *         delivered.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

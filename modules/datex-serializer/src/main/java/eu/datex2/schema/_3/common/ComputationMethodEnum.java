@@ -37,8 +37,7 @@ public class ComputationMethodEnum {
     protected String extendedValue;
 
     /**
-     * Types of computational methods used in deriving data values for data sets.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

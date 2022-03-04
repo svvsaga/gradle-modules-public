@@ -31,60 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OpenlrFormOfWayEnum2 {
 
-
-    /**
-     * Undefined
-     * 
-     */
     @XmlEnumValue("undefined")
     UNDEFINED("undefined"),
-
-    /**
-     * Motorway
-     * 
-     */
     @XmlEnumValue("motorway")
     MOTORWAY("motorway"),
-
-    /**
-     * Multiple carriageway
-     * 
-     */
     @XmlEnumValue("multipleCarriageway")
     MULTIPLE_CARRIAGEWAY("multipleCarriageway"),
-
-    /**
-     * Single carriageway
-     * 
-     */
     @XmlEnumValue("singleCarriageway")
     SINGLE_CARRIAGEWAY("singleCarriageway"),
-
-    /**
-     * Roundabout
-     * 
-     */
     @XmlEnumValue("roundabout")
     ROUNDABOUT("roundabout"),
-
-    /**
-     * Slip road
-     * 
-     */
     @XmlEnumValue("slipRoad")
     SLIP_ROAD("slipRoad"),
-
-    /**
-     * Traffic square
-     * 
-     */
     @XmlEnumValue("trafficSquare")
     TRAFFIC_SQUARE("trafficSquare"),
-
-    /**
-     * Other
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

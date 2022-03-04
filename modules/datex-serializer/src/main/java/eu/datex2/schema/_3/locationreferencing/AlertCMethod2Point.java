@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A single point on the road network defined by reference to a point in a pre-defined
- *         ALERT-C location table and which has an associated direction of traffic flow.
- *       
- * 
  * <p>Java class for AlertCMethod2Point complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

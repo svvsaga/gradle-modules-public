@@ -26,25 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum HeightGradeEnum2 {
 
-
-    /**
-     * Above or over the normal road grade elevation.
-     * 
-     */
     @XmlEnumValue("aboveGrade")
     ABOVE_GRADE("aboveGrade"),
-
-    /**
-     * At the normal road grade elevation.
-     * 
-     */
     @XmlEnumValue("atGrade")
     AT_GRADE("atGrade"),
-
-    /**
-     * Below or under the normal road grade elevation.
-     * 
-     */
     @XmlEnumValue("belowGrade")
     BELOW_GRADE("belowGrade"),
     @XmlEnumValue("_extended")

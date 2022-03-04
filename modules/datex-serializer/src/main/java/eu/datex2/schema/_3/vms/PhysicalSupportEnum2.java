@@ -31,60 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PhysicalSupportEnum2 {
 
-
-    /**
-     * Equipment mounted in the central reservation.
-     * 
-     */
     @XmlEnumValue("centralReservationMounted")
     CENTRAL_RESERVATION_MOUNTED("centralReservationMounted"),
-
-    /**
-     * Equipment mounted on an overhead gantry across the carriageway.
-     * 
-     */
     @XmlEnumValue("gantryMounted")
     GANTRY_MOUNTED("gantryMounted"),
-
-    /**
-     * Equipment mounted overhead on a bridge structure.
-     * 
-     */
     @XmlEnumValue("overheadBridgeMounted")
     OVERHEAD_BRIDGE_MOUNTED("overheadBridgeMounted"),
-
-    /**
-     * Equipment mounted on a cantilever from the roadside.
-     * 
-     */
     @XmlEnumValue("roadsideCantileverMounted")
     ROADSIDE_CANTILEVER_MOUNTED("roadsideCantileverMounted"),
-
-    /**
-     * Equipment mounted at the roadside.
-     * 
-     */
     @XmlEnumValue("roadsideMounted")
     ROADSIDE_MOUNTED("roadsideMounted"),
-
-    /**
-     * Equipment mounted on a movable trailer.
-     * 
-     */
     @XmlEnumValue("trailerMounted")
     TRAILER_MOUNTED("trailerMounted"),
-
-    /**
-     * Equipment mounted on the entrance to a tunnel.
-     * 
-     */
     @XmlEnumValue("tunnelEntranceMounted")
     TUNNEL_ENTRANCE_MOUNTED("tunnelEntranceMounted"),
-
-    /**
-     * Equipment mounted on a vehicle.
-     * 
-     */
     @XmlEnumValue("vehicleMounted")
     VEHICLE_MOUNTED("vehicleMounted"),
     @XmlEnumValue("_extended")

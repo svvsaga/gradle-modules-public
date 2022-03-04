@@ -37,7 +37,7 @@ public class InformationTypeEnum {
     protected String extendedValue;
 
     /**
-     * Type of text characterisation.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

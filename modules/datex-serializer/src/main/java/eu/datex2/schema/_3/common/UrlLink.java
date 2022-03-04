@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of a Uniform Resource Locator (URL) address pointing to a resource available on
- *         the Internet from where further relevant information may be obtained.
- *       
- * 
  * <p>Java class for UrlLink complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

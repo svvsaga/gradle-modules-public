@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Multiple (i.e. more than one) physically separate locations which have no specific
- *         order.
- *       
- * 
  * <p>Java class for LocationGroup complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

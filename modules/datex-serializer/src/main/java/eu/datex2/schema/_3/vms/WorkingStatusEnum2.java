@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum WorkingStatusEnum2 {
 
-
-    /**
-     * The VMS is blank
-     * 
-     */
     @XmlEnumValue("blank")
     BLANK("blank"),
-
-    /**
-     * The VMS is physically covered so no messages can be seen.
-     * 
-     */
     @XmlEnumValue("covered")
     COVERED("covered"),
-
-    /**
-     * The VMS is not working
-     * 
-     */
     @XmlEnumValue("notWorking")
     NOT_WORKING("notWorking"),
-
-    /**
-     * The VMS is working
-     * 
-     */
     @XmlEnumValue("working")
     WORKING("working"),
     @XmlEnumValue("_extended")

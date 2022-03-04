@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Weight characteristic of the heaviest axle on the vehicle.
- * 
  * <p>Java class for HeaviestAxleWeightCharacteristic complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,9 +37,7 @@ public class SupplementalPictogramEnum {
     protected String extendedValue;
 
     /**
-     * Types of pictograms displayable in supplementary panels (normally below the main pictogram
-     *         display which it qualifies).
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

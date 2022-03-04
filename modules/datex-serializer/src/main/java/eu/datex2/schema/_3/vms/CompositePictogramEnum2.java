@@ -31,60 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum CompositePictogramEnum2 {
 
-
-    /**
-     * Deals with condition on current section after next exit.
-     * 
-     */
     @XmlEnumValue("conditionOnCurrentSectionAfterNextExit")
     CONDITION_ON_CURRENT_SECTION_AFTER_NEXT_EXIT("conditionOnCurrentSectionAfterNextExit"),
-
-    /**
-     * Deals with condition at next exit.
-     * 
-     */
     @XmlEnumValue("conditionAtNextExit")
     CONDITION_AT_NEXT_EXIT("conditionAtNextExit"),
-
-    /**
-     * Deals with condition on current section after second exit.
-     * 
-     */
     @XmlEnumValue("conditionOnCurrentSectionAfterSecondtExit")
     CONDITION_ON_CURRENT_SECTION_AFTER_SECONDT_EXIT("conditionOnCurrentSectionAfterSecondtExit"),
-
-    /**
-     * Deals with condition on current section at second exit.
-     * 
-     */
     @XmlEnumValue("conditionAtSecondExit")
     CONDITION_AT_SECOND_EXIT("conditionAtSecondExit"),
-
-    /**
-     * Deals with restriction on current section after next exit.
-     * 
-     */
     @XmlEnumValue("restrictionOnCurrentSectionAfterNextExit")
     RESTRICTION_ON_CURRENT_SECTION_AFTER_NEXT_EXIT("restrictionOnCurrentSectionAfterNextExit"),
-
-    /**
-     * Deals with restriction at next exit.
-     * 
-     */
     @XmlEnumValue("restrictionAtNextExit")
     RESTRICTION_AT_NEXT_EXIT("restrictionAtNextExit"),
-
-    /**
-     * Deals with restriction on current section after second exit.
-     * 
-     */
     @XmlEnumValue("restrictionOnCurrentSectionAfterSecondExit")
     RESTRICTION_ON_CURRENT_SECTION_AFTER_SECOND_EXIT("restrictionOnCurrentSectionAfterSecondExit"),
-
-    /**
-     * Deals with restriction after second exit.
-     * 
-     */
     @XmlEnumValue("restrictionAtSecondtExit")
     RESTRICTION_AT_SECONDT_EXIT("restrictionAtSecondtExit"),
     @XmlEnumValue("_extended")

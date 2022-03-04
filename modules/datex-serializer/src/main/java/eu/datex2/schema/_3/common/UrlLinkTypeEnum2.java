@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum UrlLinkTypeEnum2 {
 
-
-    /**
-     * URL link to a pdf document.
-     * 
-     */
     @XmlEnumValue("documentPdf")
     DOCUMENT_PDF("documentPdf"),
-
-    /**
-     * URL link to an html page.
-     * 
-     */
     @XmlEnumValue("html")
     HTML("html"),
-
-    /**
-     * URL link to an image.
-     * 
-     */
     @XmlEnumValue("image")
     IMAGE("image"),
-
-    /**
-     * URL link to an RSS feed.
-     * 
-     */
     @XmlEnumValue("rss")
     RSS("rss"),
-
-    /**
-     * URL link to a video stream.
-     * 
-     */
     @XmlEnumValue("videoStream")
     VIDEO_STREAM("videoStream"),
-
-    /**
-     * URL link to a voice stream.
-     * 
-     */
     @XmlEnumValue("voiceStream")
     VOICE_STREAM("voiceStream"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

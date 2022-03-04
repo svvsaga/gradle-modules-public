@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A point of interest (POI) along a line with access is a point location which is defined by
- *         a linear reference path, an offset value (defining the access point) from the starting node of this path
- *         and a coordinate pair that defines the POI itself.
- *       
- * 
  * <p>Java class for OpenlrPoiWithAccessPoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

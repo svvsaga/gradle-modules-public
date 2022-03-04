@@ -12,11 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Any stationary or moving obstacle of a physical nature (e.g. obstacles or vehicles from an
- *         earlier accident, shed loads on carriageway, rock fall, abnormal or dangerous loads, or animals etc.)
- *         which could disrupt or endanger traffic.
- *       
- * 
  * <p>Java class for Obstruction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

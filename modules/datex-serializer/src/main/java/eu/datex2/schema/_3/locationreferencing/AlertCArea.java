@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An area defined by reference to a predefined ALERT-C location table.
- * 
  * <p>Java class for AlertCArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

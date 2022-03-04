@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A geodetic coordinate Tuple that defines the vertices of the underlying geometrical
- *         polygon.
- *       
- * 
  * <p>Java class for OpenlrPolygonCorners complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

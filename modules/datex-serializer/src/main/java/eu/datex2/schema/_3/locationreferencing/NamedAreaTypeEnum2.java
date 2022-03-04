@@ -49,186 +49,56 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum NamedAreaTypeEnum2 {
 
-
-    /**
-     * Application region
-     * 
-     */
     @XmlEnumValue("applicationRegion")
     APPLICATION_REGION("applicationRegion"),
-
-    /**
-     * Continent
-     * 
-     */
     @XmlEnumValue("continent")
     CONTINENT("continent"),
-
-    /**
-     * Country
-     * 
-     */
     @XmlEnumValue("country")
     COUNTRY("country"),
-
-    /**
-     * Group of countries.
-     * 
-     */
     @XmlEnumValue("countryGroup")
     COUNTRY_GROUP("countryGroup"),
-
-    /**
-     * Car park area
-     * 
-     */
     @XmlEnumValue("carParkArea")
     CAR_PARK_AREA("carParkArea"),
-
-    /**
-     * Carpool area
-     * 
-     */
     @XmlEnumValue("carpoolArea")
     CARPOOL_AREA("carpoolArea"),
-
-    /**
-     * Fuzzy area
-     * 
-     */
     @XmlEnumValue("fuzzyArea")
     FUZZY_AREA("fuzzyArea"),
-
-    /**
-     * Industrial area
-     * 
-     */
     @XmlEnumValue("industrialArea")
     INDUSTRIAL_AREA("industrialArea"),
-
-    /**
-     * Lake
-     * 
-     */
     @XmlEnumValue("lake")
     LAKE("lake"),
-
-    /**
-     * Meteorological area
-     * 
-     */
     @XmlEnumValue("meteorologicalArea")
     METEOROLOGICAL_AREA("meteorologicalArea"),
-
-    /**
-     * Metropolitan area
-     * 
-     */
     @XmlEnumValue("metropolitanArea")
     METROPOLITAN_AREA("metropolitanArea"),
-
-    /**
-     * Municipality
-     * 
-     */
     @XmlEnumValue("municipality")
     MUNICIPALITY("municipality"),
-
-    /**
-     * A park and ride site
-     * 
-     */
     @XmlEnumValue("parkAndRideSite")
     PARK_AND_RIDE_SITE("parkAndRideSite"),
-
-    /**
-     * Rural county
-     * 
-     */
     @XmlEnumValue("ruralCounty")
     RURAL_COUNTY("ruralCounty"),
-
-    /**
-     * Sea
-     * 
-     */
     @XmlEnumValue("sea")
     SEA("sea"),
-
-    /**
-     * Tourist area
-     * 
-     */
     @XmlEnumValue("touristArea")
     TOURIST_AREA("touristArea"),
-
-    /**
-     * Traffic area
-     * 
-     */
     @XmlEnumValue("trafficArea")
     TRAFFIC_AREA("trafficArea"),
-
-    /**
-     * Urban county
-     * 
-     */
     @XmlEnumValue("urbanCounty")
     URBAN_COUNTY("urbanCounty"),
-
-    /**
-     * Order 1 administrative area
-     * 
-     */
     @XmlEnumValue("order1AdministrativeArea")
     ORDER_1_ADMINISTRATIVE_AREA("order1AdministrativeArea"),
-
-    /**
-     * Order 2 administrative area
-     * 
-     */
     @XmlEnumValue("order2AdministrativeArea")
     ORDER_2_ADMINISTRATIVE_AREA("order2AdministrativeArea"),
-
-    /**
-     * Order 3 administrative area
-     * 
-     */
     @XmlEnumValue("order3AdministrativeArea")
     ORDER_3_ADMINISTRATIVE_AREA("order3AdministrativeArea"),
-
-    /**
-     * Order 4 administrative area
-     * 
-     */
     @XmlEnumValue("order4AdministrativeArea")
     ORDER_4_ADMINISTRATIVE_AREA("order4AdministrativeArea"),
-
-    /**
-     * Order 5 administrative area
-     * 
-     */
     @XmlEnumValue("order5AdministrativeArea")
     ORDER_5_ADMINISTRATIVE_AREA("order5AdministrativeArea"),
-
-    /**
-     * Police force control area
-     * 
-     */
     @XmlEnumValue("policeForceControlArea")
     POLICE_FORCE_CONTROL_AREA("policeForceControlArea"),
-
-    /**
-     * Road operator control area
-     * 
-     */
     @XmlEnumValue("roadOperatorControlArea")
     ROAD_OPERATOR_CONTROL_AREA("roadOperatorControlArea"),
-
-    /**
-     * Water area
-     * 
-     */
     @XmlEnumValue("waterArea")
     WATER_AREA("waterArea"),
     @XmlEnumValue("_extended")

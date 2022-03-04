@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The point (called Primary point) which is either a single point or at the downstream end
- *         of a linear road section. The point is specified by a reference to a point in a pre-defined ALERT-C
- *         location table.
- *       
- * 
  * <p>Java class for AlertCMethod2PrimaryPointLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

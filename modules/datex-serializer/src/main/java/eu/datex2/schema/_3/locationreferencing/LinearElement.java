@@ -11,9 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear element along a single linear object, consistent with EN ISO 19148 definitions.
- *       
- * 
  * <p>Java class for LinearElement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

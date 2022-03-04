@@ -10,11 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Confidence ellipse position defined in a shape of ellipse with a predefined confidence
- *         level (e.g. 95 %). The centre of the ellipse shape corresponds to the reference position point for which
- *         the position accuracy is evaluated.
- *       
- * 
  * <p>Java class for PositionConfidenceEllipse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

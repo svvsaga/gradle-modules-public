@@ -28,39 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ComparisonOperatorEnum2 {
 
-
-    /**
-     * Logical comparison operator of "equal to".
-     * 
-     */
     @XmlEnumValue("equalTo")
     EQUAL_TO("equalTo"),
-
-    /**
-     * Logical comparison operator of "greater than".
-     * 
-     */
     @XmlEnumValue("greaterThan")
     GREATER_THAN("greaterThan"),
-
-    /**
-     * Logical comparison operator of "greater than or equal to".
-     * 
-     */
     @XmlEnumValue("greaterThanOrEqualTo")
     GREATER_THAN_OR_EQUAL_TO("greaterThanOrEqualTo"),
-
-    /**
-     * Logical comparison operator of "less than".
-     * 
-     */
     @XmlEnumValue("lessThan")
     LESS_THAN("lessThan"),
-
-    /**
-     * Logical comparison operator of "less than or equal to".
-     * 
-     */
     @XmlEnumValue("lessThanOrEqualTo")
     LESS_THAN_OR_EQUAL_TO("lessThanOrEqualTo"),
     @XmlEnumValue("_extended")

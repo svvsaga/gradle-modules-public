@@ -37,7 +37,7 @@ public class ReferentTypeEnum {
     protected String extendedValue;
 
     /**
-     * A set of types of known points along a linear object such as a road.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

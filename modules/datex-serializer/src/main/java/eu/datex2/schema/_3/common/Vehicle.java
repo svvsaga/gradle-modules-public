@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of an individual vehicle.
- * 
  * <p>Java class for Vehicle complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

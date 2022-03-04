@@ -37,7 +37,7 @@ public class CompositePictogramEnum {
     protected String extendedValue;
 
     /**
-     * Identifies a pictogram used only for building a composite pictogram
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

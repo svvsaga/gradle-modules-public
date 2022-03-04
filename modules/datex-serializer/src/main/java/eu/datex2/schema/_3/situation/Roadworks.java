@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Road maintenance, installation and construction activities, works in the road, or other
- *         construction or maintenance actions that may affect normal operation of a road.
- *       
- * 
  * <p>Java class for Roadworks complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

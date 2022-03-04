@@ -14,10 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A message displayed on a VMS which can comprise one or more sequentially displayed text
- *         pages and/or pictograms with supplementary details.
- *       
- * 
  * <p>Java class for VmsMessage complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

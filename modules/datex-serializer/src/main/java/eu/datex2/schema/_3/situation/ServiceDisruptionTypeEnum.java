@@ -37,7 +37,7 @@ public class ServiceDisruptionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of disruption to services relevant to road users.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

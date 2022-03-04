@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<xs:schema elementFormDefault="qualified" xmlns:inf="http://datex2.eu/schema/3/informationManagement" version="1"
-           targetNamespace="http://datex2.eu/schema/3/informationManagement"
-           xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd"/>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:inf="http://datex2.eu/schema/3/informationManagement" version="1" targetNamespace="http://datex2.eu/schema/3/informationManagement" xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
   <xs:complexType name="_ManagementTypeEnum">
     <xs:simpleContent>
       <xs:extension base="inf:ManagementTypeEnum">
-        <xs:attribute name="_extendedValue" type="xs:string"/>
+        <xs:attribute name="_extendedValue" type="xs:string" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="ElementReference">
     <xs:sequence>
-      <xs:element name="managementStatus" type="inf:_ManagementTypeEnum"/>
-      <xs:element name="reference" type="com:Reference" minOccurs="0"/>
-      <xs:element name="versionedReference" type="com:VersionedReference" minOccurs="0"/>
-      <xs:element name="_elementReferenceExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="managementStatus" type="inf:_ManagementTypeEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="reference" type="com:Reference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="versionedReference" type="com:VersionedReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_elementReferenceExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="InformationManagedResourceList">
     <xs:sequence>
-      <xs:element name="elementReference" type="inf:ElementReference" maxOccurs="unbounded"/>
-      <xs:element name="_informationManagedResourceListExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="elementReference" type="inf:ElementReference" maxOccurs="unbounded" />
+      <xs:element name="_informationManagedResourceListExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="InformationManagement">
     <xs:sequence>
-      <xs:element name="informationManagedResourceList" type="inf:InformationManagedResourceList" minOccurs="0"/>
-      <xs:element name="_informationManagementExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="informationManagedResourceList" type="inf:InformationManagedResourceList" minOccurs="0" />
+      <xs:element name="_informationManagementExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="ManagementTypeEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="cancelled"/>
-      <xs:enumeration value="closed"/>
-      <xs:enumeration value="_extended"/>
+      <xs:enumeration value="cancelled" />
+      <xs:enumeration value="closed" />
+      <xs:enumeration value="_extended" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

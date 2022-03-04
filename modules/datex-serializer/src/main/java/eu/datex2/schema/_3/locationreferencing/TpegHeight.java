@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Height information which provides additional discrimination for the applicable area.
- *       
- * 
  * <p>Java class for TpegHeight complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

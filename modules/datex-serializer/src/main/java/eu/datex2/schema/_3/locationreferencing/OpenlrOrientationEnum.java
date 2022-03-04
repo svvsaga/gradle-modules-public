@@ -37,7 +37,7 @@ public class OpenlrOrientationEnum {
     protected String extendedValue;
 
     /**
-     * Enumeration of side of road
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

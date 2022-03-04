@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A collection of information providing descriptive references to locations using the
- *         TPEG-Loc location referencing approach.
- *       
- * 
  * <p>Java class for TpegDescriptor complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

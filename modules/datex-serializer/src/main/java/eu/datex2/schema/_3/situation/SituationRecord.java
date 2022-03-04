@@ -21,9 +21,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable versioned instance of a single record/element within a situation.
- *       
- * 
  * <p>Java class for SituationRecord complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

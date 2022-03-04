@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A regular pictogram displayable on a VMS panel.
- * 
  * <p>Java class for RegularPictogram complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

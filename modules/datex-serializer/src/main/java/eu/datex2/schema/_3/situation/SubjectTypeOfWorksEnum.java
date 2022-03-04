@@ -37,7 +37,7 @@ public class SubjectTypeOfWorksEnum {
     protected String extendedValue;
 
     /**
-     * Subject types of construction or maintenance work.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

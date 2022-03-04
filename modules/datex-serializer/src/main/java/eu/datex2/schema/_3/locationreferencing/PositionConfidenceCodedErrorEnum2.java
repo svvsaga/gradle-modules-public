@@ -25,20 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PositionConfidenceCodedErrorEnum2 {
 
-
-    /**
-     * Indicates the accuracy is out of range, i.e. greater than 4 093 cm for horizontal
-     *             position.
-     *           
-     * 
-     */
     @XmlEnumValue("outOfRange")
     OUT_OF_RANGE("outOfRange"),
-
-    /**
-     * Indicates the accuracy information is unavailable.
-     * 
-     */
     @XmlEnumValue("unavailable")
     UNAVAILABLE("unavailable"),
     @XmlEnumValue("_extended")

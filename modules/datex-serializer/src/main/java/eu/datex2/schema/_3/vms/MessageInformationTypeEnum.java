@@ -37,7 +37,7 @@ public class MessageInformationTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of information displayable on a VMS.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

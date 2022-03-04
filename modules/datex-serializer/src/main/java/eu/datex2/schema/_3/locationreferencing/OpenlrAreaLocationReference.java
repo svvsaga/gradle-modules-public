@@ -10,11 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A two-dimensional part of the surface of the earth which is bounded by a closed curve. An
- *         area location may cover parts of the road network but does not necessarily need to. It is represented
- *         according to the OpenLR standard for Area Locations
- *       
- * 
  * <p>Java class for OpenlrAreaLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

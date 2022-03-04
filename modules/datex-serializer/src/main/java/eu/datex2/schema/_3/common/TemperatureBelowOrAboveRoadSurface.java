@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Mesurement of temperature below or above the road surface.
- * 
  * <p>Java class for TemperatureBelowOrAboveRoadSurface complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -40,123 +40,38 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VehicleProblemCauseEnum2 {
 
-
-    /**
-     * Problem with the air system of a vehicle
-     * 
-     */
     @XmlEnumValue("airSystem")
     AIR_SYSTEM("airSystem"),
-
-    /**
-     * Problem with the battery of a vehicle
-     * 
-     */
     @XmlEnumValue("battery")
     BATTERY("battery"),
-
-    /**
-     * Problem with the braking system of a vehicle
-     * 
-     */
     @XmlEnumValue("brakingSystem")
     BRAKING_SYSTEM("brakingSystem"),
-
-    /**
-     * Problem with the cooling system of a vehicle
-     * 
-     */
     @XmlEnumValue("coolingSystem")
     COOLING_SYSTEM("coolingSystem"),
-
-    /**
-     * Problem with the coupling of a trailer
-     * 
-     */
     @XmlEnumValue("decoupledTrailer")
     DECOUPLED_TRAILER("decoupledTrailer"),
-
-    /**
-     * Problem with a vehicle driver
-     * 
-     */
     @XmlEnumValue("diverProblem")
     DIVER_PROBLEM("diverProblem"),
-
-    /**
-     * Problem with the electrical system of a vehicle
-     * 
-     */
     @XmlEnumValue("electricalSystem")
     ELECTRICAL_SYSTEM("electricalSystem"),
-
-    /**
-     * Vehicle has one or more flat tyres
-     * 
-     */
     @XmlEnumValue("flatTyre")
     FLAT_TYRE("flatTyre"),
-
-    /**
-     * Problem with the fuel system of a vehicle
-     * 
-     */
     @XmlEnumValue("fuelSystem")
     FUEL_SYSTEM("fuelSystem"),
-
-    /**
-     * Problem with the gears of a vehicle
-     * 
-     */
     @XmlEnumValue("gear")
     GEAR("gear"),
-
-    /**
-     * Problem with the load of a vehicle
-     * 
-     */
     @XmlEnumValue("loadProblem")
     LOAD_PROBLEM("loadProblem"),
-
-    /**
-     * Vehicle has lost a wheel
-     * 
-     */
     @XmlEnumValue("lostWheel")
     LOST_WHEEL("lostWheel"),
-
-    /**
-     * Problem with the motor mechanics of a vehicle
-     * 
-     */
     @XmlEnumValue("motorMechanics")
     MOTOR_MECHANICS("motorMechanics"),
-
-    /**
-     * Vehicle has an oil leak
-     * 
-     */
     @XmlEnumValue("oilLeakage")
     OIL_LEAKAGE("oilLeakage"),
-
-    /**
-     * Problem with the suspension of a vehicle
-     * 
-     */
     @XmlEnumValue("suspension")
     SUSPENSION("suspension"),
-
-    /**
-     * Other vehicle problem source
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
-
-    /**
-     * Unknown vehicle problem source
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

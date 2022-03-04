@@ -38,111 +38,34 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PollutantTypeEnum2 {
 
-
-    /**
-     * Benzene, toluene or xylene.
-     * 
-     */
     @XmlEnumValue("benzeneTolueneXylene")
     BENZENE_TOLUENE_XYLENE("benzeneTolueneXylene"),
-
-    /**
-     * Carbon monoxide.
-     * 
-     */
     @XmlEnumValue("carbonMonoxide")
     CARBON_MONOXIDE("carbonMonoxide"),
-
-    /**
-     * Lead.
-     * 
-     */
     @XmlEnumValue("lead")
     LEAD("lead"),
-
-    /**
-     * Methane.
-     * 
-     */
     @XmlEnumValue("methane")
     METHANE("methane"),
-
-    /**
-     * Nitric oxide.
-     * 
-     */
     @XmlEnumValue("nitricOxide")
     NITRIC_OXIDE("nitricOxide"),
-
-    /**
-     * Nitrogen dioxide.
-     * 
-     */
     @XmlEnumValue("nitrogenDioxide")
     NITROGEN_DIOXIDE("nitrogenDioxide"),
-
-    /**
-     * Nitrogen monoxide.
-     * 
-     */
     @XmlEnumValue("nitrogenMonoxide")
     NITROGEN_MONOXIDE("nitrogenMonoxide"),
-
-    /**
-     * Nitrogen oxides.
-     * 
-     */
     @XmlEnumValue("nitrogenOxides")
     NITROGEN_OXIDES("nitrogenOxides"),
-
-    /**
-     * Non-methane hydrocarbons.
-     * 
-     */
     @XmlEnumValue("nonMethaneHydrocarbons")
     NON_METHANE_HYDROCARBONS("nonMethaneHydrocarbons"),
-
-    /**
-     * Ozone.
-     * 
-     */
     @XmlEnumValue("ozone")
     OZONE("ozone"),
-
-    /**
-     * Particulate matter which passes through a size-selective inlet with a 50% cut-off
-     *             efficiency at an aerodynamic diameter of 10 µm (micrometres).
-     *           
-     * 
-     */
     @XmlEnumValue("particulates10")
     PARTICULATES_10("particulates10"),
-
-    /**
-     * Polycyclic aromatic hydrocarbons.
-     * 
-     */
     @XmlEnumValue("polycyclicAromaticHydrocarbons")
     POLYCYCLIC_AROMATIC_HYDROCARBONS("polycyclicAromaticHydrocarbons"),
-
-    /**
-     * Primary particulate particles.
-     * 
-     */
     @XmlEnumValue("primaryParticulate")
     PRIMARY_PARTICULATE("primaryParticulate"),
-
-    /**
-     * Sulphur dioxide.
-     * 
-     */
     @XmlEnumValue("sulphurDioxide")
     SULPHUR_DIOXIDE("sulphurDioxide"),
-
-    /**
-     * Total hydrocarbons, i.e. including methane and non-methane.
-     * 
-     */
     @XmlEnumValue("totalHydrocarbons")
     TOTAL_HYDROCARBONS("totalHydrocarbons"),
     @XmlEnumValue("_extended")

@@ -21,10 +21,6 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A payload publication of traffic related information or associated management information
- *         created at a specific point in time that can be exchanged via a DATEX II interface.
- *       
- * 
  * <p>Java class for PayloadPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -63,9 +59,9 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 @XmlSeeAlso({
     GenericPublication.class,
+    PredefinedLocationsPublication.class,
     VmsPublication.class,
     VmsTablePublication.class,
-    PredefinedLocationsPublication.class,
     SituationPublication.class,
     ElaboratedDataPublication.class,
     MeasuredDataPublication.class,

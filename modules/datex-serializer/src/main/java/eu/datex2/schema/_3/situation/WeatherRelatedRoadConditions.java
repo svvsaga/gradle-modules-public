@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Road surface conditions that are related to the weather which may affect the driving
- *         conditions, such as ice, snow or water.
- *       
- * 
  * <p>Java class for WeatherRelatedRoadConditions complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

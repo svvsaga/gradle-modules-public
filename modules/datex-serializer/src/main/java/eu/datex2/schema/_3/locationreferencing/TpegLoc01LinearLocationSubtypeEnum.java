@@ -37,7 +37,7 @@ public class TpegLoc01LinearLocationSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of linear location.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

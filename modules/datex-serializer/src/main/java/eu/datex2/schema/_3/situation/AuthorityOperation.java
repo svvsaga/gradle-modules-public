@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Authority initiated operation or activity that could disrupt traffic.
- * 
  * <p>Java class for AuthorityOperation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

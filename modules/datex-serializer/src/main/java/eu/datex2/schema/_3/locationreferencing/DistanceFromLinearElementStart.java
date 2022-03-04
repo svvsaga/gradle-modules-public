@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Distance of a point along a linear element measured from the start node of the linear
- *         element, where start node is relative to the element definition rather than the direction of traffic
- *         flow.
- *       
- * 
  * <p>Java class for DistanceFromLinearElementStart complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

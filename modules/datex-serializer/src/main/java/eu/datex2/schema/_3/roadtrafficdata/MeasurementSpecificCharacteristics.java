@@ -15,10 +15,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Characteristics which are specific to an individual measurement type (specified in a known
- *         order) at the given measurement site.
- *       
- * 
  * <p>Java class for MeasurementSpecificCharacteristics complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

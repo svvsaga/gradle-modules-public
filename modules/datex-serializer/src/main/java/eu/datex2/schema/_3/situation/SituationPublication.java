@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing zero or more traffic/travel situations.
- * 
  * <p>Java class for SituationPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

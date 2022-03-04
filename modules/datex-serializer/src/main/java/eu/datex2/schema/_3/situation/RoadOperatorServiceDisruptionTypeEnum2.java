@@ -26,27 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RoadOperatorServiceDisruptionTypeEnum2 {
 
-
-    /**
-     * Emergency telephone number for use by public to report incidents is out of
-     *             service.
-     *           
-     * 
-     */
     @XmlEnumValue("emergencyTelephoneNumberOutOfService")
     EMERGENCY_TELEPHONE_NUMBER_OUT_OF_SERVICE("emergencyTelephoneNumberOutOfService"),
-
-    /**
-     * Road information service telephone number is out of service.
-     * 
-     */
     @XmlEnumValue("informationServiceTelephoneNumberOutOfService")
     INFORMATION_SERVICE_TELEPHONE_NUMBER_OUT_OF_SERVICE("informationServiceTelephoneNumberOutOfService"),
-
-    /**
-     * No traffic officer patrol service is operating.
-     * 
-     */
     @XmlEnumValue("noTrafficOfficerPatrolService")
     NO_TRAFFIC_OFFICER_PATROL_SERVICE("noTrafficOfficerPatrolService"),
     @XmlEnumValue("_extended")

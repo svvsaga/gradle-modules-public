@@ -37,7 +37,7 @@ public class TimePrecisionEnum {
     protected String extendedValue;
 
     /**
-     * List of precisions to which times can be given.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

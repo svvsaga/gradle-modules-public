@@ -37,7 +37,7 @@ public class PoorEnvironmentTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of poor environmental conditions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

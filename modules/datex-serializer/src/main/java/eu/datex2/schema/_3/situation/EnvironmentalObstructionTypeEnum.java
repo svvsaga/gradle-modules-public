@@ -37,7 +37,7 @@ public class EnvironmentalObstructionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of environmental obstructions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

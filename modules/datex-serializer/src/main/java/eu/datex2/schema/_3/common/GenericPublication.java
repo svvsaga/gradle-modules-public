@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication used to make level B extensions at the publication level.
- * 
  * <p>Java class for GenericPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,7 +18,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *     &lt;extension base="{http://datex2.eu/schema/3/common}PayloadPublication"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="genericPublicationName" type="{http://datex2.eu/schema/3/common}String"/&gt;
- *         &lt;element name="_genericPublicationExtension" type="{http://datex2.eu/schema/3/common}_ExtensionType" minOccurs="0"/&gt;
+ *         &lt;element name="_genericPublicationExtension" type="{http://datex2.eu/schema/3/common}_GenericPublicationExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -41,7 +39,7 @@ public class GenericPublication
     @XmlElement(required = true)
     protected String genericPublicationName;
     @XmlElement(name = "_genericPublicationExtension")
-    protected ExtensionType genericPublicationExtension;
+    protected GenericPublicationExtensionType genericPublicationExtension;
 
     /**
      * Gets the value of the genericPublicationName property.
@@ -72,10 +70,10 @@ public class GenericPublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public ExtensionType getGenericPublicationExtension() {
+    public GenericPublicationExtensionType getGenericPublicationExtension() {
         return genericPublicationExtension;
     }
 
@@ -84,10 +82,10 @@ public class GenericPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public void setGenericPublicationExtension(ExtensionType value) {
+    public void setGenericPublicationExtension(GenericPublicationExtensionType value) {
         this.genericPublicationExtension = value;
     }
 

@@ -37,7 +37,7 @@ public class AuthorityOperationTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of authority operations.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

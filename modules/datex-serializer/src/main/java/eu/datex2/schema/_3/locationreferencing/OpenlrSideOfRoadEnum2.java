@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OpenlrSideOfRoadEnum2 {
 
-
-    /**
-     * On road or unknown
-     * 
-     */
     @XmlEnumValue("onRoadOrUnknown")
     ON_ROAD_OR_UNKNOWN("onRoadOrUnknown"),
-
-    /**
-     * On the right side of the road.
-     * 
-     */
     @XmlEnumValue("right")
     RIGHT("right"),
-
-    /**
-     * On the left side of the road.
-     * 
-     */
     @XmlEnumValue("left")
     LEFT("left"),
-
-    /**
-     * On both sides of the road.
-     * 
-     */
     @XmlEnumValue("both")
     BOTH("both"),
     @XmlEnumValue("_extended")

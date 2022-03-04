@@ -37,7 +37,7 @@ public class RelativePositionOnCarriagewayEnum {
     protected String extendedValue;
 
     /**
-     * Identifies a relative position across a carriageway
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

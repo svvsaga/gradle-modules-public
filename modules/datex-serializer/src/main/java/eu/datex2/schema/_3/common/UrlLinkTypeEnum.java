@@ -37,7 +37,7 @@ public class UrlLinkTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of URL links.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

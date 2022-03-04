@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Averaged measurements or calculations of traffic concentration.
- * 
  * <p>Java class for TrafficConcentration complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

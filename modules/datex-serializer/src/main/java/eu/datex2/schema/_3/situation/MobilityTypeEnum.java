@@ -37,8 +37,7 @@ public class MobilityTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of mobility relating to a situation element defined by a SituationReord.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

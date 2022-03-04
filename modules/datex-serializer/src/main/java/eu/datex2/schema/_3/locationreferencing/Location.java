@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The specification of a location either on a network (as a point or a linear location) or
- *         as an area. This may be provided in one or more referencing systems.
- *       
- * 
  * <p>Java class for Location complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

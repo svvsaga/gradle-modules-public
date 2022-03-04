@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A referent on a linear object that has a known location such as a node, a reference marker
- *         (e.g. a marker-post), an intersection etc.
- *       
- * 
  * <p>Java class for Referent complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

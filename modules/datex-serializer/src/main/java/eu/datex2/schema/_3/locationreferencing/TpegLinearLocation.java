@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear section along a single road defined between two points on the same road by a
- *         TPEG-Loc structure.
- *       
- * 
  * <p>Java class for TpegLinearLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -25,22 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DirectionPurposeEnum2 {
 
-
-    /**
-     * On the carriageway or lane which is inbound towards the centre of the town or
-     *             city.
-     *           
-     * 
-     */
     @XmlEnumValue("inbound")
     INBOUND("inbound"),
-
-    /**
-     * On the carriageway or lane which is outbound from the centre of the town or
-     *             city.
-     *           
-     * 
-     */
     @XmlEnumValue("outbound")
     OUTBOUND("outbound"),
     @XmlEnumValue("_extended")

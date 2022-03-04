@@ -37,9 +37,7 @@ public class TpegLoc03IlcPointDescriptorSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Descriptors for describing a junction by identifying the intersecting roads at a road
-     *         junction.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

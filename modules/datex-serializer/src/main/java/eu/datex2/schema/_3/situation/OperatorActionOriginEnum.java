@@ -37,7 +37,7 @@ public class OperatorActionOriginEnum {
     protected String extendedValue;
 
     /**
-     * Origins of operator actions.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

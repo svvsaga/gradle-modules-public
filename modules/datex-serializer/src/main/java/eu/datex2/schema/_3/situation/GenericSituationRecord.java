@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A generic SituationRecord for use when adding level B extensions at the SituationRecord
- *         level.
- *       
- * 
  * <p>Java class for GenericSituationRecord complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

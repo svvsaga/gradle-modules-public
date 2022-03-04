@@ -11,9 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear element along a single linear object defined by its start and end points.
- *       
- * 
  * <p>Java class for LinearElementByPoints complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

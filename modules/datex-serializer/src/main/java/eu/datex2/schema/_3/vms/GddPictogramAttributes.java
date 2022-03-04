@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * ISO 14823 Graphic Data Dictionary attributes with textual or numeric data to supplement a
- *         pictogram identification.
- *       
- * 
  * <p>Java class for GddPictogramAttributes complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

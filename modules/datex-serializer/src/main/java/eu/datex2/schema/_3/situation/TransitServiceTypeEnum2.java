@@ -30,53 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TransitServiceTypeEnum2 {
 
-
-    /**
-     * Air service.
-     * 
-     */
     @XmlEnumValue("air")
     AIR("air"),
-
-    /**
-     * Bus service.
-     * 
-     */
     @XmlEnumValue("bus")
     BUS("bus"),
-
-    /**
-     * Ferry service.
-     * 
-     */
     @XmlEnumValue("ferry")
     FERRY("ferry"),
-
-    /**
-     * Hydrofoil service.
-     * 
-     */
     @XmlEnumValue("hydrofoil")
     HYDROFOIL("hydrofoil"),
-
-    /**
-     * Rail service.
-     * 
-     */
     @XmlEnumValue("rail")
     RAIL("rail"),
-
-    /**
-     * Tram service.
-     * 
-     */
     @XmlEnumValue("tram")
     TRAM("tram"),
-
-    /**
-     * Underground or metro service.
-     * 
-     */
     @XmlEnumValue("undergroundMetro")
     UNDERGROUND_METRO("undergroundMetro"),
     @XmlEnumValue("_extended")

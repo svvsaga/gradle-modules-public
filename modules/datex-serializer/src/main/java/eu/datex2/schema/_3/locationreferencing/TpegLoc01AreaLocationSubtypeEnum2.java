@@ -25,18 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc01AreaLocationSubtypeEnum2 {
 
-
-    /**
-     * A geographic or geometric large area.
-     * 
-     */
     @XmlEnumValue("largeArea")
     LARGE_AREA("largeArea"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

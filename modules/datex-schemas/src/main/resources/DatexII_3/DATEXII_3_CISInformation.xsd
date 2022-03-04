@@ -1,111 +1,103 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<xs:schema elementFormDefault="qualified"
-           xmlns:cis="http://datex2.eu/schema/3/cisInformation" version="1"
-           targetNamespace="http://datex2.eu/schema/3/cisInformation"
-           xmlns:ex="http://datex2.eu/schema/3/exchangeInformation" xmlns:com="http://datex2.eu/schema/3/common"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd"/>
-  <xs:import namespace="http://datex2.eu/schema/3/exchangeInformation"
-             schemaLocation="DATEXII_3_ExchangeInformation.xsd"/>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cis="http://datex2.eu/schema/3/cisInformation" version="1" targetNamespace="http://datex2.eu/schema/3/cisInformation" xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
   <xs:complexType name="_PredefinedServiceEnum">
     <xs:simpleContent>
       <xs:extension base="cis:PredefinedServiceEnum">
-        <xs:attribute name="_extendedValue" type="xs:string"/>
+        <xs:attribute name="_extendedValue" type="xs:string" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="_ServiceActionEnum">
     <xs:simpleContent>
       <xs:extension base="cis:ServiceActionEnum">
-        <xs:attribute name="_extendedValue" type="xs:string"/>
+        <xs:attribute name="_extendedValue" type="xs:string" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="_ServiceActionStatusEnum">
     <xs:simpleContent>
       <xs:extension base="cis:ServiceActionStatusEnum">
-        <xs:attribute name="_extendedValue" type="xs:string"/>
+        <xs:attribute name="_extendedValue" type="xs:string" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="CISInformation">
     <xs:sequence>
-      <xs:element name="serviceFeedback" type="cis:ServiceFeedback" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="serviceRequest" type="cis:ServiceRequest" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="_cisInformationExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="serviceFeedback" type="cis:ServiceFeedback" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="serviceRequest" type="cis:ServiceRequest" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_cisInformationExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="PredefinedServiceEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="broadcastDelivery"/>
-      <xs:enumeration value="other"/>
-      <xs:enumeration value="tmpActivation"/>
-      <xs:enumeration value="vmsMessageProcessing"/>
-      <xs:enumeration value="_extended"/>
+      <xs:enumeration value="broadcastDelivery" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="tmpActivation" />
+      <xs:enumeration value="vmsMessageProcessing" />
+      <xs:enumeration value="_extended" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="ServiceActionEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="agreement"/>
-      <xs:enumeration value="cancellation"/>
-      <xs:enumeration value="implementation"/>
-      <xs:enumeration value="processing"/>
-      <xs:enumeration value="statusInformation"/>
-      <xs:enumeration value="termination"/>
-      <xs:enumeration value="_extended"/>
+      <xs:enumeration value="agreement" />
+      <xs:enumeration value="cancellation" />
+      <xs:enumeration value="implementation" />
+      <xs:enumeration value="processing" />
+      <xs:enumeration value="statusInformation" />
+      <xs:enumeration value="termination" />
+      <xs:enumeration value="_extended" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="ServiceActionStatusEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="compliant"/>
-      <xs:enumeration value="failed"/>
-      <xs:enumeration value="notCompliant"/>
-      <xs:enumeration value="processing"/>
-      <xs:enumeration value="rejected"/>
-      <xs:enumeration value="scheduled"/>
-      <xs:enumeration value="success"/>
-      <xs:enumeration value="timedOut"/>
-      <xs:enumeration value="_extended"/>
+      <xs:enumeration value="compliant" />
+      <xs:enumeration value="failed" />
+      <xs:enumeration value="notCompliant" />
+      <xs:enumeration value="processing" />
+      <xs:enumeration value="rejected" />
+      <xs:enumeration value="scheduled" />
+      <xs:enumeration value="success" />
+      <xs:enumeration value="timedOut" />
+      <xs:enumeration value="_extended" />
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="ServiceFeedback">
     <xs:sequence>
-      <xs:element name="serviceRequestFeedbackReason" type="com:MultilingualString" minOccurs="0"/>
-      <xs:element name="serviceRequestStatus" type="cis:_ServiceActionStatusEnum"/>
-      <xs:element name="serviceRequestReference" type="com:VersionedReference"/>
-      <xs:element name="serviceProvider" type="ex:Agent"/>
-      <xs:element name="_serviceFeedbackExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="serviceRequestFeedbackReason" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="serviceRequestStatus" type="cis:_ServiceActionStatusEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="serviceRequestReference" type="com:VersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="serviceImplementer" type="com:InternationalIdentifier" />
+      <xs:element name="_serviceFeedbackExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ServiceRequest">
     <xs:sequence>
-      <xs:element name="elementToProcessReference" type="com:Reference" minOccurs="0"/>
-      <xs:element name="elementToProcessVersionedReference" type="com:VersionedReference" minOccurs="0"
-      />
-      <xs:element name="expiryTime" type="com:VersionedReference" minOccurs="0"/>
-      <xs:element name="externalReference" type="com:String" minOccurs="0"/>
-      <xs:element name="notPredefinedServiceName" type="com:String" minOccurs="0"/>
-      <xs:element name="predefinedService" type="cis:_PredefinedServiceEnum"/>
-      <xs:element name="requestedAction" type="cis:_ServiceActionEnum"/>
-      <xs:element name="servicerRequestCreationTime" type="com:DateTime"/>
-      <xs:element name="servicerRequestVersionTime" type="com:DateTime"/>
-      <xs:element name="customServiceParameter" type="com:String" minOccurs="0"/>
-      <xs:element name="serviceRequester" type="ex:Agent"/>
-      <xs:element name="serviceProvider" type="ex:Agent" maxOccurs="unbounded"/>
-      <xs:element name="serviceRequestCondition" type="cis:ServiceRequestCondition" minOccurs="0"/>
-      <xs:element name="_serviceRequestExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="elementToProcessReference" type="com:Reference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="elementToProcessVersionedReference" type="com:VersionedReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="expiryTime" type="com:VersionedReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="externalReference" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="notPredefinedServiceName" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="predefinedService" type="cis:_PredefinedServiceEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="requestedAction" type="cis:_ServiceActionEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="servicerRequestCreationTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="servicerRequestVersionTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="customServiceParameter" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="serviceRequester" type="com:InternationalIdentifier" />
+      <xs:element name="serviceImplementer" type="com:InternationalIdentifier" maxOccurs="unbounded" />
+      <xs:element name="serviceRequestCondition" type="cis:ServiceRequestCondition" minOccurs="0" />
+      <xs:element name="_serviceRequestExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
-    <xs:attribute name="id" type="xs:string" use="required"/>
-    <xs:attribute name="version" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
   </xs:complexType>
   <xs:complexType name="ServiceRequestCondition">
     <xs:sequence>
-      <xs:element name="conditionDescription" type="com:MultilingualString" minOccurs="0"/>
-      <xs:element name="externalIdCondition" type="com:String" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="referencedCondition" type="com:Reference" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="versionReferencedCondition" type="com:VersionedReference" minOccurs="0"
-                  maxOccurs="unbounded"/>
-      <xs:element name="_serviceRequestConditionExtension" type="com:_ExtensionType" minOccurs="0"/>
+      <xs:element name="conditionDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="externalIdCondition" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="referencedCondition" type="com:Reference" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="versionReferencedCondition" type="com:VersionedReference" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_serviceRequestConditionExtension" type="com:_ExtensionType" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -24,13 +24,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc01LinearLocationSubtypeEnum2 {
 
-
-    /**
-     * A segment (or link) of the road network corresponding to the way in which the road
-     *             operator has segmented the network.
-     *           
-     * 
-     */
     @XmlEnumValue("segment")
     SEGMENT("segment"),
     @XmlEnumValue("_extended")

@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Group of the vehicles involved having common characteristics and/or status.
- *       
- * 
  * <p>Java class for GroupOfVehiclesInvolved complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

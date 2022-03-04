@@ -37,7 +37,7 @@ public class TpegLoc03JunctionPointDescriptorSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Descriptors for describing a point at a road junction.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

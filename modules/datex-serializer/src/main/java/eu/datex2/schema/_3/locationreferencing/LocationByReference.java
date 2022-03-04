@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A location defined by reference to a predefined location.
- * 
  * <p>Java class for LocationByReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

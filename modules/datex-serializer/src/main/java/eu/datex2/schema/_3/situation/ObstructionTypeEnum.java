@@ -37,7 +37,7 @@ public class ObstructionTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of obstructions on the roadway.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

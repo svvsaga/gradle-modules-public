@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The specification of the destination of a defined route or itinerary which is an area.
- *       
- * 
  * <p>Java class for AreaDestination complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

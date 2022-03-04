@@ -9,9 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Closed line string not self-intersecting (i.e. having as last point the first point)
- *       
- * 
  * <p>Java class for GmlLinearRing complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

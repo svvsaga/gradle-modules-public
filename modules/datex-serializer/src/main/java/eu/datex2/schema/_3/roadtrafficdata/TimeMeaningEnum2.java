@@ -26,25 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TimeMeaningEnum2 {
 
-
-    /**
-     * Meaning the beginning of a period
-     * 
-     */
     @XmlEnumValue("beginTime")
     BEGIN_TIME("beginTime"),
-
-    /**
-     * Meaning the end of a period
-     * 
-     */
     @XmlEnumValue("endTime")
     END_TIME("endTime"),
-
-    /**
-     * Meaning the mid-point of a period
-     * 
-     */
     @XmlEnumValue("middleTime")
     MIDDLE_TIME("middleTime"),
     @XmlEnumValue("_extended")

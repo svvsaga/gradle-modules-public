@@ -37,7 +37,7 @@ public class RoadMaintenanceTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of road maintenance.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

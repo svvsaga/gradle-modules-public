@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum EquipmentOrSystemFaultTypeEnum2 {
 
-
-    /**
-     * Not working or functioning.
-     * 
-     */
     @XmlEnumValue("notWorking")
     NOT_WORKING("notWorking"),
-
-    /**
-     * Out of service (usually for operational reasons).
-     * 
-     */
     @XmlEnumValue("outOfService")
     OUT_OF_SERVICE("outOfService"),
-
-    /**
-     * Working incorrectly.
-     * 
-     */
     @XmlEnumValue("workingIncorrectly")
     WORKING_INCORRECTLY("workingIncorrectly"),
-
-    /**
-     * Working intermittently.
-     * 
-     */
     @XmlEnumValue("workingIntermittently")
     WORKING_INTERMITTENTLY("workingIntermittently"),
     @XmlEnumValue("_extended")

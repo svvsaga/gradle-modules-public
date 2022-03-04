@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Characteristics of vehicle axles
- * 
  * <p>Java class for AxleCharacteristics complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Emission characteristics of vehicles.
- * 
  * <p>Java class for Emissions complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

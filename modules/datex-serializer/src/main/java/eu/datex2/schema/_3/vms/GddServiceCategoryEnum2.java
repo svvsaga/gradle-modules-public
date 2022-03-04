@@ -29,54 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum GddServiceCategoryEnum2 {
 
-
-    /**
-     * Danger warning sign information (GDD service category 11).
-     * 
-     */
     @XmlEnumValue("dangerWarning")
     DANGER_WARNING("dangerWarning"),
-
-    /**
-     * Informing of special obligations, restrictions or prohibitions (GDD service
-     *             category 12).
-     *           
-     * 
-     */
     @XmlEnumValue("regulatory")
     REGULATORY("regulatory"),
-
-    /**
-     * Informative, advisory, or guiding (GDD service category 13).
-     * 
-     */
     @XmlEnumValue("informative")
     INFORMATIVE("informative"),
-
-    /**
-     * Informing of a certain public facility and its service (GDD service category
-     *             21).
-     *           
-     * 
-     */
     @XmlEnumValue("publicFacilities")
     PUBLIC_FACILITIES("publicFacilities"),
-
-    /**
-     * Notifying of road-related ambient conditions and events on route (GDD service
-     *             category 31).
-     *           
-     * 
-     */
     @XmlEnumValue("ambientConditions")
     AMBIENT_CONDITIONS("ambientConditions"),
-
-    /**
-     * Notifying of road-related conditions and events on route (GDD service category
-     *             32).
-     *           
-     * 
-     */
     @XmlEnumValue("roadConditions")
     ROAD_CONDITIONS("roadConditions"),
     @XmlEnumValue("_extended")

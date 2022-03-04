@@ -9,11 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear element along a single linear object defined by its identifier or code in a road
- *         network reference model (specified in LinearElement class) which segments the road network according to
- *         specific business rules.
- *       
- * 
  * <p>Java class for LinearElementByCode complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

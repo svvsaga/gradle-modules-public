@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:par="http://datex2.eu/schema/3/parking" version="3.0" targetNamespace="http://datex2.eu/schema/3/parking" xmlns:com="http://datex2.eu/schema/3/common" xmlns:loc="http://datex2.eu/schema/3/locationReferencing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/locationReferencing" schemaLocation="DATEXII_3_LocationReferencing.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_AccessCategoryEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:AccessCategoryEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_AccessEquipmentEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:AccessEquipmentEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_AccessibilityEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:AccessibilityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_AvailabilityEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:AvailabilityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ChargeBandVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ChargeBand" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_ChargeTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ChargeTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ChargingStationUsageTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ChargingStationUsageTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ContactDetailsVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ContactDetails" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_CurrencyEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:CurrencyEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_EquipmentTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:EquipmentTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_GroupOfParkingSitesStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:GroupOfParkingSitesStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_GroupOfParkingSitesTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:GroupOfParkingSitesTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_GroupOfParkingSpaces">
+    <xs:sequence>
+      <xs:element name="parkingSpaceBasics" type="par:ParkingSpaceBasics" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="groupIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_GroupOfParkingSpacesParkingSpaceIndexParkingSpace">
+    <xs:sequence>
+      <xs:element name="parkingSpace" type="par:ParkingSpace" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="parkingSpaceIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_InterUrbanParkingSiteLocationEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:InterUrbanParkingSiteLocationEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_JunctionClassificationEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:JunctionClassificationEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_LABELSecurityLevelEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:LABELSecurityLevelEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_LABELServiceLevelEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:LABELServiceLevelEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_MeansOfPaymentEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:MeansOfPaymentEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_MeasurementSiteVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="roa:MeasurementSite" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_OccupancyDetectionTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:OccupancyDetectionTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_OpeningStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:OpeningStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_OperationStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:OperationStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_OwnershipTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:OwnershipTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingAccessReference">
+    <xs:complexContent>
+      <xs:extension base="com:Reference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ParkingAccess" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingConditionsEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingConditionsEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingDurationEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingDurationEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingFaultEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingFaultEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingLayoutEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingLayoutEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingModeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingModeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingOccupancyEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingOccupancyEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingOccupancyTrendEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingOccupancyTrendEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingPaymentModeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingPaymentModeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility">
+    <xs:sequence>
+      <xs:element name="parkingEquipmentOrServiceFacility" type="par:ParkingEquipmentOrServiceFacility" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="equipmentOrServiceFacilityIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus">
+    <xs:sequence>
+      <xs:element name="parkingEquipmentOrServiceFacilityStatus" type="par:ParkingEquipmentOrServiceFacilityStatus" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="equipmentOrServiceFacilityIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus">
+    <xs:sequence>
+      <xs:element name="groupOfParkingSpacesStatus" type="par:GroupOfParkingSpacesStatus" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="groupIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus">
+    <xs:sequence>
+      <xs:element name="parkingSpaceStatus" type="par:ParkingSpaceStatus" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="parkingSpaceIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus">
+    <xs:sequence>
+      <xs:element name="parkingUsageScenarioStatus" type="par:ParkingUsageScenarioStatus" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="scenarioIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingRecordVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ParkingRecord" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingRouteDetailsVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ParkingRouteDetails" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingRouteDirectionEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingRouteDirectionEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingRouteTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingRouteTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSecurityEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSecurityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSiteOvercrowdingStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSiteOvercrowdingStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSiteScenarioIndexParkingUsageScenario">
+    <xs:sequence>
+      <xs:element name="parkingUsageScenario" type="par:ParkingUsageScenario" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="scenarioIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingSiteStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSiteStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpace">
+    <xs:sequence>
+      <xs:element name="parkingSpaceBasics" type="par:ParkingSpaceBasics" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="parkingSpaceIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpaceAccessibilityEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSpaceAccessibilityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility">
+    <xs:sequence>
+      <xs:element name="parkingEquipmentOrServiceFacility" type="par:ParkingEquipmentOrServiceFacility" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="equipmentOrServiceFacilityIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpaceBasicsScenarioIndexParkingUsageScenario">
+    <xs:sequence>
+      <xs:element name="parkingUsageScenario" type="par:ParkingUsageScenario" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="scenarioIndex" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpacePhysicsEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSpacePhysicsEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSpecialLocationEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSpecialLocationEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingSupervisionEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingSupervisionEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingTableVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="par:ParkingTable" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingTypeOfGroupEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingTypeOfGroupEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingUsageScenarioEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingUsageScenarioEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingVacantSpacesEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ParkingVacantSpacesEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_PaymentCardBrandsEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:PaymentCardBrandsEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_PaymentCardTypesEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:PaymentCardTypesEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_PermitTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:PermitTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_RegulationEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:RegulationEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ReservationTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ReservationTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_RestAreaActivityEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:RestAreaActivityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_RoadTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:RoadTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ServiceFacilityTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:ServiceFacilityTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_TruckParkingDynamicManagementEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:TruckParkingDynamicManagementEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_UrbanParkingSiteTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:UrbanParkingSiteTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_UserTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="par:UserTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_VmsUnitVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="vms:VmsUnit" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AcceptedPaymentCards">
+    <xs:sequence>
+      <xs:element name="paymentCards" type="par:_PaymentCardTypesEnum" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="otherPaymentCards" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="paymentCardBrands" type="par:_PaymentCardBrandsEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="otherPaymentCardBrands" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_acceptedPaymentCardsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AccessCategoryEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vehicleEntranceAndExit" />
+      <xs:enumeration value="vehicleEntrance" />
+      <xs:enumeration value="vehicleExit" />
+      <xs:enumeration value="pedestrianEntranceAndExit" />
+      <xs:enumeration value="pedestrianEntrance" />
+      <xs:enumeration value="pedestrianExit" />
+      <xs:enumeration value="rentalCarReturn" />
+      <xs:enumeration value="bicycles" />
+      <xs:enumeration value="emergencyExit" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AccessEquipmentEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="barrier" />
+      <xs:enumeration value="trafficSignal" />
+      <xs:enumeration value="ticketButtonMachine" />
+      <xs:enumeration value="ticketCardMachine" />
+      <xs:enumeration value="payAndExitMachine" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AccessibilityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="barrierFreeAccessible" />
+      <xs:enumeration value="handicappedAccessible" />
+      <xs:enumeration value="wheelChairAccessible" />
+      <xs:enumeration value="handicappedEasements" />
+      <xs:enumeration value="orientationSystemForBlindPeople" />
+      <xs:enumeration value="handicappedMarked" />
+      <xs:enumeration value="none" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AmountOfMoney">
+    <xs:restriction base="com:Decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Ampere">
+    <xs:restriction base="com:Float" />
+  </xs:simpleType>
+  <xs:simpleType name="AvailabilityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="available" />
+      <xs:enumeration value="notAvailable" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Charge">
+    <xs:sequence>
+      <xs:element name="charge" type="par:AmountOfMoney" minOccurs="1" maxOccurs="1" />
+      <xs:element name="chargeInterval" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargeType" type="par:_ChargeTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargeTypeDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maxIterationsOfCharge" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="minIterationsOfCharge" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargeOrderIndex" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="timePeriodOfDay" type="com:TimePeriodOfDay" minOccurs="0" />
+      <xs:element name="_chargeExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ChargeBand">
+    <xs:sequence>
+      <xs:element name="chargeCurrency" type="par:_CurrencyEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="maximumDuration" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargeBandName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="applicableForUser" type="par:_UserTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="charge" type="par:Charge" maxOccurs="unbounded" />
+      <xs:element name="applicableForPeriod" type="com:OverallPeriod" minOccurs="0" />
+      <xs:element name="applicableForVehicles" type="com:VehicleCharacteristics" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingPermit" type="par:ParkingPermit" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_chargeBandExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ChargeBandByReference">
+    <xs:sequence>
+      <xs:element name="chargeBandReference" type="par:_ChargeBandVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_chargeBandByReferenceExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ChargeTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="minimum" />
+      <xs:enumeration value="maximum" />
+      <xs:enumeration value="additionalIntervalPrice" />
+      <xs:enumeration value="seasonTicket" />
+      <xs:enumeration value="temporaryPrice" />
+      <xs:enumeration value="firstIntervalPrice" />
+      <xs:enumeration value="freeParking" />
+      <xs:enumeration value="flat" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChargingStationUsageTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="electricVehicle" />
+      <xs:enumeration value="motorhomeOrCaravanSupply" />
+      <xs:enumeration value="electricBikeOrMotorcycle" />
+      <xs:enumeration value="lorryPowerConsumption" />
+      <xs:enumeration value="electricalDevices" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Contact">
+    <xs:sequence>
+      <xs:element name="contactUnknown" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="contactNotDefined" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="validityOfContact" type="com:OverallPeriod" minOccurs="0" />
+      <xs:element name="_contactExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactByReference">
+    <xs:complexContent>
+      <xs:extension base="par:Contact">
+        <xs:sequence>
+          <xs:element name="contactReference" type="par:_ContactDetailsVersionedReference" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_contactByReferenceExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ContactDetails">
+    <xs:complexContent>
+      <xs:extension base="par:Contact">
+        <xs:sequence>
+          <xs:element name="contactOrganisationName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactPersonName" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactPersonFirstName" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactPersonPosition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsLanguage" type="com:Language" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="contactDetailsAddress" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsStreet" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsHouseNumber" type="com:String" minOccurs="0" maxOccurs="2" />
+          <xs:element name="contactDetailsPostcode" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsCity" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="country" type="com:CountryCode" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsTelephoneNumber" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsFax" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsEMail" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="urlLinkAddress" type="com:Url" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsLogoUrl" type="com:Url" minOccurs="0" maxOccurs="1" />
+          <xs:element name="available24hours" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsResponsibility" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="contactDetailsMoreInfo" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="publishingAgreement" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="contactDetailsOwnership" type="par:_OwnershipTypeEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="locationReference" type="loc:LocationReference" minOccurs="0" />
+          <xs:element name="_contactDetailsExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required" />
+        <xs:attribute name="version" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CurrencyEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="eur" />
+      <xs:enumeration value="all" />
+      <xs:enumeration value="amd" />
+      <xs:enumeration value="azn" />
+      <xs:enumeration value="bam" />
+      <xs:enumeration value="bgn" />
+      <xs:enumeration value="byr" />
+      <xs:enumeration value="chf" />
+      <xs:enumeration value="czk" />
+      <xs:enumeration value="dkk" />
+      <xs:enumeration value="gbp" />
+      <xs:enumeration value="gel" />
+      <xs:enumeration value="hrk" />
+      <xs:enumeration value="huf" />
+      <xs:enumeration value="isk" />
+      <xs:enumeration value="ltl" />
+      <xs:enumeration value="mdl" />
+      <xs:enumeration value="mkd" />
+      <xs:enumeration value="nok" />
+      <xs:enumeration value="pln" />
+      <xs:enumeration value="ron" />
+      <xs:enumeration value="rsd" />
+      <xs:enumeration value="rub" />
+      <xs:enumeration value="sek" />
+      <xs:enumeration value="try" />
+      <xs:enumeration value="uah" />
+      <xs:enumeration value="usd" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DedicatedAccess">
+    <xs:sequence>
+      <xs:element name="dedicatedAccess" type="par:_ParkingAccessReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="distanceFromParkingSpace" type="com:MetresAsNonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_dedicatedAccessExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Dimension">
+    <xs:sequence>
+      <xs:element name="dimensionLength" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1" />
+      <xs:element name="dimensionWidth" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1" />
+      <xs:element name="dimensionHeight" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1" />
+      <xs:element name="dimensionUsableArea" type="par:SquareMetres" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_dimensionExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ElectricCharging">
+    <xs:sequence>
+      <xs:element name="chargingStationUsageType" type="par:_ChargingStationUsageTypeEnum" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="chargingStationModelType" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maximumCurrent" type="par:Ampere" minOccurs="0" maxOccurs="1" />
+      <xs:element name="voltage" type="par:Volt" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="chargingStationConnectorType" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="numberOfChargingPoints" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_electricChargingExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Equipment">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingEquipmentOrServiceFacility">
+        <xs:sequence>
+          <xs:element name="equipmentType" type="par:_EquipmentTypeEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="electricCharging" type="par:ElectricCharging" minOccurs="0" />
+          <xs:element name="_equipmentExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="EquipmentTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="toilet" />
+      <xs:enumeration value="shower" />
+      <xs:enumeration value="informationPoint" />
+      <xs:enumeration value="informatonStele" />
+      <xs:enumeration value="internetTerminal" />
+      <xs:enumeration value="internetWireless" />
+      <xs:enumeration value="payDesk" />
+      <xs:enumeration value="paymentMachine" />
+      <xs:enumeration value="cashMachine" />
+      <xs:enumeration value="vendingMachine" />
+      <xs:enumeration value="faxMachineOrService" />
+      <xs:enumeration value="copyMachineOrService" />
+      <xs:enumeration value="safeDeposit" />
+      <xs:enumeration value="luggageLocker" />
+      <xs:enumeration value="publicPhone" />
+      <xs:enumeration value="publicCoinPhone" />
+      <xs:enumeration value="publicCardPhone" />
+      <xs:enumeration value="elevator" />
+      <xs:enumeration value="picnicFacilities" />
+      <xs:enumeration value="dumpingStation" />
+      <xs:enumeration value="freshWater" />
+      <xs:enumeration value="wasteDisposal" />
+      <xs:enumeration value="refuseBin" />
+      <xs:enumeration value="iceFreeScaffold" />
+      <xs:enumeration value="playground" />
+      <xs:enumeration value="electricChargingStation" />
+      <xs:enumeration value="bikeParking" />
+      <xs:enumeration value="tollTerminal" />
+      <xs:enumeration value="defibrillator" />
+      <xs:enumeration value="firstAidEquipment" />
+      <xs:enumeration value="fireHose" />
+      <xs:enumeration value="fireExtingiusher" />
+      <xs:enumeration value="fireHydrant" />
+      <xs:enumeration value="none" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="GroupOfParkingSites">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRecord">
+        <xs:sequence>
+          <xs:element name="groupOfParkingSitesType" type="par:_GroupOfParkingSitesTypeEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingSiteByReference" type="par:_ParkingRecordVersionedReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="parkingSite" type="par:ParkingSite" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="_groupOfParkingSitesExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GroupOfParkingSitesStatus">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRecordStatus">
+        <xs:sequence>
+          <xs:element name="groupOfParkingSitesStatus" type="par:_GroupOfParkingSitesStatusEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_groupOfParkingSitesStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="GroupOfParkingSitesStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="allParkingsFull" />
+      <xs:enumeration value="multiStoreyParkingsFull" />
+      <xs:enumeration value="noMoreParkingSpacesAvailable" />
+      <xs:enumeration value="enoughSpacesAvailable" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GroupOfParkingSitesTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="parkingArea" />
+      <xs:enumeration value="truckParkingPriorityZone" />
+      <xs:enumeration value="aggregationOfInformation" />
+      <xs:enumeration value="inhabitantZone" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="GroupOfParkingSpaces">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingSpaceBasics">
+        <xs:sequence>
+          <xs:element name="parkingNumberOfSpaces" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+          <xs:element name="parkingTypeOfGroup" type="par:_ParkingTypeOfGroupEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="identicalToGroup" type="par:IndexReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="realSubsetOfGroup" type="par:IndexReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="minimumParkingSpaceDimension" type="par:Dimension" minOccurs="0" />
+          <xs:element name="dimensionOfGroup" type="par:Dimension" minOccurs="0" />
+          <xs:element name="maximumParkingSpaceDimension" type="par:Dimension" minOccurs="0" />
+          <xs:element name="parkingSpace" type="par:_GroupOfParkingSpacesParkingSpaceIndexParkingSpace" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="locationReference" type="loc:LocationReference" minOccurs="0" />
+          <xs:element name="_groupOfParkingSpacesExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GroupOfParkingSpacesStatus">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingOccupancy">
+        <xs:sequence>
+          <xs:element name="groupDeclarationValidNow" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="groupOfParkingSpacesClosed" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_groupOfParkingSpacesStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="IndexReference">
+    <xs:restriction base="com:String" />
+  </xs:simpleType>
+  <xs:complexType name="IndividualCharge">
+    <xs:sequence>
+      <xs:element name="chargeBandReference" type="par:_ChargeBandVersionedReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargePaid" type="par:AmountOfMoney" minOccurs="1" maxOccurs="1" />
+      <xs:element name="chargeCurrency" type="par:_CurrencyEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="usedMeansOfPayment" type="par:_MeansOfPaymentEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="withReservation" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="usedPaymentCard" type="par:UsedPaymentCard" minOccurs="0" />
+      <xs:element name="_individualChargeExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InterUrbanParkingSite">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingSite">
+        <xs:sequence>
+          <xs:element name="interUrbanParkingSiteLocation" type="par:_InterUrbanParkingSiteLocationEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_interUrbanParkingSiteExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="InterUrbanParkingSiteLocationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="motorway" />
+      <xs:enumeration value="nearbyMotorway" />
+      <xs:enumeration value="layBy" />
+      <xs:enumeration value="onStreet" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Junction">
+    <xs:sequence>
+      <xs:element name="junctionClassification" type="par:_JunctionClassificationEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="junctionName" type="com:MultilingualString" minOccurs="1" maxOccurs="1" />
+      <xs:element name="junctionNumber" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="motorway" type="par:Road" minOccurs="0" />
+      <xs:element name="destinationMotorway" type="par:Road" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_junctionExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="JunctionClassificationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="threeWayInterchange" />
+      <xs:enumeration value="interchange" />
+      <xs:enumeration value="motorwayConnection" />
+      <xs:enumeration value="junction" />
+      <xs:enumeration value="temporaryJunction" />
+      <xs:enumeration value="borderCrossing" />
+      <xs:enumeration value="junctionInOneDirection" />
+      <xs:enumeration value="operationalServiceJunction" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LABELSecurityLevelEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" />
+      <xs:enumeration value="securityLevel1" />
+      <xs:enumeration value="securityLevel2" />
+      <xs:enumeration value="securityLevel3" />
+      <xs:enumeration value="securityLevel4" />
+      <xs:enumeration value="securityLevel5" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LABELServiceLevelEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" />
+      <xs:enumeration value="serviceLevel1" />
+      <xs:enumeration value="serviceLevel2" />
+      <xs:enumeration value="serviceLevel3" />
+      <xs:enumeration value="serviceLevel4" />
+      <xs:enumeration value="serviceLevel5" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MeansOfPaymentEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="paymentCard" />
+      <xs:enumeration value="cash" />
+      <xs:enumeration value="cashCoinsOnly" />
+      <xs:enumeration value="directCashTransfer" />
+      <xs:enumeration value="electronicSettlement" />
+      <xs:enumeration value="rfid" />
+      <xs:enumeration value="mobileApp" />
+      <xs:enumeration value="payBySMS" />
+      <xs:enumeration value="mobilePhone" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OccupancyChangeValue">
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="occupancyChange" type="com:Integer" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_occupancyChangeValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="OccupancyDetectionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" />
+      <xs:enumeration value="balancing" />
+      <xs:enumeration value="singleSpaceDetection" />
+      <xs:enumeration value="modelBased" />
+      <xs:enumeration value="manual" />
+      <xs:enumeration value="vehicleBased" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OpeningStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="open" />
+      <xs:enumeration value="closed" />
+      <xs:enumeration value="closedAbnormal" />
+      <xs:enumeration value="openingTimesInForce" />
+      <xs:enumeration value="statusUnknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OpeningTimes">
+    <xs:sequence>
+      <xs:element name="lastUpdated" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="openAllYear" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="available24hours" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="urlLinkAddress" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="openingTimesUnknown" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="openingTimesNotSpecified" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="validity" type="com:Validity" minOccurs="0" />
+      <xs:element name="_openingTimesExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="OperationStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="inOperation" />
+      <xs:enumeration value="limitedOperation" />
+      <xs:enumeration value="notInOperation" />
+      <xs:enumeration value="notInOperationAbnormal" />
+      <xs:enumeration value="technicalDefect" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OwnershipTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="public" />
+      <xs:enumeration value="private" />
+      <xs:enumeration value="publicPrivate" />
+      <xs:enumeration value="resident" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingAccess">
+    <xs:sequence>
+      <xs:element name="accessCategory" type="par:_AccessCategoryEnum" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="accessName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accessEquipment" type="par:_AccessEquipmentEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="accessibility" type="par:_AccessibilityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="photoUrl" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accessOnlyAssignedFor" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="accessAssignedAmongOthers" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="accessProhibitedFor" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="primaryRoad" type="par:Road" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="location" type="loc:Location" minOccurs="0" />
+      <xs:element name="openingTimes" type="par:OpeningTimes" minOccurs="0" />
+      <xs:element name="_parkingAccessExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ParkingAccessStatus">
+    <xs:sequence>
+      <xs:element name="accessReference" type="par:_ParkingAccessReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="accessOpeningStatus" type="par:_OpeningStatusEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accessFault" type="par:_ParkingFaultEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingAccessStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingAssignment">
+    <xs:sequence>
+      <xs:element name="applicableForUser" type="par:_UserTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingDuration" type="par:_ParkingDurationEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="vehicleCharacteristics" type="com:VehicleCharacteristics" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="hazardousMaterials" type="com:HazardousMaterials" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingPermit" type="par:ParkingPermit" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingAssignmentExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingConditionsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="normalParkingConditionsSuspended" />
+      <xs:enumeration value="specialParkingConditionsInForce" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingDurationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pickUpDropOff" />
+      <xs:enumeration value="shortTerm" />
+      <xs:enumeration value="shortTerm24hours" />
+      <xs:enumeration value="shortTerm48hours" />
+      <xs:enumeration value="shortTerm72hours" />
+      <xs:enumeration value="shortTerm96hours" />
+      <xs:enumeration value="longTerm" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingEquipmentOrServiceFacility" abstract="true">
+    <xs:sequence>
+      <xs:element name="equipmentOrServiceFacilityIdentifier" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="availability" type="par:_AvailabilityEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfEquipmentOrServiceFacility" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="additionalDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="otherEquipmentOrServiceFacility" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accessibility" type="par:_AccessibilityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="nameOrBrand" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="comment" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="photoUrl" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="applicableForUser" type="par:_UserTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="availabilityAndOpeningTimes" type="par:OpeningTimes" minOccurs="0" />
+      <xs:element name="tariffsAndPayment" type="par:TariffsAndPayment" minOccurs="0" />
+      <xs:element name="locationReference" type="loc:LocationReference" minOccurs="0" />
+      <xs:element name="applicableForVehicles" type="com:VehicleCharacteristics" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingEquipmentOrServiceFacilityExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingEquipmentOrServiceFacilityStatus">
+    <xs:sequence>
+      <xs:element name="numberOfEquipmentOrServiceFacilityOverride" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfSubitemsOverride" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="vacantEquipmentOrServiceFacilitySubitems" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="serviceFacilityOpeningStatus" type="par:_OpeningStatusEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="equipmentOperationStatus" type="par:_OperationStatusEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_parkingEquipmentOrServiceFacilityStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingFaultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="communicationsFailure" />
+      <xs:enumeration value="barrierMalfunction" />
+      <xs:enumeration value="entranceExitObstructed" />
+      <xs:enumeration value="erroneousOccupancyInformation" />
+      <xs:enumeration value="erroneousOccupancyDisplayed" />
+      <xs:enumeration value="paymentMachinesInoperative" />
+      <xs:enumeration value="reservationServiceOutOfOrder" />
+      <xs:enumeration value="noParkingInformationAvailable" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingLayoutEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="multiStorey" />
+      <xs:enumeration value="singleLevel" />
+      <xs:enumeration value="underground" />
+      <xs:enumeration value="undergroundAndMultistorey" />
+      <xs:enumeration value="automatedParkingGarage" />
+      <xs:enumeration value="openSpace" />
+      <xs:enumeration value="covered" />
+      <xs:enumeration value="nested" />
+      <xs:enumeration value="field" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="perpendicularParking" />
+      <xs:enumeration value="parallelParking" />
+      <xs:enumeration value="echelonParking" />
+      <xs:enumeration value="parkingOnOppositeSideOfRoad" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingOccupancy">
+    <xs:sequence>
+      <xs:element name="parkingNumberOfSpacesOverride" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfVacantSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfVacantSpacesLowerThan" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfVacantSpacesHigherThan" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfVacantSpacesGraded" type="par:_ParkingVacantSpacesEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfOccupiedSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNumberOfVehicles" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingOccupancy" type="com:Percentage" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingOccupancyGraded" type="par:_ParkingOccupancyEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingOccupancyTrend" type="par:_ParkingOccupancyTrendEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNotAllowed" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="vehicleCountAndRate" type="par:VehicleCountAndRate" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingOccupancyExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingOccupancyEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="expectCarParkToBeFull" />
+      <xs:enumeration value="percentage10" />
+      <xs:enumeration value="percentage20" />
+      <xs:enumeration value="percentage30" />
+      <xs:enumeration value="percentage40" />
+      <xs:enumeration value="percentage50" />
+      <xs:enumeration value="percentage60" />
+      <xs:enumeration value="percentage70" />
+      <xs:enumeration value="percentage80" />
+      <xs:enumeration value="percentage90" />
+      <xs:enumeration value="full" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingOccupancyTrendEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="decreasing" />
+      <xs:enumeration value="increasing" />
+      <xs:enumeration value="stable" />
+      <xs:enumeration value="increasingQuickly" />
+      <xs:enumeration value="increasingSlowly" />
+      <xs:enumeration value="decreasingQuickly" />
+      <xs:enumeration value="decreasingSlowly" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingPaymentModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="payAndDisplay" />
+      <xs:enumeration value="payManualAtExitBooth" />
+      <xs:enumeration value="payPriorToExit" />
+      <xs:enumeration value="payByPrepaidToken" />
+      <xs:enumeration value="payAndExit" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingPermit">
+    <xs:sequence>
+      <xs:element name="parkingPermitType" type="par:_PermitTypeEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingPermitScheme" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingPermitIdentifier" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_parkingPermitExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingRecord" abstract="true">
+    <xs:sequence>
+      <xs:element name="parkingName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingAlias" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingRecordVersionTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingNumberOfSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingPrincipalNumberOfSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maximumParkingDuration" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="photoUrl" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="urlLinkAddress" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingOccupancyDetectionType" type="par:_OccupancyDetectionTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="emergencyContact" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="owner" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="responisbleAuthority" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="securityService" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="operator" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="servicePartner" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingVMS" type="par:ParkingVMS" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingLocation" type="loc:LocationReference" />
+      <xs:element name="parkingRoute" type="par:ParkingRoute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingColour" type="par:RGBColour" minOccurs="0" />
+      <xs:element name="onlyAssignedParking" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="assignedParkingAmongOthers" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="prohibitedParking" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="tariffsAndPayment" type="par:TariffsAndPayment" minOccurs="0" />
+      <xs:element name="parkingEquipmentOrServiceFacility" type="par:_ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSpace" type="par:_ParkingSpace" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="groupOfParkingSpaces" type="par:_GroupOfParkingSpaces" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingThresholds" type="par:ParkingThresholds" minOccurs="0" />
+      <xs:element name="permitsAndProhibitions" type="par:PermitsAndProhibitions" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="informationManagerOverride" type="com:InternationalIdentifier" minOccurs="0" />
+      <xs:element name="emergencyAssemblyPoint" type="loc:LocationReference" minOccurs="0" />
+      <xs:element name="entireArea" type="loc:AreaLocation" minOccurs="0" />
+      <xs:element name="parkingRecordDimension" type="par:Dimension" minOccurs="0" />
+      <xs:element name="_parkingRecordExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ParkingRecordStatus" abstract="true">
+    <xs:sequence>
+      <xs:element name="parkingRecordReference" type="par:_ParkingRecordVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingStatusOriginTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingStatusDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingQueueingTime" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingConditions" type="par:_ParkingConditionsEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="blurredAvailability" type="com:Boolean" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingFault" type="par:_ParkingFaultEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="winterEquipmentManagementType" type="com:_WinterEquipmentManagementTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSpaceStatus" type="par:_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingOccupancy" type="par:ParkingOccupancy" />
+      <xs:element name="groupOfParkingSpacesStatus" type="par:_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingStatusValidity" type="par:ParkingStatusValidity" minOccurs="0" />
+      <xs:element name="overrideParkingThresholds" type="par:ParkingThresholds" minOccurs="0" />
+      <xs:element name="parkingEquipmentOrServiceFacilityStatus" type="par:_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingUsageScenarioStatus" type="par:_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingAccessStatus" type="par:ParkingAccessStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingRouteStatus" type="par:ParkingRouteStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingRecordStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingRoute" abstract="true">
+    <xs:sequence>
+      <xs:element name="parkingRouteColour" type="par:RGBColour" minOccurs="0" />
+      <xs:element name="_parkingRouteExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingRouteByReference">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRoute">
+        <xs:sequence>
+          <xs:element name="parkingRouteReference" type="par:_ParkingRouteDetailsVersionedReference" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_parkingRouteByReferenceExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParkingRouteDetails">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRoute">
+        <xs:sequence>
+          <xs:element name="parkingRouteName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingRouteType" type="par:_ParkingRouteTypeEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="dynamicRouteManagement" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingRouteIconIndex" type="com:String" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingRouteDirection" type="loc:_DirectionEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingRouteDirection2" type="par:_ParkingRouteDirectionEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="locationReference" type="loc:LocationReference" minOccurs="0" />
+          <xs:element name="_parkingRouteDetailsExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required" />
+        <xs:attribute name="version" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ParkingRouteDirectionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="towardsParkingSite" />
+      <xs:enumeration value="awayFromParkingSite" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingRouteStatus">
+    <xs:sequence>
+      <xs:element name="parkingRouteReference" type="par:_ParkingRouteDetailsVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingRouteActive" type="com:Boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_parkingRouteStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingRouteTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pedestrian" />
+      <xs:enumeration value="bicycle" />
+      <xs:enumeration value="lorry" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingSecurityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="socialControl" />
+      <xs:enumeration value="securityStaff" />
+      <xs:enumeration value="externalSecurity" />
+      <xs:enumeration value="cctv" />
+      <xs:enumeration value="dog" />
+      <xs:enumeration value="guard24hours" />
+      <xs:enumeration value="lighting" />
+      <xs:enumeration value="floodLight" />
+      <xs:enumeration value="fences" />
+      <xs:enumeration value="areaSeperatedFromSurroundings" />
+      <xs:enumeration value="none" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingSite" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRecord">
+        <xs:sequence>
+          <xs:element name="parkingReservation" type="par:_ReservationTypeEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingLayout" type="par:_ParkingLayoutEnum" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="highestFloor" type="com:Integer" minOccurs="0" maxOccurs="1" />
+          <xs:element name="lowestFloor" type="com:Integer" minOccurs="0" maxOccurs="1" />
+          <xs:element name="temporaryParking" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingSiteAddress" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="reservationService" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="parkingUsageScenario" type="par:_ParkingSiteScenarioIndexParkingUsageScenario" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="openingTimes" type="par:OpeningTimes" minOccurs="0" />
+          <xs:element name="parkingAccess" type="par:ParkingAccess" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="parkingStandardsAndSecurity" type="par:ParkingStandardsAndSecurity" minOccurs="0" />
+          <xs:element name="_parkingSiteExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSiteOvercrowdingStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="overcrowding" />
+      <xs:enumeration value="noOvercrowding" />
+      <xs:enumeration value="overcrowdingLevel1" />
+      <xs:enumeration value="overcrowdingLevel2" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingSiteStatus">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingRecordStatus">
+        <xs:sequence>
+          <xs:element name="parkingSiteStatus" type="par:_ParkingSiteStatusEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingSiteOpeningStatus" type="par:_OpeningStatusEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingSiteOvercrowdingStatus" type="par:_ParkingSiteOvercrowdingStatusEnum" minOccurs="0" maxOccurs="1" />
+          <xs:element name="parkingSiteFullAtFloor" type="com:Integer" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="_parkingSiteStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSiteStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="spacesAvailable" />
+      <xs:enumeration value="almostFull" />
+      <xs:enumeration value="fullAtEntrance" />
+      <xs:enumeration value="full" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingSpace">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingSpaceBasics">
+        <xs:sequence>
+          <xs:element name="identicalToParkingSpace" type="par:IndexReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="location" type="loc:Location" minOccurs="0" />
+          <xs:element name="parkingSpaceDimension" type="par:Dimension" minOccurs="0" />
+          <xs:element name="_parkingSpaceExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSpaceAccessibilityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="extraSpaceLeftSide" />
+      <xs:enumeration value="extraSpaceRightSide" />
+      <xs:enumeration value="nearbyPedestrianExit" />
+      <xs:enumeration value="bordersMarked" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingSpaceBasics" abstract="true">
+    <xs:sequence>
+      <xs:element name="parkingSpaceOrGroupIdentifier" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingFloorOrLevel" type="com:Integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accessibility" type="par:_AccessibilityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSpaceAccessibility" type="par:_ParkingSpaceAccessibilityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSpacePhysics" type="par:_ParkingSpacePhysicsEnum" minOccurs="0" maxOccurs="2" />
+      <xs:element name="parkingMode" type="par:_ParkingModeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingReservation" type="par:_ReservationTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maximumParkingDuration" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="distanceFromPrimaryRoad" type="com:MetresAsNonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingOccupancyDetectionType" type="par:_OccupancyDetectionTypeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSecurity" type="par:_ParkingSecurityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="dedicatedAccess" type="par:DedicatedAccess" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="onlyAssignedParking" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="assignedParkingAmongOthers" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="prohibitedParking" type="par:ParkingAssignment" minOccurs="0" />
+      <xs:element name="parkingEquipmentOrServiceFacility" type="par:_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingUsageScenario" type="par:_ParkingSpaceBasicsScenarioIndexParkingUsageScenario" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingSpaceBasicsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSpacePhysicsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="driveThrough" />
+      <xs:enumeration value="openAir" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingSpaceStatus">
+    <xs:sequence>
+      <xs:element name="parkingSpaceOccupied" type="com:Boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingSpaceClosed" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingSpaceDeclarationValidNow" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="measurementOrCalculationTime" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="lastCalibration" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_parkingSpaceStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSpecialLocationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="airportTerminal" />
+      <xs:enumeration value="exhibitonCentre" />
+      <xs:enumeration value="shoppingCentre" />
+      <xs:enumeration value="specificFacility" />
+      <xs:enumeration value="trainStation" />
+      <xs:enumeration value="campground" />
+      <xs:enumeration value="themePark" />
+      <xs:enumeration value="ferryTerminal" />
+      <xs:enumeration value="vehicleOnRailTerminal" />
+      <xs:enumeration value="coachStation" />
+      <xs:enumeration value="cableCarStation" />
+      <xs:enumeration value="publicTransportStation" />
+      <xs:enumeration value="market" />
+      <xs:enumeration value="religiousCentre" />
+      <xs:enumeration value="conventionCentre" />
+      <xs:enumeration value="cinema" />
+      <xs:enumeration value="skilift" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingStandardsAndSecurity">
+    <xs:sequence>
+      <xs:element name="labelSecurityLevel" type="par:_LABELSecurityLevelEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="labelServiceLevel" type="par:_LABELServiceLevelEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="labelSecurityLevelSelfAssessment" type="par:_LABELSecurityLevelEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="labelServiceLevelSelfAssessment" type="par:_LABELServiceLevelEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingSecurity" type="par:_ParkingSecurityEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingAdditionalSecurity" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSupervision" type="par:_ParkingSupervisionEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingSecurityNationalClassification" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="certifiedSecureParking" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="dateOfCertification" type="com:Date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_parkingStandardsAndSecurityExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingStatusColourMapping">
+    <xs:sequence>
+      <xs:element name="parkingSiteStatus" type="par:_ParkingSiteStatusEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="rgbColour" type="par:RGBColour" />
+      <xs:element name="_parkingStatusColourMappingExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParkingStatusPublication">
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="parkingTableReference" type="par:_ParkingTableVersionedReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="headerInformation" type="com:HeaderInformation" minOccurs="0" />
+          <xs:element name="parkingRecordStatus" type="par:ParkingRecordStatus" maxOccurs="unbounded" />
+          <xs:element name="_parkingStatusPublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParkingStatusValidity">
+    <xs:sequence>
+      <xs:element name="parkingStatusTime" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingStatusTimeOffsetToOrigin" type="com:Seconds" minOccurs="0" maxOccurs="1" />
+      <xs:element name="validityTimeSpecification" type="com:OverallPeriod" minOccurs="0" />
+      <xs:element name="_parkingStatusValidityExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingSupervisionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="remote" />
+      <xs:enumeration value="onSite" />
+      <xs:enumeration value="controlCentreOnSite" />
+      <xs:enumeration value="controlCentreOffSite" />
+      <xs:enumeration value="patrol" />
+      <xs:enumeration value="none" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingTable">
+    <xs:sequence>
+      <xs:element name="parkingTableName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingTableVersionTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingRecord" type="par:ParkingRecord" maxOccurs="unbounded" />
+      <xs:element name="informationManager" type="com:InternationalIdentifier" minOccurs="0" />
+      <xs:element name="_parkingTableExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ParkingTablePublication">
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="headerInformation" type="com:HeaderInformation" minOccurs="0" />
+          <xs:element name="parkingTable" type="par:ParkingTable" maxOccurs="unbounded" />
+          <xs:element name="_parkingTablePublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParkingThresholds">
+    <xs:sequence>
+      <xs:element name="almostFullDecreasing" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="almostFullIncreasing" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="entranceFull" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fullDecreasing" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fullIncreasing" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="overcrowding" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="overcrowdingLevel1" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="overcrowdingLevel2" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingLastMaximumOccupancy" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingStatusColourMapping" type="par:ParkingStatusColourMapping" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingThresholdsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingTypeOfGroupEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="adjacentSpaces" />
+      <xs:enumeration value="nonAdjacentSpaces" />
+      <xs:enumeration value="completeFloor" />
+      <xs:enumeration value="mixedUsage" />
+      <xs:enumeration value="statisticsOnly" />
+      <xs:enumeration value="singleParameters" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingUsageScenario">
+    <xs:sequence>
+      <xs:element name="parkingUsageScenario" type="par:_ParkingUsageScenarioEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="truckParkingDynamicManagement" type="par:_TruckParkingDynamicManagementEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="eventParkingType" type="com:_PublicEventTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="scenarioAvailability" type="com:OverallPeriod" minOccurs="0" />
+      <xs:element name="_parkingUsageScenarioExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingUsageScenarioEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="truckParking" />
+      <xs:enumeration value="parkAndRide" />
+      <xs:enumeration value="parkAndCycle" />
+      <xs:enumeration value="parkAndWalk" />
+      <xs:enumeration value="kissAndRide" />
+      <xs:enumeration value="liftshare" />
+      <xs:enumeration value="carSharing" />
+      <xs:enumeration value="restArea" />
+      <xs:enumeration value="serviceArea" />
+      <xs:enumeration value="dropOffWithValet" />
+      <xs:enumeration value="dropOffMechanical" />
+      <xs:enumeration value="eventParking" />
+      <xs:enumeration value="automaticParkingGuidance" />
+      <xs:enumeration value="staffGuidesToSpace" />
+      <xs:enumeration value="vehicleLift" />
+      <xs:enumeration value="loadingBay" />
+      <xs:enumeration value="dropOff" />
+      <xs:enumeration value="overnightParking" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingUsageScenarioStatus">
+    <xs:sequence>
+      <xs:element name="usageScenarioOperationStatus" type="par:_OperationStatusEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_parkingUsageScenarioStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingVacantSpacesEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="noParkingSpacesAvailable" />
+      <xs:enumeration value="expectNoSpacesAvailable" />
+      <xs:enumeration value="onlyAFewSpacesAvailable" />
+      <xs:enumeration value="lessThan10SpacesAvailable" />
+      <xs:enumeration value="lessThan20SpacesAvailable" />
+      <xs:enumeration value="lessThan30SpacesAvailable" />
+      <xs:enumeration value="lessThan40SpacesAvailable" />
+      <xs:enumeration value="lessThan50SpacesAvailable" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingVehicle">
+    <xs:sequence>
+      <xs:element name="parkingRecordReference" type="par:_ParkingRecordVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="parkingSpaceReference" type="par:IndexReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="groupOfParkingSpacesReference" type="par:IndexReference" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="parkingPermit" type="par:ParkingPermit" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="vehicle" type="com:Vehicle" />
+      <xs:element name="individualCharge" type="par:IndividualCharge" minOccurs="0" />
+      <xs:element name="parkingPeriod" type="com:OverallPeriod" minOccurs="0" />
+      <xs:element name="_parkingVehicleExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ParkingVehiclesPublication">
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="parkingTableReference" type="par:_ParkingTableVersionedReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="parkingVehicle" type="par:ParkingVehicle" maxOccurs="unbounded" />
+          <xs:element name="_parkingVehiclesPublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParkingVMS">
+    <xs:sequence>
+      <xs:element name="vmsUnitUsedToManageParking" type="par:_VmsUnitVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="vmsOperator" type="par:Contact" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_parkingVMSExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PaymentCardBrandsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="americanExpress" />
+      <xs:enumeration value="cirrus" />
+      <xs:enumeration value="dinersClub" />
+      <xs:enumeration value="discoverCard" />
+      <xs:enumeration value="giroCard" />
+      <xs:enumeration value="maestro" />
+      <xs:enumeration value="masterCard" />
+      <xs:enumeration value="visa" />
+      <xs:enumeration value="vPay" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PaymentCardTypesEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="creditCard" />
+      <xs:enumeration value="debitCard" />
+      <xs:enumeration value="chargeCard" />
+      <xs:enumeration value="fleetCard" />
+      <xs:enumeration value="storedValueCard" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PermitsAndProhibitions">
+    <xs:sequence>
+      <xs:element name="activity" type="par:_RestAreaActivityEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="regulation" type="par:_RegulationEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_permitsAndProhibitionsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PermitTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="blueZonePermit" />
+      <xs:enumeration value="careTakingPermit" />
+      <xs:enumeration value="carpoolingPermit" />
+      <xs:enumeration value="carSharingPermit" />
+      <xs:enumeration value="disabledPermit" />
+      <xs:enumeration value="emergencyVehiclePermit" />
+      <xs:enumeration value="employeePermit" />
+      <xs:enumeration value="fairPermit" />
+      <xs:enumeration value="governmentPermit" />
+      <xs:enumeration value="maintenanceVehiclePermit" />
+      <xs:enumeration value="residentPermit" />
+      <xs:enumeration value="roadWorksPermit" />
+      <xs:enumeration value="specificIdentifiedVehiclePermit" />
+      <xs:enumeration value="taxiPermit" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PointLocationForParking">
+    <xs:complexContent>
+      <xs:extension base="loc:PointLocation">
+        <xs:sequence>
+          <xs:element name="junction" type="par:Junction" minOccurs="0" />
+          <xs:element name="_pointLocationForParkingExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="RegulationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="permitted" />
+      <xs:enumeration value="prohibited" />
+      <xs:enumeration value="punishable" />
+      <xs:enumeration value="seasonalHeterogeneous" />
+      <xs:enumeration value="permittedOnlyAtParticularTimes" />
+      <xs:enumeration value="permittedOnlyOnParticularAreas" />
+      <xs:enumeration value="prohibitedAtParticularTimes" />
+      <xs:enumeration value="prohibitedOnParticularAreas" />
+      <xs:enumeration value="onlyOnRequest" />
+      <xs:enumeration value="heterogeneous" />
+      <xs:enumeration value="onlyOutsideBuildings" />
+      <xs:enumeration value="onlyInsideBuildings" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReservationTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="optional" />
+      <xs:enumeration value="mandatory" />
+      <xs:enumeration value="notAvailable" />
+      <xs:enumeration value="partly" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RestAreaActivityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="openFire" />
+      <xs:enumeration value="overnightParking" />
+      <xs:enumeration value="picnic" />
+      <xs:enumeration value="smoking" />
+      <xs:enumeration value="camping" />
+      <xs:enumeration value="handlingHazardousMaterial" />
+      <xs:enumeration value="barbecue" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RGBColour">
+    <xs:sequence>
+      <xs:element name="rgbRedValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="rgbGreenValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="rgbBlueValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="colourName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_rgbColourExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Road">
+    <xs:sequence>
+      <xs:element name="nameOfRoad" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="roadIdentifier" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="typeOfRoad" type="par:_RoadTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="roadDestination" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="roadOrigination" type="com:MultilingualString" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="distanceToThisRoad" type="com:MetresAsNonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_roadExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RoadNode">
+    <xs:complexContent>
+      <xs:extension base="par:Road">
+        <xs:sequence>
+          <xs:element name="junctionName" type="com:MultilingualString" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_roadNodeExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="RoadTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="motorway" />
+      <xs:enumeration value="trunkRoad" />
+      <xs:enumeration value="mainRoad" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ServiceFacility">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingEquipmentOrServiceFacility">
+        <xs:sequence>
+          <xs:element name="serviceFacilityType" type="par:_ServiceFacilityTypeEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="numberOfSubitems" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="distanceFromParkingSite" type="com:MetresAsNonNegativeInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_serviceFacilityExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ServiceFacilityTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="hotel" />
+      <xs:enumeration value="motel" />
+      <xs:enumeration value="overnightAccommodation" />
+      <xs:enumeration value="shop" />
+      <xs:enumeration value="kiosk" />
+      <xs:enumeration value="foodShopping" />
+      <xs:enumeration value="cafe" />
+      <xs:enumeration value="restaurant" />
+      <xs:enumeration value="restaurantSelfService" />
+      <xs:enumeration value="motorwayRestaurant" />
+      <xs:enumeration value="motorwayRestaurantSmall" />
+      <xs:enumeration value="sparePartsShopping" />
+      <xs:enumeration value="petrolStation" />
+      <xs:enumeration value="vehicleMaintenance" />
+      <xs:enumeration value="tyreRepair" />
+      <xs:enumeration value="truckRepair" />
+      <xs:enumeration value="truckWash" />
+      <xs:enumeration value="carWash" />
+      <xs:enumeration value="pharmacy" />
+      <xs:enumeration value="medicalFacility" />
+      <xs:enumeration value="police" />
+      <xs:enumeration value="touristInformation" />
+      <xs:enumeration value="bikeSharing" />
+      <xs:enumeration value="docstop" />
+      <xs:enumeration value="laundry" />
+      <xs:enumeration value="leisureActivities" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SpecialLocationParkingSite">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingSite">
+        <xs:sequence>
+          <xs:element name="parkingSpecialLocation" type="par:_ParkingSpecialLocationEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="parkingOtherSpecialLocation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_specialLocationParkingSiteExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="SquareMetres">
+    <xs:restriction base="com:NonNegativeInteger" />
+  </xs:simpleType>
+  <xs:complexType name="TariffsAndPayment">
+    <xs:sequence>
+      <xs:element name="lastUpdated" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="acceptedMeansOfPayment" type="par:_MeansOfPaymentEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="paymentMode" type="par:_ParkingPaymentModeEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="paymentAdditionalDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="freeOfCharge" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="reservationFee" type="par:AmountOfMoney" minOccurs="0" maxOccurs="1" />
+      <xs:element name="urlLinkAddress" type="com:Url" minOccurs="0" maxOccurs="1" />
+      <xs:element name="chargeBand" type="par:ChargeBand" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="chargeBandByReference" type="par:ChargeBandByReference" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="acceptedPaymentCards" type="par:AcceptedPaymentCards" minOccurs="0" />
+      <xs:element name="_tariffsAndPaymentExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TruckParkingDynamicManagementEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="compactParking" />
+      <xs:enumeration value="queueParking" />
+      <xs:enumeration value="noDynamicParkingManagement" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="UrbanParkingSite">
+    <xs:complexContent>
+      <xs:extension base="par:ParkingSite">
+        <xs:sequence>
+          <xs:element name="urbanParkingSiteType" type="par:_UrbanParkingSiteTypeEnum" minOccurs="1" maxOccurs="1" />
+          <xs:element name="parkingZone" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_urbanParkingSiteExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="UrbanParkingSiteTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="onStreetParking" />
+      <xs:enumeration value="offStreetParking" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="UsedPaymentCard">
+    <xs:sequence>
+      <xs:element name="paymentCard" type="par:_PaymentCardTypesEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="otherPaymentCard" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="paymentCardBrand" type="par:_PaymentCardBrandsEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="otherPaymentCardBrand" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_usedPaymentCardExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="UserTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="allUsers" />
+      <xs:enumeration value="shoppers" />
+      <xs:enumeration value="hotelGuests" />
+      <xs:enumeration value="subscribers" />
+      <xs:enumeration value="reservationHolders" />
+      <xs:enumeration value="seasonTicketHolders" />
+      <xs:enumeration value="registeredDisabledUsers" />
+      <xs:enumeration value="disabled" />
+      <xs:enumeration value="handicapped" />
+      <xs:enumeration value="hearingImpaired" />
+      <xs:enumeration value="visuallyImpaired" />
+      <xs:enumeration value="wheelchairUsers" />
+      <xs:enumeration value="elderlyUsers" />
+      <xs:enumeration value="families" />
+      <xs:enumeration value="men" />
+      <xs:enumeration value="women" />
+      <xs:enumeration value="pregnantWomen" />
+      <xs:enumeration value="pensioners" />
+      <xs:enumeration value="students" />
+      <xs:enumeration value="staff" />
+      <xs:enumeration value="employees" />
+      <xs:enumeration value="customers" />
+      <xs:enumeration value="visitors" />
+      <xs:enumeration value="members" />
+      <xs:enumeration value="shortTermParker" />
+      <xs:enumeration value="longTermParker" />
+      <xs:enumeration value="overnightParker" />
+      <xs:enumeration value="sportEventAwaySupporters" />
+      <xs:enumeration value="sportEventHomeSupporters" />
+      <xs:enumeration value="residents" />
+      <xs:enumeration value="commuters" />
+      <xs:enumeration value="parkAndRideUsers" />
+      <xs:enumeration value="parkAndWalkUser" />
+      <xs:enumeration value="parkAndCycleUser" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="VehicleCountAndRate">
+    <xs:sequence>
+      <xs:element name="measurementSiteReference" type="par:_MeasurementSiteVersionedReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="measuredValueIndex" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="dedicatedAccess" type="par:_ParkingAccessReference" minOccurs="0" maxOccurs="1" />
+      <xs:element name="measurementTimeDefault" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="lastCalibration" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="coveringPetrolStationArea" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="vehicleCountWithinInterval" type="par:VehicleCountWithinInterval" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="vehicleRate" type="par:VehicleRate" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_vehicleCountAndRateExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VehicleCountValue">
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="vehicleCount" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+          <xs:element name="_vehicleCountValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="VehicleCountWithinInterval">
+    <xs:sequence>
+      <xs:element name="measurementOrCalcualtionTime" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="measurementInterval" type="com:Seconds" minOccurs="1" maxOccurs="1" />
+      <xs:element name="numberOfIncomingVehicles" type="par:VehicleCountValue" minOccurs="0" />
+      <xs:element name="numberOfOutgoingVehicles" type="par:VehicleCountValue" minOccurs="0" />
+      <xs:element name="changeOfOccupiedSpaces" type="par:OccupancyChangeValue" minOccurs="0" />
+      <xs:element name="countedVehicles" type="com:VehicleCharacteristics" minOccurs="0" />
+      <xs:element name="_vehicleCountWithinIntervalExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VehicleRate">
+    <xs:sequence>
+      <xs:element name="measurementOrCalculationTime" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fillRate" type="com:VehicleFlowValue" minOccurs="0" />
+      <xs:element name="exitRate" type="com:VehicleFlowValue" minOccurs="0" />
+      <xs:element name="vehicleFlowRate" type="com:VehicleFlowValue" minOccurs="0" />
+      <xs:element name="measuredVehicles" type="com:VehicleCharacteristics" minOccurs="0" />
+      <xs:element name="_vehicleRateExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Volt">
+    <xs:restriction base="com:Float" />
+  </xs:simpleType>
+</xs:schema>

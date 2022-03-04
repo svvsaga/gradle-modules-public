@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Information about a service which may influence the behaviour of drivers and hence the
- *         characteristics of the traffic flow.
- *       
- * 
  * <p>Java class for ServiceInformation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

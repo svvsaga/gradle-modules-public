@@ -13,9 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A display of multiple pages, sequentially displayed in order of their "pageNumber".
- *       
- * 
  * <p>Java class for MultiPageDisplay complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

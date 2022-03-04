@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of periods defined by relevant calendar weeks in a month, see ISO8601. Note:
- *         Calendar weeks start with Monday. First week is the week containing the first of the month.
- *       
- * 
  * <p>Java class for CalendarWeekWithinMonth complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

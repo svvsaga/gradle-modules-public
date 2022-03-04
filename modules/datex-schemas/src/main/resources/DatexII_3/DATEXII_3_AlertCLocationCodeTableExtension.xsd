@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:alc="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" version="1.0" targetNamespace="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:com="http://datex2.eu/schema/3/common" xmlns:loc="http://datex2.eu/schema/3/locationReferencing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/locationReferencing" schemaLocation="DATEXII_3_LocationReferencing.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_LocationCodeClassTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="alc:LocationCodeClassTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_LocationCodeSubTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="alc:LocationCodeSubTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_LocationCodeTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="alc:LocationCodeTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AlertCLocationCodeRow">
+    <xs:sequence>
+      <xs:element name="locationCode" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="typeClass" type="alc:_LocationCodeClassTypeEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="typeCode" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="subTypeCode" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="alertCLocationCodeRoadName" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="firstName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="secondName" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaReference" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="linearReference" type="com:Integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="negativeOffset" type="com:Integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="positiveOffset" type="com:Integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="alertCLocationCodeRoadNumber" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="junctionNumber" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="remoteTargetNegativeOffset" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="remoteTargetPositiveOffset" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="type" type="alc:_LocationCodeTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="subType" type="alc:_LocationCodeSubTypeEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="pointCoordinates" type="loc:PointCoordinates" minOccurs="0" />
+      <xs:element name="_alertCLocationCodeRowExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertCLocationCodeTable">
+    <xs:sequence>
+      <xs:element name="countryId" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="countryName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="tableCode" type="com:Integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="versionNumber" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="releaseDate" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="alertCLocationCodeRow" type="alc:AlertCLocationCodeRow" maxOccurs="unbounded" />
+      <xs:element name="_alertCLocationCodeTableExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertCLocationCodeTablePublication">
+    <xs:sequence>
+      <xs:element name="alertCLocationCodeTable" type="alc:AlertCLocationCodeTable" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LocationCodeClassTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="area" />
+      <xs:enumeration value="line" />
+      <xs:enumeration value="point" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LocationCodeSubTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="continent" />
+      <xs:enumeration value="countryGroup" />
+      <xs:enumeration value="country" />
+      <xs:enumeration value="waterArea" />
+      <xs:enumeration value="sea" />
+      <xs:enumeration value="lake" />
+      <xs:enumeration value="fuzzyArea" />
+      <xs:enumeration value="touristArea" />
+      <xs:enumeration value="metropolitanArea" />
+      <xs:enumeration value="industrialArea" />
+      <xs:enumeration value="trafficArea" />
+      <xs:enumeration value="metrologicalArea" />
+      <xs:enumeration value="carpoolArea" />
+      <xs:enumeration value="parkAndRideSite" />
+      <xs:enumeration value="carParkArea" />
+      <xs:enumeration value="firstOrderArea" />
+      <xs:enumeration value="secondOrderArea" />
+      <xs:enumeration value="thirdOrderArea" />
+      <xs:enumeration value="ruralCountry" />
+      <xs:enumeration value="urbanCountry" />
+      <xs:enumeration value="fourthOrderArea" />
+      <xs:enumeration value="fifthOrderArea" />
+      <xs:enumeration value="applicationRegion" />
+      <xs:enumeration value="road" />
+      <xs:enumeration value="motorway" />
+      <xs:enumeration value="firstClassRoad" />
+      <xs:enumeration value="secondClassRoad" />
+      <xs:enumeration value="thirdClassRoad" />
+      <xs:enumeration value="ringRoad" />
+      <xs:enumeration value="ringMotorway" />
+      <xs:enumeration value="otherRingRoad" />
+      <xs:enumeration value="firstOrderSegment" />
+      <xs:enumeration value="secondOrderSegment" />
+      <xs:enumeration value="urbanStreet" />
+      <xs:enumeration value="vehicularLink" />
+      <xs:enumeration value="ferry" />
+      <xs:enumeration value="vehicularRailLink" />
+      <xs:enumeration value="junction" />
+      <xs:enumeration value="motorwayIntersection" />
+      <xs:enumeration value="motorwayTriangle" />
+      <xs:enumeration value="motorwayJunction" />
+      <xs:enumeration value="motorwayExit" />
+      <xs:enumeration value="motorwayEntrance" />
+      <xs:enumeration value="flyover" />
+      <xs:enumeration value="underpass" />
+      <xs:enumeration value="roundabout" />
+      <xs:enumeration value="trafficLight" />
+      <xs:enumeration value="crossroads" />
+      <xs:enumeration value="tJunction" />
+      <xs:enumeration value="intermediateNode" />
+      <xs:enumeration value="connection" />
+      <xs:enumeration value="exit" />
+      <xs:enumeration value="intermediatePoint" />
+      <xs:enumeration value="distanceMarker" />
+      <xs:enumeration value="trafficMonitoringStation" />
+      <xs:enumeration value="otherLandmark" />
+      <xs:enumeration value="tunnel" />
+      <xs:enumeration value="bridge" />
+      <xs:enumeration value="serviceArea" />
+      <xs:enumeration value="restArea" />
+      <xs:enumeration value="viewPoint" />
+      <xs:enumeration value="carpoolPoint" />
+      <xs:enumeration value="parkAndRideSitePoint" />
+      <xs:enumeration value="carParkPoint" />
+      <xs:enumeration value="kiosk" />
+      <xs:enumeration value="kioskWithWC" />
+      <xs:enumeration value="petrolStation" />
+      <xs:enumeration value="petrolStationWithKiosk" />
+      <xs:enumeration value="motel" />
+      <xs:enumeration value="border" />
+      <xs:enumeration value="customsPost" />
+      <xs:enumeration value="tollPlaza" />
+      <xs:enumeration value="ferryTerminal" />
+      <xs:enumeration value="harbour" />
+      <xs:enumeration value="square" />
+      <xs:enumeration value="fair" />
+      <xs:enumeration value="garage" />
+      <xs:enumeration value="undergroundGarage" />
+      <xs:enumeration value="retailPark" />
+      <xs:enumeration value="themePark" />
+      <xs:enumeration value="touristAttraction" />
+      <xs:enumeration value="university" />
+      <xs:enumeration value="airport" />
+      <xs:enumeration value="station" />
+      <xs:enumeration value="hospital" />
+      <xs:enumeration value="church" />
+      <xs:enumeration value="stadium" />
+      <xs:enumeration value="castle" />
+      <xs:enumeration value="townHall" />
+      <xs:enumeration value="exhibitionCentre" />
+      <xs:enumeration value="communities" />
+      <xs:enumeration value="placeName" />
+      <xs:enumeration value="dam" />
+      <xs:enumeration value="dike" />
+      <xs:enumeration value="aqueduct" />
+      <xs:enumeration value="lock" />
+      <xs:enumeration value="mountainCrossing" />
+      <xs:enumeration value="railRoadCrossing" />
+      <xs:enumeration value="wade" />
+      <xs:enumeration value="ferryPoint" />
+      <xs:enumeration value="industrialAreaPoint" />
+      <xs:enumeration value="viaduct" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LocationCodeTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="continent" />
+      <xs:enumeration value="road" />
+      <xs:enumeration value="junction" />
+      <xs:enumeration value="countryGroup" />
+      <xs:enumeration value="ringRoad" />
+      <xs:enumeration value="intermediatePoint" />
+      <xs:enumeration value="country" />
+      <xs:enumeration value="firstOrderSegment" />
+      <xs:enumeration value="otherLandmarkPoint" />
+      <xs:enumeration value="secondOrderSegment" />
+      <xs:enumeration value="waterArea" />
+      <xs:enumeration value="urbanStreet" />
+      <xs:enumeration value="fuzzyArea" />
+      <xs:enumeration value="vehicularLink" />
+      <xs:enumeration value="firstOrderArea" />
+      <xs:enumeration value="secondOrderArea" />
+      <xs:enumeration value="thirdOrderArea" />
+      <xs:enumeration value="fourthOrderArea" />
+      <xs:enumeration value="fifthOrderArea" />
+      <xs:enumeration value="applicationRegion" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

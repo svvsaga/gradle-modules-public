@@ -14,10 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A roadside unit which can control one or more variable message signs on a single gantry or
- *         mounting or on closely associated gantries or mountings.
- *       
- * 
  * <p>Java class for VmsController complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

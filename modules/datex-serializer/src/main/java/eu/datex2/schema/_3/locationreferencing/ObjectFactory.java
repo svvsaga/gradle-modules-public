@@ -2,7 +2,6 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import javax.xml.namespace.QName;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlElementDecl;
@@ -156,6 +155,14 @@ public class ObjectFactory {
      */
     public LocationContainedInItinerary createLocationContainedInItinerary() {
         return new LocationContainedInItinerary();
+    }
+
+    /**
+     * Create an instance of {@link NamedAreaExtensionType }
+     * 
+     */
+    public NamedAreaExtensionType createNamedAreaExtensionType() {
+        return new NamedAreaExtensionType();
     }
 
     /**
@@ -1062,16 +1069,16 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ExtensionType }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
      */
     @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "_namedAreaExtension", scope = NamedArea.class)
-    public JAXBElement<ExtensionType> createNamedAreaNamedAreaExtension(ExtensionType value) {
-        return new JAXBElement<ExtensionType>(_NamedAreaNamedAreaExtension_QNAME, ExtensionType.class, NamedArea.class, value);
+    public JAXBElement<NamedAreaExtensionType> createNamedAreaNamedAreaExtension(NamedAreaExtensionType value) {
+        return new JAXBElement<NamedAreaExtensionType>(_NamedAreaNamedAreaExtension_QNAME, NamedAreaExtensionType.class, NamedArea.class, value);
     }
 
 }

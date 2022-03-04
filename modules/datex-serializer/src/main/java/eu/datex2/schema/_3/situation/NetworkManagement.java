@@ -14,9 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Network management action which is applicable to the road network and its users.
- *       
- * 
  * <p>Java class for NetworkManagement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

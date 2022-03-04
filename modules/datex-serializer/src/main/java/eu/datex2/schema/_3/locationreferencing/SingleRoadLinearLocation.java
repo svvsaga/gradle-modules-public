@@ -11,11 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Location representing a linear section along a single road with optional directionality
- *         defined between two points on the same road. No matter the kind of linear reference it uses, the
- *         constraint of using only a single road must be preserved.
- *       
- * 
  * <p>Java class for SingleRoadLinearLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

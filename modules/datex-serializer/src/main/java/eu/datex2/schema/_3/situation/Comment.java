@@ -12,10 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A free text comment with an optional date/time stamp that can be used by the operator to
- *         convey un-coded observations/information.
- *       
- * 
  * <p>Java class for Comment complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

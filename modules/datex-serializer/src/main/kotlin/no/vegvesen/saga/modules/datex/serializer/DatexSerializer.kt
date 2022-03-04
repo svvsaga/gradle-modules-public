@@ -1,13 +1,12 @@
 package no.vegvesen.saga.modules.datex.serializer
 
 import arrow.core.Either
-import arrow.core.left
-import arrow.core.right
 import eu.datex2.schema._2._2_0.D2LogicalModel
 import eu.datex2.schema._3.messagecontainer.MessageContainer
 import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.JAXBElement
 import no.vegvesen.saga.modules.datex.DatexVersion
+import no.vegvesen.saga.modules.datex.findDatexVersion
 import no.vegvesen.saga.modules.shared.XmlString
 import java.io.BufferedInputStream
 import java.io.InputStream
@@ -45,11 +44,6 @@ class DatexSerializer {
             buffered.reset()
             return Pair(buffered, firstBytes)
         }
-
-        fun findDatexVersion(xml: XmlString): Either<Throwable, DatexVersion> =
-            if (xml.value.contains("http://datex2.eu/schema/2/")) DatexVersion.DATEX_2.right()
-            else if (xml.value.contains("http://datex2.eu/schema/3/")) DatexVersion.DATEX_3.right()
-            else Exception("Unknown DATEX version: $xml").left()
     }
 }
 

@@ -8,8 +8,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of road surface friction.
- * 
  * <p>Java class for FrictionValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

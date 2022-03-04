@@ -37,7 +37,7 @@ public class TpegLoc03AreaDescriptorSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Descriptors for describing area locations.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

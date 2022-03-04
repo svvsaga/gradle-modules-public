@@ -14,9 +14,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Information about a fault relating to a specific piece of equipment or process.
- *       
- * 
  * <p>Java class for Fault complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

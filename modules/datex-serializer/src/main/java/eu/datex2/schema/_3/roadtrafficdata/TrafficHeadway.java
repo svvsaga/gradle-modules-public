@@ -10,11 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Averaged measurements or calculations of traffic headway, i.e. the distance or time
- *         interval between vehicles. This is measured one end (normally the front) of one vehicle to the same end
- *         of the following vehicle.
- *       
- * 
  * <p>Java class for TrafficHeadway complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

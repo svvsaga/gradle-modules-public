@@ -28,39 +28,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ImageFormatEnum2 {
 
-
-    /**
-     * The bmp image format
-     * 
-     */
     @XmlEnumValue("bmp")
     BMP("bmp"),
-
-    /**
-     * The gif image format
-     * 
-     */
     @XmlEnumValue("gif")
     GIF("gif"),
-
-    /**
-     * The jpeg image format
-     * 
-     */
     @XmlEnumValue("jpeg")
     JPEG("jpeg"),
-
-    /**
-     * The png image format
-     * 
-     */
     @XmlEnumValue("png")
     PNG("png"),
-
-    /**
-     * The TIFF image format
-     * 
-     */
     @XmlEnumValue("tiff")
     TIFF("tiff"),
     @XmlEnumValue("_extended")

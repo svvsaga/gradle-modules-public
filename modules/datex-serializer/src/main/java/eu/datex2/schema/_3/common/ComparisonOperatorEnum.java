@@ -37,7 +37,7 @@ public class ComparisonOperatorEnum {
     protected String extendedValue;
 
     /**
-     * Logical comparison operations.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

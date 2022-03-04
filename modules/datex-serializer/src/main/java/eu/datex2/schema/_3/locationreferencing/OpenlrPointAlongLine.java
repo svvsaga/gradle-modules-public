@@ -9,8 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Point along a line
- * 
  * <p>Java class for OpenlrPointAlongLine complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

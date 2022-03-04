@@ -37,7 +37,7 @@ public class TravelTimeTrendTypeEnum {
     protected String extendedValue;
 
     /**
-     * List of terms used to describe the trend in travel times.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

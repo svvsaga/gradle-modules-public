@@ -39,116 +39,36 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DirectionCompassEnum2 {
 
-
-    /**
-     * East.
-     * 
-     */
     @XmlEnumValue("east")
     EAST("east"),
-
-    /**
-     * East north east.
-     * 
-     */
     @XmlEnumValue("eastNorthEast")
     EAST_NORTH_EAST("eastNorthEast"),
-
-    /**
-     * East south east.
-     * 
-     */
     @XmlEnumValue("eastSouthEast")
     EAST_SOUTH_EAST("eastSouthEast"),
-
-    /**
-     * North.
-     * 
-     */
     @XmlEnumValue("north")
     NORTH("north"),
-
-    /**
-     * North east.
-     * 
-     */
     @XmlEnumValue("northEast")
     NORTH_EAST("northEast"),
-
-    /**
-     * North north east.
-     * 
-     */
     @XmlEnumValue("northNorthEast")
     NORTH_NORTH_EAST("northNorthEast"),
-
-    /**
-     * North north west.
-     * 
-     */
     @XmlEnumValue("northNorthWest")
     NORTH_NORTH_WEST("northNorthWest"),
-
-    /**
-     * North west.
-     * 
-     */
     @XmlEnumValue("northWest")
     NORTH_WEST("northWest"),
-
-    /**
-     * South.
-     * 
-     */
     @XmlEnumValue("south")
     SOUTH("south"),
-
-    /**
-     * South east.
-     * 
-     */
     @XmlEnumValue("southEast")
     SOUTH_EAST("southEast"),
-
-    /**
-     * South south east.
-     * 
-     */
     @XmlEnumValue("southSouthEast")
     SOUTH_SOUTH_EAST("southSouthEast"),
-
-    /**
-     * South south west.
-     * 
-     */
     @XmlEnumValue("southSouthWest")
     SOUTH_SOUTH_WEST("southSouthWest"),
-
-    /**
-     * South west.
-     * 
-     */
     @XmlEnumValue("southWest")
     SOUTH_WEST("southWest"),
-
-    /**
-     * West.
-     * 
-     */
     @XmlEnumValue("west")
     WEST("west"),
-
-    /**
-     * West north west.
-     * 
-     */
     @XmlEnumValue("westNorthWest")
     WEST_NORTH_WEST("westNorthWest"),
-
-    /**
-     * West south west.
-     * 
-     */
     @XmlEnumValue("westSouthWest")
     WEST_SOUTH_WEST("westSouthWest"),
     @XmlEnumValue("_extended")

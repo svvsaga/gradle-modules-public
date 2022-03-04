@@ -15,10 +15,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Accidents are events where one or more vehicles are involved in collisions or in leaving
- *         the roadway. These include collisions between vehicles or with other road users or obstacles.
- *       
- * 
  * <p>Java class for Accident complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -12,8 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated value of the flow rate of vehicle axles.
- * 
  * <p>Java class for AxleFlowValue complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

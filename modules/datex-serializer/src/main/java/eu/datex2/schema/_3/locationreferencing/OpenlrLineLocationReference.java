@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A line location reference is defined by an ordered sequence of location reference points
- *         and a terminating last location reference point.
- *       
- * 
  * <p>Java class for OpenlrLineLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

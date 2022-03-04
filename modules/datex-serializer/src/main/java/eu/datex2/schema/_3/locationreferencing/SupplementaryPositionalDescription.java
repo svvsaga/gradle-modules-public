@@ -15,10 +15,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A collection of supplementary positional information which improves the precision of the
- *         location.
- *       
- * 
  * <p>Java class for SupplementaryPositionalDescription complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

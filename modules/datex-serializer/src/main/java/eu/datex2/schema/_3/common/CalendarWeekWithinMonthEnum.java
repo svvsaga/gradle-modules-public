@@ -37,7 +37,7 @@ public class CalendarWeekWithinMonthEnum {
     protected String extendedValue;
 
     /**
-     * Calendar week within month (see ISO8601).
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

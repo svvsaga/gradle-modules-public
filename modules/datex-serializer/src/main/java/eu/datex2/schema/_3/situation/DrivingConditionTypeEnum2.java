@@ -31,63 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum DrivingConditionTypeEnum2 {
 
-
-    /**
-     * Current conditions are making driving impossible.
-     * 
-     */
     @XmlEnumValue("impossible")
     IMPOSSIBLE("impossible"),
-
-    /**
-     * Driving conditions are hazardous due to environmental conditions.
-     *           
-     * 
-     */
     @XmlEnumValue("hazardous")
     HAZARDOUS("hazardous"),
-
-    /**
-     * Driving conditions are normal.
-     * 
-     */
     @XmlEnumValue("normal")
     NORMAL("normal"),
-
-    /**
-     * The roadway is passable to vehicles with driver care.
-     * 
-     */
     @XmlEnumValue("passableWithCare")
     PASSABLE_WITH_CARE("passableWithCare"),
-
-    /**
-     * Driving conditions are unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Driving conditions are very hazardous due to environmental conditions.
-     *           
-     * 
-     */
     @XmlEnumValue("veryHazardous")
     VERY_HAZARDOUS("veryHazardous"),
-
-    /**
-     * Driving conditions are consistent with those expected in winter.
-     *           
-     * 
-     */
     @XmlEnumValue("winterConditions")
     WINTER_CONDITIONS("winterConditions"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

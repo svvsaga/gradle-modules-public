@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A publication containing one or more groups of predefined locations organised either as
- *         itineraries, non-ordered groups or as individual locations.
- *       
- * 
  * <p>Java class for PredefinedLocationsPublication complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

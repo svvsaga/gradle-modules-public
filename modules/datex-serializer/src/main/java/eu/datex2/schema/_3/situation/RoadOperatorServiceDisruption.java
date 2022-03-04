@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Details of disruption to normal road operator services
- * 
  * <p>Java class for RoadOperatorServiceDisruption complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

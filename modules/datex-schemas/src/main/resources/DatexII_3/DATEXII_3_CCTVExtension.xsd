@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cctv="http://datex2.eu/schema/3/cctvExtension" version="3.1" targetNamespace="http://datex2.eu/schema/3/cctvExtension" xmlns:com="http://datex2.eu/schema/3/common" xmlns:loc="http://datex2.eu/schema/3/locationReferencing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/locationReferencing" schemaLocation="DATEXII_3_LocationReferencing.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_CctvCameraControlAvailabilityEnum">
+    <xs:simpleContent>
+      <xs:extension base="cctv:CctvCameraControlAvailabilityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvCameraFaultEnum">
+    <xs:simpleContent>
+      <xs:extension base="cctv:CctvCameraFaultEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvCameraListVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="cctv:CctvCameraList" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvCameraMetadataRecordVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="cctv:CctvCameraMetadataRecord" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvCameraTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="cctv:CctvCameraTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvCameraVideoOrImageAvailabilityEnum">
+    <xs:simpleContent>
+      <xs:extension base="cctv:CctvCameraVideoOrImageAvailabilityEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_CctvStillImageFormatEnum">
+    <xs:simpleContent>
+      <xs:extension base="cctv:CctvStillImageFormatEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="CctvCameraControlAvailabilityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="controlAvailable" />
+      <xs:enumeration value="controlBlocked" />
+      <xs:enumeration value="controlCurrentlyAssigned" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CctvCameraControlData">
+    <xs:sequence>
+      <xs:element name="cctvCameraTrueNorthPosition" type="cctv:CctvCameraTrueNorthPosition" minOccurs="0" />
+      <xs:element name="availablePresetsForCctvCamera" type="cctv:CctvCameraPresets" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvCameraControlLimits" type="cctv:CctvCameraControlLimits" minOccurs="0" />
+      <xs:element name="_cctvCameraControlDataExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvCameraControlLimits">
+    <xs:sequence>
+      <xs:element name="cctvEndStopMinPanValue" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvEndStopMaxPanValue" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvEndStopMinTiltValue" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvEndStopMaxTiltValue" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvMaxZoomValue" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraNonDwellZone" type="cctv:CctvCameraNonDwellZone" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_cctvCameraControlLimitsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvCameraControlStatus">
+    <xs:sequence>
+      <xs:element name="cctvCameraControlAvailability" type="cctv:_CctvCameraControlAvailabilityEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvIdentityOfCurrentControllingClient" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvPrivilegeOfCurrentControllingClient" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvUserGroupOfCurrentControllingClient" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCurrentlySelectedPreset" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_cctvCameraControlStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CctvCameraFaultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="communicationsFailure" />
+      <xs:enumeration value="controlFailure" />
+      <xs:enumeration value="outOfService" />
+      <xs:enumeration value="powerFailure" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CctvCameraList">
+    <xs:sequence>
+      <xs:element name="cctvCameraListName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraListVersionTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="areaToWhichCameraListRelates" type="cctv:CctvGeographicArea" minOccurs="0" />
+      <xs:element name="cctvCameraMetadataRecord" type="cctv:CctvCameraMetadataRecord" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_cctvCameraListExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CctvCameraMetadataRecord">
+    <xs:sequence>
+      <xs:element name="cctvCameraIdentification" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraSerialNumber" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraRecordVersionTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraSiteLocalDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraSiteNationalDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraOrientationDescription" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvCameraType" type="cctv:_CctvCameraTypeEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraHeightAboveRoadway" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvFixedCamera" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvStaticCamera" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="nextCctvCamera" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="previousCctvCamera" type="com:String" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="source" type="com:Source" minOccurs="0" />
+      <xs:element name="cctvCameraLocation" type="loc:Location" />
+      <xs:element name="cctvPotentialMonitoringLocation" type="loc:Location" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="primaryConrolResponsibility" type="cctv:PrimaryConrolResponsibility" minOccurs="0" />
+      <xs:element name="cctvStillImageService" type="cctv:CctvStillImageService" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvVideoService" type="cctv:CctvVideoService" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvCameraControlData" type="cctv:CctvCameraControlData" minOccurs="0" />
+      <xs:element name="_cctvCameraMetadataRecordExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CctvCameraNonDwellZone">
+    <xs:sequence>
+      <xs:element name="cctvNonDwellTopLeftPanValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvNonDwellTopLeftTiltValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvNonDwellBottomRightPanValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvNonDwellBottomRightTiltValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_cctvCameraNonDwellZoneExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvCameraPresets">
+    <xs:sequence>
+      <xs:element name="cctvCameraPresetIdentification" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraPresetName" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_cctvCameraPresetsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvCameraStatus">
+    <xs:sequence>
+      <xs:element name="cctvCameraReference" type="cctv:_CctvCameraMetadataRecordVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraStatusTime" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvCameraOrientationBearing" type="com:AngleInDegrees" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvCameraOrientationCompass" type="com:_DirectionCompassEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="source" type="com:Source" minOccurs="0" />
+      <xs:element name="cctvCurrentlyMonitoredLocation" type="loc:Location" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvStillImageServiceStatus" type="cctv:CctvStillImageServiceStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvVideoServiceStatus" type="cctv:CctvVideoServiceStatus" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="cctvCameraControlStatus" type="cctv:CctvCameraControlStatus" minOccurs="0" />
+      <xs:element name="_cctvCameraStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvCameraTrueNorthPosition">
+    <xs:sequence>
+      <xs:element name="cctvNorthPanValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvNorthTiltValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvNorthZoomValue" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_cctvCameraTrueNorthPositionExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CctvCameraTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="colourCcd" />
+      <xs:enumeration value="blackAndWhiteCcd" />
+      <xs:enumeration value="colourTube" />
+      <xs:enumeration value="blackAndWhiteTube" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CctvCameraVideoOrImageAvailabilityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="videoOrImagesAvailable" />
+      <xs:enumeration value="videoOrImagesUnavailableDueToCameraFault" />
+      <xs:enumeration value="videoOrImagesBlankedByOperator" />
+      <xs:enumeration value="videoOrImagesBlankedByPolice" />
+      <xs:enumeration value="videoOrImagesBlankedBySystem" />
+      <xs:enumeration value="videoOrImagesBlankedBySystemAdministrator" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CctvGeographicArea">
+    <xs:sequence>
+      <xs:element name="country" type="com:CountryCode" minOccurs="0" maxOccurs="1" />
+      <xs:element name="nation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="county" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="policeForceControlArea" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="roadOperatorControlArea" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_cctvGeographicAreaExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvSiteTablePublication">
+    <xs:sequence>
+      <xs:element name="headerInformation" type="com:HeaderInformation" />
+      <xs:element name="cctvCameraList" type="cctv:CctvCameraList" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvStatusPublication">
+    <xs:sequence>
+      <xs:element name="cctvCameraListReference" type="cctv:_CctvCameraListVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="headerInformation" type="com:HeaderInformation" />
+      <xs:element name="cctvCameraStatus" type="cctv:CctvCameraStatus" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CctvStillImageFormatEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="jpeg" />
+      <xs:enumeration value="gif" />
+      <xs:enumeration value="png" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CctvStillImageService">
+    <xs:sequence>
+      <xs:element name="cctvStillImageServiceLevel" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvStillImageServiceLevelName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvStillImageFormat" type="cctv:_CctvStillImageFormatEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvStillImageWidth" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvStillImageHeight" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvStillImageZoomBlankingLevel" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="stillImageUrl" type="com:UrlLink" />
+      <xs:element name="orientationImageUrl" type="com:UrlLink" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="thumbnailImageUrl" type="com:UrlLink" minOccurs="0" />
+      <xs:element name="_cctvStillImageServiceExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvStillImageServiceStatus">
+    <xs:sequence>
+      <xs:element name="cctvStillImageServiceLevel" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvStillImageAvailability" type="cctv:_CctvCameraVideoOrImageAvailabilityEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvStillImageBroadcastable" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_cctvStillImageServiceStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvVideoService">
+    <xs:sequence>
+      <xs:element name="cctvVideoServiceLevel" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvVideoServiceLevelName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvVideoEncodingStandard" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvVideoResolution" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvVideoFrameRate" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvVideoBitRate" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cctvVideoZoomBlankingLevel" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="videoUrl" type="com:UrlLink" />
+      <xs:element name="orientationImageUrl" type="com:UrlLink" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="thumbnailImageUrl" type="com:UrlLink" minOccurs="0" />
+      <xs:element name="_cctvVideoServiceExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CctvVideoServiceStatus">
+    <xs:sequence>
+      <xs:element name="cctvVideoServiceLevel" type="com:NonNegativeInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvVideoAvailability" type="cctv:_CctvCameraVideoOrImageAvailabilityEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cctvVideoBroadcastable" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_cctvVideoServiceStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PrimaryConrolResponsibility">
+    <xs:sequence>
+      <xs:element name="cameraBaseStationName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="cameraBaseStationIdentification" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="controlCentreName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="controlCentreIdentification" type="com:Integer" minOccurs="0" maxOccurs="1" />
+      <xs:element name="workGroupName" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="workGroupIdentification" type="com:String" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_primaryConrolResponsibilityExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

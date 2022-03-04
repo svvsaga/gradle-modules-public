@@ -37,7 +37,7 @@ public class NamedAreaTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of areas.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -26,32 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InformationDeliveryServicesEnum2 {
 
-
-    /**
-     * Includes any general delivery channel such as broadcast channels (e.g. radio, tv,
-     *             RDS-TMC, TPEG services, etc.) or web publishing available to public or to specific users,
-     *             depending on Service Provider policies.
-     *           
-     * 
-     */
     @XmlEnumValue("anyGeneralDeliveryService")
     ANY_GENERAL_DELIVERY_SERVICE("anyGeneralDeliveryService"),
-
-    /**
-     * Specific services which deliver warning alerts to end users to enhance safety via
-     *             any specific application available to drivers, including C-ITS services.
-     *           
-     * 
-     */
     @XmlEnumValue("safetyServices")
     SAFETY_SERVICES("safetyServices"),
-
-    /**
-     * Variable Message Signs or any other visual roadside devices which information are
-     *             accessible to drivers which aim to affect driving style improving safety and road network LoS.
-     *           
-     * 
-     */
     @XmlEnumValue("vms")
     VMS("vms"),
     @XmlEnumValue("_extended")

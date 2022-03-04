@@ -31,70 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TrafficStatusEnum2 {
 
-
-    /**
-     * Traffic is stationary, or very near stationary, at the specified location (i.e.
-     *             average speed is less than 10% of its free-flow level).
-     *           
-     * 
-     */
     @XmlEnumValue("stationary")
     STATIONARY("stationary"),
-
-    /**
-     * Traffic is queuing at the specified location, although there is still some traffic
-     *             movement (i.e. average speed is between 10% and 25% of its free-flow level).
-     *           
-     * 
-     */
     @XmlEnumValue("queuing")
     QUEUING("queuing"),
-
-    /**
-     * Traffic is slow moving at the specified location, but not yet forming queues (i.e.
-     *             average speed is between 25% and 75% of its free-flow level).
-     *           
-     * 
-     */
     @XmlEnumValue("slow")
     SLOW("slow"),
-
-    /**
-     * Traffic in the specified direction is heavier than usual making driving conditions
-     *             more difficult than normal.
-     *           
-     * 
-     */
     @XmlEnumValue("heavy")
     HEAVY("heavy"),
-
-    /**
-     * There are abnormal traffic conditions of an unspecified nature at the specified
-     *             location.
-     *           
-     * 
-     */
     @XmlEnumValue("unspecifiedAbnormal")
     UNSPECIFIED_ABNORMAL("unspecifiedAbnormal"),
-
-    /**
-     * Traffic at the specified location is free-flowing.
-     * 
-     */
     @XmlEnumValue("freeFlow")
     FREE_FLOW("freeFlow"),
-
-    /**
-     * Traffic conditions are unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

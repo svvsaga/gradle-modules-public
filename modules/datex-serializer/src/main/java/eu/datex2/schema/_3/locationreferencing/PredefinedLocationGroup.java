@@ -13,10 +13,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * An identifiable versioned instance of a predefined group of non-ordered locations (i.e.
- *         more than one).
- *       
- * 
  * <p>Java class for PredefinedLocationGroup complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

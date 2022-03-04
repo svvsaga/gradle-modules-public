@@ -37,116 +37,32 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum VehicleStatusEnum2 {
 
-
-    /**
-     * Abandoned vehicle.
-     * 
-     */
     @XmlEnumValue("abandoned")
     ABANDONED("abandoned"),
-
-    /**
-     * Broken down vehicle (i.e. it is immobile due to mechanical breakdown).
-     *           
-     * 
-     */
     @XmlEnumValue("brokenDown")
     BROKEN_DOWN("brokenDown"),
-
-    /**
-     * Burnt out vehicle, but fire is extinguished.
-     * 
-     */
     @XmlEnumValue("burntOut")
     BURNT_OUT("burntOut"),
-
-    /**
-     * Vehicle is damaged following an incident or collision. It may be able or not to
-     *             move by itself.
-     *           
-     * 
-     */
     @XmlEnumValue("damaged")
     DAMAGED("damaged"),
-
-    /**
-     * Vehicle is damaged following an incident or collision. It is immobilized and
-     *             therefore needs assistance to be moved.
-     *           
-     * 
-     */
     @XmlEnumValue("damagedAndImmobilized")
     DAMAGED_AND_IMMOBILIZED("damagedAndImmobilized"),
-
-    /**
-     * Vehicle has left roadway and ended in a ditch next to the roadway
-     *           
-     * 
-     */
     @XmlEnumValue("inDitch")
     IN_DITCH("inDitch"),
-
-    /**
-     * The pulling vehicle is in a jackknifed position with its trailer
-     *           
-     * 
-     */
     @XmlEnumValue("jacknifed")
     JACKNIFED("jacknifed"),
-
-    /**
-     * Vehicle has left the carriageway
-     * 
-     */
     @XmlEnumValue("offRoad")
     OFF_ROAD("offRoad"),
-
-    /**
-     * Vehicle is on fire.
-     * 
-     */
     @XmlEnumValue("onFire")
     ON_FIRE("onFire"),
-
-    /**
-     * Vehicle is on top of the crash barrier, and cannot leave that position
-     *             autonomously
-     *           
-     * 
-     */
     @XmlEnumValue("onTopOfCrashBarrier")
     ON_TOP_OF_CRASH_BARRIER("onTopOfCrashBarrier"),
-
-    /**
-     * Vehicle is in its upright position after the accident. No special lifting
-     *             equipment is needed to put it on its wheels
-     *           
-     * 
-     */
     @XmlEnumValue("onWheels")
     ON_WHEELS("onWheels"),
-
-    /**
-     * Vehicle is on its side or upside down
-     * 
-     */
     @XmlEnumValue("overturned")
     OVERTURNED("overturned"),
-
-    /**
-     * The vehicle can be rolled on its own wheels. There is no special equipment needed
-     *             to lift the vehicle, because of blocked wheels or other mechanical problems.
-     *           
-     * 
-     */
     @XmlEnumValue("rollable")
     ROLLABLE("rollable"),
-
-    /**
-     * Vehicle has come to rest not facing its intended line of travel.
-     *           
-     * 
-     */
     @XmlEnumValue("spunAround")
     SPUN_AROUND("spunAround"),
     @XmlEnumValue("_extended")

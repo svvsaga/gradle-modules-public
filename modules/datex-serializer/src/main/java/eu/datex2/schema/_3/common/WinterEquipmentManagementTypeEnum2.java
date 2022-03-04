@@ -29,47 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum WinterEquipmentManagementTypeEnum2 {
 
-
-    /**
-     * Do not use stud tyres.
-     * 
-     */
     @XmlEnumValue("doNotUseStudTyres")
     DO_NOT_USE_STUD_TYRES("doNotUseStudTyres"),
-
-    /**
-     * Use snow chains.
-     * 
-     */
     @XmlEnumValue("useSnowChains")
     USE_SNOW_CHAINS("useSnowChains"),
-
-    /**
-     * Use snow chains or snow tyres.
-     * 
-     */
     @XmlEnumValue("useSnowChainsOrTyres")
     USE_SNOW_CHAINS_OR_TYRES("useSnowChainsOrTyres"),
-
-    /**
-     * Use snow tyres.
-     * 
-     */
     @XmlEnumValue("useSnowTyres")
     USE_SNOW_TYRES("useSnowTyres"),
-
-    /**
-     * The carrying of winter equipment (snow chains and/or snow tyres) is required.
-     *           
-     * 
-     */
     @XmlEnumValue("winterEquipmentOnBoardRequired")
     WINTER_EQUIPMENT_ON_BOARD_REQUIRED("winterEquipmentOnBoardRequired"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

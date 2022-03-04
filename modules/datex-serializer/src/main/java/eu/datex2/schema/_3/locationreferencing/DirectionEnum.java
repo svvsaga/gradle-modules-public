@@ -37,7 +37,7 @@ public class DirectionEnum {
     protected String extendedValue;
 
     /**
-     * List of directions of travel.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Characteristics specific to the textual display area on the VMS.
- * 
  * <p>Java class for TextDisplayArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

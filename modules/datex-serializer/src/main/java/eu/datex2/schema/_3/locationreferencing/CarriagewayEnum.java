@@ -37,7 +37,7 @@ public class CarriagewayEnum {
     protected String extendedValue;
 
     /**
-     * List of descriptors identifying specific carriageway details.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

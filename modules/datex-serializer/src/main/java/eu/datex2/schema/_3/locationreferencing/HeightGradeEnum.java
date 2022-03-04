@@ -37,7 +37,7 @@ public class HeightGradeEnum {
     protected String extendedValue;
 
     /**
-     * List of height or vertical gradings of road sections.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

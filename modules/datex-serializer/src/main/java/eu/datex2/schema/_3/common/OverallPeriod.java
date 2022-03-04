@@ -12,11 +12,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A continuous or discontinuous period of validity defined by overall bounding start and end
- *         times and the possible intersection of valid periods (potentially recurring) with the complement of
- *         exception periods (also potentially recurring).
- *       
- * 
  * <p>Java class for OverallPeriod complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum FaultUrgencyEnum2 {
 
-
-    /**
-     * The fault is of normal urgency.
-     * 
-     */
     @XmlEnumValue("normal")
     NORMAL("normal"),
-
-    /**
-     * The fault is to be rectified urgent.
-     * 
-     */
     @XmlEnumValue("urgent")
     URGENT("urgent"),
-
-    /**
-     * The fault is to be rectified extremely urgency.
-     * 
-     */
     @XmlEnumValue("extremelyUrgent")
     EXTREMELY_URGENT("extremelyUrgent"),
-
-    /**
-     * The fault is of unknown urgency.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

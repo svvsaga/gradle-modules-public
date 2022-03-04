@@ -37,7 +37,7 @@ public class PrecipitationTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of precipitation.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

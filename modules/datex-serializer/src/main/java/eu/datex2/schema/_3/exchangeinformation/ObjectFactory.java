@@ -54,14 +54,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InvalidityReasonEnum }
-     * 
-     */
-    public InvalidityReasonEnum createInvalidityReasonEnum() {
-        return new InvalidityReasonEnum();
-    }
-
-    /**
      * Create an instance of {@link MessageTypeEnum }
      * 
      */
@@ -70,27 +62,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OperatingModeEnum }
-     * 
-     */
-    public OperatingModeEnum createOperatingModeEnum() {
-        return new OperatingModeEnum();
-    }
-
-    /**
      * Create an instance of {@link ProtocolTypeEnum }
      * 
      */
     public ProtocolTypeEnum createProtocolTypeEnum() {
         return new ProtocolTypeEnum();
-    }
-
-    /**
-     * Create an instance of {@link UpdateMethodEnum }
-     * 
-     */
-    public UpdateMethodEnum createUpdateMethodEnum() {
-        return new UpdateMethodEnum();
     }
 
     /**
@@ -123,22 +99,6 @@ public class ObjectFactory {
      */
     public ReturnInformation createReturnInformation() {
         return new ReturnInformation();
-    }
-
-    /**
-     * Create an instance of {@link SessionInformation }
-     * 
-     */
-    public SessionInformation createSessionInformation() {
-        return new SessionInformation();
-    }
-
-    /**
-     * Create an instance of {@link Subscription }
-     * 
-     */
-    public Subscription createSubscription() {
-        return new Subscription();
     }
 
 }

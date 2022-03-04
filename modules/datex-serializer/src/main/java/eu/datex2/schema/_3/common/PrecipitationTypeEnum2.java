@@ -49,186 +49,56 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PrecipitationTypeEnum2 {
 
-
-    /**
-     * Clear ice.
-     * 
-     */
     @XmlEnumValue("clearIce")
     CLEAR_ICE("clearIce"),
-
-    /**
-     * Dew.
-     * 
-     */
     @XmlEnumValue("dew")
     DEW("dew"),
-
-    /**
-     * Diamond dust.
-     * 
-     */
     @XmlEnumValue("diamondDust")
     DIAMOND_DUST("diamondDust"),
-
-    /**
-     * Light, fine rain.
-     * 
-     */
     @XmlEnumValue("drizzle")
     DRIZZLE("drizzle"),
-
-    /**
-     * Freezing rain.
-     * 
-     */
     @XmlEnumValue("freezingRain")
     FREEZING_RAIN("freezingRain"),
-
-    /**
-     * Glaze.
-     * 
-     */
     @XmlEnumValue("glaze")
     GLAZE("glaze"),
-
-    /**
-     * Small balls of ice and compacted snow.
-     * 
-     */
     @XmlEnumValue("hail")
     HAIL("hail"),
-
-    /**
-     * Hard rime.
-     * 
-     */
     @XmlEnumValue("hardRime")
     HARD_RIME("hardRime"),
-
-    /**
-     * Hoar frost.
-     * 
-     */
     @XmlEnumValue("hoarFrost")
     HOAR_FROST("hoarFrost"),
-
-    /**
-     * Ice crystals.
-     * 
-     */
     @XmlEnumValue("iceCrystals")
     ICE_CRYSTALS("iceCrystals"),
-
-    /**
-     * Ice pellets.
-     * 
-     */
     @XmlEnumValue("icePellets")
     ICE_PELLETS("icePellets"),
-
-    /**
-     * Liquid, freezing precipitation.
-     * 
-     */
     @XmlEnumValue("liquidFreezing")
     LIQUID_FREEZING("liquidFreezing"),
-
-    /**
-     * Liquid precipitation but not freezing.
-     * 
-     */
     @XmlEnumValue("liquidNotFreezing")
     LIQUID_NOT_FREEZING("liquidNotFreezing"),
-
-    /**
-     * No precipitation.
-     * 
-     */
     @XmlEnumValue("noPrecipitation")
     NO_PRECIPITATION("noPrecipitation"),
-
-    /**
-     * Rain.
-     * 
-     */
     @XmlEnumValue("rain")
     RAIN("rain"),
-
-    /**
-     * Rime.
-     * 
-     */
     @XmlEnumValue("rime")
     RIME("rime"),
-
-    /**
-     * Wet snow mixed with rain.
-     * 
-     */
     @XmlEnumValue("sleet")
     SLEET("sleet"),
-
-    /**
-     * Small Hail.
-     * 
-     */
     @XmlEnumValue("smallHail")
     SMALL_HAIL("smallHail"),
-
-    /**
-     * Snow.
-     * 
-     */
     @XmlEnumValue("snow")
     SNOW("snow"),
-
-    /**
-     * Snow grains.
-     * 
-     */
     @XmlEnumValue("snowGrains")
     SNOW_GRAINS("snowGrains"),
-
-    /**
-     * Snow pellets.
-     * 
-     */
     @XmlEnumValue("snowPellets")
     SNOW_PELLETS("snowPellets"),
-
-    /**
-     * Soft rime.
-     * 
-     */
     @XmlEnumValue("softRime")
     SOFT_RIME("softRime"),
-
-    /**
-     * Solid precipitation.
-     * 
-     */
     @XmlEnumValue("solid")
     SOLID("solid"),
-
-    /**
-     * Wet snow.
-     * 
-     */
     @XmlEnumValue("wetSnow")
     WET_SNOW("wetSnow"),
-
-    /**
-     * White Dev.
-     * 
-     */
     @XmlEnumValue("whiteDev")
     WHITE_DEV("whiteDev"),
-
-    /**
-     * Unknown type of precipitation.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

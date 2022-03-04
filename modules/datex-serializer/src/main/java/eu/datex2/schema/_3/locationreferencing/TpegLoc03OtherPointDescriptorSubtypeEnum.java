@@ -37,9 +37,7 @@ public class TpegLoc03OtherPointDescriptorSubtypeEnum {
     protected String extendedValue;
 
     /**
-     * Descriptors other than junction names and road descriptors which can help to identify the
-     *         location of points on the road network.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -24,12 +24,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc01FramedPointLocationSubtypeEnum2 {
 
-
-    /**
-     * A point on the road network framed by two other points on the same road.
-     *           
-     * 
-     */
     @XmlEnumValue("framedPoint")
     FRAMED_POINT("framedPoint"),
     @XmlEnumValue("_extended")

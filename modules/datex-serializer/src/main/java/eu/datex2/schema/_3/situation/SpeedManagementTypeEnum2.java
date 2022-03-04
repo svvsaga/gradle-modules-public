@@ -30,55 +30,18 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SpeedManagementTypeEnum2 {
 
-
-    /**
-     * Automatic speed control measures are in place at the specified location, whereby
-     *             speed limits are set by an automatic system which is triggered by traffic sensing equipment.
-     *           
-     * 
-     */
     @XmlEnumValue("activeSpeedControlInOperation")
     ACTIVE_SPEED_CONTROL_IN_OPERATION("activeSpeedControlInOperation"),
-
-    /**
-     * Do not slow down unnecessarily.
-     * 
-     */
     @XmlEnumValue("doNotSlowdownUnnecessarily")
     DO_NOT_SLOWDOWN_UNNECESSARILY("doNotSlowdownUnnecessarily"),
-
-    /**
-     * Observe speed limit.
-     * 
-     */
     @XmlEnumValue("observeSpeedLimit")
     OBSERVE_SPEED_LIMIT("observeSpeedLimit"),
-
-    /**
-     * Police speed checks are in operation.
-     * 
-     */
     @XmlEnumValue("policeSpeedChecksInOperation")
     POLICE_SPEED_CHECKS_IN_OPERATION("policeSpeedChecksInOperation"),
-
-    /**
-     * Reduce your speed.
-     * 
-     */
     @XmlEnumValue("reduceYourSpeed")
     REDUCE_YOUR_SPEED("reduceYourSpeed"),
-
-    /**
-     * A speed restriction is in operation.
-     * 
-     */
     @XmlEnumValue("speedRestrictionInOperation")
     SPEED_RESTRICTION_IN_OPERATION("speedRestrictionInOperation"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

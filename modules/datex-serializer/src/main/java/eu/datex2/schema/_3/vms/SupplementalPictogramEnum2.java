@@ -39,126 +39,36 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SupplementalPictogramEnum2 {
 
-
-    /**
-     * Distance to the beginning of the application zone.
-     * 
-     */
     @XmlEnumValue("distanceToTheBeginningOfTheApplicationZone")
     DISTANCE_TO_THE_BEGINNING_OF_THE_APPLICATION_ZONE("distanceToTheBeginningOfTheApplicationZone"),
-
-    /**
-     * Except any power-driven vehicle drawing a trailer.
-     * 
-     */
     @XmlEnumValue("exceptAnyPowerDrivenVehicleDrawingTrailer")
     EXCEPT_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER("exceptAnyPowerDrivenVehicleDrawingTrailer"),
-
-    /**
-     * Except for buses.
-     * 
-     */
     @XmlEnumValue("exceptBus")
     EXCEPT_BUS("exceptBus"),
-
-    /**
-     * Except for goods vehicles.
-     * 
-     */
     @XmlEnumValue("exceptGoodsVehicles")
     EXCEPT_GOODS_VEHICLES("exceptGoodsVehicles"),
-
-    /**
-     * Except for semitrailers (i.e. any trailer designed to be coupled to a motor
-     *             vehicle in such a way that part of its weight and that of its load is borne by the motor
-     *             vehicle).
-     *           
-     * 
-     */
     @XmlEnumValue("exceptSemitrailer")
     EXCEPT_SEMITRAILER("exceptSemitrailer"),
-
-    /**
-     * Except for vehicles carrying dangerous goods (i.e. for which special sign plating
-     *             is prescribed).
-     *           
-     * 
-     */
     @XmlEnumValue("exceptVehiclesCarryingDangerousGoods")
     EXCEPT_VEHICLES_CARRYING_DANGEROUS_GOODS("exceptVehiclesCarryingDangerousGoods"),
-
-    /**
-     * In case of ice or snow.
-     * 
-     */
     @XmlEnumValue("inCaseOfIceOrSnow")
     IN_CASE_OF_ICE_OR_SNOW("inCaseOfIceOrSnow"),
-
-    /**
-     * Length of the applicable zone.
-     * 
-     */
     @XmlEnumValue("lengthOfTheApplicationZone")
     LENGTH_OF_THE_APPLICATION_ZONE("lengthOfTheApplicationZone"),
-
-    /**
-     * Restricted to any power driven vehicle drawing a trailer.
-     * 
-     */
     @XmlEnumValue("restrictedToAnyPowerDrivenVehicleDrawingTrailer")
     RESTRICTED_TO_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER("restrictedToAnyPowerDrivenVehicleDrawingTrailer"),
-
-    /**
-     * Restricted to buses.
-     * 
-     */
     @XmlEnumValue("restrictedToBus")
     RESTRICTED_TO_BUS("restrictedToBus"),
-
-    /**
-     * Restricted to goods vehicles.
-     * 
-     */
     @XmlEnumValue("restrictedToGoodsVehicles")
     RESTRICTED_TO_GOODS_VEHICLES("restrictedToGoodsVehicles"),
-
-    /**
-     * Restricted to semi trailers (i.e. any trailer designed to be coupled to a motor
-     *             vehicle in such a way that part of its weight and that of its load is borne by the motor
-     *             vehicle).
-     *           
-     * 
-     */
     @XmlEnumValue("restrictedToSemiTrailer")
     RESTRICTED_TO_SEMI_TRAILER("restrictedToSemiTrailer"),
-
-    /**
-     * Restricted to vehicles carrying dangerous goods (i.e. for which special sign
-     *             plating is prescribed).
-     *           
-     * 
-     */
     @XmlEnumValue("restrictedToVehiclesCarryingDangerousGoods")
     RESTRICTED_TO_VEHICLES_CARRYING_DANGEROUS_GOODS("restrictedToVehiclesCarryingDangerousGoods"),
-
-    /**
-     * Maintenance vehicles.
-     * 
-     */
     @XmlEnumValue("maintenanceVehicles")
     MAINTENANCE_VEHICLES("maintenanceVehicles"),
-
-    /**
-     * Snow ploughs.
-     * 
-     */
     @XmlEnumValue("snowPloughs")
     SNOW_PLOUGHS("snowPloughs"),
-
-    /**
-     * Other than as defined in this enumeration.
-     * 
-     */
     @XmlEnumValue("other")
     OTHER("other"),
     @XmlEnumValue("_extended")

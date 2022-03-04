@@ -29,46 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InjuryStatusTypeEnum2 {
 
-
-    /**
-     * Dead.
-     * 
-     */
     @XmlEnumValue("dead")
     DEAD("dead"),
-
-    /**
-     * Injured requiring medical treatment.
-     * 
-     */
     @XmlEnumValue("injured")
     INJURED("injured"),
-
-    /**
-     * Seriously injured requiring urgent hospital treatment.
-     * 
-     */
     @XmlEnumValue("seriouslyInjured")
     SERIOUSLY_INJURED("seriouslyInjured"),
-
-    /**
-     * Slightly injured requiring medical treatment.
-     * 
-     */
     @XmlEnumValue("slightlyInjured")
     SLIGHTLY_INJURED("slightlyInjured"),
-
-    /**
-     * Uninjured.
-     * 
-     */
     @XmlEnumValue("uninjured")
     UNINJURED("uninjured"),
-
-    /**
-     * Injury status unknown.
-     * 
-     */
     @XmlEnumValue("unknown")
     UNKNOWN("unknown"),
     @XmlEnumValue("_extended")

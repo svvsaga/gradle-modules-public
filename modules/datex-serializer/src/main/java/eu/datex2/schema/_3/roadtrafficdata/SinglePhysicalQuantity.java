@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A measured or calculated physical quantity at a single instant or period in time, with
- *         related properties explaining its context, meaning or status
- *       
- * 
  * <p>Java class for SinglePhysicalQuantity complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

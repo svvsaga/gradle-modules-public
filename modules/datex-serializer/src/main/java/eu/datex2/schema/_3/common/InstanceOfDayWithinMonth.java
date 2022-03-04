@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Specification of periods defined by the instance of a specific weekday within a month
- *         (e.g. 3rd Tuesday in May)
- *       
- * 
  * <p>Java class for InstanceOfDayWithinMonth complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

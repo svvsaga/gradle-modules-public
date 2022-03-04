@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:dd="http://datex2.eu/schema/3/dataDictionaryExtension" version="1" targetNamespace="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="Association">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="className" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="roleName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="designation" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="targetNamespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_associationExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Attribute">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="className" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="attributeName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="designation" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="typeNamespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="_attributeExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Class">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="className" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="designation" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_classExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataDictionary">
+    <xs:sequence>
+      <xs:element name="country" type="com:CountryCode" minOccurs="1" maxOccurs="1" />
+      <xs:element name="dataDictionaryDescription" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="dataDictionaryVersion" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="dataDictionaryVersionDate" type="com:DateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="package" type="dd:Package" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="class" type="dd:Class" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="attribute" type="dd:Attribute" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="association" type="dd:Association" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="enumeration" type="dd:Enumeration" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="enumerationLiteral" type="dd:EnumerationLiteral" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="_dataDictionaryExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataDictionaryPublication">
+    <xs:sequence>
+      <xs:element name="dataDictionary" type="dd:DataDictionary" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Enumeration">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="enumerationName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_enumerationExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnumerationLiteral">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="enumerationName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="enumerationLiteral" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="designation" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_enumerationLiteralExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Package">
+    <xs:sequence>
+      <xs:element name="namespace" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="packageName" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="definition" type="com:String" minOccurs="1" maxOccurs="1" />
+      <xs:element name="translation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="translationDefinition" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_packageExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

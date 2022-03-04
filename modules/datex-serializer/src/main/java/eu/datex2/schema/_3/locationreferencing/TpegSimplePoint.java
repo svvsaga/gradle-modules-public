@@ -9,10 +9,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A point on the road network which is not bounded by any other points on the road
- *         network.
- *       
- * 
  * <p>Java class for TpegSimplePoint complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

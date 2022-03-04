@@ -18,9 +18,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Any environmental conditions which may be affecting the driving conditions on the road.
- *       
- * 
  * <p>Java class for PoorEnvironmentConditions complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

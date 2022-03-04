@@ -37,7 +37,7 @@ public class SubdivisionTypeEnum {
     protected String extendedValue;
 
     /**
-     * ISO 3166-2 subdivison types.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

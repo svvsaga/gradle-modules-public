@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OpenlrOrientationEnum2 {
 
-
-    /**
-     * No orientation or unknown
-     * 
-     */
     @XmlEnumValue("noOrientationOrUnknown")
     NO_ORIENTATION_OR_UNKNOWN("noOrientationOrUnknown"),
-
-    /**
-     * With line direction
-     * 
-     */
     @XmlEnumValue("withLineDirection")
     WITH_LINE_DIRECTION("withLineDirection"),
-
-    /**
-     * Against line direction
-     * 
-     */
     @XmlEnumValue("againstLineDirection")
     AGAINST_LINE_DIRECTION("againstLineDirection"),
-
-    /**
-     * Both directions
-     * 
-     */
     @XmlEnumValue("both")
     BOTH("both"),
     @XmlEnumValue("_extended")

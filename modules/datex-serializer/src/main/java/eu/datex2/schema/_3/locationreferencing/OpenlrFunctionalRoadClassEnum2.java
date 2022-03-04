@@ -31,60 +31,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OpenlrFunctionalRoadClassEnum2 {
 
-
-    /**
-     * Main road, highest importance
-     * 
-     */
     @XmlEnumValue("frc0")
     FRC_0("frc0"),
-
-    /**
-     * First class road
-     * 
-     */
     @XmlEnumValue("frc1")
     FRC_1("frc1"),
-
-    /**
-     * Second class road
-     * 
-     */
     @XmlEnumValue("frc2")
     FRC_2("frc2"),
-
-    /**
-     * Third class road
-     * 
-     */
     @XmlEnumValue("frc3")
     FRC_3("frc3"),
-
-    /**
-     * Fourth class road
-     * 
-     */
     @XmlEnumValue("frc4")
     FRC_4("frc4"),
-
-    /**
-     * Fifth class road
-     * 
-     */
     @XmlEnumValue("frc5")
     FRC_5("frc5"),
-
-    /**
-     * Sixth class road
-     * 
-     */
     @XmlEnumValue("frc6")
     FRC_6("frc6"),
-
-    /**
-     * Other class road, lowest importance
-     * 
-     */
     @XmlEnumValue("frc7")
     FRC_7("frc7"),
     @XmlEnumValue("_extended")

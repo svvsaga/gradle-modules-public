@@ -37,7 +37,7 @@ public class ReroutingManagementTypeEnum {
     protected String extendedValue;
 
     /**
-     * Management actions relating to rerouting.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

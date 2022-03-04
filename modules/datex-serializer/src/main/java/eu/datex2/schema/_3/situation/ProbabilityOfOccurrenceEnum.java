@@ -37,9 +37,7 @@ public class ProbabilityOfOccurrenceEnum {
     protected String extendedValue;
 
     /**
-     * Levels of confidence that the sender has in the information, ordered {certain, probable,
-     *         risk of}.
-     *       
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

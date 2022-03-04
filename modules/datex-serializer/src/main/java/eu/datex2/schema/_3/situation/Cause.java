@@ -10,8 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Contains details of the cause of a record within a situation
- * 
  * <p>Java class for Cause complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

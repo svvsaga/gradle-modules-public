@@ -14,11 +14,6 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A single line of text displayed on a text display area or supplementary panel or
- *         corresponding to a displayed text. It may correspond to the entire text in the case that text
- *         segmentation in lines is not available.
- *       
- * 
  * <p>Java class for TextLine complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

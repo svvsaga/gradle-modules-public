@@ -27,32 +27,12 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ConfidentialityValueEnum2 {
 
-
-    /**
-     * For internal use only of the recipient organisation.
-     * 
-     */
     @XmlEnumValue("internalUse")
     INTERNAL_USE("internalUse"),
-
-    /**
-     * No restriction on usage.
-     * 
-     */
     @XmlEnumValue("noRestriction")
     NO_RESTRICTION("noRestriction"),
-
-    /**
-     * Restricted for use only by authorities.
-     * 
-     */
     @XmlEnumValue("restrictedToAuthorities")
     RESTRICTED_TO_AUTHORITIES("restrictedToAuthorities"),
-
-    /**
-     * Restricted for use only by authorities and traffic operators.
-     * 
-     */
     @XmlEnumValue("restrictedToAuthoritiesAndTrafficOperators")
     RESTRICTED_TO_AUTHORITIES_AND_TRAFFIC_OPERATORS("restrictedToAuthoritiesAndTrafficOperators"),
     @XmlEnumValue("_extended")

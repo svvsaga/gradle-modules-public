@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Identification of a specific point, linear or area location in an ALERT-C location
- *         table.
- *       
- * 
  * <p>Java class for AlertCLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

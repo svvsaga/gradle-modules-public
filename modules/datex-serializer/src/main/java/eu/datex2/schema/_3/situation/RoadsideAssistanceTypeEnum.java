@@ -37,7 +37,7 @@ public class RoadsideAssistanceTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of road side assistance.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -11,10 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A pair of planar coordinates defining the geodetic position of a single point using the
- *         European Terrestrial Reference System 1989 (ETRS89).
- *       
- * 
  * <p>Java class for PointCoordinates complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

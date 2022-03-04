@@ -37,7 +37,7 @@ public class PlacesEnum {
     protected String extendedValue;
 
     /**
-     * List of types of places.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

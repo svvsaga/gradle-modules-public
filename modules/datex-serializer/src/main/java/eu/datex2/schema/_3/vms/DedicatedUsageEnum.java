@@ -37,7 +37,7 @@ public class DedicatedUsageEnum {
     protected String extendedValue;
 
     /**
-     * Type of usage for which a VMS is dedicated
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

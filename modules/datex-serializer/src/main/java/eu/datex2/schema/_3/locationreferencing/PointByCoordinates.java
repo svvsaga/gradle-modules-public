@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A single point defined only by a coordinate set with an optional bearing direction.
- *       
- * 
  * <p>Java class for PointByCoordinates complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

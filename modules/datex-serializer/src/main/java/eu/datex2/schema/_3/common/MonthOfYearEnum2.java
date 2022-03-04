@@ -35,88 +35,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum MonthOfYearEnum2 {
 
-
-    /**
-     * The month of January.
-     * 
-     */
     @XmlEnumValue("january")
     JANUARY("january"),
-
-    /**
-     * The month of February.
-     * 
-     */
     @XmlEnumValue("february")
     FEBRUARY("february"),
-
-    /**
-     * The month of March.
-     * 
-     */
     @XmlEnumValue("march")
     MARCH("march"),
-
-    /**
-     * The month of April.
-     * 
-     */
     @XmlEnumValue("april")
     APRIL("april"),
-
-    /**
-     * The month of May.
-     * 
-     */
     @XmlEnumValue("may")
     MAY("may"),
-
-    /**
-     * The month of June.
-     * 
-     */
     @XmlEnumValue("june")
     JUNE("june"),
-
-    /**
-     * The month of July.
-     * 
-     */
     @XmlEnumValue("july")
     JULY("july"),
-
-    /**
-     * The month of August.
-     * 
-     */
     @XmlEnumValue("august")
     AUGUST("august"),
-
-    /**
-     * The month of September.
-     * 
-     */
     @XmlEnumValue("september")
     SEPTEMBER("september"),
-
-    /**
-     * The month of October.
-     * 
-     */
     @XmlEnumValue("october")
     OCTOBER("october"),
-
-    /**
-     * The month of November.
-     * 
-     */
     @XmlEnumValue("november")
     NOVEMBER("november"),
-
-    /**
-     * The month of December.
-     * 
-     */
     @XmlEnumValue("december")
     DECEMBER("december"),
     @XmlEnumValue("_extended")

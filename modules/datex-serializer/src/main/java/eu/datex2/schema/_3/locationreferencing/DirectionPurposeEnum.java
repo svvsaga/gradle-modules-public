@@ -37,7 +37,7 @@ public class DirectionPurposeEnum {
     protected String extendedValue;
 
     /**
-     * Main purpose of a direction of a road
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

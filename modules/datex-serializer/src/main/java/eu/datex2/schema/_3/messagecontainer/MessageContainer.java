@@ -3,7 +3,6 @@ package eu.datex2.schema._3.messagecontainer;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.cisinformation.CISInformation;
 import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PayloadPublication;
 import eu.datex2.schema._3.exchangeinformation.ExchangeInformation;
@@ -26,7 +25,6 @@ import jakarta.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="payload" type="{http://datex2.eu/schema/3/common}PayloadPublication" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="cisInformation" type="{http://datex2.eu/schema/3/cisInformation}CISInformation" minOccurs="0"/&gt;
  *         &lt;element name="exchangeInformation" type="{http://datex2.eu/schema/3/exchangeInformation}ExchangeInformation"/&gt;
  *         &lt;element name="informationManagement" type="{http://datex2.eu/schema/3/informationManagement}InformationManagement" minOccurs="0"/&gt;
  *         &lt;element name="_messageContainerExtension" type="{http://datex2.eu/schema/3/common}_ExtensionType" minOccurs="0"/&gt;
@@ -46,7 +44,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MessageContainer", propOrder = {
     "payload",
-    "cisInformation",
     "exchangeInformation",
     "informationManagement",
     "messageContainerExtension"
@@ -54,7 +51,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @jakarta.xml.bind.annotation.XmlRootElement public class MessageContainer {
 
     protected List<PayloadPublication> payload;
-    protected CISInformation cisInformation;
     @XmlElement(required = true)
     protected ExchangeInformation exchangeInformation;
     protected InformationManagement informationManagement;
@@ -98,30 +94,6 @@ import jakarta.xml.bind.annotation.XmlType;
             payload = new ArrayList<PayloadPublication>();
         }
         return this.payload;
-    }
-
-    /**
-     * Gets the value of the cisInformation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CISInformation }
-     *     
-     */
-    public CISInformation getCisInformation() {
-        return cisInformation;
-    }
-
-    /**
-     * Sets the value of the cisInformation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CISInformation }
-     *     
-     */
-    public void setCisInformation(CISInformation value) {
-        this.cisInformation = value;
     }
 
     /**

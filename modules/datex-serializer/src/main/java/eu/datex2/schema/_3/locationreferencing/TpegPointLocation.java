@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A single point on the road network defined by a TPEG-Loc structure and which has an
- *         associated direction of traffic flow.
- *       
- * 
  * <p>Java class for TpegPointLocation complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

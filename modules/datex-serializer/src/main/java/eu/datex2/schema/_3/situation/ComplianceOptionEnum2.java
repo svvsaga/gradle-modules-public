@@ -25,18 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ComplianceOptionEnum2 {
 
-
-    /**
-     * Advisory compliance.
-     * 
-     */
     @XmlEnumValue("advisory")
     ADVISORY("advisory"),
-
-    /**
-     * Mandatory compliance.
-     * 
-     */
     @XmlEnumValue("mandatory")
     MANDATORY("mandatory"),
     @XmlEnumValue("_extended")

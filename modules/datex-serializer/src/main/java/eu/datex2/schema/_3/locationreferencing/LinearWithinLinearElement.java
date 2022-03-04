@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * A linear section along a linear element where the linear element is either a part of or
- *         the whole of a linear object (i.e. a road), consistent with ISO 19148 definitions.
- *       
- * 
  * <p>Java class for LinearWithinLinearElement complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

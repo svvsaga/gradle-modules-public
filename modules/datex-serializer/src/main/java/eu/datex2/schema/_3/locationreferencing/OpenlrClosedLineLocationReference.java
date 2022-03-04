@@ -11,11 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * The OpenLR method of area definition by providing a closed path (i.e. a circuit) in the
- *         road network.
- *         The boundary always consists of road segments
- *       
- * 
  * <p>Java class for OpenlrClosedLineLocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,9 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Measured or derived values relating to the weather at a specific location or locations.
- *       
- * 
  * <p>Java class for WeatherData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -37,7 +37,7 @@ public class PositionYRelativeEnum {
     protected String extendedValue;
 
     /**
-     * Relative vertical positions of one item to another.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

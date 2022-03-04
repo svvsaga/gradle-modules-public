@@ -10,10 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Characteristics of a panel which can display details (sometimes regulatory in nature) that
- *         are supplementary to one pictogram, comprising an additional line of text or another pictogram.
- *       
- * 
  * <p>Java class for SupplementaryPanelArea complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

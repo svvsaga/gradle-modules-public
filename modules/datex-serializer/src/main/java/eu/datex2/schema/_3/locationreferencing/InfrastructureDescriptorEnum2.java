@@ -42,141 +42,42 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InfrastructureDescriptorEnum2 {
 
-
-    /**
-     * At a motorway interchange.
-     * 
-     */
     @XmlEnumValue("atMotorwayInterchange")
     AT_MOTORWAY_INTERCHANGE("atMotorwayInterchange"),
-
-    /**
-     * At rest area off the carriageway.
-     * 
-     */
     @XmlEnumValue("atRestArea")
     AT_REST_AREA("atRestArea"),
-
-    /**
-     * At service area.
-     * 
-     */
     @XmlEnumValue("atServiceArea")
     AT_SERVICE_AREA("atServiceArea"),
-
-    /**
-     * At toll plaza.
-     * 
-     */
     @XmlEnumValue("atTollPlaza")
     AT_TOLL_PLAZA("atTollPlaza"),
-
-    /**
-     * At entry or exit of tunnel.
-     * 
-     */
     @XmlEnumValue("atTunnelEntryOrExit")
     AT_TUNNEL_ENTRY_OR_EXIT("atTunnelEntryOrExit"),
-
-    /**
-     * In gallery.
-     * 
-     */
     @XmlEnumValue("inGallery")
     IN_GALLERY("inGallery"),
-
-    /**
-     * In tunnel.
-     * 
-     */
     @XmlEnumValue("inTunnel")
     IN_TUNNEL("inTunnel"),
-
-    /**
-     * On bridge.
-     * 
-     */
     @XmlEnumValue("onBridge")
     ON_BRIDGE("onBridge"),
-
-    /**
-     * On connecting carriageway between two different roads or road sections.
-     *           
-     * 
-     */
     @XmlEnumValue("onConnector")
     ON_CONNECTOR("onConnector"),
-
-    /**
-     * On elevated section of road.
-     * 
-     */
     @XmlEnumValue("onElevatedSection")
     ON_ELEVATED_SECTION("onElevatedSection"),
-
-    /**
-     * On flyover, i.e. on section of road over another road.
-     * 
-     */
     @XmlEnumValue("onFlyover")
     ON_FLYOVER("onFlyover"),
-
-    /**
-     * On ice road.
-     * 
-     */
     @XmlEnumValue("onIceRoad")
     ON_ICE_ROAD("onIceRoad"),
-
-    /**
-     * On level-crossing.
-     * 
-     */
     @XmlEnumValue("onLevelCrossing")
     ON_LEVEL_CROSSING("onLevelCrossing"),
-
-    /**
-     * On road section linking two different roads.
-     * 
-     */
     @XmlEnumValue("onLinkRoad")
     ON_LINK_ROAD("onLinkRoad"),
-
-    /**
-     * On roundabout.
-     * 
-     */
     @XmlEnumValue("onRoundabout")
     ON_ROUNDABOUT("onRoundabout"),
-
-    /**
-     * On the roadway.
-     * 
-     */
     @XmlEnumValue("onTheRoadway")
     ON_THE_ROADWAY("onTheRoadway"),
-
-    /**
-     * On underground section of road.
-     * 
-     */
     @XmlEnumValue("onUndergroundSection")
     ON_UNDERGROUND_SECTION("onUndergroundSection"),
-
-    /**
-     * On underpass, i.e. section of road which passes under another road.
-     *           
-     * 
-     */
     @XmlEnumValue("onUnderpass")
     ON_UNDERPASS("onUnderpass"),
-
-    /**
-     * On the main carriageway within a junction between exit slip road and entry slip
-     *             road.
-     *           
-     * 
-     */
     @XmlEnumValue("withinJunction")
     WITHIN_JUNCTION("withinJunction"),
     @XmlEnumValue("_extended")

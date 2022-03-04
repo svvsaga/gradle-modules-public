@@ -37,7 +37,7 @@ public class MaintenanceVehicleActionsEnum {
     protected String extendedValue;
 
     /**
-     * Types of maintenance vehicle actions associated with roadworks.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

@@ -29,46 +29,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PrecipitationIntensityEnum2 {
 
-
-    /**
-     * No precipitation phenomena.
-     * 
-     */
     @XmlEnumValue("noPhenomena")
     NO_PHENOMENA("noPhenomena"),
-
-    /**
-     * Light precipitation.
-     * 
-     */
     @XmlEnumValue("light")
     LIGHT("light"),
-
-    /**
-     * Moderate precipitation.
-     * 
-     */
     @XmlEnumValue("moderate")
     MODERATE("moderate"),
-
-    /**
-     * Heavy precipitation.
-     * 
-     */
     @XmlEnumValue("heavy")
     HEAVY("heavy"),
-
-    /**
-     * Violent precipitation.
-     * 
-     */
     @XmlEnumValue("violent")
     VIOLENT("violent"),
-
-    /**
-     * #
-     * 
-     */
     @XmlEnumValue("severe")
     SEVERE("severe"),
     @XmlEnumValue("_extended")

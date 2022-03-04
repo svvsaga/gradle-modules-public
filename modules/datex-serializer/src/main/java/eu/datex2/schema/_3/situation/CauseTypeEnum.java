@@ -37,7 +37,7 @@ public class CauseTypeEnum {
     protected String extendedValue;
 
     /**
-     * Types of causes of situations which are not managed or are off network.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

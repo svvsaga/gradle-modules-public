@@ -26,26 +26,10 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TpegLoc03IlcPointDescriptorSubtypeEnum2 {
 
-
-    /**
-     * The name of the road on which the junction point is located.
-     * 
-     */
     @XmlEnumValue("tpegIlcName1")
     TPEG_ILC_NAME_1("tpegIlcName1"),
-
-    /**
-     * The name of the first intersecting road at the junction.
-     * 
-     */
     @XmlEnumValue("tpegIlcName2")
     TPEG_ILC_NAME_2("tpegIlcName2"),
-
-    /**
-     * The name of the second intersecting road (if one exists) at the junction.
-     *           
-     * 
-     */
     @XmlEnumValue("tpegIlcName3")
     TPEG_ILC_NAME_3("tpegIlcName3"),
     @XmlEnumValue("_extended")

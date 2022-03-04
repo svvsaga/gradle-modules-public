@@ -11,8 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Characteristics of the geometry of a display
- * 
  * <p>Java class for DisplayGeometry complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

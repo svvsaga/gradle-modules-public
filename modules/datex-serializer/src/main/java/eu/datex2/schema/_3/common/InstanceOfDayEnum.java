@@ -37,7 +37,7 @@ public class InstanceOfDayEnum {
     protected String extendedValue;
 
     /**
-     * Instances of a day of the week in a month
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

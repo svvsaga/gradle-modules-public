@@ -11,11 +11,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Properties of the path from the associated location reference point to the next location
- *         reference point, which are specified to assist correct identification of the point in an external map
- *         data source.
- *       
- * 
  * <p>Java class for OpenlrPathAttributes complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

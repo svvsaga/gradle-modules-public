@@ -10,11 +10,6 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Represents one or more physically separate locations. Multiple locations may be related,
- *         as in an itinerary or route, or may be unrelated. One LocationReference should not use multiple Location
- *         objects to represent the same physical location.
- *       
- * 
  * <p>Java class for LocationReference complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

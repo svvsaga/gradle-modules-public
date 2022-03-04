@@ -1,0 +1,657 @@
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2">
+  <exchange>
+    <supplierIdentification>
+      <country>no</country>
+      <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+    </supplierIdentification>
+  </exchange>
+  <payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SituationPublication" lang="nob">
+    <feedType>FULL</feedType>
+    <publicationTime>2022-03-04T13:02:42.872+01:00</publicationTime>
+    <publicationCreator>
+      <country>no</country>
+      <nationalIdentifier>Norwegian Public Roads Administration</nationalIdentifier>
+    </publicationCreator>
+    <situation id="NPRA_HBT_17-11-2021.85" version="1">
+      <overallSeverity>high</overallSeverity>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord xsi:type="GeneralNetworkManagement" id="04f3236f-d89c-49b8-8670-af4b55b73bf5_2" version="2">
+        <situationRecordCreationTime>2021-11-17T08:27:51.4143551+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-17T08:28:20.0900085+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>high</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-11-17T07:00:00+01:00</overallStartTime>
+            <overallEndTime>2022-06-30T19:00:00+02:00</overallEndTime>
+            <validPeriod>
+              <startOfPeriod>2021-11-17T07:00:00+01:00</startOfPeriod>
+              <endOfPeriod>2022-06-30T19:00:00+02:00</endOfPeriod>
+              <recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+                <startTimeOfPeriod>07:00:00+01:00</startTimeOfPeriod>
+                <endTimeOfPeriod>19:00:00+01:00</endTimeOfPeriod>
+              </recurringTimePeriodOfDay>
+              <recurringDayWeekMonthPeriod>
+                <applicableDay>monday</applicableDay>
+                <applicableDay>tuesday</applicableDay>
+                <applicableDay>wednesday</applicableDay>
+                <applicableDay>thursday</applicableDay>
+                <applicableDay>friday</applicableDay>
+              </recurringDayWeekMonthPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <cause xsi:type="ManagedCause">
+          <managedCause targetClass="SituationRecord" id="09e5236b-6388-40b6-900a-302345e6be1f_1" version="0"/>
+        </cause>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid, gyldig mellom 07:00 og 19:00 mandag, tirsdag, onsdag, torsdag og fredag fra
+                17.11.2021 til 30.06.2022.|Lysregulering, manuell dirigering, vegen er stengt i korte perioder.
+              </value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 6 Kjerkbakken i Oppdal, Trøndelag - Ev 6 Styrsvollen i Oppdal, Trøndelag, i begge
+                retninger
+              </value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>62.55208</latitude>
+              <longitude>9.632526</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E6</roadNumber>
+                <countyNumber>50</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>3453.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>223714.837,6945515.211 223728.538,6945538.826 223752.69 6945580.778 223777.761
+                    6945626.068
+                    223812.632 6945690.177 223844.421 6945749.847 223872.582 6945803.844 223873.969 6945806.29
+                    223908.878
+                    6945876.799 223931.107 6945922.327 223951.785 6945970.545 223954.727 6945976.276 223965.313
+                    6946005.701
+                    223974.775 6946038.207 223982.699 6946069.988 223991.625 6946105.528 223999.69 6946139.005
+                    224006.806
+                    6946167.011 224059.229 6946356.01 224065.498 6946384.515 224074.106 6946423.922 224074.922
+                    6946428.977
+                    224081.67 6946460.856 224088.736 6946496.55 224095.318 6946530.578 224101.519 6946561.222 224107.533
+                    6946593.163 224113.824 6946622.519 224118.198 6946643.07 224124.451 6946669.015 224127.7 6946681.977
+                    224130.464 6946693.272 224133.292 6946704.135 224136.211 6946716.697 224139.104 6946730.116
+                    224141.072
+                    6946741.904 224142.796 6946753.712 224144.318 6946767.245 224145.392 6946779.535 224146.164
+                    6946790.569
+                    224146.972 6946802.027 224147.674 6946812.213 224148.5 6946821.536 224149.615 6946832.541 224150.752
+                    6946844.399 224152.315 6946856.648 224153.919 6946867.612 224155.563 6946877.293 224157.173
+                    6946886.55
+                    224159.764 6946898.713 224162.438 6946911.296 224164.874 6946922.192 224167.141 6946932.247
+                    224171.121
+                    6946949.844 224174.174 6946962.822 224177.585 6946978.332 224180.176 6946990.495 224183.063
+                    6947005.622
+                    224185.044 6947016.982 224186.52 6947025.823 224188.23 6947038.06 224189.013 6947045.678 224189.571
+                    6947051.181 224190.397 6947060.503 224191.02 6947068.561 224191.637 6947078.328 224192.189
+                    6947085.539
+                    224193.187 6947098.688 224193.973 6947109.295 224194.644 6947117.349 224195.591 6947127.515
+                    224196.319
+                    6947136.845 224197.461 6947146.995 224198.377 6947155.029 224199.329 6947163.487 224200.139
+                    6947170.249
+                    224201.166 6947177.847 224202.172 6947184.593 224202.637 6947188.396 224203.257 6947193.467
+                    224204.565
+                    6947201.468 224205.282 6947206.531 224205.929 6947210.746 224207.419 6947219.159 224208.762
+                    6947227.584
+                    224210.132 6947235.154 224211.488 6947243.151 224213.125 6947251.552 224214.459 6947258.697
+                    224215.941
+                    6947265.831 224218.11 6947275.895 224220.173 6947284.687 224223.084 6947295.97 224226.47 6947307.639
+                    224230.773 6947319.66 224234.921 6947330.413 224240.854 6947344.858 224247.431 6947360.531 224253.04
+                    6947372.869 224259.316 6947387.286 224265.773 6947402.115 224272.573 6947416.916 224280.004
+                    6947433.371
+                    224285.977 6947446.533 224292.35 6947460.942 224300.242 6947478.212 224310.964 6947501.65 224324.416
+                    6947531.263 224335.305 6947555.54 224344.618 6947575.681 224354.913 6947598.727 224362.1 6947618.191
+                    224387.601 6947672.412 224416.916 6947733.999 224444.587 6947785.905 224472.517 6947832.667
+                    224515.63
+                    6947902.069 224551.501 6947961.403 224556.609 6947969.515 224586.879 6948017.791 224619.969
+                    6948063.27
+                    224652.504 6948098.552 224690.135 6948137.678 224706.338 6948154.257 224715.779 6948164.142
+                    224736.934
+                    6948187.566 224752.406 6948207.194 224763.669 6948224.185 224774.269 6948242.084 224782.233
+                    6948258.496
+                    224788.413 6948271.214 224792.67 6948281.531 224795.848 6948288.95 224804.472 6948309.149 224805.431
+                    6948311.203 224811.13 6948325.242 224820.363 6948346.244 224826.537 6948360.67 224835.077
+                    6948380.449
+                    224841.207 6948393.171 224848.989 6948409.171 224855.063 6948420.618 224863.831 6948437.816
+                    224870.464
+                    6948450.07 224878.091 6948464.802 224885.186 6948477.871 224893.24 6948492.995 224896.423
+                    6948498.706
+                    224900.81 6948506.451 224909.969 6948523.617 224917.329 6948537.518 224922.71 6948547.742 224928.601
+                    6948558.777 224932.233 6948565.732 224941.755 6948583.721 224951.291 6948601.283 224959.624
+                    6948616.81
+                    224967.202 6948631.547 224974.464 6948645.456 224981.873 6948659.352 224988.177 6948671.207
+                    224993.201
+                    6948681.887
+                  </coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <complianceOption>mandatory</complianceOption>
+        <generalNetworkManagementType>temporaryTrafficLights</generalNetworkManagementType>
+      </situationRecord>
+      <situationRecord xsi:type="GeneralNetworkManagement" id="04f3236f-d89c-49b8-8670-af4b55b73bf5_2" version="2">
+        <situationRecordCreationTime>2021-11-17T08:27:51.4143551+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-17T08:28:20.0900085+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>high</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-11-17T07:00:00+01:00</overallStartTime>
+            <overallEndTime>2022-06-30T19:00:00+02:00</overallEndTime>
+            <validPeriod>
+              <startOfPeriod>2021-11-17T07:00:00+01:00</startOfPeriod>
+              <endOfPeriod>2022-06-30T19:00:00+02:00</endOfPeriod>
+              <recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+                <startTimeOfPeriod>07:00:00+01:00</startTimeOfPeriod>
+                <endTimeOfPeriod>19:00:00+01:00</endTimeOfPeriod>
+              </recurringTimePeriodOfDay>
+              <recurringDayWeekMonthPeriod>
+                <applicableDay>monday</applicableDay>
+                <applicableDay>tuesday</applicableDay>
+                <applicableDay>wednesday</applicableDay>
+                <applicableDay>thursday</applicableDay>
+                <applicableDay>friday</applicableDay>
+              </recurringDayWeekMonthPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <cause xsi:type="ManagedCause">
+          <managedCause targetClass="SituationRecord" id="04f3236f-d89c-49b8-8670-af4b55b73bf5_2" version="0"/>
+        </cause>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid, gyldig mellom 07:00 og 19:00 mandag, tirsdag, onsdag, torsdag og fredag fra
+                17.11.2021 til 30.06.2022.|Lysregulering, manuell dirigering, vegen er stengt i korte perioder.
+              </value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 6 Kjerkbakken i Oppdal, Trøndelag - Ev 6 Styrsvollen i Oppdal, Trøndelag, i begge
+                retninger
+              </value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>62.55208</latitude>
+              <longitude>9.632526</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E6</roadNumber>
+                <countyNumber>50</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>3453.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>223714.837,6945515.211 223728.538,6945538.826 223752.69 6945580.778 223777.761
+                    6945626.068
+                    223812.632 6945690.177 223844.421 6945749.847 223872.582 6945803.844 223873.969 6945806.29
+                    223908.878
+                    6945876.799 223931.107 6945922.327 223951.785 6945970.545 223954.727 6945976.276 223965.313
+                    6946005.701
+                    223974.775 6946038.207 223982.699 6946069.988 223991.625 6946105.528 223999.69 6946139.005
+                    224006.806
+                    6946167.011 224059.229 6946356.01 224065.498 6946384.515 224074.106 6946423.922 224074.922
+                    6946428.977
+                    224081.67 6946460.856 224088.736 6946496.55 224095.318 6946530.578 224101.519 6946561.222 224107.533
+                    6946593.163 224113.824 6946622.519 224118.198 6946643.07 224124.451 6946669.015 224127.7 6946681.977
+                    224130.464 6946693.272 224133.292 6946704.135 224136.211 6946716.697 224139.104 6946730.116
+                    224141.072
+                    6946741.904 224142.796 6946753.712 224144.318 6946767.245 224145.392 6946779.535 224146.164
+                    6946790.569
+                    224146.972 6946802.027 224147.674 6946812.213 224148.5 6946821.536 224149.615 6946832.541 224150.752
+                    6946844.399 224152.315 6946856.648 224153.919 6946867.612 224155.563 6946877.293 224157.173
+                    6946886.55
+                    224159.764 6946898.713 224162.438 6946911.296 224164.874 6946922.192 224167.141 6946932.247
+                    224171.121
+                    6946949.844 224174.174 6946962.822 224177.585 6946978.332 224180.176 6946990.495 224183.063
+                    6947005.622
+                    224185.044 6947016.982 224186.52 6947025.823 224188.23 6947038.06 224189.013 6947045.678 224189.571
+                    6947051.181 224190.397 6947060.503 224191.02 6947068.561 224191.637 6947078.328 224192.189
+                    6947085.539
+                    224193.187 6947098.688 224193.973 6947109.295 224194.644 6947117.349 224195.591 6947127.515
+                    224196.319
+                    6947136.845 224197.461 6947146.995 224198.377 6947155.029 224199.329 6947163.487 224200.139
+                    6947170.249
+                    224201.166 6947177.847 224202.172 6947184.593 224202.637 6947188.396 224203.257 6947193.467
+                    224204.565
+                    6947201.468 224205.282 6947206.531 224205.929 6947210.746 224207.419 6947219.159 224208.762
+                    6947227.584
+                    224210.132 6947235.154 224211.488 6947243.151 224213.125 6947251.552 224214.459 6947258.697
+                    224215.941
+                    6947265.831 224218.11 6947275.895 224220.173 6947284.687 224223.084 6947295.97 224226.47 6947307.639
+                    224230.773 6947319.66 224234.921 6947330.413 224240.854 6947344.858 224247.431 6947360.531 224253.04
+                    6947372.869 224259.316 6947387.286 224265.773 6947402.115 224272.573 6947416.916 224280.004
+                    6947433.371
+                    224285.977 6947446.533 224292.35 6947460.942 224300.242 6947478.212 224310.964 6947501.65 224324.416
+                    6947531.263 224335.305 6947555.54 224344.618 6947575.681 224354.913 6947598.727 224362.1 6947618.191
+                    224387.601 6947672.412 224416.916 6947733.999 224444.587 6947785.905 224472.517 6947832.667
+                    224515.63
+                    6947902.069 224551.501 6947961.403 224556.609 6947969.515 224586.879 6948017.791 224619.969
+                    6948063.27
+                    224652.504 6948098.552 224690.135 6948137.678 224706.338 6948154.257 224715.779 6948164.142
+                    224736.934
+                    6948187.566 224752.406 6948207.194 224763.669 6948224.185 224774.269 6948242.084 224782.233
+                    6948258.496
+                    224788.413 6948271.214 224792.67 6948281.531 224795.848 6948288.95 224804.472 6948309.149 224805.431
+                    6948311.203 224811.13 6948325.242 224820.363 6948346.244 224826.537 6948360.67 224835.077
+                    6948380.449
+                    224841.207 6948393.171 224848.989 6948409.171 224855.063 6948420.618 224863.831 6948437.816
+                    224870.464
+                    6948450.07 224878.091 6948464.802 224885.186 6948477.871 224893.24 6948492.995 224896.423
+                    6948498.706
+                    224900.81 6948506.451 224909.969 6948523.617 224917.329 6948537.518 224922.71 6948547.742 224928.601
+                    6948558.777 224932.233 6948565.732 224941.755 6948583.721 224951.291 6948601.283 224959.624
+                    6948616.81
+                    224967.202 6948631.547 224974.464 6948645.456 224981.873 6948659.352 224988.177 6948671.207
+                    224993.201
+                    6948681.887
+                  </coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <complianceOption>mandatory</complianceOption>
+        <generalNetworkManagementType>trafficBeingManuallyDirected</generalNetworkManagementType>
+      </situationRecord>
+      <situationRecord xsi:type="MaintenanceWorks" id="09e5236b-6388-40b6-900a-302345e6be1f_1" version="2">
+        <situationRecordCreationTime>2021-11-17T08:27:51.4143551+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-17T08:28:20.0900085+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>high</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-11-17T07:00:00+01:00</overallStartTime>
+            <overallEndTime>2022-06-30T19:00:00+02:00</overallEndTime>
+            <validPeriod>
+              <startOfPeriod>2021-11-17T07:00:00+01:00</startOfPeriod>
+              <endOfPeriod>2022-06-30T19:00:00+02:00</endOfPeriod>
+              <recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+                <startTimeOfPeriod>07:00:00+01:00</startTimeOfPeriod>
+                <endTimeOfPeriod>19:00:00+01:00</endTimeOfPeriod>
+              </recurringTimePeriodOfDay>
+              <recurringDayWeekMonthPeriod>
+                <applicableDay>monday</applicableDay>
+                <applicableDay>tuesday</applicableDay>
+                <applicableDay>wednesday</applicableDay>
+                <applicableDay>thursday</applicableDay>
+                <applicableDay>friday</applicableDay>
+              </recurringDayWeekMonthPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid, gyldig mellom 07:00 og 19:00 mandag, tirsdag, onsdag, torsdag og fredag fra
+                17.11.2021 til 30.06.2022.|Lysregulering, manuell dirigering, vegen er stengt i korte perioder.
+              </value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 6 Kjerkbakken i Oppdal, Trøndelag - Ev 6 Styrsvollen i Oppdal, Trøndelag, i begge
+                retninger
+              </value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>62.55208</latitude>
+              <longitude>9.632526</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E6</roadNumber>
+                <countyNumber>50</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>3453.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>223714.837,6945515.211 223728.538,6945538.826 223752.69 6945580.778 223777.761
+                    6945626.068
+                    223812.632 6945690.177 223844.421 6945749.847 223872.582 6945803.844 223873.969 6945806.29
+                    223908.878
+                    6945876.799 223931.107 6945922.327 223951.785 6945970.545 223954.727 6945976.276 223965.313
+                    6946005.701
+                    223974.775 6946038.207 223982.699 6946069.988 223991.625 6946105.528 223999.69 6946139.005
+                    224006.806
+                    6946167.011 224059.229 6946356.01 224065.498 6946384.515 224074.106 6946423.922 224074.922
+                    6946428.977
+                    224081.67 6946460.856 224088.736 6946496.55 224095.318 6946530.578 224101.519 6946561.222 224107.533
+                    6946593.163 224113.824 6946622.519 224118.198 6946643.07 224124.451 6946669.015 224127.7 6946681.977
+                    224130.464 6946693.272 224133.292 6946704.135 224136.211 6946716.697 224139.104 6946730.116
+                    224141.072
+                    6946741.904 224142.796 6946753.712 224144.318 6946767.245 224145.392 6946779.535 224146.164
+                    6946790.569
+                    224146.972 6946802.027 224147.674 6946812.213 224148.5 6946821.536 224149.615 6946832.541 224150.752
+                    6946844.399 224152.315 6946856.648 224153.919 6946867.612 224155.563 6946877.293 224157.173
+                    6946886.55
+                    224159.764 6946898.713 224162.438 6946911.296 224164.874 6946922.192 224167.141 6946932.247
+                    224171.121
+                    6946949.844 224174.174 6946962.822 224177.585 6946978.332 224180.176 6946990.495 224183.063
+                    6947005.622
+                    224185.044 6947016.982 224186.52 6947025.823 224188.23 6947038.06 224189.013 6947045.678 224189.571
+                    6947051.181 224190.397 6947060.503 224191.02 6947068.561 224191.637 6947078.328 224192.189
+                    6947085.539
+                    224193.187 6947098.688 224193.973 6947109.295 224194.644 6947117.349 224195.591 6947127.515
+                    224196.319
+                    6947136.845 224197.461 6947146.995 224198.377 6947155.029 224199.329 6947163.487 224200.139
+                    6947170.249
+                    224201.166 6947177.847 224202.172 6947184.593 224202.637 6947188.396 224203.257 6947193.467
+                    224204.565
+                    6947201.468 224205.282 6947206.531 224205.929 6947210.746 224207.419 6947219.159 224208.762
+                    6947227.584
+                    224210.132 6947235.154 224211.488 6947243.151 224213.125 6947251.552 224214.459 6947258.697
+                    224215.941
+                    6947265.831 224218.11 6947275.895 224220.173 6947284.687 224223.084 6947295.97 224226.47 6947307.639
+                    224230.773 6947319.66 224234.921 6947330.413 224240.854 6947344.858 224247.431 6947360.531 224253.04
+                    6947372.869 224259.316 6947387.286 224265.773 6947402.115 224272.573 6947416.916 224280.004
+                    6947433.371
+                    224285.977 6947446.533 224292.35 6947460.942 224300.242 6947478.212 224310.964 6947501.65 224324.416
+                    6947531.263 224335.305 6947555.54 224344.618 6947575.681 224354.913 6947598.727 224362.1 6947618.191
+                    224387.601 6947672.412 224416.916 6947733.999 224444.587 6947785.905 224472.517 6947832.667
+                    224515.63
+                    6947902.069 224551.501 6947961.403 224556.609 6947969.515 224586.879 6948017.791 224619.969
+                    6948063.27
+                    224652.504 6948098.552 224690.135 6948137.678 224706.338 6948154.257 224715.779 6948164.142
+                    224736.934
+                    6948187.566 224752.406 6948207.194 224763.669 6948224.185 224774.269 6948242.084 224782.233
+                    6948258.496
+                    224788.413 6948271.214 224792.67 6948281.531 224795.848 6948288.95 224804.472 6948309.149 224805.431
+                    6948311.203 224811.13 6948325.242 224820.363 6948346.244 224826.537 6948360.67 224835.077
+                    6948380.449
+                    224841.207 6948393.171 224848.989 6948409.171 224855.063 6948420.618 224863.831 6948437.816
+                    224870.464
+                    6948450.07 224878.091 6948464.802 224885.186 6948477.871 224893.24 6948492.995 224896.423
+                    6948498.706
+                    224900.81 6948506.451 224909.969 6948523.617 224917.329 6948537.518 224922.71 6948547.742 224928.601
+                    6948558.777 224932.233 6948565.732 224941.755 6948583.721 224951.291 6948601.283 224959.624
+                    6948616.81
+                    224967.202 6948631.547 224974.464 6948645.456 224981.873 6948659.352 224988.177 6948671.207
+                    224993.201
+                    6948681.887
+                  </coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <maintenanceVehicles/>
+        <roadMaintenanceType>roadworks</roadMaintenanceType>
+      </situationRecord>
+      <situationRecord xsi:type="RoadOrCarriagewayOrLaneManagement" id="04f3236f-d89c-49b8-8670-af4b55b73bf5_4"
+                       version="2">
+        <situationRecordCreationTime>2021-11-17T08:27:51.4143551+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2021-11-17T08:28:20.0900085+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>high</severity>
+        <source>
+          <sourceCountry>no</sourceCountry>
+          <sourceIdentification>971032081-HBT-PROD</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="no">NPRA</value>
+            </values>
+          </sourceName>
+          <sourceType>roadAuthorities</sourceType>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-11-17T07:00:00+01:00</overallStartTime>
+            <overallEndTime>2022-06-30T19:00:00+02:00</overallEndTime>
+            <validPeriod>
+              <startOfPeriod>2021-11-17T07:00:00+01:00</startOfPeriod>
+              <endOfPeriod>2022-06-30T19:00:00+02:00</endOfPeriod>
+              <recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+                <startTimeOfPeriod>07:00:00+01:00</startTimeOfPeriod>
+                <endTimeOfPeriod>19:00:00+01:00</endTimeOfPeriod>
+              </recurringTimePeriodOfDay>
+              <recurringDayWeekMonthPeriod>
+                <applicableDay>monday</applicableDay>
+                <applicableDay>tuesday</applicableDay>
+                <applicableDay>wednesday</applicableDay>
+                <applicableDay>thursday</applicableDay>
+                <applicableDay>friday</applicableDay>
+              </recurringDayWeekMonthPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+        </impact>
+        <cause xsi:type="ManagedCause">
+          <managedCause targetClass="SituationRecord" id="04f3236f-d89c-49b8-8670-af4b55b73bf5_2" version="0"/>
+        </cause>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Vegarbeid, gyldig mellom 07:00 og 19:00 mandag, tirsdag, onsdag, torsdag og fredag fra
+                17.11.2021 til 30.06.2022.|Lysregulering, manuell dirigering, vegen er stengt i korte perioder.
+              </value>
+            </values>
+          </comment>
+          <commentType>dataProcessingNote</commentType>
+        </generalPublicComment>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="no">Ev 6 Kjerkbakken i Oppdal, Trøndelag - Ev 6 Styrsvollen i Oppdal, Trøndelag, i begge
+                retninger
+              </value>
+            </values>
+          </comment>
+          <commentType>locationDescriptor</commentType>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="NonOrderedLocationGroupByList">
+          <locationContainedInGroup xsi:type="Linear">
+            <locationForDisplay>
+              <latitude>62.55208</latitude>
+              <longitude>9.632526</longitude>
+            </locationForDisplay>
+            <locationExtension>
+              <locationExtension>
+                <roadNumber>E6</roadNumber>
+                <countyNumber>50</countyNumber>
+              </locationExtension>
+            </locationExtension>
+            <supplementaryPositionalDescription>
+              <affectedCarriagewayAndLanes>
+                <carriageway>mainCarriageway</carriageway>
+                <lengthAffected>3453.0</lengthAffected>
+              </affectedCarriagewayAndLanes>
+            </supplementaryPositionalDescription>
+            <linearExtension>
+              <linearLineStringExtension>
+                <gmlLineString srsName="25833">
+                  <coordinates>223714.837,6945515.211 223728.538,6945538.826 223752.69 6945580.778 223777.761
+                    6945626.068
+                    223812.632 6945690.177 223844.421 6945749.847 223872.582 6945803.844 223873.969 6945806.29
+                    223908.878
+                    6945876.799 223931.107 6945922.327 223951.785 6945970.545 223954.727 6945976.276 223965.313
+                    6946005.701
+                    223974.775 6946038.207 223982.699 6946069.988 223991.625 6946105.528 223999.69 6946139.005
+                    224006.806
+                    6946167.011 224059.229 6946356.01 224065.498 6946384.515 224074.106 6946423.922 224074.922
+                    6946428.977
+                    224081.67 6946460.856 224088.736 6946496.55 224095.318 6946530.578 224101.519 6946561.222 224107.533
+                    6946593.163 224113.824 6946622.519 224118.198 6946643.07 224124.451 6946669.015 224127.7 6946681.977
+                    224130.464 6946693.272 224133.292 6946704.135 224136.211 6946716.697 224139.104 6946730.116
+                    224141.072
+                    6946741.904 224142.796 6946753.712 224144.318 6946767.245 224145.392 6946779.535 224146.164
+                    6946790.569
+                    224146.972 6946802.027 224147.674 6946812.213 224148.5 6946821.536 224149.615 6946832.541 224150.752
+                    6946844.399 224152.315 6946856.648 224153.919 6946867.612 224155.563 6946877.293 224157.173
+                    6946886.55
+                    224159.764 6946898.713 224162.438 6946911.296 224164.874 6946922.192 224167.141 6946932.247
+                    224171.121
+                    6946949.844 224174.174 6946962.822 224177.585 6946978.332 224180.176 6946990.495 224183.063
+                    6947005.622
+                    224185.044 6947016.982 224186.52 6947025.823 224188.23 6947038.06 224189.013 6947045.678 224189.571
+                    6947051.181 224190.397 6947060.503 224191.02 6947068.561 224191.637 6947078.328 224192.189
+                    6947085.539
+                    224193.187 6947098.688 224193.973 6947109.295 224194.644 6947117.349 224195.591 6947127.515
+                    224196.319
+                    6947136.845 224197.461 6947146.995 224198.377 6947155.029 224199.329 6947163.487 224200.139
+                    6947170.249
+                    224201.166 6947177.847 224202.172 6947184.593 224202.637 6947188.396 224203.257 6947193.467
+                    224204.565
+                    6947201.468 224205.282 6947206.531 224205.929 6947210.746 224207.419 6947219.159 224208.762
+                    6947227.584
+                    224210.132 6947235.154 224211.488 6947243.151 224213.125 6947251.552 224214.459 6947258.697
+                    224215.941
+                    6947265.831 224218.11 6947275.895 224220.173 6947284.687 224223.084 6947295.97 224226.47 6947307.639
+                    224230.773 6947319.66 224234.921 6947330.413 224240.854 6947344.858 224247.431 6947360.531 224253.04
+                    6947372.869 224259.316 6947387.286 224265.773 6947402.115 224272.573 6947416.916 224280.004
+                    6947433.371
+                    224285.977 6947446.533 224292.35 6947460.942 224300.242 6947478.212 224310.964 6947501.65 224324.416
+                    6947531.263 224335.305 6947555.54 224344.618 6947575.681 224354.913 6947598.727 224362.1 6947618.191
+                    224387.601 6947672.412 224416.916 6947733.999 224444.587 6947785.905 224472.517 6947832.667
+                    224515.63
+                    6947902.069 224551.501 6947961.403 224556.609 6947969.515 224586.879 6948017.791 224619.969
+                    6948063.27
+                    224652.504 6948098.552 224690.135 6948137.678 224706.338 6948154.257 224715.779 6948164.142
+                    224736.934
+                    6948187.566 224752.406 6948207.194 224763.669 6948224.185 224774.269 6948242.084 224782.233
+                    6948258.496
+                    224788.413 6948271.214 224792.67 6948281.531 224795.848 6948288.95 224804.472 6948309.149 224805.431
+                    6948311.203 224811.13 6948325.242 224820.363 6948346.244 224826.537 6948360.67 224835.077
+                    6948380.449
+                    224841.207 6948393.171 224848.989 6948409.171 224855.063 6948420.618 224863.831 6948437.816
+                    224870.464
+                    6948450.07 224878.091 6948464.802 224885.186 6948477.871 224893.24 6948492.995 224896.423
+                    6948498.706
+                    224900.81 6948506.451 224909.969 6948523.617 224917.329 6948537.518 224922.71 6948547.742 224928.601
+                    6948558.777 224932.233 6948565.732 224941.755 6948583.721 224951.291 6948601.283 224959.624
+                    6948616.81
+                    224967.202 6948631.547 224974.464 6948645.456 224981.873 6948659.352 224988.177 6948671.207
+                    224993.201
+                    6948681.887
+                  </coordinates>
+                </gmlLineString>
+              </linearLineStringExtension>
+            </linearExtension>
+          </locationContainedInGroup>
+        </groupOfLocations>
+        <situationRecordExtension>
+          <situationRecordExtendedApproved/>
+        </situationRecordExtension>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>intermittentShortTermClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>

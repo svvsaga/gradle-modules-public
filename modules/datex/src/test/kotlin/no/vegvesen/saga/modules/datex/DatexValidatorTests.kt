@@ -1,11 +1,14 @@
 package no.vegvesen.saga.modules.datex
 
+import ch.qos.logback.classic.Level
 import io.kotest.assertions.arrow.core.shouldBeLeft
 import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.StringSpec
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.toXmlString
+import no.vegvesen.saga.modules.testing.TestLogger
 import no.vegvesen.saga.modules.testing.loadStringResourceOrThrow
+import no.vegvesen.saga.modules.testing.shouldContainSingle
 
 class DatexValidatorTests : StringSpec({
     val testSubject = DatexValidator()
@@ -63,6 +66,12 @@ class DatexValidatorTests : StringSpec({
 
     "valid maalestasjoner Datex 2 file is validated successfully" {
         fileIsValid("GetMeasurementWeatherSiteTable.xml", DatexVersion.DATEX_2)
+    }
+
+    "Datex 2 situations file with duplicates is validated successfully but warning is logged" {
+        val testLogger = TestLogger()
+        fileIsValid("GetSituations_with_duplicates.xml", DatexVersion.DATEX_2)
+        testLogger.events.shouldContainSingle { it.level == Level.WARN }
     }
 
     "invalid file fails validation" {

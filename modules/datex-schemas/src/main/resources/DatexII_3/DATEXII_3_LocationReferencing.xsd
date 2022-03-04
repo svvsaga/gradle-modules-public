@@ -2075,7 +2075,7 @@
     <xs:complexContent>
       <xs:extension base="loc:LocationGroup">
         <xs:sequence>
-          <xs:element name="locationContainedInGroup" type="loc:Location" minOccurs="2" maxOccurs="unbounded">
+          <xs:element name="locationContainedInGroup" type="loc:Location" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation>A location contained in a non-ordered group of locations.
               </xs:documentation>

@@ -19,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;extension base="{http://datex2.eu/schema/2/2_0}NonOrderedLocations"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="locationContainedInGroup" type="{http://datex2.eu/schema/2/2_0}Location" maxOccurs="unbounded" minOccurs="2"/&gt;
+ *         &lt;element name="locationContainedInGroup" type="{http://datex2.eu/schema/2/2_0}Location" maxOccurs="unbounded"/&gt;
  *         &lt;element name="nonOrderedLocationGroupByListExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;

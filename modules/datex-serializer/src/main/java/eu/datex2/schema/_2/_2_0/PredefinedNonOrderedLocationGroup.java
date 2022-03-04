@@ -21,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *     &lt;extension base="{http://datex2.eu/schema/2/2_0}PredefinedLocationContainer"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="predefinedNonOrderedLocationGroupName" type="{http://datex2.eu/schema/2/2_0}MultilingualString" minOccurs="0"/&gt;
- *         &lt;element name="predefinedLocation" type="{http://datex2.eu/schema/2/2_0}PredefinedLocation" maxOccurs="unbounded" minOccurs="2"/&gt;
+ *         &lt;element name="predefinedLocation" type="{http://datex2.eu/schema/2/2_0}PredefinedLocation" maxOccurs="unbounded"/&gt;
  *         &lt;element name="predefinedNonOrderedLocationGroupExtension" type="{http://datex2.eu/schema/2/2_0}_ExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;

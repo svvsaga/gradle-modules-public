@@ -172,7 +172,8 @@ class DatexClientTests : AnnotationSpec() {
     <ns2:publicationTime>2022-02-23T15:26:42+01:00</ns2:publicationTime>
     <ns2:publicationCreator>
       <ns2:country>no</ns2:country>
-      <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>""".toXmlString()
+      <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
+            """.toXmlString()
         ) shouldBeRight ZonedDateTime.parse("2022-02-23T15:26:42+01:00").toInstant()
     }
 }

@@ -9,7 +9,6 @@ import org.apache.beam.sdk.values.PCollection
  * https://github.com/chermenin/kio/blob/master/kio-test/src/main/kotlin/ru/chermenin/kio/test/Assertions.kt
  * License
 Copyright © 2020 Alex Chermenin
-
 Licensed under the Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0.txt
  */
 fun <T> PCollection<T>.that(): PAssert.IterableAssert<T> {

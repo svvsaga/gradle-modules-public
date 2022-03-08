@@ -1,10 +1,6 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import javax.xml.namespace.QName;
-import eu.datex2.schema._3.common.MultilingualString;
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
 
 
@@ -25,10 +21,6 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _NamedAreaAreaName_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "areaName");
-    private final static QName _NamedAreaNamedAreaType_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "namedAreaType");
-    private final static QName _NamedAreaCountry_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "country");
-    private final static QName _NamedAreaNamedAreaExtension_QNAME = new QName("http://datex2.eu/schema/3/locationReferencing", "_namedAreaExtension");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: eu.datex2.schema._3.locationreferencing
@@ -1027,58 +1019,6 @@ public class ObjectFactory {
      */
     public TpegSimplePoint createTpegSimplePoint() {
         return new TpegSimplePoint();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MultilingualString }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link MultilingualString }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "areaName", scope = NamedArea.class)
-    public JAXBElement<MultilingualString> createNamedAreaAreaName(MultilingualString value) {
-        return new JAXBElement<MultilingualString>(_NamedAreaAreaName_QNAME, MultilingualString.class, NamedArea.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "namedAreaType", scope = NamedArea.class)
-    public JAXBElement<NamedAreaTypeEnum> createNamedAreaNamedAreaType(NamedAreaTypeEnum value) {
-        return new JAXBElement<NamedAreaTypeEnum>(_NamedAreaNamedAreaType_QNAME, NamedAreaTypeEnum.class, NamedArea.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "country", scope = NamedArea.class)
-    public JAXBElement<String> createNamedAreaCountry(String value) {
-        return new JAXBElement<String>(_NamedAreaCountry_QNAME, String.class, NamedArea.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://datex2.eu/schema/3/locationReferencing", name = "_namedAreaExtension", scope = NamedArea.class)
-    public JAXBElement<NamedAreaExtensionType> createNamedAreaNamedAreaExtension(NamedAreaExtensionType value) {
-        return new JAXBElement<NamedAreaExtensionType>(_NamedAreaNamedAreaExtension_QNAME, NamedAreaExtensionType.class, NamedArea.class, value);
     }
 
 }

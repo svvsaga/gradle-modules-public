@@ -1,14 +1,10 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import java.util.ArrayList;
-import java.util.List;
 import eu.datex2.schema._3.common.MultilingualString;
-import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElementRef;
-import jakarta.xml.bind.annotation.XmlElementRefs;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -21,14 +17,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="NamedArea"&gt;
  *   &lt;complexContent&gt;
- *     &lt;extension base="{http://datex2.eu/schema/3/common}NamedArea"&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="areaName" type="{http://datex2.eu/schema/3/common}MultilingualString"/&gt;
  *         &lt;element name="namedAreaType" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaTypeEnum" minOccurs="0"/&gt;
  *         &lt;element name="country" type="{http://datex2.eu/schema/3/common}CountryCode" minOccurs="0"/&gt;
  *         &lt;element name="_namedAreaExtension" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
- *     &lt;/extension&gt;
+ *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
@@ -37,64 +33,118 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NamedArea", propOrder = {
-    "rest"
+    "areaName",
+    "namedAreaType",
+    "country",
+    "namedAreaExtension"
 })
 @XmlSeeAlso({
     IsoNamedArea.class,
     NutsNamedArea.class
 })
-public class NamedArea
-    extends eu.datex2.schema._3.common.NamedArea
-{
+public class NamedArea {
 
-    @XmlElementRefs({
-        @XmlElementRef(name = "areaName", namespace = "http://datex2.eu/schema/3/locationReferencing", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "namedAreaType", namespace = "http://datex2.eu/schema/3/locationReferencing", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "country", namespace = "http://datex2.eu/schema/3/locationReferencing", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "_namedAreaExtension", namespace = "http://datex2.eu/schema/3/locationReferencing", type = JAXBElement.class, required = false)
-    })
-    protected List<JAXBElement<?>> rest;
+    @XmlElement(required = true)
+    protected MultilingualString areaName;
+    protected NamedAreaTypeEnum namedAreaType;
+    protected String country;
+    @XmlElement(name = "_namedAreaExtension")
+    protected NamedAreaExtensionType namedAreaExtension;
 
     /**
-     * Gets the rest of the content model. 
+     * Gets the value of the areaName property.
      * 
-     * <p>
-     * You are getting this "catch-all" property because of the following reason: 
-     * The field name "NamedAreaExtension" is used by two different parts of a schema. See: 
-     * line 900 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_LocationReferencing.xsd
-     * line 831 of file:/Users/geir.sagberg/Projects/saga/gradle-modules-public/modules/datex-schemas/src/main/resources/DatexII_3/DATEXII_3_Common.xsd
-     * <p>
-     * To get rid of this property, apply a property customization to one 
-     * of both of the following declarations to change their names: 
-     * Gets the value of the rest property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a <CODE>set</CODE> method for the rest property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getRest().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link MultilingualString }{@code >}
-     * {@link JAXBElement }{@code <}{@link NamedAreaExtensionType }{@code >}
-     * {@link JAXBElement }{@code <}{@link NamedAreaTypeEnum }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link MultilingualString }
+     *     
      */
-    public List<JAXBElement<?>> getRest() {
-        if (rest == null) {
-            rest = new ArrayList<JAXBElement<?>>();
-        }
-        return this.rest;
+    public MultilingualString getAreaName() {
+        return areaName;
+    }
+
+    /**
+     * Sets the value of the areaName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MultilingualString }
+     *     
+     */
+    public void setAreaName(MultilingualString value) {
+        this.areaName = value;
+    }
+
+    /**
+     * Gets the value of the namedAreaType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link NamedAreaTypeEnum }
+     *     
+     */
+    public NamedAreaTypeEnum getNamedAreaType() {
+        return namedAreaType;
+    }
+
+    /**
+     * Sets the value of the namedAreaType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NamedAreaTypeEnum }
+     *     
+     */
+    public void setNamedAreaType(NamedAreaTypeEnum value) {
+        this.namedAreaType = value;
+    }
+
+    /**
+     * Gets the value of the country property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCountry() {
+        return country;
+    }
+
+    /**
+     * Sets the value of the country property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCountry(String value) {
+        this.country = value;
+    }
+
+    /**
+     * Gets the value of the namedAreaExtension property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link NamedAreaExtensionType }
+     *     
+     */
+    public NamedAreaExtensionType getNamedAreaExtension() {
+        return namedAreaExtension;
+    }
+
+    /**
+     * Sets the value of the namedAreaExtension property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NamedAreaExtensionType }
+     *     
+     */
+    public void setNamedAreaExtension(NamedAreaExtensionType value) {
+        this.namedAreaExtension = value;
     }
 
 }

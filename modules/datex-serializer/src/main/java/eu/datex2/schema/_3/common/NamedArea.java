@@ -4,7 +4,6 @@ package eu.datex2.schema._3.common;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -30,9 +29,6 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NamedArea", propOrder = {
     "namedAreaExtension"
-})
-@XmlSeeAlso({
-    eu.datex2.schema._3.locationreferencing.NamedArea.class
 })
 public abstract class NamedArea {
 

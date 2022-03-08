@@ -25,8 +25,9 @@ jaxb {
 }
 
 // Necessary for unmarshalling of Datex 3 files to work
-tasks.register("addRootElement") {
+tasks.register("postProcessDatex3") {
     doLast {
+        // XmlRootElement must be added
         exec {
             commandLine(
                 "sed",
@@ -38,6 +39,7 @@ tasks.register("addRootElement") {
         exec {
             commandLine(
                 "rm",
+                "-f",
                 "src/main/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java.bak"
             )
         }
@@ -61,7 +63,7 @@ tasks.getByName("jaxb") {
 }
 
 tasks.getByName("jaxbJavaGenDatex3") {
-    finalizedBy("addRootElement")
+    finalizedBy("postProcessDatex3")
 }
 
 dependencies {

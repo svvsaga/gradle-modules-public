@@ -1,8 +1,10 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
+import eu.datex2.schema._3.common.ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -28,10 +30,92 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IsoNamedArea")
+@XmlType(name = "IsoNamedArea", propOrder = {
+    "subdivisionType",
+    "subdivisionCode",
+    "isoNamedAreaExtension"
+})
 public class IsoNamedArea
     extends NamedArea
 {
 
+    @XmlElement(required = true)
+    protected SubdivisionTypeEnum subdivisionType;
+    @XmlElement(required = true)
+    protected String subdivisionCode;
+    @XmlElement(name = "_isoNamedAreaExtension")
+    protected ExtensionType isoNamedAreaExtension;
+
+    /**
+     * Gets the value of the subdivisionType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SubdivisionTypeEnum }
+     *     
+     */
+    public SubdivisionTypeEnum getSubdivisionType() {
+        return subdivisionType;
+    }
+
+    /**
+     * Sets the value of the subdivisionType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SubdivisionTypeEnum }
+     *     
+     */
+    public void setSubdivisionType(SubdivisionTypeEnum value) {
+        this.subdivisionType = value;
+    }
+
+    /**
+     * Gets the value of the subdivisionCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSubdivisionCode() {
+        return subdivisionCode;
+    }
+
+    /**
+     * Sets the value of the subdivisionCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSubdivisionCode(String value) {
+        this.subdivisionCode = value;
+    }
+
+    /**
+     * Gets the value of the isoNamedAreaExtension property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ExtensionType }
+     *     
+     */
+    public ExtensionType getIsoNamedAreaExtension() {
+        return isoNamedAreaExtension;
+    }
+
+    /**
+     * Sets the value of the isoNamedAreaExtension property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ExtensionType }
+     *     
+     */
+    public void setIsoNamedAreaExtension(ExtensionType value) {
+        this.isoNamedAreaExtension = value;
+    }
 
 }

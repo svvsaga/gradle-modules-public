@@ -39,7 +39,7 @@ object RecoverableDatex3ValidationExceptions {
 
     // Datex 3 files use a different namespace prefix for situation schema
     const val errorTargetClassOfObjectReferenceIsNotValid =
-        "cvc-complex-type.3.1: Value 'ns13:SituationRecord' of attribute 'targetClass' of element 'ns8:objectReference'"
+        "Attribute 'targetClass' has a fixed value of 'sit:SituationRecord'"
 }
 
 class DatexValidator : Logging {
@@ -99,7 +99,7 @@ class DatexValidator : Logging {
         when (exception) {
             is SAXParseException -> when {
                 exception.localizedMessage.startsWith(errorExchangeInformationElementsLacksBaseVersion) -> DatexVersion.DATEX_3.right()
-                exception.localizedMessage.startsWith(errorTargetClassOfObjectReferenceIsNotValid) -> DatexVersion.DATEX_3.right()
+                exception.localizedMessage.contains(errorTargetClassOfObjectReferenceIsNotValid) -> DatexVersion.DATEX_3.right()
                 else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)
             }
             else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)

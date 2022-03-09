@@ -41,7 +41,7 @@ public class GeneralInstructionOrMessageToRoadUsers
     @XmlSchemaType(name = "string")
     protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
     protected MultilingualString generalMessageToRoadUsers;
-    protected _ExtensionType generalInstructionOrMessageToRoadUsersExtension;
+    protected ExtensionType generalInstructionOrMessageToRoadUsersExtension;
 
     /**
      * Gets the value of the generalInstructionToRoadUsersType property.
@@ -96,10 +96,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
+    public ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
         return generalInstructionOrMessageToRoadUsersExtension;
     }
 
@@ -108,10 +108,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGeneralInstructionOrMessageToRoadUsersExtension(_ExtensionType value) {
+    public void setGeneralInstructionOrMessageToRoadUsersExtension(ExtensionType value) {
         this.generalInstructionOrMessageToRoadUsersExtension = value;
     }
 

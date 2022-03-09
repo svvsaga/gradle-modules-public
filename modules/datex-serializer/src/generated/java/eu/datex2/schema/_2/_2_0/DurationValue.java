@@ -36,7 +36,7 @@ public class DurationValue
 {
 
     protected float duration;
-    protected _ExtensionType durationValueExtension;
+    protected ExtensionType durationValueExtension;
 
     /**
      * Gets the value of the duration property.
@@ -59,10 +59,10 @@ public class DurationValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDurationValueExtension() {
+    public ExtensionType getDurationValueExtension() {
         return durationValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class DurationValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDurationValueExtension(_ExtensionType value) {
+    public void setDurationValueExtension(ExtensionType value) {
         this.durationValueExtension = value;
     }
 

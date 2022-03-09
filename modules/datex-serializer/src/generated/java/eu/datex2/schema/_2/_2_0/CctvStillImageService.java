@@ -68,7 +68,7 @@ public class CctvStillImageService {
     @XmlElement(required = true)
     protected UrlLink stillImageUrl;
     protected List<UrlLink> orientationImageUrl;
-    protected _ExtensionType cctvStillImageServiceExtension;
+    protected ExtensionType cctvStillImageServiceExtension;
 
     /**
      * Gets the value of the cctvStillImageServiceLevel property.
@@ -272,10 +272,10 @@ public class CctvStillImageService {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvStillImageServiceExtension() {
+    public ExtensionType getCctvStillImageServiceExtension() {
         return cctvStillImageServiceExtension;
     }
 
@@ -284,10 +284,10 @@ public class CctvStillImageService {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvStillImageServiceExtension(_ExtensionType value) {
+    public void setCctvStillImageServiceExtension(ExtensionType value) {
         this.cctvStillImageServiceExtension = value;
     }
 

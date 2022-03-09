@@ -43,7 +43,7 @@ public class Delays {
     @XmlSchemaType(name = "string")
     protected DelaysTypeEnum delaysType;
     protected Float delayTimeValue;
-    protected _ExtensionType delaysExtension;
+    protected ExtensionType delaysExtension;
 
     /**
      * Gets the value of the delayBand property.
@@ -122,10 +122,10 @@ public class Delays {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDelaysExtension() {
+    public ExtensionType getDelaysExtension() {
         return delaysExtension;
     }
 
@@ -134,10 +134,10 @@ public class Delays {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDelaysExtension(_ExtensionType value) {
+    public void setDelaysExtension(ExtensionType value) {
         this.delaysExtension = value;
     }
 

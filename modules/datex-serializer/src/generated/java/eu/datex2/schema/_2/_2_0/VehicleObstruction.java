@@ -45,7 +45,7 @@ public class VehicleObstruction
     @XmlSchemaType(name = "string")
     protected VehicleObstructionTypeEnum vehicleObstructionType;
     protected List<Vehicle> obstructingVehicle;
-    protected _ExtensionType vehicleObstructionExtension;
+    protected ExtensionType vehicleObstructionExtension;
 
     /**
      * Gets the value of the vehicleObstructionType property.
@@ -105,10 +105,10 @@ public class VehicleObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleObstructionExtension() {
+    public ExtensionType getVehicleObstructionExtension() {
         return vehicleObstructionExtension;
     }
 
@@ -117,10 +117,10 @@ public class VehicleObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleObstructionExtension(_ExtensionType value) {
+    public void setVehicleObstructionExtension(ExtensionType value) {
         this.vehicleObstructionExtension = value;
     }
 

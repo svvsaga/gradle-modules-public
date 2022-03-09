@@ -47,7 +47,7 @@ public class TextDisplayAreaSettings {
     protected BigInteger textLuminanceLevel;
     @XmlSchemaType(name = "string")
     protected VmsLuminanceLevelEnum textLuminanceLevelName;
-    protected _ExtensionType textDisplayAreaSettingsExtension;
+    protected ExtensionType textDisplayAreaSettingsExtension;
 
     /**
      * Gets the value of the textLanternsOn property.
@@ -150,10 +150,10 @@ public class TextDisplayAreaSettings {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTextDisplayAreaSettingsExtension() {
+    public ExtensionType getTextDisplayAreaSettingsExtension() {
         return textDisplayAreaSettingsExtension;
     }
 
@@ -162,10 +162,10 @@ public class TextDisplayAreaSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTextDisplayAreaSettingsExtension(_ExtensionType value) {
+    public void setTextDisplayAreaSettingsExtension(ExtensionType value) {
         this.textDisplayAreaSettingsExtension = value;
     }
 

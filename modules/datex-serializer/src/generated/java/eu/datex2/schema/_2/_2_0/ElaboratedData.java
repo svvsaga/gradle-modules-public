@@ -48,7 +48,7 @@ public class ElaboratedData {
     protected Validity validity;
     protected List<ElaboratedDataFault> elaboratedDataFault;
     protected BasicData basicData;
-    protected _ExtensionType elaboratedDataExtension;
+    protected ExtensionType elaboratedDataExtension;
 
     /**
      * Gets the value of the forecast property.
@@ -180,10 +180,10 @@ public class ElaboratedData {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataExtension() {
+    public ExtensionType getElaboratedDataExtension() {
         return elaboratedDataExtension;
     }
 
@@ -192,10 +192,10 @@ public class ElaboratedData {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataExtension(_ExtensionType value) {
+    public void setElaboratedDataExtension(ExtensionType value) {
         this.elaboratedDataExtension = value;
     }
 

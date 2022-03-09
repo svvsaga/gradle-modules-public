@@ -38,7 +38,7 @@ public class OpenlrPoiWithAccessPoint
 
     @XmlElement(required = true)
     protected PointCoordinates openlrCoordinate;
-    protected _ExtensionType openlrPoiWithAccessPointExtension;
+    protected ExtensionType openlrPoiWithAccessPointExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -69,10 +69,10 @@ public class OpenlrPoiWithAccessPoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPoiWithAccessPointExtension() {
+    public ExtensionType getOpenlrPoiWithAccessPointExtension() {
         return openlrPoiWithAccessPointExtension;
     }
 
@@ -81,10 +81,10 @@ public class OpenlrPoiWithAccessPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPoiWithAccessPointExtension(_ExtensionType value) {
+    public void setOpenlrPoiWithAccessPointExtension(ExtensionType value) {
         this.openlrPoiWithAccessPointExtension = value;
     }
 

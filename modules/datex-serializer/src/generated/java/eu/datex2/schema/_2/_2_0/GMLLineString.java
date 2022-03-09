@@ -38,7 +38,7 @@ public class GMLLineString {
 
     @XmlElement(required = true)
     protected String coordinates;
-    protected _ExtensionType gmlLineStringExtension;
+    protected ExtensionType gmlLineStringExtension;
     @XmlAttribute(name = "srsName")
     protected String srsName;
 
@@ -71,10 +71,10 @@ public class GMLLineString {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGmlLineStringExtension() {
+    public ExtensionType getGmlLineStringExtension() {
         return gmlLineStringExtension;
     }
 
@@ -83,10 +83,10 @@ public class GMLLineString {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGmlLineStringExtension(_ExtensionType value) {
+    public void setGmlLineStringExtension(ExtensionType value) {
         this.gmlLineStringExtension = value;
     }
 

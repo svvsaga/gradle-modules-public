@@ -54,7 +54,7 @@ public class EnumerationLitteral {
     protected String designation;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected _ExtensionType enumerationLitteralExtension;
+    protected ExtensionType enumerationLitteralExtension;
 
     /**
      * Gets the value of the enumerationName property.
@@ -205,10 +205,10 @@ public class EnumerationLitteral {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getEnumerationLitteralExtension() {
+    public ExtensionType getEnumerationLitteralExtension() {
         return enumerationLitteralExtension;
     }
 
@@ -217,10 +217,10 @@ public class EnumerationLitteral {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setEnumerationLitteralExtension(_ExtensionType value) {
+    public void setEnumerationLitteralExtension(ExtensionType value) {
         this.enumerationLitteralExtension = value;
     }
 

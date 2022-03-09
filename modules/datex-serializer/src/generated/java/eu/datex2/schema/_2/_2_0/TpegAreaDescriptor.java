@@ -40,7 +40,7 @@ public class TpegAreaDescriptor
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03AreaDescriptorSubtypeEnum tpegAreaDescriptorType;
-    protected _ExtensionType tpegAreaDescriptorExtension;
+    protected ExtensionType tpegAreaDescriptorExtension;
 
     /**
      * Gets the value of the tpegAreaDescriptorType property.
@@ -71,10 +71,10 @@ public class TpegAreaDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegAreaDescriptorExtension() {
+    public ExtensionType getTpegAreaDescriptorExtension() {
         return tpegAreaDescriptorExtension;
     }
 
@@ -83,10 +83,10 @@ public class TpegAreaDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegAreaDescriptorExtension(_ExtensionType value) {
+    public void setTpegAreaDescriptorExtension(ExtensionType value) {
         this.tpegAreaDescriptorExtension = value;
     }
 

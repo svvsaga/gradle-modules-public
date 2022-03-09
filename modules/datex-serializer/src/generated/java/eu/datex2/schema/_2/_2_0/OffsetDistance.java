@@ -39,7 +39,7 @@ public class OffsetDistance {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger offsetDistance;
-    protected _ExtensionType offsetDistanceExtension;
+    protected ExtensionType offsetDistanceExtension;
 
     /**
      * Gets the value of the offsetDistance property.
@@ -70,10 +70,10 @@ public class OffsetDistance {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOffsetDistanceExtension() {
+    public ExtensionType getOffsetDistanceExtension() {
         return offsetDistanceExtension;
     }
 
@@ -82,10 +82,10 @@ public class OffsetDistance {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOffsetDistanceExtension(_ExtensionType value) {
+    public void setOffsetDistanceExtension(ExtensionType value) {
         this.offsetDistanceExtension = value;
     }
 

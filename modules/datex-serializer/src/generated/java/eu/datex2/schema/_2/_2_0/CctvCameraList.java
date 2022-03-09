@@ -53,7 +53,7 @@ public class CctvCameraList {
     protected XMLGregorianCalendar cctvCameraListVersionTime;
     protected CctvGeographicArea areaToWhichCameraListRelates;
     protected List<CctvCameraMetadataRecord> cctvCameraMetadataRecord;
-    protected _ExtensionType cctvCameraListExtension;
+    protected ExtensionType cctvCameraListExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -165,10 +165,10 @@ public class CctvCameraList {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvCameraListExtension() {
+    public ExtensionType getCctvCameraListExtension() {
         return cctvCameraListExtension;
     }
 
@@ -177,10 +177,10 @@ public class CctvCameraList {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvCameraListExtension(_ExtensionType value) {
+    public void setCctvCameraListExtension(ExtensionType value) {
         this.cctvCameraListExtension = value;
     }
 

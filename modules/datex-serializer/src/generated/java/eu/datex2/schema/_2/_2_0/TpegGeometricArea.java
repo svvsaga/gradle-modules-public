@@ -48,7 +48,7 @@ public class TpegGeometricArea
     @XmlElement(required = true)
     protected PointCoordinates centrePoint;
     protected TpegAreaDescriptor name;
-    protected _ExtensionType tpegGeometricAreaExtension;
+    protected ExtensionType tpegGeometricAreaExtension;
 
     /**
      * Gets the value of the radius property.
@@ -127,10 +127,10 @@ public class TpegGeometricArea
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegGeometricAreaExtension() {
+    public ExtensionType getTpegGeometricAreaExtension() {
         return tpegGeometricAreaExtension;
     }
 
@@ -139,10 +139,10 @@ public class TpegGeometricArea
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegGeometricAreaExtension(_ExtensionType value) {
+    public void setTpegGeometricAreaExtension(ExtensionType value) {
         this.tpegGeometricAreaExtension = value;
     }
 

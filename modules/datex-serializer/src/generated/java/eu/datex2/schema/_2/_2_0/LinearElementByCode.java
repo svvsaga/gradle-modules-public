@@ -38,7 +38,7 @@ public class LinearElementByCode
 
     @XmlElement(required = true)
     protected String linearElementIdentifier;
-    protected _ExtensionType linearElementByCodeExtension;
+    protected ExtensionType linearElementByCodeExtension;
 
     /**
      * Gets the value of the linearElementIdentifier property.
@@ -69,10 +69,10 @@ public class LinearElementByCode
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearElementByCodeExtension() {
+    public ExtensionType getLinearElementByCodeExtension() {
         return linearElementByCodeExtension;
     }
 
@@ -81,10 +81,10 @@ public class LinearElementByCode
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearElementByCodeExtension(_ExtensionType value) {
+    public void setLinearElementByCodeExtension(ExtensionType value) {
         this.linearElementByCodeExtension = value;
     }
 

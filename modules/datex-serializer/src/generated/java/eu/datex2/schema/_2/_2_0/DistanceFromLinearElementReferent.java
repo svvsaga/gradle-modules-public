@@ -44,7 +44,7 @@ public class DistanceFromLinearElementReferent
     @XmlElement(required = true)
     protected Referent fromReferent;
     protected Referent towardsReferent;
-    protected _ExtensionType distanceFromLinearElementReferentExtension;
+    protected ExtensionType distanceFromLinearElementReferentExtension;
 
     /**
      * Gets the value of the distanceAlong property.
@@ -115,10 +115,10 @@ public class DistanceFromLinearElementReferent
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDistanceFromLinearElementReferentExtension() {
+    public ExtensionType getDistanceFromLinearElementReferentExtension() {
         return distanceFromLinearElementReferentExtension;
     }
 
@@ -127,10 +127,10 @@ public class DistanceFromLinearElementReferent
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDistanceFromLinearElementReferentExtension(_ExtensionType value) {
+    public void setDistanceFromLinearElementReferentExtension(ExtensionType value) {
         this.distanceFromLinearElementReferentExtension = value;
     }
 

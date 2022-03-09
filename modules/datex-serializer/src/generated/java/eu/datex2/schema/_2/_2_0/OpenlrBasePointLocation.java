@@ -61,7 +61,7 @@ public abstract class OpenlrBasePointLocation {
     protected OpenlrLocationReferencePoint openlrLocationReferencePoint;
     @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
-    protected _ExtensionType openlrBasePointLocationExtension;
+    protected ExtensionType openlrBasePointLocationExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
@@ -188,10 +188,10 @@ public abstract class OpenlrBasePointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrBasePointLocationExtension() {
+    public ExtensionType getOpenlrBasePointLocationExtension() {
         return openlrBasePointLocationExtension;
     }
 
@@ -200,10 +200,10 @@ public abstract class OpenlrBasePointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrBasePointLocationExtension(_ExtensionType value) {
+    public void setOpenlrBasePointLocationExtension(ExtensionType value) {
         this.openlrBasePointLocationExtension = value;
     }
 

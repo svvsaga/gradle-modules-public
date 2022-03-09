@@ -46,7 +46,7 @@ public class Enumeration {
     protected String definition;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected _ExtensionType enumerationExtension;
+    protected ExtensionType enumerationExtension;
 
     /**
      * Gets the value of the enumerationName property.
@@ -149,10 +149,10 @@ public class Enumeration {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getEnumerationExtension() {
+    public ExtensionType getEnumerationExtension() {
         return enumerationExtension;
     }
 
@@ -161,10 +161,10 @@ public class Enumeration {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setEnumerationExtension(_ExtensionType value) {
+    public void setEnumerationExtension(ExtensionType value) {
         this.enumerationExtension = value;
     }
 

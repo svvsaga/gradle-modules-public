@@ -51,7 +51,7 @@ public class CctvGeographicArea {
     protected MultilingualString areaName;
     protected MultilingualString policeForceControlArea;
     protected MultilingualString roadOperatorControlArea;
-    protected _ExtensionType cctvGeographicAreaExtension;
+    protected ExtensionType cctvGeographicAreaExtension;
 
     /**
      * Gets the value of the country property.
@@ -202,10 +202,10 @@ public class CctvGeographicArea {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvGeographicAreaExtension() {
+    public ExtensionType getCctvGeographicAreaExtension() {
         return cctvGeographicAreaExtension;
     }
 
@@ -214,10 +214,10 @@ public class CctvGeographicArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvGeographicAreaExtension(_ExtensionType value) {
+    public void setCctvGeographicAreaExtension(ExtensionType value) {
         this.cctvGeographicAreaExtension = value;
     }
 

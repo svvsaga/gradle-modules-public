@@ -86,9 +86,9 @@ public class VmsMessage {
     protected VersionedReference situationRecordToWhichMessageIsRelated;
     protected Float distanceFromSituationRecord;
     protected Float textPictogramSequencingInterval;
-    protected List<_TextPage> textPage;
-    protected List<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> vmsPictogramDisplayArea;
-    protected _ExtensionType vmsMessageExtension;
+    protected List<TextPage> textPage;
+    protected List<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> vmsPictogramDisplayArea;
+    protected ExtensionType vmsMessageExtension;
 
     /**
      * Gets the value of the associatedManagementOrDiversionPlan property.
@@ -449,13 +449,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _TextPage }
+     * {@link TextPage }
      * 
      * 
      */
-    public List<_TextPage> getTextPage() {
+    public List<TextPage> getTextPage() {
         if (textPage == null) {
-            textPage = new ArrayList<_TextPage>();
+            textPage = new ArrayList<TextPage>();
         }
         return this.textPage;
     }
@@ -478,13 +478,13 @@ public class VmsMessage {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
+     * {@link VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea }
      * 
      * 
      */
-    public List<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> getVmsPictogramDisplayArea() {
+    public List<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea> getVmsPictogramDisplayArea() {
         if (vmsPictogramDisplayArea == null) {
-            vmsPictogramDisplayArea = new ArrayList<_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea>();
+            vmsPictogramDisplayArea = new ArrayList<VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea>();
         }
         return this.vmsPictogramDisplayArea;
     }
@@ -494,10 +494,10 @@ public class VmsMessage {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsMessageExtension() {
+    public ExtensionType getVmsMessageExtension() {
         return vmsMessageExtension;
     }
 
@@ -506,10 +506,10 @@ public class VmsMessage {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsMessageExtension(_ExtensionType value) {
+    public void setVmsMessageExtension(ExtensionType value) {
         this.vmsMessageExtension = value;
     }
 

@@ -50,7 +50,7 @@ public class Class {
     protected String designation;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected _ExtensionType classExtension;
+    protected ExtensionType classExtension;
 
     /**
      * Gets the value of the className property.
@@ -177,10 +177,10 @@ public class Class {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getClassExtension() {
+    public ExtensionType getClassExtension() {
         return classExtension;
     }
 
@@ -189,10 +189,10 @@ public class Class {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setClassExtension(_ExtensionType value) {
+    public void setClassExtension(ExtensionType value) {
         this.classExtension = value;
     }
 

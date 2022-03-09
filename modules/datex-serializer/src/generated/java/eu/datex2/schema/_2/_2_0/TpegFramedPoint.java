@@ -52,7 +52,7 @@ public class TpegFramedPoint
     protected TpegPoint to;
     @XmlElement(required = true)
     protected TpegPoint from;
-    protected _ExtensionType tpegFramedPointExtension;
+    protected ExtensionType tpegFramedPointExtension;
 
     /**
      * Gets the value of the tpegFramedPointLocationType property.
@@ -155,10 +155,10 @@ public class TpegFramedPoint
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegFramedPointExtension() {
+    public ExtensionType getTpegFramedPointExtension() {
         return tpegFramedPointExtension;
     }
 
@@ -167,10 +167,10 @@ public class TpegFramedPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegFramedPointExtension(_ExtensionType value) {
+    public void setTpegFramedPointExtension(ExtensionType value) {
         this.tpegFramedPointExtension = value;
     }
 

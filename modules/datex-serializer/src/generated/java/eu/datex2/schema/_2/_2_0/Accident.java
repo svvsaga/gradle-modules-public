@@ -64,7 +64,7 @@ public class Accident
     protected List<Vehicle> vehicleInvolved;
     protected List<GroupOfVehiclesInvolved> groupOfVehiclesInvolved;
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    protected _ExtensionType accidentExtension;
+    protected ExtensionType accidentExtension;
 
     /**
      * Gets the value of the accidentCause property.
@@ -259,10 +259,10 @@ public class Accident
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAccidentExtension() {
+    public ExtensionType getAccidentExtension() {
         return accidentExtension;
     }
 
@@ -271,10 +271,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAccidentExtension(_ExtensionType value) {
+    public void setAccidentExtension(ExtensionType value) {
         this.accidentExtension = value;
     }
 

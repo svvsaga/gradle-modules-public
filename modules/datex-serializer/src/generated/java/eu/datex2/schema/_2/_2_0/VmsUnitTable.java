@@ -44,7 +44,7 @@ public class VmsUnitTable {
     protected String vmsUnitTableIdentification;
     @XmlElement(required = true)
     protected List<VmsUnitRecord> vmsUnitRecord;
-    protected _ExtensionType vmsUnitTableExtension;
+    protected ExtensionType vmsUnitTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -108,10 +108,10 @@ public class VmsUnitTable {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsUnitTableExtension() {
+    public ExtensionType getVmsUnitTableExtension() {
         return vmsUnitTableExtension;
     }
 
@@ -120,10 +120,10 @@ public class VmsUnitTable {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsUnitTableExtension(_ExtensionType value) {
+    public void setVmsUnitTableExtension(ExtensionType value) {
         this.vmsUnitTableExtension = value;
     }
 

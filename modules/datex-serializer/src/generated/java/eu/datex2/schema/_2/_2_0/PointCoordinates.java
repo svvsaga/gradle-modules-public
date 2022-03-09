@@ -37,7 +37,7 @@ public class PointCoordinates {
 
     protected float latitude;
     protected float longitude;
-    protected _ExtensionType pointCoordinatesExtension;
+    protected ExtensionType pointCoordinatesExtension;
 
     /**
      * Gets the value of the latitude property.
@@ -76,10 +76,10 @@ public class PointCoordinates {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointCoordinatesExtension() {
+    public ExtensionType getPointCoordinatesExtension() {
         return pointCoordinatesExtension;
     }
 
@@ -88,10 +88,10 @@ public class PointCoordinates {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointCoordinatesExtension(_ExtensionType value) {
+    public void setPointCoordinatesExtension(ExtensionType value) {
         this.pointCoordinatesExtension = value;
     }
 

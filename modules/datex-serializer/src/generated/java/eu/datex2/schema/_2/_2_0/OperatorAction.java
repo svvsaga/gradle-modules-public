@@ -52,7 +52,7 @@ public class OperatorAction
     protected String actionPlanIdentifier;
     @XmlSchemaType(name = "string")
     protected OperatorActionStatusEnum operatorActionStatus;
-    protected _ExtensionType operatorActionExtension;
+    protected ExtensionType operatorActionExtension;
 
     /**
      * Gets the value of the actionOrigin property.
@@ -131,10 +131,10 @@ public class OperatorAction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOperatorActionExtension() {
+    public ExtensionType getOperatorActionExtension() {
         return operatorActionExtension;
     }
 
@@ -143,10 +143,10 @@ public class OperatorAction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOperatorActionExtension(_ExtensionType value) {
+    public void setOperatorActionExtension(ExtensionType value) {
         this.operatorActionExtension = value;
     }
 

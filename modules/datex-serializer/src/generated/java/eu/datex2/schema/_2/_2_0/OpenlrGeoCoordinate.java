@@ -36,7 +36,7 @@ public class OpenlrGeoCoordinate {
 
     @XmlElement(required = true)
     protected PointCoordinates openlrCoordinate;
-    protected _ExtensionType openlrGeoCoordinateExtension;
+    protected ExtensionType openlrGeoCoordinateExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -67,10 +67,10 @@ public class OpenlrGeoCoordinate {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrGeoCoordinateExtension() {
+    public ExtensionType getOpenlrGeoCoordinateExtension() {
         return openlrGeoCoordinateExtension;
     }
 
@@ -79,10 +79,10 @@ public class OpenlrGeoCoordinate {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrGeoCoordinateExtension(_ExtensionType value) {
+    public void setOpenlrGeoCoordinateExtension(ExtensionType value) {
         this.openlrGeoCoordinateExtension = value;
     }
 

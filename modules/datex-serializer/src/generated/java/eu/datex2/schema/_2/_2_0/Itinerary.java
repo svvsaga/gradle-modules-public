@@ -43,7 +43,7 @@ public abstract class Itinerary
 {
 
     protected List<Destination> routeDestination;
-    protected _ExtensionType itineraryExtension;
+    protected ExtensionType itineraryExtension;
 
     /**
      * Gets the value of the routeDestination property.
@@ -79,10 +79,10 @@ public abstract class Itinerary
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getItineraryExtension() {
+    public ExtensionType getItineraryExtension() {
         return itineraryExtension;
     }
 
@@ -91,10 +91,10 @@ public abstract class Itinerary
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setItineraryExtension(_ExtensionType value) {
+    public void setItineraryExtension(ExtensionType value) {
         this.itineraryExtension = value;
     }
 

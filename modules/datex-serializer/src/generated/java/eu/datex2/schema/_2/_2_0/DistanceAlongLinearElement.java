@@ -37,17 +37,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class DistanceAlongLinearElement {
 
-    protected _ExtensionType distanceAlongLinearElementExtension;
+    protected ExtensionType distanceAlongLinearElementExtension;
 
     /**
      * Gets the value of the distanceAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDistanceAlongLinearElementExtension() {
+    public ExtensionType getDistanceAlongLinearElementExtension() {
         return distanceAlongLinearElementExtension;
     }
 
@@ -56,10 +56,10 @@ public abstract class DistanceAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDistanceAlongLinearElementExtension(_ExtensionType value) {
+    public void setDistanceAlongLinearElementExtension(ExtensionType value) {
         this.distanceAlongLinearElementExtension = value;
     }
 

@@ -43,22 +43,22 @@ import jakarta.xml.bind.annotation.XmlType;
 public class SiteMeasurements {
 
     @XmlElement(required = true)
-    protected _MeasurementSiteRecordVersionedReference measurementSiteReference;
+    protected MeasurementSiteRecordVersionedReference measurementSiteReference;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementTimeDefault;
-    protected List<_SiteMeasurementsIndexMeasuredValue> measuredValue;
-    protected _ExtensionType siteMeasurementsExtension;
+    protected List<SiteMeasurementsIndexMeasuredValue> measuredValue;
+    protected ExtensionType siteMeasurementsExtension;
 
     /**
      * Gets the value of the measurementSiteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public _MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
+    public MeasurementSiteRecordVersionedReference getMeasurementSiteReference() {
         return measurementSiteReference;
     }
 
@@ -67,10 +67,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasurementSiteRecordVersionedReference }
+     *     {@link MeasurementSiteRecordVersionedReference }
      *     
      */
-    public void setMeasurementSiteReference(_MeasurementSiteRecordVersionedReference value) {
+    public void setMeasurementSiteReference(MeasurementSiteRecordVersionedReference value) {
         this.measurementSiteReference = value;
     }
 
@@ -116,13 +116,13 @@ public class SiteMeasurements {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _SiteMeasurementsIndexMeasuredValue }
+     * {@link SiteMeasurementsIndexMeasuredValue }
      * 
      * 
      */
-    public List<_SiteMeasurementsIndexMeasuredValue> getMeasuredValue() {
+    public List<SiteMeasurementsIndexMeasuredValue> getMeasuredValue() {
         if (measuredValue == null) {
-            measuredValue = new ArrayList<_SiteMeasurementsIndexMeasuredValue>();
+            measuredValue = new ArrayList<SiteMeasurementsIndexMeasuredValue>();
         }
         return this.measuredValue;
     }
@@ -132,10 +132,10 @@ public class SiteMeasurements {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSiteMeasurementsExtension() {
+    public ExtensionType getSiteMeasurementsExtension() {
         return siteMeasurementsExtension;
     }
 
@@ -144,10 +144,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSiteMeasurementsExtension(_ExtensionType value) {
+    public void setSiteMeasurementsExtension(ExtensionType value) {
         this.siteMeasurementsExtension = value;
     }
 

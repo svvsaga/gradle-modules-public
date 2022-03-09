@@ -46,7 +46,7 @@ public class PredefinedNonOrderedLocationGroup
     protected MultilingualString predefinedNonOrderedLocationGroupName;
     @XmlElement(required = true)
     protected List<PredefinedLocation> predefinedLocation;
-    protected _ExtensionType predefinedNonOrderedLocationGroupExtension;
+    protected ExtensionType predefinedNonOrderedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -110,10 +110,10 @@ public class PredefinedNonOrderedLocationGroup
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedNonOrderedLocationGroupExtension() {
+    public ExtensionType getPredefinedNonOrderedLocationGroupExtension() {
         return predefinedNonOrderedLocationGroupExtension;
     }
 
@@ -122,10 +122,10 @@ public class PredefinedNonOrderedLocationGroup
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupExtension(_ExtensionType value) {
+    public void setPredefinedNonOrderedLocationGroupExtension(ExtensionType value) {
         this.predefinedNonOrderedLocationGroupExtension = value;
     }
 

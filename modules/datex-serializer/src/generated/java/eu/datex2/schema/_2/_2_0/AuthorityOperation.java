@@ -40,7 +40,7 @@ public class AuthorityOperation
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected AuthorityOperationTypeEnum authorityOperationType;
-    protected _ExtensionType authorityOperationExtension;
+    protected ExtensionType authorityOperationExtension;
 
     /**
      * Gets the value of the authorityOperationType property.
@@ -71,10 +71,10 @@ public class AuthorityOperation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAuthorityOperationExtension() {
+    public ExtensionType getAuthorityOperationExtension() {
         return authorityOperationExtension;
     }
 
@@ -83,10 +83,10 @@ public class AuthorityOperation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAuthorityOperationExtension(_ExtensionType value) {
+    public void setAuthorityOperationExtension(ExtensionType value) {
         this.authorityOperationExtension = value;
     }
 

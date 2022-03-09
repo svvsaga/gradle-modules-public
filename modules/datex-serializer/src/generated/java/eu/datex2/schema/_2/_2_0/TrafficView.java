@@ -48,10 +48,10 @@ public class TrafficView {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar trafficViewTime;
     @XmlElement(required = true)
-    protected _PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
     @XmlElement(required = true)
     protected List<LinearTrafficView> linearTrafficView;
-    protected _ExtensionType trafficViewExtension;
+    protected ExtensionType trafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -84,10 +84,10 @@ public class TrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public _PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
+    public PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
         return predefinedNonOrderedLocationGroupReference;
     }
 
@@ -96,10 +96,10 @@ public class TrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupReference(_PredefinedNonOrderedLocationGroupVersionedReference value) {
+    public void setPredefinedNonOrderedLocationGroupReference(PredefinedNonOrderedLocationGroupVersionedReference value) {
         this.predefinedNonOrderedLocationGroupReference = value;
     }
 
@@ -137,10 +137,10 @@ public class TrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficViewExtension() {
+    public ExtensionType getTrafficViewExtension() {
         return trafficViewExtension;
     }
 
@@ -149,10 +149,10 @@ public class TrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficViewExtension(_ExtensionType value) {
+    public void setTrafficViewExtension(ExtensionType value) {
         this.trafficViewExtension = value;
     }
 

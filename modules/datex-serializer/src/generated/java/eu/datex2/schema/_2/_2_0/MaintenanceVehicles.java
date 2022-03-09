@@ -43,7 +43,7 @@ public class MaintenanceVehicles {
     protected BigInteger numberOfMaintenanceVehicles;
     @XmlSchemaType(name = "string")
     protected List<MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
-    protected _ExtensionType maintenanceVehiclesExtension;
+    protected ExtensionType maintenanceVehiclesExtension;
 
     /**
      * Gets the value of the numberOfMaintenanceVehicles property.
@@ -103,10 +103,10 @@ public class MaintenanceVehicles {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMaintenanceVehiclesExtension() {
+    public ExtensionType getMaintenanceVehiclesExtension() {
         return maintenanceVehiclesExtension;
     }
 
@@ -115,10 +115,10 @@ public class MaintenanceVehicles {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMaintenanceVehiclesExtension(_ExtensionType value) {
+    public void setMaintenanceVehiclesExtension(ExtensionType value) {
         this.maintenanceVehiclesExtension = value;
     }
 

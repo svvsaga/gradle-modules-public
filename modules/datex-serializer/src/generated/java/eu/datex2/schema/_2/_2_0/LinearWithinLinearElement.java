@@ -60,7 +60,7 @@ public class LinearWithinLinearElement {
     protected DistanceAlongLinearElement fromPoint;
     @XmlElement(required = true)
     protected DistanceAlongLinearElement toPoint;
-    protected _ExtensionType linearWithinLinearElementExtension;
+    protected ExtensionType linearWithinLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfLinearSection property.
@@ -235,10 +235,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearWithinLinearElementExtension() {
+    public ExtensionType getLinearWithinLinearElementExtension() {
         return linearWithinLinearElementExtension;
     }
 
@@ -247,10 +247,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearWithinLinearElementExtension(_ExtensionType value) {
+    public void setLinearWithinLinearElementExtension(ExtensionType value) {
         this.linearWithinLinearElementExtension = value;
     }
 

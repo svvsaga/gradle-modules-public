@@ -38,7 +38,7 @@ public class PointDestination
 
     @XmlElement(required = true)
     protected Point point;
-    protected _ExtensionType pointDestinationExtension;
+    protected ExtensionType pointDestinationExtension;
 
     /**
      * Gets the value of the point property.
@@ -69,10 +69,10 @@ public class PointDestination
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointDestinationExtension() {
+    public ExtensionType getPointDestinationExtension() {
         return pointDestinationExtension;
     }
 
@@ -81,10 +81,10 @@ public class PointDestination
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointDestinationExtension(_ExtensionType value) {
+    public void setPointDestinationExtension(ExtensionType value) {
         this.pointDestinationExtension = value;
     }
 

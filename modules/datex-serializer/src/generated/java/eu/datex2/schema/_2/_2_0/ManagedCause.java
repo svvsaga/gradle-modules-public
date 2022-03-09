@@ -35,18 +35,18 @@ public class ManagedCause
     extends Cause
 {
 
-    protected _SituationRecordVersionedReference managedCause;
-    protected _ExtensionType managedCauseExtension;
+    protected SituationRecordVersionedReference managedCause;
+    protected ExtensionType managedCauseExtension;
 
     /**
      * Gets the value of the managedCause property.
      * 
      * @return
      *     possible object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public _SituationRecordVersionedReference getManagedCause() {
+    public SituationRecordVersionedReference getManagedCause() {
         return managedCause;
     }
 
@@ -55,10 +55,10 @@ public class ManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _SituationRecordVersionedReference }
+     *     {@link SituationRecordVersionedReference }
      *     
      */
-    public void setManagedCause(_SituationRecordVersionedReference value) {
+    public void setManagedCause(SituationRecordVersionedReference value) {
         this.managedCause = value;
     }
 
@@ -67,10 +67,10 @@ public class ManagedCause
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getManagedCauseExtension() {
+    public ExtensionType getManagedCauseExtension() {
         return managedCauseExtension;
     }
 
@@ -79,10 +79,10 @@ public class ManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setManagedCauseExtension(_ExtensionType value) {
+    public void setManagedCauseExtension(ExtensionType value) {
         this.managedCauseExtension = value;
     }
 

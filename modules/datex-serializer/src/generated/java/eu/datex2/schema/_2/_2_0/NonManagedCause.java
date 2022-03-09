@@ -41,7 +41,7 @@ public class NonManagedCause
     protected MultilingualString causeDescription;
     @XmlSchemaType(name = "string")
     protected CauseTypeEnum causeType;
-    protected _ExtensionType nonManagedCauseExtension;
+    protected ExtensionType nonManagedCauseExtension;
 
     /**
      * Gets the value of the causeDescription property.
@@ -96,10 +96,10 @@ public class NonManagedCause
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNonManagedCauseExtension() {
+    public ExtensionType getNonManagedCauseExtension() {
         return nonManagedCauseExtension;
     }
 
@@ -108,10 +108,10 @@ public class NonManagedCause
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNonManagedCauseExtension(_ExtensionType value) {
+    public void setNonManagedCauseExtension(ExtensionType value) {
         this.nonManagedCauseExtension = value;
     }
 

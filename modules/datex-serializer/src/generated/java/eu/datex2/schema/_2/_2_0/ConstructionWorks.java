@@ -38,7 +38,7 @@ public class ConstructionWorks
 
     @XmlSchemaType(name = "string")
     protected ConstructionWorkTypeEnum constructionWorkType;
-    protected _ExtensionType constructionWorksExtension;
+    protected ExtensionType constructionWorksExtension;
 
     /**
      * Gets the value of the constructionWorkType property.
@@ -69,10 +69,10 @@ public class ConstructionWorks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getConstructionWorksExtension() {
+    public ExtensionType getConstructionWorksExtension() {
         return constructionWorksExtension;
     }
 
@@ -81,10 +81,10 @@ public class ConstructionWorks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setConstructionWorksExtension(_ExtensionType value) {
+    public void setConstructionWorksExtension(ExtensionType value) {
         this.constructionWorksExtension = value;
     }
 

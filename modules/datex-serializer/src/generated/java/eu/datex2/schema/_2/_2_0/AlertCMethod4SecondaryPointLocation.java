@@ -40,7 +40,7 @@ public class AlertCMethod4SecondaryPointLocation {
     protected AlertCLocation alertCLocation;
     @XmlElement(required = true)
     protected OffsetDistance offsetDistance;
-    protected _ExtensionType alertCMethod4SecondaryPointLocationExtension;
+    protected ExtensionType alertCMethod4SecondaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -95,10 +95,10 @@ public class AlertCMethod4SecondaryPointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4SecondaryPointLocationExtension() {
+    public ExtensionType getAlertCMethod4SecondaryPointLocationExtension() {
         return alertCMethod4SecondaryPointLocationExtension;
     }
 
@@ -107,10 +107,10 @@ public class AlertCMethod4SecondaryPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4SecondaryPointLocationExtension(_ExtensionType value) {
+    public void setAlertCMethod4SecondaryPointLocationExtension(ExtensionType value) {
         this.alertCMethod4SecondaryPointLocationExtension = value;
     }
 

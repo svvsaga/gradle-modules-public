@@ -40,17 +40,17 @@ public abstract class NonRoadEventInformation
     extends SituationRecord
 {
 
-    protected _ExtensionType nonRoadEventInformationExtension;
+    protected ExtensionType nonRoadEventInformationExtension;
 
     /**
      * Gets the value of the nonRoadEventInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNonRoadEventInformationExtension() {
+    public ExtensionType getNonRoadEventInformationExtension() {
         return nonRoadEventInformationExtension;
     }
 
@@ -59,10 +59,10 @@ public abstract class NonRoadEventInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNonRoadEventInformationExtension(_ExtensionType value) {
+    public void setNonRoadEventInformationExtension(ExtensionType value) {
         this.nonRoadEventInformationExtension = value;
     }
 

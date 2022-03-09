@@ -42,7 +42,7 @@ public class MaintenanceWorks
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<RoadMaintenanceTypeEnum> roadMaintenanceType;
-    protected _ExtensionType maintenanceWorksExtension;
+    protected ExtensionType maintenanceWorksExtension;
 
     /**
      * Gets the value of the roadMaintenanceType property.
@@ -78,10 +78,10 @@ public class MaintenanceWorks
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMaintenanceWorksExtension() {
+    public ExtensionType getMaintenanceWorksExtension() {
         return maintenanceWorksExtension;
     }
 
@@ -90,10 +90,10 @@ public class MaintenanceWorks
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMaintenanceWorksExtension(_ExtensionType value) {
+    public void setMaintenanceWorksExtension(ExtensionType value) {
         this.maintenanceWorksExtension = value;
     }
 

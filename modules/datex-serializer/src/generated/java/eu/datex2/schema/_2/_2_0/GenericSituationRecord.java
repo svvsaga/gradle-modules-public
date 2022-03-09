@@ -38,7 +38,7 @@ public abstract class GenericSituationRecord
 
     @XmlElement(required = true)
     protected String genericSituationRecordName;
-    protected _ExtensionType genericSituationRecordExtension;
+    protected ExtensionType genericSituationRecordExtension;
 
     /**
      * Gets the value of the genericSituationRecordName property.
@@ -69,10 +69,10 @@ public abstract class GenericSituationRecord
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGenericSituationRecordExtension() {
+    public ExtensionType getGenericSituationRecordExtension() {
         return genericSituationRecordExtension;
     }
 
@@ -81,10 +81,10 @@ public abstract class GenericSituationRecord
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGenericSituationRecordExtension(_ExtensionType value) {
+    public void setGenericSituationRecordExtension(ExtensionType value) {
         this.genericSituationRecordExtension = value;
     }
 

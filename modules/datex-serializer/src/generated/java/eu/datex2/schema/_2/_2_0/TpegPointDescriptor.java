@@ -39,17 +39,17 @@ public abstract class TpegPointDescriptor
     extends TpegDescriptor
 {
 
-    protected _ExtensionType tpegPointDescriptorExtension;
+    protected ExtensionType tpegPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegPointDescriptorExtension() {
+    public ExtensionType getTpegPointDescriptorExtension() {
         return tpegPointDescriptorExtension;
     }
 
@@ -58,10 +58,10 @@ public abstract class TpegPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegPointDescriptorExtension(ExtensionType value) {
         this.tpegPointDescriptorExtension = value;
     }
 

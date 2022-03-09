@@ -68,7 +68,7 @@ public class Vehicle {
     protected List<AxleSpacing> axleSpacingOnVehicle;
     protected List<AxleWeight> specificAxleWeight;
     protected HazardousMaterials hazardousGoodsAssociatedWithVehicle;
-    protected _ExtensionType vehicleExtension;
+    protected ExtensionType vehicleExtension;
 
     /**
      * Gets the value of the vehicleColour property.
@@ -349,10 +349,10 @@ public class Vehicle {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleExtension() {
+    public ExtensionType getVehicleExtension() {
         return vehicleExtension;
     }
 
@@ -361,10 +361,10 @@ public class Vehicle {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleExtension(_ExtensionType value) {
+    public void setVehicleExtension(ExtensionType value) {
         this.vehicleExtension = value;
     }
 

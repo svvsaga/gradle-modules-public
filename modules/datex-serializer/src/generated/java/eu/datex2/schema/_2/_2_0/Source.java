@@ -49,7 +49,7 @@ public class Source {
     @XmlSchemaType(name = "string")
     protected SourceTypeEnum sourceType;
     protected Boolean reliable;
-    protected _ExtensionType sourceExtension;
+    protected ExtensionType sourceExtension;
 
     /**
      * Gets the value of the sourceCountry property.
@@ -176,10 +176,10 @@ public class Source {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSourceExtension() {
+    public ExtensionType getSourceExtension() {
         return sourceExtension;
     }
 
@@ -188,10 +188,10 @@ public class Source {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSourceExtension(_ExtensionType value) {
+    public void setSourceExtension(ExtensionType value) {
         this.sourceExtension = value;
     }
 

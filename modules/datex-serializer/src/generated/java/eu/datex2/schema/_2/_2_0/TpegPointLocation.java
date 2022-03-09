@@ -43,7 +43,7 @@ public abstract class TpegPointLocation {
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected DirectionEnum tpegDirection;
-    protected _ExtensionType tpegPointLocationExtension;
+    protected ExtensionType tpegPointLocationExtension;
 
     /**
      * Gets the value of the tpegDirection property.
@@ -74,10 +74,10 @@ public abstract class TpegPointLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegPointLocationExtension() {
+    public ExtensionType getTpegPointLocationExtension() {
         return tpegPointLocationExtension;
     }
 
@@ -86,10 +86,10 @@ public abstract class TpegPointLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegPointLocationExtension(_ExtensionType value) {
+    public void setTpegPointLocationExtension(ExtensionType value) {
         this.tpegPointLocationExtension = value;
     }
 

@@ -40,7 +40,7 @@ public class MeasurementEquipmentFault
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected MeasurementEquipmentFaultEnum measurementEquipmentFault;
-    protected _ExtensionType measurementEquipmentFaultExtension;
+    protected ExtensionType measurementEquipmentFaultExtension;
 
     /**
      * Gets the value of the measurementEquipmentFault property.
@@ -71,10 +71,10 @@ public class MeasurementEquipmentFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementEquipmentFaultExtension() {
+    public ExtensionType getMeasurementEquipmentFaultExtension() {
         return measurementEquipmentFaultExtension;
     }
 
@@ -83,10 +83,10 @@ public class MeasurementEquipmentFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementEquipmentFaultExtension(_ExtensionType value) {
+    public void setMeasurementEquipmentFaultExtension(ExtensionType value) {
         this.measurementEquipmentFaultExtension = value;
     }
 

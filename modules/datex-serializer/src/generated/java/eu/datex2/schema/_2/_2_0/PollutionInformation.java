@@ -40,7 +40,7 @@ public class PollutionInformation
 
     @XmlElement(required = true)
     protected List<Pollution> pollution;
-    protected _ExtensionType pollutionInformationExtension;
+    protected ExtensionType pollutionInformationExtension;
 
     /**
      * Gets the value of the pollution property.
@@ -76,10 +76,10 @@ public class PollutionInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPollutionInformationExtension() {
+    public ExtensionType getPollutionInformationExtension() {
         return pollutionInformationExtension;
     }
 
@@ -88,10 +88,10 @@ public class PollutionInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPollutionInformationExtension(_ExtensionType value) {
+    public void setPollutionInformationExtension(ExtensionType value) {
         this.pollutionInformationExtension = value;
     }
 

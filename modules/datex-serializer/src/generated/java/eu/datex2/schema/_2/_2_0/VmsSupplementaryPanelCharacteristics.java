@@ -60,7 +60,7 @@ public class VmsSupplementaryPanelCharacteristics {
     protected Float supplementaryPanelPositionY;
     @XmlSchemaType(name = "string")
     protected PositionRelativeEnum relativePositionToPictogramArea;
-    protected _ExtensionType vmsSupplementaryPanelCharacteristicsExtension;
+    protected ExtensionType vmsSupplementaryPanelCharacteristicsExtension;
 
     /**
      * Gets the value of the supplementaryPictogramCodeListIdentifier property.
@@ -259,10 +259,10 @@ public class VmsSupplementaryPanelCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSupplementaryPanelCharacteristicsExtension() {
+    public ExtensionType getVmsSupplementaryPanelCharacteristicsExtension() {
         return vmsSupplementaryPanelCharacteristicsExtension;
     }
 
@@ -271,10 +271,10 @@ public class VmsSupplementaryPanelCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPanelCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsSupplementaryPanelCharacteristicsExtension(ExtensionType value) {
         this.vmsSupplementaryPanelCharacteristicsExtension = value;
     }
 

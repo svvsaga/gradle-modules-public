@@ -21,7 +21,6 @@ jaxb {
                 "../datex-schemas/src/main/resources/DATEXIISchema_2_2_0.xsd",
             )
             outputDir = file("src/generated/java")
-            binding = file("../datex-schemas/src/main/resources/binding.xjb")
             header = false
             args = listOf("-XautoNameResolution")
         }

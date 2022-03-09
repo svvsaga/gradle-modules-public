@@ -59,7 +59,7 @@ public class ElaboratedDataPublication
     protected ReferenceSettings referenceSettings;
     @XmlElement(required = true)
     protected List<ElaboratedData> elaboratedData;
-    protected _ExtensionType elaboratedDataPublicationExtension;
+    protected ExtensionType elaboratedDataPublicationExtension;
 
     /**
      * Gets the value of the forecastDefault property.
@@ -215,10 +215,10 @@ public class ElaboratedDataPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataPublicationExtension() {
+    public ExtensionType getElaboratedDataPublicationExtension() {
         return elaboratedDataPublicationExtension;
     }
 
@@ -227,10 +227,10 @@ public class ElaboratedDataPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataPublicationExtension(_ExtensionType value) {
+    public void setElaboratedDataPublicationExtension(ExtensionType value) {
         this.elaboratedDataPublicationExtension = value;
     }
 

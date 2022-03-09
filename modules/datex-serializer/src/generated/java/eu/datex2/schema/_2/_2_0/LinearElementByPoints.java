@@ -44,10 +44,10 @@ public class LinearElementByPoints
 
     @XmlElement(required = true)
     protected Referent startPointOfLinearElement;
-    protected List<_IntermediatePointOnLinearElement> intermediatePointOnLinearElement;
+    protected List<IntermediatePointOnLinearElement> intermediatePointOnLinearElement;
     @XmlElement(required = true)
     protected Referent endPointOfLinearElement;
-    protected _ExtensionType linearElementByPointsExtension;
+    protected ExtensionType linearElementByPointsExtension;
 
     /**
      * Gets the value of the startPointOfLinearElement property.
@@ -91,13 +91,13 @@ public class LinearElementByPoints
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _IntermediatePointOnLinearElement }
+     * {@link IntermediatePointOnLinearElement }
      * 
      * 
      */
-    public List<_IntermediatePointOnLinearElement> getIntermediatePointOnLinearElement() {
+    public List<IntermediatePointOnLinearElement> getIntermediatePointOnLinearElement() {
         if (intermediatePointOnLinearElement == null) {
-            intermediatePointOnLinearElement = new ArrayList<_IntermediatePointOnLinearElement>();
+            intermediatePointOnLinearElement = new ArrayList<IntermediatePointOnLinearElement>();
         }
         return this.intermediatePointOnLinearElement;
     }
@@ -131,10 +131,10 @@ public class LinearElementByPoints
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearElementByPointsExtension() {
+    public ExtensionType getLinearElementByPointsExtension() {
         return linearElementByPointsExtension;
     }
 
@@ -143,10 +143,10 @@ public class LinearElementByPoints
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearElementByPointsExtension(_ExtensionType value) {
+    public void setLinearElementByPointsExtension(ExtensionType value) {
         this.linearElementByPointsExtension = value;
     }
 

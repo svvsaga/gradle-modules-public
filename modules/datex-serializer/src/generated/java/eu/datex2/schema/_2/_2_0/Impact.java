@@ -58,7 +58,7 @@ public class Impact {
     @XmlSchemaType(name = "string")
     protected TrafficConstrictionTypeEnum trafficConstrictionType;
     protected Delays delays;
-    protected _ExtensionType impactExtension;
+    protected ExtensionType impactExtension;
 
     /**
      * Gets the value of the capacityRemaining property.
@@ -233,10 +233,10 @@ public class Impact {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getImpactExtension() {
+    public ExtensionType getImpactExtension() {
         return impactExtension;
     }
 
@@ -245,10 +245,10 @@ public class Impact {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setImpactExtension(_ExtensionType value) {
+    public void setImpactExtension(ExtensionType value) {
         this.impactExtension = value;
     }
 

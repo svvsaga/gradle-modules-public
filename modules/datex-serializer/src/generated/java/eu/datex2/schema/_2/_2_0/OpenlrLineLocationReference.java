@@ -45,7 +45,7 @@ public class OpenlrLineLocationReference {
     @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
     protected OpenlrOffsets openlrOffsets;
-    protected _ExtensionType openlrLineLocationReferenceExtension;
+    protected ExtensionType openlrLineLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrLocationReferencePoint property.
@@ -129,10 +129,10 @@ public class OpenlrLineLocationReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLineLocationReferenceExtension() {
+    public ExtensionType getOpenlrLineLocationReferenceExtension() {
         return openlrLineLocationReferenceExtension;
     }
 
@@ -141,10 +141,10 @@ public class OpenlrLineLocationReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLineLocationReferenceExtension(_ExtensionType value) {
+    public void setOpenlrLineLocationReferenceExtension(ExtensionType value) {
         this.openlrLineLocationReferenceExtension = value;
     }
 

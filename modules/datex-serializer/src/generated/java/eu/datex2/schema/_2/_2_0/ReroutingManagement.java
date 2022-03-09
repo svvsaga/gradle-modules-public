@@ -60,7 +60,7 @@ public class ReroutingManagement
     protected String exit;
     protected String roadOrJunctionNumber;
     protected List<Itinerary> alternativeRoute;
-    protected _ExtensionType reroutingManagementExtension;
+    protected ExtensionType reroutingManagementExtension;
 
     /**
      * Gets the value of the reroutingManagementType property.
@@ -245,10 +245,10 @@ public class ReroutingManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getReroutingManagementExtension() {
+    public ExtensionType getReroutingManagementExtension() {
         return reroutingManagementExtension;
     }
 
@@ -257,10 +257,10 @@ public class ReroutingManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setReroutingManagementExtension(_ExtensionType value) {
+    public void setReroutingManagementExtension(ExtensionType value) {
         this.reroutingManagementExtension = value;
     }
 

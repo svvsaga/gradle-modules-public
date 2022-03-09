@@ -109,7 +109,7 @@ public abstract class SituationRecord {
     @XmlElement(required = true)
     protected GroupOfLocations groupOfLocations;
     protected Management management;
-    protected _ExtensionType situationRecordExtension;
+    protected ExtensionType situationRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -543,10 +543,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSituationRecordExtension() {
+    public ExtensionType getSituationRecordExtension() {
         return situationRecordExtension;
     }
 
@@ -555,10 +555,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSituationRecordExtension(_ExtensionType value) {
+    public void setSituationRecordExtension(ExtensionType value) {
         this.situationRecordExtension = value;
     }
 

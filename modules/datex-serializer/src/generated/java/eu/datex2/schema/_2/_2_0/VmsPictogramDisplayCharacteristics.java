@@ -85,7 +85,7 @@ public class VmsPictogramDisplayCharacteristics {
     @XmlSchemaType(name = "string")
     protected PositionRelativeEnum pictogramPositionRelativeToText;
     protected VmsSupplementaryPanelCharacteristics vmsSupplementaryPanelCharacteristics;
-    protected _ExtensionType vmsPictogramDisplayCharacteristicsExtension;
+    protected ExtensionType vmsPictogramDisplayCharacteristicsExtension;
 
     /**
      * Gets the value of the pictogramLanternsPresent property.
@@ -452,10 +452,10 @@ public class VmsPictogramDisplayCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsPictogramDisplayCharacteristicsExtension() {
+    public ExtensionType getVmsPictogramDisplayCharacteristicsExtension() {
         return vmsPictogramDisplayCharacteristicsExtension;
     }
 
@@ -464,10 +464,10 @@ public class VmsPictogramDisplayCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsPictogramDisplayCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsPictogramDisplayCharacteristicsExtension(ExtensionType value) {
         this.vmsPictogramDisplayCharacteristicsExtension = value;
     }
 

@@ -49,7 +49,7 @@ public class RoadSurfaceConditionMeasurements {
     protected KilogramsConcentrationValue deIcingConcentration;
     protected FloatingPointMetreDistanceValue depthOfSnow;
     protected FloatingPointMetreDistanceValue waterFilmThickness;
-    protected _RoadSurfaceConditionMeasurementsExtensionType roadSurfaceConditionMeasurementsExtension;
+    protected RoadSurfaceConditionMeasurementsExtensionType roadSurfaceConditionMeasurementsExtension;
 
     /**
      * Gets the value of the roadSurfaceTemperature property.
@@ -200,10 +200,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @return
      *     possible object is
-     *     {@link _RoadSurfaceConditionMeasurementsExtensionType }
+     *     {@link RoadSurfaceConditionMeasurementsExtensionType }
      *     
      */
-    public _RoadSurfaceConditionMeasurementsExtensionType getRoadSurfaceConditionMeasurementsExtension() {
+    public RoadSurfaceConditionMeasurementsExtensionType getRoadSurfaceConditionMeasurementsExtension() {
         return roadSurfaceConditionMeasurementsExtension;
     }
 
@@ -212,10 +212,10 @@ public class RoadSurfaceConditionMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link _RoadSurfaceConditionMeasurementsExtensionType }
+     *     {@link RoadSurfaceConditionMeasurementsExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionMeasurementsExtension(_RoadSurfaceConditionMeasurementsExtensionType value) {
+    public void setRoadSurfaceConditionMeasurementsExtension(RoadSurfaceConditionMeasurementsExtensionType value) {
         this.roadSurfaceConditionMeasurementsExtension = value;
     }
 

@@ -49,7 +49,7 @@ public class Wind {
     protected SpeedValue maximumWindSpeed;
     protected DirectionBearingValue windDirectionBearing;
     protected DirectionCompassValue windDirectionCompass;
-    protected _ExtensionType windExtension;
+    protected ExtensionType windExtension;
 
     /**
      * Gets the value of the windMeasurementHeight property.
@@ -176,10 +176,10 @@ public class Wind {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWindExtension() {
+    public ExtensionType getWindExtension() {
         return windExtension;
     }
 
@@ -188,10 +188,10 @@ public class Wind {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWindExtension(_ExtensionType value) {
+    public void setWindExtension(ExtensionType value) {
         this.windExtension = value;
     }
 

@@ -67,7 +67,7 @@ public class HazardousMaterials {
     protected String undgNumber;
     protected Float volumeOfDangerousGoods;
     protected Float weightOfDangerousGoods;
-    protected _ExtensionType hazardousMaterialsExtension;
+    protected ExtensionType hazardousMaterialsExtension;
 
     /**
      * Gets the value of the chemicalName property.
@@ -314,10 +314,10 @@ public class HazardousMaterials {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHazardousMaterialsExtension() {
+    public ExtensionType getHazardousMaterialsExtension() {
         return hazardousMaterialsExtension;
     }
 
@@ -326,10 +326,10 @@ public class HazardousMaterials {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHazardousMaterialsExtension(_ExtensionType value) {
+    public void setHazardousMaterialsExtension(ExtensionType value) {
         this.hazardousMaterialsExtension = value;
     }
 

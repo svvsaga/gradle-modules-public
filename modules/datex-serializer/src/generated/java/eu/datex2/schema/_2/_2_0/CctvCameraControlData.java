@@ -42,7 +42,7 @@ public class CctvCameraControlData {
     protected CctvCameraTrueNorthPosition cctvCameraTrueNorthPosition;
     protected List<CctvCameraPresets> availablePresetsForCctvCamera;
     protected CctvCameraControlLimits cctvCameraControlLimits;
-    protected _ExtensionType cctvCameraControlDataExtension;
+    protected ExtensionType cctvCameraControlDataExtension;
 
     /**
      * Gets the value of the cctvCameraTrueNorthPosition property.
@@ -126,10 +126,10 @@ public class CctvCameraControlData {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvCameraControlDataExtension() {
+    public ExtensionType getCctvCameraControlDataExtension() {
         return cctvCameraControlDataExtension;
     }
 
@@ -138,10 +138,10 @@ public class CctvCameraControlData {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvCameraControlDataExtension(_ExtensionType value) {
+    public void setCctvCameraControlDataExtension(ExtensionType value) {
         this.cctvCameraControlDataExtension = value;
     }
 

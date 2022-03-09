@@ -41,7 +41,7 @@ public class VehicleFlowValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
-    protected _ExtensionType vehicleFlowValueExtension;
+    protected ExtensionType vehicleFlowValueExtension;
 
     /**
      * Gets the value of the vehicleFlowRate property.
@@ -72,10 +72,10 @@ public class VehicleFlowValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVehicleFlowValueExtension() {
+    public ExtensionType getVehicleFlowValueExtension() {
         return vehicleFlowValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class VehicleFlowValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVehicleFlowValueExtension(_ExtensionType value) {
+    public void setVehicleFlowValueExtension(ExtensionType value) {
         this.vehicleFlowValueExtension = value;
     }
 

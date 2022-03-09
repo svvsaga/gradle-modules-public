@@ -39,7 +39,7 @@ public class CctvCameraPresets {
     @XmlElement(required = true)
     protected String cctvCameraPresetIdentification;
     protected String cctvCameraPresetName;
-    protected _ExtensionType cctvCameraPresetsExtension;
+    protected ExtensionType cctvCameraPresetsExtension;
 
     /**
      * Gets the value of the cctvCameraPresetIdentification property.
@@ -94,10 +94,10 @@ public class CctvCameraPresets {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvCameraPresetsExtension() {
+    public ExtensionType getCctvCameraPresetsExtension() {
         return cctvCameraPresetsExtension;
     }
 
@@ -106,10 +106,10 @@ public class CctvCameraPresets {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvCameraPresetsExtension(_ExtensionType value) {
+    public void setCctvCameraPresetsExtension(ExtensionType value) {
         this.cctvCameraPresetsExtension = value;
     }
 

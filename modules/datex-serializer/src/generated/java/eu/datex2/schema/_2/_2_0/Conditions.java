@@ -43,7 +43,7 @@ public class Conditions
 
     @XmlSchemaType(name = "string")
     protected DrivingConditionTypeEnum drivingConditionType;
-    protected _ExtensionType conditionsExtension;
+    protected ExtensionType conditionsExtension;
 
     /**
      * Gets the value of the drivingConditionType property.
@@ -74,10 +74,10 @@ public class Conditions
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getConditionsExtension() {
+    public ExtensionType getConditionsExtension() {
         return conditionsExtension;
     }
 
@@ -86,10 +86,10 @@ public class Conditions
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setConditionsExtension(_ExtensionType value) {
+    public void setConditionsExtension(ExtensionType value) {
         this.conditionsExtension = value;
     }
 

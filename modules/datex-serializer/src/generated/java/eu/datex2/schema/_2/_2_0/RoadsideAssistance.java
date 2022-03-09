@@ -40,7 +40,7 @@ public class RoadsideAssistance
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected RoadsideAssistanceTypeEnum roadsideAssistanceType;
-    protected _ExtensionType roadsideAssistanceExtension;
+    protected ExtensionType roadsideAssistanceExtension;
 
     /**
      * Gets the value of the roadsideAssistanceType property.
@@ -71,10 +71,10 @@ public class RoadsideAssistance
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadsideAssistanceExtension() {
+    public ExtensionType getRoadsideAssistanceExtension() {
         return roadsideAssistanceExtension;
     }
 
@@ -83,10 +83,10 @@ public class RoadsideAssistance
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadsideAssistanceExtension(_ExtensionType value) {
+    public void setRoadsideAssistanceExtension(ExtensionType value) {
         this.roadsideAssistanceExtension = value;
     }
 

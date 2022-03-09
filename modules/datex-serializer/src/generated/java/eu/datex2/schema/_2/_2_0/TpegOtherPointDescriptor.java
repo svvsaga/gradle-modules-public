@@ -40,7 +40,7 @@ public class TpegOtherPointDescriptor
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03OtherPointDescriptorSubtypeEnum tpegOtherPointDescriptorType;
-    protected _ExtensionType tpegOtherPointDescriptorExtension;
+    protected ExtensionType tpegOtherPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegOtherPointDescriptorType property.
@@ -71,10 +71,10 @@ public class TpegOtherPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegOtherPointDescriptorExtension() {
+    public ExtensionType getTpegOtherPointDescriptorExtension() {
         return tpegOtherPointDescriptorExtension;
     }
 
@@ -83,10 +83,10 @@ public class TpegOtherPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegOtherPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegOtherPointDescriptorExtension(ExtensionType value) {
         this.tpegOtherPointDescriptorExtension = value;
     }
 

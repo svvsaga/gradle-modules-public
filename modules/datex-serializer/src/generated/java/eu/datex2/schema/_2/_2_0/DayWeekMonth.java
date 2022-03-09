@@ -46,7 +46,7 @@ public class DayWeekMonth {
     protected List<WeekOfMonthEnum> applicableWeek;
     @XmlSchemaType(name = "string")
     protected List<MonthOfYearEnum> applicableMonth;
-    protected _ExtensionType dayWeekMonthExtension;
+    protected ExtensionType dayWeekMonthExtension;
 
     /**
      * Gets the value of the applicableDay property.
@@ -140,10 +140,10 @@ public class DayWeekMonth {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDayWeekMonthExtension() {
+    public ExtensionType getDayWeekMonthExtension() {
         return dayWeekMonthExtension;
     }
 
@@ -152,10 +152,10 @@ public class DayWeekMonth {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDayWeekMonthExtension(_ExtensionType value) {
+    public void setDayWeekMonthExtension(ExtensionType value) {
         this.dayWeekMonthExtension = value;
     }
 

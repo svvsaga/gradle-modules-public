@@ -42,7 +42,7 @@ public class GenericPublication
 
     @XmlElement(required = true)
     protected String genericPublicationName;
-    protected _GenericPublicationExtensionType genericPublicationExtension;
+    protected GenericPublicationExtensionType genericPublicationExtension;
 
     /**
      * Gets the value of the genericPublicationName property.
@@ -73,10 +73,10 @@ public class GenericPublication
      * 
      * @return
      *     possible object is
-     *     {@link _GenericPublicationExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public _GenericPublicationExtensionType getGenericPublicationExtension() {
+    public GenericPublicationExtensionType getGenericPublicationExtension() {
         return genericPublicationExtension;
     }
 
@@ -85,10 +85,10 @@ public class GenericPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _GenericPublicationExtensionType }
+     *     {@link GenericPublicationExtensionType }
      *     
      */
-    public void setGenericPublicationExtension(_GenericPublicationExtensionType value) {
+    public void setGenericPublicationExtension(GenericPublicationExtensionType value) {
         this.genericPublicationExtension = value;
     }
 

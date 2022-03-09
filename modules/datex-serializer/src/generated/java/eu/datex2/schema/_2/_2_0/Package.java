@@ -46,7 +46,7 @@ public class Package {
     protected String definition;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected _ExtensionType packageExtension;
+    protected ExtensionType packageExtension;
 
     /**
      * Gets the value of the packageName property.
@@ -149,10 +149,10 @@ public class Package {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPackageExtension() {
+    public ExtensionType getPackageExtension() {
         return packageExtension;
     }
 
@@ -161,10 +161,10 @@ public class Package {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPackageExtension(_ExtensionType value) {
+    public void setPackageExtension(ExtensionType value) {
         this.packageExtension = value;
     }
 

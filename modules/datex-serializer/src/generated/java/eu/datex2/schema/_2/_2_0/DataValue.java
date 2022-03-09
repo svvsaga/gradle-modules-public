@@ -68,7 +68,7 @@ public abstract class DataValue {
 
     protected Boolean dataError;
     protected MultilingualString reasonForDataError;
-    protected _ExtensionType dataValueExtension;
+    protected ExtensionType dataValueExtension;
     @XmlAttribute(name = "accuracy")
     protected Float accuracy;
     @XmlAttribute(name = "computationalMethod")
@@ -137,10 +137,10 @@ public abstract class DataValue {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDataValueExtension() {
+    public ExtensionType getDataValueExtension() {
         return dataValueExtension;
     }
 
@@ -149,10 +149,10 @@ public abstract class DataValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDataValueExtension(_ExtensionType value) {
+    public void setDataValueExtension(ExtensionType value) {
         this.dataValueExtension = value;
     }
 

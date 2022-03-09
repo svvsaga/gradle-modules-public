@@ -38,7 +38,7 @@ public class Mobility {
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected MobilityEnum mobilityType;
-    protected _ExtensionType mobilityExtension;
+    protected ExtensionType mobilityExtension;
 
     /**
      * Gets the value of the mobilityType property.
@@ -69,10 +69,10 @@ public class Mobility {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMobilityExtension() {
+    public ExtensionType getMobilityExtension() {
         return mobilityExtension;
     }
 
@@ -81,10 +81,10 @@ public class Mobility {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMobilityExtension(_ExtensionType value) {
+    public void setMobilityExtension(ExtensionType value) {
         this.mobilityExtension = value;
     }
 

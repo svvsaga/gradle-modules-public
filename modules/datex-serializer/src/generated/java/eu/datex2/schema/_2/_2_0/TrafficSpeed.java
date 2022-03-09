@@ -39,7 +39,7 @@ public class TrafficSpeed
 
     protected SpeedValue averageVehicleSpeed;
     protected SpeedPercentile speedPercentile;
-    protected _ExtensionType trafficSpeedExtension;
+    protected ExtensionType trafficSpeedExtension;
 
     /**
      * Gets the value of the averageVehicleSpeed property.
@@ -94,10 +94,10 @@ public class TrafficSpeed
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTrafficSpeedExtension() {
+    public ExtensionType getTrafficSpeedExtension() {
         return trafficSpeedExtension;
     }
 
@@ -106,10 +106,10 @@ public class TrafficSpeed
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTrafficSpeedExtension(_ExtensionType value) {
+    public void setTrafficSpeedExtension(ExtensionType value) {
         this.trafficSpeedExtension = value;
     }
 

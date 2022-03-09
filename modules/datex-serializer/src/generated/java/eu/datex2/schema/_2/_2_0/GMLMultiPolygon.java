@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class GMLMultiPolygon {
 
     protected List<GMLPolygon> polygonMember;
-    protected _ExtensionType gmlMultiPolygonExtension;
+    protected ExtensionType gmlMultiPolygonExtension;
     @XmlAttribute(name = "srsName", required = true)
     protected String srsName;
     @XmlAttribute(name = "gid")
@@ -79,10 +79,10 @@ public class GMLMultiPolygon {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGmlMultiPolygonExtension() {
+    public ExtensionType getGmlMultiPolygonExtension() {
         return gmlMultiPolygonExtension;
     }
 
@@ -91,10 +91,10 @@ public class GMLMultiPolygon {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGmlMultiPolygonExtension(_ExtensionType value) {
+    public void setGmlMultiPolygonExtension(ExtensionType value) {
         this.gmlMultiPolygonExtension = value;
     }
 

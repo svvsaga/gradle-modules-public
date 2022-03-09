@@ -41,7 +41,7 @@ public class HeaviestAxleWeightCharacteristic {
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
     protected float heaviestAxleWeight;
-    protected _ExtensionType heaviestAxleWeightCharacteristicExtension;
+    protected ExtensionType heaviestAxleWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +88,10 @@ public class HeaviestAxleWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHeaviestAxleWeightCharacteristicExtension() {
+    public ExtensionType getHeaviestAxleWeightCharacteristicExtension() {
         return heaviestAxleWeightCharacteristicExtension;
     }
 
@@ -100,10 +100,10 @@ public class HeaviestAxleWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHeaviestAxleWeightCharacteristicExtension(_ExtensionType value) {
+    public void setHeaviestAxleWeightCharacteristicExtension(ExtensionType value) {
         this.heaviestAxleWeightCharacteristicExtension = value;
     }
 

@@ -42,7 +42,7 @@ public class AlertCLocation {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger specificLocation;
-    protected _ExtensionType alertCLocationExtension;
+    protected ExtensionType alertCLocationExtension;
 
     /**
      * Gets the value of the alertCLocationName property.
@@ -97,10 +97,10 @@ public class AlertCLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLocationExtension() {
+    public ExtensionType getAlertCLocationExtension() {
         return alertCLocationExtension;
     }
 
@@ -109,10 +109,10 @@ public class AlertCLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLocationExtension(_ExtensionType value) {
+    public void setAlertCLocationExtension(ExtensionType value) {
         this.alertCLocationExtension = value;
     }
 

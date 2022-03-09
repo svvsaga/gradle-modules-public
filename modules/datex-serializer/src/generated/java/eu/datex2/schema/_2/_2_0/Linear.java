@@ -42,7 +42,7 @@ public class Linear
     protected TpegLinearLocation tpegLinearLocation;
     protected AlertCLinear alertCLinear;
     protected LinearWithinLinearElement linearWithinLinearElement;
-    protected _LinearExtensionType linearExtension;
+    protected LinearExtensionType linearExtension;
 
     /**
      * Gets the value of the tpegLinearLocation property.
@@ -121,10 +121,10 @@ public class Linear
      * 
      * @return
      *     possible object is
-     *     {@link _LinearExtensionType }
+     *     {@link LinearExtensionType }
      *     
      */
-    public _LinearExtensionType getLinearExtension() {
+    public LinearExtensionType getLinearExtension() {
         return linearExtension;
     }
 
@@ -133,10 +133,10 @@ public class Linear
      * 
      * @param value
      *     allowed object is
-     *     {@link _LinearExtensionType }
+     *     {@link LinearExtensionType }
      *     
      */
-    public void setLinearExtension(_LinearExtensionType value) {
+    public void setLinearExtension(LinearExtensionType value) {
         this.linearExtension = value;
     }
 

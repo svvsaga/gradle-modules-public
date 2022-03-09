@@ -45,7 +45,7 @@ public class AxleWeight {
     protected BigInteger axlePositionIdentifier;
     protected Float axleWeight;
     protected Float maximumPermittedAxleWeight;
-    protected _ExtensionType axleWeightExtension;
+    protected ExtensionType axleWeightExtension;
 
     /**
      * Gets the value of the axlePositionIdentifier property.
@@ -124,10 +124,10 @@ public class AxleWeight {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleWeightExtension() {
+    public ExtensionType getAxleWeightExtension() {
         return axleWeightExtension;
     }
 
@@ -136,10 +136,10 @@ public class AxleWeight {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleWeightExtension(_ExtensionType value) {
+    public void setAxleWeightExtension(ExtensionType value) {
         this.axleWeightExtension = value;
     }
 

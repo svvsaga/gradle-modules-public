@@ -42,7 +42,7 @@ public class AlertCMethod4Point
     protected AlertCDirection alertCDirection;
     @XmlElement(required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
-    protected _ExtensionType alertCMethod4PointExtension;
+    protected ExtensionType alertCMethod4PointExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -97,10 +97,10 @@ public class AlertCMethod4Point
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4PointExtension() {
+    public ExtensionType getAlertCMethod4PointExtension() {
         return alertCMethod4PointExtension;
     }
 
@@ -109,10 +109,10 @@ public class AlertCMethod4Point
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4PointExtension(_ExtensionType value) {
+    public void setAlertCMethod4PointExtension(ExtensionType value) {
         this.alertCMethod4PointExtension = value;
     }
 

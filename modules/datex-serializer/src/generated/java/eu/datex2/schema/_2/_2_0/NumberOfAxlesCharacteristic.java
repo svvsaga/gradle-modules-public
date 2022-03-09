@@ -44,7 +44,7 @@ public class NumberOfAxlesCharacteristic {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfAxles;
-    protected _ExtensionType numberOfAxlesCharacteristicExtension;
+    protected ExtensionType numberOfAxlesCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -99,10 +99,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getNumberOfAxlesCharacteristicExtension() {
+    public ExtensionType getNumberOfAxlesCharacteristicExtension() {
         return numberOfAxlesCharacteristicExtension;
     }
 
@@ -111,10 +111,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setNumberOfAxlesCharacteristicExtension(_ExtensionType value) {
+    public void setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
         this.numberOfAxlesCharacteristicExtension = value;
     }
 

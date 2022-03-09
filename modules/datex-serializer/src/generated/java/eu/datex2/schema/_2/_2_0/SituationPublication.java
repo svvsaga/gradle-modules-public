@@ -38,7 +38,7 @@ public class SituationPublication
 {
 
     protected List<Situation> situation;
-    protected _ExtensionType situationPublicationExtension;
+    protected ExtensionType situationPublicationExtension;
 
     /**
      * Gets the value of the situation property.
@@ -74,10 +74,10 @@ public class SituationPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSituationPublicationExtension() {
+    public ExtensionType getSituationPublicationExtension() {
         return situationPublicationExtension;
     }
 
@@ -86,10 +86,10 @@ public class SituationPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSituationPublicationExtension(_ExtensionType value) {
+    public void setSituationPublicationExtension(ExtensionType value) {
         this.situationPublicationExtension = value;
     }
 

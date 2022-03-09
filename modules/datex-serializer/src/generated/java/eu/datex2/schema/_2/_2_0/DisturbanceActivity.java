@@ -40,7 +40,7 @@ public class DisturbanceActivity
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected DisturbanceActivityTypeEnum disturbanceActivityType;
-    protected _ExtensionType disturbanceActivityExtension;
+    protected ExtensionType disturbanceActivityExtension;
 
     /**
      * Gets the value of the disturbanceActivityType property.
@@ -71,10 +71,10 @@ public class DisturbanceActivity
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDisturbanceActivityExtension() {
+    public ExtensionType getDisturbanceActivityExtension() {
         return disturbanceActivityExtension;
     }
 
@@ -83,10 +83,10 @@ public class DisturbanceActivity
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDisturbanceActivityExtension(_ExtensionType value) {
+    public void setDisturbanceActivityExtension(ExtensionType value) {
         this.disturbanceActivityExtension = value;
     }
 

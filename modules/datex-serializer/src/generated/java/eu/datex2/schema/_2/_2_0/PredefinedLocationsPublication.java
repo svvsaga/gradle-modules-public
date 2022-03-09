@@ -44,7 +44,7 @@ public class PredefinedLocationsPublication
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<PredefinedLocationContainer> predefinedLocationContainer;
-    protected _ExtensionType predefinedLocationsPublicationExtension;
+    protected ExtensionType predefinedLocationsPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +104,10 @@ public class PredefinedLocationsPublication
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedLocationsPublicationExtension() {
+    public ExtensionType getPredefinedLocationsPublicationExtension() {
         return predefinedLocationsPublicationExtension;
     }
 
@@ -116,10 +116,10 @@ public class PredefinedLocationsPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedLocationsPublicationExtension(_ExtensionType value) {
+    public void setPredefinedLocationsPublicationExtension(ExtensionType value) {
         this.predefinedLocationsPublicationExtension = value;
     }
 

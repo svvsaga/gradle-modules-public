@@ -46,7 +46,7 @@ public class AlertCMethod4Linear
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
     @XmlElement(required = true)
     protected AlertCMethod4SecondaryPointLocation alertCMethod4SecondaryPointLocation;
-    protected _ExtensionType alertCMethod4LinearExtension;
+    protected ExtensionType alertCMethod4LinearExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -125,10 +125,10 @@ public class AlertCMethod4Linear
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCMethod4LinearExtension() {
+    public ExtensionType getAlertCMethod4LinearExtension() {
         return alertCMethod4LinearExtension;
     }
 
@@ -137,10 +137,10 @@ public class AlertCMethod4Linear
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCMethod4LinearExtension(_ExtensionType value) {
+    public void setAlertCMethod4LinearExtension(ExtensionType value) {
         this.alertCMethod4LinearExtension = value;
     }
 

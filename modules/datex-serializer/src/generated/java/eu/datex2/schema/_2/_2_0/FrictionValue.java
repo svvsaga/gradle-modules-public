@@ -36,7 +36,7 @@ public class FrictionValue
 {
 
     protected float coefficientOfFriction;
-    protected _ExtensionType frictionValueExtension;
+    protected ExtensionType frictionValueExtension;
 
     /**
      * Gets the value of the coefficientOfFriction property.
@@ -59,10 +59,10 @@ public class FrictionValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFrictionValueExtension() {
+    public ExtensionType getFrictionValueExtension() {
         return frictionValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class FrictionValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFrictionValueExtension(_ExtensionType value) {
+    public void setFrictionValueExtension(ExtensionType value) {
         this.frictionValueExtension = value;
     }
 

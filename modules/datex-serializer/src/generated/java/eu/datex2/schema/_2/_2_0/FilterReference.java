@@ -42,7 +42,7 @@ public class FilterReference {
     protected Boolean filterOperationApproved;
     @XmlElement(required = true)
     protected String keyFilterReference;
-    protected _ExtensionType filterReferenceExtension;
+    protected ExtensionType filterReferenceExtension;
 
     /**
      * Gets the value of the deleteFilter property.
@@ -121,10 +121,10 @@ public class FilterReference {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getFilterReferenceExtension() {
+    public ExtensionType getFilterReferenceExtension() {
         return filterReferenceExtension;
     }
 
@@ -133,10 +133,10 @@ public class FilterReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setFilterReferenceExtension(_ExtensionType value) {
+    public void setFilterReferenceExtension(ExtensionType value) {
         this.filterReferenceExtension = value;
     }
 

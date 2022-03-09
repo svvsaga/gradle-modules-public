@@ -40,7 +40,7 @@ public class Target {
     protected String address;
     @XmlElement(required = true)
     protected String protocol;
-    protected _ExtensionType targetExtension;
+    protected ExtensionType targetExtension;
 
     /**
      * Gets the value of the address property.
@@ -95,10 +95,10 @@ public class Target {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTargetExtension() {
+    public ExtensionType getTargetExtension() {
         return targetExtension;
     }
 
@@ -107,10 +107,10 @@ public class Target {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTargetExtension(_ExtensionType value) {
+    public void setTargetExtension(ExtensionType value) {
         this.targetExtension = value;
     }
 

@@ -36,7 +36,7 @@ public class PercentageDistanceAlongLinearElement
 {
 
     protected float percentageDistanceAlong;
-    protected _ExtensionType percentageDistanceAlongLinearElementExtension;
+    protected ExtensionType percentageDistanceAlongLinearElementExtension;
 
     /**
      * Gets the value of the percentageDistanceAlong property.
@@ -59,10 +59,10 @@ public class PercentageDistanceAlongLinearElement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPercentageDistanceAlongLinearElementExtension() {
+    public ExtensionType getPercentageDistanceAlongLinearElementExtension() {
         return percentageDistanceAlongLinearElementExtension;
     }
 
@@ -71,10 +71,10 @@ public class PercentageDistanceAlongLinearElement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPercentageDistanceAlongLinearElementExtension(_ExtensionType value) {
+    public void setPercentageDistanceAlongLinearElementExtension(ExtensionType value) {
         this.percentageDistanceAlongLinearElementExtension = value;
     }
 

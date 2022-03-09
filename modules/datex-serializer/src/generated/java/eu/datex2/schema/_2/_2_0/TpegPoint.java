@@ -36,17 +36,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TpegPoint {
 
-    protected _ExtensionType tpegPointExtension;
+    protected ExtensionType tpegPointExtension;
 
     /**
      * Gets the value of the tpegPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegPointExtension() {
+    public ExtensionType getTpegPointExtension() {
         return tpegPointExtension;
     }
 
@@ -55,10 +55,10 @@ public abstract class TpegPoint {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegPointExtension(_ExtensionType value) {
+    public void setTpegPointExtension(ExtensionType value) {
         this.tpegPointExtension = value;
     }
 

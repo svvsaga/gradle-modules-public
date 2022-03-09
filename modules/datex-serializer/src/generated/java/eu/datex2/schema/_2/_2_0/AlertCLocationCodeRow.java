@@ -97,7 +97,7 @@ public class AlertCLocationCodeRow {
     @XmlSchemaType(name = "string")
     protected LocationCodeSubTypeEnum subType;
     protected PointCoordinates pointCoordinates;
-    protected _ExtensionType alertCLocationCodeRowExtension;
+    protected ExtensionType alertCLocationCodeRowExtension;
 
     /**
      * Gets the value of the locationCode property.
@@ -536,10 +536,10 @@ public class AlertCLocationCodeRow {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLocationCodeRowExtension() {
+    public ExtensionType getAlertCLocationCodeRowExtension() {
         return alertCLocationCodeRowExtension;
     }
 
@@ -548,10 +548,10 @@ public class AlertCLocationCodeRow {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLocationCodeRowExtension(_ExtensionType value) {
+    public void setAlertCLocationCodeRowExtension(ExtensionType value) {
         this.alertCLocationCodeRowExtension = value;
     }
 

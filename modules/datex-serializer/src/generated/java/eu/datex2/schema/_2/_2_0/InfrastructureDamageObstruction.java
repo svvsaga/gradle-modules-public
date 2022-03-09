@@ -40,7 +40,7 @@ public class InfrastructureDamageObstruction
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected InfrastructureDamageTypeEnum infrastructureDamageType;
-    protected _ExtensionType infrastructureDamageObstructionExtension;
+    protected ExtensionType infrastructureDamageObstructionExtension;
 
     /**
      * Gets the value of the infrastructureDamageType property.
@@ -71,10 +71,10 @@ public class InfrastructureDamageObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getInfrastructureDamageObstructionExtension() {
+    public ExtensionType getInfrastructureDamageObstructionExtension() {
         return infrastructureDamageObstructionExtension;
     }
 
@@ -83,10 +83,10 @@ public class InfrastructureDamageObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setInfrastructureDamageObstructionExtension(_ExtensionType value) {
+    public void setInfrastructureDamageObstructionExtension(ExtensionType value) {
         this.infrastructureDamageObstructionExtension = value;
     }
 

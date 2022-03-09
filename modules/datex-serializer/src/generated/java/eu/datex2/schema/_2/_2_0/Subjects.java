@@ -43,7 +43,7 @@ public class Subjects {
     protected SubjectTypeOfWorksEnum subjectTypeOfWorks;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubjects;
-    protected _ExtensionType subjectsExtension;
+    protected ExtensionType subjectsExtension;
 
     /**
      * Gets the value of the subjectTypeOfWorks property.
@@ -98,10 +98,10 @@ public class Subjects {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getSubjectsExtension() {
+    public ExtensionType getSubjectsExtension() {
         return subjectsExtension;
     }
 
@@ -110,10 +110,10 @@ public class Subjects {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setSubjectsExtension(_ExtensionType value) {
+    public void setSubjectsExtension(ExtensionType value) {
         this.subjectsExtension = value;
     }
 

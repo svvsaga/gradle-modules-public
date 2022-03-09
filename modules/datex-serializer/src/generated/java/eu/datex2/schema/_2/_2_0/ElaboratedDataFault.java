@@ -40,7 +40,7 @@ public class ElaboratedDataFault
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected ElaboratedDataFaultEnum elaboratedDataFault;
-    protected _ExtensionType elaboratedDataFaultExtension;
+    protected ExtensionType elaboratedDataFaultExtension;
 
     /**
      * Gets the value of the elaboratedDataFault property.
@@ -71,10 +71,10 @@ public class ElaboratedDataFault
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getElaboratedDataFaultExtension() {
+    public ExtensionType getElaboratedDataFaultExtension() {
         return elaboratedDataFaultExtension;
     }
 
@@ -83,10 +83,10 @@ public class ElaboratedDataFault
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setElaboratedDataFaultExtension(_ExtensionType value) {
+    public void setElaboratedDataFaultExtension(ExtensionType value) {
         this.elaboratedDataFaultExtension = value;
     }
 

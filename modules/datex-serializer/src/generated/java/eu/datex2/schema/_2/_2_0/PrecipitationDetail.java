@@ -42,7 +42,7 @@ public class PrecipitationDetail {
     protected PrecipitationTypeEnum precipitationType;
     protected PrecipitationIntensityValue precipitationIntensity;
     protected FloatingPointMetreDistanceValue depositionDepth;
-    protected _ExtensionType precipitationDetailExtension;
+    protected ExtensionType precipitationDetailExtension;
 
     /**
      * Gets the value of the precipitationType property.
@@ -121,10 +121,10 @@ public class PrecipitationDetail {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPrecipitationDetailExtension() {
+    public ExtensionType getPrecipitationDetailExtension() {
         return precipitationDetailExtension;
     }
 
@@ -133,10 +133,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPrecipitationDetailExtension(_ExtensionType value) {
+    public void setPrecipitationDetailExtension(ExtensionType value) {
         this.precipitationDetailExtension = value;
     }
 

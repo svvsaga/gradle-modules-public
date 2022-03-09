@@ -52,7 +52,7 @@ public abstract class BasicData {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar measurementOrCalculationTime;
     protected GroupOfLocations pertinentLocation;
-    protected _ExtensionType basicDataExtension;
+    protected ExtensionType basicDataExtension;
     @XmlAttribute(name = "measurementOrCalculatedTimePrecision")
     protected TimePrecisionEnum measurementOrCalculatedTimePrecision;
 
@@ -133,10 +133,10 @@ public abstract class BasicData {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getBasicDataExtension() {
+    public ExtensionType getBasicDataExtension() {
         return basicDataExtension;
     }
 
@@ -145,10 +145,10 @@ public abstract class BasicData {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setBasicDataExtension(_ExtensionType value) {
+    public void setBasicDataExtension(ExtensionType value) {
         this.basicDataExtension = value;
     }
 

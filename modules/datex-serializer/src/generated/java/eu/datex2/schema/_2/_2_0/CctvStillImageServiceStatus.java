@@ -47,7 +47,7 @@ public class CctvStillImageServiceStatus {
     @XmlSchemaType(name = "string")
     protected CctvCameraVideoOrImageAvailabilityEnum cctvStillImageAvailability;
     protected Boolean cctvStillImageBroadcastable;
-    protected _ExtensionType cctvStillImageServiceStatusExtension;
+    protected ExtensionType cctvStillImageServiceStatusExtension;
 
     /**
      * Gets the value of the cctvStillImageServiceLevel property.
@@ -126,10 +126,10 @@ public class CctvStillImageServiceStatus {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvStillImageServiceStatusExtension() {
+    public ExtensionType getCctvStillImageServiceStatusExtension() {
         return cctvStillImageServiceStatusExtension;
     }
 
@@ -138,10 +138,10 @@ public class CctvStillImageServiceStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvStillImageServiceStatusExtension(_ExtensionType value) {
+    public void setCctvStillImageServiceStatusExtension(ExtensionType value) {
         this.cctvStillImageServiceStatusExtension = value;
     }
 

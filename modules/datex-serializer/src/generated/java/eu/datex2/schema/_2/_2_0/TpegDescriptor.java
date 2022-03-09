@@ -41,7 +41,7 @@ public abstract class TpegDescriptor {
 
     @XmlElement(required = true)
     protected MultilingualString descriptor;
-    protected _ExtensionType tpegDescriptorExtension;
+    protected ExtensionType tpegDescriptorExtension;
 
     /**
      * Gets the value of the descriptor property.
@@ -72,10 +72,10 @@ public abstract class TpegDescriptor {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegDescriptorExtension() {
+    public ExtensionType getTpegDescriptorExtension() {
         return tpegDescriptorExtension;
     }
 
@@ -84,10 +84,10 @@ public abstract class TpegDescriptor {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegDescriptorExtension(_ExtensionType value) {
+    public void setTpegDescriptorExtension(ExtensionType value) {
         this.tpegDescriptorExtension = value;
     }
 

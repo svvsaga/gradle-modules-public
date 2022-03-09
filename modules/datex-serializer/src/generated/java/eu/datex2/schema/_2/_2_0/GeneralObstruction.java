@@ -45,7 +45,7 @@ public class GeneralObstruction
     @XmlSchemaType(name = "string")
     protected List<ObstructionTypeEnum> obstructionType;
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
-    protected _ExtensionType generalObstructionExtension;
+    protected ExtensionType generalObstructionExtension;
 
     /**
      * Gets the value of the obstructionType property.
@@ -110,10 +110,10 @@ public class GeneralObstruction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGeneralObstructionExtension() {
+    public ExtensionType getGeneralObstructionExtension() {
         return generalObstructionExtension;
     }
 
@@ -122,10 +122,10 @@ public class GeneralObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGeneralObstructionExtension(_ExtensionType value) {
+    public void setGeneralObstructionExtension(ExtensionType value) {
         this.generalObstructionExtension = value;
     }
 

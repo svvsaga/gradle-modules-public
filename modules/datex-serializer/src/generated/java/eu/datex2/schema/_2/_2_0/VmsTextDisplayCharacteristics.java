@@ -106,7 +106,7 @@ public class VmsTextDisplayCharacteristics {
     protected PositionAbsoluteEnum textPositionAbsolute;
     protected Float textPositionX;
     protected Float textPositionY;
-    protected _ExtensionType vmsTextDisplayCharacteristicsExtension;
+    protected ExtensionType vmsTextDisplayCharacteristicsExtension;
 
     /**
      * Gets the value of the textLanternsPresent property.
@@ -593,10 +593,10 @@ public class VmsTextDisplayCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsTextDisplayCharacteristicsExtension() {
+    public ExtensionType getVmsTextDisplayCharacteristicsExtension() {
         return vmsTextDisplayCharacteristicsExtension;
     }
 
@@ -605,10 +605,10 @@ public class VmsTextDisplayCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsTextDisplayCharacteristicsExtension(_ExtensionType value) {
+    public void setVmsTextDisplayCharacteristicsExtension(ExtensionType value) {
         this.vmsTextDisplayCharacteristicsExtension = value;
     }
 

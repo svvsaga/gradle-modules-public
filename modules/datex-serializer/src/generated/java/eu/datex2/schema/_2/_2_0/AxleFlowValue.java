@@ -41,7 +41,7 @@ public class AxleFlowValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleFlowRate;
-    protected _ExtensionType axleFlowValueExtension;
+    protected ExtensionType axleFlowValueExtension;
 
     /**
      * Gets the value of the axleFlowRate property.
@@ -72,10 +72,10 @@ public class AxleFlowValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleFlowValueExtension() {
+    public ExtensionType getAxleFlowValueExtension() {
         return axleFlowValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class AxleFlowValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleFlowValueExtension(_ExtensionType value) {
+    public void setAxleFlowValueExtension(ExtensionType value) {
         this.axleFlowValueExtension = value;
     }
 

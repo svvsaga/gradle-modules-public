@@ -45,7 +45,7 @@ public class Validity {
     protected Boolean overrunning;
     @XmlElement(required = true)
     protected OverallPeriod validityTimeSpecification;
-    protected _ExtensionType validityExtension;
+    protected ExtensionType validityExtension;
 
     /**
      * Gets the value of the validityStatus property.
@@ -124,10 +124,10 @@ public class Validity {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getValidityExtension() {
+    public ExtensionType getValidityExtension() {
         return validityExtension;
     }
 
@@ -136,10 +136,10 @@ public class Validity {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setValidityExtension(_ExtensionType value) {
+    public void setValidityExtension(ExtensionType value) {
         this.validityExtension = value;
     }
 

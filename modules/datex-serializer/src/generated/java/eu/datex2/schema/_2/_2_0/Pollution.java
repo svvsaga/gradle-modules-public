@@ -41,7 +41,7 @@ public class Pollution {
     @XmlSchemaType(name = "string")
     protected PollutantTypeEnum pollutantType;
     protected MicrogramsConcentrationValue pollutantConcentration;
-    protected _ExtensionType pollutionExtension;
+    protected ExtensionType pollutionExtension;
 
     /**
      * Gets the value of the pollutantType property.
@@ -96,10 +96,10 @@ public class Pollution {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPollutionExtension() {
+    public ExtensionType getPollutionExtension() {
         return pollutionExtension;
     }
 
@@ -108,10 +108,10 @@ public class Pollution {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPollutionExtension(_ExtensionType value) {
+    public void setPollutionExtension(ExtensionType value) {
         this.pollutionExtension = value;
     }
 

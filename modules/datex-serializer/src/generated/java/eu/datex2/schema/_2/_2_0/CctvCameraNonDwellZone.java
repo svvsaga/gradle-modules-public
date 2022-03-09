@@ -54,7 +54,7 @@ public class CctvCameraNonDwellZone {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvNonDwellBottomRightTiltValue;
-    protected _ExtensionType cctvCameraNonDwellZoneExtension;
+    protected ExtensionType cctvCameraNonDwellZoneExtension;
 
     /**
      * Gets the value of the cctvNonDwellTopLeftPanValue property.
@@ -157,10 +157,10 @@ public class CctvCameraNonDwellZone {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvCameraNonDwellZoneExtension() {
+    public ExtensionType getCctvCameraNonDwellZoneExtension() {
         return cctvCameraNonDwellZoneExtension;
     }
 
@@ -169,10 +169,10 @@ public class CctvCameraNonDwellZone {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvCameraNonDwellZoneExtension(_ExtensionType value) {
+    public void setCctvCameraNonDwellZoneExtension(ExtensionType value) {
         this.cctvCameraNonDwellZoneExtension = value;
     }
 

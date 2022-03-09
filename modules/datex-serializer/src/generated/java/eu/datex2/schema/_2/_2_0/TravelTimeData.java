@@ -60,7 +60,7 @@ public class TravelTimeData
     protected DurationValue freeFlowTravelTime;
     protected DurationValue normallyExpectedTravelTime;
     protected SpeedValue freeFlowSpeed;
-    protected _ExtensionType travelTimeDataExtension;
+    protected ExtensionType travelTimeDataExtension;
 
     /**
      * Gets the value of the travelTimeTrendType property.
@@ -240,10 +240,10 @@ public class TravelTimeData
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTravelTimeDataExtension() {
+    public ExtensionType getTravelTimeDataExtension() {
         return travelTimeDataExtension;
     }
 
@@ -252,10 +252,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTravelTimeDataExtension(_ExtensionType value) {
+    public void setTravelTimeDataExtension(ExtensionType value) {
         this.travelTimeDataExtension = value;
     }
 

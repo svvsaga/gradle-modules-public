@@ -38,7 +38,7 @@ public class VisibilityInformation
 
     @XmlElement(required = true)
     protected Visibility visibility;
-    protected _ExtensionType visibilityInformationExtension;
+    protected ExtensionType visibilityInformationExtension;
 
     /**
      * Gets the value of the visibility property.
@@ -69,10 +69,10 @@ public class VisibilityInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVisibilityInformationExtension() {
+    public ExtensionType getVisibilityInformationExtension() {
         return visibilityInformationExtension;
     }
 
@@ -81,10 +81,10 @@ public class VisibilityInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVisibilityInformationExtension(_ExtensionType value) {
+    public void setVisibilityInformationExtension(ExtensionType value) {
         this.visibilityInformationExtension = value;
     }
 

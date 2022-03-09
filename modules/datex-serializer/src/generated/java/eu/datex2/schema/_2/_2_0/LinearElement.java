@@ -53,7 +53,7 @@ public class LinearElement {
     protected String linearElementReferenceModelVersion;
     @XmlSchemaType(name = "string")
     protected LinearElementNatureEnum linearElementNature;
-    protected _ExtensionType linearElementExtension;
+    protected ExtensionType linearElementExtension;
 
     /**
      * Gets the value of the roadName property.
@@ -180,10 +180,10 @@ public class LinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLinearElementExtension() {
+    public ExtensionType getLinearElementExtension() {
         return linearElementExtension;
     }
 
@@ -192,10 +192,10 @@ public class LinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLinearElementExtension(_ExtensionType value) {
+    public void setLinearElementExtension(ExtensionType value) {
         this.linearElementExtension = value;
     }
 

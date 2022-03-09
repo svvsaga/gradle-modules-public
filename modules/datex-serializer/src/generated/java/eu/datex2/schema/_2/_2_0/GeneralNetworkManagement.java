@@ -44,7 +44,7 @@ public class GeneralNetworkManagement
     protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
     @XmlSchemaType(name = "string")
     protected PersonCategoryEnum trafficManuallyDirectedBy;
-    protected _ExtensionType generalNetworkManagementExtension;
+    protected ExtensionType generalNetworkManagementExtension;
 
     /**
      * Gets the value of the generalNetworkManagementType property.
@@ -99,10 +99,10 @@ public class GeneralNetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGeneralNetworkManagementExtension() {
+    public ExtensionType getGeneralNetworkManagementExtension() {
         return generalNetworkManagementExtension;
     }
 
@@ -111,10 +111,10 @@ public class GeneralNetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGeneralNetworkManagementExtension(_ExtensionType value) {
+    public void setGeneralNetworkManagementExtension(ExtensionType value) {
         this.generalNetworkManagementExtension = value;
     }
 

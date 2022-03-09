@@ -49,7 +49,7 @@ public class GroupOfPeopleInvolved {
     protected InvolvementRolesEnum involvementRole;
     @XmlSchemaType(name = "string")
     protected PersonCategoryEnum categoryOfPeopleInvolved;
-    protected _ExtensionType groupOfPeopleInvolvedExtension;
+    protected ExtensionType groupOfPeopleInvolvedExtension;
 
     /**
      * Gets the value of the numberOfPeople property.
@@ -152,10 +152,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfPeopleInvolvedExtension() {
+    public ExtensionType getGroupOfPeopleInvolvedExtension() {
         return groupOfPeopleInvolvedExtension;
     }
 
@@ -164,10 +164,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfPeopleInvolvedExtension(_ExtensionType value) {
+    public void setGroupOfPeopleInvolvedExtension(ExtensionType value) {
         this.groupOfPeopleInvolvedExtension = value;
     }
 

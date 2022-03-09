@@ -37,18 +37,18 @@ public class LocationByReference
 {
 
     @XmlElement(required = true)
-    protected _PredefinedLocationVersionedReference predefinedLocationReference;
-    protected _ExtensionType locationByReferenceExtension;
+    protected PredefinedLocationVersionedReference predefinedLocationReference;
+    protected ExtensionType locationByReferenceExtension;
 
     /**
      * Gets the value of the predefinedLocationReference property.
      * 
      * @return
      *     possible object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public _PredefinedLocationVersionedReference getPredefinedLocationReference() {
+    public PredefinedLocationVersionedReference getPredefinedLocationReference() {
         return predefinedLocationReference;
     }
 
@@ -57,10 +57,10 @@ public class LocationByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _PredefinedLocationVersionedReference }
+     *     {@link PredefinedLocationVersionedReference }
      *     
      */
-    public void setPredefinedLocationReference(_PredefinedLocationVersionedReference value) {
+    public void setPredefinedLocationReference(PredefinedLocationVersionedReference value) {
         this.predefinedLocationReference = value;
     }
 
@@ -69,10 +69,10 @@ public class LocationByReference
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getLocationByReferenceExtension() {
+    public ExtensionType getLocationByReferenceExtension() {
         return locationByReferenceExtension;
     }
 
@@ -81,10 +81,10 @@ public class LocationByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setLocationByReferenceExtension(_ExtensionType value) {
+    public void setLocationByReferenceExtension(ExtensionType value) {
         this.locationByReferenceExtension = value;
     }
 

@@ -74,7 +74,7 @@ public class DataDictionary {
     protected List<Association> association;
     protected List<Enumeration> enumeration;
     protected List<EnumerationLitteral> enumerationLitteral;
-    protected _ExtensionType dataDictionaryExtension;
+    protected ExtensionType dataDictionaryExtension;
 
     /**
      * Gets the value of the country property.
@@ -351,10 +351,10 @@ public class DataDictionary {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getDataDictionaryExtension() {
+    public ExtensionType getDataDictionaryExtension() {
         return dataDictionaryExtension;
     }
 
@@ -363,10 +363,10 @@ public class DataDictionary {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setDataDictionaryExtension(_ExtensionType value) {
+    public void setDataDictionaryExtension(ExtensionType value) {
         this.dataDictionaryExtension = value;
     }
 

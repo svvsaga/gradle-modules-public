@@ -43,8 +43,8 @@ public class PredefinedItinerary
 {
 
     protected MultilingualString predefinedItineraryName;
-    protected List<_PredefinedItineraryIndexPredefinedLocation> predefinedLocation;
-    protected _ExtensionType predefinedItineraryExtension;
+    protected List<PredefinedItineraryIndexPredefinedLocation> predefinedLocation;
+    protected ExtensionType predefinedItineraryExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -92,13 +92,13 @@ public class PredefinedItinerary
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _PredefinedItineraryIndexPredefinedLocation }
+     * {@link PredefinedItineraryIndexPredefinedLocation }
      * 
      * 
      */
-    public List<_PredefinedItineraryIndexPredefinedLocation> getPredefinedLocation() {
+    public List<PredefinedItineraryIndexPredefinedLocation> getPredefinedLocation() {
         if (predefinedLocation == null) {
-            predefinedLocation = new ArrayList<_PredefinedItineraryIndexPredefinedLocation>();
+            predefinedLocation = new ArrayList<PredefinedItineraryIndexPredefinedLocation>();
         }
         return this.predefinedLocation;
     }
@@ -108,10 +108,10 @@ public class PredefinedItinerary
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPredefinedItineraryExtension() {
+    public ExtensionType getPredefinedItineraryExtension() {
         return predefinedItineraryExtension;
     }
 
@@ -120,10 +120,10 @@ public class PredefinedItinerary
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPredefinedItineraryExtension(_ExtensionType value) {
+    public void setPredefinedItineraryExtension(ExtensionType value) {
         this.predefinedItineraryExtension = value;
     }
 

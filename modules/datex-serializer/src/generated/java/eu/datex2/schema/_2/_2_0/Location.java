@@ -47,7 +47,7 @@ public abstract class Location
 
     protected List<ExternalReferencing> externalReferencing;
     protected PointCoordinates locationForDisplay;
-    protected _LocationExtensionType locationExtension;
+    protected LocationExtensionType locationExtension;
 
     /**
      * Gets the value of the externalReferencing property.
@@ -107,10 +107,10 @@ public abstract class Location
      * 
      * @return
      *     possible object is
-     *     {@link _LocationExtensionType }
+     *     {@link LocationExtensionType }
      *     
      */
-    public _LocationExtensionType getLocationExtension() {
+    public LocationExtensionType getLocationExtension() {
         return locationExtension;
     }
 
@@ -119,10 +119,10 @@ public abstract class Location
      * 
      * @param value
      *     allowed object is
-     *     {@link _LocationExtensionType }
+     *     {@link LocationExtensionType }
      *     
      */
-    public void setLocationExtension(_LocationExtensionType value) {
+    public void setLocationExtension(LocationExtensionType value) {
         this.locationExtension = value;
     }
 

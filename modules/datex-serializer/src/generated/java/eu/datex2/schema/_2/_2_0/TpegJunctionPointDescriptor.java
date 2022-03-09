@@ -40,7 +40,7 @@ public class TpegJunctionPointDescriptor
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03JunctionPointDescriptorSubtypeEnum tpegJunctionPointDescriptorType;
-    protected _ExtensionType tpegJunctionPointDescriptorExtension;
+    protected ExtensionType tpegJunctionPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegJunctionPointDescriptorType property.
@@ -71,10 +71,10 @@ public class TpegJunctionPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegJunctionPointDescriptorExtension() {
+    public ExtensionType getTpegJunctionPointDescriptorExtension() {
         return tpegJunctionPointDescriptorExtension;
     }
 
@@ -83,10 +83,10 @@ public class TpegJunctionPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegJunctionPointDescriptorExtension(_ExtensionType value) {
+    public void setTpegJunctionPointDescriptorExtension(ExtensionType value) {
         this.tpegJunctionPointDescriptorExtension = value;
     }
 

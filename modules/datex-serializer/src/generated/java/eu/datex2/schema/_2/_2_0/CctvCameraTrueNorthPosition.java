@@ -49,7 +49,7 @@ public class CctvCameraTrueNorthPosition {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvNorthZoomValue;
-    protected _ExtensionType cctvCameraTrueNorthPositionExtension;
+    protected ExtensionType cctvCameraTrueNorthPositionExtension;
 
     /**
      * Gets the value of the cctvNorthPanValue property.
@@ -128,10 +128,10 @@ public class CctvCameraTrueNorthPosition {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getCctvCameraTrueNorthPositionExtension() {
+    public ExtensionType getCctvCameraTrueNorthPositionExtension() {
         return cctvCameraTrueNorthPositionExtension;
     }
 
@@ -140,10 +140,10 @@ public class CctvCameraTrueNorthPosition {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setCctvCameraTrueNorthPositionExtension(_ExtensionType value) {
+    public void setCctvCameraTrueNorthPositionExtension(ExtensionType value) {
         this.cctvCameraTrueNorthPositionExtension = value;
     }
 

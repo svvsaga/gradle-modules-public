@@ -40,7 +40,7 @@ public class VmsSupplementaryPanel {
     protected MultilingualString supplementaryMessageDescription;
     protected VmsSupplementaryPictogram vmsSupplementaryPictogram;
     protected VmsTextLine vmsSupplementaryText;
-    protected _ExtensionType vmsSupplementaryPanelExtension;
+    protected ExtensionType vmsSupplementaryPanelExtension;
 
     /**
      * Gets the value of the supplementaryMessageDescription property.
@@ -119,10 +119,10 @@ public class VmsSupplementaryPanel {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getVmsSupplementaryPanelExtension() {
+    public ExtensionType getVmsSupplementaryPanelExtension() {
         return vmsSupplementaryPanelExtension;
     }
 
@@ -131,10 +131,10 @@ public class VmsSupplementaryPanel {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPanelExtension(_ExtensionType value) {
+    public void setVmsSupplementaryPanelExtension(ExtensionType value) {
         this.vmsSupplementaryPanelExtension = value;
     }
 

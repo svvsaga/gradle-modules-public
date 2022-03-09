@@ -44,7 +44,7 @@ public class OpenlrPathAttributes {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrDistanceToNextLRPoint;
-    protected _ExtensionType openlrPathAttributesExtension;
+    protected ExtensionType openlrPathAttributesExtension;
 
     /**
      * Gets the value of the openlrLowestFRCToNextLRPoint property.
@@ -99,10 +99,10 @@ public class OpenlrPathAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPathAttributesExtension() {
+    public ExtensionType getOpenlrPathAttributesExtension() {
         return openlrPathAttributesExtension;
     }
 
@@ -111,10 +111,10 @@ public class OpenlrPathAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPathAttributesExtension(_ExtensionType value) {
+    public void setOpenlrPathAttributesExtension(ExtensionType value) {
         this.openlrPathAttributesExtension = value;
     }
 

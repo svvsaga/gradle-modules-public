@@ -54,7 +54,7 @@ public class MeasurementSpecificCharacteristics {
     @XmlSchemaType(name = "string")
     protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
     protected VehicleCharacteristics specificVehicleCharacteristics;
-    protected _ExtensionType measurementSpecificCharacteristicsExtension;
+    protected ExtensionType measurementSpecificCharacteristicsExtension;
 
     /**
      * Gets the value of the accuracy property.
@@ -205,10 +205,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMeasurementSpecificCharacteristicsExtension() {
+    public ExtensionType getMeasurementSpecificCharacteristicsExtension() {
         return measurementSpecificCharacteristicsExtension;
     }
 
@@ -217,10 +217,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMeasurementSpecificCharacteristicsExtension(_ExtensionType value) {
+    public void setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
         this.measurementSpecificCharacteristicsExtension = value;
     }
 

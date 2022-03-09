@@ -36,7 +36,7 @@ public class MicrogramsConcentrationValue
 {
 
     protected float microgramsConcentration;
-    protected _ExtensionType microgramsConcentrationValueExtension;
+    protected ExtensionType microgramsConcentrationValueExtension;
 
     /**
      * Gets the value of the microgramsConcentration property.
@@ -59,10 +59,10 @@ public class MicrogramsConcentrationValue
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getMicrogramsConcentrationValueExtension() {
+    public ExtensionType getMicrogramsConcentrationValueExtension() {
         return microgramsConcentrationValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class MicrogramsConcentrationValue
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setMicrogramsConcentrationValueExtension(_ExtensionType value) {
+    public void setMicrogramsConcentrationValueExtension(ExtensionType value) {
         this.microgramsConcentrationValueExtension = value;
     }
 

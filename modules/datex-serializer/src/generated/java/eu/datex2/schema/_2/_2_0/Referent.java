@@ -51,7 +51,7 @@ public class Referent {
     protected ReferentTypeEnum referentType;
     protected MultilingualString referentDescription;
     protected PointCoordinates pointCoordinates;
-    protected _ExtensionType referentExtension;
+    protected ExtensionType referentExtension;
 
     /**
      * Gets the value of the referentIdentifier property.
@@ -178,10 +178,10 @@ public class Referent {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getReferentExtension() {
+    public ExtensionType getReferentExtension() {
         return referentExtension;
     }
 
@@ -190,10 +190,10 @@ public class Referent {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setReferentExtension(_ExtensionType value) {
+    public void setReferentExtension(ExtensionType value) {
         this.referentExtension = value;
     }
 

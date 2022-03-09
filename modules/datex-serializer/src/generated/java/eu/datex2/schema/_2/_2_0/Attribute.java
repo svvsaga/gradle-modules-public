@@ -54,7 +54,7 @@ public class Attribute {
     protected String designation;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected _ExtensionType attributeExtension;
+    protected ExtensionType attributeExtension;
 
     /**
      * Gets the value of the className property.
@@ -205,10 +205,10 @@ public class Attribute {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAttributeExtension() {
+    public ExtensionType getAttributeExtension() {
         return attributeExtension;
     }
 
@@ -217,10 +217,10 @@ public class Attribute {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAttributeExtension(_ExtensionType value) {
+    public void setAttributeExtension(ExtensionType value) {
         this.attributeExtension = value;
     }
 

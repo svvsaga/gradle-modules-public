@@ -65,7 +65,7 @@ public abstract class PayloadPublication {
     protected XMLGregorianCalendar publicationTime;
     @XmlElement(required = true)
     protected InternationalIdentifier publicationCreator;
-    protected _ExtensionType payloadPublicationExtension;
+    protected ExtensionType payloadPublicationExtension;
     @XmlAttribute(name = "lang", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lang;
@@ -171,10 +171,10 @@ public abstract class PayloadPublication {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPayloadPublicationExtension() {
+    public ExtensionType getPayloadPublicationExtension() {
         return payloadPublicationExtension;
     }
 
@@ -183,10 +183,10 @@ public abstract class PayloadPublication {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPayloadPublicationExtension(_ExtensionType value) {
+    public void setPayloadPublicationExtension(ExtensionType value) {
         this.payloadPublicationExtension = value;
     }
 

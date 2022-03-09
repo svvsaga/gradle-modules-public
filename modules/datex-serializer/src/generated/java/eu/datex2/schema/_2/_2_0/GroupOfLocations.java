@@ -37,17 +37,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class GroupOfLocations {
 
-    protected _ExtensionType groupOfLocationsExtension;
+    protected ExtensionType groupOfLocationsExtension;
 
     /**
      * Gets the value of the groupOfLocationsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getGroupOfLocationsExtension() {
+    public ExtensionType getGroupOfLocationsExtension() {
         return groupOfLocationsExtension;
     }
 
@@ -56,10 +56,10 @@ public abstract class GroupOfLocations {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setGroupOfLocationsExtension(_ExtensionType value) {
+    public void setGroupOfLocationsExtension(ExtensionType value) {
         this.groupOfLocationsExtension = value;
     }
 

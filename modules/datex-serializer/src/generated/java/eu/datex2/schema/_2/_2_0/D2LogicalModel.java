@@ -42,7 +42,7 @@ public class D2LogicalModel {
     @XmlElement(required = true)
     protected Exchange exchange;
     protected PayloadPublication payloadPublication;
-    protected _ExtensionType d2LogicalModelExtension;
+    protected ExtensionType d2LogicalModelExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     @XmlSchemaType(name = "anySimpleType")
     protected String modelBaseVersion;
@@ -100,10 +100,10 @@ public class D2LogicalModel {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getD2LogicalModelExtension() {
+    public ExtensionType getD2LogicalModelExtension() {
         return d2LogicalModelExtension;
     }
 
@@ -112,10 +112,10 @@ public class D2LogicalModel {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setD2LogicalModelExtension(_ExtensionType value) {
+    public void setD2LogicalModelExtension(ExtensionType value) {
         this.d2LogicalModelExtension = value;
     }
 

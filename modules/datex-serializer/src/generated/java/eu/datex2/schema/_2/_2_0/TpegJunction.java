@@ -50,7 +50,7 @@ public class TpegJunction
     @XmlElement(required = true)
     protected List<TpegIlcPointDescriptor> ilc;
     protected List<TpegOtherPointDescriptor> otherName;
-    protected _ExtensionType tpegJunctionExtension;
+    protected ExtensionType tpegJunctionExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -163,10 +163,10 @@ public class TpegJunction
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegJunctionExtension() {
+    public ExtensionType getTpegJunctionExtension() {
         return tpegJunctionExtension;
     }
 
@@ -175,10 +175,10 @@ public class TpegJunction
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegJunctionExtension(_ExtensionType value) {
+    public void setTpegJunctionExtension(ExtensionType value) {
         this.tpegJunctionExtension = value;
     }
 

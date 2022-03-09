@@ -38,7 +38,7 @@ public class WindInformation
 
     @XmlElement(required = true)
     protected Wind wind;
-    protected _ExtensionType windInformationExtension;
+    protected ExtensionType windInformationExtension;
 
     /**
      * Gets the value of the wind property.
@@ -69,10 +69,10 @@ public class WindInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getWindInformationExtension() {
+    public ExtensionType getWindInformationExtension() {
         return windInformationExtension;
     }
 
@@ -81,10 +81,10 @@ public class WindInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setWindInformationExtension(_ExtensionType value) {
+    public void setWindInformationExtension(ExtensionType value) {
         this.windInformationExtension = value;
     }
 

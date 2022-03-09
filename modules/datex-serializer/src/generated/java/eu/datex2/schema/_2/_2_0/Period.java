@@ -52,7 +52,7 @@ public class Period {
     protected MultilingualString periodName;
     protected List<TimePeriodOfDay> recurringTimePeriodOfDay;
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
-    protected _ExtensionType periodExtension;
+    protected ExtensionType periodExtension;
 
     /**
      * Gets the value of the startOfPeriod property.
@@ -189,10 +189,10 @@ public class Period {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPeriodExtension() {
+    public ExtensionType getPeriodExtension() {
         return periodExtension;
     }
 
@@ -201,10 +201,10 @@ public class Period {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPeriodExtension(_ExtensionType value) {
+    public void setPeriodExtension(ExtensionType value) {
         this.periodExtension = value;
     }
 

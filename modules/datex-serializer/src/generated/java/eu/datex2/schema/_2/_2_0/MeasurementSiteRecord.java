@@ -72,10 +72,10 @@ public class MeasurementSiteRecord {
     protected String measurementSiteIdentification;
     @XmlSchemaType(name = "string")
     protected DirectionEnum measurementSide;
-    protected List<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
+    protected List<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
     @XmlElement(required = true)
     protected GroupOfLocations measurementSiteLocation;
-    protected _MeasurementSiteRecordExtensionType measurementSiteRecordExtension;
+    protected MeasurementSiteRecordExtensionType measurementSiteRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -291,13 +291,13 @@ public class MeasurementSiteRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link _MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
+     * {@link MeasurementSiteRecordIndexMeasurementSpecificCharacteristics }
      * 
      * 
      */
-    public List<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
+    public List<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
         if (measurementSpecificCharacteristics == null) {
-            measurementSpecificCharacteristics = new ArrayList<_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics>();
+            measurementSpecificCharacteristics = new ArrayList<MeasurementSiteRecordIndexMeasurementSpecificCharacteristics>();
         }
         return this.measurementSpecificCharacteristics;
     }
@@ -331,10 +331,10 @@ public class MeasurementSiteRecord {
      * 
      * @return
      *     possible object is
-     *     {@link _MeasurementSiteRecordExtensionType }
+     *     {@link MeasurementSiteRecordExtensionType }
      *     
      */
-    public _MeasurementSiteRecordExtensionType getMeasurementSiteRecordExtension() {
+    public MeasurementSiteRecordExtensionType getMeasurementSiteRecordExtension() {
         return measurementSiteRecordExtension;
     }
 
@@ -343,10 +343,10 @@ public class MeasurementSiteRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link _MeasurementSiteRecordExtensionType }
+     *     {@link MeasurementSiteRecordExtensionType }
      *     
      */
-    public void setMeasurementSiteRecordExtension(_MeasurementSiteRecordExtensionType value) {
+    public void setMeasurementSiteRecordExtension(MeasurementSiteRecordExtensionType value) {
         this.measurementSiteRecordExtension = value;
     }
 

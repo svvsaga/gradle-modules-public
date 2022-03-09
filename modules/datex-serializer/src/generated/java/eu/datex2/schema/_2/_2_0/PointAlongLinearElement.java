@@ -56,7 +56,7 @@ public class PointAlongLinearElement {
     protected LinearElement linearElement;
     @XmlElement(required = true)
     protected DistanceAlongLinearElement distanceAlongLinearElement;
-    protected _ExtensionType pointAlongLinearElementExtension;
+    protected ExtensionType pointAlongLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfPoint property.
@@ -207,10 +207,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getPointAlongLinearElementExtension() {
+    public ExtensionType getPointAlongLinearElementExtension() {
         return pointAlongLinearElementExtension;
     }
 
@@ -219,10 +219,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setPointAlongLinearElementExtension(_ExtensionType value) {
+    public void setPointAlongLinearElementExtension(ExtensionType value) {
         this.pointAlongLinearElementExtension = value;
     }
 

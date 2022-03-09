@@ -33,17 +33,17 @@ public class OpenlrPointAlongLine
     extends OpenlrBasePointLocation
 {
 
-    protected _ExtensionType openlrPointAlongLineExtension;
+    protected ExtensionType openlrPointAlongLineExtension;
 
     /**
      * Gets the value of the openlrPointAlongLineExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrPointAlongLineExtension() {
+    public ExtensionType getOpenlrPointAlongLineExtension() {
         return openlrPointAlongLineExtension;
     }
 
@@ -52,10 +52,10 @@ public class OpenlrPointAlongLine
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrPointAlongLineExtension(_ExtensionType value) {
+    public void setOpenlrPointAlongLineExtension(ExtensionType value) {
         this.openlrPointAlongLineExtension = value;
     }
 

@@ -42,7 +42,7 @@ public class AxleSpacing {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleSpacingSequenceIdentifier;
-    protected _ExtensionType axleSpacingExtension;
+    protected ExtensionType axleSpacingExtension;
 
     /**
      * Gets the value of the axleSpacing property.
@@ -89,10 +89,10 @@ public class AxleSpacing {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAxleSpacingExtension() {
+    public ExtensionType getAxleSpacingExtension() {
         return axleSpacingExtension;
     }
 
@@ -101,10 +101,10 @@ public class AxleSpacing {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAxleSpacingExtension(_ExtensionType value) {
+    public void setAxleSpacingExtension(ExtensionType value) {
         this.axleSpacingExtension = value;
     }
 

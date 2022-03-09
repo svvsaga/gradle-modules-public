@@ -45,7 +45,7 @@ public class RoadSurfaceConditionInformation
     protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
     @XmlElement(required = true)
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
-    protected _ExtensionType roadSurfaceConditionInformationExtension;
+    protected ExtensionType roadSurfaceConditionInformationExtension;
 
     /**
      * Gets the value of the weatherRelatedRoadConditionType property.
@@ -105,10 +105,10 @@ public class RoadSurfaceConditionInformation
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getRoadSurfaceConditionInformationExtension() {
+    public ExtensionType getRoadSurfaceConditionInformationExtension() {
         return roadSurfaceConditionInformationExtension;
     }
 
@@ -117,10 +117,10 @@ public class RoadSurfaceConditionInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionInformationExtension(_ExtensionType value) {
+    public void setRoadSurfaceConditionInformationExtension(ExtensionType value) {
         this.roadSurfaceConditionInformationExtension = value;
     }
 

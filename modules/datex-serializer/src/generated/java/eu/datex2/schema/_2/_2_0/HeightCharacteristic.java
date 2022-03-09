@@ -41,7 +41,7 @@ public class HeightCharacteristic {
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
     protected float vehicleHeight;
-    protected _ExtensionType heightCharacteristicExtension;
+    protected ExtensionType heightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +88,10 @@ public class HeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getHeightCharacteristicExtension() {
+    public ExtensionType getHeightCharacteristicExtension() {
         return heightCharacteristicExtension;
     }
 
@@ -100,10 +100,10 @@ public class HeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setHeightCharacteristicExtension(_ExtensionType value) {
+    public void setHeightCharacteristicExtension(ExtensionType value) {
         this.heightCharacteristicExtension = value;
     }
 

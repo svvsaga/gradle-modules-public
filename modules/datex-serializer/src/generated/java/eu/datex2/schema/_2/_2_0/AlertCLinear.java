@@ -50,7 +50,7 @@ public abstract class AlertCLinear {
     protected String alertCLocationTableNumber;
     @XmlElement(required = true)
     protected String alertCLocationTableVersion;
-    protected _ExtensionType alertCLinearExtension;
+    protected ExtensionType alertCLinearExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -129,10 +129,10 @@ public abstract class AlertCLinear {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getAlertCLinearExtension() {
+    public ExtensionType getAlertCLinearExtension() {
         return alertCLinearExtension;
     }
 
@@ -141,10 +141,10 @@ public abstract class AlertCLinear {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setAlertCLinearExtension(_ExtensionType value) {
+    public void setAlertCLinearExtension(ExtensionType value) {
         this.alertCLinearExtension = value;
     }
 

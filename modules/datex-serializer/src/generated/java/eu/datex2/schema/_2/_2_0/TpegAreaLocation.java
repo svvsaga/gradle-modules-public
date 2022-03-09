@@ -46,7 +46,7 @@ public abstract class TpegAreaLocation {
     @XmlSchemaType(name = "string")
     protected TpegLoc01AreaLocationSubtypeEnum tpegAreaLocationType;
     protected TpegHeight tpegHeight;
-    protected _ExtensionType tpegAreaLocationExtension;
+    protected ExtensionType tpegAreaLocationExtension;
 
     /**
      * Gets the value of the tpegAreaLocationType property.
@@ -101,10 +101,10 @@ public abstract class TpegAreaLocation {
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getTpegAreaLocationExtension() {
+    public ExtensionType getTpegAreaLocationExtension() {
         return tpegAreaLocationExtension;
     }
 
@@ -113,10 +113,10 @@ public abstract class TpegAreaLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setTpegAreaLocationExtension(_ExtensionType value) {
+    public void setTpegAreaLocationExtension(ExtensionType value) {
         this.tpegAreaLocationExtension = value;
     }
 

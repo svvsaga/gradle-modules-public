@@ -33,17 +33,17 @@ public class OpenlrLastLocationReferencePoint
     extends OpenlrBaseLocationReferencePoint
 {
 
-    protected _ExtensionType openlrLastLocationReferencePointExtension;
+    protected ExtensionType openlrLastLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrLastLocationReferencePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public _ExtensionType getOpenlrLastLocationReferencePointExtension() {
+    public ExtensionType getOpenlrLastLocationReferencePointExtension() {
         return openlrLastLocationReferencePointExtension;
     }
 
@@ -52,10 +52,10 @@ public class OpenlrLastLocationReferencePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link _ExtensionType }
+     *     {@link ExtensionType }
      *     
      */
-    public void setOpenlrLastLocationReferencePointExtension(_ExtensionType value) {
+    public void setOpenlrLastLocationReferencePointExtension(ExtensionType value) {
         this.openlrLastLocationReferencePointExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConstructionWorks", propOrder = {
     "constructionWorkType",
-    "constructionWorksExtension"
+    "_ConstructionWorksExtension"
 })
 public class ConstructionWorks
     extends Roadworks
 {
 
     @XmlElement(required = true)
-    protected ConstructionWorkTypeEnum constructionWorkType;
+    protected _ConstructionWorkTypeEnum constructionWorkType;
     @XmlElement(name = "_constructionWorksExtension")
-    protected ExtensionType constructionWorksExtension;
+    protected _ExtensionType _ConstructionWorksExtension;
 
     /**
      * Gets the value of the constructionWorkType property.
      * 
      * @return
      *     possible object is
-     *     {@link ConstructionWorkTypeEnum }
+     *     {@link _ConstructionWorkTypeEnum }
      *     
      */
-    public ConstructionWorkTypeEnum getConstructionWorkType() {
+    public _ConstructionWorkTypeEnum getConstructionWorkType() {
         return constructionWorkType;
     }
 
@@ -59,35 +59,35 @@ public class ConstructionWorks
      * 
      * @param value
      *     allowed object is
-     *     {@link ConstructionWorkTypeEnum }
+     *     {@link _ConstructionWorkTypeEnum }
      *     
      */
-    public void setConstructionWorkType(ConstructionWorkTypeEnum value) {
+    public void setConstructionWorkType(_ConstructionWorkTypeEnum value) {
         this.constructionWorkType = value;
     }
 
     /**
-     * Gets the value of the constructionWorksExtension property.
+     * Gets the value of the _ConstructionWorksExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getConstructionWorksExtension() {
-        return constructionWorksExtension;
+    public _ExtensionType get_ConstructionWorksExtension() {
+        return _ConstructionWorksExtension;
     }
 
     /**
-     * Sets the value of the constructionWorksExtension property.
+     * Sets the value of the _ConstructionWorksExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setConstructionWorksExtension(ExtensionType value) {
-        this.constructionWorksExtension = value;
+    public void set_ConstructionWorksExtension(_ExtensionType value) {
+        this._ConstructionWorksExtension = value;
     }
 
 }

@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "versionNumber",
     "releaseDate",
     "alertCLocationCodeRow",
-    "alertCLocationCodeTableExtension"
+    "_AlertCLocationCodeTableExtension"
 })
 public class AlertCLocationCodeTable {
 
@@ -64,7 +64,7 @@ public class AlertCLocationCodeTable {
     @XmlElement(required = true)
     protected List<AlertCLocationCodeRow> alertCLocationCodeRow;
     @XmlElement(name = "_alertCLocationCodeTableExtension")
-    protected ExtensionType alertCLocationCodeTableExtension;
+    protected _ExtensionType _AlertCLocationCodeTableExtension;
 
     /**
      * Gets the value of the countryId property.
@@ -216,27 +216,27 @@ public class AlertCLocationCodeTable {
     }
 
     /**
-     * Gets the value of the alertCLocationCodeTableExtension property.
+     * Gets the value of the _AlertCLocationCodeTableExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLocationCodeTableExtension() {
-        return alertCLocationCodeTableExtension;
+    public _ExtensionType get_AlertCLocationCodeTableExtension() {
+        return _AlertCLocationCodeTableExtension;
     }
 
     /**
-     * Sets the value of the alertCLocationCodeTableExtension property.
+     * Sets the value of the _AlertCLocationCodeTableExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLocationCodeTableExtension(ExtensionType value) {
-        this.alertCLocationCodeTableExtension = value;
+    public void set_AlertCLocationCodeTableExtension(_ExtensionType value) {
+        this._AlertCLocationCodeTableExtension = value;
     }
 
 }

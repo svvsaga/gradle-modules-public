@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.situation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "transitServiceInformation",
     "transitServiceType",
     "scheduledDepartureTime",
-    "transitInformationExtension"
+    "_TransitInformationExtension"
 })
 public class TransitInformation
     extends ServiceInformation
@@ -54,13 +54,13 @@ public class TransitInformation
     protected MultilingualString journeyOrigin;
     protected String journeyReference;
     @XmlElement(required = true)
-    protected TransitServiceInformationEnum transitServiceInformation;
+    protected _TransitServiceInformationEnum transitServiceInformation;
     @XmlElement(required = true)
-    protected TransitServiceTypeEnum transitServiceType;
+    protected _TransitServiceTypeEnum transitServiceType;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar scheduledDepartureTime;
     @XmlElement(name = "_transitInformationExtension")
-    protected ExtensionType transitInformationExtension;
+    protected _ExtensionType _TransitInformationExtension;
 
     /**
      * Gets the value of the journeyDestination property.
@@ -139,10 +139,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link TransitServiceInformationEnum }
+     *     {@link _TransitServiceInformationEnum }
      *     
      */
-    public TransitServiceInformationEnum getTransitServiceInformation() {
+    public _TransitServiceInformationEnum getTransitServiceInformation() {
         return transitServiceInformation;
     }
 
@@ -151,10 +151,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link TransitServiceInformationEnum }
+     *     {@link _TransitServiceInformationEnum }
      *     
      */
-    public void setTransitServiceInformation(TransitServiceInformationEnum value) {
+    public void setTransitServiceInformation(_TransitServiceInformationEnum value) {
         this.transitServiceInformation = value;
     }
 
@@ -163,10 +163,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link TransitServiceTypeEnum }
+     *     {@link _TransitServiceTypeEnum }
      *     
      */
-    public TransitServiceTypeEnum getTransitServiceType() {
+    public _TransitServiceTypeEnum getTransitServiceType() {
         return transitServiceType;
     }
 
@@ -175,10 +175,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link TransitServiceTypeEnum }
+     *     {@link _TransitServiceTypeEnum }
      *     
      */
-    public void setTransitServiceType(TransitServiceTypeEnum value) {
+    public void setTransitServiceType(_TransitServiceTypeEnum value) {
         this.transitServiceType = value;
     }
 
@@ -207,27 +207,27 @@ public class TransitInformation
     }
 
     /**
-     * Gets the value of the transitInformationExtension property.
+     * Gets the value of the _TransitInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTransitInformationExtension() {
-        return transitInformationExtension;
+    public _ExtensionType get_TransitInformationExtension() {
+        return _TransitInformationExtension;
     }
 
     /**
-     * Sets the value of the transitInformationExtension property.
+     * Sets the value of the _TransitInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTransitInformationExtension(ExtensionType value) {
-        this.transitInformationExtension = value;
+    public void set_TransitInformationExtension(_ExtensionType value) {
+        this._TransitInformationExtension = value;
     }
 
 }

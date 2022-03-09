@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "controlCentreIdentification",
     "workGroupName",
     "workGroupIdentification",
-    "primaryConrolResponsibilityExtension"
+    "_PrimaryConrolResponsibilityExtension"
 })
 public class PrimaryConrolResponsibility {
 
@@ -54,7 +54,7 @@ public class PrimaryConrolResponsibility {
     protected MultilingualString workGroupName;
     protected String workGroupIdentification;
     @XmlElement(name = "_primaryConrolResponsibilityExtension")
-    protected ExtensionType primaryConrolResponsibilityExtension;
+    protected _ExtensionType _PrimaryConrolResponsibilityExtension;
 
     /**
      * Gets the value of the cameraBaseStationName property.
@@ -201,27 +201,27 @@ public class PrimaryConrolResponsibility {
     }
 
     /**
-     * Gets the value of the primaryConrolResponsibilityExtension property.
+     * Gets the value of the _PrimaryConrolResponsibilityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrimaryConrolResponsibilityExtension() {
-        return primaryConrolResponsibilityExtension;
+    public _ExtensionType get_PrimaryConrolResponsibilityExtension() {
+        return _PrimaryConrolResponsibilityExtension;
     }
 
     /**
-     * Sets the value of the primaryConrolResponsibilityExtension property.
+     * Sets the value of the _PrimaryConrolResponsibilityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrimaryConrolResponsibilityExtension(ExtensionType value) {
-        this.primaryConrolResponsibilityExtension = value;
+    public void set_PrimaryConrolResponsibilityExtension(_ExtensionType value) {
+        this._PrimaryConrolResponsibilityExtension = value;
     }
 
 }

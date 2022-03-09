@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PercentageValue", propOrder = {
     "percentage",
-    "percentageValueExtension"
+    "_PercentageValueExtension"
 })
 public class PercentageValue
     extends DataValue
@@ -38,7 +38,7 @@ public class PercentageValue
 
     protected float percentage;
     @XmlElement(name = "_percentageValueExtension")
-    protected ExtensionType percentageValueExtension;
+    protected _ExtensionType _PercentageValueExtension;
 
     /**
      * Gets the value of the percentage property.
@@ -57,27 +57,27 @@ public class PercentageValue
     }
 
     /**
-     * Gets the value of the percentageValueExtension property.
+     * Gets the value of the _PercentageValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPercentageValueExtension() {
-        return percentageValueExtension;
+    public _ExtensionType get_PercentageValueExtension() {
+        return _PercentageValueExtension;
     }
 
     /**
-     * Sets the value of the percentageValueExtension property.
+     * Sets the value of the _PercentageValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPercentageValueExtension(ExtensionType value) {
-        this.percentageValueExtension = value;
+    public void set_PercentageValueExtension(_ExtensionType value) {
+        this._PercentageValueExtension = value;
     }
 
 }

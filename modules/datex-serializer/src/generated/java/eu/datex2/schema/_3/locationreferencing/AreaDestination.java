@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AreaDestination", propOrder = {
     "areaLocation",
-    "areaDestinationExtension"
+    "_AreaDestinationExtension"
 })
 public class AreaDestination
     extends Destination
@@ -40,7 +40,7 @@ public class AreaDestination
     @XmlElement(required = true)
     protected AreaLocation areaLocation;
     @XmlElement(name = "_areaDestinationExtension")
-    protected ExtensionType areaDestinationExtension;
+    protected _ExtensionType _AreaDestinationExtension;
 
     /**
      * Gets the value of the areaLocation property.
@@ -67,27 +67,27 @@ public class AreaDestination
     }
 
     /**
-     * Gets the value of the areaDestinationExtension property.
+     * Gets the value of the _AreaDestinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAreaDestinationExtension() {
-        return areaDestinationExtension;
+    public _ExtensionType get_AreaDestinationExtension() {
+        return _AreaDestinationExtension;
     }
 
     /**
-     * Sets the value of the areaDestinationExtension property.
+     * Sets the value of the _AreaDestinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAreaDestinationExtension(ExtensionType value) {
-        this.areaDestinationExtension = value;
+    public void set_AreaDestinationExtension(_ExtensionType value) {
+        this._AreaDestinationExtension = value;
     }
 
 }

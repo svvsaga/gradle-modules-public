@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrClosedLineLocationReference", propOrder = {
     "openlrLocationReferencePoint",
     "openlrLastLine",
-    "openlrClosedLineLocationReferenceExtension"
+    "_OpenlrClosedLineLocationReferenceExtension"
 })
 public class OpenlrClosedLineLocationReference
     extends OpenlrAreaLocationReference
@@ -46,7 +46,7 @@ public class OpenlrClosedLineLocationReference
     @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLine;
     @XmlElement(name = "_openlrClosedLineLocationReferenceExtension")
-    protected ExtensionType openlrClosedLineLocationReferenceExtension;
+    protected _ExtensionType _OpenlrClosedLineLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrLocationReferencePoint property.
@@ -102,27 +102,27 @@ public class OpenlrClosedLineLocationReference
     }
 
     /**
-     * Gets the value of the openlrClosedLineLocationReferenceExtension property.
+     * Gets the value of the _OpenlrClosedLineLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrClosedLineLocationReferenceExtension() {
-        return openlrClosedLineLocationReferenceExtension;
+    public _ExtensionType get_OpenlrClosedLineLocationReferenceExtension() {
+        return _OpenlrClosedLineLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the openlrClosedLineLocationReferenceExtension property.
+     * Sets the value of the _OpenlrClosedLineLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrClosedLineLocationReferenceExtension(ExtensionType value) {
-        this.openlrClosedLineLocationReferenceExtension = value;
+    public void set_OpenlrClosedLineLocationReferenceExtension(_ExtensionType value) {
+        this._OpenlrClosedLineLocationReferenceExtension = value;
     }
 
 }

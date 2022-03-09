@@ -42,7 +42,7 @@ public class NonWeatherRelatedRoadConditions
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<NonWeatherRelatedRoadConditionTypeEnum> nonWeatherRelatedRoadConditionType;
-    protected ExtensionType nonWeatherRelatedRoadConditionsExtension;
+    protected _ExtensionType nonWeatherRelatedRoadConditionsExtension;
 
     /**
      * Gets the value of the nonWeatherRelatedRoadConditionType property.
@@ -78,10 +78,10 @@ public class NonWeatherRelatedRoadConditions
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNonWeatherRelatedRoadConditionsExtension() {
+    public _ExtensionType getNonWeatherRelatedRoadConditionsExtension() {
         return nonWeatherRelatedRoadConditionsExtension;
     }
 
@@ -90,10 +90,10 @@ public class NonWeatherRelatedRoadConditions
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNonWeatherRelatedRoadConditionsExtension(ExtensionType value) {
+    public void setNonWeatherRelatedRoadConditionsExtension(_ExtensionType value) {
         this.nonWeatherRelatedRoadConditionsExtension = value;
     }
 

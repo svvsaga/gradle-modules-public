@@ -36,7 +36,7 @@ public class FloatingPointMetreDistanceValue
 {
 
     protected float floatingPointMetreDistance;
-    protected ExtensionType floatingPointMetreDistanceValueExtension;
+    protected _ExtensionType floatingPointMetreDistanceValueExtension;
 
     /**
      * Gets the value of the floatingPointMetreDistance property.
@@ -59,10 +59,10 @@ public class FloatingPointMetreDistanceValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFloatingPointMetreDistanceValueExtension() {
+    public _ExtensionType getFloatingPointMetreDistanceValueExtension() {
         return floatingPointMetreDistanceValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class FloatingPointMetreDistanceValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFloatingPointMetreDistanceValueExtension(ExtensionType value) {
+    public void setFloatingPointMetreDistanceValueExtension(_ExtensionType value) {
         this.floatingPointMetreDistanceValueExtension = value;
     }
 

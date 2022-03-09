@@ -3,9 +3,9 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
-import eu.datex2.schema._3.locationreferencing.DirectionEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.locationreferencing._DirectionEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "placesAtWhichApplicable",
     "automaticallyInitiated",
     "forVehiclesWithCharacteristicsOf",
-    "networkManagementExtension"
+    "_NetworkManagementExtension"
 })
 @XmlSeeAlso({
     GeneralInstructionOrMessageToRoadUsers.class,
@@ -61,24 +61,24 @@ public abstract class NetworkManagement
 {
 
     @XmlElement(required = true)
-    protected ComplianceOptionEnum complianceOption;
-    protected List<DirectionEnum> applicableForTrafficDirection;
-    protected List<TrafficTypeEnum> applicableForTrafficType;
-    protected List<PlacesEnum> placesAtWhichApplicable;
+    protected _ComplianceOptionEnum complianceOption;
+    protected List<_DirectionEnum> applicableForTrafficDirection;
+    protected List<_TrafficTypeEnum> applicableForTrafficType;
+    protected List<_PlacesEnum> placesAtWhichApplicable;
     protected Boolean automaticallyInitiated;
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
     @XmlElement(name = "_networkManagementExtension")
-    protected ExtensionType networkManagementExtension;
+    protected _ExtensionType _NetworkManagementExtension;
 
     /**
      * Gets the value of the complianceOption property.
      * 
      * @return
      *     possible object is
-     *     {@link ComplianceOptionEnum }
+     *     {@link _ComplianceOptionEnum }
      *     
      */
-    public ComplianceOptionEnum getComplianceOption() {
+    public _ComplianceOptionEnum getComplianceOption() {
         return complianceOption;
     }
 
@@ -87,10 +87,10 @@ public abstract class NetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link ComplianceOptionEnum }
+     *     {@link _ComplianceOptionEnum }
      *     
      */
-    public void setComplianceOption(ComplianceOptionEnum value) {
+    public void setComplianceOption(_ComplianceOptionEnum value) {
         this.complianceOption = value;
     }
 
@@ -112,13 +112,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DirectionEnum }
+     * {@link _DirectionEnum }
      * 
      * 
      */
-    public List<DirectionEnum> getApplicableForTrafficDirection() {
+    public List<_DirectionEnum> getApplicableForTrafficDirection() {
         if (applicableForTrafficDirection == null) {
-            applicableForTrafficDirection = new ArrayList<DirectionEnum>();
+            applicableForTrafficDirection = new ArrayList<_DirectionEnum>();
         }
         return this.applicableForTrafficDirection;
     }
@@ -141,13 +141,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TrafficTypeEnum }
+     * {@link _TrafficTypeEnum }
      * 
      * 
      */
-    public List<TrafficTypeEnum> getApplicableForTrafficType() {
+    public List<_TrafficTypeEnum> getApplicableForTrafficType() {
         if (applicableForTrafficType == null) {
-            applicableForTrafficType = new ArrayList<TrafficTypeEnum>();
+            applicableForTrafficType = new ArrayList<_TrafficTypeEnum>();
         }
         return this.applicableForTrafficType;
     }
@@ -170,13 +170,13 @@ public abstract class NetworkManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PlacesEnum }
+     * {@link _PlacesEnum }
      * 
      * 
      */
-    public List<PlacesEnum> getPlacesAtWhichApplicable() {
+    public List<_PlacesEnum> getPlacesAtWhichApplicable() {
         if (placesAtWhichApplicable == null) {
-            placesAtWhichApplicable = new ArrayList<PlacesEnum>();
+            placesAtWhichApplicable = new ArrayList<_PlacesEnum>();
         }
         return this.placesAtWhichApplicable;
     }
@@ -235,27 +235,27 @@ public abstract class NetworkManagement
     }
 
     /**
-     * Gets the value of the networkManagementExtension property.
+     * Gets the value of the _NetworkManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNetworkManagementExtension() {
-        return networkManagementExtension;
+    public _ExtensionType get_NetworkManagementExtension() {
+        return _NetworkManagementExtension;
     }
 
     /**
-     * Sets the value of the networkManagementExtension property.
+     * Sets the value of the _NetworkManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNetworkManagementExtension(ExtensionType value) {
-        this.networkManagementExtension = value;
+    public void set_NetworkManagementExtension(_ExtensionType value) {
+        this._NetworkManagementExtension = value;
     }
 
 }

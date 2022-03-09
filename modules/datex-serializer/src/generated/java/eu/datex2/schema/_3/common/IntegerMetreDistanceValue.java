@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IntegerMetreDistanceValue", propOrder = {
     "integerMetreDistance",
-    "integerMetreDistanceValueExtension"
+    "_IntegerMetreDistanceValueExtension"
 })
 public class IntegerMetreDistanceValue
     extends DataValue
@@ -42,7 +42,7 @@ public class IntegerMetreDistanceValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger integerMetreDistance;
     @XmlElement(name = "_integerMetreDistanceValueExtension")
-    protected ExtensionType integerMetreDistanceValueExtension;
+    protected _ExtensionType _IntegerMetreDistanceValueExtension;
 
     /**
      * Gets the value of the integerMetreDistance property.
@@ -69,27 +69,27 @@ public class IntegerMetreDistanceValue
     }
 
     /**
-     * Gets the value of the integerMetreDistanceValueExtension property.
+     * Gets the value of the _IntegerMetreDistanceValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getIntegerMetreDistanceValueExtension() {
-        return integerMetreDistanceValueExtension;
+    public _ExtensionType get_IntegerMetreDistanceValueExtension() {
+        return _IntegerMetreDistanceValueExtension;
     }
 
     /**
-     * Sets the value of the integerMetreDistanceValueExtension property.
+     * Sets the value of the _IntegerMetreDistanceValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setIntegerMetreDistanceValueExtension(ExtensionType value) {
-        this.integerMetreDistanceValueExtension = value;
+    public void set_IntegerMetreDistanceValueExtension(_ExtensionType value) {
+        this._IntegerMetreDistanceValueExtension = value;
     }
 
 }

@@ -45,7 +45,7 @@ public class RoadOrCarriagewayOrLaneManagement
     protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minimumCarOccupancy;
-    protected ExtensionType roadOrCarriagewayOrLaneManagementExtension;
+    protected _ExtensionType roadOrCarriagewayOrLaneManagementExtension;
 
     /**
      * Gets the value of the roadOrCarriagewayOrLaneManagementType property.
@@ -100,10 +100,10 @@ public class RoadOrCarriagewayOrLaneManagement
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadOrCarriagewayOrLaneManagementExtension() {
+    public _ExtensionType getRoadOrCarriagewayOrLaneManagementExtension() {
         return roadOrCarriagewayOrLaneManagementExtension;
     }
 
@@ -112,10 +112,10 @@ public class RoadOrCarriagewayOrLaneManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadOrCarriagewayOrLaneManagementExtension(ExtensionType value) {
+    public void setRoadOrCarriagewayOrLaneManagementExtension(_ExtensionType value) {
         this.roadOrCarriagewayOrLaneManagementExtension = value;
     }
 

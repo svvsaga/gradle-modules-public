@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,20 +42,20 @@ import jakarta.xml.bind.annotation.XmlType;
     "heightGradeOfPoint",
     "linearElement",
     "distanceAlongLinearElement",
-    "pointAlongLinearElementExtension"
+    "_PointAlongLinearElementExtension"
 })
 public class PointAlongLinearElement {
 
     protected MultilingualString administrativeAreaOfPoint;
-    protected DirectionEnum directionAtPoint;
-    protected LinearDirectionEnum directionRelativeAtPoint;
-    protected HeightGradeEnum heightGradeOfPoint;
+    protected _DirectionEnum directionAtPoint;
+    protected _LinearDirectionEnum directionRelativeAtPoint;
+    protected _HeightGradeEnum heightGradeOfPoint;
     @XmlElement(required = true)
     protected LinearElement linearElement;
     @XmlElement(required = true)
     protected DistanceAlongLinearElement distanceAlongLinearElement;
     @XmlElement(name = "_pointAlongLinearElementExtension")
-    protected ExtensionType pointAlongLinearElementExtension;
+    protected _ExtensionType _PointAlongLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfPoint property.
@@ -86,10 +86,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public DirectionEnum getDirectionAtPoint() {
+    public _DirectionEnum getDirectionAtPoint() {
         return directionAtPoint;
     }
 
@@ -98,10 +98,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public void setDirectionAtPoint(DirectionEnum value) {
+    public void setDirectionAtPoint(_DirectionEnum value) {
         this.directionAtPoint = value;
     }
 
@@ -110,10 +110,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public LinearDirectionEnum getDirectionRelativeAtPoint() {
+    public _LinearDirectionEnum getDirectionRelativeAtPoint() {
         return directionRelativeAtPoint;
     }
 
@@ -122,10 +122,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public void setDirectionRelativeAtPoint(LinearDirectionEnum value) {
+    public void setDirectionRelativeAtPoint(_LinearDirectionEnum value) {
         this.directionRelativeAtPoint = value;
     }
 
@@ -134,10 +134,10 @@ public class PointAlongLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link HeightGradeEnum }
+     *     {@link _HeightGradeEnum }
      *     
      */
-    public HeightGradeEnum getHeightGradeOfPoint() {
+    public _HeightGradeEnum getHeightGradeOfPoint() {
         return heightGradeOfPoint;
     }
 
@@ -146,10 +146,10 @@ public class PointAlongLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link HeightGradeEnum }
+     *     {@link _HeightGradeEnum }
      *     
      */
-    public void setHeightGradeOfPoint(HeightGradeEnum value) {
+    public void setHeightGradeOfPoint(_HeightGradeEnum value) {
         this.heightGradeOfPoint = value;
     }
 
@@ -202,27 +202,27 @@ public class PointAlongLinearElement {
     }
 
     /**
-     * Gets the value of the pointAlongLinearElementExtension property.
+     * Gets the value of the _PointAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointAlongLinearElementExtension() {
-        return pointAlongLinearElementExtension;
+    public _ExtensionType get_PointAlongLinearElementExtension() {
+        return _PointAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the pointAlongLinearElementExtension property.
+     * Sets the value of the _PointAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointAlongLinearElementExtension(ExtensionType value) {
-        this.pointAlongLinearElementExtension = value;
+    public void set_PointAlongLinearElementExtension(_ExtensionType value) {
+        this._PointAlongLinearElementExtension = value;
     }
 
 }

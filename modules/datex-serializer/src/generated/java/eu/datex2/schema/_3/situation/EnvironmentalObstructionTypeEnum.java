@@ -1,87 +1,101 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _EnvironmentalObstructionTypeEnum complex type.
+ * <p>Java class for EnvironmentalObstructionTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_EnvironmentalObstructionTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;EnvironmentalObstructionTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="EnvironmentalObstructionTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="avalanches"/&gt;
+ *     &lt;enumeration value="earthquakeDamage"/&gt;
+ *     &lt;enumeration value="fallenTrees"/&gt;
+ *     &lt;enumeration value="fallingIce"/&gt;
+ *     &lt;enumeration value="fallingLightIceOrSnow"/&gt;
+ *     &lt;enumeration value="flashFloods"/&gt;
+ *     &lt;enumeration value="flooding"/&gt;
+ *     &lt;enumeration value="forestFire"/&gt;
+ *     &lt;enumeration value="grassFire"/&gt;
+ *     &lt;enumeration value="landslips"/&gt;
+ *     &lt;enumeration value="mudSlide"/&gt;
+ *     &lt;enumeration value="sewerOverflow"/&gt;
+ *     &lt;enumeration value="rockfalls"/&gt;
+ *     &lt;enumeration value="seriousFire"/&gt;
+ *     &lt;enumeration value="smokeOrFumes"/&gt;
+ *     &lt;enumeration value="stormDamage"/&gt;
+ *     &lt;enumeration value="subsidence"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_EnvironmentalObstructionTypeEnum", propOrder = {
-    "value"
-})
-public class EnvironmentalObstructionTypeEnum {
+@XmlType(name = "EnvironmentalObstructionTypeEnum")
+@XmlEnum
+public enum EnvironmentalObstructionTypeEnum {
 
-    @XmlValue
-    protected EnvironmentalObstructionTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("avalanches")
+    AVALANCHES("avalanches"),
+    @XmlEnumValue("earthquakeDamage")
+    EARTHQUAKE_DAMAGE("earthquakeDamage"),
+    @XmlEnumValue("fallenTrees")
+    FALLEN_TREES("fallenTrees"),
+    @XmlEnumValue("fallingIce")
+    FALLING_ICE("fallingIce"),
+    @XmlEnumValue("fallingLightIceOrSnow")
+    FALLING_LIGHT_ICE_OR_SNOW("fallingLightIceOrSnow"),
+    @XmlEnumValue("flashFloods")
+    FLASH_FLOODS("flashFloods"),
+    @XmlEnumValue("flooding")
+    FLOODING("flooding"),
+    @XmlEnumValue("forestFire")
+    FOREST_FIRE("forestFire"),
+    @XmlEnumValue("grassFire")
+    GRASS_FIRE("grassFire"),
+    @XmlEnumValue("landslips")
+    LANDSLIPS("landslips"),
+    @XmlEnumValue("mudSlide")
+    MUD_SLIDE("mudSlide"),
+    @XmlEnumValue("sewerOverflow")
+    SEWER_OVERFLOW("sewerOverflow"),
+    @XmlEnumValue("rockfalls")
+    ROCKFALLS("rockfalls"),
+    @XmlEnumValue("seriousFire")
+    SERIOUS_FIRE("seriousFire"),
+    @XmlEnumValue("smokeOrFumes")
+    SMOKE_OR_FUMES("smokeOrFumes"),
+    @XmlEnumValue("stormDamage")
+    STORM_DAMAGE("stormDamage"),
+    @XmlEnumValue("subsidence")
+    SUBSIDENCE("subsidence"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EnvironmentalObstructionTypeEnum2 }
-     *     
-     */
-    public EnvironmentalObstructionTypeEnum2 getValue() {
+    EnvironmentalObstructionTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EnvironmentalObstructionTypeEnum2 }
-     *     
-     */
-    public void setValue(EnvironmentalObstructionTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static EnvironmentalObstructionTypeEnum fromValue(String v) {
+        for (EnvironmentalObstructionTypeEnum c: EnvironmentalObstructionTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

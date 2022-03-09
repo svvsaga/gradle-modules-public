@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Activity", propOrder = {
     "mobilityOfActivity",
-    "activityExtension"
+    "_ActivityExtension"
 })
 @XmlSeeAlso({
     AuthorityOperation.class,
@@ -45,7 +45,7 @@ public abstract class Activity
 
     protected Mobility mobilityOfActivity;
     @XmlElement(name = "_activityExtension")
-    protected ExtensionType activityExtension;
+    protected _ExtensionType _ActivityExtension;
 
     /**
      * Gets the value of the mobilityOfActivity property.
@@ -72,27 +72,27 @@ public abstract class Activity
     }
 
     /**
-     * Gets the value of the activityExtension property.
+     * Gets the value of the _ActivityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getActivityExtension() {
-        return activityExtension;
+    public _ExtensionType get_ActivityExtension() {
+        return _ActivityExtension;
     }
 
     /**
-     * Sets the value of the activityExtension property.
+     * Sets the value of the _ActivityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setActivityExtension(ExtensionType value) {
-        this.activityExtension = value;
+    public void set_ActivityExtension(_ExtensionType value) {
+        this._ActivityExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LocationGroup", propOrder = {
-    "locationGroupExtension"
+    "_LocationGroupExtension"
 })
 @XmlSeeAlso({
     LocationGroupByList.class,
@@ -41,30 +41,30 @@ public abstract class LocationGroup
 {
 
     @XmlElement(name = "_locationGroupExtension")
-    protected ExtensionType locationGroupExtension;
+    protected _ExtensionType _LocationGroupExtension;
 
     /**
-     * Gets the value of the locationGroupExtension property.
+     * Gets the value of the _LocationGroupExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLocationGroupExtension() {
-        return locationGroupExtension;
+    public _ExtensionType get_LocationGroupExtension() {
+        return _LocationGroupExtension;
     }
 
     /**
-     * Sets the value of the locationGroupExtension property.
+     * Sets the value of the _LocationGroupExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLocationGroupExtension(ExtensionType value) {
-        this.locationGroupExtension = value;
+    public void set_LocationGroupExtension(_ExtensionType value) {
+        this._LocationGroupExtension = value;
     }
 
 }

@@ -4,8 +4,8 @@ package eu.datex2.schema._3.cctvextension;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvCameraListVersionTime",
     "areaToWhichCameraListRelates",
     "cctvCameraMetadataRecord",
-    "cctvCameraListExtension"
+    "_CctvCameraListExtension"
 })
 public class CctvCameraList {
 
@@ -56,7 +56,7 @@ public class CctvCameraList {
     protected CctvGeographicArea areaToWhichCameraListRelates;
     protected List<CctvCameraMetadataRecord> cctvCameraMetadataRecord;
     @XmlElement(name = "_cctvCameraListExtension")
-    protected ExtensionType cctvCameraListExtension;
+    protected _ExtensionType _CctvCameraListExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -164,27 +164,27 @@ public class CctvCameraList {
     }
 
     /**
-     * Gets the value of the cctvCameraListExtension property.
+     * Gets the value of the _CctvCameraListExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraListExtension() {
-        return cctvCameraListExtension;
+    public _ExtensionType get_CctvCameraListExtension() {
+        return _CctvCameraListExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraListExtension property.
+     * Sets the value of the _CctvCameraListExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraListExtension(ExtensionType value) {
-        this.cctvCameraListExtension = value;
+    public void set_CctvCameraListExtension(_ExtensionType value) {
+        this._CctvCameraListExtension = value;
     }
 
     /**

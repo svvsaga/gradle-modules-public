@@ -34,27 +34,27 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "NumberOfAxlesCharacteristic", propOrder = {
     "comparisonOperator",
     "numberOfAxles",
-    "numberOfAxlesCharacteristicExtension"
+    "_NumberOfAxlesCharacteristicExtension"
 })
 public class NumberOfAxlesCharacteristic {
 
     @XmlElement(required = true)
-    protected ComparisonOperatorEnum comparisonOperator;
+    protected _ComparisonOperatorEnum comparisonOperator;
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfAxles;
     @XmlElement(name = "_numberOfAxlesCharacteristicExtension")
-    protected ExtensionType numberOfAxlesCharacteristicExtension;
+    protected _ExtensionType _NumberOfAxlesCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public ComparisonOperatorEnum getComparisonOperator() {
+    public _ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -63,10 +63,10 @@ public class NumberOfAxlesCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public void setComparisonOperator(_ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -95,27 +95,27 @@ public class NumberOfAxlesCharacteristic {
     }
 
     /**
-     * Gets the value of the numberOfAxlesCharacteristicExtension property.
+     * Gets the value of the _NumberOfAxlesCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNumberOfAxlesCharacteristicExtension() {
-        return numberOfAxlesCharacteristicExtension;
+    public _ExtensionType get_NumberOfAxlesCharacteristicExtension() {
+        return _NumberOfAxlesCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the numberOfAxlesCharacteristicExtension property.
+     * Sets the value of the _NumberOfAxlesCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNumberOfAxlesCharacteristicExtension(ExtensionType value) {
-        this.numberOfAxlesCharacteristicExtension = value;
+    public void set_NumberOfAxlesCharacteristicExtension(_ExtensionType value) {
+        this._NumberOfAxlesCharacteristicExtension = value;
     }
 
 }

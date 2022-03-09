@@ -62,7 +62,7 @@ public abstract class Roadworks
     protected Mobility mobility;
     protected Subjects subjects;
     protected MaintenanceVehicles maintenanceVehicles;
-    protected ExtensionType roadworksExtension;
+    protected _ExtensionType roadworksExtension;
 
     /**
      * Gets the value of the roadworksDuration property.
@@ -237,10 +237,10 @@ public abstract class Roadworks
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadworksExtension() {
+    public _ExtensionType getRoadworksExtension() {
         return roadworksExtension;
     }
 
@@ -249,10 +249,10 @@ public abstract class Roadworks
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadworksExtension(ExtensionType value) {
+    public void setRoadworksExtension(_ExtensionType value) {
         this.roadworksExtension = value;
     }
 

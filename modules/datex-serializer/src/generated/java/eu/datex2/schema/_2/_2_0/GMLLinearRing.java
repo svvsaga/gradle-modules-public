@@ -36,7 +36,7 @@ public class GMLLinearRing {
 
     @XmlElement(required = true)
     protected String coordinates;
-    protected ExtensionType gmlLinearRingExtension;
+    protected _ExtensionType gmlLinearRingExtension;
 
     /**
      * Gets the value of the coordinates property.
@@ -67,10 +67,10 @@ public class GMLLinearRing {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGmlLinearRingExtension() {
+    public _ExtensionType getGmlLinearRingExtension() {
         return gmlLinearRingExtension;
     }
 
@@ -79,10 +79,10 @@ public class GMLLinearRing {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGmlLinearRingExtension(ExtensionType value) {
+    public void setGmlLinearRingExtension(_ExtensionType value) {
         this.gmlLinearRingExtension = value;
     }
 

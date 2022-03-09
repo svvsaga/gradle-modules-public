@@ -54,7 +54,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "axleSpacingOnVehicle",
     "specificAxleWeight",
     "hazardousGoodsAssociatedWithVehicle",
-    "vehicleExtension"
+    "_VehicleExtension"
 })
 public class Vehicle {
 
@@ -65,13 +65,13 @@ public class Vehicle {
     protected String vehicleManufacturer;
     protected String vehicleModel;
     protected String vehicleRegistrationPlateIdentifier;
-    protected VehicleStatusEnum vehicleStatus;
+    protected _VehicleStatusEnum vehicleStatus;
     protected VehicleCharacteristics vehicleCharacteristics;
     protected List<AxleSpacing> axleSpacingOnVehicle;
     protected List<AxleWeight> specificAxleWeight;
     protected HazardousMaterials hazardousGoodsAssociatedWithVehicle;
     @XmlElement(name = "_vehicleExtension")
-    protected ExtensionType vehicleExtension;
+    protected _ExtensionType _VehicleExtension;
 
     /**
      * Gets the value of the anonymizedVehicleReference property.
@@ -246,10 +246,10 @@ public class Vehicle {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleStatusEnum }
+     *     {@link _VehicleStatusEnum }
      *     
      */
-    public VehicleStatusEnum getVehicleStatus() {
+    public _VehicleStatusEnum getVehicleStatus() {
         return vehicleStatus;
     }
 
@@ -258,10 +258,10 @@ public class Vehicle {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleStatusEnum }
+     *     {@link _VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatus(VehicleStatusEnum value) {
+    public void setVehicleStatus(_VehicleStatusEnum value) {
         this.vehicleStatus = value;
     }
 
@@ -372,27 +372,27 @@ public class Vehicle {
     }
 
     /**
-     * Gets the value of the vehicleExtension property.
+     * Gets the value of the _VehicleExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVehicleExtension() {
-        return vehicleExtension;
+    public _ExtensionType get_VehicleExtension() {
+        return _VehicleExtension;
     }
 
     /**
-     * Sets the value of the vehicleExtension property.
+     * Sets the value of the _VehicleExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVehicleExtension(ExtensionType value) {
-        this.vehicleExtension = value;
+    public void set_VehicleExtension(_ExtensionType value) {
+        this._VehicleExtension = value;
     }
 
 }

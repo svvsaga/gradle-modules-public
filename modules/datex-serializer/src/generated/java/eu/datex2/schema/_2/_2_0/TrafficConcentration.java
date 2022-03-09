@@ -39,7 +39,7 @@ public class TrafficConcentration
 
     protected ConcentrationOfVehiclesValue concentration;
     protected PercentageValue occupancy;
-    protected ExtensionType trafficConcentrationExtension;
+    protected _ExtensionType trafficConcentrationExtension;
 
     /**
      * Gets the value of the concentration property.
@@ -94,10 +94,10 @@ public class TrafficConcentration
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficConcentrationExtension() {
+    public _ExtensionType getTrafficConcentrationExtension() {
         return trafficConcentrationExtension;
     }
 
@@ -106,10 +106,10 @@ public class TrafficConcentration
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficConcentrationExtension(ExtensionType value) {
+    public void setTrafficConcentrationExtension(_ExtensionType value) {
         this.trafficConcentrationExtension = value;
     }
 

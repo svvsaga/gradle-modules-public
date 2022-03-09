@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PercentageValue;
 import eu.datex2.schema._3.common.VehicleFlowValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -47,7 +47,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "annualAverageDailyTraffic",
     "monthlyAverageDailyTraffic",
     "axleCharacteristics",
-    "trafficFlowExtension"
+    "_TrafficFlowExtension"
 })
 public class TrafficFlow
     extends TrafficData
@@ -62,7 +62,7 @@ public class TrafficFlow
     protected DailyTrafficFlowValue monthlyAverageDailyTraffic;
     protected AxleCharacteristics axleCharacteristics;
     @XmlElement(name = "_trafficFlowExtension")
-    protected ExtensionType trafficFlowExtension;
+    protected _ExtensionType _TrafficFlowExtension;
 
     /**
      * Gets the value of the axleFlow property.
@@ -257,27 +257,27 @@ public class TrafficFlow
     }
 
     /**
-     * Gets the value of the trafficFlowExtension property.
+     * Gets the value of the _TrafficFlowExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficFlowExtension() {
-        return trafficFlowExtension;
+    public _ExtensionType get_TrafficFlowExtension() {
+        return _TrafficFlowExtension;
     }
 
     /**
-     * Sets the value of the trafficFlowExtension property.
+     * Sets the value of the _TrafficFlowExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficFlowExtension(ExtensionType value) {
-        this.trafficFlowExtension = value;
+    public void set_TrafficFlowExtension(_ExtensionType value) {
+        this._TrafficFlowExtension = value;
     }
 
 }

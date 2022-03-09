@@ -43,7 +43,7 @@ public class EnvironmentalObstruction
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected EnvironmentalObstructionTypeEnum environmentalObstructionType;
-    protected ExtensionType environmentalObstructionExtension;
+    protected _ExtensionType environmentalObstructionExtension;
 
     /**
      * Gets the value of the depth property.
@@ -98,10 +98,10 @@ public class EnvironmentalObstruction
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEnvironmentalObstructionExtension() {
+    public _ExtensionType getEnvironmentalObstructionExtension() {
         return environmentalObstructionExtension;
     }
 
@@ -110,10 +110,10 @@ public class EnvironmentalObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEnvironmentalObstructionExtension(ExtensionType value) {
+    public void setEnvironmentalObstructionExtension(_ExtensionType value) {
         this.environmentalObstructionExtension = value;
     }
 

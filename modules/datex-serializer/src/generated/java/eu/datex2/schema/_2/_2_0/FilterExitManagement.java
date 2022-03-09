@@ -37,7 +37,7 @@ public class FilterExitManagement {
 
     protected boolean filterEnd;
     protected boolean filterOutOfRange;
-    protected ExtensionType filterExitManagementExtension;
+    protected _ExtensionType filterExitManagementExtension;
 
     /**
      * Gets the value of the filterEnd property.
@@ -76,10 +76,10 @@ public class FilterExitManagement {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFilterExitManagementExtension() {
+    public _ExtensionType getFilterExitManagementExtension() {
         return filterExitManagementExtension;
     }
 
@@ -88,10 +88,10 @@ public class FilterExitManagement {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFilterExitManagementExtension(ExtensionType value) {
+    public void setFilterExitManagementExtension(_ExtensionType value) {
         this.filterExitManagementExtension = value;
     }
 

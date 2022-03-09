@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SupplementaryInformationDisplay", propOrder = {
-    "supplementaryInformationDisplayExtension"
+    "_SupplementaryInformationDisplayExtension"
 })
 @XmlSeeAlso({
     SupplementaryPictogram.class,
@@ -41,30 +41,30 @@ public abstract class SupplementaryInformationDisplay
 {
 
     @XmlElement(name = "_supplementaryInformationDisplayExtension")
-    protected ExtensionType supplementaryInformationDisplayExtension;
+    protected _ExtensionType _SupplementaryInformationDisplayExtension;
 
     /**
-     * Gets the value of the supplementaryInformationDisplayExtension property.
+     * Gets the value of the _SupplementaryInformationDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSupplementaryInformationDisplayExtension() {
-        return supplementaryInformationDisplayExtension;
+    public _ExtensionType get_SupplementaryInformationDisplayExtension() {
+        return _SupplementaryInformationDisplayExtension;
     }
 
     /**
-     * Sets the value of the supplementaryInformationDisplayExtension property.
+     * Sets the value of the _SupplementaryInformationDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSupplementaryInformationDisplayExtension(ExtensionType value) {
-        this.supplementaryInformationDisplayExtension = value;
+    public void set_SupplementaryInformationDisplayExtension(_ExtensionType value) {
+        this._SupplementaryInformationDisplayExtension = value;
     }
 
 }

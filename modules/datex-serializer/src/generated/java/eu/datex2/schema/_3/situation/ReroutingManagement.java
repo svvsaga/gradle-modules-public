@@ -3,8 +3,8 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Destination;
 import eu.datex2.schema._3.locationreferencing.Itinerary;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -52,14 +52,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "roadOrJunctionNumber",
     "alternativeRoute",
     "destination",
-    "reroutingManagementExtension"
+    "_ReroutingManagementExtension"
 })
 public class ReroutingManagement
     extends NetworkManagement
 {
 
     @XmlElement(required = true)
-    protected List<ReroutingManagementTypeEnum> reroutingManagementType;
+    protected List<_ReroutingManagementTypeEnum> reroutingManagementType;
     protected MultilingualString reroutingItineraryDescription;
     protected Boolean signedRerouting;
     protected String alternativeRouteIdentifier;
@@ -69,7 +69,7 @@ public class ReroutingManagement
     protected List<Itinerary> alternativeRoute;
     protected Destination destination;
     @XmlElement(name = "_reroutingManagementExtension")
-    protected ExtensionType reroutingManagementExtension;
+    protected _ExtensionType _ReroutingManagementExtension;
 
     /**
      * Gets the value of the reroutingManagementType property.
@@ -89,13 +89,13 @@ public class ReroutingManagement
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ReroutingManagementTypeEnum }
+     * {@link _ReroutingManagementTypeEnum }
      * 
      * 
      */
-    public List<ReroutingManagementTypeEnum> getReroutingManagementType() {
+    public List<_ReroutingManagementTypeEnum> getReroutingManagementType() {
         if (reroutingManagementType == null) {
-            reroutingManagementType = new ArrayList<ReroutingManagementTypeEnum>();
+            reroutingManagementType = new ArrayList<_ReroutingManagementTypeEnum>();
         }
         return this.reroutingManagementType;
     }
@@ -298,27 +298,27 @@ public class ReroutingManagement
     }
 
     /**
-     * Gets the value of the reroutingManagementExtension property.
+     * Gets the value of the _ReroutingManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getReroutingManagementExtension() {
-        return reroutingManagementExtension;
+    public _ExtensionType get_ReroutingManagementExtension() {
+        return _ReroutingManagementExtension;
     }
 
     /**
-     * Sets the value of the reroutingManagementExtension property.
+     * Sets the value of the _ReroutingManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setReroutingManagementExtension(ExtensionType value) {
-        this.reroutingManagementExtension = value;
+    public void set_ReroutingManagementExtension(_ExtensionType value) {
+        this._ReroutingManagementExtension = value;
     }
 
 }

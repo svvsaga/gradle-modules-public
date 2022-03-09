@@ -1,87 +1,107 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _DirectionEnum complex type.
+ * <p>Java class for DirectionEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_DirectionEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;DirectionEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="DirectionEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="aligned"/&gt;
+ *     &lt;enumeration value="allDirections"/&gt;
+ *     &lt;enumeration value="anticlockwise"/&gt;
+ *     &lt;enumeration value="bothWays"/&gt;
+ *     &lt;enumeration value="clockwise"/&gt;
+ *     &lt;enumeration value="innerRing"/&gt;
+ *     &lt;enumeration value="outerRing"/&gt;
+ *     &lt;enumeration value="eastBound"/&gt;
+ *     &lt;enumeration value="northBound"/&gt;
+ *     &lt;enumeration value="northEastBound"/&gt;
+ *     &lt;enumeration value="northWestBound"/&gt;
+ *     &lt;enumeration value="southBound"/&gt;
+ *     &lt;enumeration value="southEastBound"/&gt;
+ *     &lt;enumeration value="southWestBound"/&gt;
+ *     &lt;enumeration value="westBound"/&gt;
+ *     &lt;enumeration value="inboundTowardsTown"/&gt;
+ *     &lt;enumeration value="outboundFromTown"/&gt;
+ *     &lt;enumeration value="opposite"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_DirectionEnum", propOrder = {
-    "value"
-})
-public class DirectionEnum {
+@XmlType(name = "DirectionEnum")
+@XmlEnum
+public enum DirectionEnum {
 
-    @XmlValue
-    protected DirectionEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("aligned")
+    ALIGNED("aligned"),
+    @XmlEnumValue("allDirections")
+    ALL_DIRECTIONS("allDirections"),
+    @XmlEnumValue("anticlockwise")
+    ANTICLOCKWISE("anticlockwise"),
+    @XmlEnumValue("bothWays")
+    BOTH_WAYS("bothWays"),
+    @XmlEnumValue("clockwise")
+    CLOCKWISE("clockwise"),
+    @XmlEnumValue("innerRing")
+    INNER_RING("innerRing"),
+    @XmlEnumValue("outerRing")
+    OUTER_RING("outerRing"),
+    @XmlEnumValue("eastBound")
+    EAST_BOUND("eastBound"),
+    @XmlEnumValue("northBound")
+    NORTH_BOUND("northBound"),
+    @XmlEnumValue("northEastBound")
+    NORTH_EAST_BOUND("northEastBound"),
+    @XmlEnumValue("northWestBound")
+    NORTH_WEST_BOUND("northWestBound"),
+    @XmlEnumValue("southBound")
+    SOUTH_BOUND("southBound"),
+    @XmlEnumValue("southEastBound")
+    SOUTH_EAST_BOUND("southEastBound"),
+    @XmlEnumValue("southWestBound")
+    SOUTH_WEST_BOUND("southWestBound"),
+    @XmlEnumValue("westBound")
+    WEST_BOUND("westBound"),
+    @XmlEnumValue("inboundTowardsTown")
+    INBOUND_TOWARDS_TOWN("inboundTowardsTown"),
+    @XmlEnumValue("outboundFromTown")
+    OUTBOUND_FROM_TOWN("outboundFromTown"),
+    @XmlEnumValue("opposite")
+    OPPOSITE("opposite"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DirectionEnum2 }
-     *     
-     */
-    public DirectionEnum2 getValue() {
+    DirectionEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DirectionEnum2 }
-     *     
-     */
-    public void setValue(DirectionEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static DirectionEnum fromValue(String v) {
+        for (DirectionEnum c: DirectionEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -1,87 +1,101 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _FuelTypeEnum complex type.
+ * <p>Java class for FuelTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_FuelTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;FuelTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="FuelTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="all"/&gt;
+ *     &lt;enumeration value="battery"/&gt;
+ *     &lt;enumeration value="biodiesel"/&gt;
+ *     &lt;enumeration value="diesel"/&gt;
+ *     &lt;enumeration value="dieselBatteryHybrid"/&gt;
+ *     &lt;enumeration value="ethanol"/&gt;
+ *     &lt;enumeration value="hydrogen"/&gt;
+ *     &lt;enumeration value="liquidGas"/&gt;
+ *     &lt;enumeration value="lpg"/&gt;
+ *     &lt;enumeration value="methane"/&gt;
+ *     &lt;enumeration value="petrol"/&gt;
+ *     &lt;enumeration value="petrol95Octane"/&gt;
+ *     &lt;enumeration value="petrol98Octane"/&gt;
+ *     &lt;enumeration value="petrolBatteryHybrid"/&gt;
+ *     &lt;enumeration value="petrolLeaded"/&gt;
+ *     &lt;enumeration value="petrolUnleaded"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_FuelTypeEnum", propOrder = {
-    "value"
-})
-public class FuelTypeEnum {
+@XmlType(name = "FuelTypeEnum")
+@XmlEnum
+public enum FuelTypeEnum {
 
-    @XmlValue
-    protected FuelTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("all")
+    ALL("all"),
+    @XmlEnumValue("battery")
+    BATTERY("battery"),
+    @XmlEnumValue("biodiesel")
+    BIODIESEL("biodiesel"),
+    @XmlEnumValue("diesel")
+    DIESEL("diesel"),
+    @XmlEnumValue("dieselBatteryHybrid")
+    DIESEL_BATTERY_HYBRID("dieselBatteryHybrid"),
+    @XmlEnumValue("ethanol")
+    ETHANOL("ethanol"),
+    @XmlEnumValue("hydrogen")
+    HYDROGEN("hydrogen"),
+    @XmlEnumValue("liquidGas")
+    LIQUID_GAS("liquidGas"),
+    @XmlEnumValue("lpg")
+    LPG("lpg"),
+    @XmlEnumValue("methane")
+    METHANE("methane"),
+    @XmlEnumValue("petrol")
+    PETROL("petrol"),
+    @XmlEnumValue("petrol95Octane")
+    PETROL_95_OCTANE("petrol95Octane"),
+    @XmlEnumValue("petrol98Octane")
+    PETROL_98_OCTANE("petrol98Octane"),
+    @XmlEnumValue("petrolBatteryHybrid")
+    PETROL_BATTERY_HYBRID("petrolBatteryHybrid"),
+    @XmlEnumValue("petrolLeaded")
+    PETROL_LEADED("petrolLeaded"),
+    @XmlEnumValue("petrolUnleaded")
+    PETROL_UNLEADED("petrolUnleaded"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FuelTypeEnum2 }
-     *     
-     */
-    public FuelTypeEnum2 getValue() {
+    FuelTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FuelTypeEnum2 }
-     *     
-     */
-    public void setValue(FuelTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static FuelTypeEnum fromValue(String v) {
+        for (FuelTypeEnum c: FuelTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

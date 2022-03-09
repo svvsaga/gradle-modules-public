@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SinglePhysicalQuantity", propOrder = {
     "basicData",
-    "singlePhysicalQuantityExtension"
+    "_SinglePhysicalQuantityExtension"
 })
 public class SinglePhysicalQuantity
     extends PhysicalQuantity
@@ -39,7 +39,7 @@ public class SinglePhysicalQuantity
 
     protected BasicData basicData;
     @XmlElement(name = "_singlePhysicalQuantityExtension")
-    protected ExtensionType singlePhysicalQuantityExtension;
+    protected _ExtensionType _SinglePhysicalQuantityExtension;
 
     /**
      * Gets the value of the basicData property.
@@ -66,27 +66,27 @@ public class SinglePhysicalQuantity
     }
 
     /**
-     * Gets the value of the singlePhysicalQuantityExtension property.
+     * Gets the value of the _SinglePhysicalQuantityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSinglePhysicalQuantityExtension() {
-        return singlePhysicalQuantityExtension;
+    public _ExtensionType get_SinglePhysicalQuantityExtension() {
+        return _SinglePhysicalQuantityExtension;
     }
 
     /**
-     * Sets the value of the singlePhysicalQuantityExtension property.
+     * Sets the value of the _SinglePhysicalQuantityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSinglePhysicalQuantityExtension(ExtensionType value) {
-        this.singlePhysicalQuantityExtension = value;
+    public void set_SinglePhysicalQuantityExtension(_ExtensionType value) {
+        this._SinglePhysicalQuantityExtension = value;
     }
 
 }

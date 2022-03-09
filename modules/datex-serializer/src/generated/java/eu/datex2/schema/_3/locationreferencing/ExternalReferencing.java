@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "ExternalReferencing", propOrder = {
     "externalLocationCode",
     "externalReferencingSystem",
-    "externalReferencingExtension"
+    "_ExternalReferencingExtension"
 })
 public class ExternalReferencing {
 
@@ -42,7 +42,7 @@ public class ExternalReferencing {
     @XmlElement(required = true)
     protected String externalReferencingSystem;
     @XmlElement(name = "_externalReferencingExtension")
-    protected ExtensionType externalReferencingExtension;
+    protected _ExtensionType _ExternalReferencingExtension;
 
     /**
      * Gets the value of the externalLocationCode property.
@@ -93,27 +93,27 @@ public class ExternalReferencing {
     }
 
     /**
-     * Gets the value of the externalReferencingExtension property.
+     * Gets the value of the _ExternalReferencingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getExternalReferencingExtension() {
-        return externalReferencingExtension;
+    public _ExtensionType get_ExternalReferencingExtension() {
+        return _ExternalReferencingExtension;
     }
 
     /**
-     * Sets the value of the externalReferencingExtension property.
+     * Sets the value of the _ExternalReferencingExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setExternalReferencingExtension(ExtensionType value) {
-        this.externalReferencingExtension = value;
+    public void set_ExternalReferencingExtension(_ExtensionType value) {
+        this._ExternalReferencingExtension = value;
     }
 
 }

@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "axlePositionIdentifier",
     "axleWeight",
     "maximumPermittedAxleWeight",
-    "axleWeightExtension"
+    "_AxleWeightExtension"
 })
 public class AxleWeight {
 
@@ -46,7 +46,7 @@ public class AxleWeight {
     protected Float axleWeight;
     protected Float maximumPermittedAxleWeight;
     @XmlElement(name = "_axleWeightExtension")
-    protected ExtensionType axleWeightExtension;
+    protected _ExtensionType _AxleWeightExtension;
 
     /**
      * Gets the value of the axlePositionIdentifier property.
@@ -121,27 +121,27 @@ public class AxleWeight {
     }
 
     /**
-     * Gets the value of the axleWeightExtension property.
+     * Gets the value of the _AxleWeightExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAxleWeightExtension() {
-        return axleWeightExtension;
+    public _ExtensionType get_AxleWeightExtension() {
+        return _AxleWeightExtension;
     }
 
     /**
-     * Sets the value of the axleWeightExtension property.
+     * Sets the value of the _AxleWeightExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAxleWeightExtension(ExtensionType value) {
-        this.axleWeightExtension = value;
+    public void set_AxleWeightExtension(_ExtensionType value) {
+        this._AxleWeightExtension = value;
     }
 
 }

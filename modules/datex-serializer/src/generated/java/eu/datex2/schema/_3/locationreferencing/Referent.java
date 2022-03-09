@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "referentType",
     "referentDescription",
     "pointCoordinates",
-    "referentExtension"
+    "_ReferentExtension"
 })
 public class Referent {
 
@@ -48,11 +48,11 @@ public class Referent {
     protected String referentIdentifier;
     protected String referentName;
     @XmlElement(required = true)
-    protected ReferentTypeEnum referentType;
+    protected _ReferentTypeEnum referentType;
     protected MultilingualString referentDescription;
     protected PointCoordinates pointCoordinates;
     @XmlElement(name = "_referentExtension")
-    protected ExtensionType referentExtension;
+    protected _ExtensionType _ReferentExtension;
 
     /**
      * Gets the value of the referentIdentifier property.
@@ -107,10 +107,10 @@ public class Referent {
      * 
      * @return
      *     possible object is
-     *     {@link ReferentTypeEnum }
+     *     {@link _ReferentTypeEnum }
      *     
      */
-    public ReferentTypeEnum getReferentType() {
+    public _ReferentTypeEnum getReferentType() {
         return referentType;
     }
 
@@ -119,10 +119,10 @@ public class Referent {
      * 
      * @param value
      *     allowed object is
-     *     {@link ReferentTypeEnum }
+     *     {@link _ReferentTypeEnum }
      *     
      */
-    public void setReferentType(ReferentTypeEnum value) {
+    public void setReferentType(_ReferentTypeEnum value) {
         this.referentType = value;
     }
 
@@ -175,27 +175,27 @@ public class Referent {
     }
 
     /**
-     * Gets the value of the referentExtension property.
+     * Gets the value of the _ReferentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getReferentExtension() {
-        return referentExtension;
+    public _ExtensionType get_ReferentExtension() {
+        return _ReferentExtension;
     }
 
     /**
-     * Sets the value of the referentExtension property.
+     * Sets the value of the _ReferentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setReferentExtension(ExtensionType value) {
-        this.referentExtension = value;
+    public void set_ReferentExtension(_ExtensionType value) {
+        this._ReferentExtension = value;
     }
 
 }

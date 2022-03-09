@@ -4,8 +4,8 @@ package eu.datex2.schema._3.locationreferencing;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -56,23 +56,23 @@ import jakarta.xml.bind.annotation.XmlType;
     "carriageway",
     "namedArea",
     "roadInformation",
-    "supplementaryPositionalDescriptionExtension"
+    "_SupplementaryPositionalDescriptionExtension"
 })
 public class SupplementaryPositionalDescription {
 
-    protected DirectionPurposeEnum directionPurpose;
-    protected GeographicCharacteristicEnum geographicDescriptor;
-    protected InfrastructureDescriptorEnum infrastructureDescriptor;
+    protected _DirectionPurposeEnum directionPurpose;
+    protected _GeographicCharacteristicEnum geographicDescriptor;
+    protected _InfrastructureDescriptorEnum infrastructureDescriptor;
     protected Float lengthAffected;
     protected MultilingualString locationDescription;
-    protected RelativePositionOnCarriagewayEnum positionOnCarriageway;
+    protected _RelativePositionOnCarriagewayEnum positionOnCarriageway;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequentialRampNumber;
     protected List<Carriageway> carriageway;
     protected NamedArea namedArea;
     protected List<RoadInformation> roadInformation;
     @XmlElement(name = "_supplementaryPositionalDescriptionExtension")
-    protected ExtensionType supplementaryPositionalDescriptionExtension;
+    protected _ExtensionType _SupplementaryPositionalDescriptionExtension;
     @XmlAttribute(name = "locationPrecision")
     protected BigInteger locationPrecision;
 
@@ -81,10 +81,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link DirectionPurposeEnum }
+     *     {@link _DirectionPurposeEnum }
      *     
      */
-    public DirectionPurposeEnum getDirectionPurpose() {
+    public _DirectionPurposeEnum getDirectionPurpose() {
         return directionPurpose;
     }
 
@@ -93,10 +93,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link DirectionPurposeEnum }
+     *     {@link _DirectionPurposeEnum }
      *     
      */
-    public void setDirectionPurpose(DirectionPurposeEnum value) {
+    public void setDirectionPurpose(_DirectionPurposeEnum value) {
         this.directionPurpose = value;
     }
 
@@ -105,10 +105,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link GeographicCharacteristicEnum }
+     *     {@link _GeographicCharacteristicEnum }
      *     
      */
-    public GeographicCharacteristicEnum getGeographicDescriptor() {
+    public _GeographicCharacteristicEnum getGeographicDescriptor() {
         return geographicDescriptor;
     }
 
@@ -117,10 +117,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link GeographicCharacteristicEnum }
+     *     {@link _GeographicCharacteristicEnum }
      *     
      */
-    public void setGeographicDescriptor(GeographicCharacteristicEnum value) {
+    public void setGeographicDescriptor(_GeographicCharacteristicEnum value) {
         this.geographicDescriptor = value;
     }
 
@@ -129,10 +129,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link InfrastructureDescriptorEnum }
+     *     {@link _InfrastructureDescriptorEnum }
      *     
      */
-    public InfrastructureDescriptorEnum getInfrastructureDescriptor() {
+    public _InfrastructureDescriptorEnum getInfrastructureDescriptor() {
         return infrastructureDescriptor;
     }
 
@@ -141,10 +141,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link InfrastructureDescriptorEnum }
+     *     {@link _InfrastructureDescriptorEnum }
      *     
      */
-    public void setInfrastructureDescriptor(InfrastructureDescriptorEnum value) {
+    public void setInfrastructureDescriptor(_InfrastructureDescriptorEnum value) {
         this.infrastructureDescriptor = value;
     }
 
@@ -201,10 +201,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link RelativePositionOnCarriagewayEnum }
+     *     {@link _RelativePositionOnCarriagewayEnum }
      *     
      */
-    public RelativePositionOnCarriagewayEnum getPositionOnCarriageway() {
+    public _RelativePositionOnCarriagewayEnum getPositionOnCarriageway() {
         return positionOnCarriageway;
     }
 
@@ -213,10 +213,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link RelativePositionOnCarriagewayEnum }
+     *     {@link _RelativePositionOnCarriagewayEnum }
      *     
      */
-    public void setPositionOnCarriageway(RelativePositionOnCarriagewayEnum value) {
+    public void setPositionOnCarriageway(_RelativePositionOnCarriagewayEnum value) {
         this.positionOnCarriageway = value;
     }
 
@@ -327,27 +327,27 @@ public class SupplementaryPositionalDescription {
     }
 
     /**
-     * Gets the value of the supplementaryPositionalDescriptionExtension property.
+     * Gets the value of the _SupplementaryPositionalDescriptionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSupplementaryPositionalDescriptionExtension() {
-        return supplementaryPositionalDescriptionExtension;
+    public _ExtensionType get_SupplementaryPositionalDescriptionExtension() {
+        return _SupplementaryPositionalDescriptionExtension;
     }
 
     /**
-     * Sets the value of the supplementaryPositionalDescriptionExtension property.
+     * Sets the value of the _SupplementaryPositionalDescriptionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSupplementaryPositionalDescriptionExtension(ExtensionType value) {
-        this.supplementaryPositionalDescriptionExtension = value;
+    public void set_SupplementaryPositionalDescriptionExtension(_ExtensionType value) {
+        this._SupplementaryPositionalDescriptionExtension = value;
     }
 
     /**

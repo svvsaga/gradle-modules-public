@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,14 +31,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AlertCMethod2PrimaryPointLocation", propOrder = {
     "alertCLocation",
-    "alertCMethod2PrimaryPointLocationExtension"
+    "_AlertCMethod2PrimaryPointLocationExtension"
 })
 public class AlertCMethod2PrimaryPointLocation {
 
     @XmlElement(required = true)
     protected AlertCLocation alertCLocation;
     @XmlElement(name = "_alertCMethod2PrimaryPointLocationExtension")
-    protected ExtensionType alertCMethod2PrimaryPointLocationExtension;
+    protected _ExtensionType _AlertCMethod2PrimaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -65,27 +65,27 @@ public class AlertCMethod2PrimaryPointLocation {
     }
 
     /**
-     * Gets the value of the alertCMethod2PrimaryPointLocationExtension property.
+     * Gets the value of the _AlertCMethod2PrimaryPointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCMethod2PrimaryPointLocationExtension() {
-        return alertCMethod2PrimaryPointLocationExtension;
+    public _ExtensionType get_AlertCMethod2PrimaryPointLocationExtension() {
+        return _AlertCMethod2PrimaryPointLocationExtension;
     }
 
     /**
-     * Sets the value of the alertCMethod2PrimaryPointLocationExtension property.
+     * Sets the value of the _AlertCMethod2PrimaryPointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCMethod2PrimaryPointLocationExtension(ExtensionType value) {
-        this.alertCMethod2PrimaryPointLocationExtension = value;
+    public void set_AlertCMethod2PrimaryPointLocationExtension(_ExtensionType value) {
+        this._AlertCMethod2PrimaryPointLocationExtension = value;
     }
 
 }

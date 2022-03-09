@@ -49,7 +49,7 @@ public class VmsSupplementaryPictogram {
     protected String supplementaryPictogramUrl;
     protected MultilingualString additionalSupplementaryPictogramDescription;
     protected Boolean pictogramFlashing;
-    protected ExtensionType vmsSupplementaryPictogramExtension;
+    protected _ExtensionType vmsSupplementaryPictogramExtension;
 
     /**
      * Gets the value of the supplementaryPictogramDescription property.
@@ -176,10 +176,10 @@ public class VmsSupplementaryPictogram {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsSupplementaryPictogramExtension() {
+    public _ExtensionType getVmsSupplementaryPictogramExtension() {
         return vmsSupplementaryPictogramExtension;
     }
 
@@ -188,10 +188,10 @@ public class VmsSupplementaryPictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsSupplementaryPictogramExtension(ExtensionType value) {
+    public void setVmsSupplementaryPictogramExtension(_ExtensionType value) {
         this.vmsSupplementaryPictogramExtension = value;
     }
 

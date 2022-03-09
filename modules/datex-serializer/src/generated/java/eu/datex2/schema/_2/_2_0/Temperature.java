@@ -43,7 +43,7 @@ public class Temperature {
     protected TemperatureValue dewPointTemperature;
     protected TemperatureValue maximumTemperature;
     protected TemperatureValue minimumTemperature;
-    protected ExtensionType temperatureExtension;
+    protected _ExtensionType temperatureExtension;
 
     /**
      * Gets the value of the airTemperature property.
@@ -146,10 +146,10 @@ public class Temperature {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureExtension() {
+    public _ExtensionType getTemperatureExtension() {
         return temperatureExtension;
     }
 
@@ -158,10 +158,10 @@ public class Temperature {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureExtension(ExtensionType value) {
+    public void setTemperatureExtension(_ExtensionType value) {
         this.temperatureExtension = value;
     }
 

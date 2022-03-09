@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,17 +41,17 @@ import jakarta.xml.bind.annotation.XmlType;
     "messageType",
     "exchangeContext",
     "dynamicInformation",
-    "exchangeInformationExtension"
+    "_ExchangeInformationExtension"
 })
 public class ExchangeInformation {
 
-    protected MessageTypeEnum messageType;
+    protected _MessageTypeEnum messageType;
     @XmlElement(required = true)
     protected ExchangeContext exchangeContext;
     @XmlElement(required = true)
     protected DynamicInformation dynamicInformation;
     @XmlElement(name = "_exchangeInformationExtension")
-    protected ExtensionType exchangeInformationExtension;
+    protected _ExtensionType _ExchangeInformationExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;
     @XmlAttribute(name = "extensionName")
@@ -68,10 +68,10 @@ public class ExchangeInformation {
      * 
      * @return
      *     possible object is
-     *     {@link MessageTypeEnum }
+     *     {@link _MessageTypeEnum }
      *     
      */
-    public MessageTypeEnum getMessageType() {
+    public _MessageTypeEnum getMessageType() {
         return messageType;
     }
 
@@ -80,10 +80,10 @@ public class ExchangeInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link MessageTypeEnum }
+     *     {@link _MessageTypeEnum }
      *     
      */
-    public void setMessageType(MessageTypeEnum value) {
+    public void setMessageType(_MessageTypeEnum value) {
         this.messageType = value;
     }
 
@@ -136,27 +136,27 @@ public class ExchangeInformation {
     }
 
     /**
-     * Gets the value of the exchangeInformationExtension property.
+     * Gets the value of the _ExchangeInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getExchangeInformationExtension() {
-        return exchangeInformationExtension;
+    public _ExtensionType get_ExchangeInformationExtension() {
+        return _ExchangeInformationExtension;
     }
 
     /**
-     * Sets the value of the exchangeInformationExtension property.
+     * Sets the value of the _ExchangeInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setExchangeInformationExtension(ExtensionType value) {
-        this.exchangeInformationExtension = value;
+    public void set_ExchangeInformationExtension(_ExtensionType value) {
+        this._ExchangeInformationExtension = value;
     }
 
     /**

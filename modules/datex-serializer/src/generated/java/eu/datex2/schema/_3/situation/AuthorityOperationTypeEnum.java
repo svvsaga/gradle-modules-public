@@ -1,87 +1,98 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _AuthorityOperationTypeEnum complex type.
+ * <p>Java class for AuthorityOperationTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_AuthorityOperationTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;AuthorityOperationTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="AuthorityOperationTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="accidentInvestigationWork"/&gt;
+ *     &lt;enumeration value="bombSquadInAction"/&gt;
+ *     &lt;enumeration value="civilEmergency"/&gt;
+ *     &lt;enumeration value="customsOperation"/&gt;
+ *     &lt;enumeration value="juridicalReconstruction"/&gt;
+ *     &lt;enumeration value="policeCheckPoint"/&gt;
+ *     &lt;enumeration value="policeInvestigation"/&gt;
+ *     &lt;enumeration value="roadOperatorCheckPoint"/&gt;
+ *     &lt;enumeration value="snowChainOnBoardOrSnowTyresMountedCheck"/&gt;
+ *     &lt;enumeration value="snowChainOrSnowTyresMountedCheck"/&gt;
+ *     &lt;enumeration value="survey"/&gt;
+ *     &lt;enumeration value="transportOfVip"/&gt;
+ *     &lt;enumeration value="undefinedAuthorityActivity"/&gt;
+ *     &lt;enumeration value="vehicleInspectionCheckPoint"/&gt;
+ *     &lt;enumeration value="vehicleWeighing"/&gt;
+ *     &lt;enumeration value="weighInMotion"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_AuthorityOperationTypeEnum", propOrder = {
-    "value"
-})
-public class AuthorityOperationTypeEnum {
+@XmlType(name = "AuthorityOperationTypeEnum")
+@XmlEnum
+public enum AuthorityOperationTypeEnum {
 
-    @XmlValue
-    protected AuthorityOperationTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("accidentInvestigationWork")
+    ACCIDENT_INVESTIGATION_WORK("accidentInvestigationWork"),
+    @XmlEnumValue("bombSquadInAction")
+    BOMB_SQUAD_IN_ACTION("bombSquadInAction"),
+    @XmlEnumValue("civilEmergency")
+    CIVIL_EMERGENCY("civilEmergency"),
+    @XmlEnumValue("customsOperation")
+    CUSTOMS_OPERATION("customsOperation"),
+    @XmlEnumValue("juridicalReconstruction")
+    JURIDICAL_RECONSTRUCTION("juridicalReconstruction"),
+    @XmlEnumValue("policeCheckPoint")
+    POLICE_CHECK_POINT("policeCheckPoint"),
+    @XmlEnumValue("policeInvestigation")
+    POLICE_INVESTIGATION("policeInvestigation"),
+    @XmlEnumValue("roadOperatorCheckPoint")
+    ROAD_OPERATOR_CHECK_POINT("roadOperatorCheckPoint"),
+    @XmlEnumValue("snowChainOnBoardOrSnowTyresMountedCheck")
+    SNOW_CHAIN_ON_BOARD_OR_SNOW_TYRES_MOUNTED_CHECK("snowChainOnBoardOrSnowTyresMountedCheck"),
+    @XmlEnumValue("snowChainOrSnowTyresMountedCheck")
+    SNOW_CHAIN_OR_SNOW_TYRES_MOUNTED_CHECK("snowChainOrSnowTyresMountedCheck"),
+    @XmlEnumValue("survey")
+    SURVEY("survey"),
+    @XmlEnumValue("transportOfVip")
+    TRANSPORT_OF_VIP("transportOfVip"),
+    @XmlEnumValue("undefinedAuthorityActivity")
+    UNDEFINED_AUTHORITY_ACTIVITY("undefinedAuthorityActivity"),
+    @XmlEnumValue("vehicleInspectionCheckPoint")
+    VEHICLE_INSPECTION_CHECK_POINT("vehicleInspectionCheckPoint"),
+    @XmlEnumValue("vehicleWeighing")
+    VEHICLE_WEIGHING("vehicleWeighing"),
+    @XmlEnumValue("weighInMotion")
+    WEIGH_IN_MOTION("weighInMotion"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuthorityOperationTypeEnum2 }
-     *     
-     */
-    public AuthorityOperationTypeEnum2 getValue() {
+    AuthorityOperationTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuthorityOperationTypeEnum2 }
-     *     
-     */
-    public void setValue(AuthorityOperationTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static AuthorityOperationTypeEnum fromValue(String v) {
+        for (AuthorityOperationTypeEnum c: AuthorityOperationTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

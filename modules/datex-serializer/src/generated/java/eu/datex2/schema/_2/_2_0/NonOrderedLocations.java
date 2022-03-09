@@ -38,17 +38,17 @@ public abstract class NonOrderedLocations
     extends GroupOfLocations
 {
 
-    protected ExtensionType nonOrderedLocationsExtension;
+    protected _ExtensionType nonOrderedLocationsExtension;
 
     /**
      * Gets the value of the nonOrderedLocationsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNonOrderedLocationsExtension() {
+    public _ExtensionType getNonOrderedLocationsExtension() {
         return nonOrderedLocationsExtension;
     }
 
@@ -57,10 +57,10 @@ public abstract class NonOrderedLocations
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNonOrderedLocationsExtension(ExtensionType value) {
+    public void setNonOrderedLocationsExtension(_ExtensionType value) {
         this.nonOrderedLocationsExtension = value;
     }
 

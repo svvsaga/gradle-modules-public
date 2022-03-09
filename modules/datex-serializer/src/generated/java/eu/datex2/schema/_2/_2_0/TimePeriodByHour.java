@@ -46,7 +46,7 @@ public class TimePeriodByHour
     @XmlElement(required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar endTimeOfPeriod;
-    protected ExtensionType timePeriodByHourExtension;
+    protected _ExtensionType timePeriodByHourExtension;
 
     /**
      * Gets the value of the startTimeOfPeriod property.
@@ -101,10 +101,10 @@ public class TimePeriodByHour
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTimePeriodByHourExtension() {
+    public _ExtensionType getTimePeriodByHourExtension() {
         return timePeriodByHourExtension;
     }
 
@@ -113,10 +113,10 @@ public class TimePeriodByHour
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTimePeriodByHourExtension(ExtensionType value) {
+    public void setTimePeriodByHourExtension(_ExtensionType value) {
         this.timePeriodByHourExtension = value;
     }
 

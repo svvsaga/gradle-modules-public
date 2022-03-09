@@ -36,7 +36,7 @@ public class DistanceFromLinearElementStart
 {
 
     protected float distanceAlong;
-    protected ExtensionType distanceFromLinearElementStartExtension;
+    protected _ExtensionType distanceFromLinearElementStartExtension;
 
     /**
      * Gets the value of the distanceAlong property.
@@ -59,10 +59,10 @@ public class DistanceFromLinearElementStart
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDistanceFromLinearElementStartExtension() {
+    public _ExtensionType getDistanceFromLinearElementStartExtension() {
         return distanceFromLinearElementStartExtension;
     }
 
@@ -71,10 +71,10 @@ public class DistanceFromLinearElementStart
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDistanceFromLinearElementStartExtension(ExtensionType value) {
+    public void setDistanceFromLinearElementStartExtension(_ExtensionType value) {
         this.distanceFromLinearElementStartExtension = value;
     }
 

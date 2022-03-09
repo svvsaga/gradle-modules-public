@@ -37,18 +37,18 @@ public class NonOrderedLocationGroupByReference
 {
 
     @XmlElement(required = true)
-    protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
-    protected ExtensionType nonOrderedLocationGroupByReferenceExtension;
+    protected _PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    protected _ExtensionType nonOrderedLocationGroupByReferenceExtension;
 
     /**
      * Gets the value of the predefinedNonOrderedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
+    public _PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
         return predefinedNonOrderedLocationGroupReference;
     }
 
@@ -57,10 +57,10 @@ public class NonOrderedLocationGroupByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupReference(PredefinedNonOrderedLocationGroupVersionedReference value) {
+    public void setPredefinedNonOrderedLocationGroupReference(_PredefinedNonOrderedLocationGroupVersionedReference value) {
         this.predefinedNonOrderedLocationGroupReference = value;
     }
 
@@ -69,10 +69,10 @@ public class NonOrderedLocationGroupByReference
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNonOrderedLocationGroupByReferenceExtension() {
+    public _ExtensionType getNonOrderedLocationGroupByReferenceExtension() {
         return nonOrderedLocationGroupByReferenceExtension;
     }
 
@@ -81,10 +81,10 @@ public class NonOrderedLocationGroupByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNonOrderedLocationGroupByReferenceExtension(ExtensionType value) {
+    public void setNonOrderedLocationGroupByReferenceExtension(_ExtensionType value) {
         this.nonOrderedLocationGroupByReferenceExtension = value;
     }
 

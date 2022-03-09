@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "textCode",
     "textImageUrl",
     "textLine",
-    "textDisplayExtension"
+    "_TextDisplayExtension"
 })
 public class TextDisplay
     extends DisplayAreaSettings
@@ -47,9 +47,9 @@ public class TextDisplay
     protected String textCode;
     @XmlSchemaType(name = "anyURI")
     protected String textImageUrl;
-    protected List<TextDisplayLineIndexTextLine> textLine;
+    protected List<_TextDisplayLineIndexTextLine> textLine;
     @XmlElement(name = "_textDisplayExtension")
-    protected ExtensionType textDisplayExtension;
+    protected _ExtensionType _TextDisplayExtension;
 
     /**
      * Gets the value of the textCode property.
@@ -117,39 +117,39 @@ public class TextDisplay
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TextDisplayLineIndexTextLine }
+     * {@link _TextDisplayLineIndexTextLine }
      * 
      * 
      */
-    public List<TextDisplayLineIndexTextLine> getTextLine() {
+    public List<_TextDisplayLineIndexTextLine> getTextLine() {
         if (textLine == null) {
-            textLine = new ArrayList<TextDisplayLineIndexTextLine>();
+            textLine = new ArrayList<_TextDisplayLineIndexTextLine>();
         }
         return this.textLine;
     }
 
     /**
-     * Gets the value of the textDisplayExtension property.
+     * Gets the value of the _TextDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTextDisplayExtension() {
-        return textDisplayExtension;
+    public _ExtensionType get_TextDisplayExtension() {
+        return _TextDisplayExtension;
     }
 
     /**
-     * Sets the value of the textDisplayExtension property.
+     * Sets the value of the _TextDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTextDisplayExtension(ExtensionType value) {
-        this.textDisplayExtension = value;
+    public void set_TextDisplayExtension(_ExtensionType value) {
+        this._TextDisplayExtension = value;
     }
 
 }

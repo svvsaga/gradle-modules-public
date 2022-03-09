@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,27 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrPathAttributes", propOrder = {
     "openlrLowestFrcToNextLRPoint",
     "openlrDistanceToNextLRPoint",
-    "openlrPathAttributesExtension"
+    "_OpenlrPathAttributesExtension"
 })
 public class OpenlrPathAttributes {
 
     @XmlElement(required = true)
-    protected OpenlrFunctionalRoadClassEnum openlrLowestFrcToNextLRPoint;
+    protected _OpenlrFunctionalRoadClassEnum openlrLowestFrcToNextLRPoint;
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrDistanceToNextLRPoint;
     @XmlElement(name = "_openlrPathAttributesExtension")
-    protected ExtensionType openlrPathAttributesExtension;
+    protected _ExtensionType _OpenlrPathAttributesExtension;
 
     /**
      * Gets the value of the openlrLowestFrcToNextLRPoint property.
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrFunctionalRoadClassEnum }
+     *     {@link _OpenlrFunctionalRoadClassEnum }
      *     
      */
-    public OpenlrFunctionalRoadClassEnum getOpenlrLowestFrcToNextLRPoint() {
+    public _OpenlrFunctionalRoadClassEnum getOpenlrLowestFrcToNextLRPoint() {
         return openlrLowestFrcToNextLRPoint;
     }
 
@@ -64,10 +64,10 @@ public class OpenlrPathAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrFunctionalRoadClassEnum }
+     *     {@link _OpenlrFunctionalRoadClassEnum }
      *     
      */
-    public void setOpenlrLowestFrcToNextLRPoint(OpenlrFunctionalRoadClassEnum value) {
+    public void setOpenlrLowestFrcToNextLRPoint(_OpenlrFunctionalRoadClassEnum value) {
         this.openlrLowestFrcToNextLRPoint = value;
     }
 
@@ -96,27 +96,27 @@ public class OpenlrPathAttributes {
     }
 
     /**
-     * Gets the value of the openlrPathAttributesExtension property.
+     * Gets the value of the _OpenlrPathAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPathAttributesExtension() {
-        return openlrPathAttributesExtension;
+    public _ExtensionType get_OpenlrPathAttributesExtension() {
+        return _OpenlrPathAttributesExtension;
     }
 
     /**
-     * Sets the value of the openlrPathAttributesExtension property.
+     * Sets the value of the _OpenlrPathAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPathAttributesExtension(ExtensionType value) {
-        this.openlrPathAttributesExtension = value;
+    public void set_OpenlrPathAttributesExtension(_ExtensionType value) {
+        this._OpenlrPathAttributesExtension = value;
     }
 
 }

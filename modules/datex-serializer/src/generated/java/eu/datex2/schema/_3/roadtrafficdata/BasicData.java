@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BasicData", propOrder = {
     "measurementOrCalculationTime",
-    "basicDataExtension"
+    "_BasicDataExtension"
 })
 @XmlSeeAlso({
     TrafficData.class,
@@ -44,7 +44,7 @@ public abstract class BasicData {
 
     protected MeasurementOrCalculationTime measurementOrCalculationTime;
     @XmlElement(name = "_basicDataExtension")
-    protected ExtensionType basicDataExtension;
+    protected _ExtensionType _BasicDataExtension;
 
     /**
      * Gets the value of the measurementOrCalculationTime property.
@@ -71,27 +71,27 @@ public abstract class BasicData {
     }
 
     /**
-     * Gets the value of the basicDataExtension property.
+     * Gets the value of the _BasicDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getBasicDataExtension() {
-        return basicDataExtension;
+    public _ExtensionType get_BasicDataExtension() {
+        return _BasicDataExtension;
     }
 
     /**
-     * Sets the value of the basicDataExtension property.
+     * Sets the value of the _BasicDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setBasicDataExtension(ExtensionType value) {
-        this.basicDataExtension = value;
+    public void set_BasicDataExtension(_ExtensionType value) {
+        this._BasicDataExtension = value;
     }
 
 }

@@ -36,7 +36,7 @@ public class PrecipitationIntensityValue
 {
 
     protected float millimetresPerHourIntensity;
-    protected ExtensionType precipitationIntensityValueExtension;
+    protected _ExtensionType precipitationIntensityValueExtension;
 
     /**
      * Gets the value of the millimetresPerHourIntensity property.
@@ -59,10 +59,10 @@ public class PrecipitationIntensityValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrecipitationIntensityValueExtension() {
+    public _ExtensionType getPrecipitationIntensityValueExtension() {
         return precipitationIntensityValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class PrecipitationIntensityValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrecipitationIntensityValueExtension(ExtensionType value) {
+    public void setPrecipitationIntensityValueExtension(_ExtensionType value) {
         this.precipitationIntensityValueExtension = value;
     }
 

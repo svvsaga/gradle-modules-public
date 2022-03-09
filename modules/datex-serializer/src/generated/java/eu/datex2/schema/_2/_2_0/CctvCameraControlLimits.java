@@ -58,7 +58,7 @@ public class CctvCameraControlLimits {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvMaxZoomValue;
     protected List<CctvCameraNonDwellZone> cctvCameraNonDwellZone;
-    protected ExtensionType cctvCameraControlLimitsExtension;
+    protected _ExtensionType cctvCameraControlLimitsExtension;
 
     /**
      * Gets the value of the cctvEndStopMinPanValue property.
@@ -214,10 +214,10 @@ public class CctvCameraControlLimits {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraControlLimitsExtension() {
+    public _ExtensionType getCctvCameraControlLimitsExtension() {
         return cctvCameraControlLimitsExtension;
     }
 
@@ -226,10 +226,10 @@ public class CctvCameraControlLimits {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraControlLimitsExtension(ExtensionType value) {
+    public void setCctvCameraControlLimitsExtension(_ExtensionType value) {
         this.cctvCameraControlLimitsExtension = value;
     }
 

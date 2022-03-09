@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "radius",
     "centrePoint",
     "name",
-    "tpegGeometricAreaExtension"
+    "_TpegGeometricAreaExtension"
 })
 public class TpegGeometricArea
     extends TpegAreaLocation
@@ -50,7 +50,7 @@ public class TpegGeometricArea
     protected PointCoordinates centrePoint;
     protected TpegAreaDescriptor name;
     @XmlElement(name = "_tpegGeometricAreaExtension")
-    protected ExtensionType tpegGeometricAreaExtension;
+    protected _ExtensionType _TpegGeometricAreaExtension;
 
     /**
      * Gets the value of the radius property.
@@ -125,27 +125,27 @@ public class TpegGeometricArea
     }
 
     /**
-     * Gets the value of the tpegGeometricAreaExtension property.
+     * Gets the value of the _TpegGeometricAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegGeometricAreaExtension() {
-        return tpegGeometricAreaExtension;
+    public _ExtensionType get_TpegGeometricAreaExtension() {
+        return _TpegGeometricAreaExtension;
     }
 
     /**
-     * Sets the value of the tpegGeometricAreaExtension property.
+     * Sets the value of the _TpegGeometricAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegGeometricAreaExtension(ExtensionType value) {
-        this.tpegGeometricAreaExtension = value;
+    public void set_TpegGeometricAreaExtension(_ExtensionType value) {
+        this._TpegGeometricAreaExtension = value;
     }
 
 }

@@ -45,7 +45,7 @@ public class Point
     protected AlertCPoint alertCPoint;
     protected PointAlongLinearElement pointAlongLinearElement;
     protected PointByCoordinates pointByCoordinates;
-    protected PointExtensionType pointExtension;
+    protected _PointExtensionType pointExtension;
 
     /**
      * Gets the value of the tpegPointLocation property.
@@ -148,10 +148,10 @@ public class Point
      * 
      * @return
      *     possible object is
-     *     {@link PointExtensionType }
+     *     {@link _PointExtensionType }
      *     
      */
-    public PointExtensionType getPointExtension() {
+    public _PointExtensionType getPointExtension() {
         return pointExtension;
     }
 
@@ -160,10 +160,10 @@ public class Point
      * 
      * @param value
      *     allowed object is
-     *     {@link PointExtensionType }
+     *     {@link _PointExtensionType }
      *     
      */
-    public void setPointExtension(PointExtensionType value) {
+    public void setPointExtension(_PointExtensionType value) {
         this.pointExtension = value;
     }
 

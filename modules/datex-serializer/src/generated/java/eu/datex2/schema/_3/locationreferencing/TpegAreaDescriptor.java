@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegAreaDescriptor", propOrder = {
     "tpegAreaDescriptorType",
-    "tpegAreaDescriptorExtension"
+    "_TpegAreaDescriptorExtension"
 })
 public class TpegAreaDescriptor
     extends TpegDescriptor
 {
 
     @XmlElement(required = true)
-    protected TpegLoc03AreaDescriptorSubtypeEnum tpegAreaDescriptorType;
+    protected _TpegLoc03AreaDescriptorSubtypeEnum tpegAreaDescriptorType;
     @XmlElement(name = "_tpegAreaDescriptorExtension")
-    protected ExtensionType tpegAreaDescriptorExtension;
+    protected _ExtensionType _TpegAreaDescriptorExtension;
 
     /**
      * Gets the value of the tpegAreaDescriptorType property.
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc03AreaDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03AreaDescriptorSubtypeEnum }
      *     
      */
-    public TpegLoc03AreaDescriptorSubtypeEnum getTpegAreaDescriptorType() {
+    public _TpegLoc03AreaDescriptorSubtypeEnum getTpegAreaDescriptorType() {
         return tpegAreaDescriptorType;
     }
 
@@ -59,35 +59,35 @@ public class TpegAreaDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc03AreaDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03AreaDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegAreaDescriptorType(TpegLoc03AreaDescriptorSubtypeEnum value) {
+    public void setTpegAreaDescriptorType(_TpegLoc03AreaDescriptorSubtypeEnum value) {
         this.tpegAreaDescriptorType = value;
     }
 
     /**
-     * Gets the value of the tpegAreaDescriptorExtension property.
+     * Gets the value of the _TpegAreaDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegAreaDescriptorExtension() {
-        return tpegAreaDescriptorExtension;
+    public _ExtensionType get_TpegAreaDescriptorExtension() {
+        return _TpegAreaDescriptorExtension;
     }
 
     /**
-     * Sets the value of the tpegAreaDescriptorExtension property.
+     * Sets the value of the _TpegAreaDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegAreaDescriptorExtension(ExtensionType value) {
-        this.tpegAreaDescriptorExtension = value;
+    public void set_TpegAreaDescriptorExtension(_ExtensionType value) {
+        this._TpegAreaDescriptorExtension = value;
     }
 
 }

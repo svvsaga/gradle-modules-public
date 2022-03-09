@@ -4,7 +4,7 @@ package eu.datex2.schema._3.datadictionaryextension;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "association",
     "enumeration",
     "enumerationLiteral",
-    "dataDictionaryExtension"
+    "_DataDictionaryExtension"
 })
 public class DataDictionary {
 
@@ -75,7 +75,7 @@ public class DataDictionary {
     protected List<Enumeration> enumeration;
     protected List<EnumerationLiteral> enumerationLiteral;
     @XmlElement(name = "_dataDictionaryExtension")
-    protected ExtensionType dataDictionaryExtension;
+    protected _ExtensionType _DataDictionaryExtension;
 
     /**
      * Gets the value of the country property.
@@ -348,27 +348,27 @@ public class DataDictionary {
     }
 
     /**
-     * Gets the value of the dataDictionaryExtension property.
+     * Gets the value of the _DataDictionaryExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDataDictionaryExtension() {
-        return dataDictionaryExtension;
+    public _ExtensionType get_DataDictionaryExtension() {
+        return _DataDictionaryExtension;
     }
 
     /**
-     * Sets the value of the dataDictionaryExtension property.
+     * Sets the value of the _DataDictionaryExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDataDictionaryExtension(ExtensionType value) {
-        this.dataDictionaryExtension = value;
+    public void set_DataDictionaryExtension(_ExtensionType value) {
+        this._DataDictionaryExtension = value;
     }
 
 }

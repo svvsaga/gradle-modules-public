@@ -37,7 +37,7 @@ public class LifeCycleManagement {
 
     protected Boolean cancel;
     protected Boolean end;
-    protected ExtensionType lifeCycleManagementExtension;
+    protected _ExtensionType lifeCycleManagementExtension;
 
     /**
      * Gets the value of the cancel property.
@@ -92,10 +92,10 @@ public class LifeCycleManagement {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLifeCycleManagementExtension() {
+    public _ExtensionType getLifeCycleManagementExtension() {
         return lifeCycleManagementExtension;
     }
 
@@ -104,10 +104,10 @@ public class LifeCycleManagement {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLifeCycleManagementExtension(ExtensionType value) {
+    public void setLifeCycleManagementExtension(_ExtensionType value) {
         this.lifeCycleManagementExtension = value;
     }
 

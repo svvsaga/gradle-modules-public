@@ -1,87 +1,56 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _HeightGradeEnum complex type.
+ * <p>Java class for HeightGradeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_HeightGradeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;HeightGradeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="HeightGradeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="aboveGrade"/&gt;
+ *     &lt;enumeration value="atGrade"/&gt;
+ *     &lt;enumeration value="belowGrade"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_HeightGradeEnum", propOrder = {
-    "value"
-})
-public class HeightGradeEnum {
+@XmlType(name = "HeightGradeEnum")
+@XmlEnum
+public enum HeightGradeEnum {
 
-    @XmlValue
-    protected HeightGradeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("aboveGrade")
+    ABOVE_GRADE("aboveGrade"),
+    @XmlEnumValue("atGrade")
+    AT_GRADE("atGrade"),
+    @XmlEnumValue("belowGrade")
+    BELOW_GRADE("belowGrade"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HeightGradeEnum2 }
-     *     
-     */
-    public HeightGradeEnum2 getValue() {
+    HeightGradeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HeightGradeEnum2 }
-     *     
-     */
-    public void setValue(HeightGradeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static HeightGradeEnum fromValue(String v) {
+        for (HeightGradeEnum c: HeightGradeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

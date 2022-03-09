@@ -1,87 +1,80 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _NonWeatherRelatedRoadConditionTypeEnum complex type.
+ * <p>Java class for NonWeatherRelatedRoadConditionTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_NonWeatherRelatedRoadConditionTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;NonWeatherRelatedRoadConditionTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="NonWeatherRelatedRoadConditionTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="dieselOnRoad"/&gt;
+ *     &lt;enumeration value="leavesOnRoad"/&gt;
+ *     &lt;enumeration value="looseChippings"/&gt;
+ *     &lt;enumeration value="looseSandOnRoad"/&gt;
+ *     &lt;enumeration value="mudOnRoad"/&gt;
+ *     &lt;enumeration value="oilOnRoad"/&gt;
+ *     &lt;enumeration value="petrolOnRoad"/&gt;
+ *     &lt;enumeration value="roadMarkingNotPresent"/&gt;
+ *     &lt;enumeration value="roadSurfaceInPoorCondition"/&gt;
+ *     &lt;enumeration value="slipperyRoad"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_NonWeatherRelatedRoadConditionTypeEnum", propOrder = {
-    "value"
-})
-public class NonWeatherRelatedRoadConditionTypeEnum {
+@XmlType(name = "NonWeatherRelatedRoadConditionTypeEnum")
+@XmlEnum
+public enum NonWeatherRelatedRoadConditionTypeEnum {
 
-    @XmlValue
-    protected NonWeatherRelatedRoadConditionTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("dieselOnRoad")
+    DIESEL_ON_ROAD("dieselOnRoad"),
+    @XmlEnumValue("leavesOnRoad")
+    LEAVES_ON_ROAD("leavesOnRoad"),
+    @XmlEnumValue("looseChippings")
+    LOOSE_CHIPPINGS("looseChippings"),
+    @XmlEnumValue("looseSandOnRoad")
+    LOOSE_SAND_ON_ROAD("looseSandOnRoad"),
+    @XmlEnumValue("mudOnRoad")
+    MUD_ON_ROAD("mudOnRoad"),
+    @XmlEnumValue("oilOnRoad")
+    OIL_ON_ROAD("oilOnRoad"),
+    @XmlEnumValue("petrolOnRoad")
+    PETROL_ON_ROAD("petrolOnRoad"),
+    @XmlEnumValue("roadMarkingNotPresent")
+    ROAD_MARKING_NOT_PRESENT("roadMarkingNotPresent"),
+    @XmlEnumValue("roadSurfaceInPoorCondition")
+    ROAD_SURFACE_IN_POOR_CONDITION("roadSurfaceInPoorCondition"),
+    @XmlEnumValue("slipperyRoad")
+    SLIPPERY_ROAD("slipperyRoad"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NonWeatherRelatedRoadConditionTypeEnum2 }
-     *     
-     */
-    public NonWeatherRelatedRoadConditionTypeEnum2 getValue() {
+    NonWeatherRelatedRoadConditionTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NonWeatherRelatedRoadConditionTypeEnum2 }
-     *     
-     */
-    public void setValue(NonWeatherRelatedRoadConditionTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static NonWeatherRelatedRoadConditionTypeEnum fromValue(String v) {
+        for (NonWeatherRelatedRoadConditionTypeEnum c: NonWeatherRelatedRoadConditionTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

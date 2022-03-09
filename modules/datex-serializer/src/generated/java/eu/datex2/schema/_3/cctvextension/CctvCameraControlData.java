@@ -3,7 +3,7 @@ package eu.datex2.schema._3.cctvextension;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvCameraTrueNorthPosition",
     "availablePresetsForCctvCamera",
     "cctvCameraControlLimits",
-    "cctvCameraControlDataExtension"
+    "_CctvCameraControlDataExtension"
 })
 public class CctvCameraControlData {
 
@@ -45,7 +45,7 @@ public class CctvCameraControlData {
     protected List<CctvCameraPresets> availablePresetsForCctvCamera;
     protected CctvCameraControlLimits cctvCameraControlLimits;
     @XmlElement(name = "_cctvCameraControlDataExtension")
-    protected ExtensionType cctvCameraControlDataExtension;
+    protected _ExtensionType _CctvCameraControlDataExtension;
 
     /**
      * Gets the value of the cctvCameraTrueNorthPosition property.
@@ -125,27 +125,27 @@ public class CctvCameraControlData {
     }
 
     /**
-     * Gets the value of the cctvCameraControlDataExtension property.
+     * Gets the value of the _CctvCameraControlDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraControlDataExtension() {
-        return cctvCameraControlDataExtension;
+    public _ExtensionType get_CctvCameraControlDataExtension() {
+        return _CctvCameraControlDataExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraControlDataExtension property.
+     * Sets the value of the _CctvCameraControlDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraControlDataExtension(ExtensionType value) {
-        this.cctvCameraControlDataExtension = value;
+    public void set_CctvCameraControlDataExtension(_ExtensionType value) {
+        this._CctvCameraControlDataExtension = value;
     }
 
 }

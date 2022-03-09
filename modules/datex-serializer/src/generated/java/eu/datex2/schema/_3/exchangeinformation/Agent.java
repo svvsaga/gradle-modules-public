@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,13 +32,13 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Agent", propOrder = {
     "internationalIdentifier",
-    "agentExtension"
+    "_AgentExtension"
 })
 public class Agent {
 
     protected InternationalIdentifier internationalIdentifier;
     @XmlElement(name = "_agentExtension")
-    protected ExtensionType agentExtension;
+    protected _ExtensionType _AgentExtension;
 
     /**
      * Gets the value of the internationalIdentifier property.
@@ -65,27 +65,27 @@ public class Agent {
     }
 
     /**
-     * Gets the value of the agentExtension property.
+     * Gets the value of the _AgentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAgentExtension() {
-        return agentExtension;
+    public _ExtensionType get_AgentExtension() {
+        return _AgentExtension;
     }
 
     /**
-     * Sets the value of the agentExtension property.
+     * Sets the value of the _AgentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAgentExtension(ExtensionType value) {
-        this.agentExtension = value;
+    public void set_AgentExtension(_ExtensionType value) {
+        this._AgentExtension = value;
     }
 
 }

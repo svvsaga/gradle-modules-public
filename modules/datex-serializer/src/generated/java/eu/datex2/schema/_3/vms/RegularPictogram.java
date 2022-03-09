@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,17 +37,17 @@ import jakarta.xml.bind.annotation.XmlType;
     "pictogramDescription",
     "presenceOfRedTriangle",
     "displayedNumericalInformation",
-    "regularPictogramExtension"
+    "_RegularPictogramExtension"
 })
 public class RegularPictogram
     extends Pictogram
 {
 
-    protected List<PictogramEnum> pictogramDescription;
+    protected List<_PictogramEnum> pictogramDescription;
     protected Boolean presenceOfRedTriangle;
     protected List<DisplayedNumericalInformation> displayedNumericalInformation;
     @XmlElement(name = "_regularPictogramExtension")
-    protected ExtensionType regularPictogramExtension;
+    protected _ExtensionType _RegularPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
@@ -67,13 +67,13 @@ public class RegularPictogram
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PictogramEnum }
+     * {@link _PictogramEnum }
      * 
      * 
      */
-    public List<PictogramEnum> getPictogramDescription() {
+    public List<_PictogramEnum> getPictogramDescription() {
         if (pictogramDescription == null) {
-            pictogramDescription = new ArrayList<PictogramEnum>();
+            pictogramDescription = new ArrayList<_PictogramEnum>();
         }
         return this.pictogramDescription;
     }
@@ -132,27 +132,27 @@ public class RegularPictogram
     }
 
     /**
-     * Gets the value of the regularPictogramExtension property.
+     * Gets the value of the _RegularPictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRegularPictogramExtension() {
-        return regularPictogramExtension;
+    public _ExtensionType get_RegularPictogramExtension() {
+        return _RegularPictogramExtension;
     }
 
     /**
-     * Sets the value of the regularPictogramExtension property.
+     * Sets the value of the _RegularPictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRegularPictogramExtension(ExtensionType value) {
-        this.regularPictogramExtension = value;
+    public void set_RegularPictogramExtension(_ExtensionType value) {
+        this._RegularPictogramExtension = value;
     }
 
 }

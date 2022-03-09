@@ -1,87 +1,74 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _RoadsideAssistanceTypeEnum complex type.
+ * <p>Java class for RoadsideAssistanceTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_RoadsideAssistanceTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;RoadsideAssistanceTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="RoadsideAssistanceTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="airAmbulance"/&gt;
+ *     &lt;enumeration value="busPassengerAssistance"/&gt;
+ *     &lt;enumeration value="emergencyServices"/&gt;
+ *     &lt;enumeration value="firstAid"/&gt;
+ *     &lt;enumeration value="foodDelivery"/&gt;
+ *     &lt;enumeration value="helicopterRescue"/&gt;
+ *     &lt;enumeration value="vehicleRepair"/&gt;
+ *     &lt;enumeration value="vehicleRecovery"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_RoadsideAssistanceTypeEnum", propOrder = {
-    "value"
-})
-public class RoadsideAssistanceTypeEnum {
+@XmlType(name = "RoadsideAssistanceTypeEnum")
+@XmlEnum
+public enum RoadsideAssistanceTypeEnum {
 
-    @XmlValue
-    protected RoadsideAssistanceTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("airAmbulance")
+    AIR_AMBULANCE("airAmbulance"),
+    @XmlEnumValue("busPassengerAssistance")
+    BUS_PASSENGER_ASSISTANCE("busPassengerAssistance"),
+    @XmlEnumValue("emergencyServices")
+    EMERGENCY_SERVICES("emergencyServices"),
+    @XmlEnumValue("firstAid")
+    FIRST_AID("firstAid"),
+    @XmlEnumValue("foodDelivery")
+    FOOD_DELIVERY("foodDelivery"),
+    @XmlEnumValue("helicopterRescue")
+    HELICOPTER_RESCUE("helicopterRescue"),
+    @XmlEnumValue("vehicleRepair")
+    VEHICLE_REPAIR("vehicleRepair"),
+    @XmlEnumValue("vehicleRecovery")
+    VEHICLE_RECOVERY("vehicleRecovery"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RoadsideAssistanceTypeEnum2 }
-     *     
-     */
-    public RoadsideAssistanceTypeEnum2 getValue() {
+    RoadsideAssistanceTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RoadsideAssistanceTypeEnum2 }
-     *     
-     */
-    public void setValue(RoadsideAssistanceTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static RoadsideAssistanceTypeEnum fromValue(String v) {
+        for (RoadsideAssistanceTypeEnum c: RoadsideAssistanceTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

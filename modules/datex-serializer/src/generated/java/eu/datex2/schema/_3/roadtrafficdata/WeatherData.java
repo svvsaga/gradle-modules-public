@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WeatherData", propOrder = {
-    "weatherDataExtension"
+    "_WeatherDataExtension"
 })
 @XmlSeeAlso({
     HumidityInformation.class,
@@ -47,30 +47,30 @@ public abstract class WeatherData
 {
 
     @XmlElement(name = "_weatherDataExtension")
-    protected ExtensionType weatherDataExtension;
+    protected _ExtensionType _WeatherDataExtension;
 
     /**
-     * Gets the value of the weatherDataExtension property.
+     * Gets the value of the _WeatherDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWeatherDataExtension() {
-        return weatherDataExtension;
+    public _ExtensionType get_WeatherDataExtension() {
+        return _WeatherDataExtension;
     }
 
     /**
-     * Sets the value of the weatherDataExtension property.
+     * Sets the value of the _WeatherDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWeatherDataExtension(ExtensionType value) {
-        this.weatherDataExtension = value;
+    public void set_WeatherDataExtension(_ExtensionType value) {
+        this._WeatherDataExtension = value;
     }
 
 }

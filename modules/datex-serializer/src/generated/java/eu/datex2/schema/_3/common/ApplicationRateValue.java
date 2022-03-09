@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ApplicationRateValue", propOrder = {
     "applicationRate",
-    "applicationRateValueExtension"
+    "_ApplicationRateValueExtension"
 })
 public class ApplicationRateValue
     extends DataValue
@@ -38,7 +38,7 @@ public class ApplicationRateValue
 
     protected float applicationRate;
     @XmlElement(name = "_applicationRateValueExtension")
-    protected ExtensionType applicationRateValueExtension;
+    protected _ExtensionType _ApplicationRateValueExtension;
 
     /**
      * Gets the value of the applicationRate property.
@@ -57,27 +57,27 @@ public class ApplicationRateValue
     }
 
     /**
-     * Gets the value of the applicationRateValueExtension property.
+     * Gets the value of the _ApplicationRateValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getApplicationRateValueExtension() {
-        return applicationRateValueExtension;
+    public _ExtensionType get_ApplicationRateValueExtension() {
+        return _ApplicationRateValueExtension;
     }
 
     /**
-     * Sets the value of the applicationRateValueExtension property.
+     * Sets the value of the _ApplicationRateValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setApplicationRateValueExtension(ExtensionType value) {
-        this.applicationRateValueExtension = value;
+    public void set_ApplicationRateValueExtension(_ExtensionType value) {
+        this._ApplicationRateValueExtension = value;
     }
 
 }

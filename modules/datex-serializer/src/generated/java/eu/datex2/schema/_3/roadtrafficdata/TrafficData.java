@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TrafficData", propOrder = {
     "forVehiclesWithCharacteristicsOf",
-    "trafficDataExtension"
+    "_TrafficDataExtension"
 })
 @XmlSeeAlso({
     IndividualVehicleDataValues.class,
@@ -49,7 +49,7 @@ public abstract class TrafficData
 
     protected VehicleCharacteristics forVehiclesWithCharacteristicsOf;
     @XmlElement(name = "_trafficDataExtension")
-    protected ExtensionType trafficDataExtension;
+    protected _ExtensionType _TrafficDataExtension;
 
     /**
      * Gets the value of the forVehiclesWithCharacteristicsOf property.
@@ -76,27 +76,27 @@ public abstract class TrafficData
     }
 
     /**
-     * Gets the value of the trafficDataExtension property.
+     * Gets the value of the _TrafficDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficDataExtension() {
-        return trafficDataExtension;
+    public _ExtensionType get_TrafficDataExtension() {
+        return _TrafficDataExtension;
     }
 
     /**
-     * Sets the value of the trafficDataExtension property.
+     * Sets the value of the _TrafficDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficDataExtension(ExtensionType value) {
-        this.trafficDataExtension = value;
+    public void set_TrafficDataExtension(_ExtensionType value) {
+        this._TrafficDataExtension = value;
     }
 
 }

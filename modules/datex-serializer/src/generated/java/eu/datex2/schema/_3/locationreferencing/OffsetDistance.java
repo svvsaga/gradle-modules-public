@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OffsetDistance", propOrder = {
     "offsetDistance",
-    "offsetDistanceExtension"
+    "_OffsetDistanceExtension"
 })
 public class OffsetDistance {
 
@@ -41,7 +41,7 @@ public class OffsetDistance {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger offsetDistance;
     @XmlElement(name = "_offsetDistanceExtension")
-    protected ExtensionType offsetDistanceExtension;
+    protected _ExtensionType _OffsetDistanceExtension;
 
     /**
      * Gets the value of the offsetDistance property.
@@ -68,27 +68,27 @@ public class OffsetDistance {
     }
 
     /**
-     * Gets the value of the offsetDistanceExtension property.
+     * Gets the value of the _OffsetDistanceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOffsetDistanceExtension() {
-        return offsetDistanceExtension;
+    public _ExtensionType get_OffsetDistanceExtension() {
+        return _OffsetDistanceExtension;
     }
 
     /**
-     * Sets the value of the offsetDistanceExtension property.
+     * Sets the value of the _OffsetDistanceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOffsetDistanceExtension(ExtensionType value) {
-        this.offsetDistanceExtension = value;
+    public void set_OffsetDistanceExtension(_ExtensionType value) {
+        this._OffsetDistanceExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegIlcPointDescriptor", propOrder = {
     "tpegIlcPointDescriptorType",
-    "tpegIlcPointDescriptorExtension"
+    "_TpegIlcPointDescriptorExtension"
 })
 public class TpegIlcPointDescriptor
     extends TpegPointDescriptor
 {
 
     @XmlElement(required = true)
-    protected TpegLoc03IlcPointDescriptorSubtypeEnum tpegIlcPointDescriptorType;
+    protected _TpegLoc03IlcPointDescriptorSubtypeEnum tpegIlcPointDescriptorType;
     @XmlElement(name = "_tpegIlcPointDescriptorExtension")
-    protected ExtensionType tpegIlcPointDescriptorExtension;
+    protected _ExtensionType _TpegIlcPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegIlcPointDescriptorType property.
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc03IlcPointDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03IlcPointDescriptorSubtypeEnum }
      *     
      */
-    public TpegLoc03IlcPointDescriptorSubtypeEnum getTpegIlcPointDescriptorType() {
+    public _TpegLoc03IlcPointDescriptorSubtypeEnum getTpegIlcPointDescriptorType() {
         return tpegIlcPointDescriptorType;
     }
 
@@ -59,35 +59,35 @@ public class TpegIlcPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc03IlcPointDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03IlcPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegIlcPointDescriptorType(TpegLoc03IlcPointDescriptorSubtypeEnum value) {
+    public void setTpegIlcPointDescriptorType(_TpegLoc03IlcPointDescriptorSubtypeEnum value) {
         this.tpegIlcPointDescriptorType = value;
     }
 
     /**
-     * Gets the value of the tpegIlcPointDescriptorExtension property.
+     * Gets the value of the _TpegIlcPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegIlcPointDescriptorExtension() {
-        return tpegIlcPointDescriptorExtension;
+    public _ExtensionType get_TpegIlcPointDescriptorExtension() {
+        return _TpegIlcPointDescriptorExtension;
     }
 
     /**
-     * Sets the value of the tpegIlcPointDescriptorExtension property.
+     * Sets the value of the _TpegIlcPointDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegIlcPointDescriptorExtension(ExtensionType value) {
-        this.tpegIlcPointDescriptorExtension = value;
+    public void set_TpegIlcPointDescriptorExtension(_ExtensionType value) {
+        this._TpegIlcPointDescriptorExtension = value;
     }
 
 }

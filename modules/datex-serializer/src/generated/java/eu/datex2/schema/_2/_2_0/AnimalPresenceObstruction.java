@@ -43,7 +43,7 @@ public class AnimalPresenceObstruction
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected AnimalPresenceTypeEnum animalPresenceType;
-    protected ExtensionType animalPresenceObstructionExtension;
+    protected _ExtensionType animalPresenceObstructionExtension;
 
     /**
      * Gets the value of the alive property.
@@ -98,10 +98,10 @@ public class AnimalPresenceObstruction
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAnimalPresenceObstructionExtension() {
+    public _ExtensionType getAnimalPresenceObstructionExtension() {
         return animalPresenceObstructionExtension;
     }
 
@@ -110,10 +110,10 @@ public class AnimalPresenceObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAnimalPresenceObstructionExtension(ExtensionType value) {
+    public void setAnimalPresenceObstructionExtension(_ExtensionType value) {
         this.animalPresenceObstructionExtension = value;
     }
 

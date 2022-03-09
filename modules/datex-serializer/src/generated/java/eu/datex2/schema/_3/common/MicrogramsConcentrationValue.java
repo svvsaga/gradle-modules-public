@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MicrogramsConcentrationValue", propOrder = {
     "microgramsConcentration",
-    "microgramsConcentrationValueExtension"
+    "_MicrogramsConcentrationValueExtension"
 })
 public class MicrogramsConcentrationValue
     extends DataValue
@@ -38,7 +38,7 @@ public class MicrogramsConcentrationValue
 
     protected float microgramsConcentration;
     @XmlElement(name = "_microgramsConcentrationValueExtension")
-    protected ExtensionType microgramsConcentrationValueExtension;
+    protected _ExtensionType _MicrogramsConcentrationValueExtension;
 
     /**
      * Gets the value of the microgramsConcentration property.
@@ -57,27 +57,27 @@ public class MicrogramsConcentrationValue
     }
 
     /**
-     * Gets the value of the microgramsConcentrationValueExtension property.
+     * Gets the value of the _MicrogramsConcentrationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMicrogramsConcentrationValueExtension() {
-        return microgramsConcentrationValueExtension;
+    public _ExtensionType get_MicrogramsConcentrationValueExtension() {
+        return _MicrogramsConcentrationValueExtension;
     }
 
     /**
-     * Sets the value of the microgramsConcentrationValueExtension property.
+     * Sets the value of the _MicrogramsConcentrationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMicrogramsConcentrationValueExtension(ExtensionType value) {
-        this.microgramsConcentrationValueExtension = value;
+    public void set_MicrogramsConcentrationValueExtension(_ExtensionType value) {
+        this._MicrogramsConcentrationValueExtension = value;
     }
 
 }

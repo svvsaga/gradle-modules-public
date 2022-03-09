@@ -36,7 +36,7 @@ public class CatalogueReference {
 
     @XmlElement(required = true)
     protected String keyCatalogueReference;
-    protected ExtensionType catalogueReferenceExtension;
+    protected _ExtensionType catalogueReferenceExtension;
 
     /**
      * Gets the value of the keyCatalogueReference property.
@@ -67,10 +67,10 @@ public class CatalogueReference {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCatalogueReferenceExtension() {
+    public _ExtensionType getCatalogueReferenceExtension() {
         return catalogueReferenceExtension;
     }
 
@@ -79,10 +79,10 @@ public class CatalogueReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCatalogueReferenceExtension(ExtensionType value) {
+    public void setCatalogueReferenceExtension(_ExtensionType value) {
         this.catalogueReferenceExtension = value;
     }
 

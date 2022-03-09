@@ -51,7 +51,7 @@ public class OverallPeriod {
     protected XMLGregorianCalendar overallEndTime;
     protected List<Period> validPeriod;
     protected List<Period> exceptionPeriod;
-    protected ExtensionType overallPeriodExtension;
+    protected _ExtensionType overallPeriodExtension;
 
     /**
      * Gets the value of the overallStartTime property.
@@ -164,10 +164,10 @@ public class OverallPeriod {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOverallPeriodExtension() {
+    public _ExtensionType getOverallPeriodExtension() {
         return overallPeriodExtension;
     }
 
@@ -176,10 +176,10 @@ public class OverallPeriod {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOverallPeriodExtension(ExtensionType value) {
+    public void setOverallPeriodExtension(_ExtensionType value) {
         this.overallPeriodExtension = value;
     }
 

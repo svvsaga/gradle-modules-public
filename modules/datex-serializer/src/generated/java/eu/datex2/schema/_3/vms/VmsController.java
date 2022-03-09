@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "ipAddress",
     "electronicAddress",
     "vms",
-    "vmsControllerExtension"
+    "_VmsControllerExtension"
 })
 public class VmsController {
 
@@ -55,9 +55,9 @@ public class VmsController {
     protected String externalIdentifier;
     protected String ipAddress;
     protected String electronicAddress;
-    protected List<VmsControllerVmsIndexVms> vms;
+    protected List<_VmsControllerVmsIndexVms> vms;
     @XmlElement(name = "_vmsControllerExtension")
-    protected ExtensionType vmsControllerExtension;
+    protected _ExtensionType _VmsControllerExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -177,39 +177,39 @@ public class VmsController {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsControllerVmsIndexVms }
+     * {@link _VmsControllerVmsIndexVms }
      * 
      * 
      */
-    public List<VmsControllerVmsIndexVms> getVms() {
+    public List<_VmsControllerVmsIndexVms> getVms() {
         if (vms == null) {
-            vms = new ArrayList<VmsControllerVmsIndexVms>();
+            vms = new ArrayList<_VmsControllerVmsIndexVms>();
         }
         return this.vms;
     }
 
     /**
-     * Gets the value of the vmsControllerExtension property.
+     * Gets the value of the _VmsControllerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsControllerExtension() {
-        return vmsControllerExtension;
+    public _ExtensionType get_VmsControllerExtension() {
+        return _VmsControllerExtension;
     }
 
     /**
-     * Sets the value of the vmsControllerExtension property.
+     * Sets the value of the _VmsControllerExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsControllerExtension(ExtensionType value) {
-        this.vmsControllerExtension = value;
+    public void set_VmsControllerExtension(_ExtensionType value) {
+        this._VmsControllerExtension = value;
     }
 
     /**

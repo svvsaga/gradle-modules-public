@@ -36,7 +36,7 @@ public class Visibility {
 
     @XmlElement(required = true)
     protected IntegerMetreDistanceValue minimumVisibilityDistance;
-    protected ExtensionType visibilityExtension;
+    protected _ExtensionType visibilityExtension;
 
     /**
      * Gets the value of the minimumVisibilityDistance property.
@@ -67,10 +67,10 @@ public class Visibility {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVisibilityExtension() {
+    public _ExtensionType getVisibilityExtension() {
         return visibilityExtension;
     }
 
@@ -79,10 +79,10 @@ public class Visibility {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVisibilityExtension(ExtensionType value) {
+    public void setVisibilityExtension(_ExtensionType value) {
         this.visibilityExtension = value;
     }
 

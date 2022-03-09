@@ -38,17 +38,17 @@ public abstract class RoadConditions
     extends Conditions
 {
 
-    protected ExtensionType roadConditionsExtension;
+    protected _ExtensionType roadConditionsExtension;
 
     /**
      * Gets the value of the roadConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadConditionsExtension() {
+    public _ExtensionType getRoadConditionsExtension() {
         return roadConditionsExtension;
     }
 
@@ -57,10 +57,10 @@ public abstract class RoadConditions
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadConditionsExtension(ExtensionType value) {
+    public void setRoadConditionsExtension(_ExtensionType value) {
         this.roadConditionsExtension = value;
     }
 

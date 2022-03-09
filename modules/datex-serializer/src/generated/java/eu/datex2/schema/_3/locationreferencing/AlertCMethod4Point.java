@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AlertCMethod4Point", propOrder = {
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
-    "alertCMethod4PointExtension"
+    "_AlertCMethod4PointExtension"
 })
 public class AlertCMethod4Point
     extends AlertCPoint
@@ -44,7 +44,7 @@ public class AlertCMethod4Point
     @XmlElement(required = true)
     protected AlertCMethod4PrimaryPointLocation alertCMethod4PrimaryPointLocation;
     @XmlElement(name = "_alertCMethod4PointExtension")
-    protected ExtensionType alertCMethod4PointExtension;
+    protected _ExtensionType _AlertCMethod4PointExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -95,27 +95,27 @@ public class AlertCMethod4Point
     }
 
     /**
-     * Gets the value of the alertCMethod4PointExtension property.
+     * Gets the value of the _AlertCMethod4PointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCMethod4PointExtension() {
-        return alertCMethod4PointExtension;
+    public _ExtensionType get_AlertCMethod4PointExtension() {
+        return _AlertCMethod4PointExtension;
     }
 
     /**
-     * Sets the value of the alertCMethod4PointExtension property.
+     * Sets the value of the _AlertCMethod4PointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCMethod4PointExtension(ExtensionType value) {
-        this.alertCMethod4PointExtension = value;
+    public void set_AlertCMethod4PointExtension(_ExtensionType value) {
+        this._AlertCMethod4PointExtension = value;
     }
 
 }

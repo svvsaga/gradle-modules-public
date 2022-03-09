@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TimePrecisionEnum complex type.
+ * <p>Java class for TimePrecisionEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TimePrecisionEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;TimePrecisionEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TimePrecisionEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="tenthsOfSecond"/&gt;
+ *     &lt;enumeration value="second"/&gt;
+ *     &lt;enumeration value="minute"/&gt;
+ *     &lt;enumeration value="quarterHour"/&gt;
+ *     &lt;enumeration value="halfHour"/&gt;
+ *     &lt;enumeration value="hour"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TimePrecisionEnum", propOrder = {
-    "value"
-})
-public class TimePrecisionEnum {
+@XmlType(name = "TimePrecisionEnum")
+@XmlEnum
+public enum TimePrecisionEnum {
 
-    @XmlValue
-    protected TimePrecisionEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("tenthsOfSecond")
+    TENTHS_OF_SECOND("tenthsOfSecond"),
+    @XmlEnumValue("second")
+    SECOND("second"),
+    @XmlEnumValue("minute")
+    MINUTE("minute"),
+    @XmlEnumValue("quarterHour")
+    QUARTER_HOUR("quarterHour"),
+    @XmlEnumValue("halfHour")
+    HALF_HOUR("halfHour"),
+    @XmlEnumValue("hour")
+    HOUR("hour"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TimePrecisionEnum2 }
-     *     
-     */
-    public TimePrecisionEnum2 getValue() {
+    TimePrecisionEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TimePrecisionEnum2 }
-     *     
-     */
-    public void setValue(TimePrecisionEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TimePrecisionEnum fromValue(String v) {
+        for (TimePrecisionEnum c: TimePrecisionEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

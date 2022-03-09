@@ -3,10 +3,10 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
-import eu.datex2.schema._3.common.PublicEventTypeEnum;
-import eu.datex2.schema._3.common.WeatherRelatedRoadConditionTypeEnum;
-import eu.datex2.schema._3.common.WinterEquipmentManagementTypeEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common._PublicEventTypeEnum;
+import eu.datex2.schema._3.common._WeatherRelatedRoadConditionTypeEnum;
+import eu.datex2.schema._3.common._WinterEquipmentManagementTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -88,49 +88,49 @@ import jakarta.xml.bind.annotation.XmlType;
     "vehicleObstructionType",
     "weatherRelatedRoadConditionType",
     "winterEquipmentManagementType",
-    "detailedCauseTypeExtension"
+    "_DetailedCauseTypeExtension"
 })
 public class DetailedCauseType {
 
-    protected AbnormalTrafficTypeEnum abnormalTrafficType;
-    protected List<AccidentTypeEnum> accidentType;
-    protected AnimalPresenceTypeEnum animalPresenceType;
-    protected AuthorityOperationTypeEnum authorityOperationType;
-    protected ConstructionWorkTypeEnum constructionWorkType;
-    protected DisturbanceActivityTypeEnum disturbanceActivityType;
-    protected DrivingConditionTypeEnum drivingConditionType;
-    protected EnvironmentalObstructionTypeEnum environmentalObstructionType;
-    protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
-    protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
-    protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
-    protected InfrastructureDamageTypeEnum infrastructureDamageType;
-    protected List<NonWeatherRelatedRoadConditionTypeEnum> nonWeatherRelatedRoadConditionType;
-    protected List<ObstructionTypeEnum> obstructionType;
-    protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
-    protected PublicEventTypeEnum publicEventType;
-    protected List<ReroutingManagementTypeEnum> reroutingManagementType;
-    protected List<RoadMaintenanceTypeEnum> roadMaintenanceType;
-    protected List<RoadOperatorServiceDisruptionTypeEnum> roadOperatorServiceDisruptionType;
-    protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
-    protected RoadsideAssistanceTypeEnum roadsideAssistanceType;
-    protected List<ServiceDisruptionTypeEnum> roadsideServiceDisruptionType;
-    protected SpeedManagementTypeEnum speedManagementType;
-    protected TransitServiceInformationEnum transitServiceInformation;
-    protected VehicleObstructionTypeEnum vehicleObstructionType;
-    protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
-    protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
+    protected _AbnormalTrafficTypeEnum abnormalTrafficType;
+    protected List<_AccidentTypeEnum> accidentType;
+    protected _AnimalPresenceTypeEnum animalPresenceType;
+    protected _AuthorityOperationTypeEnum authorityOperationType;
+    protected _ConstructionWorkTypeEnum constructionWorkType;
+    protected _DisturbanceActivityTypeEnum disturbanceActivityType;
+    protected _DrivingConditionTypeEnum drivingConditionType;
+    protected _EnvironmentalObstructionTypeEnum environmentalObstructionType;
+    protected _EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
+    protected _GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
+    protected _GeneralNetworkManagementTypeEnum generalNetworkManagementType;
+    protected _InfrastructureDamageTypeEnum infrastructureDamageType;
+    protected List<_NonWeatherRelatedRoadConditionTypeEnum> nonWeatherRelatedRoadConditionType;
+    protected List<_ObstructionTypeEnum> obstructionType;
+    protected List<_PoorEnvironmentTypeEnum> poorEnvironmentType;
+    protected _PublicEventTypeEnum publicEventType;
+    protected List<_ReroutingManagementTypeEnum> reroutingManagementType;
+    protected List<_RoadMaintenanceTypeEnum> roadMaintenanceType;
+    protected List<_RoadOperatorServiceDisruptionTypeEnum> roadOperatorServiceDisruptionType;
+    protected _RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
+    protected _RoadsideAssistanceTypeEnum roadsideAssistanceType;
+    protected List<_ServiceDisruptionTypeEnum> roadsideServiceDisruptionType;
+    protected _SpeedManagementTypeEnum speedManagementType;
+    protected _TransitServiceInformationEnum transitServiceInformation;
+    protected _VehicleObstructionTypeEnum vehicleObstructionType;
+    protected List<_WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
+    protected _WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
     @XmlElement(name = "_detailedCauseTypeExtension")
-    protected ExtensionType detailedCauseTypeExtension;
+    protected _ExtensionType _DetailedCauseTypeExtension;
 
     /**
      * Gets the value of the abnormalTrafficType property.
      * 
      * @return
      *     possible object is
-     *     {@link AbnormalTrafficTypeEnum }
+     *     {@link _AbnormalTrafficTypeEnum }
      *     
      */
-    public AbnormalTrafficTypeEnum getAbnormalTrafficType() {
+    public _AbnormalTrafficTypeEnum getAbnormalTrafficType() {
         return abnormalTrafficType;
     }
 
@@ -139,10 +139,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AbnormalTrafficTypeEnum }
+     *     {@link _AbnormalTrafficTypeEnum }
      *     
      */
-    public void setAbnormalTrafficType(AbnormalTrafficTypeEnum value) {
+    public void setAbnormalTrafficType(_AbnormalTrafficTypeEnum value) {
         this.abnormalTrafficType = value;
     }
 
@@ -164,13 +164,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AccidentTypeEnum }
+     * {@link _AccidentTypeEnum }
      * 
      * 
      */
-    public List<AccidentTypeEnum> getAccidentType() {
+    public List<_AccidentTypeEnum> getAccidentType() {
         if (accidentType == null) {
-            accidentType = new ArrayList<AccidentTypeEnum>();
+            accidentType = new ArrayList<_AccidentTypeEnum>();
         }
         return this.accidentType;
     }
@@ -180,10 +180,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link AnimalPresenceTypeEnum }
+     *     {@link _AnimalPresenceTypeEnum }
      *     
      */
-    public AnimalPresenceTypeEnum getAnimalPresenceType() {
+    public _AnimalPresenceTypeEnum getAnimalPresenceType() {
         return animalPresenceType;
     }
 
@@ -192,10 +192,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AnimalPresenceTypeEnum }
+     *     {@link _AnimalPresenceTypeEnum }
      *     
      */
-    public void setAnimalPresenceType(AnimalPresenceTypeEnum value) {
+    public void setAnimalPresenceType(_AnimalPresenceTypeEnum value) {
         this.animalPresenceType = value;
     }
 
@@ -204,10 +204,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link AuthorityOperationTypeEnum }
+     *     {@link _AuthorityOperationTypeEnum }
      *     
      */
-    public AuthorityOperationTypeEnum getAuthorityOperationType() {
+    public _AuthorityOperationTypeEnum getAuthorityOperationType() {
         return authorityOperationType;
     }
 
@@ -216,10 +216,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AuthorityOperationTypeEnum }
+     *     {@link _AuthorityOperationTypeEnum }
      *     
      */
-    public void setAuthorityOperationType(AuthorityOperationTypeEnum value) {
+    public void setAuthorityOperationType(_AuthorityOperationTypeEnum value) {
         this.authorityOperationType = value;
     }
 
@@ -228,10 +228,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link ConstructionWorkTypeEnum }
+     *     {@link _ConstructionWorkTypeEnum }
      *     
      */
-    public ConstructionWorkTypeEnum getConstructionWorkType() {
+    public _ConstructionWorkTypeEnum getConstructionWorkType() {
         return constructionWorkType;
     }
 
@@ -240,10 +240,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link ConstructionWorkTypeEnum }
+     *     {@link _ConstructionWorkTypeEnum }
      *     
      */
-    public void setConstructionWorkType(ConstructionWorkTypeEnum value) {
+    public void setConstructionWorkType(_ConstructionWorkTypeEnum value) {
         this.constructionWorkType = value;
     }
 
@@ -252,10 +252,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link DisturbanceActivityTypeEnum }
+     *     {@link _DisturbanceActivityTypeEnum }
      *     
      */
-    public DisturbanceActivityTypeEnum getDisturbanceActivityType() {
+    public _DisturbanceActivityTypeEnum getDisturbanceActivityType() {
         return disturbanceActivityType;
     }
 
@@ -264,10 +264,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link DisturbanceActivityTypeEnum }
+     *     {@link _DisturbanceActivityTypeEnum }
      *     
      */
-    public void setDisturbanceActivityType(DisturbanceActivityTypeEnum value) {
+    public void setDisturbanceActivityType(_DisturbanceActivityTypeEnum value) {
         this.disturbanceActivityType = value;
     }
 
@@ -276,10 +276,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link DrivingConditionTypeEnum }
+     *     {@link _DrivingConditionTypeEnum }
      *     
      */
-    public DrivingConditionTypeEnum getDrivingConditionType() {
+    public _DrivingConditionTypeEnum getDrivingConditionType() {
         return drivingConditionType;
     }
 
@@ -288,10 +288,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link DrivingConditionTypeEnum }
+     *     {@link _DrivingConditionTypeEnum }
      *     
      */
-    public void setDrivingConditionType(DrivingConditionTypeEnum value) {
+    public void setDrivingConditionType(_DrivingConditionTypeEnum value) {
         this.drivingConditionType = value;
     }
 
@@ -300,10 +300,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link EnvironmentalObstructionTypeEnum }
+     *     {@link _EnvironmentalObstructionTypeEnum }
      *     
      */
-    public EnvironmentalObstructionTypeEnum getEnvironmentalObstructionType() {
+    public _EnvironmentalObstructionTypeEnum getEnvironmentalObstructionType() {
         return environmentalObstructionType;
     }
 
@@ -312,10 +312,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link EnvironmentalObstructionTypeEnum }
+     *     {@link _EnvironmentalObstructionTypeEnum }
      *     
      */
-    public void setEnvironmentalObstructionType(EnvironmentalObstructionTypeEnum value) {
+    public void setEnvironmentalObstructionType(_EnvironmentalObstructionTypeEnum value) {
         this.environmentalObstructionType = value;
     }
 
@@ -324,10 +324,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link EquipmentOrSystemFaultTypeEnum }
+     *     {@link _EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
+    public _EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
         return equipmentOrSystemFaultType;
     }
 
@@ -336,10 +336,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link EquipmentOrSystemFaultTypeEnum }
+     *     {@link _EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public void setEquipmentOrSystemFaultType(EquipmentOrSystemFaultTypeEnum value) {
+    public void setEquipmentOrSystemFaultType(_EquipmentOrSystemFaultTypeEnum value) {
         this.equipmentOrSystemFaultType = value;
     }
 
@@ -348,10 +348,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
+    public _GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
         return generalInstructionToRoadUsersType;
     }
 
@@ -360,10 +360,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public void setGeneralInstructionToRoadUsersType(GeneralInstructionToRoadUsersTypeEnum value) {
+    public void setGeneralInstructionToRoadUsersType(_GeneralInstructionToRoadUsersTypeEnum value) {
         this.generalInstructionToRoadUsersType = value;
     }
 
@@ -372,10 +372,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link GeneralNetworkManagementTypeEnum }
+     *     {@link _GeneralNetworkManagementTypeEnum }
      *     
      */
-    public GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
+    public _GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
         return generalNetworkManagementType;
     }
 
@@ -384,10 +384,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link GeneralNetworkManagementTypeEnum }
+     *     {@link _GeneralNetworkManagementTypeEnum }
      *     
      */
-    public void setGeneralNetworkManagementType(GeneralNetworkManagementTypeEnum value) {
+    public void setGeneralNetworkManagementType(_GeneralNetworkManagementTypeEnum value) {
         this.generalNetworkManagementType = value;
     }
 
@@ -396,10 +396,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link InfrastructureDamageTypeEnum }
+     *     {@link _InfrastructureDamageTypeEnum }
      *     
      */
-    public InfrastructureDamageTypeEnum getInfrastructureDamageType() {
+    public _InfrastructureDamageTypeEnum getInfrastructureDamageType() {
         return infrastructureDamageType;
     }
 
@@ -408,10 +408,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link InfrastructureDamageTypeEnum }
+     *     {@link _InfrastructureDamageTypeEnum }
      *     
      */
-    public void setInfrastructureDamageType(InfrastructureDamageTypeEnum value) {
+    public void setInfrastructureDamageType(_InfrastructureDamageTypeEnum value) {
         this.infrastructureDamageType = value;
     }
 
@@ -433,13 +433,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link NonWeatherRelatedRoadConditionTypeEnum }
+     * {@link _NonWeatherRelatedRoadConditionTypeEnum }
      * 
      * 
      */
-    public List<NonWeatherRelatedRoadConditionTypeEnum> getNonWeatherRelatedRoadConditionType() {
+    public List<_NonWeatherRelatedRoadConditionTypeEnum> getNonWeatherRelatedRoadConditionType() {
         if (nonWeatherRelatedRoadConditionType == null) {
-            nonWeatherRelatedRoadConditionType = new ArrayList<NonWeatherRelatedRoadConditionTypeEnum>();
+            nonWeatherRelatedRoadConditionType = new ArrayList<_NonWeatherRelatedRoadConditionTypeEnum>();
         }
         return this.nonWeatherRelatedRoadConditionType;
     }
@@ -462,13 +462,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ObstructionTypeEnum }
+     * {@link _ObstructionTypeEnum }
      * 
      * 
      */
-    public List<ObstructionTypeEnum> getObstructionType() {
+    public List<_ObstructionTypeEnum> getObstructionType() {
         if (obstructionType == null) {
-            obstructionType = new ArrayList<ObstructionTypeEnum>();
+            obstructionType = new ArrayList<_ObstructionTypeEnum>();
         }
         return this.obstructionType;
     }
@@ -491,13 +491,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PoorEnvironmentTypeEnum }
+     * {@link _PoorEnvironmentTypeEnum }
      * 
      * 
      */
-    public List<PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
+    public List<_PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
         if (poorEnvironmentType == null) {
-            poorEnvironmentType = new ArrayList<PoorEnvironmentTypeEnum>();
+            poorEnvironmentType = new ArrayList<_PoorEnvironmentTypeEnum>();
         }
         return this.poorEnvironmentType;
     }
@@ -507,10 +507,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public PublicEventTypeEnum getPublicEventType() {
+    public _PublicEventTypeEnum getPublicEventType() {
         return publicEventType;
     }
 
@@ -519,10 +519,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public void setPublicEventType(PublicEventTypeEnum value) {
+    public void setPublicEventType(_PublicEventTypeEnum value) {
         this.publicEventType = value;
     }
 
@@ -544,13 +544,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ReroutingManagementTypeEnum }
+     * {@link _ReroutingManagementTypeEnum }
      * 
      * 
      */
-    public List<ReroutingManagementTypeEnum> getReroutingManagementType() {
+    public List<_ReroutingManagementTypeEnum> getReroutingManagementType() {
         if (reroutingManagementType == null) {
-            reroutingManagementType = new ArrayList<ReroutingManagementTypeEnum>();
+            reroutingManagementType = new ArrayList<_ReroutingManagementTypeEnum>();
         }
         return this.reroutingManagementType;
     }
@@ -573,13 +573,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link RoadMaintenanceTypeEnum }
+     * {@link _RoadMaintenanceTypeEnum }
      * 
      * 
      */
-    public List<RoadMaintenanceTypeEnum> getRoadMaintenanceType() {
+    public List<_RoadMaintenanceTypeEnum> getRoadMaintenanceType() {
         if (roadMaintenanceType == null) {
-            roadMaintenanceType = new ArrayList<RoadMaintenanceTypeEnum>();
+            roadMaintenanceType = new ArrayList<_RoadMaintenanceTypeEnum>();
         }
         return this.roadMaintenanceType;
     }
@@ -602,13 +602,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link RoadOperatorServiceDisruptionTypeEnum }
+     * {@link _RoadOperatorServiceDisruptionTypeEnum }
      * 
      * 
      */
-    public List<RoadOperatorServiceDisruptionTypeEnum> getRoadOperatorServiceDisruptionType() {
+    public List<_RoadOperatorServiceDisruptionTypeEnum> getRoadOperatorServiceDisruptionType() {
         if (roadOperatorServiceDisruptionType == null) {
-            roadOperatorServiceDisruptionType = new ArrayList<RoadOperatorServiceDisruptionTypeEnum>();
+            roadOperatorServiceDisruptionType = new ArrayList<_RoadOperatorServiceDisruptionTypeEnum>();
         }
         return this.roadOperatorServiceDisruptionType;
     }
@@ -618,10 +618,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link RoadOrCarriagewayOrLaneManagementTypeEnum }
+     *     {@link _RoadOrCarriagewayOrLaneManagementTypeEnum }
      *     
      */
-    public RoadOrCarriagewayOrLaneManagementTypeEnum getRoadOrCarriagewayOrLaneManagementType() {
+    public _RoadOrCarriagewayOrLaneManagementTypeEnum getRoadOrCarriagewayOrLaneManagementType() {
         return roadOrCarriagewayOrLaneManagementType;
     }
 
@@ -630,10 +630,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link RoadOrCarriagewayOrLaneManagementTypeEnum }
+     *     {@link _RoadOrCarriagewayOrLaneManagementTypeEnum }
      *     
      */
-    public void setRoadOrCarriagewayOrLaneManagementType(RoadOrCarriagewayOrLaneManagementTypeEnum value) {
+    public void setRoadOrCarriagewayOrLaneManagementType(_RoadOrCarriagewayOrLaneManagementTypeEnum value) {
         this.roadOrCarriagewayOrLaneManagementType = value;
     }
 
@@ -642,10 +642,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link RoadsideAssistanceTypeEnum }
+     *     {@link _RoadsideAssistanceTypeEnum }
      *     
      */
-    public RoadsideAssistanceTypeEnum getRoadsideAssistanceType() {
+    public _RoadsideAssistanceTypeEnum getRoadsideAssistanceType() {
         return roadsideAssistanceType;
     }
 
@@ -654,10 +654,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link RoadsideAssistanceTypeEnum }
+     *     {@link _RoadsideAssistanceTypeEnum }
      *     
      */
-    public void setRoadsideAssistanceType(RoadsideAssistanceTypeEnum value) {
+    public void setRoadsideAssistanceType(_RoadsideAssistanceTypeEnum value) {
         this.roadsideAssistanceType = value;
     }
 
@@ -679,13 +679,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ServiceDisruptionTypeEnum }
+     * {@link _ServiceDisruptionTypeEnum }
      * 
      * 
      */
-    public List<ServiceDisruptionTypeEnum> getRoadsideServiceDisruptionType() {
+    public List<_ServiceDisruptionTypeEnum> getRoadsideServiceDisruptionType() {
         if (roadsideServiceDisruptionType == null) {
-            roadsideServiceDisruptionType = new ArrayList<ServiceDisruptionTypeEnum>();
+            roadsideServiceDisruptionType = new ArrayList<_ServiceDisruptionTypeEnum>();
         }
         return this.roadsideServiceDisruptionType;
     }
@@ -695,10 +695,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link SpeedManagementTypeEnum }
+     *     {@link _SpeedManagementTypeEnum }
      *     
      */
-    public SpeedManagementTypeEnum getSpeedManagementType() {
+    public _SpeedManagementTypeEnum getSpeedManagementType() {
         return speedManagementType;
     }
 
@@ -707,10 +707,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link SpeedManagementTypeEnum }
+     *     {@link _SpeedManagementTypeEnum }
      *     
      */
-    public void setSpeedManagementType(SpeedManagementTypeEnum value) {
+    public void setSpeedManagementType(_SpeedManagementTypeEnum value) {
         this.speedManagementType = value;
     }
 
@@ -719,10 +719,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link TransitServiceInformationEnum }
+     *     {@link _TransitServiceInformationEnum }
      *     
      */
-    public TransitServiceInformationEnum getTransitServiceInformation() {
+    public _TransitServiceInformationEnum getTransitServiceInformation() {
         return transitServiceInformation;
     }
 
@@ -731,10 +731,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link TransitServiceInformationEnum }
+     *     {@link _TransitServiceInformationEnum }
      *     
      */
-    public void setTransitServiceInformation(TransitServiceInformationEnum value) {
+    public void setTransitServiceInformation(_TransitServiceInformationEnum value) {
         this.transitServiceInformation = value;
     }
 
@@ -743,10 +743,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleObstructionTypeEnum }
+     *     {@link _VehicleObstructionTypeEnum }
      *     
      */
-    public VehicleObstructionTypeEnum getVehicleObstructionType() {
+    public _VehicleObstructionTypeEnum getVehicleObstructionType() {
         return vehicleObstructionType;
     }
 
@@ -755,10 +755,10 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleObstructionTypeEnum }
+     *     {@link _VehicleObstructionTypeEnum }
      *     
      */
-    public void setVehicleObstructionType(VehicleObstructionTypeEnum value) {
+    public void setVehicleObstructionType(_VehicleObstructionTypeEnum value) {
         this.vehicleObstructionType = value;
     }
 
@@ -780,13 +780,13 @@ public class DetailedCauseType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link WeatherRelatedRoadConditionTypeEnum }
+     * {@link _WeatherRelatedRoadConditionTypeEnum }
      * 
      * 
      */
-    public List<WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
+    public List<_WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
         if (weatherRelatedRoadConditionType == null) {
-            weatherRelatedRoadConditionType = new ArrayList<WeatherRelatedRoadConditionTypeEnum>();
+            weatherRelatedRoadConditionType = new ArrayList<_WeatherRelatedRoadConditionTypeEnum>();
         }
         return this.weatherRelatedRoadConditionType;
     }
@@ -796,10 +796,10 @@ public class DetailedCauseType {
      * 
      * @return
      *     possible object is
-     *     {@link WinterEquipmentManagementTypeEnum }
+     *     {@link _WinterEquipmentManagementTypeEnum }
      *     
      */
-    public WinterEquipmentManagementTypeEnum getWinterEquipmentManagementType() {
+    public _WinterEquipmentManagementTypeEnum getWinterEquipmentManagementType() {
         return winterEquipmentManagementType;
     }
 
@@ -808,35 +808,35 @@ public class DetailedCauseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link WinterEquipmentManagementTypeEnum }
+     *     {@link _WinterEquipmentManagementTypeEnum }
      *     
      */
-    public void setWinterEquipmentManagementType(WinterEquipmentManagementTypeEnum value) {
+    public void setWinterEquipmentManagementType(_WinterEquipmentManagementTypeEnum value) {
         this.winterEquipmentManagementType = value;
     }
 
     /**
-     * Gets the value of the detailedCauseTypeExtension property.
+     * Gets the value of the _DetailedCauseTypeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDetailedCauseTypeExtension() {
-        return detailedCauseTypeExtension;
+    public _ExtensionType get_DetailedCauseTypeExtension() {
+        return _DetailedCauseTypeExtension;
     }
 
     /**
-     * Sets the value of the detailedCauseTypeExtension property.
+     * Sets the value of the _DetailedCauseTypeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDetailedCauseTypeExtension(ExtensionType value) {
-        this.detailedCauseTypeExtension = value;
+    public void set_DetailedCauseTypeExtension(_ExtensionType value) {
+        this._DetailedCauseTypeExtension = value;
     }
 
 }

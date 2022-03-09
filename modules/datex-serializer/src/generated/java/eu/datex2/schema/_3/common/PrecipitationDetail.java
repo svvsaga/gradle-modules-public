@@ -36,26 +36,26 @@ import jakarta.xml.bind.annotation.XmlType;
     "precipitationIntensityGrade",
     "precipitationIntensity",
     "depositionDepth",
-    "precipitationDetailExtension"
+    "_PrecipitationDetailExtension"
 })
 public class PrecipitationDetail {
 
-    protected PrecipitationTypeEnum precipitationType;
-    protected PrecipitationIntensityEnum precipitationIntensityGrade;
+    protected _PrecipitationTypeEnum precipitationType;
+    protected _PrecipitationIntensityEnum precipitationIntensityGrade;
     protected PrecipitationIntensityValue precipitationIntensity;
     protected FloatingPointMetreDistanceValue depositionDepth;
     @XmlElement(name = "_precipitationDetailExtension")
-    protected ExtensionType precipitationDetailExtension;
+    protected _ExtensionType _PrecipitationDetailExtension;
 
     /**
      * Gets the value of the precipitationType property.
      * 
      * @return
      *     possible object is
-     *     {@link PrecipitationTypeEnum }
+     *     {@link _PrecipitationTypeEnum }
      *     
      */
-    public PrecipitationTypeEnum getPrecipitationType() {
+    public _PrecipitationTypeEnum getPrecipitationType() {
         return precipitationType;
     }
 
@@ -64,10 +64,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link PrecipitationTypeEnum }
+     *     {@link _PrecipitationTypeEnum }
      *     
      */
-    public void setPrecipitationType(PrecipitationTypeEnum value) {
+    public void setPrecipitationType(_PrecipitationTypeEnum value) {
         this.precipitationType = value;
     }
 
@@ -76,10 +76,10 @@ public class PrecipitationDetail {
      * 
      * @return
      *     possible object is
-     *     {@link PrecipitationIntensityEnum }
+     *     {@link _PrecipitationIntensityEnum }
      *     
      */
-    public PrecipitationIntensityEnum getPrecipitationIntensityGrade() {
+    public _PrecipitationIntensityEnum getPrecipitationIntensityGrade() {
         return precipitationIntensityGrade;
     }
 
@@ -88,10 +88,10 @@ public class PrecipitationDetail {
      * 
      * @param value
      *     allowed object is
-     *     {@link PrecipitationIntensityEnum }
+     *     {@link _PrecipitationIntensityEnum }
      *     
      */
-    public void setPrecipitationIntensityGrade(PrecipitationIntensityEnum value) {
+    public void setPrecipitationIntensityGrade(_PrecipitationIntensityEnum value) {
         this.precipitationIntensityGrade = value;
     }
 
@@ -144,27 +144,27 @@ public class PrecipitationDetail {
     }
 
     /**
-     * Gets the value of the precipitationDetailExtension property.
+     * Gets the value of the _PrecipitationDetailExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrecipitationDetailExtension() {
-        return precipitationDetailExtension;
+    public _ExtensionType get_PrecipitationDetailExtension() {
+        return _PrecipitationDetailExtension;
     }
 
     /**
-     * Sets the value of the precipitationDetailExtension property.
+     * Sets the value of the _PrecipitationDetailExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrecipitationDetailExtension(ExtensionType value) {
-        this.precipitationDetailExtension = value;
+    public void set_PrecipitationDetailExtension(_ExtensionType value) {
+        this._PrecipitationDetailExtension = value;
     }
 
 }

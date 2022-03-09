@@ -1,87 +1,83 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _VehicleUsageEnum complex type.
+ * <p>Java class for VehicleUsageEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_VehicleUsageEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;VehicleUsageEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="VehicleUsageEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="agricultural"/&gt;
+ *     &lt;enumeration value="carSharing"/&gt;
+ *     &lt;enumeration value="cityLogistics"/&gt;
+ *     &lt;enumeration value="commercial"/&gt;
+ *     &lt;enumeration value="emergencyServices"/&gt;
+ *     &lt;enumeration value="military"/&gt;
+ *     &lt;enumeration value="nonCommercial"/&gt;
+ *     &lt;enumeration value="patrol"/&gt;
+ *     &lt;enumeration value="recoveryServices"/&gt;
+ *     &lt;enumeration value="roadMaintenanceOrConstruction"/&gt;
+ *     &lt;enumeration value="roadOperator"/&gt;
+ *     &lt;enumeration value="taxi"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VehicleUsageEnum", propOrder = {
-    "value"
-})
-public class VehicleUsageEnum {
+@XmlType(name = "VehicleUsageEnum")
+@XmlEnum
+public enum VehicleUsageEnum {
 
-    @XmlValue
-    protected VehicleUsageEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("agricultural")
+    AGRICULTURAL("agricultural"),
+    @XmlEnumValue("carSharing")
+    CAR_SHARING("carSharing"),
+    @XmlEnumValue("cityLogistics")
+    CITY_LOGISTICS("cityLogistics"),
+    @XmlEnumValue("commercial")
+    COMMERCIAL("commercial"),
+    @XmlEnumValue("emergencyServices")
+    EMERGENCY_SERVICES("emergencyServices"),
+    @XmlEnumValue("military")
+    MILITARY("military"),
+    @XmlEnumValue("nonCommercial")
+    NON_COMMERCIAL("nonCommercial"),
+    @XmlEnumValue("patrol")
+    PATROL("patrol"),
+    @XmlEnumValue("recoveryServices")
+    RECOVERY_SERVICES("recoveryServices"),
+    @XmlEnumValue("roadMaintenanceOrConstruction")
+    ROAD_MAINTENANCE_OR_CONSTRUCTION("roadMaintenanceOrConstruction"),
+    @XmlEnumValue("roadOperator")
+    ROAD_OPERATOR("roadOperator"),
+    @XmlEnumValue("taxi")
+    TAXI("taxi"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link VehicleUsageEnum2 }
-     *     
-     */
-    public VehicleUsageEnum2 getValue() {
+    VehicleUsageEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link VehicleUsageEnum2 }
-     *     
-     */
-    public void setValue(VehicleUsageEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static VehicleUsageEnum fromValue(String v) {
+        for (VehicleUsageEnum c: VehicleUsageEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

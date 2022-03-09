@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "EquipmentOrSystemFault", propOrder = {
     "equipmentOrSystemFaultType",
     "faultyEquipmentOrSystemType",
-    "equipmentOrSystemFaultExtension"
+    "_EquipmentOrSystemFaultExtension"
 })
 public class EquipmentOrSystemFault
     extends TrafficElement
 {
 
     @XmlElement(required = true)
-    protected EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
+    protected _EquipmentOrSystemFaultTypeEnum equipmentOrSystemFaultType;
     @XmlElement(required = true)
-    protected EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
+    protected _EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
     @XmlElement(name = "_equipmentOrSystemFaultExtension")
-    protected ExtensionType equipmentOrSystemFaultExtension;
+    protected _ExtensionType _EquipmentOrSystemFaultExtension;
 
     /**
      * Gets the value of the equipmentOrSystemFaultType property.
      * 
      * @return
      *     possible object is
-     *     {@link EquipmentOrSystemFaultTypeEnum }
+     *     {@link _EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
+    public _EquipmentOrSystemFaultTypeEnum getEquipmentOrSystemFaultType() {
         return equipmentOrSystemFaultType;
     }
 
@@ -63,10 +63,10 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link EquipmentOrSystemFaultTypeEnum }
+     *     {@link _EquipmentOrSystemFaultTypeEnum }
      *     
      */
-    public void setEquipmentOrSystemFaultType(EquipmentOrSystemFaultTypeEnum value) {
+    public void setEquipmentOrSystemFaultType(_EquipmentOrSystemFaultTypeEnum value) {
         this.equipmentOrSystemFaultType = value;
     }
 
@@ -75,10 +75,10 @@ public class EquipmentOrSystemFault
      * 
      * @return
      *     possible object is
-     *     {@link EquipmentOrSystemTypeEnum }
+     *     {@link _EquipmentOrSystemTypeEnum }
      *     
      */
-    public EquipmentOrSystemTypeEnum getFaultyEquipmentOrSystemType() {
+    public _EquipmentOrSystemTypeEnum getFaultyEquipmentOrSystemType() {
         return faultyEquipmentOrSystemType;
     }
 
@@ -87,35 +87,35 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link EquipmentOrSystemTypeEnum }
+     *     {@link _EquipmentOrSystemTypeEnum }
      *     
      */
-    public void setFaultyEquipmentOrSystemType(EquipmentOrSystemTypeEnum value) {
+    public void setFaultyEquipmentOrSystemType(_EquipmentOrSystemTypeEnum value) {
         this.faultyEquipmentOrSystemType = value;
     }
 
     /**
-     * Gets the value of the equipmentOrSystemFaultExtension property.
+     * Gets the value of the _EquipmentOrSystemFaultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEquipmentOrSystemFaultExtension() {
-        return equipmentOrSystemFaultExtension;
+    public _ExtensionType get_EquipmentOrSystemFaultExtension() {
+        return _EquipmentOrSystemFaultExtension;
     }
 
     /**
-     * Sets the value of the equipmentOrSystemFaultExtension property.
+     * Sets the value of the _EquipmentOrSystemFaultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEquipmentOrSystemFaultExtension(ExtensionType value) {
-        this.equipmentOrSystemFaultExtension = value;
+    public void set_EquipmentOrSystemFaultExtension(_ExtensionType value) {
+        this._EquipmentOrSystemFaultExtension = value;
     }
 
 }

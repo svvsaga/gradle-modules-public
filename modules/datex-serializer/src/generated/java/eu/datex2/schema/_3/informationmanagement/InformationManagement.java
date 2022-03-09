@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.informationmanagement;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,13 +31,13 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InformationManagement", propOrder = {
     "informationManagedResourceList",
-    "informationManagementExtension"
+    "_InformationManagementExtension"
 })
 public class InformationManagement {
 
     protected InformationManagedResourceList informationManagedResourceList;
     @XmlElement(name = "_informationManagementExtension")
-    protected ExtensionType informationManagementExtension;
+    protected _ExtensionType _InformationManagementExtension;
 
     /**
      * Gets the value of the informationManagedResourceList property.
@@ -64,27 +64,27 @@ public class InformationManagement {
     }
 
     /**
-     * Gets the value of the informationManagementExtension property.
+     * Gets the value of the _InformationManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getInformationManagementExtension() {
-        return informationManagementExtension;
+    public _ExtensionType get_InformationManagementExtension() {
+        return _InformationManagementExtension;
     }
 
     /**
-     * Sets the value of the informationManagementExtension property.
+     * Sets the value of the _InformationManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setInformationManagementExtension(ExtensionType value) {
-        this.informationManagementExtension = value;
+    public void set_InformationManagementExtension(_ExtensionType value) {
+        this._InformationManagementExtension = value;
     }
 
 }

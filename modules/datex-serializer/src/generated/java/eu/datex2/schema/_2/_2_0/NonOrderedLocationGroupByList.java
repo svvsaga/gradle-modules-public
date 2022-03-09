@@ -40,7 +40,7 @@ public class NonOrderedLocationGroupByList
 
     @XmlElement(required = true)
     protected List<Location> locationContainedInGroup;
-    protected ExtensionType nonOrderedLocationGroupByListExtension;
+    protected _ExtensionType nonOrderedLocationGroupByListExtension;
 
     /**
      * Gets the value of the locationContainedInGroup property.
@@ -76,10 +76,10 @@ public class NonOrderedLocationGroupByList
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNonOrderedLocationGroupByListExtension() {
+    public _ExtensionType getNonOrderedLocationGroupByListExtension() {
         return nonOrderedLocationGroupByListExtension;
     }
 
@@ -88,10 +88,10 @@ public class NonOrderedLocationGroupByList
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNonOrderedLocationGroupByListExtension(ExtensionType value) {
+    public void setNonOrderedLocationGroupByListExtension(_ExtensionType value) {
         this.nonOrderedLocationGroupByListExtension = value;
     }
 

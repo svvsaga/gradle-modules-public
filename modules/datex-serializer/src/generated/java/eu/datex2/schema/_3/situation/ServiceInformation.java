@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceInformation", propOrder = {
-    "serviceInformationExtension"
+    "_ServiceInformationExtension"
 })
 @XmlSeeAlso({
     RoadOperatorServiceDisruption.class,
@@ -42,30 +42,30 @@ public abstract class ServiceInformation
 {
 
     @XmlElement(name = "_serviceInformationExtension")
-    protected ExtensionType serviceInformationExtension;
+    protected _ExtensionType _ServiceInformationExtension;
 
     /**
-     * Gets the value of the serviceInformationExtension property.
+     * Gets the value of the _ServiceInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getServiceInformationExtension() {
-        return serviceInformationExtension;
+    public _ExtensionType get_ServiceInformationExtension() {
+        return _ServiceInformationExtension;
     }
 
     /**
-     * Sets the value of the serviceInformationExtension property.
+     * Sets the value of the _ServiceInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setServiceInformationExtension(ExtensionType value) {
-        this.serviceInformationExtension = value;
+    public void set_ServiceInformationExtension(_ExtensionType value) {
+        this._ServiceInformationExtension = value;
     }
 
 }

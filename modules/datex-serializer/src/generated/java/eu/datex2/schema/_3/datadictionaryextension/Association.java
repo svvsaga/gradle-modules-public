@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "translation",
     "translationDefinition",
     "targetNamespace",
-    "associationExtension"
+    "_AssociationExtension"
 })
 public class Association {
 
@@ -65,7 +65,7 @@ public class Association {
     @XmlElement(required = true)
     protected String targetNamespace;
     @XmlElement(name = "_associationExtension")
-    protected ExtensionType associationExtension;
+    protected _ExtensionType _AssociationExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -260,27 +260,27 @@ public class Association {
     }
 
     /**
-     * Gets the value of the associationExtension property.
+     * Gets the value of the _AssociationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAssociationExtension() {
-        return associationExtension;
+    public _ExtensionType get_AssociationExtension() {
+        return _AssociationExtension;
     }
 
     /**
-     * Sets the value of the associationExtension property.
+     * Sets the value of the _AssociationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAssociationExtension(ExtensionType value) {
-        this.associationExtension = value;
+    public void set_AssociationExtension(_ExtensionType value) {
+        this._AssociationExtension = value;
     }
 
 }

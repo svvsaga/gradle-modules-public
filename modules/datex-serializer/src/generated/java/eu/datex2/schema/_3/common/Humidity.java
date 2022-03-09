@@ -30,14 +30,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Humidity", propOrder = {
     "relativeHumidity",
-    "humidityExtension"
+    "_HumidityExtension"
 })
 public class Humidity {
 
     @XmlElement(required = true)
     protected PercentageValue relativeHumidity;
     @XmlElement(name = "_humidityExtension")
-    protected ExtensionType humidityExtension;
+    protected _ExtensionType _HumidityExtension;
 
     /**
      * Gets the value of the relativeHumidity property.
@@ -64,27 +64,27 @@ public class Humidity {
     }
 
     /**
-     * Gets the value of the humidityExtension property.
+     * Gets the value of the _HumidityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHumidityExtension() {
-        return humidityExtension;
+    public _ExtensionType get_HumidityExtension() {
+        return _HumidityExtension;
     }
 
     /**
-     * Sets the value of the humidityExtension property.
+     * Sets the value of the _HumidityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHumidityExtension(ExtensionType value) {
-        this.humidityExtension = value;
+    public void set_HumidityExtension(_ExtensionType value) {
+        this._HumidityExtension = value;
     }
 
 }

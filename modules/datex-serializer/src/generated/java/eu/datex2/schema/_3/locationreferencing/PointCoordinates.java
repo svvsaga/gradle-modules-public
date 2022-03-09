@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "heightCoordinate",
     "positionConfidenceEllipse",
     "horizontalPositionAccuracy",
-    "pointCoordinatesExtension"
+    "_PointCoordinatesExtension"
 })
 public class PointCoordinates {
 
@@ -51,7 +51,7 @@ public class PointCoordinates {
     protected PositionConfidenceEllipse positionConfidenceEllipse;
     protected PositionAccuracy horizontalPositionAccuracy;
     @XmlElement(name = "_pointCoordinatesExtension")
-    protected ExtensionType pointCoordinatesExtension;
+    protected _ExtensionType _PointCoordinatesExtension;
 
     /**
      * Gets the value of the latitude property.
@@ -163,27 +163,27 @@ public class PointCoordinates {
     }
 
     /**
-     * Gets the value of the pointCoordinatesExtension property.
+     * Gets the value of the _PointCoordinatesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointCoordinatesExtension() {
-        return pointCoordinatesExtension;
+    public _ExtensionType get_PointCoordinatesExtension() {
+        return _PointCoordinatesExtension;
     }
 
     /**
-     * Sets the value of the pointCoordinatesExtension property.
+     * Sets the value of the _PointCoordinatesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointCoordinatesExtension(ExtensionType value) {
-        this.pointCoordinatesExtension = value;
+    public void set_PointCoordinatesExtension(_ExtensionType value) {
+        this._PointCoordinatesExtension = value;
     }
 
 }

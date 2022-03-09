@@ -39,7 +39,7 @@ public class TrafficHeadway
 
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
     protected DurationValue averageTimeHeadway;
-    protected ExtensionType trafficHeadwayExtension;
+    protected _ExtensionType trafficHeadwayExtension;
 
     /**
      * Gets the value of the averageDistanceHeadway property.
@@ -94,10 +94,10 @@ public class TrafficHeadway
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficHeadwayExtension() {
+    public _ExtensionType getTrafficHeadwayExtension() {
         return trafficHeadwayExtension;
     }
 
@@ -106,10 +106,10 @@ public class TrafficHeadway
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficHeadwayExtension(ExtensionType value) {
+    public void setTrafficHeadwayExtension(_ExtensionType value) {
         this.trafficHeadwayExtension = value;
     }
 

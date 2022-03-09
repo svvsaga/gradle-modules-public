@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,27 +36,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCDirectionCoded",
     "alertCDirectionNamed",
     "alertCAffectedDirection",
-    "alertCDirectionExtension"
+    "_AlertCDirectionExtension"
 })
 public class AlertCDirection {
 
     @XmlElement(required = true)
-    protected AlertCDirectionEnum alertCDirectionCoded;
+    protected _AlertCDirectionEnum alertCDirectionCoded;
     protected MultilingualString alertCDirectionNamed;
     @XmlElement(required = true)
-    protected LinearDirectionEnum alertCAffectedDirection;
+    protected _LinearDirectionEnum alertCAffectedDirection;
     @XmlElement(name = "_alertCDirectionExtension")
-    protected ExtensionType alertCDirectionExtension;
+    protected _ExtensionType _AlertCDirectionExtension;
 
     /**
      * Gets the value of the alertCDirectionCoded property.
      * 
      * @return
      *     possible object is
-     *     {@link AlertCDirectionEnum }
+     *     {@link _AlertCDirectionEnum }
      *     
      */
-    public AlertCDirectionEnum getAlertCDirectionCoded() {
+    public _AlertCDirectionEnum getAlertCDirectionCoded() {
         return alertCDirectionCoded;
     }
 
@@ -65,10 +65,10 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link AlertCDirectionEnum }
+     *     {@link _AlertCDirectionEnum }
      *     
      */
-    public void setAlertCDirectionCoded(AlertCDirectionEnum value) {
+    public void setAlertCDirectionCoded(_AlertCDirectionEnum value) {
         this.alertCDirectionCoded = value;
     }
 
@@ -101,10 +101,10 @@ public class AlertCDirection {
      * 
      * @return
      *     possible object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public LinearDirectionEnum getAlertCAffectedDirection() {
+    public _LinearDirectionEnum getAlertCAffectedDirection() {
         return alertCAffectedDirection;
     }
 
@@ -113,35 +113,35 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public void setAlertCAffectedDirection(LinearDirectionEnum value) {
+    public void setAlertCAffectedDirection(_LinearDirectionEnum value) {
         this.alertCAffectedDirection = value;
     }
 
     /**
-     * Gets the value of the alertCDirectionExtension property.
+     * Gets the value of the _AlertCDirectionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCDirectionExtension() {
-        return alertCDirectionExtension;
+    public _ExtensionType get_AlertCDirectionExtension() {
+        return _AlertCDirectionExtension;
     }
 
     /**
-     * Sets the value of the alertCDirectionExtension property.
+     * Sets the value of the _AlertCDirectionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCDirectionExtension(ExtensionType value) {
-        this.alertCDirectionExtension = value;
+    public void set_AlertCDirectionExtension(_ExtensionType value) {
+        this._AlertCDirectionExtension = value;
     }
 
 }

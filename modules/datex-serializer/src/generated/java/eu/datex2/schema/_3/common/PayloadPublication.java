@@ -55,7 +55,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "feedType",
     "publicationTime",
     "publicationCreator",
-    "payloadPublicationExtension"
+    "_PayloadPublicationExtension"
 })
 @XmlSeeAlso({
     GenericPublication.class,
@@ -77,7 +77,7 @@ public abstract class PayloadPublication {
     @XmlElement(required = true)
     protected InternationalIdentifier publicationCreator;
     @XmlElement(name = "_payloadPublicationExtension")
-    protected ExtensionType payloadPublicationExtension;
+    protected _ExtensionType _PayloadPublicationExtension;
     @XmlAttribute(name = "lang", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lang;
@@ -189,27 +189,27 @@ public abstract class PayloadPublication {
     }
 
     /**
-     * Gets the value of the payloadPublicationExtension property.
+     * Gets the value of the _PayloadPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPayloadPublicationExtension() {
-        return payloadPublicationExtension;
+    public _ExtensionType get_PayloadPublicationExtension() {
+        return _PayloadPublicationExtension;
     }
 
     /**
-     * Sets the value of the payloadPublicationExtension property.
+     * Sets the value of the _PayloadPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPayloadPublicationExtension(ExtensionType value) {
-        this.payloadPublicationExtension = value;
+    public void set_PayloadPublicationExtension(_ExtensionType value) {
+        this._PayloadPublicationExtension = value;
     }
 
     /**

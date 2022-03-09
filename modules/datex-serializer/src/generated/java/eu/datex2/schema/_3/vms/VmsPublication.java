@@ -3,9 +3,9 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "VmsPublication", propOrder = {
     "headerInformation",
     "vmsControllerStatus",
-    "vmsPublicationExtension"
+    "_VmsPublicationExtension"
 })
 public class VmsPublication
     extends PayloadPublication
@@ -48,7 +48,7 @@ public class VmsPublication
     @XmlElement(required = true)
     protected List<VmsControllerStatus> vmsControllerStatus;
     @XmlElement(name = "_vmsPublicationExtension")
-    protected ExtensionType vmsPublicationExtension;
+    protected _ExtensionType _VmsPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,27 +104,27 @@ public class VmsPublication
     }
 
     /**
-     * Gets the value of the vmsPublicationExtension property.
+     * Gets the value of the _VmsPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsPublicationExtension() {
-        return vmsPublicationExtension;
+    public _ExtensionType get_VmsPublicationExtension() {
+        return _VmsPublicationExtension;
     }
 
     /**
-     * Sets the value of the vmsPublicationExtension property.
+     * Sets the value of the _VmsPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsPublicationExtension(ExtensionType value) {
-        this.vmsPublicationExtension = value;
+    public void set_VmsPublicationExtension(_ExtensionType value) {
+        this._VmsPublicationExtension = value;
     }
 
 }

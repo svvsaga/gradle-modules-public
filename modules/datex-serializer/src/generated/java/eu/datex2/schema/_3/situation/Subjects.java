@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,26 +35,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "Subjects", propOrder = {
     "subjectTypeOfWorks",
     "numberOfSubjects",
-    "subjectsExtension"
+    "_SubjectsExtension"
 })
 public class Subjects {
 
     @XmlElement(required = true)
-    protected SubjectTypeOfWorksEnum subjectTypeOfWorks;
+    protected _SubjectTypeOfWorksEnum subjectTypeOfWorks;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfSubjects;
     @XmlElement(name = "_subjectsExtension")
-    protected ExtensionType subjectsExtension;
+    protected _ExtensionType _SubjectsExtension;
 
     /**
      * Gets the value of the subjectTypeOfWorks property.
      * 
      * @return
      *     possible object is
-     *     {@link SubjectTypeOfWorksEnum }
+     *     {@link _SubjectTypeOfWorksEnum }
      *     
      */
-    public SubjectTypeOfWorksEnum getSubjectTypeOfWorks() {
+    public _SubjectTypeOfWorksEnum getSubjectTypeOfWorks() {
         return subjectTypeOfWorks;
     }
 
@@ -63,10 +63,10 @@ public class Subjects {
      * 
      * @param value
      *     allowed object is
-     *     {@link SubjectTypeOfWorksEnum }
+     *     {@link _SubjectTypeOfWorksEnum }
      *     
      */
-    public void setSubjectTypeOfWorks(SubjectTypeOfWorksEnum value) {
+    public void setSubjectTypeOfWorks(_SubjectTypeOfWorksEnum value) {
         this.subjectTypeOfWorks = value;
     }
 
@@ -95,27 +95,27 @@ public class Subjects {
     }
 
     /**
-     * Gets the value of the subjectsExtension property.
+     * Gets the value of the _SubjectsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSubjectsExtension() {
-        return subjectsExtension;
+    public _ExtensionType get_SubjectsExtension() {
+        return _SubjectsExtension;
     }
 
     /**
-     * Sets the value of the subjectsExtension property.
+     * Sets the value of the _SubjectsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSubjectsExtension(ExtensionType value) {
-        this.subjectsExtension = value;
+    public void set_SubjectsExtension(_ExtensionType value) {
+        this._SubjectsExtension = value;
     }
 
 }

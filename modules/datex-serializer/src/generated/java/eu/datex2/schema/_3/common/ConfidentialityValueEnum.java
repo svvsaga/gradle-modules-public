@@ -1,87 +1,59 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _ConfidentialityValueEnum complex type.
+ * <p>Java class for ConfidentialityValueEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_ConfidentialityValueEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;ConfidentialityValueEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="ConfidentialityValueEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="internalUse"/&gt;
+ *     &lt;enumeration value="noRestriction"/&gt;
+ *     &lt;enumeration value="restrictedToAuthorities"/&gt;
+ *     &lt;enumeration value="restrictedToAuthoritiesAndTrafficOperators"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ConfidentialityValueEnum", propOrder = {
-    "value"
-})
-public class ConfidentialityValueEnum {
+@XmlType(name = "ConfidentialityValueEnum")
+@XmlEnum
+public enum ConfidentialityValueEnum {
 
-    @XmlValue
-    protected ConfidentialityValueEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("internalUse")
+    INTERNAL_USE("internalUse"),
+    @XmlEnumValue("noRestriction")
+    NO_RESTRICTION("noRestriction"),
+    @XmlEnumValue("restrictedToAuthorities")
+    RESTRICTED_TO_AUTHORITIES("restrictedToAuthorities"),
+    @XmlEnumValue("restrictedToAuthoritiesAndTrafficOperators")
+    RESTRICTED_TO_AUTHORITIES_AND_TRAFFIC_OPERATORS("restrictedToAuthoritiesAndTrafficOperators"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ConfidentialityValueEnum2 }
-     *     
-     */
-    public ConfidentialityValueEnum2 getValue() {
+    ConfidentialityValueEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ConfidentialityValueEnum2 }
-     *     
-     */
-    public void setValue(ConfidentialityValueEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static ConfidentialityValueEnum fromValue(String v) {
+        for (ConfidentialityValueEnum c: ConfidentialityValueEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "faultImpactSeverity",
     "faultUrgencyToRectify",
     "manufacturerFaultCode",
-    "faultExtension"
+    "_FaultExtension"
 })
 @XmlSeeAlso({
     VmsControllerFault.class,
@@ -64,11 +64,11 @@ public class Fault {
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar faultLastUpdateTime;
-    protected FaultSeverityEnum faultImpactSeverity;
-    protected FaultUrgencyEnum faultUrgencyToRectify;
+    protected _FaultSeverityEnum faultImpactSeverity;
+    protected _FaultUrgencyEnum faultUrgencyToRectify;
     protected String manufacturerFaultCode;
     @XmlElement(name = "_faultExtension")
-    protected ExtensionType faultExtension;
+    protected _ExtensionType _FaultExtension;
 
     /**
      * Gets the value of the faultIdentifier property.
@@ -171,10 +171,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link FaultSeverityEnum }
+     *     {@link _FaultSeverityEnum }
      *     
      */
-    public FaultSeverityEnum getFaultImpactSeverity() {
+    public _FaultSeverityEnum getFaultImpactSeverity() {
         return faultImpactSeverity;
     }
 
@@ -183,10 +183,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link FaultSeverityEnum }
+     *     {@link _FaultSeverityEnum }
      *     
      */
-    public void setFaultImpactSeverity(FaultSeverityEnum value) {
+    public void setFaultImpactSeverity(_FaultSeverityEnum value) {
         this.faultImpactSeverity = value;
     }
 
@@ -195,10 +195,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link FaultUrgencyEnum }
+     *     {@link _FaultUrgencyEnum }
      *     
      */
-    public FaultUrgencyEnum getFaultUrgencyToRectify() {
+    public _FaultUrgencyEnum getFaultUrgencyToRectify() {
         return faultUrgencyToRectify;
     }
 
@@ -207,10 +207,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link FaultUrgencyEnum }
+     *     {@link _FaultUrgencyEnum }
      *     
      */
-    public void setFaultUrgencyToRectify(FaultUrgencyEnum value) {
+    public void setFaultUrgencyToRectify(_FaultUrgencyEnum value) {
         this.faultUrgencyToRectify = value;
     }
 
@@ -239,27 +239,27 @@ public class Fault {
     }
 
     /**
-     * Gets the value of the faultExtension property.
+     * Gets the value of the _FaultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFaultExtension() {
-        return faultExtension;
+    public _ExtensionType get_FaultExtension() {
+        return _FaultExtension;
     }
 
     /**
-     * Sets the value of the faultExtension property.
+     * Sets the value of the _FaultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFaultExtension(ExtensionType value) {
-        this.faultExtension = value;
+    public void set_FaultExtension(_ExtensionType value) {
+        this._FaultExtension = value;
     }
 
 }

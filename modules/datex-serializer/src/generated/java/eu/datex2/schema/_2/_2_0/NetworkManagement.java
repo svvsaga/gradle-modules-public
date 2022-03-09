@@ -69,7 +69,7 @@ public abstract class NetworkManagement
     protected List<PlacesEnum> placesAtWhichApplicable;
     protected Boolean automaticallyInitiated;
     protected List<VehicleCharacteristics> forVehiclesWithCharacteristicsOf;
-    protected NetworkManagementExtensionType networkManagementExtension;
+    protected _NetworkManagementExtensionType networkManagementExtension;
 
     /**
      * Gets the value of the complianceOption property.
@@ -240,10 +240,10 @@ public abstract class NetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link NetworkManagementExtensionType }
+     *     {@link _NetworkManagementExtensionType }
      *     
      */
-    public NetworkManagementExtensionType getNetworkManagementExtension() {
+    public _NetworkManagementExtensionType getNetworkManagementExtension() {
         return networkManagementExtension;
     }
 
@@ -252,10 +252,10 @@ public abstract class NetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link NetworkManagementExtensionType }
+     *     {@link _NetworkManagementExtensionType }
      *     
      */
-    public void setNetworkManagementExtension(NetworkManagementExtensionType value) {
+    public void setNetworkManagementExtension(_NetworkManagementExtensionType value) {
         this.networkManagementExtension = value;
     }
 

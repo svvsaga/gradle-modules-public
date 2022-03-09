@@ -44,7 +44,7 @@ public class AlertCDirection {
     protected AlertCDirectionEnum alertCDirectionCoded;
     protected MultilingualString alertCDirectionNamed;
     protected Boolean alertCDirectionSense;
-    protected ExtensionType alertCDirectionExtension;
+    protected _ExtensionType alertCDirectionExtension;
 
     /**
      * Gets the value of the alertCDirectionCoded property.
@@ -123,10 +123,10 @@ public class AlertCDirection {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCDirectionExtension() {
+    public _ExtensionType getAlertCDirectionExtension() {
         return alertCDirectionExtension;
     }
 
@@ -135,10 +135,10 @@ public class AlertCDirection {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCDirectionExtension(ExtensionType value) {
+    public void setAlertCDirectionExtension(_ExtensionType value) {
         this.alertCDirectionExtension = value;
     }
 

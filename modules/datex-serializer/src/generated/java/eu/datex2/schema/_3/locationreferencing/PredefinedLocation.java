@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PredefinedLocation", propOrder = {
     "predefinedLocationName",
     "location",
-    "predefinedLocationExtension"
+    "_PredefinedLocationExtension"
 })
 public class PredefinedLocation
     extends PredefinedLocationReference
@@ -47,7 +47,7 @@ public class PredefinedLocation
     @XmlElement(required = true)
     protected Location location;
     @XmlElement(name = "_predefinedLocationExtension")
-    protected ExtensionType predefinedLocationExtension;
+    protected _ExtensionType _PredefinedLocationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -102,27 +102,27 @@ public class PredefinedLocation
     }
 
     /**
-     * Gets the value of the predefinedLocationExtension property.
+     * Gets the value of the _PredefinedLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedLocationExtension() {
-        return predefinedLocationExtension;
+    public _ExtensionType get_PredefinedLocationExtension() {
+        return _PredefinedLocationExtension;
     }
 
     /**
-     * Sets the value of the predefinedLocationExtension property.
+     * Sets the value of the _PredefinedLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedLocationExtension(ExtensionType value) {
-        this.predefinedLocationExtension = value;
+    public void set_PredefinedLocationExtension(_ExtensionType value) {
+        this._PredefinedLocationExtension = value;
     }
 
     /**

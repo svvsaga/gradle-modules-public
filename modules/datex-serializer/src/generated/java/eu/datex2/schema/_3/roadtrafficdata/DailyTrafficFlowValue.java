@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DailyTrafficFlowValue", propOrder = {
     "vehicleFlowRate",
-    "dailyTrafficFlowValueExtension"
+    "_DailyTrafficFlowValueExtension"
 })
 public class DailyTrafficFlowValue
     extends DataValue
@@ -44,7 +44,7 @@ public class DailyTrafficFlowValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
     @XmlElement(name = "_dailyTrafficFlowValueExtension")
-    protected ExtensionType dailyTrafficFlowValueExtension;
+    protected _ExtensionType _DailyTrafficFlowValueExtension;
 
     /**
      * Gets the value of the vehicleFlowRate property.
@@ -71,27 +71,27 @@ public class DailyTrafficFlowValue
     }
 
     /**
-     * Gets the value of the dailyTrafficFlowValueExtension property.
+     * Gets the value of the _DailyTrafficFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDailyTrafficFlowValueExtension() {
-        return dailyTrafficFlowValueExtension;
+    public _ExtensionType get_DailyTrafficFlowValueExtension() {
+        return _DailyTrafficFlowValueExtension;
     }
 
     /**
-     * Sets the value of the dailyTrafficFlowValueExtension property.
+     * Sets the value of the _DailyTrafficFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDailyTrafficFlowValueExtension(ExtensionType value) {
-        this.dailyTrafficFlowValueExtension = value;
+    public void set_DailyTrafficFlowValueExtension(_ExtensionType value) {
+        this._DailyTrafficFlowValueExtension = value;
     }
 
 }

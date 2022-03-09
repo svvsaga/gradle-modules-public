@@ -41,7 +41,7 @@ public class GrossWeightCharacteristic {
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
     protected float grossVehicleWeight;
-    protected ExtensionType grossWeightCharacteristicExtension;
+    protected _ExtensionType grossWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +88,10 @@ public class GrossWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGrossWeightCharacteristicExtension() {
+    public _ExtensionType getGrossWeightCharacteristicExtension() {
         return grossWeightCharacteristicExtension;
     }
 
@@ -100,10 +100,10 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGrossWeightCharacteristicExtension(ExtensionType value) {
+    public void setGrossWeightCharacteristicExtension(_ExtensionType value) {
         this.grossWeightCharacteristicExtension = value;
     }
 

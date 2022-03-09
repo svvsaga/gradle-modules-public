@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "openlrLocationReferencePoint",
     "openlrLastLocationReferencePoint",
     "openlrOffsets",
-    "openlrBasePointLocationExtension"
+    "_OpenlrBasePointLocationExtension"
 })
 @XmlSeeAlso({
     OpenlrPointAlongLine.class,
@@ -51,26 +51,26 @@ public abstract class OpenlrBasePointLocation
 {
 
     @XmlElement(required = true)
-    protected OpenlrSideOfRoadEnum openlrSideOfRoad;
+    protected _OpenlrSideOfRoadEnum openlrSideOfRoad;
     @XmlElement(required = true)
-    protected OpenlrOrientationEnum openlrOrientation;
+    protected _OpenlrOrientationEnum openlrOrientation;
     @XmlElement(required = true)
     protected OpenlrLocationReferencePoint openlrLocationReferencePoint;
     @XmlElement(required = true)
     protected OpenlrLastLocationReferencePoint openlrLastLocationReferencePoint;
     protected OpenlrOffsets openlrOffsets;
     @XmlElement(name = "_openlrBasePointLocationExtension")
-    protected ExtensionType openlrBasePointLocationExtension;
+    protected _ExtensionType _OpenlrBasePointLocationExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrSideOfRoadEnum }
+     *     {@link _OpenlrSideOfRoadEnum }
      *     
      */
-    public OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
+    public _OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
         return openlrSideOfRoad;
     }
 
@@ -79,10 +79,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrSideOfRoadEnum }
+     *     {@link _OpenlrSideOfRoadEnum }
      *     
      */
-    public void setOpenlrSideOfRoad(OpenlrSideOfRoadEnum value) {
+    public void setOpenlrSideOfRoad(_OpenlrSideOfRoadEnum value) {
         this.openlrSideOfRoad = value;
     }
 
@@ -91,10 +91,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrOrientationEnum }
+     *     {@link _OpenlrOrientationEnum }
      *     
      */
-    public OpenlrOrientationEnum getOpenlrOrientation() {
+    public _OpenlrOrientationEnum getOpenlrOrientation() {
         return openlrOrientation;
     }
 
@@ -103,10 +103,10 @@ public abstract class OpenlrBasePointLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrOrientationEnum }
+     *     {@link _OpenlrOrientationEnum }
      *     
      */
-    public void setOpenlrOrientation(OpenlrOrientationEnum value) {
+    public void setOpenlrOrientation(_OpenlrOrientationEnum value) {
         this.openlrOrientation = value;
     }
 
@@ -183,27 +183,27 @@ public abstract class OpenlrBasePointLocation
     }
 
     /**
-     * Gets the value of the openlrBasePointLocationExtension property.
+     * Gets the value of the _OpenlrBasePointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrBasePointLocationExtension() {
-        return openlrBasePointLocationExtension;
+    public _ExtensionType get_OpenlrBasePointLocationExtension() {
+        return _OpenlrBasePointLocationExtension;
     }
 
     /**
-     * Sets the value of the openlrBasePointLocationExtension property.
+     * Sets the value of the _OpenlrBasePointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrBasePointLocationExtension(ExtensionType value) {
-        this.openlrBasePointLocationExtension = value;
+    public void set_OpenlrBasePointLocationExtension(_ExtensionType value) {
+        this._OpenlrBasePointLocationExtension = value;
     }
 
 }

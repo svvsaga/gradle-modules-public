@@ -5,9 +5,9 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -58,7 +58,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "measurementSpecificCharacteristics",
     "measurementSiteLocation",
     "informationManagerOverride",
-    "measurementSiteExtension"
+    "_MeasurementSiteExtension"
 })
 public class MeasurementSite {
 
@@ -70,12 +70,12 @@ public class MeasurementSite {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger measurementSiteNumberOfLanes;
     protected String measurementSiteIdentification;
-    protected List<MeasurementSiteIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
+    protected List<_MeasurementSiteIndexMeasurementSpecificCharacteristics> measurementSpecificCharacteristics;
     @XmlElement(required = true)
     protected LocationReference measurementSiteLocation;
     protected InternationalIdentifier informationManagerOverride;
     @XmlElement(name = "_measurementSiteExtension")
-    protected ExtensionType measurementSiteExtension;
+    protected _ExtensionType _MeasurementSiteExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -243,13 +243,13 @@ public class MeasurementSite {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MeasurementSiteIndexMeasurementSpecificCharacteristics }
+     * {@link _MeasurementSiteIndexMeasurementSpecificCharacteristics }
      * 
      * 
      */
-    public List<MeasurementSiteIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
+    public List<_MeasurementSiteIndexMeasurementSpecificCharacteristics> getMeasurementSpecificCharacteristics() {
         if (measurementSpecificCharacteristics == null) {
-            measurementSpecificCharacteristics = new ArrayList<MeasurementSiteIndexMeasurementSpecificCharacteristics>();
+            measurementSpecificCharacteristics = new ArrayList<_MeasurementSiteIndexMeasurementSpecificCharacteristics>();
         }
         return this.measurementSpecificCharacteristics;
     }
@@ -303,27 +303,27 @@ public class MeasurementSite {
     }
 
     /**
-     * Gets the value of the measurementSiteExtension property.
+     * Gets the value of the _MeasurementSiteExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteExtension() {
-        return measurementSiteExtension;
+    public _ExtensionType get_MeasurementSiteExtension() {
+        return _MeasurementSiteExtension;
     }
 
     /**
-     * Sets the value of the measurementSiteExtension property.
+     * Sets the value of the _MeasurementSiteExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSiteExtension(ExtensionType value) {
-        this.measurementSiteExtension = value;
+    public void set_MeasurementSiteExtension(_ExtensionType value) {
+        this._MeasurementSiteExtension = value;
     }
 
     /**

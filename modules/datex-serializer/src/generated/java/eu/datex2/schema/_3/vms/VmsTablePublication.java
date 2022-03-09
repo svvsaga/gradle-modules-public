@@ -3,9 +3,9 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "VmsTablePublication", propOrder = {
     "headerInformation",
     "vmsControllerTable",
-    "vmsTablePublicationExtension"
+    "_VmsTablePublicationExtension"
 })
 public class VmsTablePublication
     extends PayloadPublication
@@ -48,7 +48,7 @@ public class VmsTablePublication
     @XmlElement(required = true)
     protected List<VmsControllerTable> vmsControllerTable;
     @XmlElement(name = "_vmsTablePublicationExtension")
-    protected ExtensionType vmsTablePublicationExtension;
+    protected _ExtensionType _VmsTablePublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,27 +104,27 @@ public class VmsTablePublication
     }
 
     /**
-     * Gets the value of the vmsTablePublicationExtension property.
+     * Gets the value of the _VmsTablePublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsTablePublicationExtension() {
-        return vmsTablePublicationExtension;
+    public _ExtensionType get_VmsTablePublicationExtension() {
+        return _VmsTablePublicationExtension;
     }
 
     /**
-     * Sets the value of the vmsTablePublicationExtension property.
+     * Sets the value of the _VmsTablePublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsTablePublicationExtension(ExtensionType value) {
-        this.vmsTablePublicationExtension = value;
+    public void set_VmsTablePublicationExtension(_ExtensionType value) {
+        this._VmsTablePublicationExtension = value;
     }
 
 }

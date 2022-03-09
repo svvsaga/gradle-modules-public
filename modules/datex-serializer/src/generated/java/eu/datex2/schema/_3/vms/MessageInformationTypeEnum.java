@@ -1,87 +1,71 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _MessageInformationTypeEnum complex type.
+ * <p>Java class for MessageInformationTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_MessageInformationTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;MessageInformationTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="MessageInformationTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="campaignMessage"/&gt;
+ *     &lt;enumeration value="dateTime"/&gt;
+ *     &lt;enumeration value="futureInformation"/&gt;
+ *     &lt;enumeration value="instructionOrMessage"/&gt;
+ *     &lt;enumeration value="situationWarning"/&gt;
+ *     &lt;enumeration value="temperature"/&gt;
+ *     &lt;enumeration value="trafficManagement"/&gt;
+ *     &lt;enumeration value="travelTime"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_MessageInformationTypeEnum", propOrder = {
-    "value"
-})
-public class MessageInformationTypeEnum {
+@XmlType(name = "MessageInformationTypeEnum")
+@XmlEnum
+public enum MessageInformationTypeEnum {
 
-    @XmlValue
-    protected MessageInformationTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("campaignMessage")
+    CAMPAIGN_MESSAGE("campaignMessage"),
+    @XmlEnumValue("dateTime")
+    DATE_TIME("dateTime"),
+    @XmlEnumValue("futureInformation")
+    FUTURE_INFORMATION("futureInformation"),
+    @XmlEnumValue("instructionOrMessage")
+    INSTRUCTION_OR_MESSAGE("instructionOrMessage"),
+    @XmlEnumValue("situationWarning")
+    SITUATION_WARNING("situationWarning"),
+    @XmlEnumValue("temperature")
+    TEMPERATURE("temperature"),
+    @XmlEnumValue("trafficManagement")
+    TRAFFIC_MANAGEMENT("trafficManagement"),
+    @XmlEnumValue("travelTime")
+    TRAVEL_TIME("travelTime"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MessageInformationTypeEnum2 }
-     *     
-     */
-    public MessageInformationTypeEnum2 getValue() {
+    MessageInformationTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MessageInformationTypeEnum2 }
-     *     
-     */
-    public void setValue(MessageInformationTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static MessageInformationTypeEnum fromValue(String v) {
+        for (MessageInformationTypeEnum c: MessageInformationTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TpegNonJunctionPoint", propOrder = {
     "pointCoordinates",
     "name",
-    "tpegNonJunctionPointExtension"
+    "_TpegNonJunctionPointExtension"
 })
 public class TpegNonJunctionPoint
     extends TpegPoint
@@ -46,7 +46,7 @@ public class TpegNonJunctionPoint
     @XmlElement(required = true)
     protected List<TpegOtherPointDescriptor> name;
     @XmlElement(name = "_tpegNonJunctionPointExtension")
-    protected ExtensionType tpegNonJunctionPointExtension;
+    protected _ExtensionType _TpegNonJunctionPointExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -102,27 +102,27 @@ public class TpegNonJunctionPoint
     }
 
     /**
-     * Gets the value of the tpegNonJunctionPointExtension property.
+     * Gets the value of the _TpegNonJunctionPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegNonJunctionPointExtension() {
-        return tpegNonJunctionPointExtension;
+    public _ExtensionType get_TpegNonJunctionPointExtension() {
+        return _TpegNonJunctionPointExtension;
     }
 
     /**
-     * Sets the value of the tpegNonJunctionPointExtension property.
+     * Sets the value of the _TpegNonJunctionPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegNonJunctionPointExtension(ExtensionType value) {
-        this.tpegNonJunctionPointExtension = value;
+    public void set_TpegNonJunctionPointExtension(_ExtensionType value) {
+        this._TpegNonJunctionPointExtension = value;
     }
 
 }

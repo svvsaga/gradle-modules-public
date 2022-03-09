@@ -50,14 +50,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "undgNumber",
     "volumeOfDangerousGoods",
     "weightOfDangerousGoods",
-    "hazardousMaterialsExtension"
+    "_HazardousMaterialsExtension"
 })
 public class HazardousMaterials {
 
     @XmlElement(required = true)
     protected MultilingualString chemicalName;
     protected Float dangerousGoodsFlashPoint;
-    protected DangerousGoodsRegulationsEnum dangerousGoodsRegulations;
+    protected _DangerousGoodsRegulationsEnum dangerousGoodsRegulations;
     protected String hazardCodeIdentification;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger hazardCodeVersionNumber;
@@ -67,7 +67,7 @@ public class HazardousMaterials {
     protected Float volumeOfDangerousGoods;
     protected Float weightOfDangerousGoods;
     @XmlElement(name = "_hazardousMaterialsExtension")
-    protected ExtensionType hazardousMaterialsExtension;
+    protected _ExtensionType _HazardousMaterialsExtension;
 
     /**
      * Gets the value of the chemicalName property.
@@ -122,10 +122,10 @@ public class HazardousMaterials {
      * 
      * @return
      *     possible object is
-     *     {@link DangerousGoodsRegulationsEnum }
+     *     {@link _DangerousGoodsRegulationsEnum }
      *     
      */
-    public DangerousGoodsRegulationsEnum getDangerousGoodsRegulations() {
+    public _DangerousGoodsRegulationsEnum getDangerousGoodsRegulations() {
         return dangerousGoodsRegulations;
     }
 
@@ -134,10 +134,10 @@ public class HazardousMaterials {
      * 
      * @param value
      *     allowed object is
-     *     {@link DangerousGoodsRegulationsEnum }
+     *     {@link _DangerousGoodsRegulationsEnum }
      *     
      */
-    public void setDangerousGoodsRegulations(DangerousGoodsRegulationsEnum value) {
+    public void setDangerousGoodsRegulations(_DangerousGoodsRegulationsEnum value) {
         this.dangerousGoodsRegulations = value;
     }
 
@@ -310,27 +310,27 @@ public class HazardousMaterials {
     }
 
     /**
-     * Gets the value of the hazardousMaterialsExtension property.
+     * Gets the value of the _HazardousMaterialsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHazardousMaterialsExtension() {
-        return hazardousMaterialsExtension;
+    public _ExtensionType get_HazardousMaterialsExtension() {
+        return _HazardousMaterialsExtension;
     }
 
     /**
-     * Sets the value of the hazardousMaterialsExtension property.
+     * Sets the value of the _HazardousMaterialsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHazardousMaterialsExtension(ExtensionType value) {
-        this.hazardousMaterialsExtension = value;
+    public void set_HazardousMaterialsExtension(_ExtensionType value) {
+        this._HazardousMaterialsExtension = value;
     }
 
 }

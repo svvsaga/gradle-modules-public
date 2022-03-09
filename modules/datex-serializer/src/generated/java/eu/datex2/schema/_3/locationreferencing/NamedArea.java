@@ -17,14 +17,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="NamedArea"&gt;
  *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *     &lt;extension base="{http://datex2.eu/schema/3/common}NamedArea"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="areaName" type="{http://datex2.eu/schema/3/common}MultilingualString"/&gt;
  *         &lt;element name="namedAreaType" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaTypeEnum" minOccurs="0"/&gt;
  *         &lt;element name="country" type="{http://datex2.eu/schema/3/common}CountryCode" minOccurs="0"/&gt;
  *         &lt;element name="_namedAreaExtension" type="{http://datex2.eu/schema/3/locationReferencing}_NamedAreaExtensionType" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
+ *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
@@ -36,20 +36,22 @@ import jakarta.xml.bind.annotation.XmlType;
     "areaName",
     "namedAreaType",
     "country",
-    "namedAreaExtension"
+    "_LocNamedAreaExtension"
 })
 @XmlSeeAlso({
     IsoNamedArea.class,
     NutsNamedArea.class
 })
-public class NamedArea {
+public class NamedArea
+    extends eu.datex2.schema._3.common.NamedArea
+{
 
     @XmlElement(required = true)
     protected MultilingualString areaName;
-    protected NamedAreaTypeEnum namedAreaType;
+    protected _NamedAreaTypeEnum namedAreaType;
     protected String country;
     @XmlElement(name = "_namedAreaExtension")
-    protected NamedAreaExtensionType namedAreaExtension;
+    protected _NamedAreaExtensionType _LocNamedAreaExtension;
 
     /**
      * Gets the value of the areaName property.
@@ -80,10 +82,10 @@ public class NamedArea {
      * 
      * @return
      *     possible object is
-     *     {@link NamedAreaTypeEnum }
+     *     {@link _NamedAreaTypeEnum }
      *     
      */
-    public NamedAreaTypeEnum getNamedAreaType() {
+    public _NamedAreaTypeEnum getNamedAreaType() {
         return namedAreaType;
     }
 
@@ -92,10 +94,10 @@ public class NamedArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link NamedAreaTypeEnum }
+     *     {@link _NamedAreaTypeEnum }
      *     
      */
-    public void setNamedAreaType(NamedAreaTypeEnum value) {
+    public void setNamedAreaType(_NamedAreaTypeEnum value) {
         this.namedAreaType = value;
     }
 
@@ -124,27 +126,27 @@ public class NamedArea {
     }
 
     /**
-     * Gets the value of the namedAreaExtension property.
+     * Gets the value of the _LocNamedAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link NamedAreaExtensionType }
+     *     {@link _NamedAreaExtensionType }
      *     
      */
-    public NamedAreaExtensionType getNamedAreaExtension() {
-        return namedAreaExtension;
+    public _NamedAreaExtensionType get_LocNamedAreaExtension() {
+        return _LocNamedAreaExtension;
     }
 
     /**
-     * Sets the value of the namedAreaExtension property.
+     * Sets the value of the _LocNamedAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link NamedAreaExtensionType }
+     *     {@link _NamedAreaExtensionType }
      *     
      */
-    public void setNamedAreaExtension(NamedAreaExtensionType value) {
-        this.namedAreaExtension = value;
+    public void set_LocNamedAreaExtension(_NamedAreaExtensionType value) {
+        this._LocNamedAreaExtension = value;
     }
 
 }

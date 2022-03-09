@@ -1,87 +1,68 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _OperatorActionStatusEnum complex type.
+ * <p>Java class for OperatorActionStatusEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_OperatorActionStatusEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;OperatorActionStatusEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="OperatorActionStatusEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="requested"/&gt;
+ *     &lt;enumeration value="approved"/&gt;
+ *     &lt;enumeration value="beingImplemented"/&gt;
+ *     &lt;enumeration value="implemented"/&gt;
+ *     &lt;enumeration value="rejected"/&gt;
+ *     &lt;enumeration value="terminationRequested"/&gt;
+ *     &lt;enumeration value="beingTerminated"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_OperatorActionStatusEnum", propOrder = {
-    "value"
-})
-public class OperatorActionStatusEnum {
+@XmlType(name = "OperatorActionStatusEnum")
+@XmlEnum
+public enum OperatorActionStatusEnum {
 
-    @XmlValue
-    protected OperatorActionStatusEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("requested")
+    REQUESTED("requested"),
+    @XmlEnumValue("approved")
+    APPROVED("approved"),
+    @XmlEnumValue("beingImplemented")
+    BEING_IMPLEMENTED("beingImplemented"),
+    @XmlEnumValue("implemented")
+    IMPLEMENTED("implemented"),
+    @XmlEnumValue("rejected")
+    REJECTED("rejected"),
+    @XmlEnumValue("terminationRequested")
+    TERMINATION_REQUESTED("terminationRequested"),
+    @XmlEnumValue("beingTerminated")
+    BEING_TERMINATED("beingTerminated"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OperatorActionStatusEnum2 }
-     *     
-     */
-    public OperatorActionStatusEnum2 getValue() {
+    OperatorActionStatusEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OperatorActionStatusEnum2 }
-     *     
-     */
-    public void setValue(OperatorActionStatusEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static OperatorActionStatusEnum fromValue(String v) {
+        for (OperatorActionStatusEnum c: OperatorActionStatusEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -45,7 +45,7 @@ public class TrafficFlow
     protected PcuFlowValue pcuFlow;
     protected PercentageValue percentageLongVehicles;
     protected VehicleFlowValue vehicleFlow;
-    protected ExtensionType trafficFlowExtension;
+    protected _ExtensionType trafficFlowExtension;
 
     /**
      * Gets the value of the axleFlow property.
@@ -148,10 +148,10 @@ public class TrafficFlow
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficFlowExtension() {
+    public _ExtensionType getTrafficFlowExtension() {
         return trafficFlowExtension;
     }
 
@@ -160,10 +160,10 @@ public class TrafficFlow
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficFlowExtension(ExtensionType value) {
+    public void setTrafficFlowExtension(_ExtensionType value) {
         this.trafficFlowExtension = value;
     }
 

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DateTimeValue", propOrder = {
     "dateTime",
-    "dateTimeValueExtension"
+    "_DateTimeValueExtension"
 })
 public class DateTimeValue
     extends DataValue
@@ -44,7 +44,7 @@ public class DateTimeValue
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dateTime;
     @XmlElement(name = "_dateTimeValueExtension")
-    protected ExtensionType dateTimeValueExtension;
+    protected _ExtensionType _DateTimeValueExtension;
 
     /**
      * Gets the value of the dateTime property.
@@ -71,27 +71,27 @@ public class DateTimeValue
     }
 
     /**
-     * Gets the value of the dateTimeValueExtension property.
+     * Gets the value of the _DateTimeValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDateTimeValueExtension() {
-        return dateTimeValueExtension;
+    public _ExtensionType get_DateTimeValueExtension() {
+        return _DateTimeValueExtension;
     }
 
     /**
-     * Sets the value of the dateTimeValueExtension property.
+     * Sets the value of the _DateTimeValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDateTimeValueExtension(ExtensionType value) {
-        this.dateTimeValueExtension = value;
+    public void set_DateTimeValueExtension(_ExtensionType value) {
+        this._DateTimeValueExtension = value;
     }
 
 }

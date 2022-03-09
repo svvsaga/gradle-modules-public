@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AxleFlowValue", propOrder = {
     "axleFlowRate",
-    "axleFlowValueExtension"
+    "_AxleFlowValueExtension"
 })
 public class AxleFlowValue
     extends DataValue
@@ -44,7 +44,7 @@ public class AxleFlowValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleFlowRate;
     @XmlElement(name = "_axleFlowValueExtension")
-    protected ExtensionType axleFlowValueExtension;
+    protected _ExtensionType _AxleFlowValueExtension;
 
     /**
      * Gets the value of the axleFlowRate property.
@@ -71,27 +71,27 @@ public class AxleFlowValue
     }
 
     /**
-     * Gets the value of the axleFlowValueExtension property.
+     * Gets the value of the _AxleFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAxleFlowValueExtension() {
-        return axleFlowValueExtension;
+    public _ExtensionType get_AxleFlowValueExtension() {
+        return _AxleFlowValueExtension;
     }
 
     /**
-     * Sets the value of the axleFlowValueExtension property.
+     * Sets the value of the _AxleFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAxleFlowValueExtension(ExtensionType value) {
-        this.axleFlowValueExtension = value;
+    public void set_AxleFlowValueExtension(_ExtensionType value) {
+        this._AxleFlowValueExtension = value;
     }
 
 }

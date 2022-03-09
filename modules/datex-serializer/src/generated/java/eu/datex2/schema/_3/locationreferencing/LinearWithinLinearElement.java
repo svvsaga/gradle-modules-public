@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -44,14 +44,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "linearElement",
     "fromPoint",
     "toPoint",
-    "linearWithinLinearElementExtension"
+    "_LinearWithinLinearElementExtension"
 })
 public class LinearWithinLinearElement {
 
     protected MultilingualString administrativeAreaOfLinearSection;
-    protected DirectionEnum directionOnLinearSection;
-    protected LinearDirectionEnum directionRelativeOnLinearSection;
-    protected HeightGradeEnum heightGradeOfLinearSection;
+    protected _DirectionEnum directionOnLinearSection;
+    protected _LinearDirectionEnum directionRelativeOnLinearSection;
+    protected _HeightGradeEnum heightGradeOfLinearSection;
     @XmlElement(required = true)
     protected LinearElement linearElement;
     @XmlElement(required = true)
@@ -59,7 +59,7 @@ public class LinearWithinLinearElement {
     @XmlElement(required = true)
     protected DistanceAlongLinearElement toPoint;
     @XmlElement(name = "_linearWithinLinearElementExtension")
-    protected ExtensionType linearWithinLinearElementExtension;
+    protected _ExtensionType _LinearWithinLinearElementExtension;
 
     /**
      * Gets the value of the administrativeAreaOfLinearSection property.
@@ -90,10 +90,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public DirectionEnum getDirectionOnLinearSection() {
+    public _DirectionEnum getDirectionOnLinearSection() {
         return directionOnLinearSection;
     }
 
@@ -102,10 +102,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public void setDirectionOnLinearSection(DirectionEnum value) {
+    public void setDirectionOnLinearSection(_DirectionEnum value) {
         this.directionOnLinearSection = value;
     }
 
@@ -114,10 +114,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public LinearDirectionEnum getDirectionRelativeOnLinearSection() {
+    public _LinearDirectionEnum getDirectionRelativeOnLinearSection() {
         return directionRelativeOnLinearSection;
     }
 
@@ -126,10 +126,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinearDirectionEnum }
+     *     {@link _LinearDirectionEnum }
      *     
      */
-    public void setDirectionRelativeOnLinearSection(LinearDirectionEnum value) {
+    public void setDirectionRelativeOnLinearSection(_LinearDirectionEnum value) {
         this.directionRelativeOnLinearSection = value;
     }
 
@@ -138,10 +138,10 @@ public class LinearWithinLinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link HeightGradeEnum }
+     *     {@link _HeightGradeEnum }
      *     
      */
-    public HeightGradeEnum getHeightGradeOfLinearSection() {
+    public _HeightGradeEnum getHeightGradeOfLinearSection() {
         return heightGradeOfLinearSection;
     }
 
@@ -150,10 +150,10 @@ public class LinearWithinLinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link HeightGradeEnum }
+     *     {@link _HeightGradeEnum }
      *     
      */
-    public void setHeightGradeOfLinearSection(HeightGradeEnum value) {
+    public void setHeightGradeOfLinearSection(_HeightGradeEnum value) {
         this.heightGradeOfLinearSection = value;
     }
 
@@ -230,27 +230,27 @@ public class LinearWithinLinearElement {
     }
 
     /**
-     * Gets the value of the linearWithinLinearElementExtension property.
+     * Gets the value of the _LinearWithinLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLinearWithinLinearElementExtension() {
-        return linearWithinLinearElementExtension;
+    public _ExtensionType get_LinearWithinLinearElementExtension() {
+        return _LinearWithinLinearElementExtension;
     }
 
     /**
-     * Sets the value of the linearWithinLinearElementExtension property.
+     * Sets the value of the _LinearWithinLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLinearWithinLinearElementExtension(ExtensionType value) {
-        this.linearWithinLinearElementExtension = value;
+    public void set_LinearWithinLinearElementExtension(_ExtensionType value) {
+        this._LinearWithinLinearElementExtension = value;
     }
 
 }

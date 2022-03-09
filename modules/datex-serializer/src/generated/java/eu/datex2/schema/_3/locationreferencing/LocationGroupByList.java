@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LocationGroupByList", propOrder = {
     "locationContainedInGroup",
-    "locationGroupByListExtension"
+    "_LocationGroupByListExtension"
 })
 public class LocationGroupByList
     extends LocationGroup
@@ -42,7 +42,7 @@ public class LocationGroupByList
     @XmlElement(required = true)
     protected List<Location> locationContainedInGroup;
     @XmlElement(name = "_locationGroupByListExtension")
-    protected ExtensionType locationGroupByListExtension;
+    protected _ExtensionType _LocationGroupByListExtension;
 
     /**
      * Gets the value of the locationContainedInGroup property.
@@ -74,27 +74,27 @@ public class LocationGroupByList
     }
 
     /**
-     * Gets the value of the locationGroupByListExtension property.
+     * Gets the value of the _LocationGroupByListExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLocationGroupByListExtension() {
-        return locationGroupByListExtension;
+    public _ExtensionType get_LocationGroupByListExtension() {
+        return _LocationGroupByListExtension;
     }
 
     /**
-     * Sets the value of the locationGroupByListExtension property.
+     * Sets the value of the _LocationGroupByListExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLocationGroupByListExtension(ExtensionType value) {
-        this.locationGroupByListExtension = value;
+    public void set_LocationGroupByListExtension(_ExtensionType value) {
+        this._LocationGroupByListExtension = value;
     }
 
 }

@@ -1,87 +1,62 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _RelativeTrafficFlowEnum complex type.
+ * <p>Java class for RelativeTrafficFlowEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_RelativeTrafficFlowEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;RelativeTrafficFlowEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="RelativeTrafficFlowEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="trafficVeryMuchHeavierThanNormal"/&gt;
+ *     &lt;enumeration value="trafficHeavierThanNormal"/&gt;
+ *     &lt;enumeration value="trafficFlowNormal"/&gt;
+ *     &lt;enumeration value="trafficLighterThanNormal"/&gt;
+ *     &lt;enumeration value="trafficVeryMuchLighterThanNormal"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_RelativeTrafficFlowEnum", propOrder = {
-    "value"
-})
-public class RelativeTrafficFlowEnum {
+@XmlType(name = "RelativeTrafficFlowEnum")
+@XmlEnum
+public enum RelativeTrafficFlowEnum {
 
-    @XmlValue
-    protected RelativeTrafficFlowEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("trafficVeryMuchHeavierThanNormal")
+    TRAFFIC_VERY_MUCH_HEAVIER_THAN_NORMAL("trafficVeryMuchHeavierThanNormal"),
+    @XmlEnumValue("trafficHeavierThanNormal")
+    TRAFFIC_HEAVIER_THAN_NORMAL("trafficHeavierThanNormal"),
+    @XmlEnumValue("trafficFlowNormal")
+    TRAFFIC_FLOW_NORMAL("trafficFlowNormal"),
+    @XmlEnumValue("trafficLighterThanNormal")
+    TRAFFIC_LIGHTER_THAN_NORMAL("trafficLighterThanNormal"),
+    @XmlEnumValue("trafficVeryMuchLighterThanNormal")
+    TRAFFIC_VERY_MUCH_LIGHTER_THAN_NORMAL("trafficVeryMuchLighterThanNormal"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RelativeTrafficFlowEnum2 }
-     *     
-     */
-    public RelativeTrafficFlowEnum2 getValue() {
+    RelativeTrafficFlowEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RelativeTrafficFlowEnum2 }
-     *     
-     */
-    public void setValue(RelativeTrafficFlowEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static RelativeTrafficFlowEnum fromValue(String v) {
+        for (RelativeTrafficFlowEnum c: RelativeTrafficFlowEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

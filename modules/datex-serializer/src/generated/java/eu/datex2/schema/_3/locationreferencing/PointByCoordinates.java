@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PointByCoordinates", propOrder = {
     "bearing",
     "pointCoordinates",
-    "pointByCoordinatesExtension"
+    "_PointByCoordinatesExtension"
 })
 public class PointByCoordinates {
 
@@ -43,7 +43,7 @@ public class PointByCoordinates {
     @XmlElement(required = true)
     protected PointCoordinates pointCoordinates;
     @XmlElement(name = "_pointByCoordinatesExtension")
-    protected ExtensionType pointByCoordinatesExtension;
+    protected _ExtensionType _PointByCoordinatesExtension;
 
     /**
      * Gets the value of the bearing property.
@@ -94,27 +94,27 @@ public class PointByCoordinates {
     }
 
     /**
-     * Gets the value of the pointByCoordinatesExtension property.
+     * Gets the value of the _PointByCoordinatesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointByCoordinatesExtension() {
-        return pointByCoordinatesExtension;
+    public _ExtensionType get_PointByCoordinatesExtension() {
+        return _PointByCoordinatesExtension;
     }
 
     /**
-     * Sets the value of the pointByCoordinatesExtension property.
+     * Sets the value of the _PointByCoordinatesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointByCoordinatesExtension(ExtensionType value) {
-        this.pointByCoordinatesExtension = value;
+    public void set_PointByCoordinatesExtension(_ExtensionType value) {
+        this._PointByCoordinatesExtension = value;
     }
 
 }

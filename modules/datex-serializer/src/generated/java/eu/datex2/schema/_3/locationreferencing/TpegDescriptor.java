@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegDescriptor", propOrder = {
     "descriptor",
-    "tpegDescriptorExtension"
+    "_TpegDescriptorExtension"
 })
 @XmlSeeAlso({
     TpegAreaDescriptor.class,
@@ -44,7 +44,7 @@ public abstract class TpegDescriptor {
     @XmlElement(required = true)
     protected MultilingualString descriptor;
     @XmlElement(name = "_tpegDescriptorExtension")
-    protected ExtensionType tpegDescriptorExtension;
+    protected _ExtensionType _TpegDescriptorExtension;
 
     /**
      * Gets the value of the descriptor property.
@@ -71,27 +71,27 @@ public abstract class TpegDescriptor {
     }
 
     /**
-     * Gets the value of the tpegDescriptorExtension property.
+     * Gets the value of the _TpegDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegDescriptorExtension() {
-        return tpegDescriptorExtension;
+    public _ExtensionType get_TpegDescriptorExtension() {
+        return _TpegDescriptorExtension;
     }
 
     /**
-     * Sets the value of the tpegDescriptorExtension property.
+     * Sets the value of the _TpegDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegDescriptorExtension(ExtensionType value) {
-        this.tpegDescriptorExtension = value;
+    public void set_TpegDescriptorExtension(_ExtensionType value) {
+        this._TpegDescriptorExtension = value;
     }
 
 }

@@ -88,7 +88,7 @@ public class Exchange {
     protected Subscription subscription;
     protected List<FilterReference> filterReference;
     protected List<CatalogueReference> catalogueReference;
-    protected ExtensionType exchangeExtension;
+    protected _ExtensionType exchangeExtension;
 
     /**
      * Gets the value of the changedFlag property.
@@ -465,10 +465,10 @@ public class Exchange {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getExchangeExtension() {
+    public _ExtensionType getExchangeExtension() {
         return exchangeExtension;
     }
 
@@ -477,10 +477,10 @@ public class Exchange {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setExchangeExtension(ExtensionType value) {
+    public void setExchangeExtension(_ExtensionType value) {
         this.exchangeExtension = value;
     }
 

@@ -1,87 +1,74 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _GeneralNetworkManagementTypeEnum complex type.
+ * <p>Java class for GeneralNetworkManagementTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_GeneralNetworkManagementTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;GeneralNetworkManagementTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="GeneralNetworkManagementTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="bridgeSwingInOperation"/&gt;
+ *     &lt;enumeration value="convoyService"/&gt;
+ *     &lt;enumeration value="obstacleSignalling"/&gt;
+ *     &lt;enumeration value="rampMeteringInOperation"/&gt;
+ *     &lt;enumeration value="temporaryTrafficLights"/&gt;
+ *     &lt;enumeration value="tollGatesOpen"/&gt;
+ *     &lt;enumeration value="trafficBeingManuallyDirected"/&gt;
+ *     &lt;enumeration value="trafficHeld"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_GeneralNetworkManagementTypeEnum", propOrder = {
-    "value"
-})
-public class GeneralNetworkManagementTypeEnum {
+@XmlType(name = "GeneralNetworkManagementTypeEnum")
+@XmlEnum
+public enum GeneralNetworkManagementTypeEnum {
 
-    @XmlValue
-    protected GeneralNetworkManagementTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("bridgeSwingInOperation")
+    BRIDGE_SWING_IN_OPERATION("bridgeSwingInOperation"),
+    @XmlEnumValue("convoyService")
+    CONVOY_SERVICE("convoyService"),
+    @XmlEnumValue("obstacleSignalling")
+    OBSTACLE_SIGNALLING("obstacleSignalling"),
+    @XmlEnumValue("rampMeteringInOperation")
+    RAMP_METERING_IN_OPERATION("rampMeteringInOperation"),
+    @XmlEnumValue("temporaryTrafficLights")
+    TEMPORARY_TRAFFIC_LIGHTS("temporaryTrafficLights"),
+    @XmlEnumValue("tollGatesOpen")
+    TOLL_GATES_OPEN("tollGatesOpen"),
+    @XmlEnumValue("trafficBeingManuallyDirected")
+    TRAFFIC_BEING_MANUALLY_DIRECTED("trafficBeingManuallyDirected"),
+    @XmlEnumValue("trafficHeld")
+    TRAFFIC_HELD("trafficHeld"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeneralNetworkManagementTypeEnum2 }
-     *     
-     */
-    public GeneralNetworkManagementTypeEnum2 getValue() {
+    GeneralNetworkManagementTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeneralNetworkManagementTypeEnum2 }
-     *     
-     */
-    public void setValue(GeneralNetworkManagementTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static GeneralNetworkManagementTypeEnum fromValue(String v) {
+        for (GeneralNetworkManagementTypeEnum c: GeneralNetworkManagementTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

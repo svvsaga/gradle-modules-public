@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,25 +33,25 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "Mobility", propOrder = {
     "mobilityType",
     "speed",
-    "mobilityExtension"
+    "_MobilityExtension"
 })
 public class Mobility {
 
     @XmlElement(required = true)
-    protected MobilityTypeEnum mobilityType;
+    protected _MobilityTypeEnum mobilityType;
     protected Float speed;
     @XmlElement(name = "_mobilityExtension")
-    protected ExtensionType mobilityExtension;
+    protected _ExtensionType _MobilityExtension;
 
     /**
      * Gets the value of the mobilityType property.
      * 
      * @return
      *     possible object is
-     *     {@link MobilityTypeEnum }
+     *     {@link _MobilityTypeEnum }
      *     
      */
-    public MobilityTypeEnum getMobilityType() {
+    public _MobilityTypeEnum getMobilityType() {
         return mobilityType;
     }
 
@@ -60,10 +60,10 @@ public class Mobility {
      * 
      * @param value
      *     allowed object is
-     *     {@link MobilityTypeEnum }
+     *     {@link _MobilityTypeEnum }
      *     
      */
-    public void setMobilityType(MobilityTypeEnum value) {
+    public void setMobilityType(_MobilityTypeEnum value) {
         this.mobilityType = value;
     }
 
@@ -92,27 +92,27 @@ public class Mobility {
     }
 
     /**
-     * Gets the value of the mobilityExtension property.
+     * Gets the value of the _MobilityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMobilityExtension() {
-        return mobilityExtension;
+    public _ExtensionType get_MobilityExtension() {
+        return _MobilityExtension;
     }
 
     /**
-     * Sets the value of the mobilityExtension property.
+     * Sets the value of the _MobilityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMobilityExtension(ExtensionType value) {
-        this.mobilityExtension = value;
+    public void set_MobilityExtension(_ExtensionType value) {
+        this._MobilityExtension = value;
     }
 
 }

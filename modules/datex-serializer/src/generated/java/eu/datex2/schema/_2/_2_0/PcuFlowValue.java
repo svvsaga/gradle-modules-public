@@ -41,7 +41,7 @@ public class PcuFlowValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pcuFlowRate;
-    protected ExtensionType pcuFlowValueExtension;
+    protected _ExtensionType pcuFlowValueExtension;
 
     /**
      * Gets the value of the pcuFlowRate property.
@@ -72,10 +72,10 @@ public class PcuFlowValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPcuFlowValueExtension() {
+    public _ExtensionType getPcuFlowValueExtension() {
         return pcuFlowValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class PcuFlowValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPcuFlowValueExtension(ExtensionType value) {
+    public void setPcuFlowValueExtension(_ExtensionType value) {
         this.pcuFlowValueExtension = value;
     }
 

@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "measurementSiteTableIdentification",
     "measurementSite",
     "informationManager",
-    "measurementSiteTableExtension"
+    "_MeasurementSiteTableExtension"
 })
 public class MeasurementSiteTable {
 
@@ -50,7 +50,7 @@ public class MeasurementSiteTable {
     protected List<MeasurementSite> measurementSite;
     protected InternationalIdentifier informationManager;
     @XmlElement(name = "_measurementSiteTableExtension")
-    protected ExtensionType measurementSiteTableExtension;
+    protected _ExtensionType _MeasurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -134,27 +134,27 @@ public class MeasurementSiteTable {
     }
 
     /**
-     * Gets the value of the measurementSiteTableExtension property.
+     * Gets the value of the _MeasurementSiteTableExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteTableExtension() {
-        return measurementSiteTableExtension;
+    public _ExtensionType get_MeasurementSiteTableExtension() {
+        return _MeasurementSiteTableExtension;
     }
 
     /**
-     * Sets the value of the measurementSiteTableExtension property.
+     * Sets the value of the _MeasurementSiteTableExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSiteTableExtension(ExtensionType value) {
-        this.measurementSiteTableExtension = value;
+    public void set_MeasurementSiteTableExtension(_ExtensionType value) {
+        this._MeasurementSiteTableExtension = value;
     }
 
     /**

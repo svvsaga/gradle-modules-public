@@ -50,7 +50,7 @@ public class AffectedCarriagewayAndLanes {
     protected List<LaneEnum> lane;
     protected Boolean footpath;
     protected Float lengthAffected;
-    protected ExtensionType affectedCarriagewayAndLanesExtension;
+    protected _ExtensionType affectedCarriagewayAndLanesExtension;
 
     /**
      * Gets the value of the carriageway property.
@@ -158,10 +158,10 @@ public class AffectedCarriagewayAndLanes {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAffectedCarriagewayAndLanesExtension() {
+    public _ExtensionType getAffectedCarriagewayAndLanesExtension() {
         return affectedCarriagewayAndLanesExtension;
     }
 
@@ -170,10 +170,10 @@ public class AffectedCarriagewayAndLanes {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAffectedCarriagewayAndLanesExtension(ExtensionType value) {
+    public void setAffectedCarriagewayAndLanesExtension(_ExtensionType value) {
         this.affectedCarriagewayAndLanesExtension = value;
     }
 

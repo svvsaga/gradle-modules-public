@@ -36,26 +36,26 @@ import jakarta.xml.bind.annotation.XmlType;
     "confidentiality",
     "allowedDeliveryChannel",
     "informationStatus",
-    "headerInformationExtension"
+    "_HeaderInformationExtension"
 })
 public class HeaderInformation {
 
-    protected ConfidentialityValueEnum confidentiality;
-    protected List<InformationDeliveryServicesEnum> allowedDeliveryChannel;
+    protected _ConfidentialityValueEnum confidentiality;
+    protected List<_InformationDeliveryServicesEnum> allowedDeliveryChannel;
     @XmlElement(required = true)
-    protected InformationStatusEnum informationStatus;
+    protected _InformationStatusEnum informationStatus;
     @XmlElement(name = "_headerInformationExtension")
-    protected ExtensionType headerInformationExtension;
+    protected _ExtensionType _HeaderInformationExtension;
 
     /**
      * Gets the value of the confidentiality property.
      * 
      * @return
      *     possible object is
-     *     {@link ConfidentialityValueEnum }
+     *     {@link _ConfidentialityValueEnum }
      *     
      */
-    public ConfidentialityValueEnum getConfidentiality() {
+    public _ConfidentialityValueEnum getConfidentiality() {
         return confidentiality;
     }
 
@@ -64,10 +64,10 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ConfidentialityValueEnum }
+     *     {@link _ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentiality(ConfidentialityValueEnum value) {
+    public void setConfidentiality(_ConfidentialityValueEnum value) {
         this.confidentiality = value;
     }
 
@@ -89,13 +89,13 @@ public class HeaderInformation {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link InformationDeliveryServicesEnum }
+     * {@link _InformationDeliveryServicesEnum }
      * 
      * 
      */
-    public List<InformationDeliveryServicesEnum> getAllowedDeliveryChannel() {
+    public List<_InformationDeliveryServicesEnum> getAllowedDeliveryChannel() {
         if (allowedDeliveryChannel == null) {
-            allowedDeliveryChannel = new ArrayList<InformationDeliveryServicesEnum>();
+            allowedDeliveryChannel = new ArrayList<_InformationDeliveryServicesEnum>();
         }
         return this.allowedDeliveryChannel;
     }
@@ -105,10 +105,10 @@ public class HeaderInformation {
      * 
      * @return
      *     possible object is
-     *     {@link InformationStatusEnum }
+     *     {@link _InformationStatusEnum }
      *     
      */
-    public InformationStatusEnum getInformationStatus() {
+    public _InformationStatusEnum getInformationStatus() {
         return informationStatus;
     }
 
@@ -117,35 +117,35 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link InformationStatusEnum }
+     *     {@link _InformationStatusEnum }
      *     
      */
-    public void setInformationStatus(InformationStatusEnum value) {
+    public void setInformationStatus(_InformationStatusEnum value) {
         this.informationStatus = value;
     }
 
     /**
-     * Gets the value of the headerInformationExtension property.
+     * Gets the value of the _HeaderInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHeaderInformationExtension() {
-        return headerInformationExtension;
+    public _ExtensionType get_HeaderInformationExtension() {
+        return _HeaderInformationExtension;
     }
 
     /**
-     * Sets the value of the headerInformationExtension property.
+     * Sets the value of the _HeaderInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHeaderInformationExtension(ExtensionType value) {
-        this.headerInformationExtension = value;
+    public void set_HeaderInformationExtension(_ExtensionType value) {
+        this._HeaderInformationExtension = value;
     }
 
 }

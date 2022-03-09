@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class CctvStatusPublication {
 
     @XmlElement(required = true)
-    protected CctvCameraListVersionedReference cctvCameraListReference;
+    protected _CctvCameraListVersionedReference cctvCameraListReference;
     @XmlElement(required = true)
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
@@ -50,10 +50,10 @@ public class CctvStatusPublication {
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraListVersionedReference }
+     *     {@link _CctvCameraListVersionedReference }
      *     
      */
-    public CctvCameraListVersionedReference getCctvCameraListReference() {
+    public _CctvCameraListVersionedReference getCctvCameraListReference() {
         return cctvCameraListReference;
     }
 
@@ -62,10 +62,10 @@ public class CctvStatusPublication {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraListVersionedReference }
+     *     {@link _CctvCameraListVersionedReference }
      *     
      */
-    public void setCctvCameraListReference(CctvCameraListVersionedReference value) {
+    public void setCctvCameraListReference(_CctvCameraListVersionedReference value) {
         this.cctvCameraListReference = value;
     }
 

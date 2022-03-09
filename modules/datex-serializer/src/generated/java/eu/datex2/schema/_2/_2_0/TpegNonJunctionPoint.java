@@ -44,7 +44,7 @@ public class TpegNonJunctionPoint
     protected PointCoordinates pointCoordinates;
     @XmlElement(required = true)
     protected List<TpegOtherPointDescriptor> name;
-    protected ExtensionType tpegNonJunctionPointExtension;
+    protected _ExtensionType tpegNonJunctionPointExtension;
 
     /**
      * Gets the value of the pointCoordinates property.
@@ -104,10 +104,10 @@ public class TpegNonJunctionPoint
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegNonJunctionPointExtension() {
+    public _ExtensionType getTpegNonJunctionPointExtension() {
         return tpegNonJunctionPointExtension;
     }
 
@@ -116,10 +116,10 @@ public class TpegNonJunctionPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegNonJunctionPointExtension(ExtensionType value) {
+    public void setTpegNonJunctionPointExtension(_ExtensionType value) {
         this.tpegNonJunctionPointExtension = value;
     }
 

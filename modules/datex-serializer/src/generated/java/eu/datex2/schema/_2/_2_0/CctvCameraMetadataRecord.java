@@ -102,7 +102,7 @@ public class CctvCameraMetadataRecord {
     protected List<CctvStillImageService> cctvStillImageService;
     protected List<CctvVideoService> cctvVideoService;
     protected CctvCameraControlData cctvCameraControlData;
-    protected ExtensionType cctvCameraMetadataRecordExtension;
+    protected _ExtensionType cctvCameraMetadataRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -599,10 +599,10 @@ public class CctvCameraMetadataRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraMetadataRecordExtension() {
+    public _ExtensionType getCctvCameraMetadataRecordExtension() {
         return cctvCameraMetadataRecordExtension;
     }
 
@@ -611,10 +611,10 @@ public class CctvCameraMetadataRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraMetadataRecordExtension(ExtensionType value) {
+    public void setCctvCameraMetadataRecordExtension(_ExtensionType value) {
         this.cctvCameraMetadataRecordExtension = value;
     }
 

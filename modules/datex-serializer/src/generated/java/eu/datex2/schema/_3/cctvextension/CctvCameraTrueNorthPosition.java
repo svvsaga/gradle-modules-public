@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvNorthPanValue",
     "cctvNorthTiltValue",
     "cctvNorthZoomValue",
-    "cctvCameraTrueNorthPositionExtension"
+    "_CctvCameraTrueNorthPositionExtension"
 })
 public class CctvCameraTrueNorthPosition {
 
@@ -51,7 +51,7 @@ public class CctvCameraTrueNorthPosition {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvNorthZoomValue;
     @XmlElement(name = "_cctvCameraTrueNorthPositionExtension")
-    protected ExtensionType cctvCameraTrueNorthPositionExtension;
+    protected _ExtensionType _CctvCameraTrueNorthPositionExtension;
 
     /**
      * Gets the value of the cctvNorthPanValue property.
@@ -126,27 +126,27 @@ public class CctvCameraTrueNorthPosition {
     }
 
     /**
-     * Gets the value of the cctvCameraTrueNorthPositionExtension property.
+     * Gets the value of the _CctvCameraTrueNorthPositionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraTrueNorthPositionExtension() {
-        return cctvCameraTrueNorthPositionExtension;
+    public _ExtensionType get_CctvCameraTrueNorthPositionExtension() {
+        return _CctvCameraTrueNorthPositionExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraTrueNorthPositionExtension property.
+     * Sets the value of the _CctvCameraTrueNorthPositionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraTrueNorthPositionExtension(ExtensionType value) {
-        this.cctvCameraTrueNorthPositionExtension = value;
+    public void set_CctvCameraTrueNorthPositionExtension(_ExtensionType value) {
+        this._CctvCameraTrueNorthPositionExtension = value;
     }
 
 }

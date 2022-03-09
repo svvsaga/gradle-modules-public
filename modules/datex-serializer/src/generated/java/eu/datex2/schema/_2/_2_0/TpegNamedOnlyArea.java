@@ -40,7 +40,7 @@ public class TpegNamedOnlyArea
 
     @XmlElement(required = true)
     protected List<TpegAreaDescriptor> name;
-    protected ExtensionType tpegNamedOnlyAreaExtension;
+    protected _ExtensionType tpegNamedOnlyAreaExtension;
 
     /**
      * Gets the value of the name property.
@@ -76,10 +76,10 @@ public class TpegNamedOnlyArea
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegNamedOnlyAreaExtension() {
+    public _ExtensionType getTpegNamedOnlyAreaExtension() {
         return tpegNamedOnlyAreaExtension;
     }
 
@@ -88,10 +88,10 @@ public class TpegNamedOnlyArea
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegNamedOnlyAreaExtension(ExtensionType value) {
+    public void setTpegNamedOnlyAreaExtension(_ExtensionType value) {
         this.tpegNamedOnlyAreaExtension = value;
     }
 

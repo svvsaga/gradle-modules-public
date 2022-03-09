@@ -41,7 +41,7 @@ public class SpeedManagement
     @XmlSchemaType(name = "string")
     protected SpeedManagementTypeEnum speedManagementType;
     protected Float temporarySpeedLimit;
-    protected ExtensionType speedManagementExtension;
+    protected _ExtensionType speedManagementExtension;
 
     /**
      * Gets the value of the speedManagementType property.
@@ -96,10 +96,10 @@ public class SpeedManagement
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedManagementExtension() {
+    public _ExtensionType getSpeedManagementExtension() {
         return speedManagementExtension;
     }
 
@@ -108,10 +108,10 @@ public class SpeedManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedManagementExtension(ExtensionType value) {
+    public void setSpeedManagementExtension(_ExtensionType value) {
         this.speedManagementExtension = value;
     }
 

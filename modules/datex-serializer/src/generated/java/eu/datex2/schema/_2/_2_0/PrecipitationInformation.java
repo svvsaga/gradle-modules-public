@@ -39,7 +39,7 @@ public class PrecipitationInformation
 
     protected Boolean noPrecipitation;
     protected PrecipitationDetail precipitationDetail;
-    protected ExtensionType precipitationInformationExtension;
+    protected _ExtensionType precipitationInformationExtension;
 
     /**
      * Gets the value of the noPrecipitation property.
@@ -94,10 +94,10 @@ public class PrecipitationInformation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrecipitationInformationExtension() {
+    public _ExtensionType getPrecipitationInformationExtension() {
         return precipitationInformationExtension;
     }
 
@@ -106,10 +106,10 @@ public class PrecipitationInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrecipitationInformationExtension(ExtensionType value) {
+    public void setPrecipitationInformationExtension(_ExtensionType value) {
         this.precipitationInformationExtension = value;
     }
 

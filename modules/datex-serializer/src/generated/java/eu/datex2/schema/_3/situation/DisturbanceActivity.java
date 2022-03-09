@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DisturbanceActivity", propOrder = {
     "disturbanceActivityType",
-    "disturbanceActivityExtension"
+    "_DisturbanceActivityExtension"
 })
 public class DisturbanceActivity
     extends Activity
 {
 
     @XmlElement(required = true)
-    protected DisturbanceActivityTypeEnum disturbanceActivityType;
+    protected _DisturbanceActivityTypeEnum disturbanceActivityType;
     @XmlElement(name = "_disturbanceActivityExtension")
-    protected ExtensionType disturbanceActivityExtension;
+    protected _ExtensionType _DisturbanceActivityExtension;
 
     /**
      * Gets the value of the disturbanceActivityType property.
      * 
      * @return
      *     possible object is
-     *     {@link DisturbanceActivityTypeEnum }
+     *     {@link _DisturbanceActivityTypeEnum }
      *     
      */
-    public DisturbanceActivityTypeEnum getDisturbanceActivityType() {
+    public _DisturbanceActivityTypeEnum getDisturbanceActivityType() {
         return disturbanceActivityType;
     }
 
@@ -59,35 +59,35 @@ public class DisturbanceActivity
      * 
      * @param value
      *     allowed object is
-     *     {@link DisturbanceActivityTypeEnum }
+     *     {@link _DisturbanceActivityTypeEnum }
      *     
      */
-    public void setDisturbanceActivityType(DisturbanceActivityTypeEnum value) {
+    public void setDisturbanceActivityType(_DisturbanceActivityTypeEnum value) {
         this.disturbanceActivityType = value;
     }
 
     /**
-     * Gets the value of the disturbanceActivityExtension property.
+     * Gets the value of the _DisturbanceActivityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDisturbanceActivityExtension() {
-        return disturbanceActivityExtension;
+    public _ExtensionType get_DisturbanceActivityExtension() {
+        return _DisturbanceActivityExtension;
     }
 
     /**
-     * Sets the value of the disturbanceActivityExtension property.
+     * Sets the value of the _DisturbanceActivityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDisturbanceActivityExtension(ExtensionType value) {
-        this.disturbanceActivityExtension = value;
+    public void set_DisturbanceActivityExtension(_ExtensionType value) {
+        this._DisturbanceActivityExtension = value;
     }
 
 }

@@ -29,17 +29,17 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VersionedReference")
 @XmlSeeAlso({
-    CctvCameraListVersionedReference.class,
-    CctvCameraMetadataRecordVersionedReference.class,
-    MeasurementSiteRecordVersionedReference.class,
-    MeasurementSiteTableVersionedReference.class,
-    PredefinedItineraryVersionedReference.class,
-    PredefinedLocationVersionedReference.class,
-    PredefinedNonOrderedLocationGroupVersionedReference.class,
-    SituationRecordVersionedReference.class,
-    SituationVersionedReference.class,
-    VmsUnitRecordVersionedReference.class,
-    VmsUnitTableVersionedReference.class
+    _CctvCameraListVersionedReference.class,
+    _CctvCameraMetadataRecordVersionedReference.class,
+    _MeasurementSiteRecordVersionedReference.class,
+    _MeasurementSiteTableVersionedReference.class,
+    _PredefinedItineraryVersionedReference.class,
+    _PredefinedLocationVersionedReference.class,
+    _PredefinedNonOrderedLocationGroupVersionedReference.class,
+    _SituationRecordVersionedReference.class,
+    _SituationVersionedReference.class,
+    _VmsUnitRecordVersionedReference.class,
+    _VmsUnitTableVersionedReference.class
 })
 public class VersionedReference {
 

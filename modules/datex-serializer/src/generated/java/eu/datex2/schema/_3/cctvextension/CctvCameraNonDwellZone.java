@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvNonDwellTopLeftTiltValue",
     "cctvNonDwellBottomRightPanValue",
     "cctvNonDwellBottomRightTiltValue",
-    "cctvCameraNonDwellZoneExtension"
+    "_CctvCameraNonDwellZoneExtension"
 })
 public class CctvCameraNonDwellZone {
 
@@ -56,7 +56,7 @@ public class CctvCameraNonDwellZone {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvNonDwellBottomRightTiltValue;
     @XmlElement(name = "_cctvCameraNonDwellZoneExtension")
-    protected ExtensionType cctvCameraNonDwellZoneExtension;
+    protected _ExtensionType _CctvCameraNonDwellZoneExtension;
 
     /**
      * Gets the value of the cctvNonDwellTopLeftPanValue property.
@@ -155,27 +155,27 @@ public class CctvCameraNonDwellZone {
     }
 
     /**
-     * Gets the value of the cctvCameraNonDwellZoneExtension property.
+     * Gets the value of the _CctvCameraNonDwellZoneExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraNonDwellZoneExtension() {
-        return cctvCameraNonDwellZoneExtension;
+    public _ExtensionType get_CctvCameraNonDwellZoneExtension() {
+        return _CctvCameraNonDwellZoneExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraNonDwellZoneExtension property.
+     * Sets the value of the _CctvCameraNonDwellZoneExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraNonDwellZoneExtension(ExtensionType value) {
-        this.cctvCameraNonDwellZoneExtension = value;
+    public void set_CctvCameraNonDwellZoneExtension(_ExtensionType value) {
+        this._CctvCameraNonDwellZoneExtension = value;
     }
 
 }

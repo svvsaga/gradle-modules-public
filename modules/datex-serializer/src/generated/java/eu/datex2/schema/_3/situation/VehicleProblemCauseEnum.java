@@ -1,87 +1,98 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _VehicleProblemCauseEnum complex type.
+ * <p>Java class for VehicleProblemCauseEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_VehicleProblemCauseEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;VehicleProblemCauseEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="VehicleProblemCauseEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="airSystem"/&gt;
+ *     &lt;enumeration value="battery"/&gt;
+ *     &lt;enumeration value="brakingSystem"/&gt;
+ *     &lt;enumeration value="coolingSystem"/&gt;
+ *     &lt;enumeration value="decoupledTrailer"/&gt;
+ *     &lt;enumeration value="diverProblem"/&gt;
+ *     &lt;enumeration value="electricalSystem"/&gt;
+ *     &lt;enumeration value="flatTyre"/&gt;
+ *     &lt;enumeration value="fuelSystem"/&gt;
+ *     &lt;enumeration value="gear"/&gt;
+ *     &lt;enumeration value="loadProblem"/&gt;
+ *     &lt;enumeration value="lostWheel"/&gt;
+ *     &lt;enumeration value="motorMechanics"/&gt;
+ *     &lt;enumeration value="oilLeakage"/&gt;
+ *     &lt;enumeration value="suspension"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VehicleProblemCauseEnum", propOrder = {
-    "value"
-})
-public class VehicleProblemCauseEnum {
+@XmlType(name = "VehicleProblemCauseEnum")
+@XmlEnum
+public enum VehicleProblemCauseEnum {
 
-    @XmlValue
-    protected VehicleProblemCauseEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("airSystem")
+    AIR_SYSTEM("airSystem"),
+    @XmlEnumValue("battery")
+    BATTERY("battery"),
+    @XmlEnumValue("brakingSystem")
+    BRAKING_SYSTEM("brakingSystem"),
+    @XmlEnumValue("coolingSystem")
+    COOLING_SYSTEM("coolingSystem"),
+    @XmlEnumValue("decoupledTrailer")
+    DECOUPLED_TRAILER("decoupledTrailer"),
+    @XmlEnumValue("diverProblem")
+    DIVER_PROBLEM("diverProblem"),
+    @XmlEnumValue("electricalSystem")
+    ELECTRICAL_SYSTEM("electricalSystem"),
+    @XmlEnumValue("flatTyre")
+    FLAT_TYRE("flatTyre"),
+    @XmlEnumValue("fuelSystem")
+    FUEL_SYSTEM("fuelSystem"),
+    @XmlEnumValue("gear")
+    GEAR("gear"),
+    @XmlEnumValue("loadProblem")
+    LOAD_PROBLEM("loadProblem"),
+    @XmlEnumValue("lostWheel")
+    LOST_WHEEL("lostWheel"),
+    @XmlEnumValue("motorMechanics")
+    MOTOR_MECHANICS("motorMechanics"),
+    @XmlEnumValue("oilLeakage")
+    OIL_LEAKAGE("oilLeakage"),
+    @XmlEnumValue("suspension")
+    SUSPENSION("suspension"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link VehicleProblemCauseEnum2 }
-     *     
-     */
-    public VehicleProblemCauseEnum2 getValue() {
+    VehicleProblemCauseEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link VehicleProblemCauseEnum2 }
-     *     
-     */
-    public void setValue(VehicleProblemCauseEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static VehicleProblemCauseEnum fromValue(String v) {
+        for (VehicleProblemCauseEnum c: VehicleProblemCauseEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

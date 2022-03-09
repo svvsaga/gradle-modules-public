@@ -44,7 +44,7 @@ public class TrafficViewPublication
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<TrafficView> trafficView;
-    protected ExtensionType trafficViewPublicationExtension;
+    protected _ExtensionType trafficViewPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +104,10 @@ public class TrafficViewPublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficViewPublicationExtension() {
+    public _ExtensionType getTrafficViewPublicationExtension() {
         return trafficViewPublicationExtension;
     }
 
@@ -116,10 +116,10 @@ public class TrafficViewPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficViewPublicationExtension(ExtensionType value) {
+    public void setTrafficViewPublicationExtension(_ExtensionType value) {
         this.trafficViewPublicationExtension = value;
     }
 

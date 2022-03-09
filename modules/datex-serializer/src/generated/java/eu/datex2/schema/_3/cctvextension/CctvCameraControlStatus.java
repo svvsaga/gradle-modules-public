@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,28 +41,28 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvPrivilegeOfCurrentControllingClient",
     "cctvUserGroupOfCurrentControllingClient",
     "cctvCurrentlySelectedPreset",
-    "cctvCameraControlStatusExtension"
+    "_CctvCameraControlStatusExtension"
 })
 public class CctvCameraControlStatus {
 
-    protected CctvCameraControlAvailabilityEnum cctvCameraControlAvailability;
+    protected _CctvCameraControlAvailabilityEnum cctvCameraControlAvailability;
     protected String cctvIdentityOfCurrentControllingClient;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvPrivilegeOfCurrentControllingClient;
     protected String cctvUserGroupOfCurrentControllingClient;
     protected String cctvCurrentlySelectedPreset;
     @XmlElement(name = "_cctvCameraControlStatusExtension")
-    protected ExtensionType cctvCameraControlStatusExtension;
+    protected _ExtensionType _CctvCameraControlStatusExtension;
 
     /**
      * Gets the value of the cctvCameraControlAvailability property.
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraControlAvailabilityEnum }
+     *     {@link _CctvCameraControlAvailabilityEnum }
      *     
      */
-    public CctvCameraControlAvailabilityEnum getCctvCameraControlAvailability() {
+    public _CctvCameraControlAvailabilityEnum getCctvCameraControlAvailability() {
         return cctvCameraControlAvailability;
     }
 
@@ -71,10 +71,10 @@ public class CctvCameraControlStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraControlAvailabilityEnum }
+     *     {@link _CctvCameraControlAvailabilityEnum }
      *     
      */
-    public void setCctvCameraControlAvailability(CctvCameraControlAvailabilityEnum value) {
+    public void setCctvCameraControlAvailability(_CctvCameraControlAvailabilityEnum value) {
         this.cctvCameraControlAvailability = value;
     }
 
@@ -175,27 +175,27 @@ public class CctvCameraControlStatus {
     }
 
     /**
-     * Gets the value of the cctvCameraControlStatusExtension property.
+     * Gets the value of the _CctvCameraControlStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraControlStatusExtension() {
-        return cctvCameraControlStatusExtension;
+    public _ExtensionType get_CctvCameraControlStatusExtension() {
+        return _CctvCameraControlStatusExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraControlStatusExtension property.
+     * Sets the value of the _CctvCameraControlStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraControlStatusExtension(ExtensionType value) {
-        this.cctvCameraControlStatusExtension = value;
+    public void set_CctvCameraControlStatusExtension(_ExtensionType value) {
+        this._CctvCameraControlStatusExtension = value;
     }
 
 }

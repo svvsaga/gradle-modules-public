@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GmlPolygon", propOrder = {
     "exterior",
     "interior",
-    "gmlPolygonExtension"
+    "_GmlPolygonExtension"
 })
 public class GmlPolygon {
 
@@ -43,7 +43,7 @@ public class GmlPolygon {
     protected GmlLinearRing exterior;
     protected List<GmlLinearRing> interior;
     @XmlElement(name = "_gmlPolygonExtension")
-    protected ExtensionType gmlPolygonExtension;
+    protected _ExtensionType _GmlPolygonExtension;
 
     /**
      * Gets the value of the exterior property.
@@ -99,27 +99,27 @@ public class GmlPolygon {
     }
 
     /**
-     * Gets the value of the gmlPolygonExtension property.
+     * Gets the value of the _GmlPolygonExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGmlPolygonExtension() {
-        return gmlPolygonExtension;
+    public _ExtensionType get_GmlPolygonExtension() {
+        return _GmlPolygonExtension;
     }
 
     /**
-     * Sets the value of the gmlPolygonExtension property.
+     * Sets the value of the _GmlPolygonExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGmlPolygonExtension(ExtensionType value) {
-        this.gmlPolygonExtension = value;
+    public void set_GmlPolygonExtension(_ExtensionType value) {
+        this._GmlPolygonExtension = value;
     }
 
 }

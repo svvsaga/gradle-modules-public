@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InfrastructureDamageObstruction", propOrder = {
     "infrastructureDamageType",
-    "infrastructureDamageObstructionExtension"
+    "_InfrastructureDamageObstructionExtension"
 })
 public class InfrastructureDamageObstruction
     extends Obstruction
 {
 
     @XmlElement(required = true)
-    protected InfrastructureDamageTypeEnum infrastructureDamageType;
+    protected _InfrastructureDamageTypeEnum infrastructureDamageType;
     @XmlElement(name = "_infrastructureDamageObstructionExtension")
-    protected ExtensionType infrastructureDamageObstructionExtension;
+    protected _ExtensionType _InfrastructureDamageObstructionExtension;
 
     /**
      * Gets the value of the infrastructureDamageType property.
      * 
      * @return
      *     possible object is
-     *     {@link InfrastructureDamageTypeEnum }
+     *     {@link _InfrastructureDamageTypeEnum }
      *     
      */
-    public InfrastructureDamageTypeEnum getInfrastructureDamageType() {
+    public _InfrastructureDamageTypeEnum getInfrastructureDamageType() {
         return infrastructureDamageType;
     }
 
@@ -59,35 +59,35 @@ public class InfrastructureDamageObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link InfrastructureDamageTypeEnum }
+     *     {@link _InfrastructureDamageTypeEnum }
      *     
      */
-    public void setInfrastructureDamageType(InfrastructureDamageTypeEnum value) {
+    public void setInfrastructureDamageType(_InfrastructureDamageTypeEnum value) {
         this.infrastructureDamageType = value;
     }
 
     /**
-     * Gets the value of the infrastructureDamageObstructionExtension property.
+     * Gets the value of the _InfrastructureDamageObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getInfrastructureDamageObstructionExtension() {
-        return infrastructureDamageObstructionExtension;
+    public _ExtensionType get_InfrastructureDamageObstructionExtension() {
+        return _InfrastructureDamageObstructionExtension;
     }
 
     /**
-     * Sets the value of the infrastructureDamageObstructionExtension property.
+     * Sets the value of the _InfrastructureDamageObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setInfrastructureDamageObstructionExtension(ExtensionType value) {
-        this.infrastructureDamageObstructionExtension = value;
+    public void set_InfrastructureDamageObstructionExtension(_ExtensionType value) {
+        this._InfrastructureDamageObstructionExtension = value;
     }
 
 }

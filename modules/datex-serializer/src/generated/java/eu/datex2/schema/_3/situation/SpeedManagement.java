@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,26 +33,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "SpeedManagement", propOrder = {
     "speedManagementType",
     "temporarySpeedLimit",
-    "speedManagementExtension"
+    "_SpeedManagementExtension"
 })
 public class SpeedManagement
     extends NetworkManagement
 {
 
-    protected SpeedManagementTypeEnum speedManagementType;
+    protected _SpeedManagementTypeEnum speedManagementType;
     protected Float temporarySpeedLimit;
     @XmlElement(name = "_speedManagementExtension")
-    protected ExtensionType speedManagementExtension;
+    protected _ExtensionType _SpeedManagementExtension;
 
     /**
      * Gets the value of the speedManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link SpeedManagementTypeEnum }
+     *     {@link _SpeedManagementTypeEnum }
      *     
      */
-    public SpeedManagementTypeEnum getSpeedManagementType() {
+    public _SpeedManagementTypeEnum getSpeedManagementType() {
         return speedManagementType;
     }
 
@@ -61,10 +61,10 @@ public class SpeedManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link SpeedManagementTypeEnum }
+     *     {@link _SpeedManagementTypeEnum }
      *     
      */
-    public void setSpeedManagementType(SpeedManagementTypeEnum value) {
+    public void setSpeedManagementType(_SpeedManagementTypeEnum value) {
         this.speedManagementType = value;
     }
 
@@ -93,27 +93,27 @@ public class SpeedManagement
     }
 
     /**
-     * Gets the value of the speedManagementExtension property.
+     * Gets the value of the _SpeedManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedManagementExtension() {
-        return speedManagementExtension;
+    public _ExtensionType get_SpeedManagementExtension() {
+        return _SpeedManagementExtension;
     }
 
     /**
-     * Sets the value of the speedManagementExtension property.
+     * Sets the value of the _SpeedManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedManagementExtension(ExtensionType value) {
-        this.speedManagementExtension = value;
+    public void set_SpeedManagementExtension(_ExtensionType value) {
+        this._SpeedManagementExtension = value;
     }
 
 }

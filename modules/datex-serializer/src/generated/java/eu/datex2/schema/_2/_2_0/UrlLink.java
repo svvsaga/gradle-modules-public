@@ -45,7 +45,7 @@ public class UrlLink {
     protected MultilingualString urlLinkDescription;
     @XmlSchemaType(name = "string")
     protected UrlLinkTypeEnum urlLinkType;
-    protected ExtensionType urlLinkExtension;
+    protected _ExtensionType urlLinkExtension;
 
     /**
      * Gets the value of the urlLinkAddress property.
@@ -124,10 +124,10 @@ public class UrlLink {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getUrlLinkExtension() {
+    public _ExtensionType getUrlLinkExtension() {
         return urlLinkExtension;
     }
 
@@ -136,10 +136,10 @@ public class UrlLink {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setUrlLinkExtension(ExtensionType value) {
+    public void setUrlLinkExtension(_ExtensionType value) {
         this.urlLinkExtension = value;
     }
 

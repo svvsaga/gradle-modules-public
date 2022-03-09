@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,16 +38,16 @@ import jakarta.xml.bind.annotation.XmlType;
     "causeType",
     "detailedCauseType",
     "managedCause",
-    "causeExtension"
+    "_CauseExtension"
 })
 public class Cause {
 
     protected MultilingualString causeDescription;
-    protected CauseTypeEnum causeType;
+    protected _CauseTypeEnum causeType;
     protected DetailedCauseType detailedCauseType;
     protected SituationRecordReference managedCause;
     @XmlElement(name = "_causeExtension")
-    protected ExtensionType causeExtension;
+    protected _ExtensionType _CauseExtension;
 
     /**
      * Gets the value of the causeDescription property.
@@ -78,10 +78,10 @@ public class Cause {
      * 
      * @return
      *     possible object is
-     *     {@link CauseTypeEnum }
+     *     {@link _CauseTypeEnum }
      *     
      */
-    public CauseTypeEnum getCauseType() {
+    public _CauseTypeEnum getCauseType() {
         return causeType;
     }
 
@@ -90,10 +90,10 @@ public class Cause {
      * 
      * @param value
      *     allowed object is
-     *     {@link CauseTypeEnum }
+     *     {@link _CauseTypeEnum }
      *     
      */
-    public void setCauseType(CauseTypeEnum value) {
+    public void setCauseType(_CauseTypeEnum value) {
         this.causeType = value;
     }
 
@@ -146,27 +146,27 @@ public class Cause {
     }
 
     /**
-     * Gets the value of the causeExtension property.
+     * Gets the value of the _CauseExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCauseExtension() {
-        return causeExtension;
+    public _ExtensionType get_CauseExtension() {
+        return _CauseExtension;
     }
 
     /**
-     * Sets the value of the causeExtension property.
+     * Sets the value of the _CauseExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCauseExtension(ExtensionType value) {
-        this.causeExtension = value;
+    public void set_CauseExtension(_ExtensionType value) {
+        this._CauseExtension = value;
     }
 
 }

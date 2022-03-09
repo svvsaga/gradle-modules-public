@@ -36,7 +36,7 @@ public class Humidity {
 
     @XmlElement(required = true)
     protected PercentageValue relativeHumidity;
-    protected ExtensionType humidityExtension;
+    protected _ExtensionType humidityExtension;
 
     /**
      * Gets the value of the relativeHumidity property.
@@ -67,10 +67,10 @@ public class Humidity {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHumidityExtension() {
+    public _ExtensionType getHumidityExtension() {
         return humidityExtension;
     }
 
@@ -79,10 +79,10 @@ public class Humidity {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHumidityExtension(ExtensionType value) {
+    public void setHumidityExtension(_ExtensionType value) {
         this.humidityExtension = value;
     }
 

@@ -30,59 +30,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CctvCameraControlAvailabilityEnum }
+     * Create an instance of {@link _CctvCameraControlAvailabilityEnum }
      * 
      */
-    public CctvCameraControlAvailabilityEnum createCctvCameraControlAvailabilityEnum() {
-        return new CctvCameraControlAvailabilityEnum();
+    public _CctvCameraControlAvailabilityEnum create_CctvCameraControlAvailabilityEnum() {
+        return new _CctvCameraControlAvailabilityEnum();
     }
 
     /**
-     * Create an instance of {@link CctvCameraFaultEnum }
+     * Create an instance of {@link _CctvCameraFaultEnum }
      * 
      */
-    public CctvCameraFaultEnum createCctvCameraFaultEnum() {
-        return new CctvCameraFaultEnum();
+    public _CctvCameraFaultEnum create_CctvCameraFaultEnum() {
+        return new _CctvCameraFaultEnum();
     }
 
     /**
-     * Create an instance of {@link CctvCameraListVersionedReference }
+     * Create an instance of {@link _CctvCameraListVersionedReference }
      * 
      */
-    public CctvCameraListVersionedReference createCctvCameraListVersionedReference() {
-        return new CctvCameraListVersionedReference();
+    public _CctvCameraListVersionedReference create_CctvCameraListVersionedReference() {
+        return new _CctvCameraListVersionedReference();
     }
 
     /**
-     * Create an instance of {@link CctvCameraMetadataRecordVersionedReference }
+     * Create an instance of {@link _CctvCameraMetadataRecordVersionedReference }
      * 
      */
-    public CctvCameraMetadataRecordVersionedReference createCctvCameraMetadataRecordVersionedReference() {
-        return new CctvCameraMetadataRecordVersionedReference();
+    public _CctvCameraMetadataRecordVersionedReference create_CctvCameraMetadataRecordVersionedReference() {
+        return new _CctvCameraMetadataRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link CctvCameraTypeEnum }
+     * Create an instance of {@link _CctvCameraTypeEnum }
      * 
      */
-    public CctvCameraTypeEnum createCctvCameraTypeEnum() {
-        return new CctvCameraTypeEnum();
+    public _CctvCameraTypeEnum create_CctvCameraTypeEnum() {
+        return new _CctvCameraTypeEnum();
     }
 
     /**
-     * Create an instance of {@link CctvCameraVideoOrImageAvailabilityEnum }
+     * Create an instance of {@link _CctvCameraVideoOrImageAvailabilityEnum }
      * 
      */
-    public CctvCameraVideoOrImageAvailabilityEnum createCctvCameraVideoOrImageAvailabilityEnum() {
-        return new CctvCameraVideoOrImageAvailabilityEnum();
+    public _CctvCameraVideoOrImageAvailabilityEnum create_CctvCameraVideoOrImageAvailabilityEnum() {
+        return new _CctvCameraVideoOrImageAvailabilityEnum();
     }
 
     /**
-     * Create an instance of {@link CctvStillImageFormatEnum }
+     * Create an instance of {@link _CctvStillImageFormatEnum }
      * 
      */
-    public CctvStillImageFormatEnum createCctvStillImageFormatEnum() {
-        return new CctvStillImageFormatEnum();
+    public _CctvStillImageFormatEnum create_CctvStillImageFormatEnum() {
+        return new _CctvStillImageFormatEnum();
     }
 
     /**

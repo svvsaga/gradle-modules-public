@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Pressure;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PressureInformation", propOrder = {
     "pressure",
-    "pressureInformationExtension"
+    "_PressureInformationExtension"
 })
 public class PressureInformation
     extends WeatherData
@@ -41,7 +41,7 @@ public class PressureInformation
     @XmlElement(required = true)
     protected Pressure pressure;
     @XmlElement(name = "_pressureInformationExtension")
-    protected ExtensionType pressureInformationExtension;
+    protected _ExtensionType _PressureInformationExtension;
 
     /**
      * Gets the value of the pressure property.
@@ -68,27 +68,27 @@ public class PressureInformation
     }
 
     /**
-     * Gets the value of the pressureInformationExtension property.
+     * Gets the value of the _PressureInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPressureInformationExtension() {
-        return pressureInformationExtension;
+    public _ExtensionType get_PressureInformationExtension() {
+        return _PressureInformationExtension;
     }
 
     /**
-     * Sets the value of the pressureInformationExtension property.
+     * Sets the value of the _PressureInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPressureInformationExtension(ExtensionType value) {
-        this.pressureInformationExtension = value;
+    public void set_PressureInformationExtension(_ExtensionType value) {
+        this._PressureInformationExtension = value;
     }
 
 }

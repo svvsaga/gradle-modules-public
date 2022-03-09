@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PrecipitationDetail;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PrecipitationInformation", propOrder = {
     "noPrecipitation",
     "precipitationDetail",
-    "precipitationInformationExtension"
+    "_PrecipitationInformationExtension"
 })
 public class PrecipitationInformation
     extends WeatherData
@@ -43,7 +43,7 @@ public class PrecipitationInformation
     protected Boolean noPrecipitation;
     protected PrecipitationDetail precipitationDetail;
     @XmlElement(name = "_precipitationInformationExtension")
-    protected ExtensionType precipitationInformationExtension;
+    protected _ExtensionType _PrecipitationInformationExtension;
 
     /**
      * Gets the value of the noPrecipitation property.
@@ -94,27 +94,27 @@ public class PrecipitationInformation
     }
 
     /**
-     * Gets the value of the precipitationInformationExtension property.
+     * Gets the value of the _PrecipitationInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrecipitationInformationExtension() {
-        return precipitationInformationExtension;
+    public _ExtensionType get_PrecipitationInformationExtension() {
+        return _PrecipitationInformationExtension;
     }
 
     /**
-     * Sets the value of the precipitationInformationExtension property.
+     * Sets the value of the _PrecipitationInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrecipitationInformationExtension(ExtensionType value) {
-        this.precipitationInformationExtension = value;
+    public void set_PrecipitationInformationExtension(_ExtensionType value) {
+        this._PrecipitationInformationExtension = value;
     }
 
 }

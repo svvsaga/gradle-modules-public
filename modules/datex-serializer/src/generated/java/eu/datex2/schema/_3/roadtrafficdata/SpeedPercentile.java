@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PercentageValue;
 import eu.datex2.schema._3.common.SpeedValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "SpeedPercentile", propOrder = {
     "vehiclePercentage",
     "speedPercentile",
-    "speedPercentileExtension"
+    "_SpeedPercentileExtension"
 })
 public class SpeedPercentile {
 
@@ -44,7 +44,7 @@ public class SpeedPercentile {
     @XmlElement(required = true)
     protected SpeedValue speedPercentile;
     @XmlElement(name = "_speedPercentileExtension")
-    protected ExtensionType speedPercentileExtension;
+    protected _ExtensionType _SpeedPercentileExtension;
 
     /**
      * Gets the value of the vehiclePercentage property.
@@ -95,27 +95,27 @@ public class SpeedPercentile {
     }
 
     /**
-     * Gets the value of the speedPercentileExtension property.
+     * Gets the value of the _SpeedPercentileExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedPercentileExtension() {
-        return speedPercentileExtension;
+    public _ExtensionType get_SpeedPercentileExtension() {
+        return _SpeedPercentileExtension;
     }
 
     /**
-     * Sets the value of the speedPercentileExtension property.
+     * Sets the value of the _SpeedPercentileExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedPercentileExtension(ExtensionType value) {
-        this.speedPercentileExtension = value;
+    public void set_SpeedPercentileExtension(_ExtensionType value) {
+        this._SpeedPercentileExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AlertCMethod4SecondaryPointLocation", propOrder = {
     "alertCLocation",
     "offsetDistance",
-    "alertCMethod4SecondaryPointLocationExtension"
+    "_AlertCMethod4SecondaryPointLocationExtension"
 })
 public class AlertCMethod4SecondaryPointLocation {
 
@@ -42,7 +42,7 @@ public class AlertCMethod4SecondaryPointLocation {
     @XmlElement(required = true)
     protected OffsetDistance offsetDistance;
     @XmlElement(name = "_alertCMethod4SecondaryPointLocationExtension")
-    protected ExtensionType alertCMethod4SecondaryPointLocationExtension;
+    protected _ExtensionType _AlertCMethod4SecondaryPointLocationExtension;
 
     /**
      * Gets the value of the alertCLocation property.
@@ -93,27 +93,27 @@ public class AlertCMethod4SecondaryPointLocation {
     }
 
     /**
-     * Gets the value of the alertCMethod4SecondaryPointLocationExtension property.
+     * Gets the value of the _AlertCMethod4SecondaryPointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCMethod4SecondaryPointLocationExtension() {
-        return alertCMethod4SecondaryPointLocationExtension;
+    public _ExtensionType get_AlertCMethod4SecondaryPointLocationExtension() {
+        return _AlertCMethod4SecondaryPointLocationExtension;
     }
 
     /**
-     * Sets the value of the alertCMethod4SecondaryPointLocationExtension property.
+     * Sets the value of the _AlertCMethod4SecondaryPointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCMethod4SecondaryPointLocationExtension(ExtensionType value) {
-        this.alertCMethod4SecondaryPointLocationExtension = value;
+    public void set_AlertCMethod4SecondaryPointLocationExtension(_ExtensionType value) {
+        this._AlertCMethod4SecondaryPointLocationExtension = value;
     }
 
 }

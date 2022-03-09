@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
-    "alertCLinearExtension"
+    "_AlertCLinearExtension"
 })
 @XmlSeeAlso({
     AlertCLinearByCode.class,
@@ -52,7 +52,7 @@ public abstract class AlertCLinear {
     @XmlElement(required = true)
     protected String alertCLocationTableVersion;
     @XmlElement(name = "_alertCLinearExtension")
-    protected ExtensionType alertCLinearExtension;
+    protected _ExtensionType _AlertCLinearExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -127,27 +127,27 @@ public abstract class AlertCLinear {
     }
 
     /**
-     * Gets the value of the alertCLinearExtension property.
+     * Gets the value of the _AlertCLinearExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLinearExtension() {
-        return alertCLinearExtension;
+    public _ExtensionType get_AlertCLinearExtension() {
+        return _AlertCLinearExtension;
     }
 
     /**
-     * Sets the value of the alertCLinearExtension property.
+     * Sets the value of the _AlertCLinearExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLinearExtension(ExtensionType value) {
-        this.alertCLinearExtension = value;
+    public void set_AlertCLinearExtension(_ExtensionType value) {
+        this._AlertCLinearExtension = value;
     }
 
 }

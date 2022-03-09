@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AlertCLinearByCode", propOrder = {
     "alertCDirection",
     "locationCodeForLinearLocation",
-    "alertCLinearByCodeExtension"
+    "_AlertCLinearByCodeExtension"
 })
 public class AlertCLinearByCode
     extends AlertCLinear
@@ -44,7 +44,7 @@ public class AlertCLinearByCode
     @XmlElement(required = true)
     protected AlertCLocation locationCodeForLinearLocation;
     @XmlElement(name = "_alertCLinearByCodeExtension")
-    protected ExtensionType alertCLinearByCodeExtension;
+    protected _ExtensionType _AlertCLinearByCodeExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -95,27 +95,27 @@ public class AlertCLinearByCode
     }
 
     /**
-     * Gets the value of the alertCLinearByCodeExtension property.
+     * Gets the value of the _AlertCLinearByCodeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLinearByCodeExtension() {
-        return alertCLinearByCodeExtension;
+    public _ExtensionType get_AlertCLinearByCodeExtension() {
+        return _AlertCLinearByCodeExtension;
     }
 
     /**
-     * Sets the value of the alertCLinearByCodeExtension property.
+     * Sets the value of the _AlertCLinearByCodeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLinearByCodeExtension(ExtensionType value) {
-        this.alertCLinearByCodeExtension = value;
+    public void set_AlertCLinearByCodeExtension(_ExtensionType value) {
+        this._AlertCLinearByCodeExtension = value;
     }
 
 }

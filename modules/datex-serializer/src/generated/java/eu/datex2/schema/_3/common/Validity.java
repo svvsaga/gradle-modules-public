@@ -34,27 +34,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "validityStatus",
     "overrunning",
     "validityTimeSpecification",
-    "validityExtension"
+    "_ValidityExtension"
 })
 public class Validity {
 
     @XmlElement(required = true)
-    protected ValidityStatusEnum validityStatus;
+    protected _ValidityStatusEnum validityStatus;
     protected Boolean overrunning;
     @XmlElement(required = true)
     protected OverallPeriod validityTimeSpecification;
     @XmlElement(name = "_validityExtension")
-    protected ExtensionType validityExtension;
+    protected _ExtensionType _ValidityExtension;
 
     /**
      * Gets the value of the validityStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link ValidityStatusEnum }
+     *     {@link _ValidityStatusEnum }
      *     
      */
-    public ValidityStatusEnum getValidityStatus() {
+    public _ValidityStatusEnum getValidityStatus() {
         return validityStatus;
     }
 
@@ -63,10 +63,10 @@ public class Validity {
      * 
      * @param value
      *     allowed object is
-     *     {@link ValidityStatusEnum }
+     *     {@link _ValidityStatusEnum }
      *     
      */
-    public void setValidityStatus(ValidityStatusEnum value) {
+    public void setValidityStatus(_ValidityStatusEnum value) {
         this.validityStatus = value;
     }
 
@@ -119,27 +119,27 @@ public class Validity {
     }
 
     /**
-     * Gets the value of the validityExtension property.
+     * Gets the value of the _ValidityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getValidityExtension() {
-        return validityExtension;
+    public _ExtensionType get_ValidityExtension() {
+        return _ValidityExtension;
     }
 
     /**
-     * Sets the value of the validityExtension property.
+     * Sets the value of the _ValidityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setValidityExtension(ExtensionType value) {
-        this.validityExtension = value;
+    public void set_ValidityExtension(_ExtensionType value) {
+        this._ValidityExtension = value;
     }
 
 }

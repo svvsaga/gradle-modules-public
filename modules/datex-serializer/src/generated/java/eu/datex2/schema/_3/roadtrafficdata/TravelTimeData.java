@@ -3,9 +3,9 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.SpeedValue;
-import eu.datex2.schema._3.common.VehicleTypeEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common._VehicleTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -49,32 +49,32 @@ import jakarta.xml.bind.annotation.XmlType;
     "normallyExpectedTravelTime",
     "travelTimeDelay",
     "freeFlowSpeed",
-    "travelTimeDataExtension"
+    "_TravelTimeDataExtension"
 })
 public class TravelTimeData
     extends BasicData
 {
 
-    protected TravelTimeTrendTypeEnum travelTimeTrendType;
-    protected TravelTimeTypeEnum travelTimeType;
-    protected List<VehicleTypeEnum> vehicleType;
+    protected _TravelTimeTrendTypeEnum travelTimeTrendType;
+    protected _TravelTimeTypeEnum travelTimeType;
+    protected List<_VehicleTypeEnum> vehicleType;
     protected DurationValue travelTime;
     protected DurationValue freeFlowTravelTime;
     protected DurationValue normallyExpectedTravelTime;
     protected DurationValue travelTimeDelay;
     protected SpeedValue freeFlowSpeed;
     @XmlElement(name = "_travelTimeDataExtension")
-    protected ExtensionType travelTimeDataExtension;
+    protected _ExtensionType _TravelTimeDataExtension;
 
     /**
      * Gets the value of the travelTimeTrendType property.
      * 
      * @return
      *     possible object is
-     *     {@link TravelTimeTrendTypeEnum }
+     *     {@link _TravelTimeTrendTypeEnum }
      *     
      */
-    public TravelTimeTrendTypeEnum getTravelTimeTrendType() {
+    public _TravelTimeTrendTypeEnum getTravelTimeTrendType() {
         return travelTimeTrendType;
     }
 
@@ -83,10 +83,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link TravelTimeTrendTypeEnum }
+     *     {@link _TravelTimeTrendTypeEnum }
      *     
      */
-    public void setTravelTimeTrendType(TravelTimeTrendTypeEnum value) {
+    public void setTravelTimeTrendType(_TravelTimeTrendTypeEnum value) {
         this.travelTimeTrendType = value;
     }
 
@@ -95,10 +95,10 @@ public class TravelTimeData
      * 
      * @return
      *     possible object is
-     *     {@link TravelTimeTypeEnum }
+     *     {@link _TravelTimeTypeEnum }
      *     
      */
-    public TravelTimeTypeEnum getTravelTimeType() {
+    public _TravelTimeTypeEnum getTravelTimeType() {
         return travelTimeType;
     }
 
@@ -107,10 +107,10 @@ public class TravelTimeData
      * 
      * @param value
      *     allowed object is
-     *     {@link TravelTimeTypeEnum }
+     *     {@link _TravelTimeTypeEnum }
      *     
      */
-    public void setTravelTimeType(TravelTimeTypeEnum value) {
+    public void setTravelTimeType(_TravelTimeTypeEnum value) {
         this.travelTimeType = value;
     }
 
@@ -132,13 +132,13 @@ public class TravelTimeData
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VehicleTypeEnum }
+     * {@link _VehicleTypeEnum }
      * 
      * 
      */
-    public List<VehicleTypeEnum> getVehicleType() {
+    public List<_VehicleTypeEnum> getVehicleType() {
         if (vehicleType == null) {
-            vehicleType = new ArrayList<VehicleTypeEnum>();
+            vehicleType = new ArrayList<_VehicleTypeEnum>();
         }
         return this.vehicleType;
     }
@@ -264,27 +264,27 @@ public class TravelTimeData
     }
 
     /**
-     * Gets the value of the travelTimeDataExtension property.
+     * Gets the value of the _TravelTimeDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTravelTimeDataExtension() {
-        return travelTimeDataExtension;
+    public _ExtensionType get_TravelTimeDataExtension() {
+        return _TravelTimeDataExtension;
     }
 
     /**
-     * Sets the value of the travelTimeDataExtension property.
+     * Sets the value of the _TravelTimeDataExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTravelTimeDataExtension(ExtensionType value) {
-        this.travelTimeDataExtension = value;
+    public void set_TravelTimeDataExtension(_ExtensionType value) {
+        this._TravelTimeDataExtension = value;
     }
 
 }

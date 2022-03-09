@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "definition",
     "translation",
     "translationDefinition",
-    "packageExtension"
+    "_PackageExtension"
 })
 public class Package {
 
@@ -53,7 +53,7 @@ public class Package {
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
     @XmlElement(name = "_packageExtension")
-    protected ExtensionType packageExtension;
+    protected _ExtensionType _PackageExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -176,27 +176,27 @@ public class Package {
     }
 
     /**
-     * Gets the value of the packageExtension property.
+     * Gets the value of the _PackageExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPackageExtension() {
-        return packageExtension;
+    public _ExtensionType get_PackageExtension() {
+        return _PackageExtension;
     }
 
     /**
-     * Sets the value of the packageExtension property.
+     * Sets the value of the _PackageExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPackageExtension(ExtensionType value) {
-        this.packageExtension = value;
+    public void set_PackageExtension(_ExtensionType value) {
+        this._PackageExtension = value;
     }
 
 }

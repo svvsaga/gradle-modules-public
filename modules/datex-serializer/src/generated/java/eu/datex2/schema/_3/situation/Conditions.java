@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Conditions", propOrder = {
     "drivingConditionType",
-    "conditionsExtension"
+    "_ConditionsExtension"
 })
 @XmlSeeAlso({
     PoorEnvironmentConditions.class,
@@ -42,19 +42,19 @@ public class Conditions
     extends TrafficElement
 {
 
-    protected DrivingConditionTypeEnum drivingConditionType;
+    protected _DrivingConditionTypeEnum drivingConditionType;
     @XmlElement(name = "_conditionsExtension")
-    protected ExtensionType conditionsExtension;
+    protected _ExtensionType _ConditionsExtension;
 
     /**
      * Gets the value of the drivingConditionType property.
      * 
      * @return
      *     possible object is
-     *     {@link DrivingConditionTypeEnum }
+     *     {@link _DrivingConditionTypeEnum }
      *     
      */
-    public DrivingConditionTypeEnum getDrivingConditionType() {
+    public _DrivingConditionTypeEnum getDrivingConditionType() {
         return drivingConditionType;
     }
 
@@ -63,35 +63,35 @@ public class Conditions
      * 
      * @param value
      *     allowed object is
-     *     {@link DrivingConditionTypeEnum }
+     *     {@link _DrivingConditionTypeEnum }
      *     
      */
-    public void setDrivingConditionType(DrivingConditionTypeEnum value) {
+    public void setDrivingConditionType(_DrivingConditionTypeEnum value) {
         this.drivingConditionType = value;
     }
 
     /**
-     * Gets the value of the conditionsExtension property.
+     * Gets the value of the _ConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getConditionsExtension() {
-        return conditionsExtension;
+    public _ExtensionType get_ConditionsExtension() {
+        return _ConditionsExtension;
     }
 
     /**
-     * Sets the value of the conditionsExtension property.
+     * Sets the value of the _ConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setConditionsExtension(ExtensionType value) {
-        this.conditionsExtension = value;
+    public void set_ConditionsExtension(_ExtensionType value) {
+        this._ConditionsExtension = value;
     }
 
 }

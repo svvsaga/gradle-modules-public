@@ -44,7 +44,7 @@ public abstract class NetworkLocation
 
     protected SupplementaryPositionalDescription supplementaryPositionalDescription;
     protected Destination destination;
-    protected ExtensionType networkLocationExtension;
+    protected _ExtensionType networkLocationExtension;
 
     /**
      * Gets the value of the supplementaryPositionalDescription property.
@@ -99,10 +99,10 @@ public abstract class NetworkLocation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNetworkLocationExtension() {
+    public _ExtensionType getNetworkLocationExtension() {
         return networkLocationExtension;
     }
 
@@ -111,10 +111,10 @@ public abstract class NetworkLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNetworkLocationExtension(ExtensionType value) {
+    public void setNetworkLocationExtension(_ExtensionType value) {
         this.networkLocationExtension = value;
     }
 

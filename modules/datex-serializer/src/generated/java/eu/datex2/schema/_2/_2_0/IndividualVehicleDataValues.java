@@ -60,7 +60,7 @@ public class IndividualVehicleDataValues
     protected DurationValue timeHeadway;
     protected FloatingPointMetreDistanceValue distanceGap;
     protected FloatingPointMetreDistanceValue distanceHeadway;
-    protected ExtensionType individualVehicleDataValuesExtension;
+    protected _ExtensionType individualVehicleDataValuesExtension;
 
     /**
      * Gets the value of the individualVehicleSpeed property.
@@ -283,10 +283,10 @@ public class IndividualVehicleDataValues
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getIndividualVehicleDataValuesExtension() {
+    public _ExtensionType getIndividualVehicleDataValuesExtension() {
         return individualVehicleDataValuesExtension;
     }
 
@@ -295,10 +295,10 @@ public class IndividualVehicleDataValues
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setIndividualVehicleDataValuesExtension(ExtensionType value) {
+    public void setIndividualVehicleDataValuesExtension(_ExtensionType value) {
         this.individualVehicleDataValuesExtension = value;
     }
 

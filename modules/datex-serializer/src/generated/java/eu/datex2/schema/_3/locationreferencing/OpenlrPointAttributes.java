@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,24 +33,24 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrPointAttributes", propOrder = {
     "openlrSideOfRoad",
     "openlrOrientation",
-    "openlrPointAttributesExtension"
+    "_OpenlrPointAttributesExtension"
 })
 public class OpenlrPointAttributes {
 
-    protected OpenlrSideOfRoadEnum openlrSideOfRoad;
-    protected OpenlrOrientationEnum openlrOrientation;
+    protected _OpenlrSideOfRoadEnum openlrSideOfRoad;
+    protected _OpenlrOrientationEnum openlrOrientation;
     @XmlElement(name = "_openlrPointAttributesExtension")
-    protected ExtensionType openlrPointAttributesExtension;
+    protected _ExtensionType _OpenlrPointAttributesExtension;
 
     /**
      * Gets the value of the openlrSideOfRoad property.
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrSideOfRoadEnum }
+     *     {@link _OpenlrSideOfRoadEnum }
      *     
      */
-    public OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
+    public _OpenlrSideOfRoadEnum getOpenlrSideOfRoad() {
         return openlrSideOfRoad;
     }
 
@@ -59,10 +59,10 @@ public class OpenlrPointAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrSideOfRoadEnum }
+     *     {@link _OpenlrSideOfRoadEnum }
      *     
      */
-    public void setOpenlrSideOfRoad(OpenlrSideOfRoadEnum value) {
+    public void setOpenlrSideOfRoad(_OpenlrSideOfRoadEnum value) {
         this.openlrSideOfRoad = value;
     }
 
@@ -71,10 +71,10 @@ public class OpenlrPointAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrOrientationEnum }
+     *     {@link _OpenlrOrientationEnum }
      *     
      */
-    public OpenlrOrientationEnum getOpenlrOrientation() {
+    public _OpenlrOrientationEnum getOpenlrOrientation() {
         return openlrOrientation;
     }
 
@@ -83,35 +83,35 @@ public class OpenlrPointAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrOrientationEnum }
+     *     {@link _OpenlrOrientationEnum }
      *     
      */
-    public void setOpenlrOrientation(OpenlrOrientationEnum value) {
+    public void setOpenlrOrientation(_OpenlrOrientationEnum value) {
         this.openlrOrientation = value;
     }
 
     /**
-     * Gets the value of the openlrPointAttributesExtension property.
+     * Gets the value of the _OpenlrPointAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPointAttributesExtension() {
-        return openlrPointAttributesExtension;
+    public _ExtensionType get_OpenlrPointAttributesExtension() {
+        return _OpenlrPointAttributesExtension;
     }
 
     /**
-     * Sets the value of the openlrPointAttributesExtension property.
+     * Sets the value of the _OpenlrPointAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPointAttributesExtension(ExtensionType value) {
-        this.openlrPointAttributesExtension = value;
+    public void set_OpenlrPointAttributesExtension(_ExtensionType value) {
+        this._OpenlrPointAttributesExtension = value;
     }
 
 }

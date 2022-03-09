@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FloatingPointMetreDistanceValue", propOrder = {
     "distance",
-    "floatingPointMetreDistanceValueExtension"
+    "_FloatingPointMetreDistanceValueExtension"
 })
 public class FloatingPointMetreDistanceValue
     extends DataValue
@@ -38,7 +38,7 @@ public class FloatingPointMetreDistanceValue
 
     protected float distance;
     @XmlElement(name = "_floatingPointMetreDistanceValueExtension")
-    protected ExtensionType floatingPointMetreDistanceValueExtension;
+    protected _ExtensionType _FloatingPointMetreDistanceValueExtension;
 
     /**
      * Gets the value of the distance property.
@@ -57,27 +57,27 @@ public class FloatingPointMetreDistanceValue
     }
 
     /**
-     * Gets the value of the floatingPointMetreDistanceValueExtension property.
+     * Gets the value of the _FloatingPointMetreDistanceValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFloatingPointMetreDistanceValueExtension() {
-        return floatingPointMetreDistanceValueExtension;
+    public _ExtensionType get_FloatingPointMetreDistanceValueExtension() {
+        return _FloatingPointMetreDistanceValueExtension;
     }
 
     /**
-     * Sets the value of the floatingPointMetreDistanceValueExtension property.
+     * Sets the value of the _FloatingPointMetreDistanceValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFloatingPointMetreDistanceValueExtension(ExtensionType value) {
-        this.floatingPointMetreDistanceValueExtension = value;
+    public void set_FloatingPointMetreDistanceValueExtension(_ExtensionType value) {
+        this._FloatingPointMetreDistanceValueExtension = value;
     }
 
 }

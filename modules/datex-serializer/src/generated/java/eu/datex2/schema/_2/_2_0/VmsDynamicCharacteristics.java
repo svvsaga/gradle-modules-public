@@ -44,8 +44,8 @@ public class VmsDynamicCharacteristics {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPictogramDisplayAreas;
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    protected List<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
-    protected ExtensionType vmsDynamicCharacteristicsExtension;
+    protected List<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
+    protected _ExtensionType vmsDynamicCharacteristicsExtension;
 
     /**
      * Gets the value of the numberOfPictogramDisplayAreas property.
@@ -113,13 +113,13 @@ public class VmsDynamicCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * {@link _VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      * 
      */
-    public List<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
+    public List<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
         if (vmsPictogramDisplayCharacteristics == null) {
-            vmsPictogramDisplayCharacteristics = new ArrayList<VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
+            vmsPictogramDisplayCharacteristics = new ArrayList<_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
         }
         return this.vmsPictogramDisplayCharacteristics;
     }
@@ -129,10 +129,10 @@ public class VmsDynamicCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsDynamicCharacteristicsExtension() {
+    public _ExtensionType getVmsDynamicCharacteristicsExtension() {
         return vmsDynamicCharacteristicsExtension;
     }
 
@@ -141,10 +141,10 @@ public class VmsDynamicCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsDynamicCharacteristicsExtension(ExtensionType value) {
+    public void setVmsDynamicCharacteristicsExtension(_ExtensionType value) {
         this.vmsDynamicCharacteristicsExtension = value;
     }
 

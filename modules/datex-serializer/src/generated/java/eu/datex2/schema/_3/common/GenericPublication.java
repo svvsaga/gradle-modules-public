@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GenericPublication", propOrder = {
     "genericPublicationName",
-    "genericPublicationExtension"
+    "_GenericPublicationExtension"
 })
 public class GenericPublication
     extends PayloadPublication
@@ -39,7 +39,7 @@ public class GenericPublication
     @XmlElement(required = true)
     protected String genericPublicationName;
     @XmlElement(name = "_genericPublicationExtension")
-    protected GenericPublicationExtensionType genericPublicationExtension;
+    protected _GenericPublicationExtensionType _GenericPublicationExtension;
 
     /**
      * Gets the value of the genericPublicationName property.
@@ -66,27 +66,27 @@ public class GenericPublication
     }
 
     /**
-     * Gets the value of the genericPublicationExtension property.
+     * Gets the value of the _GenericPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link GenericPublicationExtensionType }
+     *     {@link _GenericPublicationExtensionType }
      *     
      */
-    public GenericPublicationExtensionType getGenericPublicationExtension() {
-        return genericPublicationExtension;
+    public _GenericPublicationExtensionType get_GenericPublicationExtension() {
+        return _GenericPublicationExtension;
     }
 
     /**
-     * Sets the value of the genericPublicationExtension property.
+     * Sets the value of the _GenericPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GenericPublicationExtensionType }
+     *     {@link _GenericPublicationExtensionType }
      *     
      */
-    public void setGenericPublicationExtension(GenericPublicationExtensionType value) {
-        this.genericPublicationExtension = value;
+    public void set_GenericPublicationExtension(_GenericPublicationExtensionType value) {
+        this._GenericPublicationExtension = value;
     }
 
 }

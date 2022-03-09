@@ -70,7 +70,7 @@ public class CctvVideoService {
     @XmlElement(required = true)
     protected UrlLink videoUrl;
     protected List<UrlLink> orientationImageUrl;
-    protected ExtensionType cctvVideoServiceExtension;
+    protected _ExtensionType cctvVideoServiceExtension;
 
     /**
      * Gets the value of the cctvVideoServiceLevel property.
@@ -298,10 +298,10 @@ public class CctvVideoService {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvVideoServiceExtension() {
+    public _ExtensionType getCctvVideoServiceExtension() {
         return cctvVideoServiceExtension;
     }
 
@@ -310,10 +310,10 @@ public class CctvVideoService {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvVideoServiceExtension(ExtensionType value) {
+    public void setCctvVideoServiceExtension(_ExtensionType value) {
         this.cctvVideoServiceExtension = value;
     }
 

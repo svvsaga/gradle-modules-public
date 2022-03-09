@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCLocationCountryCode",
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
-    "alertCPointExtension"
+    "_AlertCPointExtension"
 })
 @XmlSeeAlso({
     AlertCMethod2Point.class,
@@ -51,7 +51,7 @@ public abstract class AlertCPoint {
     @XmlElement(required = true)
     protected String alertCLocationTableVersion;
     @XmlElement(name = "_alertCPointExtension")
-    protected ExtensionType alertCPointExtension;
+    protected _ExtensionType _AlertCPointExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -126,27 +126,27 @@ public abstract class AlertCPoint {
     }
 
     /**
-     * Gets the value of the alertCPointExtension property.
+     * Gets the value of the _AlertCPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCPointExtension() {
-        return alertCPointExtension;
+    public _ExtensionType get_AlertCPointExtension() {
+        return _AlertCPointExtension;
     }
 
     /**
-     * Sets the value of the alertCPointExtension property.
+     * Sets the value of the _AlertCPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCPointExtension(ExtensionType value) {
-        this.alertCPointExtension = value;
+    public void set_AlertCPointExtension(_ExtensionType value) {
+        this._AlertCPointExtension = value;
     }
 
 }

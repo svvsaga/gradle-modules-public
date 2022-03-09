@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _InstanceOfDayEnum complex type.
+ * <p>Java class for InstanceOfDayEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_InstanceOfDayEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;InstanceOfDayEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="InstanceOfDayEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="firstInstance"/&gt;
+ *     &lt;enumeration value="secondInstance"/&gt;
+ *     &lt;enumeration value="thirdInstance"/&gt;
+ *     &lt;enumeration value="fourthInstance"/&gt;
+ *     &lt;enumeration value="fifthInstance"/&gt;
+ *     &lt;enumeration value="lastInstance"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_InstanceOfDayEnum", propOrder = {
-    "value"
-})
-public class InstanceOfDayEnum {
+@XmlType(name = "InstanceOfDayEnum")
+@XmlEnum
+public enum InstanceOfDayEnum {
 
-    @XmlValue
-    protected InstanceOfDayEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("firstInstance")
+    FIRST_INSTANCE("firstInstance"),
+    @XmlEnumValue("secondInstance")
+    SECOND_INSTANCE("secondInstance"),
+    @XmlEnumValue("thirdInstance")
+    THIRD_INSTANCE("thirdInstance"),
+    @XmlEnumValue("fourthInstance")
+    FOURTH_INSTANCE("fourthInstance"),
+    @XmlEnumValue("fifthInstance")
+    FIFTH_INSTANCE("fifthInstance"),
+    @XmlEnumValue("lastInstance")
+    LAST_INSTANCE("lastInstance"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InstanceOfDayEnum2 }
-     *     
-     */
-    public InstanceOfDayEnum2 getValue() {
+    InstanceOfDayEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InstanceOfDayEnum2 }
-     *     
-     */
-    public void setValue(InstanceOfDayEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static InstanceOfDayEnum fromValue(String v) {
+        for (InstanceOfDayEnum c: InstanceOfDayEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

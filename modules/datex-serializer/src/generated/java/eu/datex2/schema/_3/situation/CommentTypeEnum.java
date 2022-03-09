@@ -1,87 +1,68 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _CommentTypeEnum complex type.
+ * <p>Java class for CommentTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_CommentTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;CommentTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="CommentTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="abnormalLoadMovementNote"/&gt;
+ *     &lt;enumeration value="dataProcessingNote"/&gt;
+ *     &lt;enumeration value="description"/&gt;
+ *     &lt;enumeration value="internalNote"/&gt;
+ *     &lt;enumeration value="roadworksName"/&gt;
+ *     &lt;enumeration value="warning"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_CommentTypeEnum", propOrder = {
-    "value"
-})
-public class CommentTypeEnum {
+@XmlType(name = "CommentTypeEnum")
+@XmlEnum
+public enum CommentTypeEnum {
 
-    @XmlValue
-    protected CommentTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("abnormalLoadMovementNote")
+    ABNORMAL_LOAD_MOVEMENT_NOTE("abnormalLoadMovementNote"),
+    @XmlEnumValue("dataProcessingNote")
+    DATA_PROCESSING_NOTE("dataProcessingNote"),
+    @XmlEnumValue("description")
+    DESCRIPTION("description"),
+    @XmlEnumValue("internalNote")
+    INTERNAL_NOTE("internalNote"),
+    @XmlEnumValue("roadworksName")
+    ROADWORKS_NAME("roadworksName"),
+    @XmlEnumValue("warning")
+    WARNING("warning"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CommentTypeEnum2 }
-     *     
-     */
-    public CommentTypeEnum2 getValue() {
+    CommentTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CommentTypeEnum2 }
-     *     
-     */
-    public void setValue(CommentTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static CommentTypeEnum fromValue(String v) {
+        for (CommentTypeEnum c: CommentTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

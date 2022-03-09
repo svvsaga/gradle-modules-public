@@ -1,87 +1,131 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TpegLoc03OtherPointDescriptorSubtypeEnum complex type.
+ * <p>Java class for TpegLoc03OtherPointDescriptorSubtypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TpegLoc03OtherPointDescriptorSubtypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;TpegLoc03OtherPointDescriptorSubtypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TpegLoc03OtherPointDescriptorSubtypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="administrativeAreaName"/&gt;
+ *     &lt;enumeration value="administrativeReferenceName"/&gt;
+ *     &lt;enumeration value="airportName"/&gt;
+ *     &lt;enumeration value="areaName"/&gt;
+ *     &lt;enumeration value="buildingName"/&gt;
+ *     &lt;enumeration value="busStopIdentifier"/&gt;
+ *     &lt;enumeration value="busStopName"/&gt;
+ *     &lt;enumeration value="canalName"/&gt;
+ *     &lt;enumeration value="countyName"/&gt;
+ *     &lt;enumeration value="ferryPortName"/&gt;
+ *     &lt;enumeration value="intersectionName"/&gt;
+ *     &lt;enumeration value="lakeName"/&gt;
+ *     &lt;enumeration value="linkName"/&gt;
+ *     &lt;enumeration value="localLinkName"/&gt;
+ *     &lt;enumeration value="metroStationName"/&gt;
+ *     &lt;enumeration value="nationName"/&gt;
+ *     &lt;enumeration value="nonLinkedPointName"/&gt;
+ *     &lt;enumeration value="parkingFacilityName"/&gt;
+ *     &lt;enumeration value="pointName"/&gt;
+ *     &lt;enumeration value="pointOfInterestName"/&gt;
+ *     &lt;enumeration value="railwayStation"/&gt;
+ *     &lt;enumeration value="regionName"/&gt;
+ *     &lt;enumeration value="riverName"/&gt;
+ *     &lt;enumeration value="seaName"/&gt;
+ *     &lt;enumeration value="serviceAreaName"/&gt;
+ *     &lt;enumeration value="tidalRiverName"/&gt;
+ *     &lt;enumeration value="townName"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TpegLoc03OtherPointDescriptorSubtypeEnum", propOrder = {
-    "value"
-})
-public class TpegLoc03OtherPointDescriptorSubtypeEnum {
+@XmlType(name = "TpegLoc03OtherPointDescriptorSubtypeEnum")
+@XmlEnum
+public enum TpegLoc03OtherPointDescriptorSubtypeEnum {
 
-    @XmlValue
-    protected TpegLoc03OtherPointDescriptorSubtypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("administrativeAreaName")
+    ADMINISTRATIVE_AREA_NAME("administrativeAreaName"),
+    @XmlEnumValue("administrativeReferenceName")
+    ADMINISTRATIVE_REFERENCE_NAME("administrativeReferenceName"),
+    @XmlEnumValue("airportName")
+    AIRPORT_NAME("airportName"),
+    @XmlEnumValue("areaName")
+    AREA_NAME("areaName"),
+    @XmlEnumValue("buildingName")
+    BUILDING_NAME("buildingName"),
+    @XmlEnumValue("busStopIdentifier")
+    BUS_STOP_IDENTIFIER("busStopIdentifier"),
+    @XmlEnumValue("busStopName")
+    BUS_STOP_NAME("busStopName"),
+    @XmlEnumValue("canalName")
+    CANAL_NAME("canalName"),
+    @XmlEnumValue("countyName")
+    COUNTY_NAME("countyName"),
+    @XmlEnumValue("ferryPortName")
+    FERRY_PORT_NAME("ferryPortName"),
+    @XmlEnumValue("intersectionName")
+    INTERSECTION_NAME("intersectionName"),
+    @XmlEnumValue("lakeName")
+    LAKE_NAME("lakeName"),
+    @XmlEnumValue("linkName")
+    LINK_NAME("linkName"),
+    @XmlEnumValue("localLinkName")
+    LOCAL_LINK_NAME("localLinkName"),
+    @XmlEnumValue("metroStationName")
+    METRO_STATION_NAME("metroStationName"),
+    @XmlEnumValue("nationName")
+    NATION_NAME("nationName"),
+    @XmlEnumValue("nonLinkedPointName")
+    NON_LINKED_POINT_NAME("nonLinkedPointName"),
+    @XmlEnumValue("parkingFacilityName")
+    PARKING_FACILITY_NAME("parkingFacilityName"),
+    @XmlEnumValue("pointName")
+    POINT_NAME("pointName"),
+    @XmlEnumValue("pointOfInterestName")
+    POINT_OF_INTEREST_NAME("pointOfInterestName"),
+    @XmlEnumValue("railwayStation")
+    RAILWAY_STATION("railwayStation"),
+    @XmlEnumValue("regionName")
+    REGION_NAME("regionName"),
+    @XmlEnumValue("riverName")
+    RIVER_NAME("riverName"),
+    @XmlEnumValue("seaName")
+    SEA_NAME("seaName"),
+    @XmlEnumValue("serviceAreaName")
+    SERVICE_AREA_NAME("serviceAreaName"),
+    @XmlEnumValue("tidalRiverName")
+    TIDAL_RIVER_NAME("tidalRiverName"),
+    @XmlEnumValue("townName")
+    TOWN_NAME("townName"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TpegLoc03OtherPointDescriptorSubtypeEnum2 }
-     *     
-     */
-    public TpegLoc03OtherPointDescriptorSubtypeEnum2 getValue() {
+    TpegLoc03OtherPointDescriptorSubtypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TpegLoc03OtherPointDescriptorSubtypeEnum2 }
-     *     
-     */
-    public void setValue(TpegLoc03OtherPointDescriptorSubtypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TpegLoc03OtherPointDescriptorSubtypeEnum fromValue(String v) {
+        for (TpegLoc03OtherPointDescriptorSubtypeEnum c: TpegLoc03OtherPointDescriptorSubtypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

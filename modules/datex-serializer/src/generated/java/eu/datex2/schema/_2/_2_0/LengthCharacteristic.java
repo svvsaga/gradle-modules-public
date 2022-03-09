@@ -41,7 +41,7 @@ public class LengthCharacteristic {
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
     protected float vehicleLength;
-    protected ExtensionType lengthCharacteristicExtension;
+    protected _ExtensionType lengthCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +88,10 @@ public class LengthCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLengthCharacteristicExtension() {
+    public _ExtensionType getLengthCharacteristicExtension() {
         return lengthCharacteristicExtension;
     }
 
@@ -100,10 +100,10 @@ public class LengthCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLengthCharacteristicExtension(ExtensionType value) {
+    public void setLengthCharacteristicExtension(_ExtensionType value) {
         this.lengthCharacteristicExtension = value;
     }
 

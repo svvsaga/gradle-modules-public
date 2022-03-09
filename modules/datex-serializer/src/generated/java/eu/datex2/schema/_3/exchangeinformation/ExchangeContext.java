@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,28 +35,28 @@ import jakarta.xml.bind.annotation.XmlType;
     "codedExchangeProtocol",
     "exchangeSpecificationVersion",
     "supplierOrCisRequester",
-    "exchangeContextExtension"
+    "_ExchangeContextExtension"
 })
 public class ExchangeContext {
 
     @XmlElement(required = true)
-    protected ProtocolTypeEnum codedExchangeProtocol;
+    protected _ProtocolTypeEnum codedExchangeProtocol;
     @XmlElement(required = true)
     protected String exchangeSpecificationVersion;
     @XmlElement(required = true)
     protected Agent supplierOrCisRequester;
     @XmlElement(name = "_exchangeContextExtension")
-    protected ExtensionType exchangeContextExtension;
+    protected _ExtensionType _ExchangeContextExtension;
 
     /**
      * Gets the value of the codedExchangeProtocol property.
      * 
      * @return
      *     possible object is
-     *     {@link ProtocolTypeEnum }
+     *     {@link _ProtocolTypeEnum }
      *     
      */
-    public ProtocolTypeEnum getCodedExchangeProtocol() {
+    public _ProtocolTypeEnum getCodedExchangeProtocol() {
         return codedExchangeProtocol;
     }
 
@@ -65,10 +65,10 @@ public class ExchangeContext {
      * 
      * @param value
      *     allowed object is
-     *     {@link ProtocolTypeEnum }
+     *     {@link _ProtocolTypeEnum }
      *     
      */
-    public void setCodedExchangeProtocol(ProtocolTypeEnum value) {
+    public void setCodedExchangeProtocol(_ProtocolTypeEnum value) {
         this.codedExchangeProtocol = value;
     }
 
@@ -121,27 +121,27 @@ public class ExchangeContext {
     }
 
     /**
-     * Gets the value of the exchangeContextExtension property.
+     * Gets the value of the _ExchangeContextExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getExchangeContextExtension() {
-        return exchangeContextExtension;
+    public _ExtensionType get_ExchangeContextExtension() {
+        return _ExchangeContextExtension;
     }
 
     /**
-     * Sets the value of the exchangeContextExtension property.
+     * Sets the value of the _ExchangeContextExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setExchangeContextExtension(ExtensionType value) {
-        this.exchangeContextExtension = value;
+    public void set_ExchangeContextExtension(_ExtensionType value) {
+        this._ExchangeContextExtension = value;
     }
 
 }

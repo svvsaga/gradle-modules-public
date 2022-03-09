@@ -3,8 +3,8 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "vmsControllerTableIdentification",
     "informationManager",
     "vmsController",
-    "vmsControllerTableExtension"
+    "_VmsControllerTableExtension"
 })
 public class VmsControllerTable {
 
@@ -50,7 +50,7 @@ public class VmsControllerTable {
     @XmlElement(required = true)
     protected List<VmsController> vmsController;
     @XmlElement(name = "_vmsControllerTableExtension")
-    protected ExtensionType vmsControllerTableExtension;
+    protected _ExtensionType _VmsControllerTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -134,27 +134,27 @@ public class VmsControllerTable {
     }
 
     /**
-     * Gets the value of the vmsControllerTableExtension property.
+     * Gets the value of the _VmsControllerTableExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsControllerTableExtension() {
-        return vmsControllerTableExtension;
+    public _ExtensionType get_VmsControllerTableExtension() {
+        return _VmsControllerTableExtension;
     }
 
     /**
-     * Sets the value of the vmsControllerTableExtension property.
+     * Sets the value of the _VmsControllerTableExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsControllerTableExtension(ExtensionType value) {
-        this.vmsControllerTableExtension = value;
+    public void set_VmsControllerTableExtension(_ExtensionType value) {
+        this._VmsControllerTableExtension = value;
     }
 
     /**

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "viennaConventionCompliant",
     "pictogramInformationType",
     "gddStructure",
-    "pictogramExtension"
+    "_PictogramExtension"
 })
 @XmlSeeAlso({
     CompositePictogram.class,
@@ -58,10 +58,10 @@ public abstract class Pictogram {
     protected Boolean pictogramFlashing;
     protected Boolean pictogramInInverseColour;
     protected Boolean viennaConventionCompliant;
-    protected InformationTypeEnum pictogramInformationType;
+    protected _InformationTypeEnum pictogramInformationType;
     protected GddStructure gddStructure;
     @XmlElement(name = "_pictogramExtension")
-    protected ExtensionType pictogramExtension;
+    protected _ExtensionType _PictogramExtension;
 
     /**
      * Gets the value of the customPictogramCode property.
@@ -188,10 +188,10 @@ public abstract class Pictogram {
      * 
      * @return
      *     possible object is
-     *     {@link InformationTypeEnum }
+     *     {@link _InformationTypeEnum }
      *     
      */
-    public InformationTypeEnum getPictogramInformationType() {
+    public _InformationTypeEnum getPictogramInformationType() {
         return pictogramInformationType;
     }
 
@@ -200,10 +200,10 @@ public abstract class Pictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link InformationTypeEnum }
+     *     {@link _InformationTypeEnum }
      *     
      */
-    public void setPictogramInformationType(InformationTypeEnum value) {
+    public void setPictogramInformationType(_InformationTypeEnum value) {
         this.pictogramInformationType = value;
     }
 
@@ -232,27 +232,27 @@ public abstract class Pictogram {
     }
 
     /**
-     * Gets the value of the pictogramExtension property.
+     * Gets the value of the _PictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPictogramExtension() {
-        return pictogramExtension;
+    public _ExtensionType get_PictogramExtension() {
+        return _PictogramExtension;
     }
 
     /**
-     * Sets the value of the pictogramExtension property.
+     * Sets the value of the _PictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPictogramExtension(ExtensionType value) {
-        this.pictogramExtension = value;
+    public void set_PictogramExtension(_ExtensionType value) {
+        this._PictogramExtension = value;
     }
 
 }

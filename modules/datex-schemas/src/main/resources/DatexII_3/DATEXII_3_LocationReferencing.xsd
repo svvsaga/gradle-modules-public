@@ -902,12 +902,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="NamedArea">
-    <xs:sequence>
-      <xs:element name="areaName" type="com:MultilingualString" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="namedAreaType" type="loc:_NamedAreaTypeEnum" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="country" type="com:CountryCode" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="_namedAreaExtension" type="loc:_NamedAreaExtensionType" minOccurs="0"/>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:extension base="com:NamedArea">
+        <xs:sequence>
+          <xs:element name="areaName" type="com:MultilingualString" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="namedAreaType" type="loc:_NamedAreaTypeEnum" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="country" type="com:CountryCode" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="_namedAreaExtension" type="loc:_NamedAreaExtensionType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:simpleType name="NamedAreaTypeEnum">
     <xs:restriction base="xs:string">

@@ -1,87 +1,83 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _InformationTypeEnum complex type.
+ * <p>Java class for InformationTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_InformationTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;InformationTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="InformationTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="situationInformation"/&gt;
+ *     &lt;enumeration value="warning"/&gt;
+ *     &lt;enumeration value="prohibition"/&gt;
+ *     &lt;enumeration value="obligation"/&gt;
+ *     &lt;enumeration value="destination"/&gt;
+ *     &lt;enumeration value="travelTime"/&gt;
+ *     &lt;enumeration value="delay"/&gt;
+ *     &lt;enumeration value="location"/&gt;
+ *     &lt;enumeration value="vehicleType"/&gt;
+ *     &lt;enumeration value="generalInformation"/&gt;
+ *     &lt;enumeration value="blank"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_InformationTypeEnum", propOrder = {
-    "value"
-})
-public class InformationTypeEnum {
+@XmlType(name = "InformationTypeEnum")
+@XmlEnum
+public enum InformationTypeEnum {
 
-    @XmlValue
-    protected InformationTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("situationInformation")
+    SITUATION_INFORMATION("situationInformation"),
+    @XmlEnumValue("warning")
+    WARNING("warning"),
+    @XmlEnumValue("prohibition")
+    PROHIBITION("prohibition"),
+    @XmlEnumValue("obligation")
+    OBLIGATION("obligation"),
+    @XmlEnumValue("destination")
+    DESTINATION("destination"),
+    @XmlEnumValue("travelTime")
+    TRAVEL_TIME("travelTime"),
+    @XmlEnumValue("delay")
+    DELAY("delay"),
+    @XmlEnumValue("location")
+    LOCATION("location"),
+    @XmlEnumValue("vehicleType")
+    VEHICLE_TYPE("vehicleType"),
+    @XmlEnumValue("generalInformation")
+    GENERAL_INFORMATION("generalInformation"),
+    @XmlEnumValue("blank")
+    BLANK("blank"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InformationTypeEnum2 }
-     *     
-     */
-    public InformationTypeEnum2 getValue() {
+    InformationTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InformationTypeEnum2 }
-     *     
-     */
-    public void setValue(InformationTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static InformationTypeEnum fromValue(String v) {
+        for (InformationTypeEnum c: InformationTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

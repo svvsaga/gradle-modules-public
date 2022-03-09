@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.situation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "comment",
     "commentDateTime",
     "commentType",
-    "commentExtension"
+    "_CommentExtension"
 })
 public class Comment {
 
@@ -46,9 +46,9 @@ public class Comment {
     protected MultilingualString comment;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar commentDateTime;
-    protected CommentTypeEnum commentType;
+    protected _CommentTypeEnum commentType;
     @XmlElement(name = "_commentExtension")
-    protected ExtensionType commentExtension;
+    protected _ExtensionType _CommentExtension;
 
     /**
      * Gets the value of the comment property.
@@ -103,10 +103,10 @@ public class Comment {
      * 
      * @return
      *     possible object is
-     *     {@link CommentTypeEnum }
+     *     {@link _CommentTypeEnum }
      *     
      */
-    public CommentTypeEnum getCommentType() {
+    public _CommentTypeEnum getCommentType() {
         return commentType;
     }
 
@@ -115,35 +115,35 @@ public class Comment {
      * 
      * @param value
      *     allowed object is
-     *     {@link CommentTypeEnum }
+     *     {@link _CommentTypeEnum }
      *     
      */
-    public void setCommentType(CommentTypeEnum value) {
+    public void setCommentType(_CommentTypeEnum value) {
         this.commentType = value;
     }
 
     /**
-     * Gets the value of the commentExtension property.
+     * Gets the value of the _CommentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCommentExtension() {
-        return commentExtension;
+    public _ExtensionType get_CommentExtension() {
+        return _CommentExtension;
     }
 
     /**
-     * Sets the value of the commentExtension property.
+     * Sets the value of the _CommentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCommentExtension(ExtensionType value) {
-        this.commentExtension = value;
+    public void set_CommentExtension(_ExtensionType value) {
+        this._CommentExtension = value;
     }
 
 }

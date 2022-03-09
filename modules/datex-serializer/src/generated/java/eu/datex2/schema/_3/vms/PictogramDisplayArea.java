@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PictogramDisplayArea", propOrder = {
     "pictogramCodeListIdentifier",
     "pictogramNumberOfColours",
-    "pictogramDisplayAreaExtension"
+    "_PictogramDisplayAreaExtension"
 })
 public class PictogramDisplayArea
     extends DisplayArea
@@ -45,7 +45,7 @@ public class PictogramDisplayArea
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pictogramNumberOfColours;
     @XmlElement(name = "_pictogramDisplayAreaExtension")
-    protected ExtensionType pictogramDisplayAreaExtension;
+    protected _ExtensionType _PictogramDisplayAreaExtension;
 
     /**
      * Gets the value of the pictogramCodeListIdentifier property.
@@ -96,27 +96,27 @@ public class PictogramDisplayArea
     }
 
     /**
-     * Gets the value of the pictogramDisplayAreaExtension property.
+     * Gets the value of the _PictogramDisplayAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPictogramDisplayAreaExtension() {
-        return pictogramDisplayAreaExtension;
+    public _ExtensionType get_PictogramDisplayAreaExtension() {
+        return _PictogramDisplayAreaExtension;
     }
 
     /**
-     * Sets the value of the pictogramDisplayAreaExtension property.
+     * Sets the value of the _PictogramDisplayAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPictogramDisplayAreaExtension(ExtensionType value) {
-        this.pictogramDisplayAreaExtension = value;
+    public void set_PictogramDisplayAreaExtension(_ExtensionType value) {
+        this._PictogramDisplayAreaExtension = value;
     }
 
 }

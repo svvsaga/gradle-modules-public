@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,15 +37,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "VmsConfiguration", propOrder = {
     "numberOfDisplayAreas",
     "displayArea",
-    "vmsConfigurationExtension"
+    "_VmsConfigurationExtension"
 })
 public class VmsConfiguration {
 
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfDisplayAreas;
-    protected List<VmsConfigurationDisplayAreaIndexDisplayArea> displayArea;
+    protected List<_VmsConfigurationDisplayAreaIndexDisplayArea> displayArea;
     @XmlElement(name = "_vmsConfigurationExtension")
-    protected ExtensionType vmsConfigurationExtension;
+    protected _ExtensionType _VmsConfigurationExtension;
 
     /**
      * Gets the value of the numberOfDisplayAreas property.
@@ -89,39 +89,39 @@ public class VmsConfiguration {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsConfigurationDisplayAreaIndexDisplayArea }
+     * {@link _VmsConfigurationDisplayAreaIndexDisplayArea }
      * 
      * 
      */
-    public List<VmsConfigurationDisplayAreaIndexDisplayArea> getDisplayArea() {
+    public List<_VmsConfigurationDisplayAreaIndexDisplayArea> getDisplayArea() {
         if (displayArea == null) {
-            displayArea = new ArrayList<VmsConfigurationDisplayAreaIndexDisplayArea>();
+            displayArea = new ArrayList<_VmsConfigurationDisplayAreaIndexDisplayArea>();
         }
         return this.displayArea;
     }
 
     /**
-     * Gets the value of the vmsConfigurationExtension property.
+     * Gets the value of the _VmsConfigurationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsConfigurationExtension() {
-        return vmsConfigurationExtension;
+    public _ExtensionType get_VmsConfigurationExtension() {
+        return _VmsConfigurationExtension;
     }
 
     /**
-     * Sets the value of the vmsConfigurationExtension property.
+     * Sets the value of the _VmsConfigurationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsConfigurationExtension(ExtensionType value) {
-        this.vmsConfigurationExtension = value;
+    public void set_VmsConfigurationExtension(_ExtensionType value) {
+        this._VmsConfigurationExtension = value;
     }
 
 }

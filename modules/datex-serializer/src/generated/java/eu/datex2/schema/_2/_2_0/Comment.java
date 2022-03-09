@@ -46,7 +46,7 @@ public class Comment {
     protected XMLGregorianCalendar commentDateTime;
     @XmlSchemaType(name = "string")
     protected CommentTypeEnum commentType;
-    protected ExtensionType commentExtension;
+    protected _ExtensionType commentExtension;
 
     /**
      * Gets the value of the comment property.
@@ -125,10 +125,10 @@ public class Comment {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCommentExtension() {
+    public _ExtensionType getCommentExtension() {
         return commentExtension;
     }
 
@@ -137,10 +137,10 @@ public class Comment {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCommentExtension(ExtensionType value) {
+    public void setCommentExtension(_ExtensionType value) {
         this.commentExtension = value;
     }
 

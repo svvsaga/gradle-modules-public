@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FrictionValue", propOrder = {
     "friction",
-    "frictionValueExtension"
+    "_FrictionValueExtension"
 })
 public class FrictionValue
     extends DataValue
@@ -38,7 +38,7 @@ public class FrictionValue
 
     protected float friction;
     @XmlElement(name = "_frictionValueExtension")
-    protected ExtensionType frictionValueExtension;
+    protected _ExtensionType _FrictionValueExtension;
 
     /**
      * Gets the value of the friction property.
@@ -57,27 +57,27 @@ public class FrictionValue
     }
 
     /**
-     * Gets the value of the frictionValueExtension property.
+     * Gets the value of the _FrictionValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFrictionValueExtension() {
-        return frictionValueExtension;
+    public _ExtensionType get_FrictionValueExtension() {
+        return _FrictionValueExtension;
     }
 
     /**
-     * Sets the value of the frictionValueExtension property.
+     * Sets the value of the _FrictionValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFrictionValueExtension(ExtensionType value) {
-        this.frictionValueExtension = value;
+    public void set_FrictionValueExtension(_ExtensionType value) {
+        this._FrictionValueExtension = value;
     }
 
 }

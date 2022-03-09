@@ -44,7 +44,7 @@ public class GroupOfVehiclesInvolved {
     @XmlSchemaType(name = "string")
     protected VehicleStatusEnum vehicleStatus;
     protected VehicleCharacteristics vehicleCharacteristics;
-    protected ExtensionType groupOfVehiclesInvolvedExtension;
+    protected _ExtensionType groupOfVehiclesInvolvedExtension;
 
     /**
      * Gets the value of the numberOfVehicles property.
@@ -123,10 +123,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGroupOfVehiclesInvolvedExtension() {
+    public _ExtensionType getGroupOfVehiclesInvolvedExtension() {
         return groupOfVehiclesInvolvedExtension;
     }
 
@@ -135,10 +135,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGroupOfVehiclesInvolvedExtension(ExtensionType value) {
+    public void setGroupOfVehiclesInvolvedExtension(_ExtensionType value) {
         this.groupOfVehiclesInvolvedExtension = value;
     }
 

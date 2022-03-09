@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OpenlrPolygonLocationReference", propOrder = {
     "openlrPolygonCorners",
-    "openlrPolygonLocationReferenceExtension"
+    "_OpenlrPolygonLocationReferenceExtension"
 })
 public class OpenlrPolygonLocationReference
     extends OpenlrAreaLocationReference
@@ -40,7 +40,7 @@ public class OpenlrPolygonLocationReference
     @XmlElement(required = true)
     protected OpenlrPolygonCorners openlrPolygonCorners;
     @XmlElement(name = "_openlrPolygonLocationReferenceExtension")
-    protected ExtensionType openlrPolygonLocationReferenceExtension;
+    protected _ExtensionType _OpenlrPolygonLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrPolygonCorners property.
@@ -67,27 +67,27 @@ public class OpenlrPolygonLocationReference
     }
 
     /**
-     * Gets the value of the openlrPolygonLocationReferenceExtension property.
+     * Gets the value of the _OpenlrPolygonLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPolygonLocationReferenceExtension() {
-        return openlrPolygonLocationReferenceExtension;
+    public _ExtensionType get_OpenlrPolygonLocationReferenceExtension() {
+        return _OpenlrPolygonLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the openlrPolygonLocationReferenceExtension property.
+     * Sets the value of the _OpenlrPolygonLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPolygonLocationReferenceExtension(ExtensionType value) {
-        this.openlrPolygonLocationReferenceExtension = value;
+    public void set_OpenlrPolygonLocationReferenceExtension(_ExtensionType value) {
+        this._OpenlrPolygonLocationReferenceExtension = value;
     }
 
 }

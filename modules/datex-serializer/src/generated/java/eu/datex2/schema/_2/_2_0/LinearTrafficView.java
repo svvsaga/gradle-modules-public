@@ -41,10 +41,10 @@ import jakarta.xml.bind.annotation.XmlType;
 public class LinearTrafficView {
 
     @XmlElement(required = true)
-    protected PredefinedLocationVersionedReference linearPredefinedLocationReference;
+    protected _PredefinedLocationVersionedReference linearPredefinedLocationReference;
     @XmlElement(required = true)
     protected List<TrafficViewRecord> trafficViewRecord;
-    protected ExtensionType linearTrafficViewExtension;
+    protected _ExtensionType linearTrafficViewExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -53,10 +53,10 @@ public class LinearTrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedLocationVersionedReference }
+     *     {@link _PredefinedLocationVersionedReference }
      *     
      */
-    public PredefinedLocationVersionedReference getLinearPredefinedLocationReference() {
+    public _PredefinedLocationVersionedReference getLinearPredefinedLocationReference() {
         return linearPredefinedLocationReference;
     }
 
@@ -65,10 +65,10 @@ public class LinearTrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedLocationVersionedReference }
+     *     {@link _PredefinedLocationVersionedReference }
      *     
      */
-    public void setLinearPredefinedLocationReference(PredefinedLocationVersionedReference value) {
+    public void setLinearPredefinedLocationReference(_PredefinedLocationVersionedReference value) {
         this.linearPredefinedLocationReference = value;
     }
 
@@ -106,10 +106,10 @@ public class LinearTrafficView {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLinearTrafficViewExtension() {
+    public _ExtensionType getLinearTrafficViewExtension() {
         return linearTrafficViewExtension;
     }
 
@@ -118,10 +118,10 @@ public class LinearTrafficView {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLinearTrafficViewExtension(ExtensionType value) {
+    public void setLinearTrafficViewExtension(_ExtensionType value) {
         this.linearTrafficViewExtension = value;
     }
 

@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "minFontWidth",
     "maxFontSpacing",
     "minFontSpacing",
-    "textDisplayAreaExtension"
+    "_TextDisplayAreaExtension"
 })
 public class TextDisplayArea
     extends DisplayArea
@@ -76,7 +76,7 @@ public class TextDisplayArea
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minFontSpacing;
     @XmlElement(name = "_textDisplayAreaExtension")
-    protected ExtensionType textDisplayAreaExtension;
+    protected _ExtensionType _TextDisplayAreaExtension;
 
     /**
      * Gets the value of the proportionalFont property.
@@ -319,27 +319,27 @@ public class TextDisplayArea
     }
 
     /**
-     * Gets the value of the textDisplayAreaExtension property.
+     * Gets the value of the _TextDisplayAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTextDisplayAreaExtension() {
-        return textDisplayAreaExtension;
+    public _ExtensionType get_TextDisplayAreaExtension() {
+        return _TextDisplayAreaExtension;
     }
 
     /**
-     * Sets the value of the textDisplayAreaExtension property.
+     * Sets the value of the _TextDisplayAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTextDisplayAreaExtension(ExtensionType value) {
-        this.textDisplayAreaExtension = value;
+    public void set_TextDisplayAreaExtension(_ExtensionType value) {
+        this._TextDisplayAreaExtension = value;
     }
 
 }

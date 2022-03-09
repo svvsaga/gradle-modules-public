@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,14 +34,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "Lane", propOrder = {
     "laneNumber",
     "laneUsage",
-    "laneExtension"
+    "_LaneExtension"
 })
 public class Lane {
 
     protected BigInteger laneNumber;
-    protected LaneEnum laneUsage;
+    protected _LaneEnum laneUsage;
     @XmlElement(name = "_laneExtension")
-    protected ExtensionType laneExtension;
+    protected _ExtensionType _LaneExtension;
 
     /**
      * Gets the value of the laneNumber property.
@@ -72,10 +72,10 @@ public class Lane {
      * 
      * @return
      *     possible object is
-     *     {@link LaneEnum }
+     *     {@link _LaneEnum }
      *     
      */
-    public LaneEnum getLaneUsage() {
+    public _LaneEnum getLaneUsage() {
         return laneUsage;
     }
 
@@ -84,35 +84,35 @@ public class Lane {
      * 
      * @param value
      *     allowed object is
-     *     {@link LaneEnum }
+     *     {@link _LaneEnum }
      *     
      */
-    public void setLaneUsage(LaneEnum value) {
+    public void setLaneUsage(_LaneEnum value) {
         this.laneUsage = value;
     }
 
     /**
-     * Gets the value of the laneExtension property.
+     * Gets the value of the _LaneExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLaneExtension() {
-        return laneExtension;
+    public _ExtensionType get_LaneExtension() {
+        return _LaneExtension;
     }
 
     /**
-     * Sets the value of the laneExtension property.
+     * Sets the value of the _LaneExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLaneExtension(ExtensionType value) {
-        this.laneExtension = value;
+    public void set_LaneExtension(_ExtensionType value) {
+        this._LaneExtension = value;
     }
 
 }

@@ -41,7 +41,7 @@ public class DirectionBearingValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger directionBearing;
-    protected ExtensionType directionBearingValueExtension;
+    protected _ExtensionType directionBearingValueExtension;
 
     /**
      * Gets the value of the directionBearing property.
@@ -72,10 +72,10 @@ public class DirectionBearingValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDirectionBearingValueExtension() {
+    public _ExtensionType getDirectionBearingValueExtension() {
         return directionBearingValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class DirectionBearingValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDirectionBearingValueExtension(ExtensionType value) {
+    public void setDirectionBearingValueExtension(_ExtensionType value) {
         this.directionBearingValueExtension = value;
     }
 

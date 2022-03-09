@@ -1,87 +1,62 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _PositionXRelativeEnum complex type.
+ * <p>Java class for PositionXRelativeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_PositionXRelativeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;PositionXRelativeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="PositionXRelativeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="toTheLeft"/&gt;
+ *     &lt;enumeration value="alignedOnTheLeftSide"/&gt;
+ *     &lt;enumeration value="centred"/&gt;
+ *     &lt;enumeration value="alignedOnTheRightSide"/&gt;
+ *     &lt;enumeration value="toTheRight"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PositionXRelativeEnum", propOrder = {
-    "value"
-})
-public class PositionXRelativeEnum {
+@XmlType(name = "PositionXRelativeEnum")
+@XmlEnum
+public enum PositionXRelativeEnum {
 
-    @XmlValue
-    protected PositionXRelativeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("toTheLeft")
+    TO_THE_LEFT("toTheLeft"),
+    @XmlEnumValue("alignedOnTheLeftSide")
+    ALIGNED_ON_THE_LEFT_SIDE("alignedOnTheLeftSide"),
+    @XmlEnumValue("centred")
+    CENTRED("centred"),
+    @XmlEnumValue("alignedOnTheRightSide")
+    ALIGNED_ON_THE_RIGHT_SIDE("alignedOnTheRightSide"),
+    @XmlEnumValue("toTheRight")
+    TO_THE_RIGHT("toTheRight"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PositionXRelativeEnum2 }
-     *     
-     */
-    public PositionXRelativeEnum2 getValue() {
+    PositionXRelativeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PositionXRelativeEnum2 }
-     *     
-     */
-    public void setValue(PositionXRelativeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static PositionXRelativeEnum fromValue(String v) {
+        for (PositionXRelativeEnum c: PositionXRelativeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

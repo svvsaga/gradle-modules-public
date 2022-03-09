@@ -35,17 +35,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class VmsSetting {
 
-    protected ExtensionType vmsSettingExtension;
+    protected _ExtensionType vmsSettingExtension;
 
     /**
      * Gets the value of the vmsSettingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsSettingExtension() {
+    public _ExtensionType getVmsSettingExtension() {
         return vmsSettingExtension;
     }
 
@@ -54,10 +54,10 @@ public abstract class VmsSetting {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsSettingExtension(ExtensionType value) {
+    public void setVmsSettingExtension(_ExtensionType value) {
         this.vmsSettingExtension = value;
     }
 

@@ -4,12 +4,12 @@ package eu.datex2.schema._3.situation;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ConfidentialityValueEnum;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.Source;
 import eu.datex2.schema._3.common.UrlLink;
 import eu.datex2.schema._3.common.Validity;
+import eu.datex2.schema._3.common._ConfidentialityValueEnum;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -81,7 +81,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "locationReference",
     "informationManagerOverride",
     "impactOnOppositeDirection",
-    "situationRecordExtension"
+    "_SituationRecordExtension"
 })
 @XmlSeeAlso({
     GenericSituationRecord.class,
@@ -102,10 +102,10 @@ public abstract class SituationRecord {
     protected XMLGregorianCalendar situationRecordVersionTime;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationRecordFirstSupplierVersionTime;
-    protected ConfidentialityValueEnum confidentialityOverride;
+    protected _ConfidentialityValueEnum confidentialityOverride;
     @XmlElement(required = true)
-    protected ProbabilityOfOccurrenceEnum probabilityOfOccurrence;
-    protected SeverityEnum severity;
+    protected _ProbabilityOfOccurrenceEnum probabilityOfOccurrence;
+    protected _SeverityEnum severity;
     protected Boolean safetyRelatedMessage;
     protected Source source;
     @XmlElement(required = true)
@@ -120,7 +120,7 @@ public abstract class SituationRecord {
     protected InternationalIdentifier informationManagerOverride;
     protected Impact impactOnOppositeDirection;
     @XmlElement(name = "_situationRecordExtension")
-    protected ExtensionType situationRecordExtension;
+    protected _ExtensionType _SituationRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -251,10 +251,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ConfidentialityValueEnum }
+     *     {@link _ConfidentialityValueEnum }
      *     
      */
-    public ConfidentialityValueEnum getConfidentialityOverride() {
+    public _ConfidentialityValueEnum getConfidentialityOverride() {
         return confidentialityOverride;
     }
 
@@ -263,10 +263,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ConfidentialityValueEnum }
+     *     {@link _ConfidentialityValueEnum }
      *     
      */
-    public void setConfidentialityOverride(ConfidentialityValueEnum value) {
+    public void setConfidentialityOverride(_ConfidentialityValueEnum value) {
         this.confidentialityOverride = value;
     }
 
@@ -275,10 +275,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ProbabilityOfOccurrenceEnum }
+     *     {@link _ProbabilityOfOccurrenceEnum }
      *     
      */
-    public ProbabilityOfOccurrenceEnum getProbabilityOfOccurrence() {
+    public _ProbabilityOfOccurrenceEnum getProbabilityOfOccurrence() {
         return probabilityOfOccurrence;
     }
 
@@ -287,10 +287,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ProbabilityOfOccurrenceEnum }
+     *     {@link _ProbabilityOfOccurrenceEnum }
      *     
      */
-    public void setProbabilityOfOccurrence(ProbabilityOfOccurrenceEnum value) {
+    public void setProbabilityOfOccurrence(_ProbabilityOfOccurrenceEnum value) {
         this.probabilityOfOccurrence = value;
     }
 
@@ -299,10 +299,10 @@ public abstract class SituationRecord {
      * 
      * @return
      *     possible object is
-     *     {@link SeverityEnum }
+     *     {@link _SeverityEnum }
      *     
      */
-    public SeverityEnum getSeverity() {
+    public _SeverityEnum getSeverity() {
         return severity;
     }
 
@@ -311,10 +311,10 @@ public abstract class SituationRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link SeverityEnum }
+     *     {@link _SeverityEnum }
      *     
      */
-    public void setSeverity(SeverityEnum value) {
+    public void setSeverity(_SeverityEnum value) {
         this.severity = value;
     }
 
@@ -598,27 +598,27 @@ public abstract class SituationRecord {
     }
 
     /**
-     * Gets the value of the situationRecordExtension property.
+     * Gets the value of the _SituationRecordExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationRecordExtension() {
-        return situationRecordExtension;
+    public _ExtensionType get_SituationRecordExtension() {
+        return _SituationRecordExtension;
     }
 
     /**
-     * Sets the value of the situationRecordExtension property.
+     * Sets the value of the _SituationRecordExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationRecordExtension(ExtensionType value) {
-        this.situationRecordExtension = value;
+    public void set_SituationRecordExtension(_ExtensionType value) {
+        this._SituationRecordExtension = value;
     }
 
     /**

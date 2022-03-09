@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "InternationalIdentifier", propOrder = {
     "country",
     "nationalIdentifier",
-    "internationalIdentifierExtension"
+    "_InternationalIdentifierExtension"
 })
 public class InternationalIdentifier {
 
@@ -41,7 +41,7 @@ public class InternationalIdentifier {
     @XmlElement(required = true)
     protected String nationalIdentifier;
     @XmlElement(name = "_internationalIdentifierExtension")
-    protected ExtensionType internationalIdentifierExtension;
+    protected _ExtensionType _InternationalIdentifierExtension;
 
     /**
      * Gets the value of the country property.
@@ -92,27 +92,27 @@ public class InternationalIdentifier {
     }
 
     /**
-     * Gets the value of the internationalIdentifierExtension property.
+     * Gets the value of the _InternationalIdentifierExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getInternationalIdentifierExtension() {
-        return internationalIdentifierExtension;
+    public _ExtensionType get_InternationalIdentifierExtension() {
+        return _InternationalIdentifierExtension;
     }
 
     /**
-     * Sets the value of the internationalIdentifierExtension property.
+     * Sets the value of the _InternationalIdentifierExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setInternationalIdentifierExtension(ExtensionType value) {
-        this.internationalIdentifierExtension = value;
+    public void set_InternationalIdentifierExtension(_ExtensionType value) {
+        this._InternationalIdentifierExtension = value;
     }
 
 }

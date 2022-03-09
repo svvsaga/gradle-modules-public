@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.alertclocationcodetableextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.PointCoordinates;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -67,14 +67,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "type",
     "subType",
     "pointCoordinates",
-    "alertCLocationCodeRowExtension"
+    "_AlertCLocationCodeRowExtension"
 })
 public class AlertCLocationCodeRow {
 
     @XmlElement(required = true)
     protected BigInteger locationCode;
     @XmlElement(required = true)
-    protected LocationCodeClassTypeEnum typeClass;
+    protected _LocationCodeClassTypeEnum typeClass;
     @XmlElement(required = true)
     protected BigInteger typeCode;
     @XmlElement(required = true)
@@ -92,11 +92,11 @@ public class AlertCLocationCodeRow {
     protected String junctionNumber;
     protected String remoteTargetNegativeOffset;
     protected String remoteTargetPositiveOffset;
-    protected LocationCodeTypeEnum type;
-    protected LocationCodeSubTypeEnum subType;
+    protected _LocationCodeTypeEnum type;
+    protected _LocationCodeSubTypeEnum subType;
     protected PointCoordinates pointCoordinates;
     @XmlElement(name = "_alertCLocationCodeRowExtension")
-    protected ExtensionType alertCLocationCodeRowExtension;
+    protected _ExtensionType _AlertCLocationCodeRowExtension;
 
     /**
      * Gets the value of the locationCode property.
@@ -127,10 +127,10 @@ public class AlertCLocationCodeRow {
      * 
      * @return
      *     possible object is
-     *     {@link LocationCodeClassTypeEnum }
+     *     {@link _LocationCodeClassTypeEnum }
      *     
      */
-    public LocationCodeClassTypeEnum getTypeClass() {
+    public _LocationCodeClassTypeEnum getTypeClass() {
         return typeClass;
     }
 
@@ -139,10 +139,10 @@ public class AlertCLocationCodeRow {
      * 
      * @param value
      *     allowed object is
-     *     {@link LocationCodeClassTypeEnum }
+     *     {@link _LocationCodeClassTypeEnum }
      *     
      */
-    public void setTypeClass(LocationCodeClassTypeEnum value) {
+    public void setTypeClass(_LocationCodeClassTypeEnum value) {
         this.typeClass = value;
     }
 
@@ -463,10 +463,10 @@ public class AlertCLocationCodeRow {
      * 
      * @return
      *     possible object is
-     *     {@link LocationCodeTypeEnum }
+     *     {@link _LocationCodeTypeEnum }
      *     
      */
-    public LocationCodeTypeEnum getType() {
+    public _LocationCodeTypeEnum getType() {
         return type;
     }
 
@@ -475,10 +475,10 @@ public class AlertCLocationCodeRow {
      * 
      * @param value
      *     allowed object is
-     *     {@link LocationCodeTypeEnum }
+     *     {@link _LocationCodeTypeEnum }
      *     
      */
-    public void setType(LocationCodeTypeEnum value) {
+    public void setType(_LocationCodeTypeEnum value) {
         this.type = value;
     }
 
@@ -487,10 +487,10 @@ public class AlertCLocationCodeRow {
      * 
      * @return
      *     possible object is
-     *     {@link LocationCodeSubTypeEnum }
+     *     {@link _LocationCodeSubTypeEnum }
      *     
      */
-    public LocationCodeSubTypeEnum getSubType() {
+    public _LocationCodeSubTypeEnum getSubType() {
         return subType;
     }
 
@@ -499,10 +499,10 @@ public class AlertCLocationCodeRow {
      * 
      * @param value
      *     allowed object is
-     *     {@link LocationCodeSubTypeEnum }
+     *     {@link _LocationCodeSubTypeEnum }
      *     
      */
-    public void setSubType(LocationCodeSubTypeEnum value) {
+    public void setSubType(_LocationCodeSubTypeEnum value) {
         this.subType = value;
     }
 
@@ -531,27 +531,27 @@ public class AlertCLocationCodeRow {
     }
 
     /**
-     * Gets the value of the alertCLocationCodeRowExtension property.
+     * Gets the value of the _AlertCLocationCodeRowExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLocationCodeRowExtension() {
-        return alertCLocationCodeRowExtension;
+    public _ExtensionType get_AlertCLocationCodeRowExtension() {
+        return _AlertCLocationCodeRowExtension;
     }
 
     /**
-     * Sets the value of the alertCLocationCodeRowExtension property.
+     * Sets the value of the _AlertCLocationCodeRowExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLocationCodeRowExtension(ExtensionType value) {
-        this.alertCLocationCodeRowExtension = value;
+    public void set_AlertCLocationCodeRowExtension(_ExtensionType value) {
+        this._AlertCLocationCodeRowExtension = value;
     }
 
 }

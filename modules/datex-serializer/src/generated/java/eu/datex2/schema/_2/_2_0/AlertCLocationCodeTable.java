@@ -62,7 +62,7 @@ public class AlertCLocationCodeTable {
     protected XMLGregorianCalendar releaseDate;
     @XmlElement(required = true)
     protected List<AlertCLocationCodeRow> alertCLocationCodeRow;
-    protected ExtensionType alertCLocationCodeTableExtension;
+    protected _ExtensionType alertCLocationCodeTableExtension;
 
     /**
      * Gets the value of the countryId property.
@@ -218,10 +218,10 @@ public class AlertCLocationCodeTable {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLocationCodeTableExtension() {
+    public _ExtensionType getAlertCLocationCodeTableExtension() {
         return alertCLocationCodeTableExtension;
     }
 
@@ -230,10 +230,10 @@ public class AlertCLocationCodeTable {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLocationCodeTableExtension(ExtensionType value) {
+    public void setAlertCLocationCodeTableExtension(_ExtensionType value) {
         this.alertCLocationCodeTableExtension = value;
     }
 

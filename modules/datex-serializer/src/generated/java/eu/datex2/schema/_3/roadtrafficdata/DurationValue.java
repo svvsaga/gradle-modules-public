@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DurationValue", propOrder = {
     "duration",
-    "durationValueExtension"
+    "_DurationValueExtension"
 })
 public class DurationValue
     extends DataValue
@@ -40,7 +40,7 @@ public class DurationValue
 
     protected float duration;
     @XmlElement(name = "_durationValueExtension")
-    protected ExtensionType durationValueExtension;
+    protected _ExtensionType _DurationValueExtension;
 
     /**
      * Gets the value of the duration property.
@@ -59,27 +59,27 @@ public class DurationValue
     }
 
     /**
-     * Gets the value of the durationValueExtension property.
+     * Gets the value of the _DurationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDurationValueExtension() {
-        return durationValueExtension;
+    public _ExtensionType get_DurationValueExtension() {
+        return _DurationValueExtension;
     }
 
     /**
-     * Sets the value of the durationValueExtension property.
+     * Sets the value of the _DurationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDurationValueExtension(ExtensionType value) {
-        this.durationValueExtension = value;
+    public void set_DurationValueExtension(_ExtensionType value) {
+        this._DurationValueExtension = value;
     }
 
 }

@@ -2,9 +2,9 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Period;
-import eu.datex2.schema._3.common.TimePrecisionEnum2;
+import eu.datex2.schema._3.common.TimePrecisionEnum;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,28 +41,28 @@ import jakarta.xml.bind.annotation.XmlType;
     "timeMeaning",
     "timeValue",
     "period",
-    "measurementOrCalculationTimeExtension"
+    "_MeasurementOrCalculationTimeExtension"
 })
 public class MeasurementOrCalculationTime {
 
-    protected TimeMeaningEnum timeMeaning;
+    protected _TimeMeaningEnum timeMeaning;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timeValue;
     protected Period period;
     @XmlElement(name = "_measurementOrCalculationTimeExtension")
-    protected ExtensionType measurementOrCalculationTimeExtension;
+    protected _ExtensionType _MeasurementOrCalculationTimeExtension;
     @XmlAttribute(name = "timePrecision")
-    protected TimePrecisionEnum2 timePrecision;
+    protected TimePrecisionEnum timePrecision;
 
     /**
      * Gets the value of the timeMeaning property.
      * 
      * @return
      *     possible object is
-     *     {@link TimeMeaningEnum }
+     *     {@link _TimeMeaningEnum }
      *     
      */
-    public TimeMeaningEnum getTimeMeaning() {
+    public _TimeMeaningEnum getTimeMeaning() {
         return timeMeaning;
     }
 
@@ -71,10 +71,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @param value
      *     allowed object is
-     *     {@link TimeMeaningEnum }
+     *     {@link _TimeMeaningEnum }
      *     
      */
-    public void setTimeMeaning(TimeMeaningEnum value) {
+    public void setTimeMeaning(_TimeMeaningEnum value) {
         this.timeMeaning = value;
     }
 
@@ -127,27 +127,27 @@ public class MeasurementOrCalculationTime {
     }
 
     /**
-     * Gets the value of the measurementOrCalculationTimeExtension property.
+     * Gets the value of the _MeasurementOrCalculationTimeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementOrCalculationTimeExtension() {
-        return measurementOrCalculationTimeExtension;
+    public _ExtensionType get_MeasurementOrCalculationTimeExtension() {
+        return _MeasurementOrCalculationTimeExtension;
     }
 
     /**
-     * Sets the value of the measurementOrCalculationTimeExtension property.
+     * Sets the value of the _MeasurementOrCalculationTimeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementOrCalculationTimeExtension(ExtensionType value) {
-        this.measurementOrCalculationTimeExtension = value;
+    public void set_MeasurementOrCalculationTimeExtension(_ExtensionType value) {
+        this._MeasurementOrCalculationTimeExtension = value;
     }
 
     /**
@@ -155,10 +155,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @return
      *     possible object is
-     *     {@link TimePrecisionEnum2 }
+     *     {@link TimePrecisionEnum }
      *     
      */
-    public TimePrecisionEnum2 getTimePrecision() {
+    public TimePrecisionEnum getTimePrecision() {
         return timePrecision;
     }
 
@@ -167,10 +167,10 @@ public class MeasurementOrCalculationTime {
      * 
      * @param value
      *     allowed object is
-     *     {@link TimePrecisionEnum2 }
+     *     {@link TimePrecisionEnum }
      *     
      */
-    public void setTimePrecision(TimePrecisionEnum2 value) {
+    public void setTimePrecision(TimePrecisionEnum value) {
         this.timePrecision = value;
     }
 

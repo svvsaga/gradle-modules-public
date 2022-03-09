@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AxleSpacing", propOrder = {
     "axleSpacing",
     "axleSpacingSequenceIdentifier",
-    "axleSpacingExtension"
+    "_AxleSpacingExtension"
 })
 public class AxleSpacing {
 
@@ -43,7 +43,7 @@ public class AxleSpacing {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger axleSpacingSequenceIdentifier;
     @XmlElement(name = "_axleSpacingExtension")
-    protected ExtensionType axleSpacingExtension;
+    protected _ExtensionType _AxleSpacingExtension;
 
     /**
      * Gets the value of the axleSpacing property.
@@ -86,27 +86,27 @@ public class AxleSpacing {
     }
 
     /**
-     * Gets the value of the axleSpacingExtension property.
+     * Gets the value of the _AxleSpacingExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAxleSpacingExtension() {
-        return axleSpacingExtension;
+    public _ExtensionType get_AxleSpacingExtension() {
+        return _AxleSpacingExtension;
     }
 
     /**
-     * Sets the value of the axleSpacingExtension property.
+     * Sets the value of the _AxleSpacingExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAxleSpacingExtension(ExtensionType value) {
-        this.axleSpacingExtension = value;
+    public void set_AxleSpacingExtension(_ExtensionType value) {
+        this._AxleSpacingExtension = value;
     }
 
 }

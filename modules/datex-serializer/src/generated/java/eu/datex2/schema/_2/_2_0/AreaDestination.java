@@ -38,7 +38,7 @@ public class AreaDestination
 
     @XmlElement(required = true)
     protected Area area;
-    protected ExtensionType areaDestinationExtension;
+    protected _ExtensionType areaDestinationExtension;
 
     /**
      * Gets the value of the area property.
@@ -69,10 +69,10 @@ public class AreaDestination
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAreaDestinationExtension() {
+    public _ExtensionType getAreaDestinationExtension() {
         return areaDestinationExtension;
     }
 
@@ -81,10 +81,10 @@ public class AreaDestination
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAreaDestinationExtension(ExtensionType value) {
+    public void setAreaDestinationExtension(_ExtensionType value) {
         this.areaDestinationExtension = value;
     }
 

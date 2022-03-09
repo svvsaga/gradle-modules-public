@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.SpeedValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "normallyExpectedSpeed",
     "minimumSpeed",
     "maximumSpeed",
-    "trafficSpeedExtension"
+    "_TrafficSpeedExtension"
 })
 public class TrafficSpeed
     extends TrafficData
@@ -54,7 +54,7 @@ public class TrafficSpeed
     protected SpeedValue minimumSpeed;
     protected SpeedValue maximumSpeed;
     @XmlElement(name = "_trafficSpeedExtension")
-    protected ExtensionType trafficSpeedExtension;
+    protected _ExtensionType _TrafficSpeedExtension;
 
     /**
      * Gets the value of the averageVehicleSpeed property.
@@ -182,27 +182,27 @@ public class TrafficSpeed
     }
 
     /**
-     * Gets the value of the trafficSpeedExtension property.
+     * Gets the value of the _TrafficSpeedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficSpeedExtension() {
-        return trafficSpeedExtension;
+    public _ExtensionType get_TrafficSpeedExtension() {
+        return _TrafficSpeedExtension;
     }
 
     /**
-     * Sets the value of the trafficSpeedExtension property.
+     * Sets the value of the _TrafficSpeedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficSpeedExtension(ExtensionType value) {
-        this.trafficSpeedExtension = value;
+    public void set_TrafficSpeedExtension(_ExtensionType value) {
+        this._TrafficSpeedExtension = value;
     }
 
 }

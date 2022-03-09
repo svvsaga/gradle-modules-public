@@ -40,7 +40,7 @@ public class PublicEvent
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected PublicEventTypeEnum publicEventType;
-    protected ExtensionType publicEventExtension;
+    protected _ExtensionType publicEventExtension;
 
     /**
      * Gets the value of the publicEventType property.
@@ -71,10 +71,10 @@ public class PublicEvent
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPublicEventExtension() {
+    public _ExtensionType getPublicEventExtension() {
         return publicEventExtension;
     }
 
@@ -83,10 +83,10 @@ public class PublicEvent
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPublicEventExtension(ExtensionType value) {
+    public void setPublicEventExtension(_ExtensionType value) {
         this.publicEventExtension = value;
     }
 

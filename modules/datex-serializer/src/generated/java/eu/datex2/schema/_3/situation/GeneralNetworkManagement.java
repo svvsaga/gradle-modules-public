@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,27 +33,27 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GeneralNetworkManagement", propOrder = {
     "generalNetworkManagementType",
     "trafficManuallyDirectedBy",
-    "generalNetworkManagementExtension"
+    "_GeneralNetworkManagementExtension"
 })
 public class GeneralNetworkManagement
     extends NetworkManagement
 {
 
     @XmlElement(required = true)
-    protected GeneralNetworkManagementTypeEnum generalNetworkManagementType;
-    protected PersonCategoryEnum trafficManuallyDirectedBy;
+    protected _GeneralNetworkManagementTypeEnum generalNetworkManagementType;
+    protected _PersonCategoryEnum trafficManuallyDirectedBy;
     @XmlElement(name = "_generalNetworkManagementExtension")
-    protected ExtensionType generalNetworkManagementExtension;
+    protected _ExtensionType _GeneralNetworkManagementExtension;
 
     /**
      * Gets the value of the generalNetworkManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link GeneralNetworkManagementTypeEnum }
+     *     {@link _GeneralNetworkManagementTypeEnum }
      *     
      */
-    public GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
+    public _GeneralNetworkManagementTypeEnum getGeneralNetworkManagementType() {
         return generalNetworkManagementType;
     }
 
@@ -62,10 +62,10 @@ public class GeneralNetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link GeneralNetworkManagementTypeEnum }
+     *     {@link _GeneralNetworkManagementTypeEnum }
      *     
      */
-    public void setGeneralNetworkManagementType(GeneralNetworkManagementTypeEnum value) {
+    public void setGeneralNetworkManagementType(_GeneralNetworkManagementTypeEnum value) {
         this.generalNetworkManagementType = value;
     }
 
@@ -74,10 +74,10 @@ public class GeneralNetworkManagement
      * 
      * @return
      *     possible object is
-     *     {@link PersonCategoryEnum }
+     *     {@link _PersonCategoryEnum }
      *     
      */
-    public PersonCategoryEnum getTrafficManuallyDirectedBy() {
+    public _PersonCategoryEnum getTrafficManuallyDirectedBy() {
         return trafficManuallyDirectedBy;
     }
 
@@ -86,35 +86,35 @@ public class GeneralNetworkManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link PersonCategoryEnum }
+     *     {@link _PersonCategoryEnum }
      *     
      */
-    public void setTrafficManuallyDirectedBy(PersonCategoryEnum value) {
+    public void setTrafficManuallyDirectedBy(_PersonCategoryEnum value) {
         this.trafficManuallyDirectedBy = value;
     }
 
     /**
-     * Gets the value of the generalNetworkManagementExtension property.
+     * Gets the value of the _GeneralNetworkManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGeneralNetworkManagementExtension() {
-        return generalNetworkManagementExtension;
+    public _ExtensionType get_GeneralNetworkManagementExtension() {
+        return _GeneralNetworkManagementExtension;
     }
 
     /**
-     * Sets the value of the generalNetworkManagementExtension property.
+     * Sets the value of the _GeneralNetworkManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGeneralNetworkManagementExtension(ExtensionType value) {
-        this.generalNetworkManagementExtension = value;
+    public void set_GeneralNetworkManagementExtension(_ExtensionType value) {
+        this._GeneralNetworkManagementExtension = value;
     }
 
 }

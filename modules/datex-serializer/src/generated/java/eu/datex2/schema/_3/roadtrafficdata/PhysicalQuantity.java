@@ -3,10 +3,10 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.Source;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.LocationReference;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -48,7 +48,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "physicalQuantityFault",
     "source",
     "informationManagerOverride",
-    "physicalQuantityExtension"
+    "_PhysicalQuantityExtension"
 })
 @XmlSeeAlso({
     SinglePhysicalQuantity.class,
@@ -63,7 +63,7 @@ public abstract class PhysicalQuantity {
     protected Source source;
     protected InternationalIdentifier informationManagerOverride;
     @XmlElement(name = "_physicalQuantityExtension")
-    protected ExtensionType physicalQuantityExtension;
+    protected _ExtensionType _PhysicalQuantityExtension;
 
     /**
      * Gets the value of the forecast property.
@@ -215,27 +215,27 @@ public abstract class PhysicalQuantity {
     }
 
     /**
-     * Gets the value of the physicalQuantityExtension property.
+     * Gets the value of the _PhysicalQuantityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPhysicalQuantityExtension() {
-        return physicalQuantityExtension;
+    public _ExtensionType get_PhysicalQuantityExtension() {
+        return _PhysicalQuantityExtension;
     }
 
     /**
-     * Sets the value of the physicalQuantityExtension property.
+     * Sets the value of the _PhysicalQuantityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPhysicalQuantityExtension(ExtensionType value) {
-        this.physicalQuantityExtension = value;
+    public void set_PhysicalQuantityExtension(_ExtensionType value) {
+        this._PhysicalQuantityExtension = value;
     }
 
 }

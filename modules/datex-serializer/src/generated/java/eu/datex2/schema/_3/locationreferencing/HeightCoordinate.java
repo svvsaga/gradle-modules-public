@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,16 +37,16 @@ import jakarta.xml.bind.annotation.XmlType;
     "heightType",
     "altitudeConfidence",
     "verticalPositionAccuracy",
-    "heightCoordinateExtension"
+    "_HeightCoordinateExtension"
 })
 public class HeightCoordinate {
 
     protected float heightValue;
-    protected HeightTypeEnum heightType;
+    protected _HeightTypeEnum heightType;
     protected AltitudeConfidence altitudeConfidence;
     protected PositionAccuracy verticalPositionAccuracy;
     @XmlElement(name = "_heightCoordinateExtension")
-    protected ExtensionType heightCoordinateExtension;
+    protected _ExtensionType _HeightCoordinateExtension;
 
     /**
      * Gets the value of the heightValue property.
@@ -69,10 +69,10 @@ public class HeightCoordinate {
      * 
      * @return
      *     possible object is
-     *     {@link HeightTypeEnum }
+     *     {@link _HeightTypeEnum }
      *     
      */
-    public HeightTypeEnum getHeightType() {
+    public _HeightTypeEnum getHeightType() {
         return heightType;
     }
 
@@ -81,10 +81,10 @@ public class HeightCoordinate {
      * 
      * @param value
      *     allowed object is
-     *     {@link HeightTypeEnum }
+     *     {@link _HeightTypeEnum }
      *     
      */
-    public void setHeightType(HeightTypeEnum value) {
+    public void setHeightType(_HeightTypeEnum value) {
         this.heightType = value;
     }
 
@@ -137,27 +137,27 @@ public class HeightCoordinate {
     }
 
     /**
-     * Gets the value of the heightCoordinateExtension property.
+     * Gets the value of the _HeightCoordinateExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHeightCoordinateExtension() {
-        return heightCoordinateExtension;
+    public _ExtensionType get_HeightCoordinateExtension() {
+        return _HeightCoordinateExtension;
     }
 
     /**
-     * Sets the value of the heightCoordinateExtension property.
+     * Sets the value of the _HeightCoordinateExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHeightCoordinateExtension(ExtensionType value) {
-        this.heightCoordinateExtension = value;
+    public void set_HeightCoordinateExtension(_ExtensionType value) {
+        this._HeightCoordinateExtension = value;
     }
 
 }

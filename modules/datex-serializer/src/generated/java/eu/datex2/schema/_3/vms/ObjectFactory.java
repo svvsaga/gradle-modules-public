@@ -30,259 +30,259 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ColourEnum }
+     * Create an instance of {@link _ColourEnum }
      * 
      */
-    public ColourEnum createColourEnum() {
-        return new ColourEnum();
+    public _ColourEnum create_ColourEnum() {
+        return new _ColourEnum();
     }
 
     /**
-     * Create an instance of {@link CompositePictogramEnum }
+     * Create an instance of {@link _CompositePictogramEnum }
      * 
      */
-    public CompositePictogramEnum createCompositePictogramEnum() {
-        return new CompositePictogramEnum();
+    public _CompositePictogramEnum create_CompositePictogramEnum() {
+        return new _CompositePictogramEnum();
     }
 
     /**
-     * Create an instance of {@link DedicatedUsageEnum }
+     * Create an instance of {@link _DedicatedUsageEnum }
      * 
      */
-    public DedicatedUsageEnum createDedicatedUsageEnum() {
-        return new DedicatedUsageEnum();
+    public _DedicatedUsageEnum create_DedicatedUsageEnum() {
+        return new _DedicatedUsageEnum();
     }
 
     /**
-     * Create an instance of {@link DisplayedNumericalInformationTypeEnum }
+     * Create an instance of {@link _DisplayedNumericalInformationTypeEnum }
      * 
      */
-    public DisplayedNumericalInformationTypeEnum createDisplayedNumericalInformationTypeEnum() {
-        return new DisplayedNumericalInformationTypeEnum();
+    public _DisplayedNumericalInformationTypeEnum create_DisplayedNumericalInformationTypeEnum() {
+        return new _DisplayedNumericalInformationTypeEnum();
     }
 
     /**
-     * Create an instance of {@link GddServiceCategoryEnum }
+     * Create an instance of {@link _GddServiceCategoryEnum }
      * 
      */
-    public GddServiceCategoryEnum createGddServiceCategoryEnum() {
-        return new GddServiceCategoryEnum();
+    public _GddServiceCategoryEnum create_GddServiceCategoryEnum() {
+        return new _GddServiceCategoryEnum();
     }
 
     /**
-     * Create an instance of {@link ImageFormatEnum }
+     * Create an instance of {@link _ImageFormatEnum }
      * 
      */
-    public ImageFormatEnum createImageFormatEnum() {
-        return new ImageFormatEnum();
+    public _ImageFormatEnum create_ImageFormatEnum() {
+        return new _ImageFormatEnum();
     }
 
     /**
-     * Create an instance of {@link InformationTypeEnum }
+     * Create an instance of {@link _InformationTypeEnum }
      * 
      */
-    public InformationTypeEnum createInformationTypeEnum() {
-        return new InformationTypeEnum();
+    public _InformationTypeEnum create_InformationTypeEnum() {
+        return new _InformationTypeEnum();
     }
 
     /**
-     * Create an instance of {@link MessageInformationTypeEnum }
+     * Create an instance of {@link _MessageInformationTypeEnum }
      * 
      */
-    public MessageInformationTypeEnum createMessageInformationTypeEnum() {
-        return new MessageInformationTypeEnum();
+    public _MessageInformationTypeEnum create_MessageInformationTypeEnum() {
+        return new _MessageInformationTypeEnum();
     }
 
     /**
-     * Create an instance of {@link MultiPageDisplayPageNumberDisplayAreaSettings }
+     * Create an instance of {@link _MultiPageDisplayPageNumberDisplayAreaSettings }
      * 
      */
-    public MultiPageDisplayPageNumberDisplayAreaSettings createMultiPageDisplayPageNumberDisplayAreaSettings() {
-        return new MultiPageDisplayPageNumberDisplayAreaSettings();
+    public _MultiPageDisplayPageNumberDisplayAreaSettings create_MultiPageDisplayPageNumberDisplayAreaSettings() {
+        return new _MultiPageDisplayPageNumberDisplayAreaSettings();
     }
 
     /**
-     * Create an instance of {@link PhysicalSupportEnum }
+     * Create an instance of {@link _PhysicalSupportEnum }
      * 
      */
-    public PhysicalSupportEnum createPhysicalSupportEnum() {
-        return new PhysicalSupportEnum();
+    public _PhysicalSupportEnum create_PhysicalSupportEnum() {
+        return new _PhysicalSupportEnum();
     }
 
     /**
-     * Create an instance of {@link PictogramEnum }
+     * Create an instance of {@link _PictogramEnum }
      * 
      */
-    public PictogramEnum createPictogramEnum() {
-        return new PictogramEnum();
+    public _PictogramEnum create_PictogramEnum() {
+        return new _PictogramEnum();
     }
 
     /**
-     * Create an instance of {@link PositionXAbsoluteEnum }
+     * Create an instance of {@link _PositionXAbsoluteEnum }
      * 
      */
-    public PositionXAbsoluteEnum createPositionXAbsoluteEnum() {
-        return new PositionXAbsoluteEnum();
+    public _PositionXAbsoluteEnum create_PositionXAbsoluteEnum() {
+        return new _PositionXAbsoluteEnum();
     }
 
     /**
-     * Create an instance of {@link PositionXRelativeEnum }
+     * Create an instance of {@link _PositionXRelativeEnum }
      * 
      */
-    public PositionXRelativeEnum createPositionXRelativeEnum() {
-        return new PositionXRelativeEnum();
+    public _PositionXRelativeEnum create_PositionXRelativeEnum() {
+        return new _PositionXRelativeEnum();
     }
 
     /**
-     * Create an instance of {@link PositionYAbsoluteEnum }
+     * Create an instance of {@link _PositionYAbsoluteEnum }
      * 
      */
-    public PositionYAbsoluteEnum createPositionYAbsoluteEnum() {
-        return new PositionYAbsoluteEnum();
+    public _PositionYAbsoluteEnum create_PositionYAbsoluteEnum() {
+        return new _PositionYAbsoluteEnum();
     }
 
     /**
-     * Create an instance of {@link PositionYRelativeEnum }
+     * Create an instance of {@link _PositionYRelativeEnum }
      * 
      */
-    public PositionYRelativeEnum createPositionYRelativeEnum() {
-        return new PositionYRelativeEnum();
+    public _PositionYRelativeEnum create_PositionYRelativeEnum() {
+        return new _PositionYRelativeEnum();
     }
 
     /**
-     * Create an instance of {@link SettingReasonEnum }
+     * Create an instance of {@link _SettingReasonEnum }
      * 
      */
-    public SettingReasonEnum createSettingReasonEnum() {
-        return new SettingReasonEnum();
+    public _SettingReasonEnum create_SettingReasonEnum() {
+        return new _SettingReasonEnum();
     }
 
     /**
-     * Create an instance of {@link SituationRecordVersionedReference }
+     * Create an instance of {@link _SituationRecordVersionedReference }
      * 
      */
-    public SituationRecordVersionedReference createSituationRecordVersionedReference() {
-        return new SituationRecordVersionedReference();
+    public _SituationRecordVersionedReference create_SituationRecordVersionedReference() {
+        return new _SituationRecordVersionedReference();
     }
 
     /**
-     * Create an instance of {@link SituationVersionedReference }
+     * Create an instance of {@link _SituationVersionedReference }
      * 
      */
-    public SituationVersionedReference createSituationVersionedReference() {
-        return new SituationVersionedReference();
+    public _SituationVersionedReference create_SituationVersionedReference() {
+        return new _SituationVersionedReference();
     }
 
     /**
-     * Create an instance of {@link SupplementalPictogramEnum }
+     * Create an instance of {@link _SupplementalPictogramEnum }
      * 
      */
-    public SupplementalPictogramEnum createSupplementalPictogramEnum() {
-        return new SupplementalPictogramEnum();
+    public _SupplementalPictogramEnum create_SupplementalPictogramEnum() {
+        return new _SupplementalPictogramEnum();
     }
 
     /**
-     * Create an instance of {@link TextDisplayLineIndexTextLine }
+     * Create an instance of {@link _TextDisplayLineIndexTextLine }
      * 
      */
-    public TextDisplayLineIndexTextLine createTextDisplayLineIndexTextLine() {
-        return new TextDisplayLineIndexTextLine();
+    public _TextDisplayLineIndexTextLine create_TextDisplayLineIndexTextLine() {
+        return new _TextDisplayLineIndexTextLine();
     }
 
     /**
-     * Create an instance of {@link UnitOfMeasureEnum }
+     * Create an instance of {@link _UnitOfMeasureEnum }
      * 
      */
-    public UnitOfMeasureEnum createUnitOfMeasureEnum() {
-        return new UnitOfMeasureEnum();
+    public _UnitOfMeasureEnum create_UnitOfMeasureEnum() {
+        return new _UnitOfMeasureEnum();
     }
 
     /**
-     * Create an instance of {@link VmsConfigurationDisplayAreaIndexDisplayArea }
+     * Create an instance of {@link _VmsConfigurationDisplayAreaIndexDisplayArea }
      * 
      */
-    public VmsConfigurationDisplayAreaIndexDisplayArea createVmsConfigurationDisplayAreaIndexDisplayArea() {
-        return new VmsConfigurationDisplayAreaIndexDisplayArea();
+    public _VmsConfigurationDisplayAreaIndexDisplayArea create_VmsConfigurationDisplayAreaIndexDisplayArea() {
+        return new _VmsConfigurationDisplayAreaIndexDisplayArea();
     }
 
     /**
-     * Create an instance of {@link VmsControllerFaultEnum }
+     * Create an instance of {@link _VmsControllerFaultEnum }
      * 
      */
-    public VmsControllerFaultEnum createVmsControllerFaultEnum() {
-        return new VmsControllerFaultEnum();
+    public _VmsControllerFaultEnum create_VmsControllerFaultEnum() {
+        return new _VmsControllerFaultEnum();
     }
 
     /**
-     * Create an instance of {@link VmsControllerStatusVmsIndexVmsStatus }
+     * Create an instance of {@link _VmsControllerStatusVmsIndexVmsStatus }
      * 
      */
-    public VmsControllerStatusVmsIndexVmsStatus createVmsControllerStatusVmsIndexVmsStatus() {
-        return new VmsControllerStatusVmsIndexVmsStatus();
+    public _VmsControllerStatusVmsIndexVmsStatus create_VmsControllerStatusVmsIndexVmsStatus() {
+        return new _VmsControllerStatusVmsIndexVmsStatus();
     }
 
     /**
-     * Create an instance of {@link VmsControllerTableVersionedReference }
+     * Create an instance of {@link _VmsControllerTableVersionedReference }
      * 
      */
-    public VmsControllerTableVersionedReference createVmsControllerTableVersionedReference() {
-        return new VmsControllerTableVersionedReference();
+    public _VmsControllerTableVersionedReference create_VmsControllerTableVersionedReference() {
+        return new _VmsControllerTableVersionedReference();
     }
 
     /**
-     * Create an instance of {@link VmsControllerVersionedReference }
+     * Create an instance of {@link _VmsControllerVersionedReference }
      * 
      */
-    public VmsControllerVersionedReference createVmsControllerVersionedReference() {
-        return new VmsControllerVersionedReference();
+    public _VmsControllerVersionedReference create_VmsControllerVersionedReference() {
+        return new _VmsControllerVersionedReference();
     }
 
     /**
-     * Create an instance of {@link VmsControllerVmsIndexVms }
+     * Create an instance of {@link _VmsControllerVmsIndexVms }
      * 
      */
-    public VmsControllerVmsIndexVms createVmsControllerVmsIndexVms() {
-        return new VmsControllerVmsIndexVms();
+    public _VmsControllerVmsIndexVms create_VmsControllerVmsIndexVms() {
+        return new _VmsControllerVmsIndexVms();
     }
 
     /**
-     * Create an instance of {@link VmsFaultEnum }
+     * Create an instance of {@link _VmsFaultEnum }
      * 
      */
-    public VmsFaultEnum createVmsFaultEnum() {
-        return new VmsFaultEnum();
+    public _VmsFaultEnum create_VmsFaultEnum() {
+        return new _VmsFaultEnum();
     }
 
     /**
-     * Create an instance of {@link VmsMessageDisplayAreaIndexDisplayAreaSettings }
+     * Create an instance of {@link _VmsMessageDisplayAreaIndexDisplayAreaSettings }
      * 
      */
-    public VmsMessageDisplayAreaIndexDisplayAreaSettings createVmsMessageDisplayAreaIndexDisplayAreaSettings() {
-        return new VmsMessageDisplayAreaIndexDisplayAreaSettings();
+    public _VmsMessageDisplayAreaIndexDisplayAreaSettings create_VmsMessageDisplayAreaIndexDisplayAreaSettings() {
+        return new _VmsMessageDisplayAreaIndexDisplayAreaSettings();
     }
 
     /**
-     * Create an instance of {@link VmsStatusMessageIndexVmsMessage }
+     * Create an instance of {@link _VmsStatusMessageIndexVmsMessage }
      * 
      */
-    public VmsStatusMessageIndexVmsMessage createVmsStatusMessageIndexVmsMessage() {
-        return new VmsStatusMessageIndexVmsMessage();
+    public _VmsStatusMessageIndexVmsMessage create_VmsStatusMessageIndexVmsMessage() {
+        return new _VmsStatusMessageIndexVmsMessage();
     }
 
     /**
-     * Create an instance of {@link VmsTypeEnum }
+     * Create an instance of {@link _VmsTypeEnum }
      * 
      */
-    public VmsTypeEnum createVmsTypeEnum() {
-        return new VmsTypeEnum();
+    public _VmsTypeEnum create_VmsTypeEnum() {
+        return new _VmsTypeEnum();
     }
 
     /**
-     * Create an instance of {@link WorkingStatusEnum }
+     * Create an instance of {@link _WorkingStatusEnum }
      * 
      */
-    public WorkingStatusEnum createWorkingStatusEnum() {
-        return new WorkingStatusEnum();
+    public _WorkingStatusEnum create_WorkingStatusEnum() {
+        return new _WorkingStatusEnum();
     }
 
     /**

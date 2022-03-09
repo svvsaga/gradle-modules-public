@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "translation",
     "translationDefinition",
     "typeNamespace",
-    "attributeExtension"
+    "_AttributeExtension"
 })
 public class Attribute {
 
@@ -65,7 +65,7 @@ public class Attribute {
     @XmlElement(required = true)
     protected String typeNamespace;
     @XmlElement(name = "_attributeExtension")
-    protected ExtensionType attributeExtension;
+    protected _ExtensionType _AttributeExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -260,27 +260,27 @@ public class Attribute {
     }
 
     /**
-     * Gets the value of the attributeExtension property.
+     * Gets the value of the _AttributeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAttributeExtension() {
-        return attributeExtension;
+    public _ExtensionType get_AttributeExtension() {
+        return _AttributeExtension;
     }
 
     /**
-     * Sets the value of the attributeExtension property.
+     * Sets the value of the _AttributeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAttributeExtension(ExtensionType value) {
-        this.attributeExtension = value;
+    public void set_AttributeExtension(_ExtensionType value) {
+        this._AttributeExtension = value;
     }
 
 }

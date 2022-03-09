@@ -1,87 +1,71 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _InvolvementRolesEnum complex type.
+ * <p>Java class for InvolvementRolesEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_InvolvementRolesEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;InvolvementRolesEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="InvolvementRolesEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="cyclist"/&gt;
+ *     &lt;enumeration value="motorcyclist"/&gt;
+ *     &lt;enumeration value="pedestrian"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="vehicleDriver"/&gt;
+ *     &lt;enumeration value="vehicleOccupant"/&gt;
+ *     &lt;enumeration value="vehiclePassenger"/&gt;
+ *     &lt;enumeration value="witness"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_InvolvementRolesEnum", propOrder = {
-    "value"
-})
-public class InvolvementRolesEnum {
+@XmlType(name = "InvolvementRolesEnum")
+@XmlEnum
+public enum InvolvementRolesEnum {
 
-    @XmlValue
-    protected InvolvementRolesEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("cyclist")
+    CYCLIST("cyclist"),
+    @XmlEnumValue("motorcyclist")
+    MOTORCYCLIST("motorcyclist"),
+    @XmlEnumValue("pedestrian")
+    PEDESTRIAN("pedestrian"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("vehicleDriver")
+    VEHICLE_DRIVER("vehicleDriver"),
+    @XmlEnumValue("vehicleOccupant")
+    VEHICLE_OCCUPANT("vehicleOccupant"),
+    @XmlEnumValue("vehiclePassenger")
+    VEHICLE_PASSENGER("vehiclePassenger"),
+    @XmlEnumValue("witness")
+    WITNESS("witness"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InvolvementRolesEnum2 }
-     *     
-     */
-    public InvolvementRolesEnum2 getValue() {
+    InvolvementRolesEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InvolvementRolesEnum2 }
-     *     
-     */
-    public void setValue(InvolvementRolesEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static InvolvementRolesEnum fromValue(String v) {
+        for (InvolvementRolesEnum c: InvolvementRolesEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

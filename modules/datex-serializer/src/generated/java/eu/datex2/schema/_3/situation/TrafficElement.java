@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TrafficElement", propOrder = {
     "trafficConstrictionType",
-    "trafficElementExtension"
+    "_TrafficElementExtension"
 })
 @XmlSeeAlso({
     AbnormalTraffic.class,
@@ -46,19 +46,19 @@ public abstract class TrafficElement
     extends SituationRecord
 {
 
-    protected TrafficConstrictionTypeEnum trafficConstrictionType;
+    protected _TrafficConstrictionTypeEnum trafficConstrictionType;
     @XmlElement(name = "_trafficElementExtension")
-    protected ExtensionType trafficElementExtension;
+    protected _ExtensionType _TrafficElementExtension;
 
     /**
      * Gets the value of the trafficConstrictionType property.
      * 
      * @return
      *     possible object is
-     *     {@link TrafficConstrictionTypeEnum }
+     *     {@link _TrafficConstrictionTypeEnum }
      *     
      */
-    public TrafficConstrictionTypeEnum getTrafficConstrictionType() {
+    public _TrafficConstrictionTypeEnum getTrafficConstrictionType() {
         return trafficConstrictionType;
     }
 
@@ -67,35 +67,35 @@ public abstract class TrafficElement
      * 
      * @param value
      *     allowed object is
-     *     {@link TrafficConstrictionTypeEnum }
+     *     {@link _TrafficConstrictionTypeEnum }
      *     
      */
-    public void setTrafficConstrictionType(TrafficConstrictionTypeEnum value) {
+    public void setTrafficConstrictionType(_TrafficConstrictionTypeEnum value) {
         this.trafficConstrictionType = value;
     }
 
     /**
-     * Gets the value of the trafficElementExtension property.
+     * Gets the value of the _TrafficElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficElementExtension() {
-        return trafficElementExtension;
+    public _ExtensionType get_TrafficElementExtension() {
+        return _TrafficElementExtension;
     }
 
     /**
-     * Sets the value of the trafficElementExtension property.
+     * Sets the value of the _TrafficElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficElementExtension(ExtensionType value) {
-        this.trafficElementExtension = value;
+    public void set_TrafficElementExtension(_ExtensionType value) {
+        this._TrafficElementExtension = value;
     }
 
 }

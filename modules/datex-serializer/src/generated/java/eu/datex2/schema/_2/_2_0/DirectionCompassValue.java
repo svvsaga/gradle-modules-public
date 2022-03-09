@@ -40,7 +40,7 @@ public class DirectionCompassValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected DirectionCompassEnum directionCompass;
-    protected ExtensionType directionCompassValueExtension;
+    protected _ExtensionType directionCompassValueExtension;
 
     /**
      * Gets the value of the directionCompass property.
@@ -71,10 +71,10 @@ public class DirectionCompassValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDirectionCompassValueExtension() {
+    public _ExtensionType getDirectionCompassValueExtension() {
         return directionCompassValueExtension;
     }
 
@@ -83,10 +83,10 @@ public class DirectionCompassValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDirectionCompassValueExtension(ExtensionType value) {
+    public void setDirectionCompassValueExtension(_ExtensionType value) {
         this.directionCompassValueExtension = value;
     }
 

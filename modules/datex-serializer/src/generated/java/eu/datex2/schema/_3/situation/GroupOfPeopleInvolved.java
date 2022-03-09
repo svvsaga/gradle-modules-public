@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,17 +39,17 @@ import jakarta.xml.bind.annotation.XmlType;
     "injuryStatusType",
     "involvementRole",
     "categoryOfPeopleInvolved",
-    "groupOfPeopleInvolvedExtension"
+    "_GroupOfPeopleInvolvedExtension"
 })
 public class GroupOfPeopleInvolved {
 
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfPeople;
-    protected InjuryStatusTypeEnum injuryStatusType;
-    protected InvolvementRolesEnum involvementRole;
-    protected PersonCategoryEnum categoryOfPeopleInvolved;
+    protected _InjuryStatusTypeEnum injuryStatusType;
+    protected _InvolvementRolesEnum involvementRole;
+    protected _PersonCategoryEnum categoryOfPeopleInvolved;
     @XmlElement(name = "_groupOfPeopleInvolvedExtension")
-    protected ExtensionType groupOfPeopleInvolvedExtension;
+    protected _ExtensionType _GroupOfPeopleInvolvedExtension;
 
     /**
      * Gets the value of the numberOfPeople property.
@@ -80,10 +80,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link InjuryStatusTypeEnum }
+     *     {@link _InjuryStatusTypeEnum }
      *     
      */
-    public InjuryStatusTypeEnum getInjuryStatusType() {
+    public _InjuryStatusTypeEnum getInjuryStatusType() {
         return injuryStatusType;
     }
 
@@ -92,10 +92,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link InjuryStatusTypeEnum }
+     *     {@link _InjuryStatusTypeEnum }
      *     
      */
-    public void setInjuryStatusType(InjuryStatusTypeEnum value) {
+    public void setInjuryStatusType(_InjuryStatusTypeEnum value) {
         this.injuryStatusType = value;
     }
 
@@ -104,10 +104,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link InvolvementRolesEnum }
+     *     {@link _InvolvementRolesEnum }
      *     
      */
-    public InvolvementRolesEnum getInvolvementRole() {
+    public _InvolvementRolesEnum getInvolvementRole() {
         return involvementRole;
     }
 
@@ -116,10 +116,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link InvolvementRolesEnum }
+     *     {@link _InvolvementRolesEnum }
      *     
      */
-    public void setInvolvementRole(InvolvementRolesEnum value) {
+    public void setInvolvementRole(_InvolvementRolesEnum value) {
         this.involvementRole = value;
     }
 
@@ -128,10 +128,10 @@ public class GroupOfPeopleInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link PersonCategoryEnum }
+     *     {@link _PersonCategoryEnum }
      *     
      */
-    public PersonCategoryEnum getCategoryOfPeopleInvolved() {
+    public _PersonCategoryEnum getCategoryOfPeopleInvolved() {
         return categoryOfPeopleInvolved;
     }
 
@@ -140,35 +140,35 @@ public class GroupOfPeopleInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link PersonCategoryEnum }
+     *     {@link _PersonCategoryEnum }
      *     
      */
-    public void setCategoryOfPeopleInvolved(PersonCategoryEnum value) {
+    public void setCategoryOfPeopleInvolved(_PersonCategoryEnum value) {
         this.categoryOfPeopleInvolved = value;
     }
 
     /**
-     * Gets the value of the groupOfPeopleInvolvedExtension property.
+     * Gets the value of the _GroupOfPeopleInvolvedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGroupOfPeopleInvolvedExtension() {
-        return groupOfPeopleInvolvedExtension;
+    public _ExtensionType get_GroupOfPeopleInvolvedExtension() {
+        return _GroupOfPeopleInvolvedExtension;
     }
 
     /**
-     * Sets the value of the groupOfPeopleInvolvedExtension property.
+     * Sets the value of the _GroupOfPeopleInvolvedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGroupOfPeopleInvolvedExtension(ExtensionType value) {
-        this.groupOfPeopleInvolvedExtension = value;
+    public void set_GroupOfPeopleInvolvedExtension(_ExtensionType value) {
+        this._GroupOfPeopleInvolvedExtension = value;
     }
 
 }

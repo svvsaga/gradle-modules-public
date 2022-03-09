@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegOtherPointDescriptor", propOrder = {
     "tpegOtherPointDescriptorType",
-    "tpegOtherPointDescriptorExtension"
+    "_TpegOtherPointDescriptorExtension"
 })
 public class TpegOtherPointDescriptor
     extends TpegPointDescriptor
 {
 
     @XmlElement(required = true)
-    protected TpegLoc03OtherPointDescriptorSubtypeEnum tpegOtherPointDescriptorType;
+    protected _TpegLoc03OtherPointDescriptorSubtypeEnum tpegOtherPointDescriptorType;
     @XmlElement(name = "_tpegOtherPointDescriptorExtension")
-    protected ExtensionType tpegOtherPointDescriptorExtension;
+    protected _ExtensionType _TpegOtherPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegOtherPointDescriptorType property.
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc03OtherPointDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03OtherPointDescriptorSubtypeEnum }
      *     
      */
-    public TpegLoc03OtherPointDescriptorSubtypeEnum getTpegOtherPointDescriptorType() {
+    public _TpegLoc03OtherPointDescriptorSubtypeEnum getTpegOtherPointDescriptorType() {
         return tpegOtherPointDescriptorType;
     }
 
@@ -59,35 +59,35 @@ public class TpegOtherPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc03OtherPointDescriptorSubtypeEnum }
+     *     {@link _TpegLoc03OtherPointDescriptorSubtypeEnum }
      *     
      */
-    public void setTpegOtherPointDescriptorType(TpegLoc03OtherPointDescriptorSubtypeEnum value) {
+    public void setTpegOtherPointDescriptorType(_TpegLoc03OtherPointDescriptorSubtypeEnum value) {
         this.tpegOtherPointDescriptorType = value;
     }
 
     /**
-     * Gets the value of the tpegOtherPointDescriptorExtension property.
+     * Gets the value of the _TpegOtherPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegOtherPointDescriptorExtension() {
-        return tpegOtherPointDescriptorExtension;
+    public _ExtensionType get_TpegOtherPointDescriptorExtension() {
+        return _TpegOtherPointDescriptorExtension;
     }
 
     /**
-     * Sets the value of the tpegOtherPointDescriptorExtension property.
+     * Sets the value of the _TpegOtherPointDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegOtherPointDescriptorExtension(ExtensionType value) {
-        this.tpegOtherPointDescriptorExtension = value;
+    public void set_TpegOtherPointDescriptorExtension(_ExtensionType value) {
+        this._TpegOtherPointDescriptorExtension = value;
     }
 
 }

@@ -38,7 +38,7 @@ public class HumidityInformation
 
     @XmlElement(required = true)
     protected Humidity humidity;
-    protected ExtensionType humidityInformationExtension;
+    protected _ExtensionType humidityInformationExtension;
 
     /**
      * Gets the value of the humidity property.
@@ -69,10 +69,10 @@ public class HumidityInformation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHumidityInformationExtension() {
+    public _ExtensionType getHumidityInformationExtension() {
         return humidityInformationExtension;
     }
 
@@ -81,10 +81,10 @@ public class HumidityInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHumidityInformationExtension(ExtensionType value) {
+    public void setHumidityInformationExtension(_ExtensionType value) {
         this.humidityInformationExtension = value;
     }
 

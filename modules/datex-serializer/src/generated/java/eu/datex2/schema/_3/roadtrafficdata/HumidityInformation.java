@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Humidity;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HumidityInformation", propOrder = {
     "humidity",
-    "humidityInformationExtension"
+    "_HumidityInformationExtension"
 })
 public class HumidityInformation
     extends WeatherData
@@ -41,7 +41,7 @@ public class HumidityInformation
     @XmlElement(required = true)
     protected Humidity humidity;
     @XmlElement(name = "_humidityInformationExtension")
-    protected ExtensionType humidityInformationExtension;
+    protected _ExtensionType _HumidityInformationExtension;
 
     /**
      * Gets the value of the humidity property.
@@ -68,27 +68,27 @@ public class HumidityInformation
     }
 
     /**
-     * Gets the value of the humidityInformationExtension property.
+     * Gets the value of the _HumidityInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHumidityInformationExtension() {
-        return humidityInformationExtension;
+    public _ExtensionType get_HumidityInformationExtension() {
+        return _HumidityInformationExtension;
     }
 
     /**
-     * Sets the value of the humidityInformationExtension property.
+     * Sets the value of the _HumidityInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHumidityInformationExtension(ExtensionType value) {
-        this.humidityInformationExtension = value;
+    public void set_HumidityInformationExtension(_ExtensionType value) {
+        this._HumidityInformationExtension = value;
     }
 
 }

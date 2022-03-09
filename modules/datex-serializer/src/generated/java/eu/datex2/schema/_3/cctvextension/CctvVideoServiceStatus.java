@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvVideoServiceLevel",
     "cctvVideoAvailability",
     "cctvVideoBroadcastable",
-    "cctvVideoServiceStatusExtension"
+    "_CctvVideoServiceStatusExtension"
 })
 public class CctvVideoServiceStatus {
 
@@ -45,10 +45,10 @@ public class CctvVideoServiceStatus {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvVideoServiceLevel;
     @XmlElement(required = true)
-    protected CctvCameraVideoOrImageAvailabilityEnum cctvVideoAvailability;
+    protected _CctvCameraVideoOrImageAvailabilityEnum cctvVideoAvailability;
     protected Boolean cctvVideoBroadcastable;
     @XmlElement(name = "_cctvVideoServiceStatusExtension")
-    protected ExtensionType cctvVideoServiceStatusExtension;
+    protected _ExtensionType _CctvVideoServiceStatusExtension;
 
     /**
      * Gets the value of the cctvVideoServiceLevel property.
@@ -79,10 +79,10 @@ public class CctvVideoServiceStatus {
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraVideoOrImageAvailabilityEnum }
+     *     {@link _CctvCameraVideoOrImageAvailabilityEnum }
      *     
      */
-    public CctvCameraVideoOrImageAvailabilityEnum getCctvVideoAvailability() {
+    public _CctvCameraVideoOrImageAvailabilityEnum getCctvVideoAvailability() {
         return cctvVideoAvailability;
     }
 
@@ -91,10 +91,10 @@ public class CctvVideoServiceStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraVideoOrImageAvailabilityEnum }
+     *     {@link _CctvCameraVideoOrImageAvailabilityEnum }
      *     
      */
-    public void setCctvVideoAvailability(CctvCameraVideoOrImageAvailabilityEnum value) {
+    public void setCctvVideoAvailability(_CctvCameraVideoOrImageAvailabilityEnum value) {
         this.cctvVideoAvailability = value;
     }
 
@@ -123,27 +123,27 @@ public class CctvVideoServiceStatus {
     }
 
     /**
-     * Gets the value of the cctvVideoServiceStatusExtension property.
+     * Gets the value of the _CctvVideoServiceStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvVideoServiceStatusExtension() {
-        return cctvVideoServiceStatusExtension;
+    public _ExtensionType get_CctvVideoServiceStatusExtension() {
+        return _CctvVideoServiceStatusExtension;
     }
 
     /**
-     * Sets the value of the cctvVideoServiceStatusExtension property.
+     * Sets the value of the _CctvVideoServiceStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvVideoServiceStatusExtension(ExtensionType value) {
-        this.cctvVideoServiceStatusExtension = value;
+    public void set_CctvVideoServiceStatusExtension(_ExtensionType value) {
+        this._CctvVideoServiceStatusExtension = value;
     }
 
 }

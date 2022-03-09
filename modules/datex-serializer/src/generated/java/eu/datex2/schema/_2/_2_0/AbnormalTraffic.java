@@ -59,7 +59,7 @@ public class AbnormalTraffic
     protected TrafficFlowCharacteristicsEnum trafficFlowCharacteristics;
     @XmlSchemaType(name = "string")
     protected TrafficTrendTypeEnum trafficTrendType;
-    protected ExtensionType abnormalTrafficExtension;
+    protected _ExtensionType abnormalTrafficExtension;
 
     /**
      * Gets the value of the abnormalTrafficType property.
@@ -210,10 +210,10 @@ public class AbnormalTraffic
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAbnormalTrafficExtension() {
+    public _ExtensionType getAbnormalTrafficExtension() {
         return abnormalTrafficExtension;
     }
 
@@ -222,10 +222,10 @@ public class AbnormalTraffic
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAbnormalTrafficExtension(ExtensionType value) {
+    public void setAbnormalTrafficExtension(_ExtensionType value) {
         this.abnormalTrafficExtension = value;
     }
 

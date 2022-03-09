@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PrecipitationIntensityValue", propOrder = {
     "millimetresPerHourIntensity",
-    "precipitationIntensityValueExtension"
+    "_PrecipitationIntensityValueExtension"
 })
 public class PrecipitationIntensityValue
     extends DataValue
@@ -38,7 +38,7 @@ public class PrecipitationIntensityValue
 
     protected float millimetresPerHourIntensity;
     @XmlElement(name = "_precipitationIntensityValueExtension")
-    protected ExtensionType precipitationIntensityValueExtension;
+    protected _ExtensionType _PrecipitationIntensityValueExtension;
 
     /**
      * Gets the value of the millimetresPerHourIntensity property.
@@ -57,27 +57,27 @@ public class PrecipitationIntensityValue
     }
 
     /**
-     * Gets the value of the precipitationIntensityValueExtension property.
+     * Gets the value of the _PrecipitationIntensityValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrecipitationIntensityValueExtension() {
-        return precipitationIntensityValueExtension;
+    public _ExtensionType get_PrecipitationIntensityValueExtension() {
+        return _PrecipitationIntensityValueExtension;
     }
 
     /**
-     * Sets the value of the precipitationIntensityValueExtension property.
+     * Sets the value of the _PrecipitationIntensityValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrecipitationIntensityValueExtension(ExtensionType value) {
-        this.precipitationIntensityValueExtension = value;
+    public void set_PrecipitationIntensityValueExtension(_ExtensionType value) {
+        this._PrecipitationIntensityValueExtension = value;
     }
 
 }

@@ -39,7 +39,7 @@ public class Area
 
     protected AlertCArea alertCArea;
     protected TpegAreaLocation tpegAreaLocation;
-    protected AreaExtensionType areaExtension;
+    protected _AreaExtensionType areaExtension;
 
     /**
      * Gets the value of the alertCArea property.
@@ -94,10 +94,10 @@ public class Area
      * 
      * @return
      *     possible object is
-     *     {@link AreaExtensionType }
+     *     {@link _AreaExtensionType }
      *     
      */
-    public AreaExtensionType getAreaExtension() {
+    public _AreaExtensionType getAreaExtension() {
         return areaExtension;
     }
 
@@ -106,10 +106,10 @@ public class Area
      * 
      * @param value
      *     allowed object is
-     *     {@link AreaExtensionType }
+     *     {@link _AreaExtensionType }
      *     
      */
-    public void setAreaExtension(AreaExtensionType value) {
+    public void setAreaExtension(_AreaExtensionType value) {
         this.areaExtension = value;
     }
 

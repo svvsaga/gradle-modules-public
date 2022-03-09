@@ -36,7 +36,7 @@ public class TemperatureValue
 {
 
     protected float temperature;
-    protected ExtensionType temperatureValueExtension;
+    protected _ExtensionType temperatureValueExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -59,10 +59,10 @@ public class TemperatureValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureValueExtension() {
+    public _ExtensionType getTemperatureValueExtension() {
         return temperatureValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class TemperatureValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureValueExtension(ExtensionType value) {
+    public void setTemperatureValueExtension(_ExtensionType value) {
         this.temperatureValueExtension = value;
     }
 

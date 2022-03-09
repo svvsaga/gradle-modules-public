@@ -36,17 +36,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Destination {
 
-    protected ExtensionType destinationExtension;
+    protected _ExtensionType destinationExtension;
 
     /**
      * Gets the value of the destinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDestinationExtension() {
+    public _ExtensionType getDestinationExtension() {
         return destinationExtension;
     }
 
@@ -55,10 +55,10 @@ public abstract class Destination {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDestinationExtension(ExtensionType value) {
+    public void setDestinationExtension(_ExtensionType value) {
         this.destinationExtension = value;
     }
 

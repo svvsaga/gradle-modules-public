@@ -37,7 +37,7 @@ public class Management {
 
     protected LifeCycleManagement lifeCycleManagement;
     protected FilterExitManagement filterExitManagement;
-    protected ExtensionType managementExtension;
+    protected _ExtensionType managementExtension;
 
     /**
      * Gets the value of the lifeCycleManagement property.
@@ -92,10 +92,10 @@ public class Management {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getManagementExtension() {
+    public _ExtensionType getManagementExtension() {
         return managementExtension;
     }
 
@@ -104,10 +104,10 @@ public class Management {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setManagementExtension(ExtensionType value) {
+    public void setManagementExtension(_ExtensionType value) {
         this.managementExtension = value;
     }
 

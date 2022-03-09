@@ -43,8 +43,8 @@ public class VmsText {
     protected String vmsLegendCode;
     @XmlSchemaType(name = "anyURI")
     protected String vmsTextImageUrl;
-    protected List<VmsTextLineIndexVmsTextLine> vmsTextLine;
-    protected ExtensionType vmsTextExtension;
+    protected List<_VmsTextLineIndexVmsTextLine> vmsTextLine;
+    protected _ExtensionType vmsTextExtension;
 
     /**
      * Gets the value of the vmsLegendCode property.
@@ -112,13 +112,13 @@ public class VmsText {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsTextLineIndexVmsTextLine }
+     * {@link _VmsTextLineIndexVmsTextLine }
      * 
      * 
      */
-    public List<VmsTextLineIndexVmsTextLine> getVmsTextLine() {
+    public List<_VmsTextLineIndexVmsTextLine> getVmsTextLine() {
         if (vmsTextLine == null) {
-            vmsTextLine = new ArrayList<VmsTextLineIndexVmsTextLine>();
+            vmsTextLine = new ArrayList<_VmsTextLineIndexVmsTextLine>();
         }
         return this.vmsTextLine;
     }
@@ -128,10 +128,10 @@ public class VmsText {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsTextExtension() {
+    public _ExtensionType getVmsTextExtension() {
         return vmsTextExtension;
     }
 
@@ -140,10 +140,10 @@ public class VmsText {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsTextExtension(ExtensionType value) {
+    public void setVmsTextExtension(_ExtensionType value) {
         this.vmsTextExtension = value;
     }
 

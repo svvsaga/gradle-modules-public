@@ -47,7 +47,7 @@ public class PictogramDisplayAreaSettings {
     protected BigInteger pictogramLuminanceLevel;
     @XmlSchemaType(name = "string")
     protected VmsLuminanceLevelEnum pictogramLuminanceLevelName;
-    protected ExtensionType pictogramDisplayAreaSettingsExtension;
+    protected _ExtensionType pictogramDisplayAreaSettingsExtension;
 
     /**
      * Gets the value of the pictogramLanternsOn property.
@@ -150,10 +150,10 @@ public class PictogramDisplayAreaSettings {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPictogramDisplayAreaSettingsExtension() {
+    public _ExtensionType getPictogramDisplayAreaSettingsExtension() {
         return pictogramDisplayAreaSettingsExtension;
     }
 
@@ -162,10 +162,10 @@ public class PictogramDisplayAreaSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPictogramDisplayAreaSettingsExtension(ExtensionType value) {
+    public void setPictogramDisplayAreaSettingsExtension(_ExtensionType value) {
         this.pictogramDisplayAreaSettingsExtension = value;
     }
 

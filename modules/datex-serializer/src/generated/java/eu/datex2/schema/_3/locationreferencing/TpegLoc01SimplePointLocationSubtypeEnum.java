@@ -1,87 +1,53 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TpegLoc01SimplePointLocationSubtypeEnum complex type.
+ * <p>Java class for TpegLoc01SimplePointLocationSubtypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TpegLoc01SimplePointLocationSubtypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;TpegLoc01SimplePointLocationSubtypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TpegLoc01SimplePointLocationSubtypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="intersection"/&gt;
+ *     &lt;enumeration value="nonLinkedPoint"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TpegLoc01SimplePointLocationSubtypeEnum", propOrder = {
-    "value"
-})
-public class TpegLoc01SimplePointLocationSubtypeEnum {
+@XmlType(name = "TpegLoc01SimplePointLocationSubtypeEnum")
+@XmlEnum
+public enum TpegLoc01SimplePointLocationSubtypeEnum {
 
-    @XmlValue
-    protected TpegLoc01SimplePointLocationSubtypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("intersection")
+    INTERSECTION("intersection"),
+    @XmlEnumValue("nonLinkedPoint")
+    NON_LINKED_POINT("nonLinkedPoint"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TpegLoc01SimplePointLocationSubtypeEnum2 }
-     *     
-     */
-    public TpegLoc01SimplePointLocationSubtypeEnum2 getValue() {
+    TpegLoc01SimplePointLocationSubtypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TpegLoc01SimplePointLocationSubtypeEnum2 }
-     *     
-     */
-    public void setValue(TpegLoc01SimplePointLocationSubtypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TpegLoc01SimplePointLocationSubtypeEnum fromValue(String v) {
+        for (TpegLoc01SimplePointLocationSubtypeEnum c: TpegLoc01SimplePointLocationSubtypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

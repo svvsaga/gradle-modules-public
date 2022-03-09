@@ -32,25 +32,25 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "WidthCharacteristic", propOrder = {
     "comparisonOperator",
     "vehicleWidth",
-    "widthCharacteristicExtension"
+    "_WidthCharacteristicExtension"
 })
 public class WidthCharacteristic {
 
     @XmlElement(required = true)
-    protected ComparisonOperatorEnum comparisonOperator;
+    protected _ComparisonOperatorEnum comparisonOperator;
     protected float vehicleWidth;
     @XmlElement(name = "_widthCharacteristicExtension")
-    protected ExtensionType widthCharacteristicExtension;
+    protected _ExtensionType _WidthCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public ComparisonOperatorEnum getComparisonOperator() {
+    public _ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -59,10 +59,10 @@ public class WidthCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public void setComparisonOperator(_ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -83,27 +83,27 @@ public class WidthCharacteristic {
     }
 
     /**
-     * Gets the value of the widthCharacteristicExtension property.
+     * Gets the value of the _WidthCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWidthCharacteristicExtension() {
-        return widthCharacteristicExtension;
+    public _ExtensionType get_WidthCharacteristicExtension() {
+        return _WidthCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the widthCharacteristicExtension property.
+     * Sets the value of the _WidthCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWidthCharacteristicExtension(ExtensionType value) {
-        this.widthCharacteristicExtension = value;
+    public void set_WidthCharacteristicExtension(_ExtensionType value) {
+        this._WidthCharacteristicExtension = value;
     }
 
 }

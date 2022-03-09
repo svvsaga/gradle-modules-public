@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,14 +31,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GddPictogramAttributes", propOrder = {
     "attributes",
-    "gddPictogramAttributesExtension"
+    "_GddPictogramAttributesExtension"
 })
 public class GddPictogramAttributes {
 
     @XmlElement(required = true)
     protected byte[] attributes;
     @XmlElement(name = "_gddPictogramAttributesExtension")
-    protected ExtensionType gddPictogramAttributesExtension;
+    protected _ExtensionType _GddPictogramAttributesExtension;
 
     /**
      * Gets the value of the attributes property.
@@ -63,27 +63,27 @@ public class GddPictogramAttributes {
     }
 
     /**
-     * Gets the value of the gddPictogramAttributesExtension property.
+     * Gets the value of the _GddPictogramAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGddPictogramAttributesExtension() {
-        return gddPictogramAttributesExtension;
+    public _ExtensionType get_GddPictogramAttributesExtension() {
+        return _GddPictogramAttributesExtension;
     }
 
     /**
-     * Sets the value of the gddPictogramAttributesExtension property.
+     * Sets the value of the _GddPictogramAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGddPictogramAttributesExtension(ExtensionType value) {
-        this.gddPictogramAttributesExtension = value;
+    public void set_GddPictogramAttributesExtension(_ExtensionType value) {
+        this._GddPictogramAttributesExtension = value;
     }
 
 }

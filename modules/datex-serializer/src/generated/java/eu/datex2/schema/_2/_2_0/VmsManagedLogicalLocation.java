@@ -43,7 +43,7 @@ public class VmsManagedLogicalLocation {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger distanceFromLogicalLocation;
     protected Location managedLocation;
-    protected ExtensionType vmsManagedLogicalLocationExtension;
+    protected _ExtensionType vmsManagedLogicalLocationExtension;
 
     /**
      * Gets the value of the managedLogicalLocation property.
@@ -122,10 +122,10 @@ public class VmsManagedLogicalLocation {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsManagedLogicalLocationExtension() {
+    public _ExtensionType getVmsManagedLogicalLocationExtension() {
         return vmsManagedLogicalLocationExtension;
     }
 
@@ -134,10 +134,10 @@ public class VmsManagedLogicalLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsManagedLogicalLocationExtension(ExtensionType value) {
+    public void setVmsManagedLogicalLocationExtension(_ExtensionType value) {
         this.vmsManagedLogicalLocationExtension = value;
     }
 

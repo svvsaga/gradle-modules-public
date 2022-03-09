@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "designation",
     "translation",
     "translationDefinition",
-    "classExtension"
+    "_ClassExtension"
 })
 public class Class {
 
@@ -57,7 +57,7 @@ public class Class {
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
     @XmlElement(name = "_classExtension")
-    protected ExtensionType classExtension;
+    protected _ExtensionType _ClassExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -204,27 +204,27 @@ public class Class {
     }
 
     /**
-     * Gets the value of the classExtension property.
+     * Gets the value of the _ClassExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getClassExtension() {
-        return classExtension;
+    public _ExtensionType get_ClassExtension() {
+        return _ClassExtension;
     }
 
     /**
-     * Sets the value of the classExtension property.
+     * Sets the value of the _ClassExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setClassExtension(ExtensionType value) {
-        this.classExtension = value;
+    public void set_ClassExtension(_ExtensionType value) {
+        this._ClassExtension = value;
     }
 
 }

@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TemperatureBelowOrAboveRoadSurface", propOrder = {
     "heightBelowOrAboveRoadSurface",
     "temperatureBelowOrAboveRoadSurface",
-    "temperatureBelowOrAboveRoadSurfaceExtension"
+    "_TemperatureBelowOrAboveRoadSurfaceExtension"
 })
 public class TemperatureBelowOrAboveRoadSurface {
 
@@ -40,7 +40,7 @@ public class TemperatureBelowOrAboveRoadSurface {
     @XmlElement(required = true)
     protected TemperatureValue temperatureBelowOrAboveRoadSurface;
     @XmlElement(name = "_temperatureBelowOrAboveRoadSurfaceExtension")
-    protected ExtensionType temperatureBelowOrAboveRoadSurfaceExtension;
+    protected _ExtensionType _TemperatureBelowOrAboveRoadSurfaceExtension;
 
     /**
      * Gets the value of the heightBelowOrAboveRoadSurface property.
@@ -83,27 +83,27 @@ public class TemperatureBelowOrAboveRoadSurface {
     }
 
     /**
-     * Gets the value of the temperatureBelowOrAboveRoadSurfaceExtension property.
+     * Gets the value of the _TemperatureBelowOrAboveRoadSurfaceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureBelowOrAboveRoadSurfaceExtension() {
-        return temperatureBelowOrAboveRoadSurfaceExtension;
+    public _ExtensionType get_TemperatureBelowOrAboveRoadSurfaceExtension() {
+        return _TemperatureBelowOrAboveRoadSurfaceExtension;
     }
 
     /**
-     * Sets the value of the temperatureBelowOrAboveRoadSurfaceExtension property.
+     * Sets the value of the _TemperatureBelowOrAboveRoadSurfaceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureBelowOrAboveRoadSurfaceExtension(ExtensionType value) {
-        this.temperatureBelowOrAboveRoadSurfaceExtension = value;
+    public void set_TemperatureBelowOrAboveRoadSurfaceExtension(_ExtensionType value) {
+        this._TemperatureBelowOrAboveRoadSurfaceExtension = value;
     }
 
 }

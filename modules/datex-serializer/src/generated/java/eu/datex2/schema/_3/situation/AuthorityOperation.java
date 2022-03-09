@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AuthorityOperation", propOrder = {
     "authorityOperationType",
-    "authorityOperationExtension"
+    "_AuthorityOperationExtension"
 })
 public class AuthorityOperation
     extends Activity
 {
 
     @XmlElement(required = true)
-    protected AuthorityOperationTypeEnum authorityOperationType;
+    protected _AuthorityOperationTypeEnum authorityOperationType;
     @XmlElement(name = "_authorityOperationExtension")
-    protected ExtensionType authorityOperationExtension;
+    protected _ExtensionType _AuthorityOperationExtension;
 
     /**
      * Gets the value of the authorityOperationType property.
      * 
      * @return
      *     possible object is
-     *     {@link AuthorityOperationTypeEnum }
+     *     {@link _AuthorityOperationTypeEnum }
      *     
      */
-    public AuthorityOperationTypeEnum getAuthorityOperationType() {
+    public _AuthorityOperationTypeEnum getAuthorityOperationType() {
         return authorityOperationType;
     }
 
@@ -59,35 +59,35 @@ public class AuthorityOperation
      * 
      * @param value
      *     allowed object is
-     *     {@link AuthorityOperationTypeEnum }
+     *     {@link _AuthorityOperationTypeEnum }
      *     
      */
-    public void setAuthorityOperationType(AuthorityOperationTypeEnum value) {
+    public void setAuthorityOperationType(_AuthorityOperationTypeEnum value) {
         this.authorityOperationType = value;
     }
 
     /**
-     * Gets the value of the authorityOperationExtension property.
+     * Gets the value of the _AuthorityOperationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAuthorityOperationExtension() {
-        return authorityOperationExtension;
+    public _ExtensionType get_AuthorityOperationExtension() {
+        return _AuthorityOperationExtension;
     }
 
     /**
-     * Sets the value of the authorityOperationExtension property.
+     * Sets the value of the _AuthorityOperationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAuthorityOperationExtension(ExtensionType value) {
-        this.authorityOperationExtension = value;
+    public void set_AuthorityOperationExtension(_ExtensionType value) {
+        this._AuthorityOperationExtension = value;
     }
 
 }

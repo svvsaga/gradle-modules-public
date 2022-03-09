@@ -3,11 +3,11 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ComputationMethodEnum;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.VehicleCharacteristics;
-import eu.datex2.schema._3.locationreferencing.DirectionEnum;
+import eu.datex2.schema._3.common._ComputationMethodEnum;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Lane;
+import eu.datex2.schema._3.locationreferencing._DirectionEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -55,23 +55,23 @@ import jakarta.xml.bind.annotation.XmlType;
     "specificVehicleCharacteristics",
     "specificLane",
     "axleCharacteristics",
-    "measurementSpecificCharacteristicsExtension"
+    "_MeasurementSpecificCharacteristicsExtension"
 })
 public class MeasurementSpecificCharacteristics {
 
     protected Float accuracy;
-    protected ComputationMethodEnum computationMethod;
+    protected _ComputationMethodEnum computationMethod;
     protected Float defaultMeasurementHeight;
-    protected DirectionEnum measurementSide;
+    protected _DirectionEnum measurementSide;
     protected Float period;
     protected Float smoothingFactor;
     @XmlElement(required = true)
-    protected MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
+    protected _MeasuredOrDerivedDataTypeEnum specificMeasurementValueType;
     protected VehicleCharacteristics specificVehicleCharacteristics;
     protected List<Lane> specificLane;
     protected AxleCharacteristics axleCharacteristics;
     @XmlElement(name = "_measurementSpecificCharacteristicsExtension")
-    protected ExtensionType measurementSpecificCharacteristicsExtension;
+    protected _ExtensionType _MeasurementSpecificCharacteristicsExtension;
 
     /**
      * Gets the value of the accuracy property.
@@ -102,10 +102,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link ComputationMethodEnum }
+     *     {@link _ComputationMethodEnum }
      *     
      */
-    public ComputationMethodEnum getComputationMethod() {
+    public _ComputationMethodEnum getComputationMethod() {
         return computationMethod;
     }
 
@@ -114,10 +114,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComputationMethodEnum }
+     *     {@link _ComputationMethodEnum }
      *     
      */
-    public void setComputationMethod(ComputationMethodEnum value) {
+    public void setComputationMethod(_ComputationMethodEnum value) {
         this.computationMethod = value;
     }
 
@@ -150,10 +150,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public DirectionEnum getMeasurementSide() {
+    public _DirectionEnum getMeasurementSide() {
         return measurementSide;
     }
 
@@ -162,10 +162,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public void setMeasurementSide(DirectionEnum value) {
+    public void setMeasurementSide(_DirectionEnum value) {
         this.measurementSide = value;
     }
 
@@ -222,10 +222,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link MeasuredOrDerivedDataTypeEnum }
+     *     {@link _MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public MeasuredOrDerivedDataTypeEnum getSpecificMeasurementValueType() {
+    public _MeasuredOrDerivedDataTypeEnum getSpecificMeasurementValueType() {
         return specificMeasurementValueType;
     }
 
@@ -234,10 +234,10 @@ public class MeasurementSpecificCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasuredOrDerivedDataTypeEnum }
+     *     {@link _MeasuredOrDerivedDataTypeEnum }
      *     
      */
-    public void setSpecificMeasurementValueType(MeasuredOrDerivedDataTypeEnum value) {
+    public void setSpecificMeasurementValueType(_MeasuredOrDerivedDataTypeEnum value) {
         this.specificMeasurementValueType = value;
     }
 
@@ -319,27 +319,27 @@ public class MeasurementSpecificCharacteristics {
     }
 
     /**
-     * Gets the value of the measurementSpecificCharacteristicsExtension property.
+     * Gets the value of the _MeasurementSpecificCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSpecificCharacteristicsExtension() {
-        return measurementSpecificCharacteristicsExtension;
+    public _ExtensionType get_MeasurementSpecificCharacteristicsExtension() {
+        return _MeasurementSpecificCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the measurementSpecificCharacteristicsExtension property.
+     * Sets the value of the _MeasurementSpecificCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSpecificCharacteristicsExtension(ExtensionType value) {
-        this.measurementSpecificCharacteristicsExtension = value;
+    public void set_MeasurementSpecificCharacteristicsExtension(_ExtensionType value) {
+        this._MeasurementSpecificCharacteristicsExtension = value;
     }
 
 }

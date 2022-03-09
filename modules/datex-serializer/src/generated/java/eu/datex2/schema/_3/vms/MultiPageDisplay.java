@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "MultiPageDisplay", propOrder = {
     "sequenceGroupNumber",
     "displayAreaSettings",
-    "multiPageDisplayExtension"
+    "_MultiPageDisplayExtension"
 })
 public class MultiPageDisplay
     extends DisplayAreaSettings
@@ -45,9 +45,9 @@ public class MultiPageDisplay
 
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequenceGroupNumber;
-    protected List<MultiPageDisplayPageNumberDisplayAreaSettings> displayAreaSettings;
+    protected List<_MultiPageDisplayPageNumberDisplayAreaSettings> displayAreaSettings;
     @XmlElement(name = "_multiPageDisplayExtension")
-    protected ExtensionType multiPageDisplayExtension;
+    protected _ExtensionType _MultiPageDisplayExtension;
 
     /**
      * Gets the value of the sequenceGroupNumber property.
@@ -91,39 +91,39 @@ public class MultiPageDisplay
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MultiPageDisplayPageNumberDisplayAreaSettings }
+     * {@link _MultiPageDisplayPageNumberDisplayAreaSettings }
      * 
      * 
      */
-    public List<MultiPageDisplayPageNumberDisplayAreaSettings> getDisplayAreaSettings() {
+    public List<_MultiPageDisplayPageNumberDisplayAreaSettings> getDisplayAreaSettings() {
         if (displayAreaSettings == null) {
-            displayAreaSettings = new ArrayList<MultiPageDisplayPageNumberDisplayAreaSettings>();
+            displayAreaSettings = new ArrayList<_MultiPageDisplayPageNumberDisplayAreaSettings>();
         }
         return this.displayAreaSettings;
     }
 
     /**
-     * Gets the value of the multiPageDisplayExtension property.
+     * Gets the value of the _MultiPageDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMultiPageDisplayExtension() {
-        return multiPageDisplayExtension;
+    public _ExtensionType get_MultiPageDisplayExtension() {
+        return _MultiPageDisplayExtension;
     }
 
     /**
-     * Sets the value of the multiPageDisplayExtension property.
+     * Sets the value of the _MultiPageDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMultiPageDisplayExtension(ExtensionType value) {
-        this.multiPageDisplayExtension = value;
+    public void set_MultiPageDisplayExtension(_ExtensionType value) {
+        this._MultiPageDisplayExtension = value;
     }
 
 }

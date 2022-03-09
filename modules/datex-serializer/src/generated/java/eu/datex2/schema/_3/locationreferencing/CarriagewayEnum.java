@@ -1,87 +1,101 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _CarriagewayEnum complex type.
+ * <p>Java class for CarriagewayEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_CarriagewayEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;CarriagewayEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="CarriagewayEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="connectingCarriageway"/&gt;
+ *     &lt;enumeration value="cycleTrack"/&gt;
+ *     &lt;enumeration value="entrySlipRoad"/&gt;
+ *     &lt;enumeration value="exitSlipRoad"/&gt;
+ *     &lt;enumeration value="flyover"/&gt;
+ *     &lt;enumeration value="footpath"/&gt;
+ *     &lt;enumeration value="leftHandFeederRoad"/&gt;
+ *     &lt;enumeration value="leftHandParallelCarriageway"/&gt;
+ *     &lt;enumeration value="mainCarriageway"/&gt;
+ *     &lt;enumeration value="oppositeCarriageway"/&gt;
+ *     &lt;enumeration value="parallelCarriageway"/&gt;
+ *     &lt;enumeration value="rightHandFeederRoad"/&gt;
+ *     &lt;enumeration value="rightHandParallelCarriageway"/&gt;
+ *     &lt;enumeration value="roundabout"/&gt;
+ *     &lt;enumeration value="serviceRoad"/&gt;
+ *     &lt;enumeration value="slipRoads"/&gt;
+ *     &lt;enumeration value="underpass"/&gt;
+ *     &lt;enumeration value="unspecifiedCarriageway"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_CarriagewayEnum", propOrder = {
-    "value"
-})
-public class CarriagewayEnum {
+@XmlType(name = "CarriagewayEnum")
+@XmlEnum
+public enum CarriagewayEnum {
 
-    @XmlValue
-    protected CarriagewayEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("connectingCarriageway")
+    CONNECTING_CARRIAGEWAY("connectingCarriageway"),
+    @XmlEnumValue("cycleTrack")
+    CYCLE_TRACK("cycleTrack"),
+    @XmlEnumValue("entrySlipRoad")
+    ENTRY_SLIP_ROAD("entrySlipRoad"),
+    @XmlEnumValue("exitSlipRoad")
+    EXIT_SLIP_ROAD("exitSlipRoad"),
+    @XmlEnumValue("flyover")
+    FLYOVER("flyover"),
+    @XmlEnumValue("footpath")
+    FOOTPATH("footpath"),
+    @XmlEnumValue("leftHandFeederRoad")
+    LEFT_HAND_FEEDER_ROAD("leftHandFeederRoad"),
+    @XmlEnumValue("leftHandParallelCarriageway")
+    LEFT_HAND_PARALLEL_CARRIAGEWAY("leftHandParallelCarriageway"),
+    @XmlEnumValue("mainCarriageway")
+    MAIN_CARRIAGEWAY("mainCarriageway"),
+    @XmlEnumValue("oppositeCarriageway")
+    OPPOSITE_CARRIAGEWAY("oppositeCarriageway"),
+    @XmlEnumValue("parallelCarriageway")
+    PARALLEL_CARRIAGEWAY("parallelCarriageway"),
+    @XmlEnumValue("rightHandFeederRoad")
+    RIGHT_HAND_FEEDER_ROAD("rightHandFeederRoad"),
+    @XmlEnumValue("rightHandParallelCarriageway")
+    RIGHT_HAND_PARALLEL_CARRIAGEWAY("rightHandParallelCarriageway"),
+    @XmlEnumValue("roundabout")
+    ROUNDABOUT("roundabout"),
+    @XmlEnumValue("serviceRoad")
+    SERVICE_ROAD("serviceRoad"),
+    @XmlEnumValue("slipRoads")
+    SLIP_ROADS("slipRoads"),
+    @XmlEnumValue("underpass")
+    UNDERPASS("underpass"),
+    @XmlEnumValue("unspecifiedCarriageway")
+    UNSPECIFIED_CARRIAGEWAY("unspecifiedCarriageway"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CarriagewayEnum2 }
-     *     
-     */
-    public CarriagewayEnum2 getValue() {
+    CarriagewayEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CarriagewayEnum2 }
-     *     
-     */
-    public void setValue(CarriagewayEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static CarriagewayEnum fromValue(String v) {
+        for (CarriagewayEnum c: CarriagewayEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

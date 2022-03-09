@@ -37,17 +37,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class PredefinedLocationContainer {
 
-    protected ExtensionType predefinedLocationContainerExtension;
+    protected _ExtensionType predefinedLocationContainerExtension;
 
     /**
      * Gets the value of the predefinedLocationContainerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedLocationContainerExtension() {
+    public _ExtensionType getPredefinedLocationContainerExtension() {
         return predefinedLocationContainerExtension;
     }
 
@@ -56,10 +56,10 @@ public abstract class PredefinedLocationContainer {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedLocationContainerExtension(ExtensionType value) {
+    public void setPredefinedLocationContainerExtension(_ExtensionType value) {
         this.predefinedLocationContainerExtension = value;
     }
 

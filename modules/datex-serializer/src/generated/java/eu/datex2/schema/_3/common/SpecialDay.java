@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "specialDayType",
     "publicEvent",
     "namedArea",
-    "specialDayExtension"
+    "_SpecialDayExtension"
 })
 @XmlSeeAlso({
     PublicHoliday.class
@@ -48,11 +48,11 @@ public class SpecialDay {
 
     protected boolean intersectWithApplicableDays;
     @XmlElement(required = true)
-    protected SpecialDayTypeEnum specialDayType;
-    protected PublicEventTypeEnum publicEvent;
+    protected _SpecialDayTypeEnum specialDayType;
+    protected _PublicEventTypeEnum publicEvent;
     protected List<NamedArea> namedArea;
     @XmlElement(name = "_specialDayExtension")
-    protected ExtensionType specialDayExtension;
+    protected _ExtensionType _SpecialDayExtension;
 
     /**
      * Gets the value of the intersectWithApplicableDays property.
@@ -75,10 +75,10 @@ public class SpecialDay {
      * 
      * @return
      *     possible object is
-     *     {@link SpecialDayTypeEnum }
+     *     {@link _SpecialDayTypeEnum }
      *     
      */
-    public SpecialDayTypeEnum getSpecialDayType() {
+    public _SpecialDayTypeEnum getSpecialDayType() {
         return specialDayType;
     }
 
@@ -87,10 +87,10 @@ public class SpecialDay {
      * 
      * @param value
      *     allowed object is
-     *     {@link SpecialDayTypeEnum }
+     *     {@link _SpecialDayTypeEnum }
      *     
      */
-    public void setSpecialDayType(SpecialDayTypeEnum value) {
+    public void setSpecialDayType(_SpecialDayTypeEnum value) {
         this.specialDayType = value;
     }
 
@@ -99,10 +99,10 @@ public class SpecialDay {
      * 
      * @return
      *     possible object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public PublicEventTypeEnum getPublicEvent() {
+    public _PublicEventTypeEnum getPublicEvent() {
         return publicEvent;
     }
 
@@ -111,10 +111,10 @@ public class SpecialDay {
      * 
      * @param value
      *     allowed object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public void setPublicEvent(PublicEventTypeEnum value) {
+    public void setPublicEvent(_PublicEventTypeEnum value) {
         this.publicEvent = value;
     }
 
@@ -148,27 +148,27 @@ public class SpecialDay {
     }
 
     /**
-     * Gets the value of the specialDayExtension property.
+     * Gets the value of the _SpecialDayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpecialDayExtension() {
-        return specialDayExtension;
+    public _ExtensionType get_SpecialDayExtension() {
+        return _SpecialDayExtension;
     }
 
     /**
-     * Sets the value of the specialDayExtension property.
+     * Sets the value of the _SpecialDayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpecialDayExtension(ExtensionType value) {
-        this.specialDayExtension = value;
+    public void set_SpecialDayExtension(_ExtensionType value) {
+        this._SpecialDayExtension = value;
     }
 
 }

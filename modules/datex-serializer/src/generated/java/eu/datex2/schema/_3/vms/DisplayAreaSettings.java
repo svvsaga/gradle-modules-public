@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "isBlank",
     "legallyBinding",
     "legalBasis",
-    "displayAreaSettingsExtension"
+    "_DisplayAreaSettingsExtension"
 })
 @XmlSeeAlso({
     MultiPageDisplay.class,
@@ -51,7 +51,7 @@ public abstract class DisplayAreaSettings {
     protected Boolean legallyBinding;
     protected MultilingualString legalBasis;
     @XmlElement(name = "_displayAreaSettingsExtension")
-    protected ExtensionType displayAreaSettingsExtension;
+    protected _ExtensionType _DisplayAreaSettingsExtension;
 
     /**
      * Gets the value of the isBlank property.
@@ -126,27 +126,27 @@ public abstract class DisplayAreaSettings {
     }
 
     /**
-     * Gets the value of the displayAreaSettingsExtension property.
+     * Gets the value of the _DisplayAreaSettingsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDisplayAreaSettingsExtension() {
-        return displayAreaSettingsExtension;
+    public _ExtensionType get_DisplayAreaSettingsExtension() {
+        return _DisplayAreaSettingsExtension;
     }
 
     /**
-     * Sets the value of the displayAreaSettingsExtension property.
+     * Sets the value of the _DisplayAreaSettingsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDisplayAreaSettingsExtension(ExtensionType value) {
-        this.displayAreaSettingsExtension = value;
+    public void set_DisplayAreaSettingsExtension(_ExtensionType value) {
+        this._DisplayAreaSettingsExtension = value;
     }
 
 }

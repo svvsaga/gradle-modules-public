@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "openlrLinear",
     "gmlLineString",
     "secondarySupplementaryDescription",
-    "linearLocationExtension"
+    "_LinearLocationExtension"
 })
 @XmlSeeAlso({
     SingleRoadLinearLocation.class
@@ -49,7 +49,7 @@ public class LinearLocation
     protected GmlLineString gmlLineString;
     protected SupplementaryPositionalDescription secondarySupplementaryDescription;
     @XmlElement(name = "_linearLocationExtension")
-    protected ExtensionType linearLocationExtension;
+    protected _ExtensionType _LinearLocationExtension;
 
     /**
      * Gets the value of the openlrLinear property.
@@ -124,27 +124,27 @@ public class LinearLocation
     }
 
     /**
-     * Gets the value of the linearLocationExtension property.
+     * Gets the value of the _LinearLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLinearLocationExtension() {
-        return linearLocationExtension;
+    public _ExtensionType get_LinearLocationExtension() {
+        return _LinearLocationExtension;
     }
 
     /**
-     * Sets the value of the linearLocationExtension property.
+     * Sets the value of the _LinearLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLinearLocationExtension(ExtensionType value) {
-        this.linearLocationExtension = value;
+    public void set_LinearLocationExtension(_ExtensionType value) {
+        this._LinearLocationExtension = value;
     }
 
 }

@@ -3,9 +3,9 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.RoadSurfaceConditionMeasurements;
-import eu.datex2.schema._3.common.WeatherRelatedRoadConditionTypeEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common._WeatherRelatedRoadConditionTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,17 +37,17 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "WeatherRelatedRoadConditions", propOrder = {
     "weatherRelatedRoadConditionType",
     "roadSurfaceConditionMeasurements",
-    "weatherRelatedRoadConditionsExtension"
+    "_WeatherRelatedRoadConditionsExtension"
 })
 public class WeatherRelatedRoadConditions
     extends RoadSurfaceConditions
 {
 
     @XmlElement(required = true)
-    protected List<WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
+    protected List<_WeatherRelatedRoadConditionTypeEnum> weatherRelatedRoadConditionType;
     protected RoadSurfaceConditionMeasurements roadSurfaceConditionMeasurements;
     @XmlElement(name = "_weatherRelatedRoadConditionsExtension")
-    protected ExtensionType weatherRelatedRoadConditionsExtension;
+    protected _ExtensionType _WeatherRelatedRoadConditionsExtension;
 
     /**
      * Gets the value of the weatherRelatedRoadConditionType property.
@@ -67,13 +67,13 @@ public class WeatherRelatedRoadConditions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link WeatherRelatedRoadConditionTypeEnum }
+     * {@link _WeatherRelatedRoadConditionTypeEnum }
      * 
      * 
      */
-    public List<WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
+    public List<_WeatherRelatedRoadConditionTypeEnum> getWeatherRelatedRoadConditionType() {
         if (weatherRelatedRoadConditionType == null) {
-            weatherRelatedRoadConditionType = new ArrayList<WeatherRelatedRoadConditionTypeEnum>();
+            weatherRelatedRoadConditionType = new ArrayList<_WeatherRelatedRoadConditionTypeEnum>();
         }
         return this.weatherRelatedRoadConditionType;
     }
@@ -103,27 +103,27 @@ public class WeatherRelatedRoadConditions
     }
 
     /**
-     * Gets the value of the weatherRelatedRoadConditionsExtension property.
+     * Gets the value of the _WeatherRelatedRoadConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWeatherRelatedRoadConditionsExtension() {
-        return weatherRelatedRoadConditionsExtension;
+    public _ExtensionType get_WeatherRelatedRoadConditionsExtension() {
+        return _WeatherRelatedRoadConditionsExtension;
     }
 
     /**
-     * Sets the value of the weatherRelatedRoadConditionsExtension property.
+     * Sets the value of the _WeatherRelatedRoadConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWeatherRelatedRoadConditionsExtension(ExtensionType value) {
-        this.weatherRelatedRoadConditionsExtension = value;
+    public void set_WeatherRelatedRoadConditionsExtension(_ExtensionType value) {
+        this._WeatherRelatedRoadConditionsExtension = value;
     }
 
 }

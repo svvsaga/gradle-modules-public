@@ -37,8 +37,8 @@ public class ItineraryByIndexedLocations
     extends Itinerary
 {
 
-    protected List<LocationContainedInItinerary> locationContainedInItinerary;
-    protected ExtensionType itineraryByIndexedLocationsExtension;
+    protected List<_LocationContainedInItinerary> locationContainedInItinerary;
+    protected _ExtensionType itineraryByIndexedLocationsExtension;
 
     /**
      * Gets the value of the locationContainedInItinerary property.
@@ -58,13 +58,13 @@ public class ItineraryByIndexedLocations
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link LocationContainedInItinerary }
+     * {@link _LocationContainedInItinerary }
      * 
      * 
      */
-    public List<LocationContainedInItinerary> getLocationContainedInItinerary() {
+    public List<_LocationContainedInItinerary> getLocationContainedInItinerary() {
         if (locationContainedInItinerary == null) {
-            locationContainedInItinerary = new ArrayList<LocationContainedInItinerary>();
+            locationContainedInItinerary = new ArrayList<_LocationContainedInItinerary>();
         }
         return this.locationContainedInItinerary;
     }
@@ -74,10 +74,10 @@ public class ItineraryByIndexedLocations
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getItineraryByIndexedLocationsExtension() {
+    public _ExtensionType getItineraryByIndexedLocationsExtension() {
         return itineraryByIndexedLocationsExtension;
     }
 
@@ -86,10 +86,10 @@ public class ItineraryByIndexedLocations
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setItineraryByIndexedLocationsExtension(ExtensionType value) {
+    public void setItineraryByIndexedLocationsExtension(_ExtensionType value) {
         this.itineraryByIndexedLocationsExtension = value;
     }
 

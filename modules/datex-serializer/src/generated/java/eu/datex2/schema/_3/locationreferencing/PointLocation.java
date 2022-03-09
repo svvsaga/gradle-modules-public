@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCPoint",
     "tpegPointLocation",
     "openlrPointLocationReference",
-    "pointLocationExtension"
+    "_PointLocationExtension"
 })
 public class PointLocation
     extends NetworkLocation
@@ -53,7 +53,7 @@ public class PointLocation
     protected TpegPointLocation tpegPointLocation;
     protected OpenlrPointLocationReference openlrPointLocationReference;
     @XmlElement(name = "_pointLocationExtension")
-    protected ExtensionType pointLocationExtension;
+    protected _ExtensionType _PointLocationExtension;
 
     /**
      * Gets the value of the pointByCoordinates property.
@@ -186,27 +186,27 @@ public class PointLocation
     }
 
     /**
-     * Gets the value of the pointLocationExtension property.
+     * Gets the value of the _PointLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointLocationExtension() {
-        return pointLocationExtension;
+    public _ExtensionType get_PointLocationExtension() {
+        return _PointLocationExtension;
     }
 
     /**
-     * Sets the value of the pointLocationExtension property.
+     * Sets the value of the _PointLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointLocationExtension(ExtensionType value) {
-        this.pointLocationExtension = value;
+    public void set_PointLocationExtension(_ExtensionType value) {
+        this._PointLocationExtension = value;
     }
 
 }

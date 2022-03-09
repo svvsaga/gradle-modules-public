@@ -4,9 +4,9 @@ package eu.datex2.schema._3.situation;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.InternationalIdentifier;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -51,11 +51,11 @@ import jakarta.xml.bind.annotation.XmlType;
     "relatedSituation",
     "informationManager",
     "situationSummary",
-    "situationExtension"
+    "_SituationExtension"
 })
 public class Situation {
 
-    protected SeverityEnum overallSeverity;
+    protected _SeverityEnum overallSeverity;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationVersionTime;
     @XmlElement(required = true)
@@ -66,7 +66,7 @@ public class Situation {
     protected InternationalIdentifier informationManager;
     protected SituationRecord situationSummary;
     @XmlElement(name = "_situationExtension")
-    protected ExtensionType situationExtension;
+    protected _ExtensionType _SituationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -75,10 +75,10 @@ public class Situation {
      * 
      * @return
      *     possible object is
-     *     {@link SeverityEnum }
+     *     {@link _SeverityEnum }
      *     
      */
-    public SeverityEnum getOverallSeverity() {
+    public _SeverityEnum getOverallSeverity() {
         return overallSeverity;
     }
 
@@ -87,10 +87,10 @@ public class Situation {
      * 
      * @param value
      *     allowed object is
-     *     {@link SeverityEnum }
+     *     {@link _SeverityEnum }
      *     
      */
-    public void setOverallSeverity(SeverityEnum value) {
+    public void setOverallSeverity(_SeverityEnum value) {
         this.overallSeverity = value;
     }
 
@@ -249,27 +249,27 @@ public class Situation {
     }
 
     /**
-     * Gets the value of the situationExtension property.
+     * Gets the value of the _SituationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationExtension() {
-        return situationExtension;
+    public _ExtensionType get_SituationExtension() {
+        return _SituationExtension;
     }
 
     /**
-     * Sets the value of the situationExtension property.
+     * Sets the value of the _SituationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationExtension(ExtensionType value) {
-        this.situationExtension = value;
+    public void set_SituationExtension(_ExtensionType value) {
+        this._SituationExtension = value;
     }
 
     /**

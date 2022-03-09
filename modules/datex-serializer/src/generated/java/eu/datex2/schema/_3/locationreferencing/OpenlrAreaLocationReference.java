@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OpenlrAreaLocationReference", propOrder = {
-    "openlrAreaLocationReferenceExtension"
+    "_OpenlrAreaLocationReferenceExtension"
 })
 @XmlSeeAlso({
     OpenlrCircleLocationReference.class,
@@ -42,30 +42,30 @@ import jakarta.xml.bind.annotation.XmlType;
 public abstract class OpenlrAreaLocationReference {
 
     @XmlElement(name = "_openlrAreaLocationReferenceExtension")
-    protected ExtensionType openlrAreaLocationReferenceExtension;
+    protected _ExtensionType _OpenlrAreaLocationReferenceExtension;
 
     /**
-     * Gets the value of the openlrAreaLocationReferenceExtension property.
+     * Gets the value of the _OpenlrAreaLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrAreaLocationReferenceExtension() {
-        return openlrAreaLocationReferenceExtension;
+    public _ExtensionType get_OpenlrAreaLocationReferenceExtension() {
+        return _OpenlrAreaLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the openlrAreaLocationReferenceExtension property.
+     * Sets the value of the _OpenlrAreaLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrAreaLocationReferenceExtension(ExtensionType value) {
-        this.openlrAreaLocationReferenceExtension = value;
+    public void set_OpenlrAreaLocationReferenceExtension(_ExtensionType value) {
+        this._OpenlrAreaLocationReferenceExtension = value;
     }
 
 }

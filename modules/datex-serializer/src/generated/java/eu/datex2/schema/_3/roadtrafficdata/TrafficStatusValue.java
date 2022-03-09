@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,26 +32,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TrafficStatusValue", propOrder = {
     "trafficStatusValue",
-    "trafficStatusValueExtension"
+    "_TrafficStatusValueExtension"
 })
 public class TrafficStatusValue
     extends DataValue
 {
 
     @XmlElement(required = true)
-    protected TrafficStatusEnum trafficStatusValue;
+    protected _TrafficStatusEnum trafficStatusValue;
     @XmlElement(name = "_trafficStatusValueExtension")
-    protected ExtensionType trafficStatusValueExtension;
+    protected _ExtensionType _TrafficStatusValueExtension;
 
     /**
      * Gets the value of the trafficStatusValue property.
      * 
      * @return
      *     possible object is
-     *     {@link TrafficStatusEnum }
+     *     {@link _TrafficStatusEnum }
      *     
      */
-    public TrafficStatusEnum getTrafficStatusValue() {
+    public _TrafficStatusEnum getTrafficStatusValue() {
         return trafficStatusValue;
     }
 
@@ -60,35 +60,35 @@ public class TrafficStatusValue
      * 
      * @param value
      *     allowed object is
-     *     {@link TrafficStatusEnum }
+     *     {@link _TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatusValue(TrafficStatusEnum value) {
+    public void setTrafficStatusValue(_TrafficStatusEnum value) {
         this.trafficStatusValue = value;
     }
 
     /**
-     * Gets the value of the trafficStatusValueExtension property.
+     * Gets the value of the _TrafficStatusValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficStatusValueExtension() {
-        return trafficStatusValueExtension;
+    public _ExtensionType get_TrafficStatusValueExtension() {
+        return _TrafficStatusValueExtension;
     }
 
     /**
-     * Sets the value of the trafficStatusValueExtension property.
+     * Sets the value of the _TrafficStatusValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficStatusValueExtension(ExtensionType value) {
-        this.trafficStatusValueExtension = value;
+    public void set_TrafficStatusValueExtension(_ExtensionType value) {
+        this._TrafficStatusValueExtension = value;
     }
 
 }

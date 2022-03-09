@@ -40,7 +40,7 @@ public class ExternalReferencing {
     protected String externalLocationCode;
     @XmlElement(required = true)
     protected String externalReferencingSystem;
-    protected ExtensionType externalReferencingExtension;
+    protected _ExtensionType externalReferencingExtension;
 
     /**
      * Gets the value of the externalLocationCode property.
@@ -95,10 +95,10 @@ public class ExternalReferencing {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getExternalReferencingExtension() {
+    public _ExtensionType getExternalReferencingExtension() {
         return externalReferencingExtension;
     }
 
@@ -107,10 +107,10 @@ public class ExternalReferencing {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setExternalReferencingExtension(ExtensionType value) {
+    public void setExternalReferencingExtension(_ExtensionType value) {
         this.externalReferencingExtension = value;
     }
 

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.FloatingPointMetreDistanceValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TrafficHeadway", propOrder = {
     "averageDistanceHeadway",
     "averageTimeHeadway",
-    "trafficHeadwayExtension"
+    "_TrafficHeadwayExtension"
 })
 public class TrafficHeadway
     extends TrafficData
@@ -43,7 +43,7 @@ public class TrafficHeadway
     protected FloatingPointMetreDistanceValue averageDistanceHeadway;
     protected DurationValue averageTimeHeadway;
     @XmlElement(name = "_trafficHeadwayExtension")
-    protected ExtensionType trafficHeadwayExtension;
+    protected _ExtensionType _TrafficHeadwayExtension;
 
     /**
      * Gets the value of the averageDistanceHeadway property.
@@ -94,27 +94,27 @@ public class TrafficHeadway
     }
 
     /**
-     * Gets the value of the trafficHeadwayExtension property.
+     * Gets the value of the _TrafficHeadwayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficHeadwayExtension() {
-        return trafficHeadwayExtension;
+    public _ExtensionType get_TrafficHeadwayExtension() {
+        return _TrafficHeadwayExtension;
     }
 
     /**
-     * Sets the value of the trafficHeadwayExtension property.
+     * Sets the value of the _TrafficHeadwayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficHeadwayExtension(ExtensionType value) {
-        this.trafficHeadwayExtension = value;
+    public void set_TrafficHeadwayExtension(_ExtensionType value) {
+        this._TrafficHeadwayExtension = value;
     }
 
 }

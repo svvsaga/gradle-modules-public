@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "predefinedItineraryName",
     "itinerary",
     "predefinedLocation",
-    "predefinedItineraryExtension"
+    "_PredefinedItineraryExtension"
 })
 public class PredefinedItinerary
     extends PredefinedLocationReference
@@ -51,7 +51,7 @@ public class PredefinedItinerary
     protected Itinerary itinerary;
     protected List<PredefinedLocation> predefinedLocation;
     @XmlElement(name = "_predefinedItineraryExtension")
-    protected ExtensionType predefinedItineraryExtension;
+    protected _ExtensionType _PredefinedItineraryExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -135,27 +135,27 @@ public class PredefinedItinerary
     }
 
     /**
-     * Gets the value of the predefinedItineraryExtension property.
+     * Gets the value of the _PredefinedItineraryExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedItineraryExtension() {
-        return predefinedItineraryExtension;
+    public _ExtensionType get_PredefinedItineraryExtension() {
+        return _PredefinedItineraryExtension;
     }
 
     /**
-     * Sets the value of the predefinedItineraryExtension property.
+     * Sets the value of the _PredefinedItineraryExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedItineraryExtension(ExtensionType value) {
-        this.predefinedItineraryExtension = value;
+    public void set_PredefinedItineraryExtension(_ExtensionType value) {
+        this._PredefinedItineraryExtension = value;
     }
 
     /**

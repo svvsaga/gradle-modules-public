@@ -50,7 +50,7 @@ public abstract class Obstruction
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfObstructions;
     protected Mobility mobilityOfObstruction;
-    protected ExtensionType obstructionExtension;
+    protected _ExtensionType obstructionExtension;
 
     /**
      * Gets the value of the numberOfObstructions property.
@@ -105,10 +105,10 @@ public abstract class Obstruction
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getObstructionExtension() {
+    public _ExtensionType getObstructionExtension() {
         return obstructionExtension;
     }
 
@@ -117,10 +117,10 @@ public abstract class Obstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setObstructionExtension(ExtensionType value) {
+    public void setObstructionExtension(_ExtensionType value) {
         this.obstructionExtension = value;
     }
 

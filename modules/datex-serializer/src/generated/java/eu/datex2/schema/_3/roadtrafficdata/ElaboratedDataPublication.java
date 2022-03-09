@@ -4,10 +4,10 @@ package eu.datex2.schema._3.roadtrafficdata;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.InternationalIdentifier;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -50,7 +50,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "referenceSettings",
     "physicalQuantity",
     "informationManager",
-    "elaboratedDataPublicationExtension"
+    "_ElaboratedDataPublicationExtension"
 })
 public class ElaboratedDataPublication
     extends PayloadPublication
@@ -67,7 +67,7 @@ public class ElaboratedDataPublication
     protected List<PhysicalQuantity> physicalQuantity;
     protected InternationalIdentifier informationManager;
     @XmlElement(name = "_elaboratedDataPublicationExtension")
-    protected ExtensionType elaboratedDataPublicationExtension;
+    protected _ExtensionType _ElaboratedDataPublicationExtension;
 
     /**
      * Gets the value of the forecastDefault property.
@@ -243,27 +243,27 @@ public class ElaboratedDataPublication
     }
 
     /**
-     * Gets the value of the elaboratedDataPublicationExtension property.
+     * Gets the value of the _ElaboratedDataPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getElaboratedDataPublicationExtension() {
-        return elaboratedDataPublicationExtension;
+    public _ExtensionType get_ElaboratedDataPublicationExtension() {
+        return _ElaboratedDataPublicationExtension;
     }
 
     /**
-     * Sets the value of the elaboratedDataPublicationExtension property.
+     * Sets the value of the _ElaboratedDataPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setElaboratedDataPublicationExtension(ExtensionType value) {
-        this.elaboratedDataPublicationExtension = value;
+    public void set_ElaboratedDataPublicationExtension(_ExtensionType value) {
+        this._ElaboratedDataPublicationExtension = value;
     }
 
 }

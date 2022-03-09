@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "EnvironmentalObstruction", propOrder = {
     "depth",
     "environmentalObstructionType",
-    "environmentalObstructionExtension"
+    "_EnvironmentalObstructionExtension"
 })
 public class EnvironmentalObstruction
     extends Obstruction
@@ -41,9 +41,9 @@ public class EnvironmentalObstruction
 
     protected Float depth;
     @XmlElement(required = true)
-    protected EnvironmentalObstructionTypeEnum environmentalObstructionType;
+    protected _EnvironmentalObstructionTypeEnum environmentalObstructionType;
     @XmlElement(name = "_environmentalObstructionExtension")
-    protected ExtensionType environmentalObstructionExtension;
+    protected _ExtensionType _EnvironmentalObstructionExtension;
 
     /**
      * Gets the value of the depth property.
@@ -74,10 +74,10 @@ public class EnvironmentalObstruction
      * 
      * @return
      *     possible object is
-     *     {@link EnvironmentalObstructionTypeEnum }
+     *     {@link _EnvironmentalObstructionTypeEnum }
      *     
      */
-    public EnvironmentalObstructionTypeEnum getEnvironmentalObstructionType() {
+    public _EnvironmentalObstructionTypeEnum getEnvironmentalObstructionType() {
         return environmentalObstructionType;
     }
 
@@ -86,35 +86,35 @@ public class EnvironmentalObstruction
      * 
      * @param value
      *     allowed object is
-     *     {@link EnvironmentalObstructionTypeEnum }
+     *     {@link _EnvironmentalObstructionTypeEnum }
      *     
      */
-    public void setEnvironmentalObstructionType(EnvironmentalObstructionTypeEnum value) {
+    public void setEnvironmentalObstructionType(_EnvironmentalObstructionTypeEnum value) {
         this.environmentalObstructionType = value;
     }
 
     /**
-     * Gets the value of the environmentalObstructionExtension property.
+     * Gets the value of the _EnvironmentalObstructionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEnvironmentalObstructionExtension() {
-        return environmentalObstructionExtension;
+    public _ExtensionType get_EnvironmentalObstructionExtension() {
+        return _EnvironmentalObstructionExtension;
     }
 
     /**
-     * Sets the value of the environmentalObstructionExtension property.
+     * Sets the value of the _EnvironmentalObstructionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEnvironmentalObstructionExtension(ExtensionType value) {
-        this.environmentalObstructionExtension = value;
+    public void set_EnvironmentalObstructionExtension(_ExtensionType value) {
+        this._EnvironmentalObstructionExtension = value;
     }
 
 }

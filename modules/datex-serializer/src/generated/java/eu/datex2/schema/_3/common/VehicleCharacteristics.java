@@ -58,15 +58,15 @@ import jakarta.xml.bind.annotation.XmlType;
     "heaviestAxleWeightCharacteristic",
     "numberOfAxlesCharacteristic",
     "emissions",
-    "vehicleCharacteristicsExtension"
+    "_VehicleCharacteristicsExtension"
 })
 public class VehicleCharacteristics {
 
-    protected List<FuelTypeEnum> fuelType;
-    protected LoadTypeEnum loadType;
-    protected VehicleEquipmentEnum vehicleEquipment;
-    protected List<VehicleTypeEnum> vehicleType;
-    protected VehicleUsageEnum vehicleUsage;
+    protected List<_FuelTypeEnum> fuelType;
+    protected _LoadTypeEnum loadType;
+    protected _VehicleEquipmentEnum vehicleEquipment;
+    protected List<_VehicleTypeEnum> vehicleType;
+    protected _VehicleUsageEnum vehicleUsage;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger yearOfFirstRegistration;
     protected List<GrossWeightCharacteristic> grossWeightCharacteristic;
@@ -77,7 +77,7 @@ public class VehicleCharacteristics {
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
     protected Emissions emissions;
     @XmlElement(name = "_vehicleCharacteristicsExtension")
-    protected ExtensionType vehicleCharacteristicsExtension;
+    protected _ExtensionType _VehicleCharacteristicsExtension;
 
     /**
      * Gets the value of the fuelType property.
@@ -97,13 +97,13 @@ public class VehicleCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FuelTypeEnum }
+     * {@link _FuelTypeEnum }
      * 
      * 
      */
-    public List<FuelTypeEnum> getFuelType() {
+    public List<_FuelTypeEnum> getFuelType() {
         if (fuelType == null) {
-            fuelType = new ArrayList<FuelTypeEnum>();
+            fuelType = new ArrayList<_FuelTypeEnum>();
         }
         return this.fuelType;
     }
@@ -113,10 +113,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link LoadTypeEnum }
+     *     {@link _LoadTypeEnum }
      *     
      */
-    public LoadTypeEnum getLoadType() {
+    public _LoadTypeEnum getLoadType() {
         return loadType;
     }
 
@@ -125,10 +125,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link LoadTypeEnum }
+     *     {@link _LoadTypeEnum }
      *     
      */
-    public void setLoadType(LoadTypeEnum value) {
+    public void setLoadType(_LoadTypeEnum value) {
         this.loadType = value;
     }
 
@@ -137,10 +137,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleEquipmentEnum }
+     *     {@link _VehicleEquipmentEnum }
      *     
      */
-    public VehicleEquipmentEnum getVehicleEquipment() {
+    public _VehicleEquipmentEnum getVehicleEquipment() {
         return vehicleEquipment;
     }
 
@@ -149,10 +149,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleEquipmentEnum }
+     *     {@link _VehicleEquipmentEnum }
      *     
      */
-    public void setVehicleEquipment(VehicleEquipmentEnum value) {
+    public void setVehicleEquipment(_VehicleEquipmentEnum value) {
         this.vehicleEquipment = value;
     }
 
@@ -174,13 +174,13 @@ public class VehicleCharacteristics {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VehicleTypeEnum }
+     * {@link _VehicleTypeEnum }
      * 
      * 
      */
-    public List<VehicleTypeEnum> getVehicleType() {
+    public List<_VehicleTypeEnum> getVehicleType() {
         if (vehicleType == null) {
-            vehicleType = new ArrayList<VehicleTypeEnum>();
+            vehicleType = new ArrayList<_VehicleTypeEnum>();
         }
         return this.vehicleType;
     }
@@ -190,10 +190,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleUsageEnum }
+     *     {@link _VehicleUsageEnum }
      *     
      */
-    public VehicleUsageEnum getVehicleUsage() {
+    public _VehicleUsageEnum getVehicleUsage() {
         return vehicleUsage;
     }
 
@@ -202,10 +202,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleUsageEnum }
+     *     {@link _VehicleUsageEnum }
      *     
      */
-    public void setVehicleUsage(VehicleUsageEnum value) {
+    public void setVehicleUsage(_VehicleUsageEnum value) {
         this.vehicleUsage = value;
     }
 
@@ -432,27 +432,27 @@ public class VehicleCharacteristics {
     }
 
     /**
-     * Gets the value of the vehicleCharacteristicsExtension property.
+     * Gets the value of the _VehicleCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVehicleCharacteristicsExtension() {
-        return vehicleCharacteristicsExtension;
+    public _ExtensionType get_VehicleCharacteristicsExtension() {
+        return _VehicleCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the vehicleCharacteristicsExtension property.
+     * Sets the value of the _VehicleCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVehicleCharacteristicsExtension(ExtensionType value) {
-        this.vehicleCharacteristicsExtension = value;
+    public void set_VehicleCharacteristicsExtension(_ExtensionType value) {
+        this._VehicleCharacteristicsExtension = value;
     }
 
 }

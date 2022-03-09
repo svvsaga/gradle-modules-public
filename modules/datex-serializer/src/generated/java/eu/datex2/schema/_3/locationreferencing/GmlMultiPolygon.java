@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GmlMultiPolygon", propOrder = {
     "gmlAreaName",
     "gmlPolygon",
-    "gmlMultiPolygonExtension"
+    "_GmlMultiPolygonExtension"
 })
 public class GmlMultiPolygon {
 
@@ -44,7 +44,7 @@ public class GmlMultiPolygon {
     @XmlElement(required = true)
     protected List<GmlPolygon> gmlPolygon;
     @XmlElement(name = "_gmlMultiPolygonExtension")
-    protected ExtensionType gmlMultiPolygonExtension;
+    protected _ExtensionType _GmlMultiPolygonExtension;
 
     /**
      * Gets the value of the gmlAreaName property.
@@ -100,27 +100,27 @@ public class GmlMultiPolygon {
     }
 
     /**
-     * Gets the value of the gmlMultiPolygonExtension property.
+     * Gets the value of the _GmlMultiPolygonExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGmlMultiPolygonExtension() {
-        return gmlMultiPolygonExtension;
+    public _ExtensionType get_GmlMultiPolygonExtension() {
+        return _GmlMultiPolygonExtension;
     }
 
     /**
-     * Sets the value of the gmlMultiPolygonExtension property.
+     * Sets the value of the _GmlMultiPolygonExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGmlMultiPolygonExtension(ExtensionType value) {
-        this.gmlMultiPolygonExtension = value;
+    public void set_GmlMultiPolygonExtension(_ExtensionType value) {
+        this._GmlMultiPolygonExtension = value;
     }
 
 }

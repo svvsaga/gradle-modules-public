@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "actionOrigin",
     "actionPlanIdentifier",
     "operatorActionStatus",
-    "operatorActionExtension"
+    "_OperatorActionExtension"
 })
 @XmlSeeAlso({
     RoadsideAssistance.class,
@@ -47,21 +47,21 @@ public abstract class OperatorAction
     extends SituationRecord
 {
 
-    protected OperatorActionOriginEnum actionOrigin;
+    protected _OperatorActionOriginEnum actionOrigin;
     protected String actionPlanIdentifier;
-    protected OperatorActionStatusEnum operatorActionStatus;
+    protected _OperatorActionStatusEnum operatorActionStatus;
     @XmlElement(name = "_operatorActionExtension")
-    protected ExtensionType operatorActionExtension;
+    protected _ExtensionType _OperatorActionExtension;
 
     /**
      * Gets the value of the actionOrigin property.
      * 
      * @return
      *     possible object is
-     *     {@link OperatorActionOriginEnum }
+     *     {@link _OperatorActionOriginEnum }
      *     
      */
-    public OperatorActionOriginEnum getActionOrigin() {
+    public _OperatorActionOriginEnum getActionOrigin() {
         return actionOrigin;
     }
 
@@ -70,10 +70,10 @@ public abstract class OperatorAction
      * 
      * @param value
      *     allowed object is
-     *     {@link OperatorActionOriginEnum }
+     *     {@link _OperatorActionOriginEnum }
      *     
      */
-    public void setActionOrigin(OperatorActionOriginEnum value) {
+    public void setActionOrigin(_OperatorActionOriginEnum value) {
         this.actionOrigin = value;
     }
 
@@ -106,10 +106,10 @@ public abstract class OperatorAction
      * 
      * @return
      *     possible object is
-     *     {@link OperatorActionStatusEnum }
+     *     {@link _OperatorActionStatusEnum }
      *     
      */
-    public OperatorActionStatusEnum getOperatorActionStatus() {
+    public _OperatorActionStatusEnum getOperatorActionStatus() {
         return operatorActionStatus;
     }
 
@@ -118,35 +118,35 @@ public abstract class OperatorAction
      * 
      * @param value
      *     allowed object is
-     *     {@link OperatorActionStatusEnum }
+     *     {@link _OperatorActionStatusEnum }
      *     
      */
-    public void setOperatorActionStatus(OperatorActionStatusEnum value) {
+    public void setOperatorActionStatus(_OperatorActionStatusEnum value) {
         this.operatorActionStatus = value;
     }
 
     /**
-     * Gets the value of the operatorActionExtension property.
+     * Gets the value of the _OperatorActionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOperatorActionExtension() {
-        return operatorActionExtension;
+    public _ExtensionType get_OperatorActionExtension() {
+        return _OperatorActionExtension;
     }
 
     /**
-     * Sets the value of the operatorActionExtension property.
+     * Sets the value of the _OperatorActionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOperatorActionExtension(ExtensionType value) {
-        this.operatorActionExtension = value;
+    public void set_OperatorActionExtension(_ExtensionType value) {
+        this._OperatorActionExtension = value;
     }
 
 }

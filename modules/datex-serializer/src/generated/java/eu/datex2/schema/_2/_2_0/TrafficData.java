@@ -44,7 +44,7 @@ public abstract class TrafficData
 {
 
     protected VehicleCharacteristics forVehiclesWithCharacteristicsOf;
-    protected ExtensionType trafficDataExtension;
+    protected _ExtensionType trafficDataExtension;
 
     /**
      * Gets the value of the forVehiclesWithCharacteristicsOf property.
@@ -75,10 +75,10 @@ public abstract class TrafficData
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficDataExtension() {
+    public _ExtensionType getTrafficDataExtension() {
         return trafficDataExtension;
     }
 
@@ -87,10 +87,10 @@ public abstract class TrafficData
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficDataExtension(ExtensionType value) {
+    public void setTrafficDataExtension(_ExtensionType value) {
         this.trafficDataExtension = value;
     }
 

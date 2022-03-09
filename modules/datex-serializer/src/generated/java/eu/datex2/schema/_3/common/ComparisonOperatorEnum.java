@@ -1,87 +1,62 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _ComparisonOperatorEnum complex type.
+ * <p>Java class for ComparisonOperatorEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_ComparisonOperatorEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;ComparisonOperatorEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="ComparisonOperatorEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="equalTo"/&gt;
+ *     &lt;enumeration value="greaterThan"/&gt;
+ *     &lt;enumeration value="greaterThanOrEqualTo"/&gt;
+ *     &lt;enumeration value="lessThan"/&gt;
+ *     &lt;enumeration value="lessThanOrEqualTo"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ComparisonOperatorEnum", propOrder = {
-    "value"
-})
-public class ComparisonOperatorEnum {
+@XmlType(name = "ComparisonOperatorEnum")
+@XmlEnum
+public enum ComparisonOperatorEnum {
 
-    @XmlValue
-    protected ComparisonOperatorEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("equalTo")
+    EQUAL_TO("equalTo"),
+    @XmlEnumValue("greaterThan")
+    GREATER_THAN("greaterThan"),
+    @XmlEnumValue("greaterThanOrEqualTo")
+    GREATER_THAN_OR_EQUAL_TO("greaterThanOrEqualTo"),
+    @XmlEnumValue("lessThan")
+    LESS_THAN("lessThan"),
+    @XmlEnumValue("lessThanOrEqualTo")
+    LESS_THAN_OR_EQUAL_TO("lessThanOrEqualTo"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ComparisonOperatorEnum2 }
-     *     
-     */
-    public ComparisonOperatorEnum2 getValue() {
+    ComparisonOperatorEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ComparisonOperatorEnum2 }
-     *     
-     */
-    public void setValue(ComparisonOperatorEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static ComparisonOperatorEnum fromValue(String v) {
+        for (ComparisonOperatorEnum c: ComparisonOperatorEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

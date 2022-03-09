@@ -4,7 +4,7 @@ package eu.datex2.schema._3.locationreferencing;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -38,26 +38,26 @@ import jakarta.xml.bind.annotation.XmlType;
     "carriageway",
     "originalNumberOfLanes",
     "lane",
-    "carriagewayExtension"
+    "_CarriagewayExtension"
 })
 public class Carriageway {
 
     @XmlElement(required = true)
-    protected CarriagewayEnum carriageway;
+    protected _CarriagewayEnum carriageway;
     protected BigInteger originalNumberOfLanes;
     protected List<Lane> lane;
     @XmlElement(name = "_carriagewayExtension")
-    protected ExtensionType carriagewayExtension;
+    protected _ExtensionType _CarriagewayExtension;
 
     /**
      * Gets the value of the carriageway property.
      * 
      * @return
      *     possible object is
-     *     {@link CarriagewayEnum }
+     *     {@link _CarriagewayEnum }
      *     
      */
-    public CarriagewayEnum getCarriageway() {
+    public _CarriagewayEnum getCarriageway() {
         return carriageway;
     }
 
@@ -66,10 +66,10 @@ public class Carriageway {
      * 
      * @param value
      *     allowed object is
-     *     {@link CarriagewayEnum }
+     *     {@link _CarriagewayEnum }
      *     
      */
-    public void setCarriageway(CarriagewayEnum value) {
+    public void setCarriageway(_CarriagewayEnum value) {
         this.carriageway = value;
     }
 
@@ -127,27 +127,27 @@ public class Carriageway {
     }
 
     /**
-     * Gets the value of the carriagewayExtension property.
+     * Gets the value of the _CarriagewayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCarriagewayExtension() {
-        return carriagewayExtension;
+    public _ExtensionType get_CarriagewayExtension() {
+        return _CarriagewayExtension;
     }
 
     /**
-     * Sets the value of the carriagewayExtension property.
+     * Sets the value of the _CarriagewayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCarriagewayExtension(ExtensionType value) {
-        this.carriagewayExtension = value;
+    public void set_CarriagewayExtension(_ExtensionType value) {
+        this._CarriagewayExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,14 +33,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AxleCharacteristics", propOrder = {
     "maximumWeight",
     "minimumWeight",
-    "axleCharacteristicsExtension"
+    "_AxleCharacteristicsExtension"
 })
 public class AxleCharacteristics {
 
     protected Float maximumWeight;
     protected Float minimumWeight;
     @XmlElement(name = "_axleCharacteristicsExtension")
-    protected ExtensionType axleCharacteristicsExtension;
+    protected _ExtensionType _AxleCharacteristicsExtension;
 
     /**
      * Gets the value of the maximumWeight property.
@@ -91,27 +91,27 @@ public class AxleCharacteristics {
     }
 
     /**
-     * Gets the value of the axleCharacteristicsExtension property.
+     * Gets the value of the _AxleCharacteristicsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAxleCharacteristicsExtension() {
-        return axleCharacteristicsExtension;
+    public _ExtensionType get_AxleCharacteristicsExtension() {
+        return _AxleCharacteristicsExtension;
     }
 
     /**
-     * Sets the value of the axleCharacteristicsExtension property.
+     * Sets the value of the _AxleCharacteristicsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAxleCharacteristicsExtension(ExtensionType value) {
-        this.axleCharacteristicsExtension = value;
+    public void set_AxleCharacteristicsExtension(_ExtensionType value) {
+        this._AxleCharacteristicsExtension = value;
     }
 
 }

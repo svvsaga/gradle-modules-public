@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GmlLineString", propOrder = {
     "posList",
-    "gmlLineStringExtension"
+    "_GmlLineStringExtension"
 })
 @XmlSeeAlso({
     GmlLinearRing.class
@@ -46,7 +46,7 @@ public class GmlLineString {
     @XmlElement(required = true)
     protected String posList;
     @XmlElement(name = "_gmlLineStringExtension")
-    protected ExtensionType gmlLineStringExtension;
+    protected _ExtensionType _GmlLineStringExtension;
     @XmlAttribute(name = "srsDimension")
     protected BigInteger srsDimension;
     @XmlAttribute(name = "srsName")
@@ -77,27 +77,27 @@ public class GmlLineString {
     }
 
     /**
-     * Gets the value of the gmlLineStringExtension property.
+     * Gets the value of the _GmlLineStringExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGmlLineStringExtension() {
-        return gmlLineStringExtension;
+    public _ExtensionType get_GmlLineStringExtension() {
+        return _GmlLineStringExtension;
     }
 
     /**
-     * Sets the value of the gmlLineStringExtension property.
+     * Sets the value of the _GmlLineStringExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGmlLineStringExtension(ExtensionType value) {
-        this.gmlLineStringExtension = value;
+    public void set_GmlLineStringExtension(_ExtensionType value) {
+        this._GmlLineStringExtension = value;
     }
 
     /**

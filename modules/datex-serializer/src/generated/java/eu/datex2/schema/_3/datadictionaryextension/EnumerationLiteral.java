@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "designation",
     "translation",
     "translationDefinition",
-    "enumerationLiteralExtension"
+    "_EnumerationLiteralExtension"
 })
 public class EnumerationLiteral {
 
@@ -61,7 +61,7 @@ public class EnumerationLiteral {
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
     @XmlElement(name = "_enumerationLiteralExtension")
-    protected ExtensionType enumerationLiteralExtension;
+    protected _ExtensionType _EnumerationLiteralExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -232,27 +232,27 @@ public class EnumerationLiteral {
     }
 
     /**
-     * Gets the value of the enumerationLiteralExtension property.
+     * Gets the value of the _EnumerationLiteralExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEnumerationLiteralExtension() {
-        return enumerationLiteralExtension;
+    public _ExtensionType get_EnumerationLiteralExtension() {
+        return _EnumerationLiteralExtension;
     }
 
     /**
-     * Sets the value of the enumerationLiteralExtension property.
+     * Sets the value of the _EnumerationLiteralExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEnumerationLiteralExtension(ExtensionType value) {
-        this.enumerationLiteralExtension = value;
+    public void set_EnumerationLiteralExtension(_ExtensionType value) {
+        this._EnumerationLiteralExtension = value;
     }
 
 }

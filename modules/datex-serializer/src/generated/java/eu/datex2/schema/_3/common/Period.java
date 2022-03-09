@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "recurringTimePeriodOfDay",
     "recurringDayWeekMonthPeriod",
     "recurringSpecialDay",
-    "periodExtension"
+    "_PeriodExtension"
 })
 public class Period {
 
@@ -57,7 +57,7 @@ public class Period {
     protected List<DayWeekMonth> recurringDayWeekMonthPeriod;
     protected List<SpecialDay> recurringSpecialDay;
     @XmlElement(name = "_periodExtension")
-    protected ExtensionType periodExtension;
+    protected _ExtensionType _PeriodExtension;
 
     /**
      * Gets the value of the startOfPeriod property.
@@ -219,27 +219,27 @@ public class Period {
     }
 
     /**
-     * Gets the value of the periodExtension property.
+     * Gets the value of the _PeriodExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPeriodExtension() {
-        return periodExtension;
+    public _ExtensionType get_PeriodExtension() {
+        return _PeriodExtension;
     }
 
     /**
-     * Sets the value of the periodExtension property.
+     * Sets the value of the _PeriodExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPeriodExtension(ExtensionType value) {
-        this.periodExtension = value;
+    public void set_PeriodExtension(_ExtensionType value) {
+        this._PeriodExtension = value;
     }
 
 }

@@ -40,7 +40,7 @@ public class TrafficStatusValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TrafficStatusEnum trafficStatusValue;
-    protected ExtensionType trafficStatusValueExtension;
+    protected _ExtensionType trafficStatusValueExtension;
 
     /**
      * Gets the value of the trafficStatusValue property.
@@ -71,10 +71,10 @@ public class TrafficStatusValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficStatusValueExtension() {
+    public _ExtensionType getTrafficStatusValueExtension() {
         return trafficStatusValueExtension;
     }
 
@@ -83,10 +83,10 @@ public class TrafficStatusValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficStatusValueExtension(ExtensionType value) {
+    public void setTrafficStatusValueExtension(_ExtensionType value) {
         this.trafficStatusValueExtension = value;
     }
 

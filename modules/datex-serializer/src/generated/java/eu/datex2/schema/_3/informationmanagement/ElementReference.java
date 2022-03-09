@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.informationmanagement;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Reference;
 import eu.datex2.schema._3.common.VersionedReference;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,26 +37,26 @@ import jakarta.xml.bind.annotation.XmlType;
     "managementStatus",
     "reference",
     "versionedReference",
-    "elementReferenceExtension"
+    "_ElementReferenceExtension"
 })
 public class ElementReference {
 
     @XmlElement(required = true)
-    protected ManagementTypeEnum managementStatus;
+    protected _ManagementTypeEnum managementStatus;
     protected Reference reference;
     protected VersionedReference versionedReference;
     @XmlElement(name = "_elementReferenceExtension")
-    protected ExtensionType elementReferenceExtension;
+    protected _ExtensionType _ElementReferenceExtension;
 
     /**
      * Gets the value of the managementStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link ManagementTypeEnum }
+     *     {@link _ManagementTypeEnum }
      *     
      */
-    public ManagementTypeEnum getManagementStatus() {
+    public _ManagementTypeEnum getManagementStatus() {
         return managementStatus;
     }
 
@@ -65,10 +65,10 @@ public class ElementReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link ManagementTypeEnum }
+     *     {@link _ManagementTypeEnum }
      *     
      */
-    public void setManagementStatus(ManagementTypeEnum value) {
+    public void setManagementStatus(_ManagementTypeEnum value) {
         this.managementStatus = value;
     }
 
@@ -121,27 +121,27 @@ public class ElementReference {
     }
 
     /**
-     * Gets the value of the elementReferenceExtension property.
+     * Gets the value of the _ElementReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getElementReferenceExtension() {
-        return elementReferenceExtension;
+    public _ExtensionType get_ElementReferenceExtension() {
+        return _ElementReferenceExtension;
     }
 
     /**
-     * Sets the value of the elementReferenceExtension property.
+     * Sets the value of the _ElementReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setElementReferenceExtension(ExtensionType value) {
-        this.elementReferenceExtension = value;
+    public void set_ElementReferenceExtension(_ExtensionType value) {
+        this._ElementReferenceExtension = value;
     }
 
 }

@@ -36,20 +36,20 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ReferenceSettings {
 
-    protected PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
+    protected _PredefinedNonOrderedLocationGroupVersionedReference predefinedNonOrderedLocationGroupReference;
     @XmlSchemaType(name = "string")
     protected TrafficStatusEnum trafficStatusDefault;
-    protected ExtensionType referenceSettingsExtension;
+    protected _ExtensionType referenceSettingsExtension;
 
     /**
      * Gets the value of the predefinedNonOrderedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
+    public _PredefinedNonOrderedLocationGroupVersionedReference getPredefinedNonOrderedLocationGroupReference() {
         return predefinedNonOrderedLocationGroupReference;
     }
 
@@ -58,10 +58,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedNonOrderedLocationGroupVersionedReference }
+     *     {@link _PredefinedNonOrderedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedNonOrderedLocationGroupReference(PredefinedNonOrderedLocationGroupVersionedReference value) {
+    public void setPredefinedNonOrderedLocationGroupReference(_PredefinedNonOrderedLocationGroupVersionedReference value) {
         this.predefinedNonOrderedLocationGroupReference = value;
     }
 
@@ -94,10 +94,10 @@ public class ReferenceSettings {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getReferenceSettingsExtension() {
+    public _ExtensionType getReferenceSettingsExtension() {
         return referenceSettingsExtension;
     }
 
@@ -106,10 +106,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setReferenceSettingsExtension(ExtensionType value) {
+    public void setReferenceSettingsExtension(_ExtensionType value) {
         this.referenceSettingsExtension = value;
     }
 

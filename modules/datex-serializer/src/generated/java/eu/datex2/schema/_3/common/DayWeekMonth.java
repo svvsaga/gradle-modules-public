@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "DayWeekMonth", propOrder = {
     "applicableDay",
     "applicableMonth",
-    "dayWeekMonthExtension"
+    "_DayWeekMonthExtension"
 })
 @XmlSeeAlso({
     CalendarWeekWithinMonth.class,
@@ -43,10 +43,10 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class DayWeekMonth {
 
-    protected List<DayEnum> applicableDay;
-    protected List<MonthOfYearEnum> applicableMonth;
+    protected List<_DayEnum> applicableDay;
+    protected List<_MonthOfYearEnum> applicableMonth;
     @XmlElement(name = "_dayWeekMonthExtension")
-    protected ExtensionType dayWeekMonthExtension;
+    protected _ExtensionType _DayWeekMonthExtension;
 
     /**
      * Gets the value of the applicableDay property.
@@ -66,13 +66,13 @@ public class DayWeekMonth {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DayEnum }
+     * {@link _DayEnum }
      * 
      * 
      */
-    public List<DayEnum> getApplicableDay() {
+    public List<_DayEnum> getApplicableDay() {
         if (applicableDay == null) {
-            applicableDay = new ArrayList<DayEnum>();
+            applicableDay = new ArrayList<_DayEnum>();
         }
         return this.applicableDay;
     }
@@ -95,39 +95,39 @@ public class DayWeekMonth {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MonthOfYearEnum }
+     * {@link _MonthOfYearEnum }
      * 
      * 
      */
-    public List<MonthOfYearEnum> getApplicableMonth() {
+    public List<_MonthOfYearEnum> getApplicableMonth() {
         if (applicableMonth == null) {
-            applicableMonth = new ArrayList<MonthOfYearEnum>();
+            applicableMonth = new ArrayList<_MonthOfYearEnum>();
         }
         return this.applicableMonth;
     }
 
     /**
-     * Gets the value of the dayWeekMonthExtension property.
+     * Gets the value of the _DayWeekMonthExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDayWeekMonthExtension() {
-        return dayWeekMonthExtension;
+    public _ExtensionType get_DayWeekMonthExtension() {
+        return _DayWeekMonthExtension;
     }
 
     /**
-     * Sets the value of the dayWeekMonthExtension property.
+     * Sets the value of the _DayWeekMonthExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDayWeekMonthExtension(ExtensionType value) {
-        this.dayWeekMonthExtension = value;
+    public void set_DayWeekMonthExtension(_ExtensionType value) {
+        this._DayWeekMonthExtension = value;
     }
 
 }

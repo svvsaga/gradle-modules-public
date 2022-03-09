@@ -45,7 +45,7 @@ public class EquipmentOrSystemFault
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected EquipmentOrSystemTypeEnum faultyEquipmentOrSystemType;
-    protected ExtensionType equipmentOrSystemFaultExtension;
+    protected _ExtensionType equipmentOrSystemFaultExtension;
 
     /**
      * Gets the value of the equipmentOrSystemFaultType property.
@@ -100,10 +100,10 @@ public class EquipmentOrSystemFault
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEquipmentOrSystemFaultExtension() {
+    public _ExtensionType getEquipmentOrSystemFaultExtension() {
         return equipmentOrSystemFaultExtension;
     }
 
@@ -112,10 +112,10 @@ public class EquipmentOrSystemFault
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEquipmentOrSystemFaultExtension(ExtensionType value) {
+    public void setEquipmentOrSystemFaultExtension(_ExtensionType value) {
         this.equipmentOrSystemFaultExtension = value;
     }
 

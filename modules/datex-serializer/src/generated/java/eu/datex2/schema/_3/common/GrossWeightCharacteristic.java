@@ -34,27 +34,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "comparisonOperator",
     "grossVehicleWeight",
     "typeOfWeight",
-    "grossWeightCharacteristicExtension"
+    "_GrossWeightCharacteristicExtension"
 })
 public class GrossWeightCharacteristic {
 
     @XmlElement(required = true)
-    protected ComparisonOperatorEnum comparisonOperator;
+    protected _ComparisonOperatorEnum comparisonOperator;
     protected float grossVehicleWeight;
     @XmlElement(required = true)
-    protected WeightTypeEnum typeOfWeight;
+    protected _WeightTypeEnum typeOfWeight;
     @XmlElement(name = "_grossWeightCharacteristicExtension")
-    protected ExtensionType grossWeightCharacteristicExtension;
+    protected _ExtensionType _GrossWeightCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public ComparisonOperatorEnum getComparisonOperator() {
+    public _ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -63,10 +63,10 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public void setComparisonOperator(_ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -91,10 +91,10 @@ public class GrossWeightCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link WeightTypeEnum }
+     *     {@link _WeightTypeEnum }
      *     
      */
-    public WeightTypeEnum getTypeOfWeight() {
+    public _WeightTypeEnum getTypeOfWeight() {
         return typeOfWeight;
     }
 
@@ -103,35 +103,35 @@ public class GrossWeightCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link WeightTypeEnum }
+     *     {@link _WeightTypeEnum }
      *     
      */
-    public void setTypeOfWeight(WeightTypeEnum value) {
+    public void setTypeOfWeight(_WeightTypeEnum value) {
         this.typeOfWeight = value;
     }
 
     /**
-     * Gets the value of the grossWeightCharacteristicExtension property.
+     * Gets the value of the _GrossWeightCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGrossWeightCharacteristicExtension() {
-        return grossWeightCharacteristicExtension;
+    public _ExtensionType get_GrossWeightCharacteristicExtension() {
+        return _GrossWeightCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the grossWeightCharacteristicExtension property.
+     * Sets the value of the _GrossWeightCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGrossWeightCharacteristicExtension(ExtensionType value) {
-        this.grossWeightCharacteristicExtension = value;
+    public void set_GrossWeightCharacteristicExtension(_ExtensionType value) {
+        this._GrossWeightCharacteristicExtension = value;
     }
 
 }

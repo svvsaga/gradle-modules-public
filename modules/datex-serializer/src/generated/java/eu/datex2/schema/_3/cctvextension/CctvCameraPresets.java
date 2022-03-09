@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.cctvextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "CctvCameraPresets", propOrder = {
     "cctvCameraPresetIdentification",
     "cctvCameraPresetName",
-    "cctvCameraPresetsExtension"
+    "_CctvCameraPresetsExtension"
 })
 public class CctvCameraPresets {
 
@@ -41,7 +41,7 @@ public class CctvCameraPresets {
     protected String cctvCameraPresetIdentification;
     protected String cctvCameraPresetName;
     @XmlElement(name = "_cctvCameraPresetsExtension")
-    protected ExtensionType cctvCameraPresetsExtension;
+    protected _ExtensionType _CctvCameraPresetsExtension;
 
     /**
      * Gets the value of the cctvCameraPresetIdentification property.
@@ -92,27 +92,27 @@ public class CctvCameraPresets {
     }
 
     /**
-     * Gets the value of the cctvCameraPresetsExtension property.
+     * Gets the value of the _CctvCameraPresetsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraPresetsExtension() {
-        return cctvCameraPresetsExtension;
+    public _ExtensionType get_CctvCameraPresetsExtension() {
+        return _CctvCameraPresetsExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraPresetsExtension property.
+     * Sets the value of the _CctvCameraPresetsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraPresetsExtension(ExtensionType value) {
-        this.cctvCameraPresetsExtension = value;
+    public void set_CctvCameraPresetsExtension(_ExtensionType value) {
+        this._CctvCameraPresetsExtension = value;
     }
 
 }

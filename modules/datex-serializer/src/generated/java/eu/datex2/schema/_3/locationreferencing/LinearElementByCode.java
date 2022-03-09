@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LinearElementByCode", propOrder = {
     "linearElementIdentifier",
-    "linearElementByCodeExtension"
+    "_LinearElementByCodeExtension"
 })
 public class LinearElementByCode
     extends LinearElement
@@ -40,7 +40,7 @@ public class LinearElementByCode
     @XmlElement(required = true)
     protected String linearElementIdentifier;
     @XmlElement(name = "_linearElementByCodeExtension")
-    protected ExtensionType linearElementByCodeExtension;
+    protected _ExtensionType _LinearElementByCodeExtension;
 
     /**
      * Gets the value of the linearElementIdentifier property.
@@ -67,27 +67,27 @@ public class LinearElementByCode
     }
 
     /**
-     * Gets the value of the linearElementByCodeExtension property.
+     * Gets the value of the _LinearElementByCodeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLinearElementByCodeExtension() {
-        return linearElementByCodeExtension;
+    public _ExtensionType get_LinearElementByCodeExtension() {
+        return _LinearElementByCodeExtension;
     }
 
     /**
-     * Sets the value of the linearElementByCodeExtension property.
+     * Sets the value of the _LinearElementByCodeExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLinearElementByCodeExtension(ExtensionType value) {
-        this.linearElementByCodeExtension = value;
+    public void set_LinearElementByCodeExtension(_ExtensionType value) {
+        this._LinearElementByCodeExtension = value;
     }
 
 }

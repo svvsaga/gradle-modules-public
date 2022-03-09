@@ -72,7 +72,7 @@ public class VehicleCharacteristics {
     protected List<WidthCharacteristic> widthCharacteristic;
     protected List<HeaviestAxleWeightCharacteristic> heaviestAxleWeightCharacteristic;
     protected List<NumberOfAxlesCharacteristic> numberOfAxlesCharacteristic;
-    protected ExtensionType vehicleCharacteristicsExtension;
+    protected _ExtensionType vehicleCharacteristicsExtension;
 
     /**
      * Gets the value of the fuelType property.
@@ -378,10 +378,10 @@ public class VehicleCharacteristics {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVehicleCharacteristicsExtension() {
+    public _ExtensionType getVehicleCharacteristicsExtension() {
         return vehicleCharacteristicsExtension;
     }
 
@@ -390,10 +390,10 @@ public class VehicleCharacteristics {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVehicleCharacteristicsExtension(ExtensionType value) {
+    public void setVehicleCharacteristicsExtension(_ExtensionType value) {
         this.vehicleCharacteristicsExtension = value;
     }
 

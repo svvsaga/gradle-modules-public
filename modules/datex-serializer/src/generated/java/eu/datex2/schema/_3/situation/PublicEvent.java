@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
-import eu.datex2.schema._3.common.PublicEventTypeEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common._PublicEventTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,27 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PublicEvent", propOrder = {
     "publicEventType",
     "venueName",
-    "publicEventExtension"
+    "_PublicEventExtension"
 })
 public class PublicEvent
     extends Activity
 {
 
     @XmlElement(required = true)
-    protected PublicEventTypeEnum publicEventType;
+    protected _PublicEventTypeEnum publicEventType;
     protected MultilingualString venueName;
     @XmlElement(name = "_publicEventExtension")
-    protected ExtensionType publicEventExtension;
+    protected _ExtensionType _PublicEventExtension;
 
     /**
      * Gets the value of the publicEventType property.
      * 
      * @return
      *     possible object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public PublicEventTypeEnum getPublicEventType() {
+    public _PublicEventTypeEnum getPublicEventType() {
         return publicEventType;
     }
 
@@ -64,10 +64,10 @@ public class PublicEvent
      * 
      * @param value
      *     allowed object is
-     *     {@link PublicEventTypeEnum }
+     *     {@link _PublicEventTypeEnum }
      *     
      */
-    public void setPublicEventType(PublicEventTypeEnum value) {
+    public void setPublicEventType(_PublicEventTypeEnum value) {
         this.publicEventType = value;
     }
 
@@ -96,27 +96,27 @@ public class PublicEvent
     }
 
     /**
-     * Gets the value of the publicEventExtension property.
+     * Gets the value of the _PublicEventExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPublicEventExtension() {
-        return publicEventExtension;
+    public _ExtensionType get_PublicEventExtension() {
+        return _PublicEventExtension;
     }
 
     /**
-     * Sets the value of the publicEventExtension property.
+     * Sets the value of the _PublicEventExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPublicEventExtension(ExtensionType value) {
-        this.publicEventExtension = value;
+    public void set_PublicEventExtension(_ExtensionType value) {
+        this._PublicEventExtension = value;
     }
 
 }

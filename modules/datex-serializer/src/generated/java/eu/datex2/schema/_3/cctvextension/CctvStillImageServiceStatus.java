@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.cctvextension;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvStillImageServiceLevel",
     "cctvStillImageAvailability",
     "cctvStillImageBroadcastable",
-    "cctvStillImageServiceStatusExtension"
+    "_CctvStillImageServiceStatusExtension"
 })
 public class CctvStillImageServiceStatus {
 
@@ -45,10 +45,10 @@ public class CctvStillImageServiceStatus {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvStillImageServiceLevel;
     @XmlElement(required = true)
-    protected CctvCameraVideoOrImageAvailabilityEnum cctvStillImageAvailability;
+    protected _CctvCameraVideoOrImageAvailabilityEnum cctvStillImageAvailability;
     protected Boolean cctvStillImageBroadcastable;
     @XmlElement(name = "_cctvStillImageServiceStatusExtension")
-    protected ExtensionType cctvStillImageServiceStatusExtension;
+    protected _ExtensionType _CctvStillImageServiceStatusExtension;
 
     /**
      * Gets the value of the cctvStillImageServiceLevel property.
@@ -79,10 +79,10 @@ public class CctvStillImageServiceStatus {
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraVideoOrImageAvailabilityEnum }
+     *     {@link _CctvCameraVideoOrImageAvailabilityEnum }
      *     
      */
-    public CctvCameraVideoOrImageAvailabilityEnum getCctvStillImageAvailability() {
+    public _CctvCameraVideoOrImageAvailabilityEnum getCctvStillImageAvailability() {
         return cctvStillImageAvailability;
     }
 
@@ -91,10 +91,10 @@ public class CctvStillImageServiceStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraVideoOrImageAvailabilityEnum }
+     *     {@link _CctvCameraVideoOrImageAvailabilityEnum }
      *     
      */
-    public void setCctvStillImageAvailability(CctvCameraVideoOrImageAvailabilityEnum value) {
+    public void setCctvStillImageAvailability(_CctvCameraVideoOrImageAvailabilityEnum value) {
         this.cctvStillImageAvailability = value;
     }
 
@@ -123,27 +123,27 @@ public class CctvStillImageServiceStatus {
     }
 
     /**
-     * Gets the value of the cctvStillImageServiceStatusExtension property.
+     * Gets the value of the _CctvStillImageServiceStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvStillImageServiceStatusExtension() {
-        return cctvStillImageServiceStatusExtension;
+    public _ExtensionType get_CctvStillImageServiceStatusExtension() {
+        return _CctvStillImageServiceStatusExtension;
     }
 
     /**
-     * Sets the value of the cctvStillImageServiceStatusExtension property.
+     * Sets the value of the _CctvStillImageServiceStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvStillImageServiceStatusExtension(ExtensionType value) {
-        this.cctvStillImageServiceStatusExtension = value;
+    public void set_CctvStillImageServiceStatusExtension(_ExtensionType value) {
+        this._CctvStillImageServiceStatusExtension = value;
     }
 
 }

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GlobalReference;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,26 +32,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SituationRecordReference", propOrder = {
     "objectReference",
-    "situationRecordReferenceExtension"
+    "_SituationRecordReferenceExtension"
 })
 public class SituationRecordReference
     extends GlobalReference
 {
 
     @XmlElement(required = true)
-    protected SituationRecordVersionedReference objectReference;
+    protected _SituationRecordVersionedReference objectReference;
     @XmlElement(name = "_situationRecordReferenceExtension")
-    protected ExtensionType situationRecordReferenceExtension;
+    protected _ExtensionType _SituationRecordReferenceExtension;
 
     /**
      * Gets the value of the objectReference property.
      * 
      * @return
      *     possible object is
-     *     {@link SituationRecordVersionedReference }
+     *     {@link _SituationRecordVersionedReference }
      *     
      */
-    public SituationRecordVersionedReference getObjectReference() {
+    public _SituationRecordVersionedReference getObjectReference() {
         return objectReference;
     }
 
@@ -60,35 +60,35 @@ public class SituationRecordReference
      * 
      * @param value
      *     allowed object is
-     *     {@link SituationRecordVersionedReference }
+     *     {@link _SituationRecordVersionedReference }
      *     
      */
-    public void setObjectReference(SituationRecordVersionedReference value) {
+    public void setObjectReference(_SituationRecordVersionedReference value) {
         this.objectReference = value;
     }
 
     /**
-     * Gets the value of the situationRecordReferenceExtension property.
+     * Gets the value of the _SituationRecordReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationRecordReferenceExtension() {
-        return situationRecordReferenceExtension;
+    public _ExtensionType get_SituationRecordReferenceExtension() {
+        return _SituationRecordReferenceExtension;
     }
 
     /**
-     * Sets the value of the situationRecordReferenceExtension property.
+     * Sets the value of the _SituationRecordReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationRecordReferenceExtension(ExtensionType value) {
-        this.situationRecordReferenceExtension = value;
+    public void set_SituationRecordReferenceExtension(_ExtensionType value) {
+        this._SituationRecordReferenceExtension = value;
     }
 
 }

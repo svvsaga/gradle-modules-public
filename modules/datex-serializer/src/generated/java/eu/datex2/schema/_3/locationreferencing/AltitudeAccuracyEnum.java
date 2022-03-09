@@ -1,87 +1,89 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _AltitudeAccuracyEnum complex type.
+ * <p>Java class for AltitudeAccuracyEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_AltitudeAccuracyEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;AltitudeAccuracyEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="AltitudeAccuracyEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="equalToOrLessThan1Centimetre"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan2Centimetres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan5Centimetres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan10Centimetres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan20Centimetres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan50Centimetres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan1Metre"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan2Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan5Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan10Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan20Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan50Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan100Metres"/&gt;
+ *     &lt;enumeration value="equalToOrLessThan200Metres"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_AltitudeAccuracyEnum", propOrder = {
-    "value"
-})
-public class AltitudeAccuracyEnum {
+@XmlType(name = "AltitudeAccuracyEnum")
+@XmlEnum
+public enum AltitudeAccuracyEnum {
 
-    @XmlValue
-    protected AltitudeAccuracyEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("equalToOrLessThan1Centimetre")
+    EQUAL_TO_OR_LESS_THAN_1_CENTIMETRE("equalToOrLessThan1Centimetre"),
+    @XmlEnumValue("equalToOrLessThan2Centimetres")
+    EQUAL_TO_OR_LESS_THAN_2_CENTIMETRES("equalToOrLessThan2Centimetres"),
+    @XmlEnumValue("equalToOrLessThan5Centimetres")
+    EQUAL_TO_OR_LESS_THAN_5_CENTIMETRES("equalToOrLessThan5Centimetres"),
+    @XmlEnumValue("equalToOrLessThan10Centimetres")
+    EQUAL_TO_OR_LESS_THAN_10_CENTIMETRES("equalToOrLessThan10Centimetres"),
+    @XmlEnumValue("equalToOrLessThan20Centimetres")
+    EQUAL_TO_OR_LESS_THAN_20_CENTIMETRES("equalToOrLessThan20Centimetres"),
+    @XmlEnumValue("equalToOrLessThan50Centimetres")
+    EQUAL_TO_OR_LESS_THAN_50_CENTIMETRES("equalToOrLessThan50Centimetres"),
+    @XmlEnumValue("equalToOrLessThan1Metre")
+    EQUAL_TO_OR_LESS_THAN_1_METRE("equalToOrLessThan1Metre"),
+    @XmlEnumValue("equalToOrLessThan2Metres")
+    EQUAL_TO_OR_LESS_THAN_2_METRES("equalToOrLessThan2Metres"),
+    @XmlEnumValue("equalToOrLessThan5Metres")
+    EQUAL_TO_OR_LESS_THAN_5_METRES("equalToOrLessThan5Metres"),
+    @XmlEnumValue("equalToOrLessThan10Metres")
+    EQUAL_TO_OR_LESS_THAN_10_METRES("equalToOrLessThan10Metres"),
+    @XmlEnumValue("equalToOrLessThan20Metres")
+    EQUAL_TO_OR_LESS_THAN_20_METRES("equalToOrLessThan20Metres"),
+    @XmlEnumValue("equalToOrLessThan50Metres")
+    EQUAL_TO_OR_LESS_THAN_50_METRES("equalToOrLessThan50Metres"),
+    @XmlEnumValue("equalToOrLessThan100Metres")
+    EQUAL_TO_OR_LESS_THAN_100_METRES("equalToOrLessThan100Metres"),
+    @XmlEnumValue("equalToOrLessThan200Metres")
+    EQUAL_TO_OR_LESS_THAN_200_METRES("equalToOrLessThan200Metres"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AltitudeAccuracyEnum2 }
-     *     
-     */
-    public AltitudeAccuracyEnum2 getValue() {
+    AltitudeAccuracyEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AltitudeAccuracyEnum2 }
-     *     
-     */
-    public void setValue(AltitudeAccuracyEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static AltitudeAccuracyEnum fromValue(String v) {
+        for (AltitudeAccuracyEnum c: AltitudeAccuracyEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

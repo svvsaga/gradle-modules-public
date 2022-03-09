@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegNamedOnlyArea", propOrder = {
     "name",
-    "tpegNamedOnlyAreaExtension"
+    "_TpegNamedOnlyAreaExtension"
 })
 public class TpegNamedOnlyArea
     extends TpegAreaLocation
@@ -42,7 +42,7 @@ public class TpegNamedOnlyArea
     @XmlElement(required = true)
     protected List<TpegAreaDescriptor> name;
     @XmlElement(name = "_tpegNamedOnlyAreaExtension")
-    protected ExtensionType tpegNamedOnlyAreaExtension;
+    protected _ExtensionType _TpegNamedOnlyAreaExtension;
 
     /**
      * Gets the value of the name property.
@@ -74,27 +74,27 @@ public class TpegNamedOnlyArea
     }
 
     /**
-     * Gets the value of the tpegNamedOnlyAreaExtension property.
+     * Gets the value of the _TpegNamedOnlyAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegNamedOnlyAreaExtension() {
-        return tpegNamedOnlyAreaExtension;
+    public _ExtensionType get_TpegNamedOnlyAreaExtension() {
+        return _TpegNamedOnlyAreaExtension;
     }
 
     /**
-     * Sets the value of the tpegNamedOnlyAreaExtension property.
+     * Sets the value of the _TpegNamedOnlyAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegNamedOnlyAreaExtension(ExtensionType value) {
-        this.tpegNamedOnlyAreaExtension = value;
+    public void set_TpegNamedOnlyAreaExtension(_ExtensionType value) {
+        this._TpegNamedOnlyAreaExtension = value;
     }
 
 }

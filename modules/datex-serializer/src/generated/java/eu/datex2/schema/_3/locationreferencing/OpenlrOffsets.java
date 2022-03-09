@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrOffsets", propOrder = {
     "openlrPositiveOffset",
     "openlrNegativeOffset",
-    "openlrOffsetsExtension"
+    "_OpenlrOffsetsExtension"
 })
 public class OpenlrOffsets {
 
@@ -44,7 +44,7 @@ public class OpenlrOffsets {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNegativeOffset;
     @XmlElement(name = "_openlrOffsetsExtension")
-    protected ExtensionType openlrOffsetsExtension;
+    protected _ExtensionType _OpenlrOffsetsExtension;
 
     /**
      * Gets the value of the openlrPositiveOffset property.
@@ -95,27 +95,27 @@ public class OpenlrOffsets {
     }
 
     /**
-     * Gets the value of the openlrOffsetsExtension property.
+     * Gets the value of the _OpenlrOffsetsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrOffsetsExtension() {
-        return openlrOffsetsExtension;
+    public _ExtensionType get_OpenlrOffsetsExtension() {
+        return _OpenlrOffsetsExtension;
     }
 
     /**
-     * Sets the value of the openlrOffsetsExtension property.
+     * Sets the value of the _OpenlrOffsetsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrOffsetsExtension(ExtensionType value) {
-        this.openlrOffsetsExtension = value;
+    public void set_OpenlrOffsetsExtension(_ExtensionType value) {
+        this._OpenlrOffsetsExtension = value;
     }
 
 }

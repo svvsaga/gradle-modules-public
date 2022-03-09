@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TimePeriodOfDay", propOrder = {
     "startTimeOfPeriod",
     "endTimeOfPeriod",
-    "timePeriodOfDayExtension"
+    "_TimePeriodOfDayExtension"
 })
 public class TimePeriodOfDay {
 
@@ -45,7 +45,7 @@ public class TimePeriodOfDay {
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar endTimeOfPeriod;
     @XmlElement(name = "_timePeriodOfDayExtension")
-    protected ExtensionType timePeriodOfDayExtension;
+    protected _ExtensionType _TimePeriodOfDayExtension;
 
     /**
      * Gets the value of the startTimeOfPeriod property.
@@ -96,27 +96,27 @@ public class TimePeriodOfDay {
     }
 
     /**
-     * Gets the value of the timePeriodOfDayExtension property.
+     * Gets the value of the _TimePeriodOfDayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTimePeriodOfDayExtension() {
-        return timePeriodOfDayExtension;
+    public _ExtensionType get_TimePeriodOfDayExtension() {
+        return _TimePeriodOfDayExtension;
     }
 
     /**
-     * Sets the value of the timePeriodOfDayExtension property.
+     * Sets the value of the _TimePeriodOfDayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTimePeriodOfDayExtension(ExtensionType value) {
-        this.timePeriodOfDayExtension = value;
+    public void set_TimePeriodOfDayExtension(_ExtensionType value) {
+        this._TimePeriodOfDayExtension = value;
     }
 
 }

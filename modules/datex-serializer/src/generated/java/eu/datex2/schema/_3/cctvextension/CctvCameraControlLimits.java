@@ -4,7 +4,7 @@ package eu.datex2.schema._3.cctvextension;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvEndStopMaxTiltValue",
     "cctvMaxZoomValue",
     "cctvCameraNonDwellZone",
-    "cctvCameraControlLimitsExtension"
+    "_CctvCameraControlLimitsExtension"
 })
 public class CctvCameraControlLimits {
 
@@ -61,7 +61,7 @@ public class CctvCameraControlLimits {
     protected BigInteger cctvMaxZoomValue;
     protected List<CctvCameraNonDwellZone> cctvCameraNonDwellZone;
     @XmlElement(name = "_cctvCameraControlLimitsExtension")
-    protected ExtensionType cctvCameraControlLimitsExtension;
+    protected _ExtensionType _CctvCameraControlLimitsExtension;
 
     /**
      * Gets the value of the cctvEndStopMinPanValue property.
@@ -213,27 +213,27 @@ public class CctvCameraControlLimits {
     }
 
     /**
-     * Gets the value of the cctvCameraControlLimitsExtension property.
+     * Gets the value of the _CctvCameraControlLimitsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraControlLimitsExtension() {
-        return cctvCameraControlLimitsExtension;
+    public _ExtensionType get_CctvCameraControlLimitsExtension() {
+        return _CctvCameraControlLimitsExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraControlLimitsExtension property.
+     * Sets the value of the _CctvCameraControlLimitsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraControlLimitsExtension(ExtensionType value) {
-        this.cctvCameraControlLimitsExtension = value;
+    public void set_CctvCameraControlLimitsExtension(_ExtensionType value) {
+        this._CctvCameraControlLimitsExtension = value;
     }
 
 }

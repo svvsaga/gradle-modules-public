@@ -41,7 +41,7 @@ public class IntegerMetreDistanceValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger integerMetreDistance;
-    protected ExtensionType integerMetreDistanceValueExtension;
+    protected _ExtensionType integerMetreDistanceValueExtension;
 
     /**
      * Gets the value of the integerMetreDistance property.
@@ -72,10 +72,10 @@ public class IntegerMetreDistanceValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getIntegerMetreDistanceValueExtension() {
+    public _ExtensionType getIntegerMetreDistanceValueExtension() {
         return integerMetreDistanceValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class IntegerMetreDistanceValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setIntegerMetreDistanceValueExtension(ExtensionType value) {
+    public void setIntegerMetreDistanceValueExtension(_ExtensionType value) {
         this.integerMetreDistanceValueExtension = value;
     }
 

@@ -1,87 +1,74 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _DisplayedNumericalInformationTypeEnum complex type.
+ * <p>Java class for DisplayedNumericalInformationTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_DisplayedNumericalInformationTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;DisplayedNumericalInformationTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="DisplayedNumericalInformationTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="distance"/&gt;
+ *     &lt;enumeration value="height"/&gt;
+ *     &lt;enumeration value="length"/&gt;
+ *     &lt;enumeration value="rateOfIncline"/&gt;
+ *     &lt;enumeration value="sectionLength"/&gt;
+ *     &lt;enumeration value="speed"/&gt;
+ *     &lt;enumeration value="weight"/&gt;
+ *     &lt;enumeration value="weightPerAxle"/&gt;
+ *     &lt;enumeration value="width"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_DisplayedNumericalInformationTypeEnum", propOrder = {
-    "value"
-})
-public class DisplayedNumericalInformationTypeEnum {
+@XmlType(name = "DisplayedNumericalInformationTypeEnum")
+@XmlEnum
+public enum DisplayedNumericalInformationTypeEnum {
 
-    @XmlValue
-    protected DisplayedNumericalInformationTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("distance")
+    DISTANCE("distance"),
+    @XmlEnumValue("height")
+    HEIGHT("height"),
+    @XmlEnumValue("length")
+    LENGTH("length"),
+    @XmlEnumValue("rateOfIncline")
+    RATE_OF_INCLINE("rateOfIncline"),
+    @XmlEnumValue("sectionLength")
+    SECTION_LENGTH("sectionLength"),
+    @XmlEnumValue("speed")
+    SPEED("speed"),
+    @XmlEnumValue("weight")
+    WEIGHT("weight"),
+    @XmlEnumValue("weightPerAxle")
+    WEIGHT_PER_AXLE("weightPerAxle"),
+    @XmlEnumValue("width")
+    WIDTH("width"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DisplayedNumericalInformationTypeEnum2 }
-     *     
-     */
-    public DisplayedNumericalInformationTypeEnum2 getValue() {
+    DisplayedNumericalInformationTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DisplayedNumericalInformationTypeEnum2 }
-     *     
-     */
-    public void setValue(DisplayedNumericalInformationTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static DisplayedNumericalInformationTypeEnum fromValue(String v) {
+        for (DisplayedNumericalInformationTypeEnum c: DisplayedNumericalInformationTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

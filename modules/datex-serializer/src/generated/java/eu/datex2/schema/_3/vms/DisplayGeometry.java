@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "displayWidth",
     "positionX",
     "positionY",
-    "displayGeometryExtension"
+    "_DisplayGeometryExtension"
 })
 public class DisplayGeometry {
 
@@ -56,7 +56,7 @@ public class DisplayGeometry {
     protected Float positionX;
     protected Float positionY;
     @XmlElement(name = "_displayGeometryExtension")
-    protected ExtensionType displayGeometryExtension;
+    protected _ExtensionType _DisplayGeometryExtension;
 
     /**
      * Gets the value of the pixelsAcross property.
@@ -203,27 +203,27 @@ public class DisplayGeometry {
     }
 
     /**
-     * Gets the value of the displayGeometryExtension property.
+     * Gets the value of the _DisplayGeometryExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDisplayGeometryExtension() {
-        return displayGeometryExtension;
+    public _ExtensionType get_DisplayGeometryExtension() {
+        return _DisplayGeometryExtension;
     }
 
     /**
-     * Sets the value of the displayGeometryExtension property.
+     * Sets the value of the _DisplayGeometryExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDisplayGeometryExtension(ExtensionType value) {
-        this.displayGeometryExtension = value;
+    public void set_DisplayGeometryExtension(_ExtensionType value) {
+        this._DisplayGeometryExtension = value;
     }
 
 }

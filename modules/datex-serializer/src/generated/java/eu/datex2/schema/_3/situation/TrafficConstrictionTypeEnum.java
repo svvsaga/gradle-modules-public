@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TrafficConstrictionTypeEnum complex type.
+ * <p>Java class for TrafficConstrictionTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TrafficConstrictionTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;TrafficConstrictionTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TrafficConstrictionTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="carriagewayBlocked"/&gt;
+ *     &lt;enumeration value="carriagewayPartiallyObstructed"/&gt;
+ *     &lt;enumeration value="lanesBlocked"/&gt;
+ *     &lt;enumeration value="lanesPartiallyObstructed"/&gt;
+ *     &lt;enumeration value="roadBlocked"/&gt;
+ *     &lt;enumeration value="roadPartiallyObstructed"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TrafficConstrictionTypeEnum", propOrder = {
-    "value"
-})
-public class TrafficConstrictionTypeEnum {
+@XmlType(name = "TrafficConstrictionTypeEnum")
+@XmlEnum
+public enum TrafficConstrictionTypeEnum {
 
-    @XmlValue
-    protected TrafficConstrictionTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("carriagewayBlocked")
+    CARRIAGEWAY_BLOCKED("carriagewayBlocked"),
+    @XmlEnumValue("carriagewayPartiallyObstructed")
+    CARRIAGEWAY_PARTIALLY_OBSTRUCTED("carriagewayPartiallyObstructed"),
+    @XmlEnumValue("lanesBlocked")
+    LANES_BLOCKED("lanesBlocked"),
+    @XmlEnumValue("lanesPartiallyObstructed")
+    LANES_PARTIALLY_OBSTRUCTED("lanesPartiallyObstructed"),
+    @XmlEnumValue("roadBlocked")
+    ROAD_BLOCKED("roadBlocked"),
+    @XmlEnumValue("roadPartiallyObstructed")
+    ROAD_PARTIALLY_OBSTRUCTED("roadPartiallyObstructed"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TrafficConstrictionTypeEnum2 }
-     *     
-     */
-    public TrafficConstrictionTypeEnum2 getValue() {
+    TrafficConstrictionTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TrafficConstrictionTypeEnum2 }
-     *     
-     */
-    public void setValue(TrafficConstrictionTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TrafficConstrictionTypeEnum fromValue(String v) {
+        for (TrafficConstrictionTypeEnum c: TrafficConstrictionTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

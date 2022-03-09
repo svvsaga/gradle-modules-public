@@ -59,7 +59,7 @@ public class TransitInformation
     protected TransitServiceTypeEnum transitServiceType;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar scheduledDepartureTime;
-    protected ExtensionType transitInformationExtension;
+    protected _ExtensionType transitInformationExtension;
 
     /**
      * Gets the value of the journeyDestination property.
@@ -210,10 +210,10 @@ public class TransitInformation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTransitInformationExtension() {
+    public _ExtensionType getTransitInformationExtension() {
         return transitInformationExtension;
     }
 
@@ -222,10 +222,10 @@ public class TransitInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTransitInformationExtension(ExtensionType value) {
+    public void setTransitInformationExtension(_ExtensionType value) {
         this.transitInformationExtension = value;
     }
 

@@ -1,87 +1,68 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _DayEnum complex type.
+ * <p>Java class for DayEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_DayEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;DayEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="DayEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="monday"/&gt;
+ *     &lt;enumeration value="tuesday"/&gt;
+ *     &lt;enumeration value="wednesday"/&gt;
+ *     &lt;enumeration value="thursday"/&gt;
+ *     &lt;enumeration value="friday"/&gt;
+ *     &lt;enumeration value="saturday"/&gt;
+ *     &lt;enumeration value="sunday"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_DayEnum", propOrder = {
-    "value"
-})
-public class DayEnum {
+@XmlType(name = "DayEnum")
+@XmlEnum
+public enum DayEnum {
 
-    @XmlValue
-    protected DayEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("monday")
+    MONDAY("monday"),
+    @XmlEnumValue("tuesday")
+    TUESDAY("tuesday"),
+    @XmlEnumValue("wednesday")
+    WEDNESDAY("wednesday"),
+    @XmlEnumValue("thursday")
+    THURSDAY("thursday"),
+    @XmlEnumValue("friday")
+    FRIDAY("friday"),
+    @XmlEnumValue("saturday")
+    SATURDAY("saturday"),
+    @XmlEnumValue("sunday")
+    SUNDAY("sunday"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DayEnum2 }
-     *     
-     */
-    public DayEnum2 getValue() {
+    DayEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DayEnum2 }
-     *     
-     */
-    public void setValue(DayEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static DayEnum fromValue(String v) {
+        for (DayEnum c: DayEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

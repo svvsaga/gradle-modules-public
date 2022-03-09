@@ -47,7 +47,7 @@ public class CctvVideoServiceStatus {
     @XmlSchemaType(name = "string")
     protected CctvCameraVideoOrImageAvailabilityEnum cctvVideoAvailability;
     protected Boolean cctvVideoBroadcastable;
-    protected ExtensionType cctvVideoServiceStatusExtension;
+    protected _ExtensionType cctvVideoServiceStatusExtension;
 
     /**
      * Gets the value of the cctvVideoServiceLevel property.
@@ -126,10 +126,10 @@ public class CctvVideoServiceStatus {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvVideoServiceStatusExtension() {
+    public _ExtensionType getCctvVideoServiceStatusExtension() {
         return cctvVideoServiceStatusExtension;
     }
 
@@ -138,10 +138,10 @@ public class CctvVideoServiceStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvVideoServiceStatusExtension(ExtensionType value) {
+    public void setCctvVideoServiceStatusExtension(_ExtensionType value) {
         this.cctvVideoServiceStatusExtension = value;
     }
 

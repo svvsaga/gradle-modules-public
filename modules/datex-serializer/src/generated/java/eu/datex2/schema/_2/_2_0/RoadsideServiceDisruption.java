@@ -42,7 +42,7 @@ public class RoadsideServiceDisruption
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected List<RoadsideServiceDisruptionTypeEnum> roadsideServiceDisruptionType;
-    protected ExtensionType roadsideServiceDisruptionExtension;
+    protected _ExtensionType roadsideServiceDisruptionExtension;
 
     /**
      * Gets the value of the roadsideServiceDisruptionType property.
@@ -78,10 +78,10 @@ public class RoadsideServiceDisruption
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadsideServiceDisruptionExtension() {
+    public _ExtensionType getRoadsideServiceDisruptionExtension() {
         return roadsideServiceDisruptionExtension;
     }
 
@@ -90,10 +90,10 @@ public class RoadsideServiceDisruption
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadsideServiceDisruptionExtension(ExtensionType value) {
+    public void setRoadsideServiceDisruptionExtension(_ExtensionType value) {
         this.roadsideServiceDisruptionExtension = value;
     }
 

@@ -3,7 +3,6 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Humidity;
 import eu.datex2.schema._3.common.Pollution;
 import eu.datex2.schema._3.common.PrecipitationDetail;
@@ -11,6 +10,7 @@ import eu.datex2.schema._3.common.Pressure;
 import eu.datex2.schema._3.common.Temperature;
 import eu.datex2.schema._3.common.Visibility;
 import eu.datex2.schema._3.common.Wind;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -54,14 +54,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "wind",
     "humidity",
     "pressure",
-    "poorEnvironmentConditionsExtension"
+    "_PoorEnvironmentConditionsExtension"
 })
 public class PoorEnvironmentConditions
     extends Conditions
 {
 
     @XmlElement(required = true)
-    protected List<PoorEnvironmentTypeEnum> poorEnvironmentType;
+    protected List<_PoorEnvironmentTypeEnum> poorEnvironmentType;
     protected PrecipitationDetail precipitationDetail;
     protected Visibility visibility;
     protected Pollution pollution;
@@ -70,7 +70,7 @@ public class PoorEnvironmentConditions
     protected Humidity humidity;
     protected Pressure pressure;
     @XmlElement(name = "_poorEnvironmentConditionsExtension")
-    protected ExtensionType poorEnvironmentConditionsExtension;
+    protected _ExtensionType _PoorEnvironmentConditionsExtension;
 
     /**
      * Gets the value of the poorEnvironmentType property.
@@ -90,13 +90,13 @@ public class PoorEnvironmentConditions
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PoorEnvironmentTypeEnum }
+     * {@link _PoorEnvironmentTypeEnum }
      * 
      * 
      */
-    public List<PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
+    public List<_PoorEnvironmentTypeEnum> getPoorEnvironmentType() {
         if (poorEnvironmentType == null) {
-            poorEnvironmentType = new ArrayList<PoorEnvironmentTypeEnum>();
+            poorEnvironmentType = new ArrayList<_PoorEnvironmentTypeEnum>();
         }
         return this.poorEnvironmentType;
     }
@@ -270,27 +270,27 @@ public class PoorEnvironmentConditions
     }
 
     /**
-     * Gets the value of the poorEnvironmentConditionsExtension property.
+     * Gets the value of the _PoorEnvironmentConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPoorEnvironmentConditionsExtension() {
-        return poorEnvironmentConditionsExtension;
+    public _ExtensionType get_PoorEnvironmentConditionsExtension() {
+        return _PoorEnvironmentConditionsExtension;
     }
 
     /**
-     * Sets the value of the poorEnvironmentConditionsExtension property.
+     * Sets the value of the _PoorEnvironmentConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPoorEnvironmentConditionsExtension(ExtensionType value) {
-        this.poorEnvironmentConditionsExtension = value;
+    public void set_PoorEnvironmentConditionsExtension(_ExtensionType value) {
+        this._PoorEnvironmentConditionsExtension = value;
     }
 
 }

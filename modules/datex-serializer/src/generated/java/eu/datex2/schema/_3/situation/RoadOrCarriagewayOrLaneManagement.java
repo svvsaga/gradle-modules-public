@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,28 +35,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "RoadOrCarriagewayOrLaneManagement", propOrder = {
     "roadOrCarriagewayOrLaneManagementType",
     "minimumCarOccupancy",
-    "roadOrCarriagewayOrLaneManagementExtension"
+    "_RoadOrCarriagewayOrLaneManagementExtension"
 })
 public class RoadOrCarriagewayOrLaneManagement
     extends NetworkManagement
 {
 
     @XmlElement(required = true)
-    protected RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
+    protected _RoadOrCarriagewayOrLaneManagementTypeEnum roadOrCarriagewayOrLaneManagementType;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger minimumCarOccupancy;
     @XmlElement(name = "_roadOrCarriagewayOrLaneManagementExtension")
-    protected ExtensionType roadOrCarriagewayOrLaneManagementExtension;
+    protected _ExtensionType _RoadOrCarriagewayOrLaneManagementExtension;
 
     /**
      * Gets the value of the roadOrCarriagewayOrLaneManagementType property.
      * 
      * @return
      *     possible object is
-     *     {@link RoadOrCarriagewayOrLaneManagementTypeEnum }
+     *     {@link _RoadOrCarriagewayOrLaneManagementTypeEnum }
      *     
      */
-    public RoadOrCarriagewayOrLaneManagementTypeEnum getRoadOrCarriagewayOrLaneManagementType() {
+    public _RoadOrCarriagewayOrLaneManagementTypeEnum getRoadOrCarriagewayOrLaneManagementType() {
         return roadOrCarriagewayOrLaneManagementType;
     }
 
@@ -65,10 +65,10 @@ public class RoadOrCarriagewayOrLaneManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link RoadOrCarriagewayOrLaneManagementTypeEnum }
+     *     {@link _RoadOrCarriagewayOrLaneManagementTypeEnum }
      *     
      */
-    public void setRoadOrCarriagewayOrLaneManagementType(RoadOrCarriagewayOrLaneManagementTypeEnum value) {
+    public void setRoadOrCarriagewayOrLaneManagementType(_RoadOrCarriagewayOrLaneManagementTypeEnum value) {
         this.roadOrCarriagewayOrLaneManagementType = value;
     }
 
@@ -97,27 +97,27 @@ public class RoadOrCarriagewayOrLaneManagement
     }
 
     /**
-     * Gets the value of the roadOrCarriagewayOrLaneManagementExtension property.
+     * Gets the value of the _RoadOrCarriagewayOrLaneManagementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadOrCarriagewayOrLaneManagementExtension() {
-        return roadOrCarriagewayOrLaneManagementExtension;
+    public _ExtensionType get_RoadOrCarriagewayOrLaneManagementExtension() {
+        return _RoadOrCarriagewayOrLaneManagementExtension;
     }
 
     /**
-     * Sets the value of the roadOrCarriagewayOrLaneManagementExtension property.
+     * Sets the value of the _RoadOrCarriagewayOrLaneManagementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadOrCarriagewayOrLaneManagementExtension(ExtensionType value) {
-        this.roadOrCarriagewayOrLaneManagementExtension = value;
+    public void set_RoadOrCarriagewayOrLaneManagementExtension(_ExtensionType value) {
+        this._RoadOrCarriagewayOrLaneManagementExtension = value;
     }
 
 }

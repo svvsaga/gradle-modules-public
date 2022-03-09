@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,15 +33,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TpegHeight", propOrder = {
     "height",
     "heightType",
-    "tpegHeightExtension"
+    "_TpegHeightExtension"
 })
 public class TpegHeight {
 
     protected Float height;
     @XmlElement(required = true)
-    protected TpegLoc04HeightTypeEnum heightType;
+    protected _TpegLoc04HeightTypeEnum heightType;
     @XmlElement(name = "_tpegHeightExtension")
-    protected ExtensionType tpegHeightExtension;
+    protected _ExtensionType _TpegHeightExtension;
 
     /**
      * Gets the value of the height property.
@@ -72,10 +72,10 @@ public class TpegHeight {
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc04HeightTypeEnum }
+     *     {@link _TpegLoc04HeightTypeEnum }
      *     
      */
-    public TpegLoc04HeightTypeEnum getHeightType() {
+    public _TpegLoc04HeightTypeEnum getHeightType() {
         return heightType;
     }
 
@@ -84,35 +84,35 @@ public class TpegHeight {
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc04HeightTypeEnum }
+     *     {@link _TpegLoc04HeightTypeEnum }
      *     
      */
-    public void setHeightType(TpegLoc04HeightTypeEnum value) {
+    public void setHeightType(_TpegLoc04HeightTypeEnum value) {
         this.heightType = value;
     }
 
     /**
-     * Gets the value of the tpegHeightExtension property.
+     * Gets the value of the _TpegHeightExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegHeightExtension() {
-        return tpegHeightExtension;
+    public _ExtensionType get_TpegHeightExtension() {
+        return _TpegHeightExtension;
     }
 
     /**
-     * Sets the value of the tpegHeightExtension property.
+     * Sets the value of the _TpegHeightExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegHeightExtension(ExtensionType value) {
-        this.tpegHeightExtension = value;
+    public void set_TpegHeightExtension(_ExtensionType value) {
+        this._TpegHeightExtension = value;
     }
 
 }

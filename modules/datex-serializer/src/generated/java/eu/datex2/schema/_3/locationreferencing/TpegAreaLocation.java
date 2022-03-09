@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TpegAreaLocation", propOrder = {
     "tpegAreaLocationType",
     "tpegHeight",
-    "tpegAreaLocationExtension"
+    "_TpegAreaLocationExtension"
 })
 @XmlSeeAlso({
     TpegGeometricArea.class,
@@ -43,20 +43,20 @@ import jakarta.xml.bind.annotation.XmlType;
 public abstract class TpegAreaLocation {
 
     @XmlElement(required = true)
-    protected TpegLoc01AreaLocationSubtypeEnum tpegAreaLocationType;
+    protected _TpegLoc01AreaLocationSubtypeEnum tpegAreaLocationType;
     protected TpegHeight tpegHeight;
     @XmlElement(name = "_tpegAreaLocationExtension")
-    protected ExtensionType tpegAreaLocationExtension;
+    protected _ExtensionType _TpegAreaLocationExtension;
 
     /**
      * Gets the value of the tpegAreaLocationType property.
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc01AreaLocationSubtypeEnum }
+     *     {@link _TpegLoc01AreaLocationSubtypeEnum }
      *     
      */
-    public TpegLoc01AreaLocationSubtypeEnum getTpegAreaLocationType() {
+    public _TpegLoc01AreaLocationSubtypeEnum getTpegAreaLocationType() {
         return tpegAreaLocationType;
     }
 
@@ -65,10 +65,10 @@ public abstract class TpegAreaLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc01AreaLocationSubtypeEnum }
+     *     {@link _TpegLoc01AreaLocationSubtypeEnum }
      *     
      */
-    public void setTpegAreaLocationType(TpegLoc01AreaLocationSubtypeEnum value) {
+    public void setTpegAreaLocationType(_TpegLoc01AreaLocationSubtypeEnum value) {
         this.tpegAreaLocationType = value;
     }
 
@@ -97,27 +97,27 @@ public abstract class TpegAreaLocation {
     }
 
     /**
-     * Gets the value of the tpegAreaLocationExtension property.
+     * Gets the value of the _TpegAreaLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegAreaLocationExtension() {
-        return tpegAreaLocationExtension;
+    public _ExtensionType get_TpegAreaLocationExtension() {
+        return _TpegAreaLocationExtension;
     }
 
     /**
-     * Sets the value of the tpegAreaLocationExtension property.
+     * Sets the value of the _TpegAreaLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegAreaLocationExtension(ExtensionType value) {
-        this.tpegAreaLocationExtension = value;
+    public void set_TpegAreaLocationExtension(_ExtensionType value) {
+        this._TpegAreaLocationExtension = value;
     }
 
 }

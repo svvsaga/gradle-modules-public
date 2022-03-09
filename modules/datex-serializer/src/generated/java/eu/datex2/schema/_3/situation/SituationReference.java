@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GlobalReference;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,26 +32,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SituationReference", propOrder = {
     "objectReference",
-    "situationReferenceExtension"
+    "_SituationReferenceExtension"
 })
 public class SituationReference
     extends GlobalReference
 {
 
     @XmlElement(required = true)
-    protected SituationVersionedReference objectReference;
+    protected _SituationVersionedReference objectReference;
     @XmlElement(name = "_situationReferenceExtension")
-    protected ExtensionType situationReferenceExtension;
+    protected _ExtensionType _SituationReferenceExtension;
 
     /**
      * Gets the value of the objectReference property.
      * 
      * @return
      *     possible object is
-     *     {@link SituationVersionedReference }
+     *     {@link _SituationVersionedReference }
      *     
      */
-    public SituationVersionedReference getObjectReference() {
+    public _SituationVersionedReference getObjectReference() {
         return objectReference;
     }
 
@@ -60,35 +60,35 @@ public class SituationReference
      * 
      * @param value
      *     allowed object is
-     *     {@link SituationVersionedReference }
+     *     {@link _SituationVersionedReference }
      *     
      */
-    public void setObjectReference(SituationVersionedReference value) {
+    public void setObjectReference(_SituationVersionedReference value) {
         this.objectReference = value;
     }
 
     /**
-     * Gets the value of the situationReferenceExtension property.
+     * Gets the value of the _SituationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationReferenceExtension() {
-        return situationReferenceExtension;
+    public _ExtensionType get_SituationReferenceExtension() {
+        return _SituationReferenceExtension;
     }
 
     /**
-     * Sets the value of the situationReferenceExtension property.
+     * Sets the value of the _SituationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationReferenceExtension(ExtensionType value) {
-        this.situationReferenceExtension = value;
+    public void set_SituationReferenceExtension(_ExtensionType value) {
+        this._SituationReferenceExtension = value;
     }
 
 }

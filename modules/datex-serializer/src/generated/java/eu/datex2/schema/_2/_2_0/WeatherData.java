@@ -43,17 +43,17 @@ public abstract class WeatherData
     extends BasicData
 {
 
-    protected ExtensionType weatherDataExtension;
+    protected _ExtensionType weatherDataExtension;
 
     /**
      * Gets the value of the weatherDataExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWeatherDataExtension() {
+    public _ExtensionType getWeatherDataExtension() {
         return weatherDataExtension;
     }
 
@@ -62,10 +62,10 @@ public abstract class WeatherData
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWeatherDataExtension(ExtensionType value) {
+    public void setWeatherDataExtension(_ExtensionType value) {
         this.weatherDataExtension = value;
     }
 

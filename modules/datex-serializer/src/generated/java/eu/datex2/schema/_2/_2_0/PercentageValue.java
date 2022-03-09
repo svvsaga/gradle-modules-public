@@ -36,7 +36,7 @@ public class PercentageValue
 {
 
     protected float percentage;
-    protected ExtensionType percentageValueExtension;
+    protected _ExtensionType percentageValueExtension;
 
     /**
      * Gets the value of the percentage property.
@@ -59,10 +59,10 @@ public class PercentageValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPercentageValueExtension() {
+    public _ExtensionType getPercentageValueExtension() {
         return percentageValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class PercentageValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPercentageValueExtension(ExtensionType value) {
+    public void setPercentageValueExtension(_ExtensionType value) {
         this.percentageValueExtension = value;
     }
 

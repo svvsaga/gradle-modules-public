@@ -1,87 +1,77 @@
 
 package eu.datex2.schema._3.vms;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _UnitOfMeasureEnum complex type.
+ * <p>Java class for UnitOfMeasureEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_UnitOfMeasureEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/vms&gt;UnitOfMeasureEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="UnitOfMeasureEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="feet"/&gt;
+ *     &lt;enumeration value="feetAndInches"/&gt;
+ *     &lt;enumeration value="kilometres"/&gt;
+ *     &lt;enumeration value="kilometresPerHour"/&gt;
+ *     &lt;enumeration value="metres"/&gt;
+ *     &lt;enumeration value="miles"/&gt;
+ *     &lt;enumeration value="milesPerHour"/&gt;
+ *     &lt;enumeration value="percentage"/&gt;
+ *     &lt;enumeration value="tonnes"/&gt;
+ *     &lt;enumeration value="yards"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_UnitOfMeasureEnum", propOrder = {
-    "value"
-})
-public class UnitOfMeasureEnum {
+@XmlType(name = "UnitOfMeasureEnum")
+@XmlEnum
+public enum UnitOfMeasureEnum {
 
-    @XmlValue
-    protected UnitOfMeasureEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("feet")
+    FEET("feet"),
+    @XmlEnumValue("feetAndInches")
+    FEET_AND_INCHES("feetAndInches"),
+    @XmlEnumValue("kilometres")
+    KILOMETRES("kilometres"),
+    @XmlEnumValue("kilometresPerHour")
+    KILOMETRES_PER_HOUR("kilometresPerHour"),
+    @XmlEnumValue("metres")
+    METRES("metres"),
+    @XmlEnumValue("miles")
+    MILES("miles"),
+    @XmlEnumValue("milesPerHour")
+    MILES_PER_HOUR("milesPerHour"),
+    @XmlEnumValue("percentage")
+    PERCENTAGE("percentage"),
+    @XmlEnumValue("tonnes")
+    TONNES("tonnes"),
+    @XmlEnumValue("yards")
+    YARDS("yards"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UnitOfMeasureEnum2 }
-     *     
-     */
-    public UnitOfMeasureEnum2 getValue() {
+    UnitOfMeasureEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UnitOfMeasureEnum2 }
-     *     
-     */
-    public void setValue(UnitOfMeasureEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static UnitOfMeasureEnum fromValue(String v) {
+        for (UnitOfMeasureEnum c: UnitOfMeasureEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

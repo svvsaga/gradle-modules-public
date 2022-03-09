@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _PrecipitationIntensityEnum complex type.
+ * <p>Java class for PrecipitationIntensityEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_PrecipitationIntensityEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;PrecipitationIntensityEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="PrecipitationIntensityEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="noPhenomena"/&gt;
+ *     &lt;enumeration value="light"/&gt;
+ *     &lt;enumeration value="moderate"/&gt;
+ *     &lt;enumeration value="heavy"/&gt;
+ *     &lt;enumeration value="violent"/&gt;
+ *     &lt;enumeration value="severe"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_PrecipitationIntensityEnum", propOrder = {
-    "value"
-})
-public class PrecipitationIntensityEnum {
+@XmlType(name = "PrecipitationIntensityEnum")
+@XmlEnum
+public enum PrecipitationIntensityEnum {
 
-    @XmlValue
-    protected PrecipitationIntensityEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("noPhenomena")
+    NO_PHENOMENA("noPhenomena"),
+    @XmlEnumValue("light")
+    LIGHT("light"),
+    @XmlEnumValue("moderate")
+    MODERATE("moderate"),
+    @XmlEnumValue("heavy")
+    HEAVY("heavy"),
+    @XmlEnumValue("violent")
+    VIOLENT("violent"),
+    @XmlEnumValue("severe")
+    SEVERE("severe"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PrecipitationIntensityEnum2 }
-     *     
-     */
-    public PrecipitationIntensityEnum2 getValue() {
+    PrecipitationIntensityEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PrecipitationIntensityEnum2 }
-     *     
-     */
-    public void setValue(PrecipitationIntensityEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static PrecipitationIntensityEnum fromValue(String v) {
+        for (PrecipitationIntensityEnum c: PrecipitationIntensityEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

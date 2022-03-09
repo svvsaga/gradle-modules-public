@@ -3,7 +3,7 @@ package eu.datex2.schema._3.vms;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -47,19 +47,19 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "lineHtml",
     "isExactTextOnSign",
     "textInformationType",
-    "textLineExtension"
+    "_TextLineExtension"
 })
 public class TextLine {
 
     @XmlElement(required = true)
     protected String textLine;
-    protected ColourEnum lineColour;
+    protected _ColourEnum lineColour;
     protected Boolean lineFlashing;
     protected String lineHtml;
     protected Boolean isExactTextOnSign;
-    protected List<InformationTypeEnum> textInformationType;
+    protected List<_InformationTypeEnum> textInformationType;
     @XmlElement(name = "_textLineExtension")
-    protected ExtensionType textLineExtension;
+    protected _ExtensionType _TextLineExtension;
     @XmlAttribute(name = "lineLanguage")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String lineLanguage;
@@ -93,10 +93,10 @@ public class TextLine {
      * 
      * @return
      *     possible object is
-     *     {@link ColourEnum }
+     *     {@link _ColourEnum }
      *     
      */
-    public ColourEnum getLineColour() {
+    public _ColourEnum getLineColour() {
         return lineColour;
     }
 
@@ -105,10 +105,10 @@ public class TextLine {
      * 
      * @param value
      *     allowed object is
-     *     {@link ColourEnum }
+     *     {@link _ColourEnum }
      *     
      */
-    public void setLineColour(ColourEnum value) {
+    public void setLineColour(_ColourEnum value) {
         this.lineColour = value;
     }
 
@@ -202,39 +202,39 @@ public class TextLine {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link InformationTypeEnum }
+     * {@link _InformationTypeEnum }
      * 
      * 
      */
-    public List<InformationTypeEnum> getTextInformationType() {
+    public List<_InformationTypeEnum> getTextInformationType() {
         if (textInformationType == null) {
-            textInformationType = new ArrayList<InformationTypeEnum>();
+            textInformationType = new ArrayList<_InformationTypeEnum>();
         }
         return this.textInformationType;
     }
 
     /**
-     * Gets the value of the textLineExtension property.
+     * Gets the value of the _TextLineExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTextLineExtension() {
-        return textLineExtension;
+    public _ExtensionType get_TextLineExtension() {
+        return _TextLineExtension;
     }
 
     /**
-     * Sets the value of the textLineExtension property.
+     * Sets the value of the _TextLineExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTextLineExtension(ExtensionType value) {
-        this.textLineExtension = value;
+    public void set_TextLineExtension(_ExtensionType value) {
+        this._TextLineExtension = value;
     }
 
     /**

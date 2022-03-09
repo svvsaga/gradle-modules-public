@@ -30,27 +30,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LocationCodeClassTypeEnum }
+     * Create an instance of {@link _LocationCodeClassTypeEnum }
      * 
      */
-    public LocationCodeClassTypeEnum createLocationCodeClassTypeEnum() {
-        return new LocationCodeClassTypeEnum();
+    public _LocationCodeClassTypeEnum create_LocationCodeClassTypeEnum() {
+        return new _LocationCodeClassTypeEnum();
     }
 
     /**
-     * Create an instance of {@link LocationCodeSubTypeEnum }
+     * Create an instance of {@link _LocationCodeSubTypeEnum }
      * 
      */
-    public LocationCodeSubTypeEnum createLocationCodeSubTypeEnum() {
-        return new LocationCodeSubTypeEnum();
+    public _LocationCodeSubTypeEnum create_LocationCodeSubTypeEnum() {
+        return new _LocationCodeSubTypeEnum();
     }
 
     /**
-     * Create an instance of {@link LocationCodeTypeEnum }
+     * Create an instance of {@link _LocationCodeTypeEnum }
      * 
      */
-    public LocationCodeTypeEnum createLocationCodeTypeEnum() {
-        return new LocationCodeTypeEnum();
+    public _LocationCodeTypeEnum create_LocationCodeTypeEnum() {
+        return new _LocationCodeTypeEnum();
     }
 
     /**

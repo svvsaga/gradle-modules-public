@@ -4,8 +4,8 @@ package eu.datex2.schema._3.vms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.InternationalIdentifier;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -46,31 +46,31 @@ import jakarta.xml.bind.annotation.XmlType;
     "informationManagerOverride",
     "vmsStatus",
     "vmsControllerFault",
-    "vmsControllerStatusExtension"
+    "_VmsControllerStatusExtension"
 })
 public class VmsControllerStatus {
 
     @XmlElement(required = true)
-    protected VmsControllerTableVersionedReference vmsControllerTableReference;
+    protected _VmsControllerTableVersionedReference vmsControllerTableReference;
     @XmlElement(required = true)
-    protected VmsControllerVersionedReference vmsControllerReference;
+    protected _VmsControllerVersionedReference vmsControllerReference;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar statusUpdateTime;
     protected InternationalIdentifier informationManagerOverride;
-    protected List<VmsControllerStatusVmsIndexVmsStatus> vmsStatus;
+    protected List<_VmsControllerStatusVmsIndexVmsStatus> vmsStatus;
     protected List<VmsControllerFault> vmsControllerFault;
     @XmlElement(name = "_vmsControllerStatusExtension")
-    protected ExtensionType vmsControllerStatusExtension;
+    protected _ExtensionType _VmsControllerStatusExtension;
 
     /**
      * Gets the value of the vmsControllerTableReference property.
      * 
      * @return
      *     possible object is
-     *     {@link VmsControllerTableVersionedReference }
+     *     {@link _VmsControllerTableVersionedReference }
      *     
      */
-    public VmsControllerTableVersionedReference getVmsControllerTableReference() {
+    public _VmsControllerTableVersionedReference getVmsControllerTableReference() {
         return vmsControllerTableReference;
     }
 
@@ -79,10 +79,10 @@ public class VmsControllerStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsControllerTableVersionedReference }
+     *     {@link _VmsControllerTableVersionedReference }
      *     
      */
-    public void setVmsControllerTableReference(VmsControllerTableVersionedReference value) {
+    public void setVmsControllerTableReference(_VmsControllerTableVersionedReference value) {
         this.vmsControllerTableReference = value;
     }
 
@@ -91,10 +91,10 @@ public class VmsControllerStatus {
      * 
      * @return
      *     possible object is
-     *     {@link VmsControllerVersionedReference }
+     *     {@link _VmsControllerVersionedReference }
      *     
      */
-    public VmsControllerVersionedReference getVmsControllerReference() {
+    public _VmsControllerVersionedReference getVmsControllerReference() {
         return vmsControllerReference;
     }
 
@@ -103,10 +103,10 @@ public class VmsControllerStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsControllerVersionedReference }
+     *     {@link _VmsControllerVersionedReference }
      *     
      */
-    public void setVmsControllerReference(VmsControllerVersionedReference value) {
+    public void setVmsControllerReference(_VmsControllerVersionedReference value) {
         this.vmsControllerReference = value;
     }
 
@@ -176,13 +176,13 @@ public class VmsControllerStatus {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsControllerStatusVmsIndexVmsStatus }
+     * {@link _VmsControllerStatusVmsIndexVmsStatus }
      * 
      * 
      */
-    public List<VmsControllerStatusVmsIndexVmsStatus> getVmsStatus() {
+    public List<_VmsControllerStatusVmsIndexVmsStatus> getVmsStatus() {
         if (vmsStatus == null) {
-            vmsStatus = new ArrayList<VmsControllerStatusVmsIndexVmsStatus>();
+            vmsStatus = new ArrayList<_VmsControllerStatusVmsIndexVmsStatus>();
         }
         return this.vmsStatus;
     }
@@ -217,27 +217,27 @@ public class VmsControllerStatus {
     }
 
     /**
-     * Gets the value of the vmsControllerStatusExtension property.
+     * Gets the value of the _VmsControllerStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsControllerStatusExtension() {
-        return vmsControllerStatusExtension;
+    public _ExtensionType get_VmsControllerStatusExtension() {
+        return _VmsControllerStatusExtension;
     }
 
     /**
-     * Sets the value of the vmsControllerStatusExtension property.
+     * Sets the value of the _VmsControllerStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsControllerStatusExtension(ExtensionType value) {
-        this.vmsControllerStatusExtension = value;
+    public void set_VmsControllerStatusExtension(_ExtensionType value) {
+        this._VmsControllerStatusExtension = value;
     }
 
 }

@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.vms;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "managedLogicalLocation",
     "distanceFromLogicalLocation",
     "managedLocation",
-    "managedLogicalLocationExtension"
+    "_ManagedLogicalLocationExtension"
 })
 public class ManagedLogicalLocation {
 
@@ -48,7 +48,7 @@ public class ManagedLogicalLocation {
     protected BigInteger distanceFromLogicalLocation;
     protected Location managedLocation;
     @XmlElement(name = "_managedLogicalLocationExtension")
-    protected ExtensionType managedLogicalLocationExtension;
+    protected _ExtensionType _ManagedLogicalLocationExtension;
 
     /**
      * Gets the value of the managedLogicalLocation property.
@@ -123,27 +123,27 @@ public class ManagedLogicalLocation {
     }
 
     /**
-     * Gets the value of the managedLogicalLocationExtension property.
+     * Gets the value of the _ManagedLogicalLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getManagedLogicalLocationExtension() {
-        return managedLogicalLocationExtension;
+    public _ExtensionType get_ManagedLogicalLocationExtension() {
+        return _ManagedLogicalLocationExtension;
     }
 
     /**
-     * Sets the value of the managedLogicalLocationExtension property.
+     * Sets the value of the _ManagedLogicalLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setManagedLogicalLocationExtension(ExtensionType value) {
-        this.managedLogicalLocationExtension = value;
+    public void set_ManagedLogicalLocationExtension(_ExtensionType value) {
+        this._ManagedLogicalLocationExtension = value;
     }
 
 }

@@ -74,7 +74,7 @@ public class CarParks
     protected Float queuingTime;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalCapacity;
-    protected ExtensionType carParksExtension;
+    protected _ExtensionType carParksExtension;
 
     /**
      * Gets the value of the carParkConfiguration property.
@@ -321,10 +321,10 @@ public class CarParks
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCarParksExtension() {
+    public _ExtensionType getCarParksExtension() {
         return carParksExtension;
     }
 
@@ -333,10 +333,10 @@ public class CarParks
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCarParksExtension(ExtensionType value) {
+    public void setCarParksExtension(_ExtensionType value) {
         this.carParksExtension = value;
     }
 

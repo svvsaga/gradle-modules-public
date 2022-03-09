@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "NutsNamedArea", propOrder = {
     "nutsCodeType",
     "nutsCode",
-    "nutsNamedAreaExtension"
+    "_NutsNamedAreaExtension"
 })
 public class NutsNamedArea
     extends NamedArea
 {
 
     @XmlElement(required = true)
-    protected NutsCodeTypeEnum nutsCodeType;
+    protected _NutsCodeTypeEnum nutsCodeType;
     @XmlElement(required = true)
     protected String nutsCode;
     @XmlElement(name = "_nutsNamedAreaExtension")
-    protected ExtensionType nutsNamedAreaExtension;
+    protected _ExtensionType _NutsNamedAreaExtension;
 
     /**
      * Gets the value of the nutsCodeType property.
      * 
      * @return
      *     possible object is
-     *     {@link NutsCodeTypeEnum }
+     *     {@link _NutsCodeTypeEnum }
      *     
      */
-    public NutsCodeTypeEnum getNutsCodeType() {
+    public _NutsCodeTypeEnum getNutsCodeType() {
         return nutsCodeType;
     }
 
@@ -63,10 +63,10 @@ public class NutsNamedArea
      * 
      * @param value
      *     allowed object is
-     *     {@link NutsCodeTypeEnum }
+     *     {@link _NutsCodeTypeEnum }
      *     
      */
-    public void setNutsCodeType(NutsCodeTypeEnum value) {
+    public void setNutsCodeType(_NutsCodeTypeEnum value) {
         this.nutsCodeType = value;
     }
 
@@ -95,27 +95,27 @@ public class NutsNamedArea
     }
 
     /**
-     * Gets the value of the nutsNamedAreaExtension property.
+     * Gets the value of the _NutsNamedAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNutsNamedAreaExtension() {
-        return nutsNamedAreaExtension;
+    public _ExtensionType get_NutsNamedAreaExtension() {
+        return _NutsNamedAreaExtension;
     }
 
     /**
-     * Sets the value of the nutsNamedAreaExtension property.
+     * Sets the value of the _NutsNamedAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNutsNamedAreaExtension(ExtensionType value) {
-        this.nutsNamedAreaExtension = value;
+    public void set_NutsNamedAreaExtension(_ExtensionType value) {
+        this._NutsNamedAreaExtension = value;
     }
 
 }

@@ -1,87 +1,71 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TrafficStatusEnum complex type.
+ * <p>Java class for TrafficStatusEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TrafficStatusEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/roadTrafficData&gt;TrafficStatusEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TrafficStatusEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="stationary"/&gt;
+ *     &lt;enumeration value="queuing"/&gt;
+ *     &lt;enumeration value="slow"/&gt;
+ *     &lt;enumeration value="heavy"/&gt;
+ *     &lt;enumeration value="unspecifiedAbnormal"/&gt;
+ *     &lt;enumeration value="freeFlow"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TrafficStatusEnum", propOrder = {
-    "value"
-})
-public class TrafficStatusEnum {
+@XmlType(name = "TrafficStatusEnum")
+@XmlEnum
+public enum TrafficStatusEnum {
 
-    @XmlValue
-    protected TrafficStatusEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("stationary")
+    STATIONARY("stationary"),
+    @XmlEnumValue("queuing")
+    QUEUING("queuing"),
+    @XmlEnumValue("slow")
+    SLOW("slow"),
+    @XmlEnumValue("heavy")
+    HEAVY("heavy"),
+    @XmlEnumValue("unspecifiedAbnormal")
+    UNSPECIFIED_ABNORMAL("unspecifiedAbnormal"),
+    @XmlEnumValue("freeFlow")
+    FREE_FLOW("freeFlow"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TrafficStatusEnum2 }
-     *     
-     */
-    public TrafficStatusEnum2 getValue() {
+    TrafficStatusEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TrafficStatusEnum2 }
-     *     
-     */
-    public void setValue(TrafficStatusEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TrafficStatusEnum fromValue(String v) {
+        for (TrafficStatusEnum c: TrafficStatusEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -1,87 +1,107 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _AccidentCauseEnum complex type.
+ * <p>Java class for AccidentCauseEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_AccidentCauseEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;AccidentCauseEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="AccidentCauseEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="avoidanceOfObstacles"/&gt;
+ *     &lt;enumeration value="driverDistraction"/&gt;
+ *     &lt;enumeration value="driverDrugAbuse"/&gt;
+ *     &lt;enumeration value="driverIllness"/&gt;
+ *     &lt;enumeration value="exceedingSpeedsLimits"/&gt;
+ *     &lt;enumeration value="excessAlcohol"/&gt;
+ *     &lt;enumeration value="excessiveDriverTiredness"/&gt;
+ *     &lt;enumeration value="impermissibleManoeuvre"/&gt;
+ *     &lt;enumeration value="limitedVisibility"/&gt;
+ *     &lt;enumeration value="notKeepingASafeDistance"/&gt;
+ *     &lt;enumeration value="onTheWrongSideOfTheRoad"/&gt;
+ *     &lt;enumeration value="pedestrianInRoad"/&gt;
+ *     &lt;enumeration value="poorLaneAdherence"/&gt;
+ *     &lt;enumeration value="poorMergeEntryOrExitJudgement"/&gt;
+ *     &lt;enumeration value="poorRoadSurfaceCondition"/&gt;
+ *     &lt;enumeration value="poorSurfaceAdherence"/&gt;
+ *     &lt;enumeration value="undisclosed"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *     &lt;enumeration value="vehicleFailure"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_AccidentCauseEnum", propOrder = {
-    "value"
-})
-public class AccidentCauseEnum {
+@XmlType(name = "AccidentCauseEnum")
+@XmlEnum
+public enum AccidentCauseEnum {
 
-    @XmlValue
-    protected AccidentCauseEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("avoidanceOfObstacles")
+    AVOIDANCE_OF_OBSTACLES("avoidanceOfObstacles"),
+    @XmlEnumValue("driverDistraction")
+    DRIVER_DISTRACTION("driverDistraction"),
+    @XmlEnumValue("driverDrugAbuse")
+    DRIVER_DRUG_ABUSE("driverDrugAbuse"),
+    @XmlEnumValue("driverIllness")
+    DRIVER_ILLNESS("driverIllness"),
+    @XmlEnumValue("exceedingSpeedsLimits")
+    EXCEEDING_SPEEDS_LIMITS("exceedingSpeedsLimits"),
+    @XmlEnumValue("excessAlcohol")
+    EXCESS_ALCOHOL("excessAlcohol"),
+    @XmlEnumValue("excessiveDriverTiredness")
+    EXCESSIVE_DRIVER_TIREDNESS("excessiveDriverTiredness"),
+    @XmlEnumValue("impermissibleManoeuvre")
+    IMPERMISSIBLE_MANOEUVRE("impermissibleManoeuvre"),
+    @XmlEnumValue("limitedVisibility")
+    LIMITED_VISIBILITY("limitedVisibility"),
+    @XmlEnumValue("notKeepingASafeDistance")
+    NOT_KEEPING_A_SAFE_DISTANCE("notKeepingASafeDistance"),
+    @XmlEnumValue("onTheWrongSideOfTheRoad")
+    ON_THE_WRONG_SIDE_OF_THE_ROAD("onTheWrongSideOfTheRoad"),
+    @XmlEnumValue("pedestrianInRoad")
+    PEDESTRIAN_IN_ROAD("pedestrianInRoad"),
+    @XmlEnumValue("poorLaneAdherence")
+    POOR_LANE_ADHERENCE("poorLaneAdherence"),
+    @XmlEnumValue("poorMergeEntryOrExitJudgement")
+    POOR_MERGE_ENTRY_OR_EXIT_JUDGEMENT("poorMergeEntryOrExitJudgement"),
+    @XmlEnumValue("poorRoadSurfaceCondition")
+    POOR_ROAD_SURFACE_CONDITION("poorRoadSurfaceCondition"),
+    @XmlEnumValue("poorSurfaceAdherence")
+    POOR_SURFACE_ADHERENCE("poorSurfaceAdherence"),
+    @XmlEnumValue("undisclosed")
+    UNDISCLOSED("undisclosed"),
+    @XmlEnumValue("unknown")
+    UNKNOWN("unknown"),
+    @XmlEnumValue("vehicleFailure")
+    VEHICLE_FAILURE("vehicleFailure"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AccidentCauseEnum2 }
-     *     
-     */
-    public AccidentCauseEnum2 getValue() {
+    AccidentCauseEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AccidentCauseEnum2 }
-     *     
-     */
-    public void setValue(AccidentCauseEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static AccidentCauseEnum fromValue(String v) {
+        for (AccidentCauseEnum c: AccidentCauseEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

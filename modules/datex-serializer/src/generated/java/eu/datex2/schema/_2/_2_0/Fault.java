@@ -60,7 +60,7 @@ public class Fault {
     protected XMLGregorianCalendar faultLastUpdateTime;
     @XmlSchemaType(name = "string")
     protected FaultSeverityEnum faultSeverity;
-    protected ExtensionType faultExtension;
+    protected _ExtensionType faultExtension;
 
     /**
      * Gets the value of the faultIdentifier property.
@@ -187,10 +187,10 @@ public class Fault {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getFaultExtension() {
+    public _ExtensionType getFaultExtension() {
         return faultExtension;
     }
 
@@ -199,10 +199,10 @@ public class Fault {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setFaultExtension(ExtensionType value) {
+    public void setFaultExtension(_ExtensionType value) {
         this.faultExtension = value;
     }
 

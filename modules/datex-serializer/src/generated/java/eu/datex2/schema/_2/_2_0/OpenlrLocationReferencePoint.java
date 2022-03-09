@@ -38,7 +38,7 @@ public class OpenlrLocationReferencePoint
 
     @XmlElement(required = true)
     protected OpenlrPathAttributes openlrPathAttributes;
-    protected ExtensionType openlrLocationReferencePointExtension;
+    protected _ExtensionType openlrLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrPathAttributes property.
@@ -69,10 +69,10 @@ public class OpenlrLocationReferencePoint
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrLocationReferencePointExtension() {
+    public _ExtensionType getOpenlrLocationReferencePointExtension() {
         return openlrLocationReferencePointExtension;
     }
 
@@ -81,10 +81,10 @@ public class OpenlrLocationReferencePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrLocationReferencePointExtension(ExtensionType value) {
+    public void setOpenlrLocationReferencePointExtension(_ExtensionType value) {
         this.openlrLocationReferencePointExtension = value;
     }
 

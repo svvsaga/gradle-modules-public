@@ -50,7 +50,7 @@ public class PrimaryConrolResponsibility {
     protected BigInteger controlCentreIdentification;
     protected MultilingualString workGroupName;
     protected String workGroupIdentification;
-    protected ExtensionType primaryConrolResponsibilityExtension;
+    protected _ExtensionType primaryConrolResponsibilityExtension;
 
     /**
      * Gets the value of the cameraBaseStationName property.
@@ -201,10 +201,10 @@ public class PrimaryConrolResponsibility {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPrimaryConrolResponsibilityExtension() {
+    public _ExtensionType getPrimaryConrolResponsibilityExtension() {
         return primaryConrolResponsibilityExtension;
     }
 
@@ -213,10 +213,10 @@ public class PrimaryConrolResponsibility {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPrimaryConrolResponsibilityExtension(ExtensionType value) {
+    public void setPrimaryConrolResponsibilityExtension(_ExtensionType value) {
         this.primaryConrolResponsibilityExtension = value;
     }
 

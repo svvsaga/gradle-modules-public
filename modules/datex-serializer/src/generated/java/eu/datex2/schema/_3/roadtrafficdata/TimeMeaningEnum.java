@@ -1,87 +1,56 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TimeMeaningEnum complex type.
+ * <p>Java class for TimeMeaningEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TimeMeaningEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/roadTrafficData&gt;TimeMeaningEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TimeMeaningEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="beginTime"/&gt;
+ *     &lt;enumeration value="endTime"/&gt;
+ *     &lt;enumeration value="middleTime"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TimeMeaningEnum", propOrder = {
-    "value"
-})
-public class TimeMeaningEnum {
+@XmlType(name = "TimeMeaningEnum")
+@XmlEnum
+public enum TimeMeaningEnum {
 
-    @XmlValue
-    protected TimeMeaningEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("beginTime")
+    BEGIN_TIME("beginTime"),
+    @XmlEnumValue("endTime")
+    END_TIME("endTime"),
+    @XmlEnumValue("middleTime")
+    MIDDLE_TIME("middleTime"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TimeMeaningEnum2 }
-     *     
-     */
-    public TimeMeaningEnum2 getValue() {
+    TimeMeaningEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TimeMeaningEnum2 }
-     *     
-     */
-    public void setValue(TimeMeaningEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TimeMeaningEnum fromValue(String v) {
+        for (TimeMeaningEnum c: TimeMeaningEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

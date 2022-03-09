@@ -48,7 +48,7 @@ public class SupplementaryPositionalDescription {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger sequentialRampNumber;
     protected List<AffectedCarriagewayAndLanes> affectedCarriagewayAndLanes;
-    protected ExtensionType supplementaryPositionalDescriptionExtension;
+    protected _ExtensionType supplementaryPositionalDescriptionExtension;
     @XmlAttribute(name = "locationPrecision")
     protected BigInteger locationPrecision;
 
@@ -139,10 +139,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSupplementaryPositionalDescriptionExtension() {
+    public _ExtensionType getSupplementaryPositionalDescriptionExtension() {
         return supplementaryPositionalDescriptionExtension;
     }
 
@@ -151,10 +151,10 @@ public class SupplementaryPositionalDescription {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSupplementaryPositionalDescriptionExtension(ExtensionType value) {
+    public void setSupplementaryPositionalDescriptionExtension(_ExtensionType value) {
         this.supplementaryPositionalDescriptionExtension = value;
     }
 

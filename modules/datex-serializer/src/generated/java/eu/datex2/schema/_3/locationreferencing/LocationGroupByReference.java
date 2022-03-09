@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,26 +31,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LocationGroupByReference", propOrder = {
     "predefinedLocationGroupReference",
-    "locationGroupByReferenceExtension"
+    "_LocationGroupByReferenceExtension"
 })
 public class LocationGroupByReference
     extends LocationGroup
 {
 
     @XmlElement(required = true)
-    protected PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
+    protected _PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
     @XmlElement(name = "_locationGroupByReferenceExtension")
-    protected ExtensionType locationGroupByReferenceExtension;
+    protected _ExtensionType _LocationGroupByReferenceExtension;
 
     /**
      * Gets the value of the predefinedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedLocationGroupVersionedReference }
+     *     {@link _PredefinedLocationGroupVersionedReference }
      *     
      */
-    public PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
+    public _PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
         return predefinedLocationGroupReference;
     }
 
@@ -59,35 +59,35 @@ public class LocationGroupByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedLocationGroupVersionedReference }
+     *     {@link _PredefinedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedLocationGroupReference(PredefinedLocationGroupVersionedReference value) {
+    public void setPredefinedLocationGroupReference(_PredefinedLocationGroupVersionedReference value) {
         this.predefinedLocationGroupReference = value;
     }
 
     /**
-     * Gets the value of the locationGroupByReferenceExtension property.
+     * Gets the value of the _LocationGroupByReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLocationGroupByReferenceExtension() {
-        return locationGroupByReferenceExtension;
+    public _ExtensionType get_LocationGroupByReferenceExtension() {
+        return _LocationGroupByReferenceExtension;
     }
 
     /**
-     * Sets the value of the locationGroupByReferenceExtension property.
+     * Sets the value of the _LocationGroupByReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLocationGroupByReferenceExtension(ExtensionType value) {
-        this.locationGroupByReferenceExtension = value;
+    public void set_LocationGroupByReferenceExtension(_ExtensionType value) {
+        this._LocationGroupByReferenceExtension = value;
     }
 
 }

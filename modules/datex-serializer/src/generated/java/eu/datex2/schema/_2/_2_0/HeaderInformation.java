@@ -51,7 +51,7 @@ public class HeaderInformation {
     protected InformationStatusEnum informationStatus;
     @XmlSchemaType(name = "string")
     protected UrgencyEnum urgency;
-    protected ExtensionType headerInformationExtension;
+    protected _ExtensionType headerInformationExtension;
 
     /**
      * Gets the value of the areaOfInterest property.
@@ -154,10 +154,10 @@ public class HeaderInformation {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getHeaderInformationExtension() {
+    public _ExtensionType getHeaderInformationExtension() {
         return headerInformationExtension;
     }
 
@@ -166,10 +166,10 @@ public class HeaderInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setHeaderInformationExtension(ExtensionType value) {
+    public void setHeaderInformationExtension(_ExtensionType value) {
         this.headerInformationExtension = value;
     }
 

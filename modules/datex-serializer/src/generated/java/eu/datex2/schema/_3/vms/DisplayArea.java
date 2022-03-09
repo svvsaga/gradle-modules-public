@@ -4,7 +4,7 @@ package eu.datex2.schema._3.vms;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Lane;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -51,7 +51,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "positionYRelativeToPrevious",
     "displayGeometry",
     "overriddenLaneAssociation",
-    "displayAreaExtension"
+    "_DisplayAreaExtension"
 })
 @XmlSeeAlso({
     PictogramDisplayArea.class,
@@ -63,14 +63,14 @@ public class DisplayArea {
     protected Boolean sequencingCapable;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger maxNumberOfSequentialPages;
-    protected PositionXAbsoluteEnum positionXAbsolute;
-    protected PositionXRelativeEnum positionXRelativeToPrevious;
-    protected PositionYAbsoluteEnum positionYAbsolute;
-    protected PositionYRelativeEnum positionYRelativeToPrevious;
+    protected _PositionXAbsoluteEnum positionXAbsolute;
+    protected _PositionXRelativeEnum positionXRelativeToPrevious;
+    protected _PositionYAbsoluteEnum positionYAbsolute;
+    protected _PositionYRelativeEnum positionYRelativeToPrevious;
     protected DisplayGeometry displayGeometry;
     protected List<Lane> overriddenLaneAssociation;
     @XmlElement(name = "_displayAreaExtension")
-    protected ExtensionType displayAreaExtension;
+    protected _ExtensionType _DisplayAreaExtension;
 
     /**
      * Gets the value of the sequencingCapable property.
@@ -125,10 +125,10 @@ public class DisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link PositionXAbsoluteEnum }
+     *     {@link _PositionXAbsoluteEnum }
      *     
      */
-    public PositionXAbsoluteEnum getPositionXAbsolute() {
+    public _PositionXAbsoluteEnum getPositionXAbsolute() {
         return positionXAbsolute;
     }
 
@@ -137,10 +137,10 @@ public class DisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionXAbsoluteEnum }
+     *     {@link _PositionXAbsoluteEnum }
      *     
      */
-    public void setPositionXAbsolute(PositionXAbsoluteEnum value) {
+    public void setPositionXAbsolute(_PositionXAbsoluteEnum value) {
         this.positionXAbsolute = value;
     }
 
@@ -149,10 +149,10 @@ public class DisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link PositionXRelativeEnum }
+     *     {@link _PositionXRelativeEnum }
      *     
      */
-    public PositionXRelativeEnum getPositionXRelativeToPrevious() {
+    public _PositionXRelativeEnum getPositionXRelativeToPrevious() {
         return positionXRelativeToPrevious;
     }
 
@@ -161,10 +161,10 @@ public class DisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionXRelativeEnum }
+     *     {@link _PositionXRelativeEnum }
      *     
      */
-    public void setPositionXRelativeToPrevious(PositionXRelativeEnum value) {
+    public void setPositionXRelativeToPrevious(_PositionXRelativeEnum value) {
         this.positionXRelativeToPrevious = value;
     }
 
@@ -173,10 +173,10 @@ public class DisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link PositionYAbsoluteEnum }
+     *     {@link _PositionYAbsoluteEnum }
      *     
      */
-    public PositionYAbsoluteEnum getPositionYAbsolute() {
+    public _PositionYAbsoluteEnum getPositionYAbsolute() {
         return positionYAbsolute;
     }
 
@@ -185,10 +185,10 @@ public class DisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionYAbsoluteEnum }
+     *     {@link _PositionYAbsoluteEnum }
      *     
      */
-    public void setPositionYAbsolute(PositionYAbsoluteEnum value) {
+    public void setPositionYAbsolute(_PositionYAbsoluteEnum value) {
         this.positionYAbsolute = value;
     }
 
@@ -197,10 +197,10 @@ public class DisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link PositionYRelativeEnum }
+     *     {@link _PositionYRelativeEnum }
      *     
      */
-    public PositionYRelativeEnum getPositionYRelativeToPrevious() {
+    public _PositionYRelativeEnum getPositionYRelativeToPrevious() {
         return positionYRelativeToPrevious;
     }
 
@@ -209,10 +209,10 @@ public class DisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionYRelativeEnum }
+     *     {@link _PositionYRelativeEnum }
      *     
      */
-    public void setPositionYRelativeToPrevious(PositionYRelativeEnum value) {
+    public void setPositionYRelativeToPrevious(_PositionYRelativeEnum value) {
         this.positionYRelativeToPrevious = value;
     }
 
@@ -270,27 +270,27 @@ public class DisplayArea {
     }
 
     /**
-     * Gets the value of the displayAreaExtension property.
+     * Gets the value of the _DisplayAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDisplayAreaExtension() {
-        return displayAreaExtension;
+    public _ExtensionType get_DisplayAreaExtension() {
+        return _DisplayAreaExtension;
     }
 
     /**
-     * Sets the value of the displayAreaExtension property.
+     * Sets the value of the _DisplayAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDisplayAreaExtension(ExtensionType value) {
-        this.displayAreaExtension = value;
+    public void set_DisplayAreaExtension(_ExtensionType value) {
+        this._DisplayAreaExtension = value;
     }
 
 }

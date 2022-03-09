@@ -4,9 +4,9 @@ package eu.datex2.schema._3.situation;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.GroupOfVehiclesInvolved;
 import eu.datex2.schema._3.common.Vehicle;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -51,16 +51,16 @@ import jakarta.xml.bind.annotation.XmlType;
     "vehicleInvolved",
     "groupOfVehiclesInvolved",
     "groupOfPeopleInvolved",
-    "accidentExtension"
+    "_AccidentExtension"
 })
 public class Accident
     extends TrafficElement
 {
 
-    protected AccidentCauseEnum accidentCause;
+    protected _AccidentCauseEnum accidentCause;
     @XmlElement(required = true)
-    protected List<AccidentTypeEnum> accidentType;
-    protected CollisionTypeEnum collisionType;
+    protected List<_AccidentTypeEnum> accidentType;
+    protected _CollisionTypeEnum collisionType;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger totalNumberOfPeopleInvolved;
     @XmlSchemaType(name = "nonNegativeInteger")
@@ -69,17 +69,17 @@ public class Accident
     protected List<GroupOfVehiclesInvolved> groupOfVehiclesInvolved;
     protected List<GroupOfPeopleInvolved> groupOfPeopleInvolved;
     @XmlElement(name = "_accidentExtension")
-    protected ExtensionType accidentExtension;
+    protected _ExtensionType _AccidentExtension;
 
     /**
      * Gets the value of the accidentCause property.
      * 
      * @return
      *     possible object is
-     *     {@link AccidentCauseEnum }
+     *     {@link _AccidentCauseEnum }
      *     
      */
-    public AccidentCauseEnum getAccidentCause() {
+    public _AccidentCauseEnum getAccidentCause() {
         return accidentCause;
     }
 
@@ -88,10 +88,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link AccidentCauseEnum }
+     *     {@link _AccidentCauseEnum }
      *     
      */
-    public void setAccidentCause(AccidentCauseEnum value) {
+    public void setAccidentCause(_AccidentCauseEnum value) {
         this.accidentCause = value;
     }
 
@@ -113,13 +113,13 @@ public class Accident
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AccidentTypeEnum }
+     * {@link _AccidentTypeEnum }
      * 
      * 
      */
-    public List<AccidentTypeEnum> getAccidentType() {
+    public List<_AccidentTypeEnum> getAccidentType() {
         if (accidentType == null) {
-            accidentType = new ArrayList<AccidentTypeEnum>();
+            accidentType = new ArrayList<_AccidentTypeEnum>();
         }
         return this.accidentType;
     }
@@ -129,10 +129,10 @@ public class Accident
      * 
      * @return
      *     possible object is
-     *     {@link CollisionTypeEnum }
+     *     {@link _CollisionTypeEnum }
      *     
      */
-    public CollisionTypeEnum getCollisionType() {
+    public _CollisionTypeEnum getCollisionType() {
         return collisionType;
     }
 
@@ -141,10 +141,10 @@ public class Accident
      * 
      * @param value
      *     allowed object is
-     *     {@link CollisionTypeEnum }
+     *     {@link _CollisionTypeEnum }
      *     
      */
-    public void setCollisionType(CollisionTypeEnum value) {
+    public void setCollisionType(_CollisionTypeEnum value) {
         this.collisionType = value;
     }
 
@@ -284,27 +284,27 @@ public class Accident
     }
 
     /**
-     * Gets the value of the accidentExtension property.
+     * Gets the value of the _AccidentExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAccidentExtension() {
-        return accidentExtension;
+    public _ExtensionType get_AccidentExtension() {
+        return _AccidentExtension;
     }
 
     /**
-     * Sets the value of the accidentExtension property.
+     * Sets the value of the _AccidentExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAccidentExtension(ExtensionType value) {
-        this.accidentExtension = value;
+    public void set_AccidentExtension(_ExtensionType value) {
+        this._AccidentExtension = value;
     }
 
 }

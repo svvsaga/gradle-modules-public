@@ -54,7 +54,7 @@ public class Association {
     protected String designation;
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
-    protected ExtensionType associationExtension;
+    protected _ExtensionType associationExtension;
 
     /**
      * Gets the value of the className property.
@@ -205,10 +205,10 @@ public class Association {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAssociationExtension() {
+    public _ExtensionType getAssociationExtension() {
         return associationExtension;
     }
 
@@ -217,10 +217,10 @@ public class Association {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAssociationExtension(ExtensionType value) {
+    public void setAssociationExtension(_ExtensionType value) {
         this.associationExtension = value;
     }
 

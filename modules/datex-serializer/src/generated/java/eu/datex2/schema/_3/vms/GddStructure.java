@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GddStructure", propOrder = {
     "gddPictogramIdentification",
     "gddPictogramAttributes",
-    "gddStructureExtension"
+    "_GddStructureExtension"
 })
 public class GddStructure {
 
@@ -41,7 +41,7 @@ public class GddStructure {
     protected GddPictogramIdentification gddPictogramIdentification;
     protected GddPictogramAttributes gddPictogramAttributes;
     @XmlElement(name = "_gddStructureExtension")
-    protected ExtensionType gddStructureExtension;
+    protected _ExtensionType _GddStructureExtension;
 
     /**
      * Gets the value of the gddPictogramIdentification property.
@@ -92,27 +92,27 @@ public class GddStructure {
     }
 
     /**
-     * Gets the value of the gddStructureExtension property.
+     * Gets the value of the _GddStructureExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGddStructureExtension() {
-        return gddStructureExtension;
+    public _ExtensionType get_GddStructureExtension() {
+        return _GddStructureExtension;
     }
 
     /**
-     * Sets the value of the gddStructureExtension property.
+     * Sets the value of the _GddStructureExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGddStructureExtension(ExtensionType value) {
-        this.gddStructureExtension = value;
+    public void set_GddStructureExtension(_ExtensionType value) {
+        this._GddStructureExtension = value;
     }
 
 }

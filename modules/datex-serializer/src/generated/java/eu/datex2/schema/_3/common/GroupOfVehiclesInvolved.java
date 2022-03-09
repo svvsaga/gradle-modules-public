@@ -36,16 +36,16 @@ import jakarta.xml.bind.annotation.XmlType;
     "numberOfVehicles",
     "vehicleStatus",
     "vehicleCharacteristics",
-    "groupOfVehiclesInvolvedExtension"
+    "_GroupOfVehiclesInvolvedExtension"
 })
 public class GroupOfVehiclesInvolved {
 
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfVehicles;
-    protected VehicleStatusEnum vehicleStatus;
+    protected _VehicleStatusEnum vehicleStatus;
     protected VehicleCharacteristics vehicleCharacteristics;
     @XmlElement(name = "_groupOfVehiclesInvolvedExtension")
-    protected ExtensionType groupOfVehiclesInvolvedExtension;
+    protected _ExtensionType _GroupOfVehiclesInvolvedExtension;
 
     /**
      * Gets the value of the numberOfVehicles property.
@@ -76,10 +76,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @return
      *     possible object is
-     *     {@link VehicleStatusEnum }
+     *     {@link _VehicleStatusEnum }
      *     
      */
-    public VehicleStatusEnum getVehicleStatus() {
+    public _VehicleStatusEnum getVehicleStatus() {
         return vehicleStatus;
     }
 
@@ -88,10 +88,10 @@ public class GroupOfVehiclesInvolved {
      * 
      * @param value
      *     allowed object is
-     *     {@link VehicleStatusEnum }
+     *     {@link _VehicleStatusEnum }
      *     
      */
-    public void setVehicleStatus(VehicleStatusEnum value) {
+    public void setVehicleStatus(_VehicleStatusEnum value) {
         this.vehicleStatus = value;
     }
 
@@ -120,27 +120,27 @@ public class GroupOfVehiclesInvolved {
     }
 
     /**
-     * Gets the value of the groupOfVehiclesInvolvedExtension property.
+     * Gets the value of the _GroupOfVehiclesInvolvedExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGroupOfVehiclesInvolvedExtension() {
-        return groupOfVehiclesInvolvedExtension;
+    public _ExtensionType get_GroupOfVehiclesInvolvedExtension() {
+        return _GroupOfVehiclesInvolvedExtension;
     }
 
     /**
-     * Sets the value of the groupOfVehiclesInvolvedExtension property.
+     * Sets the value of the _GroupOfVehiclesInvolvedExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGroupOfVehiclesInvolvedExtension(ExtensionType value) {
-        this.groupOfVehiclesInvolvedExtension = value;
+    public void set_GroupOfVehiclesInvolvedExtension(_ExtensionType value) {
+        this._GroupOfVehiclesInvolvedExtension = value;
     }
 
 }

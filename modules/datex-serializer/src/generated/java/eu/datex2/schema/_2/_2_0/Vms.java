@@ -53,14 +53,14 @@ public class Vms {
 
     protected boolean vmsWorking;
     protected Float vmsMessageSequencingInterval;
-    protected List<VmsMessageIndexVmsMessage> vmsMessage;
+    protected List<_VmsMessageIndexVmsMessage> vmsMessage;
     protected TextDisplayAreaSettings textDisplayAreaSettings;
-    protected List<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> pictogramDisplayAreaSettings;
+    protected List<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> pictogramDisplayAreaSettings;
     protected Location vmsLocationOverride;
     protected VmsManagedLogicalLocation managedLogicalLocationOverride;
     protected VmsDynamicCharacteristics vmsDynamicCharacteristics;
     protected List<VmsFault> vmsFault;
-    protected ExtensionType vmsExtension;
+    protected _ExtensionType vmsExtension;
 
     /**
      * Gets the value of the vmsWorking property.
@@ -120,13 +120,13 @@ public class Vms {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsMessageIndexVmsMessage }
+     * {@link _VmsMessageIndexVmsMessage }
      * 
      * 
      */
-    public List<VmsMessageIndexVmsMessage> getVmsMessage() {
+    public List<_VmsMessageIndexVmsMessage> getVmsMessage() {
         if (vmsMessage == null) {
-            vmsMessage = new ArrayList<VmsMessageIndexVmsMessage>();
+            vmsMessage = new ArrayList<_VmsMessageIndexVmsMessage>();
         }
         return this.vmsMessage;
     }
@@ -173,13 +173,13 @@ public class Vms {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
+     * {@link _VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings }
      * 
      * 
      */
-    public List<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> getPictogramDisplayAreaSettings() {
+    public List<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings> getPictogramDisplayAreaSettings() {
         if (pictogramDisplayAreaSettings == null) {
-            pictogramDisplayAreaSettings = new ArrayList<VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings>();
+            pictogramDisplayAreaSettings = new ArrayList<_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings>();
         }
         return this.pictogramDisplayAreaSettings;
     }
@@ -290,10 +290,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsExtension() {
+    public _ExtensionType getVmsExtension() {
         return vmsExtension;
     }
 
@@ -302,10 +302,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsExtension(ExtensionType value) {
+    public void setVmsExtension(_ExtensionType value) {
         this.vmsExtension = value;
     }
 

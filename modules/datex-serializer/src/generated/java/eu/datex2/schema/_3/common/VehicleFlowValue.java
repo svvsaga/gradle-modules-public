@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VehicleFlowValue", propOrder = {
     "vehicleFlowRate",
-    "vehicleFlowValueExtension"
+    "_VehicleFlowValueExtension"
 })
 public class VehicleFlowValue
     extends DataValue
@@ -42,7 +42,7 @@ public class VehicleFlowValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger vehicleFlowRate;
     @XmlElement(name = "_vehicleFlowValueExtension")
-    protected ExtensionType vehicleFlowValueExtension;
+    protected _ExtensionType _VehicleFlowValueExtension;
 
     /**
      * Gets the value of the vehicleFlowRate property.
@@ -69,27 +69,27 @@ public class VehicleFlowValue
     }
 
     /**
-     * Gets the value of the vehicleFlowValueExtension property.
+     * Gets the value of the _VehicleFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVehicleFlowValueExtension() {
-        return vehicleFlowValueExtension;
+    public _ExtensionType get_VehicleFlowValueExtension() {
+        return _VehicleFlowValueExtension;
     }
 
     /**
-     * Sets the value of the vehicleFlowValueExtension property.
+     * Sets the value of the _VehicleFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVehicleFlowValueExtension(ExtensionType value) {
-        this.vehicleFlowValueExtension = value;
+    public void set_VehicleFlowValueExtension(_ExtensionType value) {
+        this._VehicleFlowValueExtension = value;
     }
 
 }

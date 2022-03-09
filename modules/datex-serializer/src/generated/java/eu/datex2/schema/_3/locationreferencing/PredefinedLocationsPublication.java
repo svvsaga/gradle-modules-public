@@ -3,9 +3,9 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "PredefinedLocationsPublication", propOrder = {
     "headerInformation",
     "predefinedLocationReference",
-    "predefinedLocationsPublicationExtension"
+    "_PredefinedLocationsPublicationExtension"
 })
 public class PredefinedLocationsPublication
     extends PayloadPublication
@@ -48,7 +48,7 @@ public class PredefinedLocationsPublication
     @XmlElement(required = true)
     protected List<PredefinedLocationReference> predefinedLocationReference;
     @XmlElement(name = "_predefinedLocationsPublicationExtension")
-    protected ExtensionType predefinedLocationsPublicationExtension;
+    protected _ExtensionType _PredefinedLocationsPublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,27 +104,27 @@ public class PredefinedLocationsPublication
     }
 
     /**
-     * Gets the value of the predefinedLocationsPublicationExtension property.
+     * Gets the value of the _PredefinedLocationsPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedLocationsPublicationExtension() {
-        return predefinedLocationsPublicationExtension;
+    public _ExtensionType get_PredefinedLocationsPublicationExtension() {
+        return _PredefinedLocationsPublicationExtension;
     }
 
     /**
-     * Sets the value of the predefinedLocationsPublicationExtension property.
+     * Sets the value of the _PredefinedLocationsPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedLocationsPublicationExtension(ExtensionType value) {
-        this.predefinedLocationsPublicationExtension = value;
+    public void set_PredefinedLocationsPublicationExtension(_ExtensionType value) {
+        this._PredefinedLocationsPublicationExtension = value;
     }
 
 }

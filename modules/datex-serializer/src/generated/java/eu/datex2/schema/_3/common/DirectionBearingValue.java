@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DirectionBearingValue", propOrder = {
     "directionBearing",
-    "directionBearingValueExtension"
+    "_DirectionBearingValueExtension"
 })
 public class DirectionBearingValue
     extends DataValue
@@ -40,7 +40,7 @@ public class DirectionBearingValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int directionBearing;
     @XmlElement(name = "_directionBearingValueExtension")
-    protected ExtensionType directionBearingValueExtension;
+    protected _ExtensionType _DirectionBearingValueExtension;
 
     /**
      * Gets the value of the directionBearing property.
@@ -59,27 +59,27 @@ public class DirectionBearingValue
     }
 
     /**
-     * Gets the value of the directionBearingValueExtension property.
+     * Gets the value of the _DirectionBearingValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDirectionBearingValueExtension() {
-        return directionBearingValueExtension;
+    public _ExtensionType get_DirectionBearingValueExtension() {
+        return _DirectionBearingValueExtension;
     }
 
     /**
-     * Sets the value of the directionBearingValueExtension property.
+     * Sets the value of the _DirectionBearingValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDirectionBearingValueExtension(ExtensionType value) {
-        this.directionBearingValueExtension = value;
+    public void set_DirectionBearingValueExtension(_ExtensionType value) {
+        this._DirectionBearingValueExtension = value;
     }
 
 }

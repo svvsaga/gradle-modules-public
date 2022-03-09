@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "overallEndTime",
     "validPeriod",
     "exceptionPeriod",
-    "overallPeriodExtension"
+    "_OverallPeriodExtension"
 })
 public class OverallPeriod {
 
@@ -52,7 +52,7 @@ public class OverallPeriod {
     protected List<Period> validPeriod;
     protected List<Period> exceptionPeriod;
     @XmlElement(name = "_overallPeriodExtension")
-    protected ExtensionType overallPeriodExtension;
+    protected _ExtensionType _OverallPeriodExtension;
 
     /**
      * Gets the value of the overallStartTime property.
@@ -161,27 +161,27 @@ public class OverallPeriod {
     }
 
     /**
-     * Gets the value of the overallPeriodExtension property.
+     * Gets the value of the _OverallPeriodExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOverallPeriodExtension() {
-        return overallPeriodExtension;
+    public _ExtensionType get_OverallPeriodExtension() {
+        return _OverallPeriodExtension;
     }
 
     /**
-     * Sets the value of the overallPeriodExtension property.
+     * Sets the value of the _OverallPeriodExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOverallPeriodExtension(ExtensionType value) {
-        this.overallPeriodExtension = value;
+    public void set_OverallPeriodExtension(_ExtensionType value) {
+        this._OverallPeriodExtension = value;
     }
 
 }

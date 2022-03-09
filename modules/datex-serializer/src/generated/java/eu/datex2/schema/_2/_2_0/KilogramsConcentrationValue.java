@@ -36,7 +36,7 @@ public class KilogramsConcentrationValue
 {
 
     protected float kilogramsConcentration;
-    protected ExtensionType kilogramsConcentrationValueExtension;
+    protected _ExtensionType kilogramsConcentrationValueExtension;
 
     /**
      * Gets the value of the kilogramsConcentration property.
@@ -59,10 +59,10 @@ public class KilogramsConcentrationValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getKilogramsConcentrationValueExtension() {
+    public _ExtensionType getKilogramsConcentrationValueExtension() {
         return kilogramsConcentrationValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class KilogramsConcentrationValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setKilogramsConcentrationValueExtension(ExtensionType value) {
+    public void setKilogramsConcentrationValueExtension(_ExtensionType value) {
         this.kilogramsConcentrationValueExtension = value;
     }
 

@@ -41,7 +41,7 @@ public class WidthCharacteristic {
     @XmlSchemaType(name = "string")
     protected ComparisonOperatorEnum comparisonOperator;
     protected float vehicleWidth;
-    protected ExtensionType widthCharacteristicExtension;
+    protected _ExtensionType widthCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
@@ -88,10 +88,10 @@ public class WidthCharacteristic {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWidthCharacteristicExtension() {
+    public _ExtensionType getWidthCharacteristicExtension() {
         return widthCharacteristicExtension;
     }
 
@@ -100,10 +100,10 @@ public class WidthCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWidthCharacteristicExtension(ExtensionType value) {
+    public void setWidthCharacteristicExtension(_ExtensionType value) {
         this.widthCharacteristicExtension = value;
     }
 

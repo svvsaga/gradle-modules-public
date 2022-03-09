@@ -56,7 +56,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class CctvCameraStatus {
 
     @XmlElement(required = true)
-    protected CctvCameraMetadataRecordVersionedReference cctvCameraReference;
+    protected _CctvCameraMetadataRecordVersionedReference cctvCameraReference;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar cctvCameraStatusTime;
@@ -69,17 +69,17 @@ public class CctvCameraStatus {
     protected List<CctvStillImageServiceStatus> cctvStillImageServiceStatus;
     protected List<CctvVideoServiceStatus> cctvVideoServiceStatus;
     protected CctvCameraControlStatus cctvCameraControlStatus;
-    protected ExtensionType cctvCameraStatusExtension;
+    protected _ExtensionType cctvCameraStatusExtension;
 
     /**
      * Gets the value of the cctvCameraReference property.
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraMetadataRecordVersionedReference }
+     *     {@link _CctvCameraMetadataRecordVersionedReference }
      *     
      */
-    public CctvCameraMetadataRecordVersionedReference getCctvCameraReference() {
+    public _CctvCameraMetadataRecordVersionedReference getCctvCameraReference() {
         return cctvCameraReference;
     }
 
@@ -88,10 +88,10 @@ public class CctvCameraStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraMetadataRecordVersionedReference }
+     *     {@link _CctvCameraMetadataRecordVersionedReference }
      *     
      */
-    public void setCctvCameraReference(CctvCameraMetadataRecordVersionedReference value) {
+    public void setCctvCameraReference(_CctvCameraMetadataRecordVersionedReference value) {
         this.cctvCameraReference = value;
     }
 
@@ -307,10 +307,10 @@ public class CctvCameraStatus {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraStatusExtension() {
+    public _ExtensionType getCctvCameraStatusExtension() {
         return cctvCameraStatusExtension;
     }
 
@@ -319,10 +319,10 @@ public class CctvCameraStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraStatusExtension(ExtensionType value) {
+    public void setCctvCameraStatusExtension(_ExtensionType value) {
         this.cctvCameraStatusExtension = value;
     }
 

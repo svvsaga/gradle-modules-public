@@ -41,7 +41,7 @@ public class TpegHeight {
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc04HeightTypeEnum heightType;
-    protected ExtensionType tpegHeightExtension;
+    protected _ExtensionType tpegHeightExtension;
 
     /**
      * Gets the value of the height property.
@@ -96,10 +96,10 @@ public class TpegHeight {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegHeightExtension() {
+    public _ExtensionType getTpegHeightExtension() {
         return tpegHeightExtension;
     }
 
@@ -108,10 +108,10 @@ public class TpegHeight {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegHeightExtension(ExtensionType value) {
+    public void setTpegHeightExtension(_ExtensionType value) {
         this.tpegHeightExtension = value;
     }
 

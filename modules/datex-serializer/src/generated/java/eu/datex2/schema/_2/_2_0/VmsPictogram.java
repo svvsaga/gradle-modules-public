@@ -86,7 +86,7 @@ public class VmsPictogram {
     protected Float weightPerAxleAttribute;
     protected Float widthAttribute;
     protected VmsSupplementaryPanel vmsSupplementaryPanel;
-    protected VmsPictogramExtensionType vmsPictogramExtension;
+    protected _VmsPictogramExtensionType vmsPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
@@ -474,10 +474,10 @@ public class VmsPictogram {
      * 
      * @return
      *     possible object is
-     *     {@link VmsPictogramExtensionType }
+     *     {@link _VmsPictogramExtensionType }
      *     
      */
-    public VmsPictogramExtensionType getVmsPictogramExtension() {
+    public _VmsPictogramExtensionType getVmsPictogramExtension() {
         return vmsPictogramExtension;
     }
 
@@ -486,10 +486,10 @@ public class VmsPictogram {
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsPictogramExtensionType }
+     *     {@link _VmsPictogramExtensionType }
      *     
      */
-    public void setVmsPictogramExtension(VmsPictogramExtensionType value) {
+    public void setVmsPictogramExtension(_VmsPictogramExtensionType value) {
         this.vmsPictogramExtension = value;
     }
 

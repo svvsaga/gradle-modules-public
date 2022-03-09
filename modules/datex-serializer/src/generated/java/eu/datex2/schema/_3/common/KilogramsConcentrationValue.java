@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "KilogramsConcentrationValue", propOrder = {
     "kilogramsConcentration",
-    "kilogramsConcentrationValueExtension"
+    "_KilogramsConcentrationValueExtension"
 })
 public class KilogramsConcentrationValue
     extends DataValue
@@ -38,7 +38,7 @@ public class KilogramsConcentrationValue
 
     protected float kilogramsConcentration;
     @XmlElement(name = "_kilogramsConcentrationValueExtension")
-    protected ExtensionType kilogramsConcentrationValueExtension;
+    protected _ExtensionType _KilogramsConcentrationValueExtension;
 
     /**
      * Gets the value of the kilogramsConcentration property.
@@ -57,27 +57,27 @@ public class KilogramsConcentrationValue
     }
 
     /**
-     * Gets the value of the kilogramsConcentrationValueExtension property.
+     * Gets the value of the _KilogramsConcentrationValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getKilogramsConcentrationValueExtension() {
-        return kilogramsConcentrationValueExtension;
+    public _ExtensionType get_KilogramsConcentrationValueExtension() {
+        return _KilogramsConcentrationValueExtension;
     }
 
     /**
-     * Sets the value of the kilogramsConcentrationValueExtension property.
+     * Sets the value of the _KilogramsConcentrationValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setKilogramsConcentrationValueExtension(ExtensionType value) {
-        this.kilogramsConcentrationValueExtension = value;
+    public void set_KilogramsConcentrationValueExtension(_ExtensionType value) {
+        this._KilogramsConcentrationValueExtension = value;
     }
 
 }

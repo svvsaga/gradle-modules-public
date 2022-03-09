@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrLinear", propOrder = {
     "firstDirection",
     "oppositeDirection",
-    "openlrLinearExtension"
+    "_OpenlrLinearExtension"
 })
 public class OpenlrLinear {
 
@@ -41,7 +41,7 @@ public class OpenlrLinear {
     protected OpenlrLineLocationReference firstDirection;
     protected OpenlrLineLocationReference oppositeDirection;
     @XmlElement(name = "_openlrLinearExtension")
-    protected ExtensionType openlrLinearExtension;
+    protected _ExtensionType _OpenlrLinearExtension;
 
     /**
      * Gets the value of the firstDirection property.
@@ -92,27 +92,27 @@ public class OpenlrLinear {
     }
 
     /**
-     * Gets the value of the openlrLinearExtension property.
+     * Gets the value of the _OpenlrLinearExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrLinearExtension() {
-        return openlrLinearExtension;
+    public _ExtensionType get_OpenlrLinearExtension() {
+        return _OpenlrLinearExtension;
     }
 
     /**
-     * Sets the value of the openlrLinearExtension property.
+     * Sets the value of the _OpenlrLinearExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrLinearExtension(ExtensionType value) {
-        this.openlrLinearExtension = value;
+    public void set_OpenlrLinearExtension(_ExtensionType value) {
+        this._OpenlrLinearExtension = value;
     }
 
 }

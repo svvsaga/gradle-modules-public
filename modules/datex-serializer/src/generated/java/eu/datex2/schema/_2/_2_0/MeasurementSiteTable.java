@@ -44,7 +44,7 @@ public class MeasurementSiteTable {
     protected String measurementSiteTableIdentification;
     @XmlElement(required = true)
     protected List<MeasurementSiteRecord> measurementSiteRecord;
-    protected ExtensionType measurementSiteTableExtension;
+    protected _ExtensionType measurementSiteTableExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -108,10 +108,10 @@ public class MeasurementSiteTable {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteTableExtension() {
+    public _ExtensionType getMeasurementSiteTableExtension() {
         return measurementSiteTableExtension;
     }
 
@@ -120,10 +120,10 @@ public class MeasurementSiteTable {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSiteTableExtension(ExtensionType value) {
+    public void setMeasurementSiteTableExtension(_ExtensionType value) {
         this.measurementSiteTableExtension = value;
     }
 

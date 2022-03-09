@@ -50,7 +50,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "waterFilmThickness",
     "iceLayerThickness",
     "icePercentage",
-    "roadSurfaceConditionMeasurementsExtension"
+    "_RoadSurfaceConditionMeasurementsExtension"
 })
 public class RoadSurfaceConditionMeasurements {
 
@@ -65,7 +65,7 @@ public class RoadSurfaceConditionMeasurements {
     protected FloatingPointMetreDistanceValue iceLayerThickness;
     protected PercentageValue icePercentage;
     @XmlElement(name = "_roadSurfaceConditionMeasurementsExtension")
-    protected ExtensionType roadSurfaceConditionMeasurementsExtension;
+    protected _ExtensionType _RoadSurfaceConditionMeasurementsExtension;
 
     /**
      * Gets the value of the temperatureBelowOrAboveRoadSurface property.
@@ -313,27 +313,27 @@ public class RoadSurfaceConditionMeasurements {
     }
 
     /**
-     * Gets the value of the roadSurfaceConditionMeasurementsExtension property.
+     * Gets the value of the _RoadSurfaceConditionMeasurementsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadSurfaceConditionMeasurementsExtension() {
-        return roadSurfaceConditionMeasurementsExtension;
+    public _ExtensionType get_RoadSurfaceConditionMeasurementsExtension() {
+        return _RoadSurfaceConditionMeasurementsExtension;
     }
 
     /**
-     * Sets the value of the roadSurfaceConditionMeasurementsExtension property.
+     * Sets the value of the _RoadSurfaceConditionMeasurementsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionMeasurementsExtension(ExtensionType value) {
-        this.roadSurfaceConditionMeasurementsExtension = value;
+    public void set_RoadSurfaceConditionMeasurementsExtension(_ExtensionType value) {
+        this._RoadSurfaceConditionMeasurementsExtension = value;
     }
 
 }

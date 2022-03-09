@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.FloatingPointMetreDistanceValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TrafficGap", propOrder = {
     "averageDistanceGap",
     "averageTimeGap",
-    "trafficGapExtension"
+    "_TrafficGapExtension"
 })
 public class TrafficGap
     extends TrafficData
@@ -43,7 +43,7 @@ public class TrafficGap
     protected FloatingPointMetreDistanceValue averageDistanceGap;
     protected DurationValue averageTimeGap;
     @XmlElement(name = "_trafficGapExtension")
-    protected ExtensionType trafficGapExtension;
+    protected _ExtensionType _TrafficGapExtension;
 
     /**
      * Gets the value of the averageDistanceGap property.
@@ -94,27 +94,27 @@ public class TrafficGap
     }
 
     /**
-     * Gets the value of the trafficGapExtension property.
+     * Gets the value of the _TrafficGapExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficGapExtension() {
-        return trafficGapExtension;
+    public _ExtensionType get_TrafficGapExtension() {
+        return _TrafficGapExtension;
     }
 
     /**
-     * Sets the value of the trafficGapExtension property.
+     * Sets the value of the _TrafficGapExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficGapExtension(ExtensionType value) {
-        this.trafficGapExtension = value;
+    public void set_TrafficGapExtension(_ExtensionType value) {
+        this._TrafficGapExtension = value;
     }
 
 }

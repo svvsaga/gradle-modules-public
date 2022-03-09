@@ -42,7 +42,7 @@ public class InternationalIdentifier {
     protected CountryEnum country;
     @XmlElement(required = true)
     protected String nationalIdentifier;
-    protected ExtensionType internationalIdentifierExtension;
+    protected _ExtensionType internationalIdentifierExtension;
 
     /**
      * Gets the value of the country property.
@@ -97,10 +97,10 @@ public class InternationalIdentifier {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getInternationalIdentifierExtension() {
+    public _ExtensionType getInternationalIdentifierExtension() {
         return internationalIdentifierExtension;
     }
 
@@ -109,10 +109,10 @@ public class InternationalIdentifier {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setInternationalIdentifierExtension(ExtensionType value) {
+    public void setInternationalIdentifierExtension(_ExtensionType value) {
         this.internationalIdentifierExtension = value;
     }
 

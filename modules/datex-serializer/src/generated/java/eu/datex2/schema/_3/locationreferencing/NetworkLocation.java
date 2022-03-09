@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "NetworkLocation", propOrder = {
     "supplementaryPositionalDescription",
     "destination",
-    "networkLocationExtension"
+    "_NetworkLocationExtension"
 })
 @XmlSeeAlso({
     PointLocation.class,
@@ -47,7 +47,7 @@ public abstract class NetworkLocation
     protected SupplementaryPositionalDescription supplementaryPositionalDescription;
     protected Destination destination;
     @XmlElement(name = "_networkLocationExtension")
-    protected ExtensionType networkLocationExtension;
+    protected _ExtensionType _NetworkLocationExtension;
 
     /**
      * Gets the value of the supplementaryPositionalDescription property.
@@ -98,27 +98,27 @@ public abstract class NetworkLocation
     }
 
     /**
-     * Gets the value of the networkLocationExtension property.
+     * Gets the value of the _NetworkLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getNetworkLocationExtension() {
-        return networkLocationExtension;
+    public _ExtensionType get_NetworkLocationExtension() {
+        return _NetworkLocationExtension;
     }
 
     /**
-     * Sets the value of the networkLocationExtension property.
+     * Sets the value of the _NetworkLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setNetworkLocationExtension(ExtensionType value) {
-        this.networkLocationExtension = value;
+    public void set_NetworkLocationExtension(_ExtensionType value) {
+        this._NetworkLocationExtension = value;
     }
 
 }

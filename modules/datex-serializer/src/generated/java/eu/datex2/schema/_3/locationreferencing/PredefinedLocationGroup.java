@@ -3,8 +3,8 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "predefinedLocationGroupName",
     "locationGroup",
     "predefinedLocation",
-    "predefinedLocationGroupExtension"
+    "_PredefinedLocationGroupExtension"
 })
 public class PredefinedLocationGroup
     extends PredefinedLocationReference
@@ -51,7 +51,7 @@ public class PredefinedLocationGroup
     protected LocationGroup locationGroup;
     protected List<PredefinedLocation> predefinedLocation;
     @XmlElement(name = "_predefinedLocationGroupExtension")
-    protected ExtensionType predefinedLocationGroupExtension;
+    protected _ExtensionType _PredefinedLocationGroupExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -135,27 +135,27 @@ public class PredefinedLocationGroup
     }
 
     /**
-     * Gets the value of the predefinedLocationGroupExtension property.
+     * Gets the value of the _PredefinedLocationGroupExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedLocationGroupExtension() {
-        return predefinedLocationGroupExtension;
+    public _ExtensionType get_PredefinedLocationGroupExtension() {
+        return _PredefinedLocationGroupExtension;
     }
 
     /**
-     * Sets the value of the predefinedLocationGroupExtension property.
+     * Sets the value of the _PredefinedLocationGroupExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedLocationGroupExtension(ExtensionType value) {
-        this.predefinedLocationGroupExtension = value;
+    public void set_PredefinedLocationGroupExtension(_ExtensionType value) {
+        this._PredefinedLocationGroupExtension = value;
     }
 
     /**

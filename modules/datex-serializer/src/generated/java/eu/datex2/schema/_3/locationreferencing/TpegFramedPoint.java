@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,14 +37,14 @@ import jakarta.xml.bind.annotation.XmlType;
     "framedPoint",
     "to",
     "from",
-    "tpegFramedPointExtension"
+    "_TpegFramedPointExtension"
 })
 public class TpegFramedPoint
     extends TpegPointLocation
 {
 
     @XmlElement(required = true)
-    protected TpegLoc01FramedPointLocationSubtypeEnum tpegFramedPointLocationType;
+    protected _TpegLoc01FramedPointLocationSubtypeEnum tpegFramedPointLocationType;
     @XmlElement(required = true)
     protected TpegNonJunctionPoint framedPoint;
     @XmlElement(required = true)
@@ -52,17 +52,17 @@ public class TpegFramedPoint
     @XmlElement(required = true)
     protected TpegPoint from;
     @XmlElement(name = "_tpegFramedPointExtension")
-    protected ExtensionType tpegFramedPointExtension;
+    protected _ExtensionType _TpegFramedPointExtension;
 
     /**
      * Gets the value of the tpegFramedPointLocationType property.
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc01FramedPointLocationSubtypeEnum }
+     *     {@link _TpegLoc01FramedPointLocationSubtypeEnum }
      *     
      */
-    public TpegLoc01FramedPointLocationSubtypeEnum getTpegFramedPointLocationType() {
+    public _TpegLoc01FramedPointLocationSubtypeEnum getTpegFramedPointLocationType() {
         return tpegFramedPointLocationType;
     }
 
@@ -71,10 +71,10 @@ public class TpegFramedPoint
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc01FramedPointLocationSubtypeEnum }
+     *     {@link _TpegLoc01FramedPointLocationSubtypeEnum }
      *     
      */
-    public void setTpegFramedPointLocationType(TpegLoc01FramedPointLocationSubtypeEnum value) {
+    public void setTpegFramedPointLocationType(_TpegLoc01FramedPointLocationSubtypeEnum value) {
         this.tpegFramedPointLocationType = value;
     }
 
@@ -151,27 +151,27 @@ public class TpegFramedPoint
     }
 
     /**
-     * Gets the value of the tpegFramedPointExtension property.
+     * Gets the value of the _TpegFramedPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegFramedPointExtension() {
-        return tpegFramedPointExtension;
+    public _ExtensionType get_TpegFramedPointExtension() {
+        return _TpegFramedPointExtension;
     }
 
     /**
-     * Sets the value of the tpegFramedPointExtension property.
+     * Sets the value of the _TpegFramedPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegFramedPointExtension(ExtensionType value) {
-        this.tpegFramedPointExtension = value;
+    public void set_TpegFramedPointExtension(_ExtensionType value) {
+        this._TpegFramedPointExtension = value;
     }
 
 }

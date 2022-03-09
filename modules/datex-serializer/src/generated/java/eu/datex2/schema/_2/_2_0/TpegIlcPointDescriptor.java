@@ -40,7 +40,7 @@ public class TpegIlcPointDescriptor
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected TpegLoc03IlcPointDescriptorSubtypeEnum tpegIlcPointDescriptorType;
-    protected ExtensionType tpegIlcPointDescriptorExtension;
+    protected _ExtensionType tpegIlcPointDescriptorExtension;
 
     /**
      * Gets the value of the tpegIlcPointDescriptorType property.
@@ -71,10 +71,10 @@ public class TpegIlcPointDescriptor
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegIlcPointDescriptorExtension() {
+    public _ExtensionType getTpegIlcPointDescriptorExtension() {
         return tpegIlcPointDescriptorExtension;
     }
 
@@ -83,10 +83,10 @@ public class TpegIlcPointDescriptor
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegIlcPointDescriptorExtension(ExtensionType value) {
+    public void setTpegIlcPointDescriptorExtension(_ExtensionType value) {
         this.tpegIlcPointDescriptorExtension = value;
     }
 

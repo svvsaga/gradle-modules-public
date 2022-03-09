@@ -4,9 +4,9 @@ package eu.datex2.schema._3.cctvextension;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.Source;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -77,7 +77,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "cctvStillImageService",
     "cctvVideoService",
     "cctvCameraControlData",
-    "cctvCameraMetadataRecordExtension"
+    "_CctvCameraMetadataRecordExtension"
 })
 public class CctvCameraMetadataRecord {
 
@@ -91,7 +91,7 @@ public class CctvCameraMetadataRecord {
     protected MultilingualString cctvCameraSiteNationalDescription;
     protected List<String> cctvCameraOrientationDescription;
     @XmlElement(required = true)
-    protected CctvCameraTypeEnum cctvCameraType;
+    protected _CctvCameraTypeEnum cctvCameraType;
     protected Float cctvCameraHeightAboveRoadway;
     protected Boolean cctvFixedCamera;
     protected Boolean cctvStaticCamera;
@@ -106,7 +106,7 @@ public class CctvCameraMetadataRecord {
     protected List<CctvVideoService> cctvVideoService;
     protected CctvCameraControlData cctvCameraControlData;
     @XmlElement(name = "_cctvCameraMetadataRecordExtension")
-    protected ExtensionType cctvCameraMetadataRecordExtension;
+    protected _ExtensionType _CctvCameraMetadataRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -266,10 +266,10 @@ public class CctvCameraMetadataRecord {
      * 
      * @return
      *     possible object is
-     *     {@link CctvCameraTypeEnum }
+     *     {@link _CctvCameraTypeEnum }
      *     
      */
-    public CctvCameraTypeEnum getCctvCameraType() {
+    public _CctvCameraTypeEnum getCctvCameraType() {
         return cctvCameraType;
     }
 
@@ -278,10 +278,10 @@ public class CctvCameraMetadataRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvCameraTypeEnum }
+     *     {@link _CctvCameraTypeEnum }
      *     
      */
-    public void setCctvCameraType(CctvCameraTypeEnum value) {
+    public void setCctvCameraType(_CctvCameraTypeEnum value) {
         this.cctvCameraType = value;
     }
 
@@ -599,27 +599,27 @@ public class CctvCameraMetadataRecord {
     }
 
     /**
-     * Gets the value of the cctvCameraMetadataRecordExtension property.
+     * Gets the value of the _CctvCameraMetadataRecordExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraMetadataRecordExtension() {
-        return cctvCameraMetadataRecordExtension;
+    public _ExtensionType get_CctvCameraMetadataRecordExtension() {
+        return _CctvCameraMetadataRecordExtension;
     }
 
     /**
-     * Sets the value of the cctvCameraMetadataRecordExtension property.
+     * Sets the value of the _CctvCameraMetadataRecordExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraMetadataRecordExtension(ExtensionType value) {
-        this.cctvCameraMetadataRecordExtension = value;
+    public void set_CctvCameraMetadataRecordExtension(_ExtensionType value) {
+        this._CctvCameraMetadataRecordExtension = value;
     }
 
     /**

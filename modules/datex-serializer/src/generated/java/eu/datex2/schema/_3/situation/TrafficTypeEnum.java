@@ -1,87 +1,86 @@
 
 package eu.datex2.schema._3.situation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TrafficTypeEnum complex type.
+ * <p>Java class for TrafficTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TrafficTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/situation&gt;TrafficTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TrafficTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="accessOnlyTraffic"/&gt;
+ *     &lt;enumeration value="destinedForAirport"/&gt;
+ *     &lt;enumeration value="destinedForAirportArrivals"/&gt;
+ *     &lt;enumeration value="destinedForAirportDepartures"/&gt;
+ *     &lt;enumeration value="destinedForFerryService"/&gt;
+ *     &lt;enumeration value="destinedForRailService"/&gt;
+ *     &lt;enumeration value="holidayTraffic"/&gt;
+ *     &lt;enumeration value="localTraffic"/&gt;
+ *     &lt;enumeration value="longDistanceTraffic"/&gt;
+ *     &lt;enumeration value="regionalTraffic"/&gt;
+ *     &lt;enumeration value="residentsOnlyTraffic"/&gt;
+ *     &lt;enumeration value="throughTraffic"/&gt;
+ *     &lt;enumeration value="visitorTraffic"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TrafficTypeEnum", propOrder = {
-    "value"
-})
-public class TrafficTypeEnum {
+@XmlType(name = "TrafficTypeEnum")
+@XmlEnum
+public enum TrafficTypeEnum {
 
-    @XmlValue
-    protected TrafficTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("accessOnlyTraffic")
+    ACCESS_ONLY_TRAFFIC("accessOnlyTraffic"),
+    @XmlEnumValue("destinedForAirport")
+    DESTINED_FOR_AIRPORT("destinedForAirport"),
+    @XmlEnumValue("destinedForAirportArrivals")
+    DESTINED_FOR_AIRPORT_ARRIVALS("destinedForAirportArrivals"),
+    @XmlEnumValue("destinedForAirportDepartures")
+    DESTINED_FOR_AIRPORT_DEPARTURES("destinedForAirportDepartures"),
+    @XmlEnumValue("destinedForFerryService")
+    DESTINED_FOR_FERRY_SERVICE("destinedForFerryService"),
+    @XmlEnumValue("destinedForRailService")
+    DESTINED_FOR_RAIL_SERVICE("destinedForRailService"),
+    @XmlEnumValue("holidayTraffic")
+    HOLIDAY_TRAFFIC("holidayTraffic"),
+    @XmlEnumValue("localTraffic")
+    LOCAL_TRAFFIC("localTraffic"),
+    @XmlEnumValue("longDistanceTraffic")
+    LONG_DISTANCE_TRAFFIC("longDistanceTraffic"),
+    @XmlEnumValue("regionalTraffic")
+    REGIONAL_TRAFFIC("regionalTraffic"),
+    @XmlEnumValue("residentsOnlyTraffic")
+    RESIDENTS_ONLY_TRAFFIC("residentsOnlyTraffic"),
+    @XmlEnumValue("throughTraffic")
+    THROUGH_TRAFFIC("throughTraffic"),
+    @XmlEnumValue("visitorTraffic")
+    VISITOR_TRAFFIC("visitorTraffic"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TrafficTypeEnum2 }
-     *     
-     */
-    public TrafficTypeEnum2 getValue() {
+    TrafficTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TrafficTypeEnum2 }
-     *     
-     */
-    public void setValue(TrafficTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TrafficTypeEnum fromValue(String v) {
+        for (TrafficTypeEnum c: TrafficTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

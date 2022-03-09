@@ -3,8 +3,8 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SituationPublication", propOrder = {
     "situation",
-    "situationPublicationExtension"
+    "_SituationPublicationExtension"
 })
 public class SituationPublication
     extends PayloadPublication
@@ -42,7 +42,7 @@ public class SituationPublication
 
     protected List<Situation> situation;
     @XmlElement(name = "_situationPublicationExtension")
-    protected ExtensionType situationPublicationExtension;
+    protected _ExtensionType _SituationPublicationExtension;
 
     /**
      * Gets the value of the situation property.
@@ -74,27 +74,27 @@ public class SituationPublication
     }
 
     /**
-     * Gets the value of the situationPublicationExtension property.
+     * Gets the value of the _SituationPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationPublicationExtension() {
-        return situationPublicationExtension;
+    public _ExtensionType get_SituationPublicationExtension() {
+        return _SituationPublicationExtension;
     }
 
     /**
-     * Sets the value of the situationPublicationExtension property.
+     * Sets the value of the _SituationPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationPublicationExtension(ExtensionType value) {
-        this.situationPublicationExtension = value;
+    public void set_SituationPublicationExtension(_ExtensionType value) {
+        this._SituationPublicationExtension = value;
     }
 
 }

@@ -40,7 +40,7 @@ public class OpenlrPointLocationReference {
     protected OpenlrGeoCoordinate openlrGeoCoordinate;
     protected OpenlrPoiWithAccessPoint openlrPoiWithAccessPoint;
     protected OpenlrPointAlongLine openlrPointAlongLine;
-    protected ExtensionType openlrPointLocationReferenceExtension;
+    protected _ExtensionType openlrPointLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrGeoCoordinate property.
@@ -119,10 +119,10 @@ public class OpenlrPointLocationReference {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPointLocationReferenceExtension() {
+    public _ExtensionType getOpenlrPointLocationReferenceExtension() {
         return openlrPointLocationReferenceExtension;
     }
 
@@ -131,10 +131,10 @@ public class OpenlrPointLocationReference {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPointLocationReferenceExtension(ExtensionType value) {
+    public void setOpenlrPointLocationReferenceExtension(_ExtensionType value) {
         this.openlrPointLocationReferenceExtension = value;
     }
 

@@ -55,7 +55,7 @@ public class TrafficViewRecord {
     protected OperatorAction operatorAction;
     protected ElaboratedData elaboratedData;
     protected List<UrlLink> urlLink;
-    protected ExtensionType trafficViewRecordExtension;
+    protected _ExtensionType trafficViewRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
 
@@ -189,10 +189,10 @@ public class TrafficViewRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficViewRecordExtension() {
+    public _ExtensionType getTrafficViewRecordExtension() {
         return trafficViewRecordExtension;
     }
 
@@ -201,10 +201,10 @@ public class TrafficViewRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficViewRecordExtension(ExtensionType value) {
+    public void setTrafficViewRecordExtension(_ExtensionType value) {
         this.trafficViewRecordExtension = value;
     }
 

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TpegPointDescriptor", propOrder = {
-    "tpegPointDescriptorExtension"
+    "_TpegPointDescriptorExtension"
 })
 @XmlSeeAlso({
     TpegIlcPointDescriptor.class,
@@ -42,30 +42,30 @@ public abstract class TpegPointDescriptor
 {
 
     @XmlElement(name = "_tpegPointDescriptorExtension")
-    protected ExtensionType tpegPointDescriptorExtension;
+    protected _ExtensionType _TpegPointDescriptorExtension;
 
     /**
-     * Gets the value of the tpegPointDescriptorExtension property.
+     * Gets the value of the _TpegPointDescriptorExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegPointDescriptorExtension() {
-        return tpegPointDescriptorExtension;
+    public _ExtensionType get_TpegPointDescriptorExtension() {
+        return _TpegPointDescriptorExtension;
     }
 
     /**
-     * Sets the value of the tpegPointDescriptorExtension property.
+     * Sets the value of the _TpegPointDescriptorExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegPointDescriptorExtension(ExtensionType value) {
-        this.tpegPointDescriptorExtension = value;
+    public void set_TpegPointDescriptorExtension(_ExtensionType value) {
+        this._TpegPointDescriptorExtension = value;
     }
 
 }

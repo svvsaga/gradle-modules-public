@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TimeProfiledPhysicalQuantity", propOrder = {
     "basicData",
-    "timeProfiledPhysicalQuantityExtension"
+    "_TimeProfiledPhysicalQuantityExtension"
 })
 public class TimeProfiledPhysicalQuantity
     extends PhysicalQuantity
@@ -41,7 +41,7 @@ public class TimeProfiledPhysicalQuantity
 
     protected List<BasicData> basicData;
     @XmlElement(name = "_timeProfiledPhysicalQuantityExtension")
-    protected ExtensionType timeProfiledPhysicalQuantityExtension;
+    protected _ExtensionType _TimeProfiledPhysicalQuantityExtension;
 
     /**
      * Gets the value of the basicData property.
@@ -73,27 +73,27 @@ public class TimeProfiledPhysicalQuantity
     }
 
     /**
-     * Gets the value of the timeProfiledPhysicalQuantityExtension property.
+     * Gets the value of the _TimeProfiledPhysicalQuantityExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTimeProfiledPhysicalQuantityExtension() {
-        return timeProfiledPhysicalQuantityExtension;
+    public _ExtensionType get_TimeProfiledPhysicalQuantityExtension() {
+        return _TimeProfiledPhysicalQuantityExtension;
     }
 
     /**
-     * Sets the value of the timeProfiledPhysicalQuantityExtension property.
+     * Sets the value of the _TimeProfiledPhysicalQuantityExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTimeProfiledPhysicalQuantityExtension(ExtensionType value) {
-        this.timeProfiledPhysicalQuantityExtension = value;
+    public void set_TimeProfiledPhysicalQuantityExtension(_ExtensionType value) {
+        this._TimeProfiledPhysicalQuantityExtension = value;
     }
 
 }

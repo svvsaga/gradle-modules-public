@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Destination", propOrder = {
-    "destinationExtension"
+    "_DestinationExtension"
 })
 @XmlSeeAlso({
     AreaDestination.class,
@@ -39,30 +39,30 @@ import jakarta.xml.bind.annotation.XmlType;
 public abstract class Destination {
 
     @XmlElement(name = "_destinationExtension")
-    protected ExtensionType destinationExtension;
+    protected _ExtensionType _DestinationExtension;
 
     /**
-     * Gets the value of the destinationExtension property.
+     * Gets the value of the _DestinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDestinationExtension() {
-        return destinationExtension;
+    public _ExtensionType get_DestinationExtension() {
+        return _DestinationExtension;
     }
 
     /**
-     * Sets the value of the destinationExtension property.
+     * Sets the value of the _DestinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDestinationExtension(ExtensionType value) {
-        this.destinationExtension = value;
+    public void set_DestinationExtension(_ExtensionType value) {
+        this._DestinationExtension = value;
     }
 
 }

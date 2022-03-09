@@ -39,7 +39,7 @@ public class LocationCharacteristicsOverride {
     @XmlSchemaType(name = "string")
     protected LaneEnum measurementLanesOverride;
     protected Boolean reversedFlow;
-    protected ExtensionType locationCharacteristicsOverrideExtension;
+    protected _ExtensionType locationCharacteristicsOverrideExtension;
 
     /**
      * Gets the value of the measurementLanesOverride property.
@@ -94,10 +94,10 @@ public class LocationCharacteristicsOverride {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLocationCharacteristicsOverrideExtension() {
+    public _ExtensionType getLocationCharacteristicsOverrideExtension() {
         return locationCharacteristicsOverrideExtension;
     }
 
@@ -106,10 +106,10 @@ public class LocationCharacteristicsOverride {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLocationCharacteristicsOverrideExtension(ExtensionType value) {
+    public void setLocationCharacteristicsOverrideExtension(_ExtensionType value) {
         this.locationCharacteristicsOverrideExtension = value;
     }
 

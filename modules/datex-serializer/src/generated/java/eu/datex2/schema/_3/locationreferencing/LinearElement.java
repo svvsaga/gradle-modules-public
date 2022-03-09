@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "linearElementReferenceModel",
     "linearElementReferenceModelVersion",
     "linearElementNature",
-    "linearElementExtension"
+    "_LinearElementExtension"
 })
 @XmlSeeAlso({
     LinearElementByCode.class,
@@ -54,9 +54,9 @@ public class LinearElement {
     protected String roadNumber;
     protected String linearElementReferenceModel;
     protected String linearElementReferenceModelVersion;
-    protected LinearElementNatureEnum linearElementNature;
+    protected _LinearElementNatureEnum linearElementNature;
     @XmlElement(name = "_linearElementExtension")
-    protected ExtensionType linearElementExtension;
+    protected _ExtensionType _LinearElementExtension;
 
     /**
      * Gets the value of the roadName property.
@@ -159,10 +159,10 @@ public class LinearElement {
      * 
      * @return
      *     possible object is
-     *     {@link LinearElementNatureEnum }
+     *     {@link _LinearElementNatureEnum }
      *     
      */
-    public LinearElementNatureEnum getLinearElementNature() {
+    public _LinearElementNatureEnum getLinearElementNature() {
         return linearElementNature;
     }
 
@@ -171,35 +171,35 @@ public class LinearElement {
      * 
      * @param value
      *     allowed object is
-     *     {@link LinearElementNatureEnum }
+     *     {@link _LinearElementNatureEnum }
      *     
      */
-    public void setLinearElementNature(LinearElementNatureEnum value) {
+    public void setLinearElementNature(_LinearElementNatureEnum value) {
         this.linearElementNature = value;
     }
 
     /**
-     * Gets the value of the linearElementExtension property.
+     * Gets the value of the _LinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLinearElementExtension() {
-        return linearElementExtension;
+    public _ExtensionType get_LinearElementExtension() {
+        return _LinearElementExtension;
     }
 
     /**
-     * Sets the value of the linearElementExtension property.
+     * Sets the value of the _LinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLinearElementExtension(ExtensionType value) {
-        this.linearElementExtension = value;
+    public void set_LinearElementExtension(_ExtensionType value) {
+        this._LinearElementExtension = value;
     }
 
 }

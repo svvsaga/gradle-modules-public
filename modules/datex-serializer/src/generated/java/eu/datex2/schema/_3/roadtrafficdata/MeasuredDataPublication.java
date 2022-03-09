@@ -3,9 +3,9 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -39,20 +39,20 @@ import jakarta.xml.bind.annotation.XmlType;
     "measurementSiteTableReference",
     "headerInformation",
     "siteMeasurements",
-    "measuredDataPublicationExtension"
+    "_MeasuredDataPublicationExtension"
 })
 public class MeasuredDataPublication
     extends PayloadPublication
 {
 
     @XmlElement(required = true)
-    protected List<MeasurementSiteTableVersionedReference> measurementSiteTableReference;
+    protected List<_MeasurementSiteTableVersionedReference> measurementSiteTableReference;
     @XmlElement(required = true)
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<SiteMeasurements> siteMeasurements;
     @XmlElement(name = "_measuredDataPublicationExtension")
-    protected ExtensionType measuredDataPublicationExtension;
+    protected _ExtensionType _MeasuredDataPublicationExtension;
 
     /**
      * Gets the value of the measurementSiteTableReference property.
@@ -72,13 +72,13 @@ public class MeasuredDataPublication
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MeasurementSiteTableVersionedReference }
+     * {@link _MeasurementSiteTableVersionedReference }
      * 
      * 
      */
-    public List<MeasurementSiteTableVersionedReference> getMeasurementSiteTableReference() {
+    public List<_MeasurementSiteTableVersionedReference> getMeasurementSiteTableReference() {
         if (measurementSiteTableReference == null) {
-            measurementSiteTableReference = new ArrayList<MeasurementSiteTableVersionedReference>();
+            measurementSiteTableReference = new ArrayList<_MeasurementSiteTableVersionedReference>();
         }
         return this.measurementSiteTableReference;
     }
@@ -137,27 +137,27 @@ public class MeasuredDataPublication
     }
 
     /**
-     * Gets the value of the measuredDataPublicationExtension property.
+     * Gets the value of the _MeasuredDataPublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasuredDataPublicationExtension() {
-        return measuredDataPublicationExtension;
+    public _ExtensionType get_MeasuredDataPublicationExtension() {
+        return _MeasuredDataPublicationExtension;
     }
 
     /**
-     * Sets the value of the measuredDataPublicationExtension property.
+     * Sets the value of the _MeasuredDataPublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasuredDataPublicationExtension(ExtensionType value) {
-        this.measuredDataPublicationExtension = value;
+    public void set_MeasuredDataPublicationExtension(_ExtensionType value) {
+        this._MeasuredDataPublicationExtension = value;
     }
 
 }

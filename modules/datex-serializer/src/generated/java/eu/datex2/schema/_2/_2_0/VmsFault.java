@@ -40,7 +40,7 @@ public class VmsFault
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected VmsFaultEnum vmsFault;
-    protected ExtensionType vmsFaultExtension;
+    protected _ExtensionType vmsFaultExtension;
 
     /**
      * Gets the value of the vmsFault property.
@@ -71,10 +71,10 @@ public class VmsFault
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsFaultExtension() {
+    public _ExtensionType getVmsFaultExtension() {
         return vmsFaultExtension;
     }
 
@@ -83,10 +83,10 @@ public class VmsFault
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsFaultExtension(ExtensionType value) {
+    public void setVmsFaultExtension(_ExtensionType value) {
         this.vmsFaultExtension = value;
     }
 

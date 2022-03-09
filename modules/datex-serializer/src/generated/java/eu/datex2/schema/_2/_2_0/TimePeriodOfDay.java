@@ -35,17 +35,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class TimePeriodOfDay {
 
-    protected ExtensionType timePeriodOfDayExtension;
+    protected _ExtensionType timePeriodOfDayExtension;
 
     /**
      * Gets the value of the timePeriodOfDayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTimePeriodOfDayExtension() {
+    public _ExtensionType getTimePeriodOfDayExtension() {
         return timePeriodOfDayExtension;
     }
 
@@ -54,10 +54,10 @@ public abstract class TimePeriodOfDay {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTimePeriodOfDayExtension(ExtensionType value) {
+    public void setTimePeriodOfDayExtension(_ExtensionType value) {
         this.timePeriodOfDayExtension = value;
     }
 

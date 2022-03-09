@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PercentageDistanceAlongLinearElement", propOrder = {
     "percentageDistanceAlong",
-    "percentageDistanceAlongLinearElementExtension"
+    "_PercentageDistanceAlongLinearElementExtension"
 })
 public class PercentageDistanceAlongLinearElement
     extends DistanceAlongLinearElement
@@ -39,7 +39,7 @@ public class PercentageDistanceAlongLinearElement
 
     protected float percentageDistanceAlong;
     @XmlElement(name = "_percentageDistanceAlongLinearElementExtension")
-    protected ExtensionType percentageDistanceAlongLinearElementExtension;
+    protected _ExtensionType _PercentageDistanceAlongLinearElementExtension;
 
     /**
      * Gets the value of the percentageDistanceAlong property.
@@ -58,27 +58,27 @@ public class PercentageDistanceAlongLinearElement
     }
 
     /**
-     * Gets the value of the percentageDistanceAlongLinearElementExtension property.
+     * Gets the value of the _PercentageDistanceAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPercentageDistanceAlongLinearElementExtension() {
-        return percentageDistanceAlongLinearElementExtension;
+    public _ExtensionType get_PercentageDistanceAlongLinearElementExtension() {
+        return _PercentageDistanceAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the percentageDistanceAlongLinearElementExtension property.
+     * Sets the value of the _PercentageDistanceAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPercentageDistanceAlongLinearElementExtension(ExtensionType value) {
-        this.percentageDistanceAlongLinearElementExtension = value;
+    public void set_PercentageDistanceAlongLinearElementExtension(_ExtensionType value) {
+        this._PercentageDistanceAlongLinearElementExtension = value;
     }
 
 }

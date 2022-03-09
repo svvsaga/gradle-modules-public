@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PercentageValue;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TrafficConcentration", propOrder = {
     "density",
     "occupancy",
-    "trafficConcentrationExtension"
+    "_TrafficConcentrationExtension"
 })
 public class TrafficConcentration
     extends TrafficData
@@ -43,7 +43,7 @@ public class TrafficConcentration
     protected TrafficDensityValue density;
     protected PercentageValue occupancy;
     @XmlElement(name = "_trafficConcentrationExtension")
-    protected ExtensionType trafficConcentrationExtension;
+    protected _ExtensionType _TrafficConcentrationExtension;
 
     /**
      * Gets the value of the density property.
@@ -94,27 +94,27 @@ public class TrafficConcentration
     }
 
     /**
-     * Gets the value of the trafficConcentrationExtension property.
+     * Gets the value of the _TrafficConcentrationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficConcentrationExtension() {
-        return trafficConcentrationExtension;
+    public _ExtensionType get_TrafficConcentrationExtension() {
+        return _TrafficConcentrationExtension;
     }
 
     /**
-     * Sets the value of the trafficConcentrationExtension property.
+     * Sets the value of the _TrafficConcentrationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficConcentrationExtension(ExtensionType value) {
-        this.trafficConcentrationExtension = value;
+    public void set_TrafficConcentrationExtension(_ExtensionType value) {
+        this._TrafficConcentrationExtension = value;
     }
 
 }

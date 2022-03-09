@@ -1,87 +1,59 @@
 
 package eu.datex2.schema._3.cctvextension;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _CctvCameraTypeEnum complex type.
+ * <p>Java class for CctvCameraTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_CctvCameraTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/cctvExtension&gt;CctvCameraTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="CctvCameraTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="colourCcd"/&gt;
+ *     &lt;enumeration value="blackAndWhiteCcd"/&gt;
+ *     &lt;enumeration value="colourTube"/&gt;
+ *     &lt;enumeration value="blackAndWhiteTube"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_CctvCameraTypeEnum", propOrder = {
-    "value"
-})
-public class CctvCameraTypeEnum {
+@XmlType(name = "CctvCameraTypeEnum")
+@XmlEnum
+public enum CctvCameraTypeEnum {
 
-    @XmlValue
-    protected CctvCameraTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("colourCcd")
+    COLOUR_CCD("colourCcd"),
+    @XmlEnumValue("blackAndWhiteCcd")
+    BLACK_AND_WHITE_CCD("blackAndWhiteCcd"),
+    @XmlEnumValue("colourTube")
+    COLOUR_TUBE("colourTube"),
+    @XmlEnumValue("blackAndWhiteTube")
+    BLACK_AND_WHITE_TUBE("blackAndWhiteTube"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CctvCameraTypeEnum2 }
-     *     
-     */
-    public CctvCameraTypeEnum2 getValue() {
+    CctvCameraTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CctvCameraTypeEnum2 }
-     *     
-     */
-    public void setValue(CctvCameraTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static CctvCameraTypeEnum fromValue(String v) {
+        for (CctvCameraTypeEnum c: CctvCameraTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
-import eu.datex2.schema._3.common.TrafficTrendTypeEnum;
+import eu.datex2.schema._3.common._ExtensionType;
+import eu.datex2.schema._3.common._TrafficTrendTypeEnum;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,26 +34,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "TrafficStatus", propOrder = {
     "trafficTrendType",
     "trafficStatus",
-    "trafficStatusExtension"
+    "_TrafficStatusExtension"
 })
 public class TrafficStatus
     extends BasicData
 {
 
-    protected TrafficTrendTypeEnum trafficTrendType;
+    protected _TrafficTrendTypeEnum trafficTrendType;
     protected TrafficStatusValue trafficStatus;
     @XmlElement(name = "_trafficStatusExtension")
-    protected ExtensionType trafficStatusExtension;
+    protected _ExtensionType _TrafficStatusExtension;
 
     /**
      * Gets the value of the trafficTrendType property.
      * 
      * @return
      *     possible object is
-     *     {@link TrafficTrendTypeEnum }
+     *     {@link _TrafficTrendTypeEnum }
      *     
      */
-    public TrafficTrendTypeEnum getTrafficTrendType() {
+    public _TrafficTrendTypeEnum getTrafficTrendType() {
         return trafficTrendType;
     }
 
@@ -62,10 +62,10 @@ public class TrafficStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link TrafficTrendTypeEnum }
+     *     {@link _TrafficTrendTypeEnum }
      *     
      */
-    public void setTrafficTrendType(TrafficTrendTypeEnum value) {
+    public void setTrafficTrendType(_TrafficTrendTypeEnum value) {
         this.trafficTrendType = value;
     }
 
@@ -94,27 +94,27 @@ public class TrafficStatus
     }
 
     /**
-     * Gets the value of the trafficStatusExtension property.
+     * Gets the value of the _TrafficStatusExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficStatusExtension() {
-        return trafficStatusExtension;
+    public _ExtensionType get_TrafficStatusExtension() {
+        return _TrafficStatusExtension;
     }
 
     /**
-     * Sets the value of the trafficStatusExtension property.
+     * Sets the value of the _TrafficStatusExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficStatusExtension(ExtensionType value) {
-        this.trafficStatusExtension = value;
+    public void set_TrafficStatusExtension(_ExtensionType value) {
+        this._TrafficStatusExtension = value;
     }
 
 }

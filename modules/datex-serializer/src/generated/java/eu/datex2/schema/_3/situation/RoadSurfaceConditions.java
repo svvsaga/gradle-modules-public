@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoadSurfaceConditions", propOrder = {
-    "roadSurfaceConditionsExtension"
+    "_RoadSurfaceConditionsExtension"
 })
 @XmlSeeAlso({
     NonWeatherRelatedRoadConditions.class,
@@ -41,30 +41,30 @@ public abstract class RoadSurfaceConditions
 {
 
     @XmlElement(name = "_roadSurfaceConditionsExtension")
-    protected ExtensionType roadSurfaceConditionsExtension;
+    protected _ExtensionType _RoadSurfaceConditionsExtension;
 
     /**
-     * Gets the value of the roadSurfaceConditionsExtension property.
+     * Gets the value of the _RoadSurfaceConditionsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadSurfaceConditionsExtension() {
-        return roadSurfaceConditionsExtension;
+    public _ExtensionType get_RoadSurfaceConditionsExtension() {
+        return _RoadSurfaceConditionsExtension;
     }
 
     /**
-     * Sets the value of the roadSurfaceConditionsExtension property.
+     * Sets the value of the _RoadSurfaceConditionsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadSurfaceConditionsExtension(ExtensionType value) {
-        this.roadSurfaceConditionsExtension = value;
+    public void set_RoadSurfaceConditionsExtension(_ExtensionType value) {
+        this._RoadSurfaceConditionsExtension = value;
     }
 
 }

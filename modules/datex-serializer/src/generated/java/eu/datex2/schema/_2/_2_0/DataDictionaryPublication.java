@@ -40,7 +40,7 @@ public class DataDictionaryPublication
 
     @XmlElement(required = true)
     protected List<DataDictionary> dataDictionary;
-    protected ExtensionType dataDictionaryPublicationExtension;
+    protected _ExtensionType dataDictionaryPublicationExtension;
 
     /**
      * Gets the value of the dataDictionary property.
@@ -76,10 +76,10 @@ public class DataDictionaryPublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDataDictionaryPublicationExtension() {
+    public _ExtensionType getDataDictionaryPublicationExtension() {
         return dataDictionaryPublicationExtension;
     }
 
@@ -88,10 +88,10 @@ public class DataDictionaryPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDataDictionaryPublicationExtension(ExtensionType value) {
+    public void setDataDictionaryPublicationExtension(_ExtensionType value) {
         this.dataDictionaryPublicationExtension = value;
     }
 

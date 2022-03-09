@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "pictogram",
     "supplementaryInformationDisplay",
     "image",
-    "pictogramDisplayExtension"
+    "_PictogramDisplayExtension"
 })
 public class PictogramDisplay
     extends DisplayAreaSettings
@@ -54,7 +54,7 @@ public class PictogramDisplay
     protected SupplementaryInformationDisplay supplementaryInformationDisplay;
     protected Image image;
     @XmlElement(name = "_pictogramDisplayExtension")
-    protected ExtensionType pictogramDisplayExtension;
+    protected _ExtensionType _PictogramDisplayExtension;
 
     /**
      * Gets the value of the isPrimaryPictogram property.
@@ -177,27 +177,27 @@ public class PictogramDisplay
     }
 
     /**
-     * Gets the value of the pictogramDisplayExtension property.
+     * Gets the value of the _PictogramDisplayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPictogramDisplayExtension() {
-        return pictogramDisplayExtension;
+    public _ExtensionType get_PictogramDisplayExtension() {
+        return _PictogramDisplayExtension;
     }
 
     /**
-     * Sets the value of the pictogramDisplayExtension property.
+     * Sets the value of the _PictogramDisplayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPictogramDisplayExtension(ExtensionType value) {
-        this.pictogramDisplayExtension = value;
+    public void set_PictogramDisplayExtension(_ExtensionType value) {
+        this._PictogramDisplayExtension = value;
     }
 
 }

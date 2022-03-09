@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,24 +33,24 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AltitudeConfidence", propOrder = {
     "altitudeAccuracyCodedValue",
     "altitudeAccuracyCodedError",
-    "altitudeConfidenceExtension"
+    "_AltitudeConfidenceExtension"
 })
 public class AltitudeConfidence {
 
-    protected AltitudeAccuracyEnum altitudeAccuracyCodedValue;
-    protected PositionConfidenceCodedErrorEnum altitudeAccuracyCodedError;
+    protected _AltitudeAccuracyEnum altitudeAccuracyCodedValue;
+    protected _PositionConfidenceCodedErrorEnum altitudeAccuracyCodedError;
     @XmlElement(name = "_altitudeConfidenceExtension")
-    protected ExtensionType altitudeConfidenceExtension;
+    protected _ExtensionType _AltitudeConfidenceExtension;
 
     /**
      * Gets the value of the altitudeAccuracyCodedValue property.
      * 
      * @return
      *     possible object is
-     *     {@link AltitudeAccuracyEnum }
+     *     {@link _AltitudeAccuracyEnum }
      *     
      */
-    public AltitudeAccuracyEnum getAltitudeAccuracyCodedValue() {
+    public _AltitudeAccuracyEnum getAltitudeAccuracyCodedValue() {
         return altitudeAccuracyCodedValue;
     }
 
@@ -59,10 +59,10 @@ public class AltitudeConfidence {
      * 
      * @param value
      *     allowed object is
-     *     {@link AltitudeAccuracyEnum }
+     *     {@link _AltitudeAccuracyEnum }
      *     
      */
-    public void setAltitudeAccuracyCodedValue(AltitudeAccuracyEnum value) {
+    public void setAltitudeAccuracyCodedValue(_AltitudeAccuracyEnum value) {
         this.altitudeAccuracyCodedValue = value;
     }
 
@@ -71,10 +71,10 @@ public class AltitudeConfidence {
      * 
      * @return
      *     possible object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public PositionConfidenceCodedErrorEnum getAltitudeAccuracyCodedError() {
+    public _PositionConfidenceCodedErrorEnum getAltitudeAccuracyCodedError() {
         return altitudeAccuracyCodedError;
     }
 
@@ -83,35 +83,35 @@ public class AltitudeConfidence {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setAltitudeAccuracyCodedError(PositionConfidenceCodedErrorEnum value) {
+    public void setAltitudeAccuracyCodedError(_PositionConfidenceCodedErrorEnum value) {
         this.altitudeAccuracyCodedError = value;
     }
 
     /**
-     * Gets the value of the altitudeConfidenceExtension property.
+     * Gets the value of the _AltitudeConfidenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAltitudeConfidenceExtension() {
-        return altitudeConfidenceExtension;
+    public _ExtensionType get_AltitudeConfidenceExtension() {
+        return _AltitudeConfidenceExtension;
     }
 
     /**
-     * Sets the value of the altitudeConfidenceExtension property.
+     * Sets the value of the _AltitudeConfidenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAltitudeConfidenceExtension(ExtensionType value) {
-        this.altitudeConfidenceExtension = value;
+    public void set_AltitudeConfidenceExtension(_ExtensionType value) {
+        this._AltitudeConfidenceExtension = value;
     }
 
 }

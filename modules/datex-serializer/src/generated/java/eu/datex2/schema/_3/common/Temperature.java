@@ -36,7 +36,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "dewPointTemperature",
     "maximumTemperature",
     "minimumTemperature",
-    "temperatureExtension"
+    "_TemperatureExtension"
 })
 public class Temperature {
 
@@ -45,7 +45,7 @@ public class Temperature {
     protected TemperatureValue maximumTemperature;
     protected TemperatureValue minimumTemperature;
     @XmlElement(name = "_temperatureExtension")
-    protected ExtensionType temperatureExtension;
+    protected _ExtensionType _TemperatureExtension;
 
     /**
      * Gets the value of the airTemperature property.
@@ -144,27 +144,27 @@ public class Temperature {
     }
 
     /**
-     * Gets the value of the temperatureExtension property.
+     * Gets the value of the _TemperatureExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureExtension() {
-        return temperatureExtension;
+    public _ExtensionType get_TemperatureExtension() {
+        return _TemperatureExtension;
     }
 
     /**
-     * Sets the value of the temperatureExtension property.
+     * Sets the value of the _TemperatureExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureExtension(ExtensionType value) {
-        this.temperatureExtension = value;
+    public void set_TemperatureExtension(_ExtensionType value) {
+        this._TemperatureExtension = value;
     }
 
 }

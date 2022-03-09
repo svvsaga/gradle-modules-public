@@ -3,7 +3,7 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,16 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoadOperatorServiceDisruption", propOrder = {
     "roadOperatorServiceDisruptionType",
-    "roadOperatorServiceDisruptionExtension"
+    "_RoadOperatorServiceDisruptionExtension"
 })
 public class RoadOperatorServiceDisruption
     extends ServiceInformation
 {
 
     @XmlElement(required = true)
-    protected List<RoadOperatorServiceDisruptionTypeEnum> roadOperatorServiceDisruptionType;
+    protected List<_RoadOperatorServiceDisruptionTypeEnum> roadOperatorServiceDisruptionType;
     @XmlElement(name = "_roadOperatorServiceDisruptionExtension")
-    protected ExtensionType roadOperatorServiceDisruptionExtension;
+    protected _ExtensionType _RoadOperatorServiceDisruptionExtension;
 
     /**
      * Gets the value of the roadOperatorServiceDisruptionType property.
@@ -62,39 +62,39 @@ public class RoadOperatorServiceDisruption
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link RoadOperatorServiceDisruptionTypeEnum }
+     * {@link _RoadOperatorServiceDisruptionTypeEnum }
      * 
      * 
      */
-    public List<RoadOperatorServiceDisruptionTypeEnum> getRoadOperatorServiceDisruptionType() {
+    public List<_RoadOperatorServiceDisruptionTypeEnum> getRoadOperatorServiceDisruptionType() {
         if (roadOperatorServiceDisruptionType == null) {
-            roadOperatorServiceDisruptionType = new ArrayList<RoadOperatorServiceDisruptionTypeEnum>();
+            roadOperatorServiceDisruptionType = new ArrayList<_RoadOperatorServiceDisruptionTypeEnum>();
         }
         return this.roadOperatorServiceDisruptionType;
     }
 
     /**
-     * Gets the value of the roadOperatorServiceDisruptionExtension property.
+     * Gets the value of the _RoadOperatorServiceDisruptionExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadOperatorServiceDisruptionExtension() {
-        return roadOperatorServiceDisruptionExtension;
+    public _ExtensionType get_RoadOperatorServiceDisruptionExtension() {
+        return _RoadOperatorServiceDisruptionExtension;
     }
 
     /**
-     * Sets the value of the roadOperatorServiceDisruptionExtension property.
+     * Sets the value of the _RoadOperatorServiceDisruptionExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadOperatorServiceDisruptionExtension(ExtensionType value) {
-        this.roadOperatorServiceDisruptionExtension = value;
+    public void set_RoadOperatorServiceDisruptionExtension(_ExtensionType value) {
+        this._RoadOperatorServiceDisruptionExtension = value;
     }
 
 }

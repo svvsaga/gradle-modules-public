@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCLocationTableNumber",
     "alertCLocationTableVersion",
     "areaLocation",
-    "alertCAreaExtension"
+    "_AlertCAreaExtension"
 })
 public class AlertCArea {
 
@@ -50,7 +50,7 @@ public class AlertCArea {
     @XmlElement(required = true)
     protected AlertCLocation areaLocation;
     @XmlElement(name = "_alertCAreaExtension")
-    protected ExtensionType alertCAreaExtension;
+    protected _ExtensionType _AlertCAreaExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -149,27 +149,27 @@ public class AlertCArea {
     }
 
     /**
-     * Gets the value of the alertCAreaExtension property.
+     * Gets the value of the _AlertCAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCAreaExtension() {
-        return alertCAreaExtension;
+    public _ExtensionType get_AlertCAreaExtension() {
+        return _AlertCAreaExtension;
     }
 
     /**
-     * Sets the value of the alertCAreaExtension property.
+     * Sets the value of the _AlertCAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCAreaExtension(ExtensionType value) {
-        this.alertCAreaExtension = value;
+    public void set_AlertCAreaExtension(_ExtensionType value) {
+        this._AlertCAreaExtension = value;
     }
 
 }

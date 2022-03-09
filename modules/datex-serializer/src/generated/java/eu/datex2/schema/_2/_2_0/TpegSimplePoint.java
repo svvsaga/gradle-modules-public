@@ -44,7 +44,7 @@ public class TpegSimplePoint
     protected TpegLoc01SimplePointLocationSubtypeEnum tpegSimplePointLocationType;
     @XmlElement(required = true)
     protected TpegPoint point;
-    protected ExtensionType tpegSimplePointExtension;
+    protected _ExtensionType tpegSimplePointExtension;
 
     /**
      * Gets the value of the tpegSimplePointLocationType property.
@@ -99,10 +99,10 @@ public class TpegSimplePoint
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegSimplePointExtension() {
+    public _ExtensionType getTpegSimplePointExtension() {
         return tpegSimplePointExtension;
     }
 
@@ -111,10 +111,10 @@ public class TpegSimplePoint
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegSimplePointExtension(ExtensionType value) {
+    public void setTpegSimplePointExtension(_ExtensionType value) {
         this.tpegSimplePointExtension = value;
     }
 

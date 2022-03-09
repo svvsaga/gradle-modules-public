@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,27 +37,27 @@ import jakarta.xml.bind.annotation.XmlType;
     "measurementSiteReference",
     "physicalQuantity",
     "measurementTimeDefault",
-    "siteMeasurementsExtension"
+    "_SiteMeasurementsExtension"
 })
 public class SiteMeasurements {
 
     @XmlElement(required = true)
-    protected MeasurementSiteVersionedReference measurementSiteReference;
-    protected List<SiteMeasurementsIndexPhysicalQuantity> physicalQuantity;
+    protected _MeasurementSiteVersionedReference measurementSiteReference;
+    protected List<_SiteMeasurementsIndexPhysicalQuantity> physicalQuantity;
     @XmlElement(required = true)
     protected MeasurementOrCalculationTime measurementTimeDefault;
     @XmlElement(name = "_siteMeasurementsExtension")
-    protected ExtensionType siteMeasurementsExtension;
+    protected _ExtensionType _SiteMeasurementsExtension;
 
     /**
      * Gets the value of the measurementSiteReference property.
      * 
      * @return
      *     possible object is
-     *     {@link MeasurementSiteVersionedReference }
+     *     {@link _MeasurementSiteVersionedReference }
      *     
      */
-    public MeasurementSiteVersionedReference getMeasurementSiteReference() {
+    public _MeasurementSiteVersionedReference getMeasurementSiteReference() {
         return measurementSiteReference;
     }
 
@@ -66,10 +66,10 @@ public class SiteMeasurements {
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasurementSiteVersionedReference }
+     *     {@link _MeasurementSiteVersionedReference }
      *     
      */
-    public void setMeasurementSiteReference(MeasurementSiteVersionedReference value) {
+    public void setMeasurementSiteReference(_MeasurementSiteVersionedReference value) {
         this.measurementSiteReference = value;
     }
 
@@ -91,13 +91,13 @@ public class SiteMeasurements {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link SiteMeasurementsIndexPhysicalQuantity }
+     * {@link _SiteMeasurementsIndexPhysicalQuantity }
      * 
      * 
      */
-    public List<SiteMeasurementsIndexPhysicalQuantity> getPhysicalQuantity() {
+    public List<_SiteMeasurementsIndexPhysicalQuantity> getPhysicalQuantity() {
         if (physicalQuantity == null) {
-            physicalQuantity = new ArrayList<SiteMeasurementsIndexPhysicalQuantity>();
+            physicalQuantity = new ArrayList<_SiteMeasurementsIndexPhysicalQuantity>();
         }
         return this.physicalQuantity;
     }
@@ -127,27 +127,27 @@ public class SiteMeasurements {
     }
 
     /**
-     * Gets the value of the siteMeasurementsExtension property.
+     * Gets the value of the _SiteMeasurementsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSiteMeasurementsExtension() {
-        return siteMeasurementsExtension;
+    public _ExtensionType get_SiteMeasurementsExtension() {
+        return _SiteMeasurementsExtension;
     }
 
     /**
-     * Sets the value of the siteMeasurementsExtension property.
+     * Sets the value of the _SiteMeasurementsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSiteMeasurementsExtension(ExtensionType value) {
-        this.siteMeasurementsExtension = value;
+    public void set_SiteMeasurementsExtension(_ExtensionType value) {
+        this._SiteMeasurementsExtension = value;
     }
 
 }

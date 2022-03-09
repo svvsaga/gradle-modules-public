@@ -42,7 +42,7 @@ public class AlertCLinearByCode
     protected AlertCDirection alertCDirection;
     @XmlElement(required = true)
     protected AlertCLocation locationCodeForLinearLocation;
-    protected ExtensionType alertCLinearByCodeExtension;
+    protected _ExtensionType alertCLinearByCodeExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -97,10 +97,10 @@ public class AlertCLinearByCode
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLinearByCodeExtension() {
+    public _ExtensionType getAlertCLinearByCodeExtension() {
         return alertCLinearByCodeExtension;
     }
 
@@ -109,10 +109,10 @@ public class AlertCLinearByCode
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLinearByCodeExtension(ExtensionType value) {
+    public void setAlertCLinearByCodeExtension(_ExtensionType value) {
         this.alertCLinearByCodeExtension = value;
     }
 

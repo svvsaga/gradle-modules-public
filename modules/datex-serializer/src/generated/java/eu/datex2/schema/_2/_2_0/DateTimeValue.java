@@ -41,7 +41,7 @@ public class DateTimeValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dateTime;
-    protected ExtensionType dateTimeValueExtension;
+    protected _ExtensionType dateTimeValueExtension;
 
     /**
      * Gets the value of the dateTime property.
@@ -72,10 +72,10 @@ public class DateTimeValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDateTimeValueExtension() {
+    public _ExtensionType getDateTimeValueExtension() {
         return dateTimeValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class DateTimeValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDateTimeValueExtension(ExtensionType value) {
+    public void setDateTimeValueExtension(_ExtensionType value) {
         this.dateTimeValueExtension = value;
     }
 

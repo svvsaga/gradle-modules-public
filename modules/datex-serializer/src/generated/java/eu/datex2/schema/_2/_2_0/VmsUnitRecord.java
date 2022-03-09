@@ -53,8 +53,8 @@ public class VmsUnitRecord {
     protected String vmsUnitIdentifier;
     protected String vmsUnitIPAddress;
     protected String vmsUnitElectronicAddress;
-    protected List<VmsUnitRecordVmsIndexVmsRecord> vmsRecord;
-    protected ExtensionType vmsUnitRecordExtension;
+    protected List<_VmsUnitRecordVmsIndexVmsRecord> vmsRecord;
+    protected _ExtensionType vmsUnitRecordExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -174,13 +174,13 @@ public class VmsUnitRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsUnitRecordVmsIndexVmsRecord }
+     * {@link _VmsUnitRecordVmsIndexVmsRecord }
      * 
      * 
      */
-    public List<VmsUnitRecordVmsIndexVmsRecord> getVmsRecord() {
+    public List<_VmsUnitRecordVmsIndexVmsRecord> getVmsRecord() {
         if (vmsRecord == null) {
-            vmsRecord = new ArrayList<VmsUnitRecordVmsIndexVmsRecord>();
+            vmsRecord = new ArrayList<_VmsUnitRecordVmsIndexVmsRecord>();
         }
         return this.vmsRecord;
     }
@@ -190,10 +190,10 @@ public class VmsUnitRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsUnitRecordExtension() {
+    public _ExtensionType getVmsUnitRecordExtension() {
         return vmsUnitRecordExtension;
     }
 
@@ -202,10 +202,10 @@ public class VmsUnitRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsUnitRecordExtension(ExtensionType value) {
+    public void setVmsUnitRecordExtension(_ExtensionType value) {
         this.vmsUnitRecordExtension = value;
     }
 

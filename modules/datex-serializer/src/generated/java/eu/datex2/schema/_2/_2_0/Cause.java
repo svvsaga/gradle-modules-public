@@ -36,17 +36,17 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public abstract class Cause {
 
-    protected ExtensionType causeExtension;
+    protected _ExtensionType causeExtension;
 
     /**
      * Gets the value of the causeExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCauseExtension() {
+    public _ExtensionType getCauseExtension() {
         return causeExtension;
     }
 
@@ -55,10 +55,10 @@ public abstract class Cause {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCauseExtension(ExtensionType value) {
+    public void setCauseExtension(_ExtensionType value) {
         this.causeExtension = value;
     }
 

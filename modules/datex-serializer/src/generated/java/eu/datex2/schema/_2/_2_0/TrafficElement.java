@@ -42,17 +42,17 @@ public abstract class TrafficElement
     extends SituationRecord
 {
 
-    protected ExtensionType trafficElementExtension;
+    protected _ExtensionType trafficElementExtension;
 
     /**
      * Gets the value of the trafficElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficElementExtension() {
+    public _ExtensionType getTrafficElementExtension() {
         return trafficElementExtension;
     }
 
@@ -61,10 +61,10 @@ public abstract class TrafficElement
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficElementExtension(ExtensionType value) {
+    public void setTrafficElementExtension(_ExtensionType value) {
         this.trafficElementExtension = value;
     }
 

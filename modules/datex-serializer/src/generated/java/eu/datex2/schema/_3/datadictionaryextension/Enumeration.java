@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.datadictionaryextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "definition",
     "translation",
     "translationDefinition",
-    "enumerationExtension"
+    "_EnumerationExtension"
 })
 public class Enumeration {
 
@@ -53,7 +53,7 @@ public class Enumeration {
     protected MultilingualString translation;
     protected MultilingualString translationDefinition;
     @XmlElement(name = "_enumerationExtension")
-    protected ExtensionType enumerationExtension;
+    protected _ExtensionType _EnumerationExtension;
 
     /**
      * Gets the value of the namespace property.
@@ -176,27 +176,27 @@ public class Enumeration {
     }
 
     /**
-     * Gets the value of the enumerationExtension property.
+     * Gets the value of the _EnumerationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getEnumerationExtension() {
-        return enumerationExtension;
+    public _ExtensionType get_EnumerationExtension() {
+        return _EnumerationExtension;
     }
 
     /**
-     * Sets the value of the enumerationExtension property.
+     * Sets the value of the _EnumerationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setEnumerationExtension(ExtensionType value) {
-        this.enumerationExtension = value;
+    public void set_EnumerationExtension(_ExtensionType value) {
+        this._EnumerationExtension = value;
     }
 
 }

@@ -38,35 +38,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ExchangeReturnEnum }
+     * Create an instance of {@link _ExchangeReturnEnum }
      * 
      */
-    public ExchangeReturnEnum createExchangeReturnEnum() {
-        return new ExchangeReturnEnum();
+    public _ExchangeReturnEnum create_ExchangeReturnEnum() {
+        return new _ExchangeReturnEnum();
     }
 
     /**
-     * Create an instance of {@link ExchangeStatusEnum }
+     * Create an instance of {@link _ExchangeStatusEnum }
      * 
      */
-    public ExchangeStatusEnum createExchangeStatusEnum() {
-        return new ExchangeStatusEnum();
+    public _ExchangeStatusEnum create_ExchangeStatusEnum() {
+        return new _ExchangeStatusEnum();
     }
 
     /**
-     * Create an instance of {@link MessageTypeEnum }
+     * Create an instance of {@link _MessageTypeEnum }
      * 
      */
-    public MessageTypeEnum createMessageTypeEnum() {
-        return new MessageTypeEnum();
+    public _MessageTypeEnum create_MessageTypeEnum() {
+        return new _MessageTypeEnum();
     }
 
     /**
-     * Create an instance of {@link ProtocolTypeEnum }
+     * Create an instance of {@link _ProtocolTypeEnum }
      * 
      */
-    public ProtocolTypeEnum createProtocolTypeEnum() {
-        return new ProtocolTypeEnum();
+    public _ProtocolTypeEnum create_ProtocolTypeEnum() {
+        return new _ProtocolTypeEnum();
     }
 
     /**

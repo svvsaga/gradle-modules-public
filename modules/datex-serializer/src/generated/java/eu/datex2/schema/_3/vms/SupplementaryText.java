@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SupplementaryText", propOrder = {
     "textLine",
-    "supplementaryTextExtension"
+    "_SupplementaryTextExtension"
 })
 public class SupplementaryText
     extends SupplementaryInformationDisplay
@@ -40,7 +40,7 @@ public class SupplementaryText
     @XmlElement(required = true)
     protected TextLine textLine;
     @XmlElement(name = "_supplementaryTextExtension")
-    protected ExtensionType supplementaryTextExtension;
+    protected _ExtensionType _SupplementaryTextExtension;
 
     /**
      * Gets the value of the textLine property.
@@ -67,27 +67,27 @@ public class SupplementaryText
     }
 
     /**
-     * Gets the value of the supplementaryTextExtension property.
+     * Gets the value of the _SupplementaryTextExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSupplementaryTextExtension() {
-        return supplementaryTextExtension;
+    public _ExtensionType get_SupplementaryTextExtension() {
+        return _SupplementaryTextExtension;
     }
 
     /**
-     * Sets the value of the supplementaryTextExtension property.
+     * Sets the value of the _SupplementaryTextExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSupplementaryTextExtension(ExtensionType value) {
-        this.supplementaryTextExtension = value;
+    public void set_SupplementaryTextExtension(_ExtensionType value) {
+        this._SupplementaryTextExtension = value;
     }
 
 }

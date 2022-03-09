@@ -4,9 +4,9 @@ package eu.datex2.schema._3.cctvextension;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.UrlLink;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -55,7 +55,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "videoUrl",
     "orientationImageUrl",
     "thumbnailImageUrl",
-    "cctvVideoServiceExtension"
+    "_CctvVideoServiceExtension"
 })
 public class CctvVideoService {
 
@@ -77,7 +77,7 @@ public class CctvVideoService {
     protected List<UrlLink> orientationImageUrl;
     protected UrlLink thumbnailImageUrl;
     @XmlElement(name = "_cctvVideoServiceExtension")
-    protected ExtensionType cctvVideoServiceExtension;
+    protected _ExtensionType _CctvVideoServiceExtension;
 
     /**
      * Gets the value of the cctvVideoServiceLevel property.
@@ -325,27 +325,27 @@ public class CctvVideoService {
     }
 
     /**
-     * Gets the value of the cctvVideoServiceExtension property.
+     * Gets the value of the _CctvVideoServiceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvVideoServiceExtension() {
-        return cctvVideoServiceExtension;
+    public _ExtensionType get_CctvVideoServiceExtension() {
+        return _CctvVideoServiceExtension;
     }
 
     /**
-     * Sets the value of the cctvVideoServiceExtension property.
+     * Sets the value of the _CctvVideoServiceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvVideoServiceExtension(ExtensionType value) {
-        this.cctvVideoServiceExtension = value;
+    public void set_CctvVideoServiceExtension(_ExtensionType value) {
+        this._CctvVideoServiceExtension = value;
     }
 
 }

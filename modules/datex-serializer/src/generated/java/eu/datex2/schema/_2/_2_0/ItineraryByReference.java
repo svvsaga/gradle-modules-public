@@ -37,18 +37,18 @@ public class ItineraryByReference
 {
 
     @XmlElement(required = true)
-    protected PredefinedItineraryVersionedReference predefinedItineraryReference;
-    protected ExtensionType itineraryByReferenceExtension;
+    protected _PredefinedItineraryVersionedReference predefinedItineraryReference;
+    protected _ExtensionType itineraryByReferenceExtension;
 
     /**
      * Gets the value of the predefinedItineraryReference property.
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedItineraryVersionedReference }
+     *     {@link _PredefinedItineraryVersionedReference }
      *     
      */
-    public PredefinedItineraryVersionedReference getPredefinedItineraryReference() {
+    public _PredefinedItineraryVersionedReference getPredefinedItineraryReference() {
         return predefinedItineraryReference;
     }
 
@@ -57,10 +57,10 @@ public class ItineraryByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedItineraryVersionedReference }
+     *     {@link _PredefinedItineraryVersionedReference }
      *     
      */
-    public void setPredefinedItineraryReference(PredefinedItineraryVersionedReference value) {
+    public void setPredefinedItineraryReference(_PredefinedItineraryVersionedReference value) {
         this.predefinedItineraryReference = value;
     }
 
@@ -69,10 +69,10 @@ public class ItineraryByReference
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getItineraryByReferenceExtension() {
+    public _ExtensionType getItineraryByReferenceExtension() {
         return itineraryByReferenceExtension;
     }
 
@@ -81,10 +81,10 @@ public class ItineraryByReference
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setItineraryByReferenceExtension(ExtensionType value) {
+    public void setItineraryByReferenceExtension(_ExtensionType value) {
         this.itineraryByReferenceExtension = value;
     }
 

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,31 +43,31 @@ import jakarta.xml.bind.annotation.XmlType;
     "additionalDescription",
     "pictogramFlashing",
     "pictogramInformationType",
-    "supplementaryPictogramExtension"
+    "_SupplementaryPictogramExtension"
 })
 public class SupplementaryPictogram
     extends SupplementaryInformationDisplay
 {
 
-    protected SupplementalPictogramEnum pictogramDescription;
+    protected _SupplementalPictogramEnum pictogramDescription;
     protected String pictogramCode;
     @XmlSchemaType(name = "anyURI")
     protected String pictogramUrl;
     protected MultilingualString additionalDescription;
     protected Boolean pictogramFlashing;
-    protected InformationTypeEnum pictogramInformationType;
+    protected _InformationTypeEnum pictogramInformationType;
     @XmlElement(name = "_supplementaryPictogramExtension")
-    protected ExtensionType supplementaryPictogramExtension;
+    protected _ExtensionType _SupplementaryPictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
      * 
      * @return
      *     possible object is
-     *     {@link SupplementalPictogramEnum }
+     *     {@link _SupplementalPictogramEnum }
      *     
      */
-    public SupplementalPictogramEnum getPictogramDescription() {
+    public _SupplementalPictogramEnum getPictogramDescription() {
         return pictogramDescription;
     }
 
@@ -76,10 +76,10 @@ public class SupplementaryPictogram
      * 
      * @param value
      *     allowed object is
-     *     {@link SupplementalPictogramEnum }
+     *     {@link _SupplementalPictogramEnum }
      *     
      */
-    public void setPictogramDescription(SupplementalPictogramEnum value) {
+    public void setPictogramDescription(_SupplementalPictogramEnum value) {
         this.pictogramDescription = value;
     }
 
@@ -184,10 +184,10 @@ public class SupplementaryPictogram
      * 
      * @return
      *     possible object is
-     *     {@link InformationTypeEnum }
+     *     {@link _InformationTypeEnum }
      *     
      */
-    public InformationTypeEnum getPictogramInformationType() {
+    public _InformationTypeEnum getPictogramInformationType() {
         return pictogramInformationType;
     }
 
@@ -196,35 +196,35 @@ public class SupplementaryPictogram
      * 
      * @param value
      *     allowed object is
-     *     {@link InformationTypeEnum }
+     *     {@link _InformationTypeEnum }
      *     
      */
-    public void setPictogramInformationType(InformationTypeEnum value) {
+    public void setPictogramInformationType(_InformationTypeEnum value) {
         this.pictogramInformationType = value;
     }
 
     /**
-     * Gets the value of the supplementaryPictogramExtension property.
+     * Gets the value of the _SupplementaryPictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSupplementaryPictogramExtension() {
-        return supplementaryPictogramExtension;
+    public _ExtensionType get_SupplementaryPictogramExtension() {
+        return _SupplementaryPictogramExtension;
     }
 
     /**
-     * Sets the value of the supplementaryPictogramExtension property.
+     * Sets the value of the _SupplementaryPictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSupplementaryPictogramExtension(ExtensionType value) {
-        this.supplementaryPictogramExtension = value;
+    public void set_SupplementaryPictogramExtension(_ExtensionType value) {
+        this._SupplementaryPictogramExtension = value;
     }
 
 }

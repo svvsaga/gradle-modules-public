@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _WinterEquipmentManagementTypeEnum complex type.
+ * <p>Java class for WinterEquipmentManagementTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_WinterEquipmentManagementTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;WinterEquipmentManagementTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="WinterEquipmentManagementTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="doNotUseStudTyres"/&gt;
+ *     &lt;enumeration value="useSnowChains"/&gt;
+ *     &lt;enumeration value="useSnowChainsOrTyres"/&gt;
+ *     &lt;enumeration value="useSnowTyres"/&gt;
+ *     &lt;enumeration value="winterEquipmentOnBoardRequired"/&gt;
+ *     &lt;enumeration value="other"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_WinterEquipmentManagementTypeEnum", propOrder = {
-    "value"
-})
-public class WinterEquipmentManagementTypeEnum {
+@XmlType(name = "WinterEquipmentManagementTypeEnum")
+@XmlEnum
+public enum WinterEquipmentManagementTypeEnum {
 
-    @XmlValue
-    protected WinterEquipmentManagementTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("doNotUseStudTyres")
+    DO_NOT_USE_STUD_TYRES("doNotUseStudTyres"),
+    @XmlEnumValue("useSnowChains")
+    USE_SNOW_CHAINS("useSnowChains"),
+    @XmlEnumValue("useSnowChainsOrTyres")
+    USE_SNOW_CHAINS_OR_TYRES("useSnowChainsOrTyres"),
+    @XmlEnumValue("useSnowTyres")
+    USE_SNOW_TYRES("useSnowTyres"),
+    @XmlEnumValue("winterEquipmentOnBoardRequired")
+    WINTER_EQUIPMENT_ON_BOARD_REQUIRED("winterEquipmentOnBoardRequired"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link WinterEquipmentManagementTypeEnum2 }
-     *     
-     */
-    public WinterEquipmentManagementTypeEnum2 getValue() {
+    WinterEquipmentManagementTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link WinterEquipmentManagementTypeEnum2 }
-     *     
-     */
-    public void setValue(WinterEquipmentManagementTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static WinterEquipmentManagementTypeEnum fromValue(String v) {
+        for (WinterEquipmentManagementTypeEnum c: WinterEquipmentManagementTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

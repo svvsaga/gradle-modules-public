@@ -48,7 +48,7 @@ public class AlertCArea {
     protected String alertCLocationTableVersion;
     @XmlElement(required = true)
     protected AlertCLocation areaLocation;
-    protected ExtensionType alertCAreaExtension;
+    protected _ExtensionType alertCAreaExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -151,10 +151,10 @@ public class AlertCArea {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCAreaExtension() {
+    public _ExtensionType getAlertCAreaExtension() {
         return alertCAreaExtension;
     }
 
@@ -163,10 +163,10 @@ public class AlertCArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCAreaExtension(ExtensionType value) {
+    public void setAlertCAreaExtension(_ExtensionType value) {
         this.alertCAreaExtension = value;
     }
 

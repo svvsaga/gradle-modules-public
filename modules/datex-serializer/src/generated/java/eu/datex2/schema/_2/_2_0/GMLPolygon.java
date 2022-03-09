@@ -41,7 +41,7 @@ public class GMLPolygon {
     @XmlElement(required = true)
     protected GMLLinearRing outerBoundaryIs;
     protected List<GMLLinearRing> innerBoundaryIs;
-    protected ExtensionType gmlPolygonExtension;
+    protected _ExtensionType gmlPolygonExtension;
 
     /**
      * Gets the value of the outerBoundaryIs property.
@@ -101,10 +101,10 @@ public class GMLPolygon {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGmlPolygonExtension() {
+    public _ExtensionType getGmlPolygonExtension() {
         return gmlPolygonExtension;
     }
 
@@ -113,10 +113,10 @@ public class GMLPolygon {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGmlPolygonExtension(ExtensionType value) {
+    public void setGmlPolygonExtension(_ExtensionType value) {
         this.gmlPolygonExtension = value;
     }
 

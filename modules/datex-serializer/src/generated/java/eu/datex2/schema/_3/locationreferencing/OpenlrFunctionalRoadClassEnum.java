@@ -1,87 +1,71 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _OpenlrFunctionalRoadClassEnum complex type.
+ * <p>Java class for OpenlrFunctionalRoadClassEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_OpenlrFunctionalRoadClassEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/locationReferencing&gt;OpenlrFunctionalRoadClassEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="OpenlrFunctionalRoadClassEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="frc0"/&gt;
+ *     &lt;enumeration value="frc1"/&gt;
+ *     &lt;enumeration value="frc2"/&gt;
+ *     &lt;enumeration value="frc3"/&gt;
+ *     &lt;enumeration value="frc4"/&gt;
+ *     &lt;enumeration value="frc5"/&gt;
+ *     &lt;enumeration value="frc6"/&gt;
+ *     &lt;enumeration value="frc7"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_OpenlrFunctionalRoadClassEnum", propOrder = {
-    "value"
-})
-public class OpenlrFunctionalRoadClassEnum {
+@XmlType(name = "OpenlrFunctionalRoadClassEnum")
+@XmlEnum
+public enum OpenlrFunctionalRoadClassEnum {
 
-    @XmlValue
-    protected OpenlrFunctionalRoadClassEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("frc0")
+    FRC_0("frc0"),
+    @XmlEnumValue("frc1")
+    FRC_1("frc1"),
+    @XmlEnumValue("frc2")
+    FRC_2("frc2"),
+    @XmlEnumValue("frc3")
+    FRC_3("frc3"),
+    @XmlEnumValue("frc4")
+    FRC_4("frc4"),
+    @XmlEnumValue("frc5")
+    FRC_5("frc5"),
+    @XmlEnumValue("frc6")
+    FRC_6("frc6"),
+    @XmlEnumValue("frc7")
+    FRC_7("frc7"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OpenlrFunctionalRoadClassEnum2 }
-     *     
-     */
-    public OpenlrFunctionalRoadClassEnum2 getValue() {
+    OpenlrFunctionalRoadClassEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OpenlrFunctionalRoadClassEnum2 }
-     *     
-     */
-    public void setValue(OpenlrFunctionalRoadClassEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static OpenlrFunctionalRoadClassEnum fromValue(String v) {
+        for (OpenlrFunctionalRoadClassEnum c: OpenlrFunctionalRoadClassEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

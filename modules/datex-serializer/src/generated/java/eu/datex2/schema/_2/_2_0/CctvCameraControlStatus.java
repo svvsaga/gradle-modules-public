@@ -50,7 +50,7 @@ public class CctvCameraControlStatus {
     protected BigInteger cctvPrivilegeOfCurrentControllingClient;
     protected String cctvUserGroupOfCurrentControllingClient;
     protected String cctvCurrentlySelectedPreset;
-    protected ExtensionType cctvCameraControlStatusExtension;
+    protected _ExtensionType cctvCameraControlStatusExtension;
 
     /**
      * Gets the value of the cctvCameraControlAvailability property.
@@ -177,10 +177,10 @@ public class CctvCameraControlStatus {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvCameraControlStatusExtension() {
+    public _ExtensionType getCctvCameraControlStatusExtension() {
         return cctvCameraControlStatusExtension;
     }
 
@@ -189,10 +189,10 @@ public class CctvCameraControlStatus {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvCameraControlStatusExtension(ExtensionType value) {
+    public void setCctvCameraControlStatusExtension(_ExtensionType value) {
         this.cctvCameraControlStatusExtension = value;
     }
 

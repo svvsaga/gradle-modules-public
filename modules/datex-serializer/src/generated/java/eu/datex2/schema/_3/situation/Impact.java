@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.situation;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,7 +43,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "residualLaneWidth",
     "residualRoadWidth",
     "delays",
-    "impactExtension"
+    "_ImpactExtension"
 })
 public class Impact {
 
@@ -56,7 +56,7 @@ public class Impact {
     protected Float residualRoadWidth;
     protected Delays delays;
     @XmlElement(name = "_impactExtension")
-    protected ExtensionType impactExtension;
+    protected _ExtensionType _ImpactExtension;
 
     /**
      * Gets the value of the capacityRemaining property.
@@ -203,27 +203,27 @@ public class Impact {
     }
 
     /**
-     * Gets the value of the impactExtension property.
+     * Gets the value of the _ImpactExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getImpactExtension() {
-        return impactExtension;
+    public _ExtensionType get_ImpactExtension() {
+        return _ImpactExtension;
     }
 
     /**
-     * Sets the value of the impactExtension property.
+     * Sets the value of the _ImpactExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setImpactExtension(ExtensionType value) {
-        this.impactExtension = value;
+    public void set_ImpactExtension(_ExtensionType value) {
+        this._ImpactExtension = value;
     }
 
 }

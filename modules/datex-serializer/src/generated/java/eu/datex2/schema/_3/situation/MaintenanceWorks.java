@@ -3,7 +3,7 @@ package eu.datex2.schema._3.situation;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,16 +33,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MaintenanceWorks", propOrder = {
     "roadMaintenanceType",
-    "maintenanceWorksExtension"
+    "_MaintenanceWorksExtension"
 })
 public class MaintenanceWorks
     extends Roadworks
 {
 
     @XmlElement(required = true)
-    protected List<RoadMaintenanceTypeEnum> roadMaintenanceType;
+    protected List<_RoadMaintenanceTypeEnum> roadMaintenanceType;
     @XmlElement(name = "_maintenanceWorksExtension")
-    protected ExtensionType maintenanceWorksExtension;
+    protected _ExtensionType _MaintenanceWorksExtension;
 
     /**
      * Gets the value of the roadMaintenanceType property.
@@ -62,39 +62,39 @@ public class MaintenanceWorks
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link RoadMaintenanceTypeEnum }
+     * {@link _RoadMaintenanceTypeEnum }
      * 
      * 
      */
-    public List<RoadMaintenanceTypeEnum> getRoadMaintenanceType() {
+    public List<_RoadMaintenanceTypeEnum> getRoadMaintenanceType() {
         if (roadMaintenanceType == null) {
-            roadMaintenanceType = new ArrayList<RoadMaintenanceTypeEnum>();
+            roadMaintenanceType = new ArrayList<_RoadMaintenanceTypeEnum>();
         }
         return this.roadMaintenanceType;
     }
 
     /**
-     * Gets the value of the maintenanceWorksExtension property.
+     * Gets the value of the _MaintenanceWorksExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMaintenanceWorksExtension() {
-        return maintenanceWorksExtension;
+    public _ExtensionType get_MaintenanceWorksExtension() {
+        return _MaintenanceWorksExtension;
     }
 
     /**
-     * Sets the value of the maintenanceWorksExtension property.
+     * Sets the value of the _MaintenanceWorksExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMaintenanceWorksExtension(ExtensionType value) {
-        this.maintenanceWorksExtension = value;
+    public void set_MaintenanceWorksExtension(_ExtensionType value) {
+        this._MaintenanceWorksExtension = value;
     }
 
 }

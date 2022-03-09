@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "alertCDirection",
     "alertCMethod4PrimaryPointLocation",
     "alertCMethod4SecondaryPointLocation",
-    "alertCMethod4LinearExtension"
+    "_AlertCMethod4LinearExtension"
 })
 public class AlertCMethod4Linear
     extends AlertCLinear
@@ -48,7 +48,7 @@ public class AlertCMethod4Linear
     @XmlElement(required = true)
     protected AlertCMethod4SecondaryPointLocation alertCMethod4SecondaryPointLocation;
     @XmlElement(name = "_alertCMethod4LinearExtension")
-    protected ExtensionType alertCMethod4LinearExtension;
+    protected _ExtensionType _AlertCMethod4LinearExtension;
 
     /**
      * Gets the value of the alertCDirection property.
@@ -123,27 +123,27 @@ public class AlertCMethod4Linear
     }
 
     /**
-     * Gets the value of the alertCMethod4LinearExtension property.
+     * Gets the value of the _AlertCMethod4LinearExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCMethod4LinearExtension() {
-        return alertCMethod4LinearExtension;
+    public _ExtensionType get_AlertCMethod4LinearExtension() {
+        return _AlertCMethod4LinearExtension;
     }
 
     /**
-     * Sets the value of the alertCMethod4LinearExtension property.
+     * Sets the value of the _AlertCMethod4LinearExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCMethod4LinearExtension(ExtensionType value) {
-        this.alertCMethod4LinearExtension = value;
+    public void set_AlertCMethod4LinearExtension(_ExtensionType value) {
+        this._AlertCMethod4LinearExtension = value;
     }
 
 }

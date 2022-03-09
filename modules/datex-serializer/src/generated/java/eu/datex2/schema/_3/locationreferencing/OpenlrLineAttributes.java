@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -36,28 +36,28 @@ import jakarta.xml.bind.annotation.XmlType;
     "openlrFunctionalRoadClass",
     "openlrFormOfWay",
     "openlrBearing",
-    "openlrLineAttributesExtension"
+    "_OpenlrLineAttributesExtension"
 })
 public class OpenlrLineAttributes {
 
     @XmlElement(required = true)
-    protected OpenlrFunctionalRoadClassEnum openlrFunctionalRoadClass;
+    protected _OpenlrFunctionalRoadClassEnum openlrFunctionalRoadClass;
     @XmlElement(required = true)
-    protected OpenlrFormOfWayEnum openlrFormOfWay;
+    protected _OpenlrFormOfWayEnum openlrFormOfWay;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int openlrBearing;
     @XmlElement(name = "_openlrLineAttributesExtension")
-    protected ExtensionType openlrLineAttributesExtension;
+    protected _ExtensionType _OpenlrLineAttributesExtension;
 
     /**
      * Gets the value of the openlrFunctionalRoadClass property.
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrFunctionalRoadClassEnum }
+     *     {@link _OpenlrFunctionalRoadClassEnum }
      *     
      */
-    public OpenlrFunctionalRoadClassEnum getOpenlrFunctionalRoadClass() {
+    public _OpenlrFunctionalRoadClassEnum getOpenlrFunctionalRoadClass() {
         return openlrFunctionalRoadClass;
     }
 
@@ -66,10 +66,10 @@ public class OpenlrLineAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrFunctionalRoadClassEnum }
+     *     {@link _OpenlrFunctionalRoadClassEnum }
      *     
      */
-    public void setOpenlrFunctionalRoadClass(OpenlrFunctionalRoadClassEnum value) {
+    public void setOpenlrFunctionalRoadClass(_OpenlrFunctionalRoadClassEnum value) {
         this.openlrFunctionalRoadClass = value;
     }
 
@@ -78,10 +78,10 @@ public class OpenlrLineAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link OpenlrFormOfWayEnum }
+     *     {@link _OpenlrFormOfWayEnum }
      *     
      */
-    public OpenlrFormOfWayEnum getOpenlrFormOfWay() {
+    public _OpenlrFormOfWayEnum getOpenlrFormOfWay() {
         return openlrFormOfWay;
     }
 
@@ -90,10 +90,10 @@ public class OpenlrLineAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link OpenlrFormOfWayEnum }
+     *     {@link _OpenlrFormOfWayEnum }
      *     
      */
-    public void setOpenlrFormOfWay(OpenlrFormOfWayEnum value) {
+    public void setOpenlrFormOfWay(_OpenlrFormOfWayEnum value) {
         this.openlrFormOfWay = value;
     }
 
@@ -114,27 +114,27 @@ public class OpenlrLineAttributes {
     }
 
     /**
-     * Gets the value of the openlrLineAttributesExtension property.
+     * Gets the value of the _OpenlrLineAttributesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrLineAttributesExtension() {
-        return openlrLineAttributesExtension;
+    public _ExtensionType get_OpenlrLineAttributesExtension() {
+        return _OpenlrLineAttributesExtension;
     }
 
     /**
-     * Sets the value of the openlrLineAttributesExtension property.
+     * Sets the value of the _OpenlrLineAttributesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrLineAttributesExtension(ExtensionType value) {
-        this.openlrLineAttributesExtension = value;
+    public void set_OpenlrLineAttributesExtension(_ExtensionType value) {
+        this._OpenlrLineAttributesExtension = value;
     }
 
 }

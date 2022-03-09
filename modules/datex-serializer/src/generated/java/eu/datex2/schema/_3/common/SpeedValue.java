@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SpeedValue", propOrder = {
     "speed",
-    "speedValueExtension"
+    "_SpeedValueExtension"
 })
 public class SpeedValue
     extends DataValue
@@ -38,7 +38,7 @@ public class SpeedValue
 
     protected float speed;
     @XmlElement(name = "_speedValueExtension")
-    protected ExtensionType speedValueExtension;
+    protected _ExtensionType _SpeedValueExtension;
 
     /**
      * Gets the value of the speed property.
@@ -57,27 +57,27 @@ public class SpeedValue
     }
 
     /**
-     * Gets the value of the speedValueExtension property.
+     * Gets the value of the _SpeedValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedValueExtension() {
-        return speedValueExtension;
+    public _ExtensionType get_SpeedValueExtension() {
+        return _SpeedValueExtension;
     }
 
     /**
-     * Sets the value of the speedValueExtension property.
+     * Sets the value of the _SpeedValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedValueExtension(ExtensionType value) {
-        this.speedValueExtension = value;
+    public void set_SpeedValueExtension(_ExtensionType value) {
+        this._SpeedValueExtension = value;
     }
 
 }

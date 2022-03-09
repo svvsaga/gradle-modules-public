@@ -76,7 +76,7 @@ public class Subscription {
     protected List<Target> target;
     protected FilterReference filterReference;
     protected CatalogueReference catalogueReference;
-    protected ExtensionType subscriptionExtension;
+    protected _ExtensionType subscriptionExtension;
 
     /**
      * Gets the value of the deleteSubscription property.
@@ -328,10 +328,10 @@ public class Subscription {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSubscriptionExtension() {
+    public _ExtensionType getSubscriptionExtension() {
         return subscriptionExtension;
     }
 
@@ -340,10 +340,10 @@ public class Subscription {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSubscriptionExtension(ExtensionType value) {
+    public void setSubscriptionExtension(_ExtensionType value) {
         this.subscriptionExtension = value;
     }
 

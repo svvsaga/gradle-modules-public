@@ -51,7 +51,7 @@ public class TpegLinearLocation {
     protected TpegPoint to;
     @XmlElement(required = true)
     protected TpegPoint from;
-    protected ExtensionType tpegLinearLocationExtension;
+    protected _ExtensionType tpegLinearLocationExtension;
 
     /**
      * Gets the value of the tpegDirection property.
@@ -154,10 +154,10 @@ public class TpegLinearLocation {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegLinearLocationExtension() {
+    public _ExtensionType getTpegLinearLocationExtension() {
         return tpegLinearLocationExtension;
     }
 
@@ -166,10 +166,10 @@ public class TpegLinearLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegLinearLocationExtension(ExtensionType value) {
+    public void setTpegLinearLocationExtension(_ExtensionType value) {
         this.tpegLinearLocationExtension = value;
     }
 

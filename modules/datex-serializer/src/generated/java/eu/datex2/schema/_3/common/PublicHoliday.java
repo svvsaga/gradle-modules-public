@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PublicHoliday", propOrder = {
     "publicHolidayName",
-    "publicHolidayExtension"
+    "_PublicHolidayExtension"
 })
 public class PublicHoliday
     extends SpecialDay
@@ -39,7 +39,7 @@ public class PublicHoliday
     @XmlElement(required = true)
     protected MultilingualString publicHolidayName;
     @XmlElement(name = "_publicHolidayExtension")
-    protected ExtensionType publicHolidayExtension;
+    protected _ExtensionType _PublicHolidayExtension;
 
     /**
      * Gets the value of the publicHolidayName property.
@@ -66,27 +66,27 @@ public class PublicHoliday
     }
 
     /**
-     * Gets the value of the publicHolidayExtension property.
+     * Gets the value of the _PublicHolidayExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPublicHolidayExtension() {
-        return publicHolidayExtension;
+    public _ExtensionType get_PublicHolidayExtension() {
+        return _PublicHolidayExtension;
     }
 
     /**
-     * Sets the value of the publicHolidayExtension property.
+     * Sets the value of the _PublicHolidayExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPublicHolidayExtension(ExtensionType value) {
-        this.publicHolidayExtension = value;
+    public void set_PublicHolidayExtension(_ExtensionType value) {
+        this._PublicHolidayExtension = value;
     }
 
 }

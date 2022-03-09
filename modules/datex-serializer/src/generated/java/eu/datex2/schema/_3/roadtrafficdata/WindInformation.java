@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Wind;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WindInformation", propOrder = {
     "wind",
-    "windInformationExtension"
+    "_WindInformationExtension"
 })
 public class WindInformation
     extends WeatherData
@@ -41,7 +41,7 @@ public class WindInformation
     @XmlElement(required = true)
     protected Wind wind;
     @XmlElement(name = "_windInformationExtension")
-    protected ExtensionType windInformationExtension;
+    protected _ExtensionType _WindInformationExtension;
 
     /**
      * Gets the value of the wind property.
@@ -68,27 +68,27 @@ public class WindInformation
     }
 
     /**
-     * Gets the value of the windInformationExtension property.
+     * Gets the value of the _WindInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWindInformationExtension() {
-        return windInformationExtension;
+    public _ExtensionType get_WindInformationExtension() {
+        return _WindInformationExtension;
     }
 
     /**
-     * Sets the value of the windInformationExtension property.
+     * Sets the value of the _WindInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWindInformationExtension(ExtensionType value) {
-        this.windInformationExtension = value;
+    public void set_WindInformationExtension(_ExtensionType value) {
+        this._WindInformationExtension = value;
     }
 
 }

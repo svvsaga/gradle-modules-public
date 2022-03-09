@@ -1,87 +1,89 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _VehicleStatusEnum complex type.
+ * <p>Java class for VehicleStatusEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_VehicleStatusEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;VehicleStatusEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="VehicleStatusEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="abandoned"/&gt;
+ *     &lt;enumeration value="brokenDown"/&gt;
+ *     &lt;enumeration value="burntOut"/&gt;
+ *     &lt;enumeration value="damaged"/&gt;
+ *     &lt;enumeration value="damagedAndImmobilized"/&gt;
+ *     &lt;enumeration value="inDitch"/&gt;
+ *     &lt;enumeration value="jacknifed"/&gt;
+ *     &lt;enumeration value="offRoad"/&gt;
+ *     &lt;enumeration value="onFire"/&gt;
+ *     &lt;enumeration value="onTopOfCrashBarrier"/&gt;
+ *     &lt;enumeration value="onWheels"/&gt;
+ *     &lt;enumeration value="overturned"/&gt;
+ *     &lt;enumeration value="rollable"/&gt;
+ *     &lt;enumeration value="spunAround"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VehicleStatusEnum", propOrder = {
-    "value"
-})
-public class VehicleStatusEnum {
+@XmlType(name = "VehicleStatusEnum")
+@XmlEnum
+public enum VehicleStatusEnum {
 
-    @XmlValue
-    protected VehicleStatusEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("abandoned")
+    ABANDONED("abandoned"),
+    @XmlEnumValue("brokenDown")
+    BROKEN_DOWN("brokenDown"),
+    @XmlEnumValue("burntOut")
+    BURNT_OUT("burntOut"),
+    @XmlEnumValue("damaged")
+    DAMAGED("damaged"),
+    @XmlEnumValue("damagedAndImmobilized")
+    DAMAGED_AND_IMMOBILIZED("damagedAndImmobilized"),
+    @XmlEnumValue("inDitch")
+    IN_DITCH("inDitch"),
+    @XmlEnumValue("jacknifed")
+    JACKNIFED("jacknifed"),
+    @XmlEnumValue("offRoad")
+    OFF_ROAD("offRoad"),
+    @XmlEnumValue("onFire")
+    ON_FIRE("onFire"),
+    @XmlEnumValue("onTopOfCrashBarrier")
+    ON_TOP_OF_CRASH_BARRIER("onTopOfCrashBarrier"),
+    @XmlEnumValue("onWheels")
+    ON_WHEELS("onWheels"),
+    @XmlEnumValue("overturned")
+    OVERTURNED("overturned"),
+    @XmlEnumValue("rollable")
+    ROLLABLE("rollable"),
+    @XmlEnumValue("spunAround")
+    SPUN_AROUND("spunAround"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link VehicleStatusEnum2 }
-     *     
-     */
-    public VehicleStatusEnum2 getValue() {
+    VehicleStatusEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link VehicleStatusEnum2 }
-     *     
-     */
-    public void setValue(VehicleStatusEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static VehicleStatusEnum fromValue(String v) {
+        for (VehicleStatusEnum c: VehicleStatusEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OpenlrPoiWithAccessPoint", propOrder = {
     "openlrCoordinates",
-    "openlrPoiWithAccessPointExtension"
+    "_OpenlrPoiWithAccessPointExtension"
 })
 public class OpenlrPoiWithAccessPoint
     extends OpenlrBasePointLocation
@@ -40,7 +40,7 @@ public class OpenlrPoiWithAccessPoint
     @XmlElement(required = true)
     protected PointCoordinates openlrCoordinates;
     @XmlElement(name = "_openlrPoiWithAccessPointExtension")
-    protected ExtensionType openlrPoiWithAccessPointExtension;
+    protected _ExtensionType _OpenlrPoiWithAccessPointExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -67,27 +67,27 @@ public class OpenlrPoiWithAccessPoint
     }
 
     /**
-     * Gets the value of the openlrPoiWithAccessPointExtension property.
+     * Gets the value of the _OpenlrPoiWithAccessPointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPoiWithAccessPointExtension() {
-        return openlrPoiWithAccessPointExtension;
+    public _ExtensionType get_OpenlrPoiWithAccessPointExtension() {
+        return _OpenlrPoiWithAccessPointExtension;
     }
 
     /**
-     * Sets the value of the openlrPoiWithAccessPointExtension property.
+     * Sets the value of the _OpenlrPoiWithAccessPointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPoiWithAccessPointExtension(ExtensionType value) {
-        this.openlrPoiWithAccessPointExtension = value;
+    public void set_OpenlrPoiWithAccessPointExtension(_ExtensionType value) {
+        this._OpenlrPoiWithAccessPointExtension = value;
     }
 
 }

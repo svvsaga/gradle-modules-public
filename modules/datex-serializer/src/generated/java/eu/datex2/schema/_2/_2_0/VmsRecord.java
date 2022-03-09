@@ -79,11 +79,11 @@ public class VmsRecord {
     protected Float vmsDisplayWidth;
     protected Float vmsHeightAboveRoadway;
     protected VmsTextDisplayCharacteristics vmsTextDisplayCharacteristics;
-    protected List<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
+    protected List<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> vmsPictogramDisplayCharacteristics;
     protected Location vmsLocation;
     protected VmsManagedLogicalLocation vmsManagedLogicalLocation;
     protected UrlLink backgroundImageUrl;
-    protected ExtensionType vmsRecordExtension;
+    protected _ExtensionType vmsRecordExtension;
 
     /**
      * Gets the value of the vmsDescription property.
@@ -367,13 +367,13 @@ public class VmsRecord {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
+     * {@link _VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics }
      * 
      * 
      */
-    public List<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
+    public List<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics> getVmsPictogramDisplayCharacteristics() {
         if (vmsPictogramDisplayCharacteristics == null) {
-            vmsPictogramDisplayCharacteristics = new ArrayList<VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
+            vmsPictogramDisplayCharacteristics = new ArrayList<_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics>();
         }
         return this.vmsPictogramDisplayCharacteristics;
     }
@@ -455,10 +455,10 @@ public class VmsRecord {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsRecordExtension() {
+    public _ExtensionType getVmsRecordExtension() {
         return vmsRecordExtension;
     }
 
@@ -467,10 +467,10 @@ public class VmsRecord {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsRecordExtension(ExtensionType value) {
+    public void setVmsRecordExtension(_ExtensionType value) {
         this.vmsRecordExtension = value;
     }
 

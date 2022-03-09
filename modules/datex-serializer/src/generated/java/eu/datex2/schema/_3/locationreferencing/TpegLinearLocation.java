@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,30 +37,30 @@ import jakarta.xml.bind.annotation.XmlType;
     "tpegLinearLocationType",
     "to",
     "from",
-    "tpegLinearLocationExtension"
+    "_TpegLinearLocationExtension"
 })
 public class TpegLinearLocation {
 
     @XmlElement(required = true)
-    protected DirectionEnum tpegDirection;
+    protected _DirectionEnum tpegDirection;
     @XmlElement(required = true)
-    protected TpegLoc01LinearLocationSubtypeEnum tpegLinearLocationType;
+    protected _TpegLoc01LinearLocationSubtypeEnum tpegLinearLocationType;
     @XmlElement(required = true)
     protected TpegPoint to;
     @XmlElement(required = true)
     protected TpegPoint from;
     @XmlElement(name = "_tpegLinearLocationExtension")
-    protected ExtensionType tpegLinearLocationExtension;
+    protected _ExtensionType _TpegLinearLocationExtension;
 
     /**
      * Gets the value of the tpegDirection property.
      * 
      * @return
      *     possible object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public DirectionEnum getTpegDirection() {
+    public _DirectionEnum getTpegDirection() {
         return tpegDirection;
     }
 
@@ -69,10 +69,10 @@ public class TpegLinearLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link DirectionEnum }
+     *     {@link _DirectionEnum }
      *     
      */
-    public void setTpegDirection(DirectionEnum value) {
+    public void setTpegDirection(_DirectionEnum value) {
         this.tpegDirection = value;
     }
 
@@ -81,10 +81,10 @@ public class TpegLinearLocation {
      * 
      * @return
      *     possible object is
-     *     {@link TpegLoc01LinearLocationSubtypeEnum }
+     *     {@link _TpegLoc01LinearLocationSubtypeEnum }
      *     
      */
-    public TpegLoc01LinearLocationSubtypeEnum getTpegLinearLocationType() {
+    public _TpegLoc01LinearLocationSubtypeEnum getTpegLinearLocationType() {
         return tpegLinearLocationType;
     }
 
@@ -93,10 +93,10 @@ public class TpegLinearLocation {
      * 
      * @param value
      *     allowed object is
-     *     {@link TpegLoc01LinearLocationSubtypeEnum }
+     *     {@link _TpegLoc01LinearLocationSubtypeEnum }
      *     
      */
-    public void setTpegLinearLocationType(TpegLoc01LinearLocationSubtypeEnum value) {
+    public void setTpegLinearLocationType(_TpegLoc01LinearLocationSubtypeEnum value) {
         this.tpegLinearLocationType = value;
     }
 
@@ -149,27 +149,27 @@ public class TpegLinearLocation {
     }
 
     /**
-     * Gets the value of the tpegLinearLocationExtension property.
+     * Gets the value of the _TpegLinearLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTpegLinearLocationExtension() {
-        return tpegLinearLocationExtension;
+    public _ExtensionType get_TpegLinearLocationExtension() {
+        return _TpegLinearLocationExtension;
     }
 
     /**
-     * Sets the value of the tpegLinearLocationExtension property.
+     * Sets the value of the _TpegLinearLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTpegLinearLocationExtension(ExtensionType value) {
-        this.tpegLinearLocationExtension = value;
+    public void set_TpegLinearLocationExtension(_ExtensionType value) {
+        this._TpegLinearLocationExtension = value;
     }
 
 }

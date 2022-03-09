@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TemperatureValue", propOrder = {
     "temperature",
-    "temperatureValueExtension"
+    "_TemperatureValueExtension"
 })
 public class TemperatureValue
     extends DataValue
@@ -38,7 +38,7 @@ public class TemperatureValue
 
     protected float temperature;
     @XmlElement(name = "_temperatureValueExtension")
-    protected ExtensionType temperatureValueExtension;
+    protected _ExtensionType _TemperatureValueExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -57,27 +57,27 @@ public class TemperatureValue
     }
 
     /**
-     * Gets the value of the temperatureValueExtension property.
+     * Gets the value of the _TemperatureValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureValueExtension() {
-        return temperatureValueExtension;
+    public _ExtensionType get_TemperatureValueExtension() {
+        return _TemperatureValueExtension;
     }
 
     /**
-     * Sets the value of the temperatureValueExtension property.
+     * Sets the value of the _TemperatureValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureValueExtension(ExtensionType value) {
-        this.temperatureValueExtension = value;
+    public void set_TemperatureValueExtension(_ExtensionType value) {
+        this._TemperatureValueExtension = value;
     }
 
 }

@@ -3,8 +3,8 @@ package eu.datex2.schema._3.messagecontainer;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.exchangeinformation.ExchangeInformation;
 import eu.datex2.schema._3.informationmanagement.InformationManagement;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -46,7 +46,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "payload",
     "exchangeInformation",
     "informationManagement",
-    "messageContainerExtension"
+    "_MessageContainerExtension"
 })
 @jakarta.xml.bind.annotation.XmlRootElement public class MessageContainer {
 
@@ -55,7 +55,7 @@ import jakarta.xml.bind.annotation.XmlType;
     protected ExchangeInformation exchangeInformation;
     protected InformationManagement informationManagement;
     @XmlElement(name = "_messageContainerExtension")
-    protected ExtensionType messageContainerExtension;
+    protected _ExtensionType _MessageContainerExtension;
     @XmlAttribute(name = "modelBaseVersion", required = true)
     protected String modelBaseVersion;
     @XmlAttribute(name = "extensionName")
@@ -145,27 +145,27 @@ import jakarta.xml.bind.annotation.XmlType;
     }
 
     /**
-     * Gets the value of the messageContainerExtension property.
+     * Gets the value of the _MessageContainerExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMessageContainerExtension() {
-        return messageContainerExtension;
+    public _ExtensionType get_MessageContainerExtension() {
+        return _MessageContainerExtension;
     }
 
     /**
-     * Sets the value of the messageContainerExtension property.
+     * Sets the value of the _MessageContainerExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMessageContainerExtension(ExtensionType value) {
-        this.messageContainerExtension = value;
+    public void set_MessageContainerExtension(_ExtensionType value) {
+        this._MessageContainerExtension = value;
     }
 
     /**

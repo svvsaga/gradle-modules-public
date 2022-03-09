@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.cctvextension;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,7 +42,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "areaName",
     "policeForceControlArea",
     "roadOperatorControlArea",
-    "cctvGeographicAreaExtension"
+    "_CctvGeographicAreaExtension"
 })
 public class CctvGeographicArea {
 
@@ -53,7 +53,7 @@ public class CctvGeographicArea {
     protected MultilingualString policeForceControlArea;
     protected MultilingualString roadOperatorControlArea;
     @XmlElement(name = "_cctvGeographicAreaExtension")
-    protected ExtensionType cctvGeographicAreaExtension;
+    protected _ExtensionType _CctvGeographicAreaExtension;
 
     /**
      * Gets the value of the country property.
@@ -200,27 +200,27 @@ public class CctvGeographicArea {
     }
 
     /**
-     * Gets the value of the cctvGeographicAreaExtension property.
+     * Gets the value of the _CctvGeographicAreaExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvGeographicAreaExtension() {
-        return cctvGeographicAreaExtension;
+    public _ExtensionType get_CctvGeographicAreaExtension() {
+        return _CctvGeographicAreaExtension;
     }
 
     /**
-     * Sets the value of the cctvGeographicAreaExtension property.
+     * Sets the value of the _CctvGeographicAreaExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvGeographicAreaExtension(ExtensionType value) {
-        this.cctvGeographicAreaExtension = value;
+    public void set_CctvGeographicAreaExtension(_ExtensionType value) {
+        this._CctvGeographicAreaExtension = value;
     }
 
 }

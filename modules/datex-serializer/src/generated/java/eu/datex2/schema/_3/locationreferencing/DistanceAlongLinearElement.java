@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -30,7 +30,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DistanceAlongLinearElement", propOrder = {
-    "distanceAlongLinearElementExtension"
+    "_DistanceAlongLinearElementExtension"
 })
 @XmlSeeAlso({
     DistanceFromLinearElementReferent.class,
@@ -40,30 +40,30 @@ import jakarta.xml.bind.annotation.XmlType;
 public abstract class DistanceAlongLinearElement {
 
     @XmlElement(name = "_distanceAlongLinearElementExtension")
-    protected ExtensionType distanceAlongLinearElementExtension;
+    protected _ExtensionType _DistanceAlongLinearElementExtension;
 
     /**
-     * Gets the value of the distanceAlongLinearElementExtension property.
+     * Gets the value of the _DistanceAlongLinearElementExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDistanceAlongLinearElementExtension() {
-        return distanceAlongLinearElementExtension;
+    public _ExtensionType get_DistanceAlongLinearElementExtension() {
+        return _DistanceAlongLinearElementExtension;
     }
 
     /**
-     * Sets the value of the distanceAlongLinearElementExtension property.
+     * Sets the value of the _DistanceAlongLinearElementExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDistanceAlongLinearElementExtension(ExtensionType value) {
-        this.distanceAlongLinearElementExtension = value;
+    public void set_DistanceAlongLinearElementExtension(_ExtensionType value) {
+        this._DistanceAlongLinearElementExtension = value;
     }
 
 }

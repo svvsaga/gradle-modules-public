@@ -1,87 +1,56 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _TravelTimeTrendTypeEnum complex type.
+ * <p>Java class for TravelTimeTrendTypeEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_TravelTimeTrendTypeEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/roadTrafficData&gt;TravelTimeTrendTypeEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="TravelTimeTrendTypeEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="decreasing"/&gt;
+ *     &lt;enumeration value="increasing"/&gt;
+ *     &lt;enumeration value="stable"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_TravelTimeTrendTypeEnum", propOrder = {
-    "value"
-})
-public class TravelTimeTrendTypeEnum {
+@XmlType(name = "TravelTimeTrendTypeEnum")
+@XmlEnum
+public enum TravelTimeTrendTypeEnum {
 
-    @XmlValue
-    protected TravelTimeTrendTypeEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("decreasing")
+    DECREASING("decreasing"),
+    @XmlEnumValue("increasing")
+    INCREASING("increasing"),
+    @XmlEnumValue("stable")
+    STABLE("stable"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TravelTimeTrendTypeEnum2 }
-     *     
-     */
-    public TravelTimeTrendTypeEnum2 getValue() {
+    TravelTimeTrendTypeEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TravelTimeTrendTypeEnum2 }
-     *     
-     */
-    public void setValue(TravelTimeTrendTypeEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static TravelTimeTrendTypeEnum fromValue(String v) {
+        for (TravelTimeTrendTypeEnum c: TravelTimeTrendTypeEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

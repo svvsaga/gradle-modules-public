@@ -1,0 +1,7 @@
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <globalBindings underscoreBinding="asCharInWord"/>
+  <bindings schemaLocation="DATEXII_3_LocationReferencing.xsd"
+            node="//xs:element[@name='_namedAreaExtension']">
+    <property name="_locNamedAreaExtension"/>
+  </bindings>
+</bindings>

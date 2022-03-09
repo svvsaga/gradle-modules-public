@@ -1,87 +1,65 @@
 
 package eu.datex2.schema._3.common;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _VehicleEquipmentEnum complex type.
+ * <p>Java class for VehicleEquipmentEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_VehicleEquipmentEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/common&gt;VehicleEquipmentEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="VehicleEquipmentEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="notUsingSnowChains"/&gt;
+ *     &lt;enumeration value="notUsingSnowChainsOrTyres"/&gt;
+ *     &lt;enumeration value="snowChainsInUse"/&gt;
+ *     &lt;enumeration value="snowTyresInUse"/&gt;
+ *     &lt;enumeration value="snowChainsOrTyresInUse"/&gt;
+ *     &lt;enumeration value="withoutSnowTyresOrChainsOnBoard"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_VehicleEquipmentEnum", propOrder = {
-    "value"
-})
-public class VehicleEquipmentEnum {
+@XmlType(name = "VehicleEquipmentEnum")
+@XmlEnum
+public enum VehicleEquipmentEnum {
 
-    @XmlValue
-    protected VehicleEquipmentEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("notUsingSnowChains")
+    NOT_USING_SNOW_CHAINS("notUsingSnowChains"),
+    @XmlEnumValue("notUsingSnowChainsOrTyres")
+    NOT_USING_SNOW_CHAINS_OR_TYRES("notUsingSnowChainsOrTyres"),
+    @XmlEnumValue("snowChainsInUse")
+    SNOW_CHAINS_IN_USE("snowChainsInUse"),
+    @XmlEnumValue("snowTyresInUse")
+    SNOW_TYRES_IN_USE("snowTyresInUse"),
+    @XmlEnumValue("snowChainsOrTyresInUse")
+    SNOW_CHAINS_OR_TYRES_IN_USE("snowChainsOrTyresInUse"),
+    @XmlEnumValue("withoutSnowTyresOrChainsOnBoard")
+    WITHOUT_SNOW_TYRES_OR_CHAINS_ON_BOARD("withoutSnowTyresOrChainsOnBoard"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link VehicleEquipmentEnum2 }
-     *     
-     */
-    public VehicleEquipmentEnum2 getValue() {
+    VehicleEquipmentEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link VehicleEquipmentEnum2 }
-     *     
-     */
-    public void setValue(VehicleEquipmentEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static VehicleEquipmentEnum fromValue(String v) {
+        for (VehicleEquipmentEnum c: VehicleEquipmentEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

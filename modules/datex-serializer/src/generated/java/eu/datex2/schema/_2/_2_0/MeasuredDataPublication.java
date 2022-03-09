@@ -43,22 +43,22 @@ public class MeasuredDataPublication
 {
 
     @XmlElement(required = true)
-    protected MeasurementSiteTableVersionedReference measurementSiteTableReference;
+    protected _MeasurementSiteTableVersionedReference measurementSiteTableReference;
     @XmlElement(required = true)
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<SiteMeasurements> siteMeasurements;
-    protected ExtensionType measuredDataPublicationExtension;
+    protected _ExtensionType measuredDataPublicationExtension;
 
     /**
      * Gets the value of the measurementSiteTableReference property.
      * 
      * @return
      *     possible object is
-     *     {@link MeasurementSiteTableVersionedReference }
+     *     {@link _MeasurementSiteTableVersionedReference }
      *     
      */
-    public MeasurementSiteTableVersionedReference getMeasurementSiteTableReference() {
+    public _MeasurementSiteTableVersionedReference getMeasurementSiteTableReference() {
         return measurementSiteTableReference;
     }
 
@@ -67,10 +67,10 @@ public class MeasuredDataPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link MeasurementSiteTableVersionedReference }
+     *     {@link _MeasurementSiteTableVersionedReference }
      *     
      */
-    public void setMeasurementSiteTableReference(MeasurementSiteTableVersionedReference value) {
+    public void setMeasurementSiteTableReference(_MeasurementSiteTableVersionedReference value) {
         this.measurementSiteTableReference = value;
     }
 
@@ -132,10 +132,10 @@ public class MeasuredDataPublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasuredDataPublicationExtension() {
+    public _ExtensionType getMeasuredDataPublicationExtension() {
         return measuredDataPublicationExtension;
     }
 
@@ -144,10 +144,10 @@ public class MeasuredDataPublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasuredDataPublicationExtension(ExtensionType value) {
+    public void setMeasuredDataPublicationExtension(_ExtensionType value) {
         this.measuredDataPublicationExtension = value;
     }
 

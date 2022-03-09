@@ -60,7 +60,7 @@ public class PoorEnvironmentConditions
     protected Temperature temperature;
     protected Wind wind;
     protected Humidity humidity;
-    protected ExtensionType poorEnvironmentConditionsExtension;
+    protected _ExtensionType poorEnvironmentConditionsExtension;
 
     /**
      * Gets the value of the poorEnvironmentType property.
@@ -240,10 +240,10 @@ public class PoorEnvironmentConditions
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPoorEnvironmentConditionsExtension() {
+    public _ExtensionType getPoorEnvironmentConditionsExtension() {
         return poorEnvironmentConditionsExtension;
     }
 
@@ -252,10 +252,10 @@ public class PoorEnvironmentConditions
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPoorEnvironmentConditionsExtension(ExtensionType value) {
+    public void setPoorEnvironmentConditionsExtension(_ExtensionType value) {
         this.poorEnvironmentConditionsExtension = value;
     }
 

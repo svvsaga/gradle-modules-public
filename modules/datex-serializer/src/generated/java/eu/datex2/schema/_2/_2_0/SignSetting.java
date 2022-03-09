@@ -38,7 +38,7 @@ public class SignSetting
 
     @XmlElement(required = true)
     protected VmsSetting vmsSetting;
-    protected ExtensionType signSettingExtension;
+    protected _ExtensionType signSettingExtension;
 
     /**
      * Gets the value of the vmsSetting property.
@@ -69,10 +69,10 @@ public class SignSetting
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSignSettingExtension() {
+    public _ExtensionType getSignSettingExtension() {
         return signSettingExtension;
     }
 
@@ -81,10 +81,10 @@ public class SignSetting
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSignSettingExtension(ExtensionType value) {
+    public void setSignSettingExtension(_ExtensionType value) {
         this.signSettingExtension = value;
     }
 

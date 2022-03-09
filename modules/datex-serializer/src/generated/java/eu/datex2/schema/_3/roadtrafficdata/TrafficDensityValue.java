@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TrafficDensityValue", propOrder = {
     "densityOfVehicles",
-    "trafficDensityValueExtension"
+    "_TrafficDensityValueExtension"
 })
 public class TrafficDensityValue
     extends DataValue
@@ -44,7 +44,7 @@ public class TrafficDensityValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger densityOfVehicles;
     @XmlElement(name = "_trafficDensityValueExtension")
-    protected ExtensionType trafficDensityValueExtension;
+    protected _ExtensionType _TrafficDensityValueExtension;
 
     /**
      * Gets the value of the densityOfVehicles property.
@@ -71,27 +71,27 @@ public class TrafficDensityValue
     }
 
     /**
-     * Gets the value of the trafficDensityValueExtension property.
+     * Gets the value of the _TrafficDensityValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficDensityValueExtension() {
-        return trafficDensityValueExtension;
+    public _ExtensionType get_TrafficDensityValueExtension() {
+        return _TrafficDensityValueExtension;
     }
 
     /**
-     * Sets the value of the trafficDensityValueExtension property.
+     * Sets the value of the _TrafficDensityValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficDensityValueExtension(ExtensionType value) {
-        this.trafficDensityValueExtension = value;
+    public void set_TrafficDensityValueExtension(_ExtensionType value) {
+        this._TrafficDensityValueExtension = value;
     }
 
 }

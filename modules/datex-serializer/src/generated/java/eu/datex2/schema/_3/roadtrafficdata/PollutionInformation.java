@@ -3,8 +3,8 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Pollution;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PollutionInformation", propOrder = {
     "pollution",
-    "pollutionInformationExtension"
+    "_PollutionInformationExtension"
 })
 public class PollutionInformation
     extends WeatherData
@@ -43,7 +43,7 @@ public class PollutionInformation
     @XmlElement(required = true)
     protected List<Pollution> pollution;
     @XmlElement(name = "_pollutionInformationExtension")
-    protected ExtensionType pollutionInformationExtension;
+    protected _ExtensionType _PollutionInformationExtension;
 
     /**
      * Gets the value of the pollution property.
@@ -75,27 +75,27 @@ public class PollutionInformation
     }
 
     /**
-     * Gets the value of the pollutionInformationExtension property.
+     * Gets the value of the _PollutionInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPollutionInformationExtension() {
-        return pollutionInformationExtension;
+    public _ExtensionType get_PollutionInformationExtension() {
+        return _PollutionInformationExtension;
     }
 
     /**
-     * Sets the value of the pollutionInformationExtension property.
+     * Sets the value of the _PollutionInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPollutionInformationExtension(ExtensionType value) {
-        this.pollutionInformationExtension = value;
+    public void set_PollutionInformationExtension(_ExtensionType value) {
+        this._PollutionInformationExtension = value;
     }
 
 }

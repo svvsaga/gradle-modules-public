@@ -42,7 +42,7 @@ public class PointByCoordinates {
     protected BigInteger bearing;
     @XmlElement(required = true)
     protected PointCoordinates pointCoordinates;
-    protected ExtensionType pointByCoordinatesExtension;
+    protected _ExtensionType pointByCoordinatesExtension;
 
     /**
      * Gets the value of the bearing property.
@@ -97,10 +97,10 @@ public class PointByCoordinates {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointByCoordinatesExtension() {
+    public _ExtensionType getPointByCoordinatesExtension() {
         return pointByCoordinatesExtension;
     }
 
@@ -109,10 +109,10 @@ public class PointByCoordinates {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointByCoordinatesExtension(ExtensionType value) {
+    public void setPointByCoordinatesExtension(_ExtensionType value) {
         this.pointByCoordinatesExtension = value;
     }
 

@@ -38,291 +38,291 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CalendarWeekWithinMonthEnum }
+     * Create an instance of {@link _CalendarWeekWithinMonthEnum }
      * 
      */
-    public CalendarWeekWithinMonthEnum createCalendarWeekWithinMonthEnum() {
-        return new CalendarWeekWithinMonthEnum();
+    public _CalendarWeekWithinMonthEnum create_CalendarWeekWithinMonthEnum() {
+        return new _CalendarWeekWithinMonthEnum();
     }
 
     /**
-     * Create an instance of {@link ComparisonOperatorEnum }
+     * Create an instance of {@link _ComparisonOperatorEnum }
      * 
      */
-    public ComparisonOperatorEnum createComparisonOperatorEnum() {
-        return new ComparisonOperatorEnum();
+    public _ComparisonOperatorEnum create_ComparisonOperatorEnum() {
+        return new _ComparisonOperatorEnum();
     }
 
     /**
-     * Create an instance of {@link ComputationMethodEnum }
+     * Create an instance of {@link _ComputationMethodEnum }
      * 
      */
-    public ComputationMethodEnum createComputationMethodEnum() {
-        return new ComputationMethodEnum();
+    public _ComputationMethodEnum create_ComputationMethodEnum() {
+        return new _ComputationMethodEnum();
     }
 
     /**
-     * Create an instance of {@link ConfidentialityValueEnum }
+     * Create an instance of {@link _ConfidentialityValueEnum }
      * 
      */
-    public ConfidentialityValueEnum createConfidentialityValueEnum() {
-        return new ConfidentialityValueEnum();
+    public _ConfidentialityValueEnum create_ConfidentialityValueEnum() {
+        return new _ConfidentialityValueEnum();
     }
 
     /**
-     * Create an instance of {@link DangerousGoodsRegulationsEnum }
+     * Create an instance of {@link _DangerousGoodsRegulationsEnum }
      * 
      */
-    public DangerousGoodsRegulationsEnum createDangerousGoodsRegulationsEnum() {
-        return new DangerousGoodsRegulationsEnum();
+    public _DangerousGoodsRegulationsEnum create_DangerousGoodsRegulationsEnum() {
+        return new _DangerousGoodsRegulationsEnum();
     }
 
     /**
-     * Create an instance of {@link DayEnum }
+     * Create an instance of {@link _DayEnum }
      * 
      */
-    public DayEnum createDayEnum() {
-        return new DayEnum();
+    public _DayEnum create_DayEnum() {
+        return new _DayEnum();
     }
 
     /**
-     * Create an instance of {@link DirectionCompassEnum }
+     * Create an instance of {@link _DirectionCompassEnum }
      * 
      */
-    public DirectionCompassEnum createDirectionCompassEnum() {
-        return new DirectionCompassEnum();
+    public _DirectionCompassEnum create_DirectionCompassEnum() {
+        return new _DirectionCompassEnum();
     }
 
     /**
-     * Create an instance of {@link EmissionClassificationEuroEnum }
+     * Create an instance of {@link _EmissionClassificationEuroEnum }
      * 
      */
-    public EmissionClassificationEuroEnum createEmissionClassificationEuroEnum() {
-        return new EmissionClassificationEuroEnum();
+    public _EmissionClassificationEuroEnum create_EmissionClassificationEuroEnum() {
+        return new _EmissionClassificationEuroEnum();
     }
 
     /**
-     * Create an instance of {@link ExtensionType }
+     * Create an instance of {@link _ExtensionType }
      * 
      */
-    public ExtensionType createExtensionType() {
-        return new ExtensionType();
+    public _ExtensionType create_ExtensionType() {
+        return new _ExtensionType();
     }
 
     /**
-     * Create an instance of {@link FaultSeverityEnum }
+     * Create an instance of {@link _FaultSeverityEnum }
      * 
      */
-    public FaultSeverityEnum createFaultSeverityEnum() {
-        return new FaultSeverityEnum();
+    public _FaultSeverityEnum create_FaultSeverityEnum() {
+        return new _FaultSeverityEnum();
     }
 
     /**
-     * Create an instance of {@link FaultUrgencyEnum }
+     * Create an instance of {@link _FaultUrgencyEnum }
      * 
      */
-    public FaultUrgencyEnum createFaultUrgencyEnum() {
-        return new FaultUrgencyEnum();
+    public _FaultUrgencyEnum create_FaultUrgencyEnum() {
+        return new _FaultUrgencyEnum();
     }
 
     /**
-     * Create an instance of {@link FuelTypeEnum }
+     * Create an instance of {@link _FuelTypeEnum }
      * 
      */
-    public FuelTypeEnum createFuelTypeEnum() {
-        return new FuelTypeEnum();
+    public _FuelTypeEnum create_FuelTypeEnum() {
+        return new _FuelTypeEnum();
     }
 
     /**
-     * Create an instance of {@link GenericPublicationExtensionType }
+     * Create an instance of {@link _GenericPublicationExtensionType }
      * 
      */
-    public GenericPublicationExtensionType createGenericPublicationExtensionType() {
-        return new GenericPublicationExtensionType();
+    public _GenericPublicationExtensionType create_GenericPublicationExtensionType() {
+        return new _GenericPublicationExtensionType();
     }
 
     /**
-     * Create an instance of {@link InformationDeliveryServicesEnum }
+     * Create an instance of {@link _InformationDeliveryServicesEnum }
      * 
      */
-    public InformationDeliveryServicesEnum createInformationDeliveryServicesEnum() {
-        return new InformationDeliveryServicesEnum();
+    public _InformationDeliveryServicesEnum create_InformationDeliveryServicesEnum() {
+        return new _InformationDeliveryServicesEnum();
     }
 
     /**
-     * Create an instance of {@link InformationStatusEnum }
+     * Create an instance of {@link _InformationStatusEnum }
      * 
      */
-    public InformationStatusEnum createInformationStatusEnum() {
-        return new InformationStatusEnum();
+    public _InformationStatusEnum create_InformationStatusEnum() {
+        return new _InformationStatusEnum();
     }
 
     /**
-     * Create an instance of {@link InstanceOfDayEnum }
+     * Create an instance of {@link _InstanceOfDayEnum }
      * 
      */
-    public InstanceOfDayEnum createInstanceOfDayEnum() {
-        return new InstanceOfDayEnum();
+    public _InstanceOfDayEnum create_InstanceOfDayEnum() {
+        return new _InstanceOfDayEnum();
     }
 
     /**
-     * Create an instance of {@link LoadTypeEnum }
+     * Create an instance of {@link _LoadTypeEnum }
      * 
      */
-    public LoadTypeEnum createLoadTypeEnum() {
-        return new LoadTypeEnum();
+    public _LoadTypeEnum create_LoadTypeEnum() {
+        return new _LoadTypeEnum();
     }
 
     /**
-     * Create an instance of {@link LowEmissionLevelEnum }
+     * Create an instance of {@link _LowEmissionLevelEnum }
      * 
      */
-    public LowEmissionLevelEnum createLowEmissionLevelEnum() {
-        return new LowEmissionLevelEnum();
+    public _LowEmissionLevelEnum create_LowEmissionLevelEnum() {
+        return new _LowEmissionLevelEnum();
     }
 
     /**
-     * Create an instance of {@link MonthOfYearEnum }
+     * Create an instance of {@link _MonthOfYearEnum }
      * 
      */
-    public MonthOfYearEnum createMonthOfYearEnum() {
-        return new MonthOfYearEnum();
+    public _MonthOfYearEnum create_MonthOfYearEnum() {
+        return new _MonthOfYearEnum();
     }
 
     /**
-     * Create an instance of {@link PollutantTypeEnum }
+     * Create an instance of {@link _PollutantTypeEnum }
      * 
      */
-    public PollutantTypeEnum createPollutantTypeEnum() {
-        return new PollutantTypeEnum();
+    public _PollutantTypeEnum create_PollutantTypeEnum() {
+        return new _PollutantTypeEnum();
     }
 
     /**
-     * Create an instance of {@link PrecipitationIntensityEnum }
+     * Create an instance of {@link _PrecipitationIntensityEnum }
      * 
      */
-    public PrecipitationIntensityEnum createPrecipitationIntensityEnum() {
-        return new PrecipitationIntensityEnum();
+    public _PrecipitationIntensityEnum create_PrecipitationIntensityEnum() {
+        return new _PrecipitationIntensityEnum();
     }
 
     /**
-     * Create an instance of {@link PrecipitationTypeEnum }
+     * Create an instance of {@link _PrecipitationTypeEnum }
      * 
      */
-    public PrecipitationTypeEnum createPrecipitationTypeEnum() {
-        return new PrecipitationTypeEnum();
+    public _PrecipitationTypeEnum create_PrecipitationTypeEnum() {
+        return new _PrecipitationTypeEnum();
     }
 
     /**
-     * Create an instance of {@link PublicEventTypeEnum }
+     * Create an instance of {@link _PublicEventTypeEnum }
      * 
      */
-    public PublicEventTypeEnum createPublicEventTypeEnum() {
-        return new PublicEventTypeEnum();
+    public _PublicEventTypeEnum create_PublicEventTypeEnum() {
+        return new _PublicEventTypeEnum();
     }
 
     /**
-     * Create an instance of {@link SourceTypeEnum }
+     * Create an instance of {@link _SourceTypeEnum }
      * 
      */
-    public SourceTypeEnum createSourceTypeEnum() {
-        return new SourceTypeEnum();
+    public _SourceTypeEnum create_SourceTypeEnum() {
+        return new _SourceTypeEnum();
     }
 
     /**
-     * Create an instance of {@link SpecialDayTypeEnum }
+     * Create an instance of {@link _SpecialDayTypeEnum }
      * 
      */
-    public SpecialDayTypeEnum createSpecialDayTypeEnum() {
-        return new SpecialDayTypeEnum();
+    public _SpecialDayTypeEnum create_SpecialDayTypeEnum() {
+        return new _SpecialDayTypeEnum();
     }
 
     /**
-     * Create an instance of {@link TimePrecisionEnum }
+     * Create an instance of {@link _TimePrecisionEnum }
      * 
      */
-    public TimePrecisionEnum createTimePrecisionEnum() {
-        return new TimePrecisionEnum();
+    public _TimePrecisionEnum create_TimePrecisionEnum() {
+        return new _TimePrecisionEnum();
     }
 
     /**
-     * Create an instance of {@link TrafficTrendTypeEnum }
+     * Create an instance of {@link _TrafficTrendTypeEnum }
      * 
      */
-    public TrafficTrendTypeEnum createTrafficTrendTypeEnum() {
-        return new TrafficTrendTypeEnum();
+    public _TrafficTrendTypeEnum create_TrafficTrendTypeEnum() {
+        return new _TrafficTrendTypeEnum();
     }
 
     /**
-     * Create an instance of {@link UrlLinkTypeEnum }
+     * Create an instance of {@link _UrlLinkTypeEnum }
      * 
      */
-    public UrlLinkTypeEnum createUrlLinkTypeEnum() {
-        return new UrlLinkTypeEnum();
+    public _UrlLinkTypeEnum create_UrlLinkTypeEnum() {
+        return new _UrlLinkTypeEnum();
     }
 
     /**
-     * Create an instance of {@link ValidityStatusEnum }
+     * Create an instance of {@link _ValidityStatusEnum }
      * 
      */
-    public ValidityStatusEnum createValidityStatusEnum() {
-        return new ValidityStatusEnum();
+    public _ValidityStatusEnum create_ValidityStatusEnum() {
+        return new _ValidityStatusEnum();
     }
 
     /**
-     * Create an instance of {@link VehicleEquipmentEnum }
+     * Create an instance of {@link _VehicleEquipmentEnum }
      * 
      */
-    public VehicleEquipmentEnum createVehicleEquipmentEnum() {
-        return new VehicleEquipmentEnum();
+    public _VehicleEquipmentEnum create_VehicleEquipmentEnum() {
+        return new _VehicleEquipmentEnum();
     }
 
     /**
-     * Create an instance of {@link VehicleStatusEnum }
+     * Create an instance of {@link _VehicleStatusEnum }
      * 
      */
-    public VehicleStatusEnum createVehicleStatusEnum() {
-        return new VehicleStatusEnum();
+    public _VehicleStatusEnum create_VehicleStatusEnum() {
+        return new _VehicleStatusEnum();
     }
 
     /**
-     * Create an instance of {@link VehicleTypeEnum }
+     * Create an instance of {@link _VehicleTypeEnum }
      * 
      */
-    public VehicleTypeEnum createVehicleTypeEnum() {
-        return new VehicleTypeEnum();
+    public _VehicleTypeEnum create_VehicleTypeEnum() {
+        return new _VehicleTypeEnum();
     }
 
     /**
-     * Create an instance of {@link VehicleUsageEnum }
+     * Create an instance of {@link _VehicleUsageEnum }
      * 
      */
-    public VehicleUsageEnum createVehicleUsageEnum() {
-        return new VehicleUsageEnum();
+    public _VehicleUsageEnum create_VehicleUsageEnum() {
+        return new _VehicleUsageEnum();
     }
 
     /**
-     * Create an instance of {@link WeatherRelatedRoadConditionTypeEnum }
+     * Create an instance of {@link _WeatherRelatedRoadConditionTypeEnum }
      * 
      */
-    public WeatherRelatedRoadConditionTypeEnum createWeatherRelatedRoadConditionTypeEnum() {
-        return new WeatherRelatedRoadConditionTypeEnum();
+    public _WeatherRelatedRoadConditionTypeEnum create_WeatherRelatedRoadConditionTypeEnum() {
+        return new _WeatherRelatedRoadConditionTypeEnum();
     }
 
     /**
-     * Create an instance of {@link WeightTypeEnum }
+     * Create an instance of {@link _WeightTypeEnum }
      * 
      */
-    public WeightTypeEnum createWeightTypeEnum() {
-        return new WeightTypeEnum();
+    public _WeightTypeEnum create_WeightTypeEnum() {
+        return new _WeightTypeEnum();
     }
 
     /**
-     * Create an instance of {@link WinterEquipmentManagementTypeEnum }
+     * Create an instance of {@link _WinterEquipmentManagementTypeEnum }
      * 
      */
-    public WinterEquipmentManagementTypeEnum createWinterEquipmentManagementTypeEnum() {
-        return new WinterEquipmentManagementTypeEnum();
+    public _WinterEquipmentManagementTypeEnum create_WinterEquipmentManagementTypeEnum() {
+        return new _WinterEquipmentManagementTypeEnum();
     }
 
     /**

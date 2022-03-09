@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,19 +42,19 @@ import jakarta.xml.bind.annotation.XmlType;
     "semiMinorAxisLengthCodedError",
     "semiMajorAxisOrientation",
     "semiMajorAxisOrientationError",
-    "positionConfidenceEllipseExtension"
+    "_PositionConfidenceEllipseExtension"
 })
 public class PositionConfidenceEllipse {
 
     protected Float semiMajorAxisLength;
-    protected PositionConfidenceCodedErrorEnum semiMajorAxisLengthCodedError;
+    protected _PositionConfidenceCodedErrorEnum semiMajorAxisLengthCodedError;
     protected Float semiMinorAxisLength;
-    protected PositionConfidenceCodedErrorEnum semiMinorAxisLengthCodedError;
+    protected _PositionConfidenceCodedErrorEnum semiMinorAxisLengthCodedError;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected Integer semiMajorAxisOrientation;
     protected Boolean semiMajorAxisOrientationError;
     @XmlElement(name = "_positionConfidenceEllipseExtension")
-    protected ExtensionType positionConfidenceEllipseExtension;
+    protected _ExtensionType _PositionConfidenceEllipseExtension;
 
     /**
      * Gets the value of the semiMajorAxisLength property.
@@ -85,10 +85,10 @@ public class PositionConfidenceEllipse {
      * 
      * @return
      *     possible object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public PositionConfidenceCodedErrorEnum getSemiMajorAxisLengthCodedError() {
+    public _PositionConfidenceCodedErrorEnum getSemiMajorAxisLengthCodedError() {
         return semiMajorAxisLengthCodedError;
     }
 
@@ -97,10 +97,10 @@ public class PositionConfidenceEllipse {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setSemiMajorAxisLengthCodedError(PositionConfidenceCodedErrorEnum value) {
+    public void setSemiMajorAxisLengthCodedError(_PositionConfidenceCodedErrorEnum value) {
         this.semiMajorAxisLengthCodedError = value;
     }
 
@@ -133,10 +133,10 @@ public class PositionConfidenceEllipse {
      * 
      * @return
      *     possible object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public PositionConfidenceCodedErrorEnum getSemiMinorAxisLengthCodedError() {
+    public _PositionConfidenceCodedErrorEnum getSemiMinorAxisLengthCodedError() {
         return semiMinorAxisLengthCodedError;
     }
 
@@ -145,10 +145,10 @@ public class PositionConfidenceEllipse {
      * 
      * @param value
      *     allowed object is
-     *     {@link PositionConfidenceCodedErrorEnum }
+     *     {@link _PositionConfidenceCodedErrorEnum }
      *     
      */
-    public void setSemiMinorAxisLengthCodedError(PositionConfidenceCodedErrorEnum value) {
+    public void setSemiMinorAxisLengthCodedError(_PositionConfidenceCodedErrorEnum value) {
         this.semiMinorAxisLengthCodedError = value;
     }
 
@@ -201,27 +201,27 @@ public class PositionConfidenceEllipse {
     }
 
     /**
-     * Gets the value of the positionConfidenceEllipseExtension property.
+     * Gets the value of the _PositionConfidenceEllipseExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPositionConfidenceEllipseExtension() {
-        return positionConfidenceEllipseExtension;
+    public _ExtensionType get_PositionConfidenceEllipseExtension() {
+        return _PositionConfidenceEllipseExtension;
     }
 
     /**
-     * Sets the value of the positionConfidenceEllipseExtension property.
+     * Sets the value of the _PositionConfidenceEllipseExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPositionConfidenceEllipseExtension(ExtensionType value) {
-        this.positionConfidenceEllipseExtension = value;
+    public void set_PositionConfidenceEllipseExtension(_ExtensionType value) {
+        this._PositionConfidenceEllipseExtension = value;
     }
 
 }

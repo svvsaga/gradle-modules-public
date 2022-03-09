@@ -49,7 +49,7 @@ public abstract class AlertCPoint {
     protected String alertCLocationTableNumber;
     @XmlElement(required = true)
     protected String alertCLocationTableVersion;
-    protected ExtensionType alertCPointExtension;
+    protected _ExtensionType alertCPointExtension;
 
     /**
      * Gets the value of the alertCLocationCountryCode property.
@@ -128,10 +128,10 @@ public abstract class AlertCPoint {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCPointExtension() {
+    public _ExtensionType getAlertCPointExtension() {
         return alertCPointExtension;
     }
 
@@ -140,10 +140,10 @@ public abstract class AlertCPoint {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCPointExtension(ExtensionType value) {
+    public void setAlertCPointExtension(_ExtensionType value) {
         this.alertCPointExtension = value;
     }
 

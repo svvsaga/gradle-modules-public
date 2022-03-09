@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.roadtrafficdata;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Vehicle;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -52,7 +52,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "timeGap",
     "timeHeadway",
     "individualVehicle",
-    "individualVehicleDataValuesExtension"
+    "_IndividualVehicleDataValuesExtension"
 })
 public class IndividualVehicleDataValues
     extends TrafficData
@@ -71,7 +71,7 @@ public class IndividualVehicleDataValues
     protected Float timeHeadway;
     protected Vehicle individualVehicle;
     @XmlElement(name = "_individualVehicleDataValuesExtension")
-    protected ExtensionType individualVehicleDataValuesExtension;
+    protected _ExtensionType _IndividualVehicleDataValuesExtension;
 
     /**
      * Gets the value of the arrivalTime property.
@@ -314,27 +314,27 @@ public class IndividualVehicleDataValues
     }
 
     /**
-     * Gets the value of the individualVehicleDataValuesExtension property.
+     * Gets the value of the _IndividualVehicleDataValuesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getIndividualVehicleDataValuesExtension() {
-        return individualVehicleDataValuesExtension;
+    public _ExtensionType get_IndividualVehicleDataValuesExtension() {
+        return _IndividualVehicleDataValuesExtension;
     }
 
     /**
-     * Sets the value of the individualVehicleDataValuesExtension property.
+     * Sets the value of the _IndividualVehicleDataValuesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setIndividualVehicleDataValuesExtension(ExtensionType value) {
-        this.individualVehicleDataValuesExtension = value;
+    public void set_IndividualVehicleDataValuesExtension(_ExtensionType value) {
+        this._IndividualVehicleDataValuesExtension = value;
     }
 
 }

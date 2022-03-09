@@ -1,9 +1,9 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.UrlLink;
+import eu.datex2.schema._3.common._ExtensionType;
 import eu.datex2.schema._3.locationreferencing.Location;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -62,28 +62,28 @@ import jakarta.xml.bind.annotation.XmlType;
     "vmsLocation",
     "managedLogicalLocation",
     "imageLink",
-    "vmsExtension"
+    "_VmsExtension"
 })
 public class Vms {
 
     protected Boolean lanternsPresent;
     protected MultilingualString description;
     protected MultilingualString owner;
-    protected PhysicalSupportEnum physicalSupport;
-    protected VmsTypeEnum vmsType;
+    protected _PhysicalSupportEnum physicalSupport;
+    protected _VmsTypeEnum vmsType;
     protected String vmsTypeCode;
     protected Boolean dynamicallyConfigurable;
     protected Float displayHeight;
     protected Float displayWidth;
     protected Float heightAboveCarriageway;
-    protected DedicatedUsageEnum dedicatedUsage;
+    protected _DedicatedUsageEnum dedicatedUsage;
     @XmlElement(required = true)
     protected VmsConfiguration vmsConfiguration;
     protected Location vmsLocation;
     protected ManagedLogicalLocation managedLogicalLocation;
     protected UrlLink imageLink;
     @XmlElement(name = "_vmsExtension")
-    protected ExtensionType vmsExtension;
+    protected _ExtensionType _VmsExtension;
 
     /**
      * Gets the value of the lanternsPresent property.
@@ -162,10 +162,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link PhysicalSupportEnum }
+     *     {@link _PhysicalSupportEnum }
      *     
      */
-    public PhysicalSupportEnum getPhysicalSupport() {
+    public _PhysicalSupportEnum getPhysicalSupport() {
         return physicalSupport;
     }
 
@@ -174,10 +174,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link PhysicalSupportEnum }
+     *     {@link _PhysicalSupportEnum }
      *     
      */
-    public void setPhysicalSupport(PhysicalSupportEnum value) {
+    public void setPhysicalSupport(_PhysicalSupportEnum value) {
         this.physicalSupport = value;
     }
 
@@ -186,10 +186,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link VmsTypeEnum }
+     *     {@link _VmsTypeEnum }
      *     
      */
-    public VmsTypeEnum getVmsType() {
+    public _VmsTypeEnum getVmsType() {
         return vmsType;
     }
 
@@ -198,10 +198,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsTypeEnum }
+     *     {@link _VmsTypeEnum }
      *     
      */
-    public void setVmsType(VmsTypeEnum value) {
+    public void setVmsType(_VmsTypeEnum value) {
         this.vmsType = value;
     }
 
@@ -330,10 +330,10 @@ public class Vms {
      * 
      * @return
      *     possible object is
-     *     {@link DedicatedUsageEnum }
+     *     {@link _DedicatedUsageEnum }
      *     
      */
-    public DedicatedUsageEnum getDedicatedUsage() {
+    public _DedicatedUsageEnum getDedicatedUsage() {
         return dedicatedUsage;
     }
 
@@ -342,10 +342,10 @@ public class Vms {
      * 
      * @param value
      *     allowed object is
-     *     {@link DedicatedUsageEnum }
+     *     {@link _DedicatedUsageEnum }
      *     
      */
-    public void setDedicatedUsage(DedicatedUsageEnum value) {
+    public void setDedicatedUsage(_DedicatedUsageEnum value) {
         this.dedicatedUsage = value;
     }
 
@@ -446,27 +446,27 @@ public class Vms {
     }
 
     /**
-     * Gets the value of the vmsExtension property.
+     * Gets the value of the _VmsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsExtension() {
-        return vmsExtension;
+    public _ExtensionType get_VmsExtension() {
+        return _VmsExtension;
     }
 
     /**
-     * Sets the value of the vmsExtension property.
+     * Sets the value of the _VmsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsExtension(ExtensionType value) {
-        this.vmsExtension = value;
+    public void set_VmsExtension(_ExtensionType value) {
+        this._VmsExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,25 +33,25 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "ReferenceSettings", propOrder = {
     "predefinedLocationGroupReference",
     "trafficStatusDefault",
-    "referenceSettingsExtension"
+    "_ReferenceSettingsExtension"
 })
 public class ReferenceSettings {
 
     @XmlElement(required = true)
-    protected PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
-    protected TrafficStatusEnum trafficStatusDefault;
+    protected _PredefinedLocationGroupVersionedReference predefinedLocationGroupReference;
+    protected _TrafficStatusEnum trafficStatusDefault;
     @XmlElement(name = "_referenceSettingsExtension")
-    protected ExtensionType referenceSettingsExtension;
+    protected _ExtensionType _ReferenceSettingsExtension;
 
     /**
      * Gets the value of the predefinedLocationGroupReference property.
      * 
      * @return
      *     possible object is
-     *     {@link PredefinedLocationGroupVersionedReference }
+     *     {@link _PredefinedLocationGroupVersionedReference }
      *     
      */
-    public PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
+    public _PredefinedLocationGroupVersionedReference getPredefinedLocationGroupReference() {
         return predefinedLocationGroupReference;
     }
 
@@ -60,10 +60,10 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link PredefinedLocationGroupVersionedReference }
+     *     {@link _PredefinedLocationGroupVersionedReference }
      *     
      */
-    public void setPredefinedLocationGroupReference(PredefinedLocationGroupVersionedReference value) {
+    public void setPredefinedLocationGroupReference(_PredefinedLocationGroupVersionedReference value) {
         this.predefinedLocationGroupReference = value;
     }
 
@@ -72,10 +72,10 @@ public class ReferenceSettings {
      * 
      * @return
      *     possible object is
-     *     {@link TrafficStatusEnum }
+     *     {@link _TrafficStatusEnum }
      *     
      */
-    public TrafficStatusEnum getTrafficStatusDefault() {
+    public _TrafficStatusEnum getTrafficStatusDefault() {
         return trafficStatusDefault;
     }
 
@@ -84,35 +84,35 @@ public class ReferenceSettings {
      * 
      * @param value
      *     allowed object is
-     *     {@link TrafficStatusEnum }
+     *     {@link _TrafficStatusEnum }
      *     
      */
-    public void setTrafficStatusDefault(TrafficStatusEnum value) {
+    public void setTrafficStatusDefault(_TrafficStatusEnum value) {
         this.trafficStatusDefault = value;
     }
 
     /**
-     * Gets the value of the referenceSettingsExtension property.
+     * Gets the value of the _ReferenceSettingsExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getReferenceSettingsExtension() {
-        return referenceSettingsExtension;
+    public _ExtensionType get_ReferenceSettingsExtension() {
+        return _ReferenceSettingsExtension;
     }
 
     /**
-     * Sets the value of the referenceSettingsExtension property.
+     * Sets the value of the _ReferenceSettingsExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setReferenceSettingsExtension(ExtensionType value) {
-        this.referenceSettingsExtension = value;
+    public void set_ReferenceSettingsExtension(_ExtensionType value) {
+        this._ReferenceSettingsExtension = value;
     }
 
 }

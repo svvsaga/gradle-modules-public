@@ -51,14 +51,14 @@ public class Situation {
 
     @XmlSchemaType(name = "string")
     protected SeverityEnum overallSeverity;
-    protected List<SituationVersionedReference> relatedSituation;
+    protected List<_SituationVersionedReference> relatedSituation;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar situationVersionTime;
     @XmlElement(required = true)
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<SituationRecord> situationRecord;
-    protected ExtensionType situationExtension;
+    protected _ExtensionType situationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -106,13 +106,13 @@ public class Situation {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link SituationVersionedReference }
+     * {@link _SituationVersionedReference }
      * 
      * 
      */
-    public List<SituationVersionedReference> getRelatedSituation() {
+    public List<_SituationVersionedReference> getRelatedSituation() {
         if (relatedSituation == null) {
-            relatedSituation = new ArrayList<SituationVersionedReference>();
+            relatedSituation = new ArrayList<_SituationVersionedReference>();
         }
         return this.relatedSituation;
     }
@@ -199,10 +199,10 @@ public class Situation {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSituationExtension() {
+    public _ExtensionType getSituationExtension() {
         return situationExtension;
     }
 
@@ -211,10 +211,10 @@ public class Situation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSituationExtension(ExtensionType value) {
+    public void setSituationExtension(_ExtensionType value) {
         this.situationExtension = value;
     }
 

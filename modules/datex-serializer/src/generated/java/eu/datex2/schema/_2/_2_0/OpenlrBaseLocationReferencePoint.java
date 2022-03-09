@@ -45,7 +45,7 @@ public abstract class OpenlrBaseLocationReferencePoint {
     protected PointCoordinates openlrCoordinate;
     @XmlElement(required = true)
     protected OpenlrLineAttributes openlrLineAttributes;
-    protected ExtensionType openlrBaseLocationReferencePointExtension;
+    protected _ExtensionType openlrBaseLocationReferencePointExtension;
 
     /**
      * Gets the value of the openlrCoordinate property.
@@ -100,10 +100,10 @@ public abstract class OpenlrBaseLocationReferencePoint {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrBaseLocationReferencePointExtension() {
+    public _ExtensionType getOpenlrBaseLocationReferencePointExtension() {
         return openlrBaseLocationReferencePointExtension;
     }
 
@@ -112,10 +112,10 @@ public abstract class OpenlrBaseLocationReferencePoint {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrBaseLocationReferencePointExtension(ExtensionType value) {
+    public void setOpenlrBaseLocationReferencePointExtension(_ExtensionType value) {
         this.openlrBaseLocationReferencePointExtension = value;
     }
 

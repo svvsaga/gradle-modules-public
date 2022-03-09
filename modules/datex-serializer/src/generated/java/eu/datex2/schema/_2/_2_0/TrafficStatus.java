@@ -41,7 +41,7 @@ public class TrafficStatus
     @XmlSchemaType(name = "string")
     protected TrafficTrendTypeEnum trafficTrendType;
     protected TrafficStatusValue trafficStatus;
-    protected ExtensionType trafficStatusExtension;
+    protected _ExtensionType trafficStatusExtension;
 
     /**
      * Gets the value of the trafficTrendType property.
@@ -96,10 +96,10 @@ public class TrafficStatus
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTrafficStatusExtension() {
+    public _ExtensionType getTrafficStatusExtension() {
         return trafficStatusExtension;
     }
 
@@ -108,10 +108,10 @@ public class TrafficStatus
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTrafficStatusExtension(ExtensionType value) {
+    public void setTrafficStatusExtension(_ExtensionType value) {
         this.trafficStatusExtension = value;
     }
 

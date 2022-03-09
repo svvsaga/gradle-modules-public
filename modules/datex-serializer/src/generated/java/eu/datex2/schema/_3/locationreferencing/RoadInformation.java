@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "roadDestination",
     "roadName",
     "roadNumber",
-    "roadInformationExtension"
+    "_RoadInformationExtension"
 })
 public class RoadInformation {
 
@@ -43,7 +43,7 @@ public class RoadInformation {
     protected String roadName;
     protected String roadNumber;
     @XmlElement(name = "_roadInformationExtension")
-    protected ExtensionType roadInformationExtension;
+    protected _ExtensionType _RoadInformationExtension;
 
     /**
      * Gets the value of the roadDestination property.
@@ -118,27 +118,27 @@ public class RoadInformation {
     }
 
     /**
-     * Gets the value of the roadInformationExtension property.
+     * Gets the value of the _RoadInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getRoadInformationExtension() {
-        return roadInformationExtension;
+    public _ExtensionType get_RoadInformationExtension() {
+        return _RoadInformationExtension;
     }
 
     /**
-     * Sets the value of the roadInformationExtension property.
+     * Sets the value of the _RoadInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setRoadInformationExtension(ExtensionType value) {
-        this.roadInformationExtension = value;
+    public void set_RoadInformationExtension(_ExtensionType value) {
+        this._RoadInformationExtension = value;
     }
 
 }

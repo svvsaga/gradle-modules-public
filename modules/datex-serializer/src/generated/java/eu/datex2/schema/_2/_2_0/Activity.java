@@ -42,7 +42,7 @@ public abstract class Activity
 {
 
     protected Mobility mobilityOfActivity;
-    protected ExtensionType activityExtension;
+    protected _ExtensionType activityExtension;
 
     /**
      * Gets the value of the mobilityOfActivity property.
@@ -73,10 +73,10 @@ public abstract class Activity
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getActivityExtension() {
+    public _ExtensionType getActivityExtension() {
         return activityExtension;
     }
 
@@ -85,10 +85,10 @@ public abstract class Activity
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setActivityExtension(ExtensionType value) {
+    public void setActivityExtension(_ExtensionType value) {
         this.activityExtension = value;
     }
 

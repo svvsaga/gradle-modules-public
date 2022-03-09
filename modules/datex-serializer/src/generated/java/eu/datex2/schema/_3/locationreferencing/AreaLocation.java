@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -43,30 +43,30 @@ import jakarta.xml.bind.annotation.XmlType;
     "namedArea",
     "gmlMultiPolygon",
     "openlrAreaLocationReference",
-    "areaLocationExtension"
+    "_AreaLocationExtension"
 })
 public class AreaLocation
     extends Location
 {
 
-    protected AreaPlacesEnum areasAtWhichApplicable;
+    protected _AreaPlacesEnum areasAtWhichApplicable;
     protected List<AlertCArea> alertCArea;
     protected TpegAreaLocation tpegAreaLocation;
     protected NamedArea namedArea;
     protected GmlMultiPolygon gmlMultiPolygon;
     protected OpenlrAreaLocationReference openlrAreaLocationReference;
     @XmlElement(name = "_areaLocationExtension")
-    protected ExtensionType areaLocationExtension;
+    protected _ExtensionType _AreaLocationExtension;
 
     /**
      * Gets the value of the areasAtWhichApplicable property.
      * 
      * @return
      *     possible object is
-     *     {@link AreaPlacesEnum }
+     *     {@link _AreaPlacesEnum }
      *     
      */
-    public AreaPlacesEnum getAreasAtWhichApplicable() {
+    public _AreaPlacesEnum getAreasAtWhichApplicable() {
         return areasAtWhichApplicable;
     }
 
@@ -75,10 +75,10 @@ public class AreaLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link AreaPlacesEnum }
+     *     {@link _AreaPlacesEnum }
      *     
      */
-    public void setAreasAtWhichApplicable(AreaPlacesEnum value) {
+    public void setAreasAtWhichApplicable(_AreaPlacesEnum value) {
         this.areasAtWhichApplicable = value;
     }
 
@@ -208,27 +208,27 @@ public class AreaLocation
     }
 
     /**
-     * Gets the value of the areaLocationExtension property.
+     * Gets the value of the _AreaLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAreaLocationExtension() {
-        return areaLocationExtension;
+    public _ExtensionType get_AreaLocationExtension() {
+        return _AreaLocationExtension;
     }
 
     /**
-     * Sets the value of the areaLocationExtension property.
+     * Sets the value of the _AreaLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAreaLocationExtension(ExtensionType value) {
-        this.areaLocationExtension = value;
+    public void set_AreaLocationExtension(_ExtensionType value) {
+        this._AreaLocationExtension = value;
     }
 
 }

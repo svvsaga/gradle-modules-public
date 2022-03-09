@@ -36,7 +36,7 @@ public class SpeedValue
 {
 
     protected float speed;
-    protected ExtensionType speedValueExtension;
+    protected _ExtensionType speedValueExtension;
 
     /**
      * Gets the value of the speed property.
@@ -59,10 +59,10 @@ public class SpeedValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedValueExtension() {
+    public _ExtensionType getSpeedValueExtension() {
         return speedValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class SpeedValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedValueExtension(ExtensionType value) {
+    public void setSpeedValueExtension(_ExtensionType value) {
         this.speedValueExtension = value;
     }
 

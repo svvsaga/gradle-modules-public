@@ -38,17 +38,17 @@ import jakarta.xml.bind.annotation.XmlType;
     "sourceName",
     "sourceType",
     "reliable",
-    "sourceExtension"
+    "_SourceExtension"
 })
 public class Source {
 
     protected String sourceCountry;
     protected String sourceIdentification;
     protected MultilingualString sourceName;
-    protected SourceTypeEnum sourceType;
+    protected _SourceTypeEnum sourceType;
     protected Boolean reliable;
     @XmlElement(name = "_sourceExtension")
-    protected ExtensionType sourceExtension;
+    protected _ExtensionType _SourceExtension;
 
     /**
      * Gets the value of the sourceCountry property.
@@ -127,10 +127,10 @@ public class Source {
      * 
      * @return
      *     possible object is
-     *     {@link SourceTypeEnum }
+     *     {@link _SourceTypeEnum }
      *     
      */
-    public SourceTypeEnum getSourceType() {
+    public _SourceTypeEnum getSourceType() {
         return sourceType;
     }
 
@@ -139,10 +139,10 @@ public class Source {
      * 
      * @param value
      *     allowed object is
-     *     {@link SourceTypeEnum }
+     *     {@link _SourceTypeEnum }
      *     
      */
-    public void setSourceType(SourceTypeEnum value) {
+    public void setSourceType(_SourceTypeEnum value) {
         this.sourceType = value;
     }
 
@@ -171,27 +171,27 @@ public class Source {
     }
 
     /**
-     * Gets the value of the sourceExtension property.
+     * Gets the value of the _SourceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSourceExtension() {
-        return sourceExtension;
+    public _ExtensionType get_SourceExtension() {
+        return _SourceExtension;
     }
 
     /**
-     * Sets the value of the sourceExtension property.
+     * Sets the value of the _SourceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSourceExtension(ExtensionType value) {
-        this.sourceExtension = value;
+    public void set_SourceExtension(_ExtensionType value) {
+        this._SourceExtension = value;
     }
 
 }

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Temperature;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TemperatureInformation", propOrder = {
     "temperature",
-    "temperatureInformationExtension"
+    "_TemperatureInformationExtension"
 })
 public class TemperatureInformation
     extends WeatherData
@@ -41,7 +41,7 @@ public class TemperatureInformation
     @XmlElement(required = true)
     protected Temperature temperature;
     @XmlElement(name = "_temperatureInformationExtension")
-    protected ExtensionType temperatureInformationExtension;
+    protected _ExtensionType _TemperatureInformationExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -68,27 +68,27 @@ public class TemperatureInformation
     }
 
     /**
-     * Gets the value of the temperatureInformationExtension property.
+     * Gets the value of the _TemperatureInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureInformationExtension() {
-        return temperatureInformationExtension;
+    public _ExtensionType get_TemperatureInformationExtension() {
+        return _TemperatureInformationExtension;
     }
 
     /**
-     * Sets the value of the temperatureInformationExtension property.
+     * Sets the value of the _TemperatureInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureInformationExtension(ExtensionType value) {
-        this.temperatureInformationExtension = value;
+    public void set_TemperatureInformationExtension(_ExtensionType value) {
+        this._TemperatureInformationExtension = value;
     }
 
 }

@@ -3,7 +3,7 @@ package eu.datex2.schema._3.locationreferencing;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,14 +33,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OpenlrPolygonCorners", propOrder = {
     "openlrCoordinates",
-    "openlrPolygonCornersExtension"
+    "_OpenlrPolygonCornersExtension"
 })
 public class OpenlrPolygonCorners {
 
     @XmlElement(required = true)
     protected List<PointCoordinates> openlrCoordinates;
     @XmlElement(name = "_openlrPolygonCornersExtension")
-    protected ExtensionType openlrPolygonCornersExtension;
+    protected _ExtensionType _OpenlrPolygonCornersExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -72,27 +72,27 @@ public class OpenlrPolygonCorners {
     }
 
     /**
-     * Gets the value of the openlrPolygonCornersExtension property.
+     * Gets the value of the _OpenlrPolygonCornersExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrPolygonCornersExtension() {
-        return openlrPolygonCornersExtension;
+    public _ExtensionType get_OpenlrPolygonCornersExtension() {
+        return _OpenlrPolygonCornersExtension;
     }
 
     /**
-     * Sets the value of the openlrPolygonCornersExtension property.
+     * Sets the value of the _OpenlrPolygonCornersExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrPolygonCornersExtension(ExtensionType value) {
-        this.openlrPolygonCornersExtension = value;
+    public void set_OpenlrPolygonCornersExtension(_ExtensionType value) {
+        this._OpenlrPolygonCornersExtension = value;
     }
 
 }

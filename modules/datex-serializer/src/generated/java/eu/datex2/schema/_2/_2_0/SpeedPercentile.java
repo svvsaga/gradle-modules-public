@@ -40,7 +40,7 @@ public class SpeedPercentile {
     protected PercentageValue vehiclePercentage;
     @XmlElement(required = true)
     protected SpeedValue speedPercentile;
-    protected ExtensionType speedPercentileExtension;
+    protected _ExtensionType speedPercentileExtension;
 
     /**
      * Gets the value of the vehiclePercentage property.
@@ -95,10 +95,10 @@ public class SpeedPercentile {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getSpeedPercentileExtension() {
+    public _ExtensionType getSpeedPercentileExtension() {
         return speedPercentileExtension;
     }
 
@@ -107,10 +107,10 @@ public class SpeedPercentile {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setSpeedPercentileExtension(ExtensionType value) {
+    public void setSpeedPercentileExtension(_ExtensionType value) {
         this.speedPercentileExtension = value;
     }
 

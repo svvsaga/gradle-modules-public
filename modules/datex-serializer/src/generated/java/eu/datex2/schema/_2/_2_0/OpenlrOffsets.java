@@ -41,7 +41,7 @@ public class OpenlrOffsets {
     protected BigInteger openlrPositiveOffset;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrNegativeOffset;
-    protected ExtensionType openlrOffsetsExtension;
+    protected _ExtensionType openlrOffsetsExtension;
 
     /**
      * Gets the value of the openlrPositiveOffset property.
@@ -96,10 +96,10 @@ public class OpenlrOffsets {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrOffsetsExtension() {
+    public _ExtensionType getOpenlrOffsetsExtension() {
         return openlrOffsetsExtension;
     }
 
@@ -108,10 +108,10 @@ public class OpenlrOffsets {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrOffsetsExtension(ExtensionType value) {
+    public void setOpenlrOffsetsExtension(_ExtensionType value) {
         this.openlrOffsetsExtension = value;
     }
 

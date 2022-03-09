@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrRectangle", propOrder = {
     "openlrLowerLeft",
     "openlrUpperRight",
-    "openlrRectangleExtension"
+    "_OpenlrRectangleExtension"
 })
 public class OpenlrRectangle {
 
@@ -42,7 +42,7 @@ public class OpenlrRectangle {
     @XmlElement(required = true)
     protected PointCoordinates openlrUpperRight;
     @XmlElement(name = "_openlrRectangleExtension")
-    protected ExtensionType openlrRectangleExtension;
+    protected _ExtensionType _OpenlrRectangleExtension;
 
     /**
      * Gets the value of the openlrLowerLeft property.
@@ -93,27 +93,27 @@ public class OpenlrRectangle {
     }
 
     /**
-     * Gets the value of the openlrRectangleExtension property.
+     * Gets the value of the _OpenlrRectangleExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrRectangleExtension() {
-        return openlrRectangleExtension;
+    public _ExtensionType get_OpenlrRectangleExtension() {
+        return _OpenlrRectangleExtension;
     }
 
     /**
-     * Sets the value of the openlrRectangleExtension property.
+     * Sets the value of the _OpenlrRectangleExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrRectangleExtension(ExtensionType value) {
-        this.openlrRectangleExtension = value;
+    public void set_OpenlrRectangleExtension(_ExtensionType value) {
+        this._OpenlrRectangleExtension = value;
     }
 
 }

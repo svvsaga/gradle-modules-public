@@ -45,22 +45,22 @@ public class VmsUnit
 {
 
     @XmlElement(required = true)
-    protected VmsUnitTableVersionedReference vmsUnitTableReference;
+    protected _VmsUnitTableVersionedReference vmsUnitTableReference;
     @XmlElement(required = true)
-    protected VmsUnitRecordVersionedReference vmsUnitReference;
-    protected List<VmsUnitVmsIndexVms> vms;
+    protected _VmsUnitRecordVersionedReference vmsUnitReference;
+    protected List<_VmsUnitVmsIndexVms> vms;
     protected List<VmsUnitFault> vmsUnitFault;
-    protected ExtensionType vmsUnitExtension;
+    protected _ExtensionType vmsUnitExtension;
 
     /**
      * Gets the value of the vmsUnitTableReference property.
      * 
      * @return
      *     possible object is
-     *     {@link VmsUnitTableVersionedReference }
+     *     {@link _VmsUnitTableVersionedReference }
      *     
      */
-    public VmsUnitTableVersionedReference getVmsUnitTableReference() {
+    public _VmsUnitTableVersionedReference getVmsUnitTableReference() {
         return vmsUnitTableReference;
     }
 
@@ -69,10 +69,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsUnitTableVersionedReference }
+     *     {@link _VmsUnitTableVersionedReference }
      *     
      */
-    public void setVmsUnitTableReference(VmsUnitTableVersionedReference value) {
+    public void setVmsUnitTableReference(_VmsUnitTableVersionedReference value) {
         this.vmsUnitTableReference = value;
     }
 
@@ -81,10 +81,10 @@ public class VmsUnit
      * 
      * @return
      *     possible object is
-     *     {@link VmsUnitRecordVersionedReference }
+     *     {@link _VmsUnitRecordVersionedReference }
      *     
      */
-    public VmsUnitRecordVersionedReference getVmsUnitReference() {
+    public _VmsUnitRecordVersionedReference getVmsUnitReference() {
         return vmsUnitReference;
     }
 
@@ -93,10 +93,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link VmsUnitRecordVersionedReference }
+     *     {@link _VmsUnitRecordVersionedReference }
      *     
      */
-    public void setVmsUnitReference(VmsUnitRecordVersionedReference value) {
+    public void setVmsUnitReference(_VmsUnitRecordVersionedReference value) {
         this.vmsUnitReference = value;
     }
 
@@ -118,13 +118,13 @@ public class VmsUnit
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsUnitVmsIndexVms }
+     * {@link _VmsUnitVmsIndexVms }
      * 
      * 
      */
-    public List<VmsUnitVmsIndexVms> getVms() {
+    public List<_VmsUnitVmsIndexVms> getVms() {
         if (vms == null) {
-            vms = new ArrayList<VmsUnitVmsIndexVms>();
+            vms = new ArrayList<_VmsUnitVmsIndexVms>();
         }
         return this.vms;
     }
@@ -163,10 +163,10 @@ public class VmsUnit
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsUnitExtension() {
+    public _ExtensionType getVmsUnitExtension() {
         return vmsUnitExtension;
     }
 
@@ -175,10 +175,10 @@ public class VmsUnit
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsUnitExtension(ExtensionType value) {
+    public void setVmsUnitExtension(_ExtensionType value) {
         this.vmsUnitExtension = value;
     }
 

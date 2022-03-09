@@ -4,9 +4,9 @@ package eu.datex2.schema._3.cctvextension;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
 import eu.datex2.schema._3.common.UrlLink;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "stillImageUrl",
     "orientationImageUrl",
     "thumbnailImageUrl",
-    "cctvStillImageServiceExtension"
+    "_CctvStillImageServiceExtension"
 })
 public class CctvStillImageService {
 
@@ -62,7 +62,7 @@ public class CctvStillImageService {
     protected BigInteger cctvStillImageServiceLevel;
     protected MultilingualString cctvStillImageServiceLevelName;
     @XmlElement(required = true)
-    protected CctvStillImageFormatEnum cctvStillImageFormat;
+    protected _CctvStillImageFormatEnum cctvStillImageFormat;
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger cctvStillImageWidth;
     @XmlSchemaType(name = "nonNegativeInteger")
@@ -74,7 +74,7 @@ public class CctvStillImageService {
     protected List<UrlLink> orientationImageUrl;
     protected UrlLink thumbnailImageUrl;
     @XmlElement(name = "_cctvStillImageServiceExtension")
-    protected ExtensionType cctvStillImageServiceExtension;
+    protected _ExtensionType _CctvStillImageServiceExtension;
 
     /**
      * Gets the value of the cctvStillImageServiceLevel property.
@@ -129,10 +129,10 @@ public class CctvStillImageService {
      * 
      * @return
      *     possible object is
-     *     {@link CctvStillImageFormatEnum }
+     *     {@link _CctvStillImageFormatEnum }
      *     
      */
-    public CctvStillImageFormatEnum getCctvStillImageFormat() {
+    public _CctvStillImageFormatEnum getCctvStillImageFormat() {
         return cctvStillImageFormat;
     }
 
@@ -141,10 +141,10 @@ public class CctvStillImageService {
      * 
      * @param value
      *     allowed object is
-     *     {@link CctvStillImageFormatEnum }
+     *     {@link _CctvStillImageFormatEnum }
      *     
      */
-    public void setCctvStillImageFormat(CctvStillImageFormatEnum value) {
+    public void setCctvStillImageFormat(_CctvStillImageFormatEnum value) {
         this.cctvStillImageFormat = value;
     }
 
@@ -298,27 +298,27 @@ public class CctvStillImageService {
     }
 
     /**
-     * Gets the value of the cctvStillImageServiceExtension property.
+     * Gets the value of the _CctvStillImageServiceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCctvStillImageServiceExtension() {
-        return cctvStillImageServiceExtension;
+    public _ExtensionType get_CctvStillImageServiceExtension() {
+        return _CctvStillImageServiceExtension;
     }
 
     /**
-     * Sets the value of the cctvStillImageServiceExtension property.
+     * Sets the value of the _CctvStillImageServiceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCctvStillImageServiceExtension(ExtensionType value) {
-        this.cctvStillImageServiceExtension = value;
+    public void set_CctvStillImageServiceExtension(_ExtensionType value) {
+        this._CctvStillImageServiceExtension = value;
     }
 
 }

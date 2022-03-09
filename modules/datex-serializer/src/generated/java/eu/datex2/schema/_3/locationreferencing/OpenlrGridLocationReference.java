@@ -2,7 +2,7 @@
 package eu.datex2.schema._3.locationreferencing;
 
 import java.math.BigInteger;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "openlrNumColumns",
     "openlrNumRows",
     "openlrRectangle",
-    "openlrGridLocationReferenceExtension"
+    "_OpenlrGridLocationReferenceExtension"
 })
 public class OpenlrGridLocationReference
     extends OpenlrAreaLocationReference
@@ -52,7 +52,7 @@ public class OpenlrGridLocationReference
     @XmlElement(required = true)
     protected OpenlrRectangle openlrRectangle;
     @XmlElement(name = "_openlrGridLocationReferenceExtension")
-    protected ExtensionType openlrGridLocationReferenceExtension;
+    protected _ExtensionType _OpenlrGridLocationReferenceExtension;
 
     /**
      * Gets the value of the openlrNumColumns property.
@@ -127,27 +127,27 @@ public class OpenlrGridLocationReference
     }
 
     /**
-     * Gets the value of the openlrGridLocationReferenceExtension property.
+     * Gets the value of the _OpenlrGridLocationReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrGridLocationReferenceExtension() {
-        return openlrGridLocationReferenceExtension;
+    public _ExtensionType get_OpenlrGridLocationReferenceExtension() {
+        return _OpenlrGridLocationReferenceExtension;
     }
 
     /**
-     * Sets the value of the openlrGridLocationReferenceExtension property.
+     * Sets the value of the _OpenlrGridLocationReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrGridLocationReferenceExtension(ExtensionType value) {
-        this.openlrGridLocationReferenceExtension = value;
+    public void set_OpenlrGridLocationReferenceExtension(_ExtensionType value) {
+        this._OpenlrGridLocationReferenceExtension = value;
     }
 
 }

@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,25 +34,25 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "ReturnInformation", propOrder = {
     "returnStatus",
     "returnStatusReason",
-    "returnInformationExtension"
+    "_ReturnInformationExtension"
 })
 public class ReturnInformation {
 
     @XmlElement(required = true)
-    protected ExchangeReturnEnum returnStatus;
+    protected _ExchangeReturnEnum returnStatus;
     protected MultilingualString returnStatusReason;
     @XmlElement(name = "_returnInformationExtension")
-    protected ExtensionType returnInformationExtension;
+    protected _ExtensionType _ReturnInformationExtension;
 
     /**
      * Gets the value of the returnStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link ExchangeReturnEnum }
+     *     {@link _ExchangeReturnEnum }
      *     
      */
-    public ExchangeReturnEnum getReturnStatus() {
+    public _ExchangeReturnEnum getReturnStatus() {
         return returnStatus;
     }
 
@@ -61,10 +61,10 @@ public class ReturnInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExchangeReturnEnum }
+     *     {@link _ExchangeReturnEnum }
      *     
      */
-    public void setReturnStatus(ExchangeReturnEnum value) {
+    public void setReturnStatus(_ExchangeReturnEnum value) {
         this.returnStatus = value;
     }
 
@@ -93,27 +93,27 @@ public class ReturnInformation {
     }
 
     /**
-     * Gets the value of the returnInformationExtension property.
+     * Gets the value of the _ReturnInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getReturnInformationExtension() {
-        return returnInformationExtension;
+    public _ExtensionType get_ReturnInformationExtension() {
+        return _ReturnInformationExtension;
     }
 
     /**
-     * Sets the value of the returnInformationExtension property.
+     * Sets the value of the _ReturnInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setReturnInformationExtension(ExtensionType value) {
-        this.returnInformationExtension = value;
+    public void set_ReturnInformationExtension(_ExtensionType value) {
+        this._ReturnInformationExtension = value;
     }
 
 }

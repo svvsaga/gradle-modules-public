@@ -44,7 +44,7 @@ public class VmsTablePublication
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<VmsUnitTable> vmsUnitTable;
-    protected ExtensionType vmsTablePublicationExtension;
+    protected _ExtensionType vmsTablePublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +104,10 @@ public class VmsTablePublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsTablePublicationExtension() {
+    public _ExtensionType getVmsTablePublicationExtension() {
         return vmsTablePublicationExtension;
     }
 
@@ -116,10 +116,10 @@ public class VmsTablePublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsTablePublicationExtension(ExtensionType value) {
+    public void setVmsTablePublicationExtension(_ExtensionType value) {
         this.vmsTablePublicationExtension = value;
     }
 

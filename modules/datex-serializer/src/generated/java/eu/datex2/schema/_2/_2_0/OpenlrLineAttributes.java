@@ -49,7 +49,7 @@ public class OpenlrLineAttributes {
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger openlrBearing;
-    protected ExtensionType openlrLineAttributesExtension;
+    protected _ExtensionType openlrLineAttributesExtension;
 
     /**
      * Gets the value of the openlrFunctionalRoadClass property.
@@ -128,10 +128,10 @@ public class OpenlrLineAttributes {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrLineAttributesExtension() {
+    public _ExtensionType getOpenlrLineAttributesExtension() {
         return openlrLineAttributesExtension;
     }
 
@@ -140,10 +140,10 @@ public class OpenlrLineAttributes {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrLineAttributesExtension(ExtensionType value) {
+    public void setOpenlrLineAttributesExtension(_ExtensionType value) {
         this.openlrLineAttributesExtension = value;
     }
 

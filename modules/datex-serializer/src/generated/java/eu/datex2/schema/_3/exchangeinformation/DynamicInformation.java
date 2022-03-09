@@ -2,8 +2,8 @@
 package eu.datex2.schema._3.exchangeinformation;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -42,12 +42,12 @@ import jakarta.xml.bind.annotation.XmlType;
     "completedPaylod",
     "messageGenerationTimestamp",
     "returnInformation",
-    "dynamicInformationExtension"
+    "_DynamicInformationExtension"
 })
 public class DynamicInformation {
 
     @XmlElement(required = true)
-    protected ExchangeStatusEnum exchangeStatus;
+    protected _ExchangeStatusEnum exchangeStatus;
     protected MultilingualString exchangeStatusDescription;
     protected Boolean completedPaylod;
     @XmlElement(required = true)
@@ -55,17 +55,17 @@ public class DynamicInformation {
     protected XMLGregorianCalendar messageGenerationTimestamp;
     protected ReturnInformation returnInformation;
     @XmlElement(name = "_dynamicInformationExtension")
-    protected ExtensionType dynamicInformationExtension;
+    protected _ExtensionType _DynamicInformationExtension;
 
     /**
      * Gets the value of the exchangeStatus property.
      * 
      * @return
      *     possible object is
-     *     {@link ExchangeStatusEnum }
+     *     {@link _ExchangeStatusEnum }
      *     
      */
-    public ExchangeStatusEnum getExchangeStatus() {
+    public _ExchangeStatusEnum getExchangeStatus() {
         return exchangeStatus;
     }
 
@@ -74,10 +74,10 @@ public class DynamicInformation {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExchangeStatusEnum }
+     *     {@link _ExchangeStatusEnum }
      *     
      */
-    public void setExchangeStatus(ExchangeStatusEnum value) {
+    public void setExchangeStatus(_ExchangeStatusEnum value) {
         this.exchangeStatus = value;
     }
 
@@ -178,27 +178,27 @@ public class DynamicInformation {
     }
 
     /**
-     * Gets the value of the dynamicInformationExtension property.
+     * Gets the value of the _DynamicInformationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getDynamicInformationExtension() {
-        return dynamicInformationExtension;
+    public _ExtensionType get_DynamicInformationExtension() {
+        return _DynamicInformationExtension;
     }
 
     /**
-     * Sets the value of the dynamicInformationExtension property.
+     * Sets the value of the _DynamicInformationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setDynamicInformationExtension(ExtensionType value) {
-        this.dynamicInformationExtension = value;
+    public void set_DynamicInformationExtension(_ExtensionType value) {
+        this._DynamicInformationExtension = value;
     }
 
 }

@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "OpenlrBaseReferencePoint", propOrder = {
     "openlrCoordinates",
     "openlrLineAttributes",
-    "openlrBaseReferencePointExtension"
+    "_OpenlrBaseReferencePointExtension"
 })
 @XmlSeeAlso({
     OpenlrLastLocationReferencePoint.class,
@@ -47,7 +47,7 @@ public abstract class OpenlrBaseReferencePoint {
     @XmlElement(required = true)
     protected OpenlrLineAttributes openlrLineAttributes;
     @XmlElement(name = "_openlrBaseReferencePointExtension")
-    protected ExtensionType openlrBaseReferencePointExtension;
+    protected _ExtensionType _OpenlrBaseReferencePointExtension;
 
     /**
      * Gets the value of the openlrCoordinates property.
@@ -98,27 +98,27 @@ public abstract class OpenlrBaseReferencePoint {
     }
 
     /**
-     * Gets the value of the openlrBaseReferencePointExtension property.
+     * Gets the value of the _OpenlrBaseReferencePointExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getOpenlrBaseReferencePointExtension() {
-        return openlrBaseReferencePointExtension;
+    public _ExtensionType get_OpenlrBaseReferencePointExtension() {
+        return _OpenlrBaseReferencePointExtension;
     }
 
     /**
-     * Sets the value of the openlrBaseReferencePointExtension property.
+     * Sets the value of the _OpenlrBaseReferencePointExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setOpenlrBaseReferencePointExtension(ExtensionType value) {
-        this.openlrBaseReferencePointExtension = value;
+    public void set_OpenlrBaseReferencePointExtension(_ExtensionType value) {
+        this._OpenlrBaseReferencePointExtension = value;
     }
 
 }

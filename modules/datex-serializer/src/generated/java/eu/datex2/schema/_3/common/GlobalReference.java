@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GlobalReference", propOrder = {
     "externalPublicationIdentifier",
     "externalPublisher",
-    "globalReferenceExtension"
+    "_GlobalReferenceExtension"
 })
 @XmlSeeAlso({
     SituationRecordReference.class,
@@ -46,7 +46,7 @@ public abstract class GlobalReference {
     protected String externalPublicationIdentifier;
     protected InternationalIdentifier externalPublisher;
     @XmlElement(name = "_globalReferenceExtension")
-    protected ExtensionType globalReferenceExtension;
+    protected _ExtensionType _GlobalReferenceExtension;
 
     /**
      * Gets the value of the externalPublicationIdentifier property.
@@ -97,27 +97,27 @@ public abstract class GlobalReference {
     }
 
     /**
-     * Gets the value of the globalReferenceExtension property.
+     * Gets the value of the _GlobalReferenceExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGlobalReferenceExtension() {
-        return globalReferenceExtension;
+    public _ExtensionType get_GlobalReferenceExtension() {
+        return _GlobalReferenceExtension;
     }
 
     /**
-     * Sets the value of the globalReferenceExtension property.
+     * Sets the value of the _GlobalReferenceExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGlobalReferenceExtension(ExtensionType value) {
-        this.globalReferenceExtension = value;
+    public void set_GlobalReferenceExtension(_ExtensionType value) {
+        this._GlobalReferenceExtension = value;
     }
 
 }

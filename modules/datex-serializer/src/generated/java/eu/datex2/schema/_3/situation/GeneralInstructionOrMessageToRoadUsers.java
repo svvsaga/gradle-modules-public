@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.situation;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,26 +34,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "GeneralInstructionOrMessageToRoadUsers", propOrder = {
     "generalInstructionToRoadUsersType",
     "generalMessageToRoadUsers",
-    "generalInstructionOrMessageToRoadUsersExtension"
+    "_GeneralInstructionOrMessageToRoadUsersExtension"
 })
 public class GeneralInstructionOrMessageToRoadUsers
     extends NetworkManagement
 {
 
-    protected GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
+    protected _GeneralInstructionToRoadUsersTypeEnum generalInstructionToRoadUsersType;
     protected MultilingualString generalMessageToRoadUsers;
     @XmlElement(name = "_generalInstructionOrMessageToRoadUsersExtension")
-    protected ExtensionType generalInstructionOrMessageToRoadUsersExtension;
+    protected _ExtensionType _GeneralInstructionOrMessageToRoadUsersExtension;
 
     /**
      * Gets the value of the generalInstructionToRoadUsersType property.
      * 
      * @return
      *     possible object is
-     *     {@link GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
+    public _GeneralInstructionToRoadUsersTypeEnum getGeneralInstructionToRoadUsersType() {
         return generalInstructionToRoadUsersType;
     }
 
@@ -62,10 +62,10 @@ public class GeneralInstructionOrMessageToRoadUsers
      * 
      * @param value
      *     allowed object is
-     *     {@link GeneralInstructionToRoadUsersTypeEnum }
+     *     {@link _GeneralInstructionToRoadUsersTypeEnum }
      *     
      */
-    public void setGeneralInstructionToRoadUsersType(GeneralInstructionToRoadUsersTypeEnum value) {
+    public void setGeneralInstructionToRoadUsersType(_GeneralInstructionToRoadUsersTypeEnum value) {
         this.generalInstructionToRoadUsersType = value;
     }
 
@@ -94,27 +94,27 @@ public class GeneralInstructionOrMessageToRoadUsers
     }
 
     /**
-     * Gets the value of the generalInstructionOrMessageToRoadUsersExtension property.
+     * Gets the value of the _GeneralInstructionOrMessageToRoadUsersExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getGeneralInstructionOrMessageToRoadUsersExtension() {
-        return generalInstructionOrMessageToRoadUsersExtension;
+    public _ExtensionType get_GeneralInstructionOrMessageToRoadUsersExtension() {
+        return _GeneralInstructionOrMessageToRoadUsersExtension;
     }
 
     /**
-     * Sets the value of the generalInstructionOrMessageToRoadUsersExtension property.
+     * Sets the value of the _GeneralInstructionOrMessageToRoadUsersExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setGeneralInstructionOrMessageToRoadUsersExtension(ExtensionType value) {
-        this.generalInstructionOrMessageToRoadUsersExtension = value;
+    public void set_GeneralInstructionOrMessageToRoadUsersExtension(_ExtensionType value) {
+        this._GeneralInstructionOrMessageToRoadUsersExtension = value;
     }
 
 }

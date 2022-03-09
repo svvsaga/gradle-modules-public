@@ -40,7 +40,7 @@ public class WinterDrivingManagement
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
     protected WinterEquipmentManagementTypeEnum winterEquipmentManagementType;
-    protected ExtensionType winterDrivingManagementExtension;
+    protected _ExtensionType winterDrivingManagementExtension;
 
     /**
      * Gets the value of the winterEquipmentManagementType property.
@@ -71,10 +71,10 @@ public class WinterDrivingManagement
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWinterDrivingManagementExtension() {
+    public _ExtensionType getWinterDrivingManagementExtension() {
         return winterDrivingManagementExtension;
     }
 
@@ -83,10 +83,10 @@ public class WinterDrivingManagement
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWinterDrivingManagementExtension(ExtensionType value) {
+    public void setWinterDrivingManagementExtension(_ExtensionType value) {
         this.winterDrivingManagementExtension = value;
     }
 

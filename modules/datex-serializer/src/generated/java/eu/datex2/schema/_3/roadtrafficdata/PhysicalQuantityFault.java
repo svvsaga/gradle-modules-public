@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.roadtrafficdata;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.Fault;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,26 +32,26 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PhysicalQuantityFault", propOrder = {
     "physicalQuantityFaultType",
-    "physicalQuantityFaultExtension"
+    "_PhysicalQuantityFaultExtension"
 })
 public class PhysicalQuantityFault
     extends Fault
 {
 
     @XmlElement(required = true)
-    protected PhysicalQuantityFaultEnum physicalQuantityFaultType;
+    protected _PhysicalQuantityFaultEnum physicalQuantityFaultType;
     @XmlElement(name = "_physicalQuantityFaultExtension")
-    protected ExtensionType physicalQuantityFaultExtension;
+    protected _ExtensionType _PhysicalQuantityFaultExtension;
 
     /**
      * Gets the value of the physicalQuantityFaultType property.
      * 
      * @return
      *     possible object is
-     *     {@link PhysicalQuantityFaultEnum }
+     *     {@link _PhysicalQuantityFaultEnum }
      *     
      */
-    public PhysicalQuantityFaultEnum getPhysicalQuantityFaultType() {
+    public _PhysicalQuantityFaultEnum getPhysicalQuantityFaultType() {
         return physicalQuantityFaultType;
     }
 
@@ -60,35 +60,35 @@ public class PhysicalQuantityFault
      * 
      * @param value
      *     allowed object is
-     *     {@link PhysicalQuantityFaultEnum }
+     *     {@link _PhysicalQuantityFaultEnum }
      *     
      */
-    public void setPhysicalQuantityFaultType(PhysicalQuantityFaultEnum value) {
+    public void setPhysicalQuantityFaultType(_PhysicalQuantityFaultEnum value) {
         this.physicalQuantityFaultType = value;
     }
 
     /**
-     * Gets the value of the physicalQuantityFaultExtension property.
+     * Gets the value of the _PhysicalQuantityFaultExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPhysicalQuantityFaultExtension() {
-        return physicalQuantityFaultExtension;
+    public _ExtensionType get_PhysicalQuantityFaultExtension() {
+        return _PhysicalQuantityFaultExtension;
     }
 
     /**
-     * Sets the value of the physicalQuantityFaultExtension property.
+     * Sets the value of the _PhysicalQuantityFaultExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPhysicalQuantityFaultExtension(ExtensionType value) {
-        this.physicalQuantityFaultExtension = value;
+    public void set_PhysicalQuantityFaultExtension(_ExtensionType value) {
+        this._PhysicalQuantityFaultExtension = value;
     }
 
 }

@@ -36,7 +36,7 @@ public class ApplicationRateValue
 {
 
     protected float applicationRate;
-    protected ExtensionType applicationRateValueExtension;
+    protected _ExtensionType applicationRateValueExtension;
 
     /**
      * Gets the value of the applicationRate property.
@@ -59,10 +59,10 @@ public class ApplicationRateValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getApplicationRateValueExtension() {
+    public _ExtensionType getApplicationRateValueExtension() {
         return applicationRateValueExtension;
     }
 
@@ -71,10 +71,10 @@ public class ApplicationRateValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setApplicationRateValueExtension(ExtensionType value) {
+    public void setApplicationRateValueExtension(_ExtensionType value) {
         this.applicationRateValueExtension = value;
     }
 

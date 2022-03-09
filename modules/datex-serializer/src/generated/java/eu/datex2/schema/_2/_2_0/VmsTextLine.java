@@ -54,7 +54,7 @@ public class VmsTextLine {
     protected ColourEnum vmsTextLineColour;
     protected Boolean vmsTextLineFlashing;
     protected String vmsTextLineHtml;
-    protected ExtensionType vmsTextLineExtension;
+    protected _ExtensionType vmsTextLineExtension;
 
     /**
      * Gets the value of the vmsTextLine property.
@@ -181,10 +181,10 @@ public class VmsTextLine {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsTextLineExtension() {
+    public _ExtensionType getVmsTextLineExtension() {
         return vmsTextLineExtension;
     }
 
@@ -193,10 +193,10 @@ public class VmsTextLine {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsTextLineExtension(ExtensionType value) {
+    public void setVmsTextLineExtension(_ExtensionType value) {
         this.vmsTextLineExtension = value;
     }
 

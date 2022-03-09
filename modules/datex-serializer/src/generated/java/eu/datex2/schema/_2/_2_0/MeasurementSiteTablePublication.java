@@ -44,7 +44,7 @@ public class MeasurementSiteTablePublication
     protected HeaderInformation headerInformation;
     @XmlElement(required = true)
     protected List<MeasurementSiteTable> measurementSiteTable;
-    protected ExtensionType measurementSiteTablePublicationExtension;
+    protected _ExtensionType measurementSiteTablePublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,10 +104,10 @@ public class MeasurementSiteTablePublication
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteTablePublicationExtension() {
+    public _ExtensionType getMeasurementSiteTablePublicationExtension() {
         return measurementSiteTablePublicationExtension;
     }
 
@@ -116,10 +116,10 @@ public class MeasurementSiteTablePublication
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSiteTablePublicationExtension(ExtensionType value) {
+    public void setMeasurementSiteTablePublicationExtension(_ExtensionType value) {
         this.measurementSiteTablePublicationExtension = value;
     }
 

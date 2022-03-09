@@ -38,7 +38,7 @@ public class TemperatureInformation
 
     @XmlElement(required = true)
     protected Temperature temperature;
-    protected ExtensionType temperatureInformationExtension;
+    protected _ExtensionType temperatureInformationExtension;
 
     /**
      * Gets the value of the temperature property.
@@ -69,10 +69,10 @@ public class TemperatureInformation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getTemperatureInformationExtension() {
+    public _ExtensionType getTemperatureInformationExtension() {
         return temperatureInformationExtension;
     }
 
@@ -81,10 +81,10 @@ public class TemperatureInformation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setTemperatureInformationExtension(ExtensionType value) {
+    public void setTemperatureInformationExtension(_ExtensionType value) {
         this.temperatureInformationExtension = value;
     }
 

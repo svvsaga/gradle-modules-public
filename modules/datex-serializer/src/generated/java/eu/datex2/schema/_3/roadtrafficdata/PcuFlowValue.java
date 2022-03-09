@@ -3,7 +3,7 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.math.BigInteger;
 import eu.datex2.schema._3.common.DataValue;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PcuFlowValue", propOrder = {
     "pcuFlowRate",
-    "pcuFlowValueExtension"
+    "_PcuFlowValueExtension"
 })
 public class PcuFlowValue
     extends DataValue
@@ -44,7 +44,7 @@ public class PcuFlowValue
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger pcuFlowRate;
     @XmlElement(name = "_pcuFlowValueExtension")
-    protected ExtensionType pcuFlowValueExtension;
+    protected _ExtensionType _PcuFlowValueExtension;
 
     /**
      * Gets the value of the pcuFlowRate property.
@@ -71,27 +71,27 @@ public class PcuFlowValue
     }
 
     /**
-     * Gets the value of the pcuFlowValueExtension property.
+     * Gets the value of the _PcuFlowValueExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPcuFlowValueExtension() {
-        return pcuFlowValueExtension;
+    public _ExtensionType get_PcuFlowValueExtension() {
+        return _PcuFlowValueExtension;
     }
 
     /**
-     * Sets the value of the pcuFlowValueExtension property.
+     * Sets the value of the _PcuFlowValueExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPcuFlowValueExtension(ExtensionType value) {
-        this.pcuFlowValueExtension = value;
+    public void set_PcuFlowValueExtension(_ExtensionType value) {
+        this._PcuFlowValueExtension = value;
     }
 
 }

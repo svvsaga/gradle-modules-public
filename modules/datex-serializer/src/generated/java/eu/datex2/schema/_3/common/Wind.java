@@ -44,7 +44,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "maximumWindDirectionBearing",
     "windDirectionCompass",
     "maximumWindDirectionCompass",
-    "windExtension"
+    "_WindExtension"
 })
 public class Wind {
 
@@ -57,7 +57,7 @@ public class Wind {
     protected DirectionCompassValue windDirectionCompass;
     protected DirectionCompassValue maximumWindDirectionCompass;
     @XmlElement(name = "_windExtension")
-    protected ExtensionType windExtension;
+    protected _ExtensionType _WindExtension;
 
     /**
      * Gets the value of the windMeasurementHeight property.
@@ -228,27 +228,27 @@ public class Wind {
     }
 
     /**
-     * Gets the value of the windExtension property.
+     * Gets the value of the _WindExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getWindExtension() {
-        return windExtension;
+    public _ExtensionType get_WindExtension() {
+        return _WindExtension;
     }
 
     /**
-     * Sets the value of the windExtension property.
+     * Sets the value of the _WindExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setWindExtension(ExtensionType value) {
-        this.windExtension = value;
+    public void set_WindExtension(_ExtensionType value) {
+        this._WindExtension = value;
     }
 
 }

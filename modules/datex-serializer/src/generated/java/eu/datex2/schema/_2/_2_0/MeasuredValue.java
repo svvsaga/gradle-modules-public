@@ -45,7 +45,7 @@ public class MeasuredValue {
     protected LocationCharacteristicsOverride locationCharacteristicsOverride;
     protected List<MeasurementEquipmentFault> measurementEquipmentFault;
     protected BasicData basicData;
-    protected ExtensionType measuredValueExtension;
+    protected _ExtensionType measuredValueExtension;
 
     /**
      * Gets the value of the measurementEquipmentTypeUsed property.
@@ -153,10 +153,10 @@ public class MeasuredValue {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasuredValueExtension() {
+    public _ExtensionType getMeasuredValueExtension() {
         return measuredValueExtension;
     }
 
@@ -165,10 +165,10 @@ public class MeasuredValue {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasuredValueExtension(ExtensionType value) {
+    public void setMeasuredValueExtension(_ExtensionType value) {
         this.measuredValueExtension = value;
     }
 

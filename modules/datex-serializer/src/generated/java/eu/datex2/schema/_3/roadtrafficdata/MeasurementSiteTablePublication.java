@@ -3,9 +3,9 @@ package eu.datex2.schema._3.roadtrafficdata;
 
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.HeaderInformation;
 import eu.datex2.schema._3.common.PayloadPublication;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,7 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "MeasurementSiteTablePublication", propOrder = {
     "headerInformation",
     "measurementSiteTable",
-    "measurementSiteTablePublicationExtension"
+    "_MeasurementSiteTablePublicationExtension"
 })
 public class MeasurementSiteTablePublication
     extends PayloadPublication
@@ -48,7 +48,7 @@ public class MeasurementSiteTablePublication
     @XmlElement(required = true)
     protected List<MeasurementSiteTable> measurementSiteTable;
     @XmlElement(name = "_measurementSiteTablePublicationExtension")
-    protected ExtensionType measurementSiteTablePublicationExtension;
+    protected _ExtensionType _MeasurementSiteTablePublicationExtension;
 
     /**
      * Gets the value of the headerInformation property.
@@ -104,27 +104,27 @@ public class MeasurementSiteTablePublication
     }
 
     /**
-     * Gets the value of the measurementSiteTablePublicationExtension property.
+     * Gets the value of the _MeasurementSiteTablePublicationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMeasurementSiteTablePublicationExtension() {
-        return measurementSiteTablePublicationExtension;
+    public _ExtensionType get_MeasurementSiteTablePublicationExtension() {
+        return _MeasurementSiteTablePublicationExtension;
     }
 
     /**
-     * Sets the value of the measurementSiteTablePublicationExtension property.
+     * Sets the value of the _MeasurementSiteTablePublicationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMeasurementSiteTablePublicationExtension(ExtensionType value) {
-        this.measurementSiteTablePublicationExtension = value;
+    public void set_MeasurementSiteTablePublicationExtension(_ExtensionType value) {
+        this._MeasurementSiteTablePublicationExtension = value;
     }
 
 }

@@ -44,7 +44,7 @@ public class PredefinedLocation
     protected MultilingualString predefinedLocationName;
     @XmlElement(required = true)
     protected Location location;
-    protected ExtensionType predefinedLocationExtension;
+    protected _ExtensionType predefinedLocationExtension;
     @XmlAttribute(name = "id", required = true)
     protected String id;
     @XmlAttribute(name = "version", required = true)
@@ -103,10 +103,10 @@ public class PredefinedLocation
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPredefinedLocationExtension() {
+    public _ExtensionType getPredefinedLocationExtension() {
         return predefinedLocationExtension;
     }
 
@@ -115,10 +115,10 @@ public class PredefinedLocation
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPredefinedLocationExtension(ExtensionType value) {
+    public void setPredefinedLocationExtension(_ExtensionType value) {
         this.predefinedLocationExtension = value;
     }
 

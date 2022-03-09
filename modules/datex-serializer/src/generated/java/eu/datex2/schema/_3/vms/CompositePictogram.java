@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.vms;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -33,28 +33,28 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "CompositePictogram", propOrder = {
     "pictogramDescription",
     "regularPictogram",
-    "compositePictogramExtension"
+    "_CompositePictogramExtension"
 })
 public class CompositePictogram
     extends Pictogram
 {
 
     @XmlElement(required = true)
-    protected CompositePictogramEnum pictogramDescription;
+    protected _CompositePictogramEnum pictogramDescription;
     @XmlElement(required = true)
     protected RegularPictogram regularPictogram;
     @XmlElement(name = "_compositePictogramExtension")
-    protected ExtensionType compositePictogramExtension;
+    protected _ExtensionType _CompositePictogramExtension;
 
     /**
      * Gets the value of the pictogramDescription property.
      * 
      * @return
      *     possible object is
-     *     {@link CompositePictogramEnum }
+     *     {@link _CompositePictogramEnum }
      *     
      */
-    public CompositePictogramEnum getPictogramDescription() {
+    public _CompositePictogramEnum getPictogramDescription() {
         return pictogramDescription;
     }
 
@@ -63,10 +63,10 @@ public class CompositePictogram
      * 
      * @param value
      *     allowed object is
-     *     {@link CompositePictogramEnum }
+     *     {@link _CompositePictogramEnum }
      *     
      */
-    public void setPictogramDescription(CompositePictogramEnum value) {
+    public void setPictogramDescription(_CompositePictogramEnum value) {
         this.pictogramDescription = value;
     }
 
@@ -95,27 +95,27 @@ public class CompositePictogram
     }
 
     /**
-     * Gets the value of the compositePictogramExtension property.
+     * Gets the value of the _CompositePictogramExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getCompositePictogramExtension() {
-        return compositePictogramExtension;
+    public _ExtensionType get_CompositePictogramExtension() {
+        return _CompositePictogramExtension;
     }
 
     /**
-     * Sets the value of the compositePictogramExtension property.
+     * Sets the value of the _CompositePictogramExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setCompositePictogramExtension(ExtensionType value) {
-        this.compositePictogramExtension = value;
+    public void set_CompositePictogramExtension(_ExtensionType value) {
+        this._CompositePictogramExtension = value;
     }
 
 }

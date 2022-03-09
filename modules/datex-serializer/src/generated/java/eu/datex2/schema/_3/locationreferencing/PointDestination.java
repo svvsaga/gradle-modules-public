@@ -1,7 +1,7 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -31,7 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PointDestination", propOrder = {
     "pointLocation",
-    "pointDestinationExtension"
+    "_PointDestinationExtension"
 })
 public class PointDestination
     extends Destination
@@ -40,7 +40,7 @@ public class PointDestination
     @XmlElement(required = true)
     protected PointLocation pointLocation;
     @XmlElement(name = "_pointDestinationExtension")
-    protected ExtensionType pointDestinationExtension;
+    protected _ExtensionType _PointDestinationExtension;
 
     /**
      * Gets the value of the pointLocation property.
@@ -67,27 +67,27 @@ public class PointDestination
     }
 
     /**
-     * Gets the value of the pointDestinationExtension property.
+     * Gets the value of the _PointDestinationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getPointDestinationExtension() {
-        return pointDestinationExtension;
+    public _ExtensionType get_PointDestinationExtension() {
+        return _PointDestinationExtension;
     }
 
     /**
-     * Sets the value of the pointDestinationExtension property.
+     * Sets the value of the _PointDestinationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setPointDestinationExtension(ExtensionType value) {
-        this.pointDestinationExtension = value;
+    public void set_PointDestinationExtension(_ExtensionType value) {
+        this._PointDestinationExtension = value;
     }
 
 }

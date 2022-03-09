@@ -32,16 +32,16 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InstanceOfDayWithinMonth", propOrder = {
     "applicableInstanceOfDayWithinMonth",
-    "instanceOfDayWithinMonthExtension"
+    "_InstanceOfDayWithinMonthExtension"
 })
 public class InstanceOfDayWithinMonth
     extends DayWeekMonth
 {
 
     @XmlElement(required = true)
-    protected List<InstanceOfDayEnum> applicableInstanceOfDayWithinMonth;
+    protected List<_InstanceOfDayEnum> applicableInstanceOfDayWithinMonth;
     @XmlElement(name = "_instanceOfDayWithinMonthExtension")
-    protected ExtensionType instanceOfDayWithinMonthExtension;
+    protected _ExtensionType _InstanceOfDayWithinMonthExtension;
 
     /**
      * Gets the value of the applicableInstanceOfDayWithinMonth property.
@@ -61,39 +61,39 @@ public class InstanceOfDayWithinMonth
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link InstanceOfDayEnum }
+     * {@link _InstanceOfDayEnum }
      * 
      * 
      */
-    public List<InstanceOfDayEnum> getApplicableInstanceOfDayWithinMonth() {
+    public List<_InstanceOfDayEnum> getApplicableInstanceOfDayWithinMonth() {
         if (applicableInstanceOfDayWithinMonth == null) {
-            applicableInstanceOfDayWithinMonth = new ArrayList<InstanceOfDayEnum>();
+            applicableInstanceOfDayWithinMonth = new ArrayList<_InstanceOfDayEnum>();
         }
         return this.applicableInstanceOfDayWithinMonth;
     }
 
     /**
-     * Gets the value of the instanceOfDayWithinMonthExtension property.
+     * Gets the value of the _InstanceOfDayWithinMonthExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getInstanceOfDayWithinMonthExtension() {
-        return instanceOfDayWithinMonthExtension;
+    public _ExtensionType get_InstanceOfDayWithinMonthExtension() {
+        return _InstanceOfDayWithinMonthExtension;
     }
 
     /**
-     * Sets the value of the instanceOfDayWithinMonthExtension property.
+     * Sets the value of the _InstanceOfDayWithinMonthExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setInstanceOfDayWithinMonthExtension(ExtensionType value) {
-        this.instanceOfDayWithinMonthExtension = value;
+    public void set_InstanceOfDayWithinMonthExtension(_ExtensionType value) {
+        this._InstanceOfDayWithinMonthExtension = value;
     }
 
 }

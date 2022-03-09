@@ -1,87 +1,59 @@
 
 package eu.datex2.schema._3.exchangeinformation;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for _ExchangeReturnEnum complex type.
+ * <p>Java class for ExchangeReturnEnum.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
  * <pre>
- * &lt;complexType name="_ExchangeReturnEnum"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://datex2.eu/schema/3/exchangeInformation&gt;ExchangeReturnEnum"&gt;
- *       &lt;attribute name="_extendedValue" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;simpleType name="ExchangeReturnEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="ack"/&gt;
+ *     &lt;enumeration value="closeSessionRequest"/&gt;
+ *     &lt;enumeration value="fail"/&gt;
+ *     &lt;enumeration value="snapshotSynchronisationRequest"/&gt;
+ *     &lt;enumeration value="_extended"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
- * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "_ExchangeReturnEnum", propOrder = {
-    "value"
-})
-public class ExchangeReturnEnum {
+@XmlType(name = "ExchangeReturnEnum")
+@XmlEnum
+public enum ExchangeReturnEnum {
 
-    @XmlValue
-    protected ExchangeReturnEnum2 value;
-    @XmlAttribute(name = "_extendedValue")
-    protected String extendedValue;
+    @XmlEnumValue("ack")
+    ACK("ack"),
+    @XmlEnumValue("closeSessionRequest")
+    CLOSE_SESSION_REQUEST("closeSessionRequest"),
+    @XmlEnumValue("fail")
+    FAIL("fail"),
+    @XmlEnumValue("snapshotSynchronisationRequest")
+    SNAPSHOT_SYNCHRONISATION_REQUEST("snapshotSynchronisationRequest"),
+    @XmlEnumValue("_extended")
+    __EXTENDED("_extended");
+    private final String value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExchangeReturnEnum2 }
-     *     
-     */
-    public ExchangeReturnEnum2 getValue() {
+    ExchangeReturnEnum(String v) {
+        value = v;
+    }
+
+    public String value() {
         return value;
     }
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExchangeReturnEnum2 }
-     *     
-     */
-    public void setValue(ExchangeReturnEnum2 value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the extendedValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getExtendedValue() {
-        return extendedValue;
-    }
-
-    /**
-     * Sets the value of the extendedValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setExtendedValue(String value) {
-        this.extendedValue = value;
+    public static ExchangeReturnEnum fromValue(String v) {
+        for (ExchangeReturnEnum c: ExchangeReturnEnum.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

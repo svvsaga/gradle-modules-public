@@ -32,25 +32,25 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "LengthCharacteristic", propOrder = {
     "comparisonOperator",
     "vehicleLength",
-    "lengthCharacteristicExtension"
+    "_LengthCharacteristicExtension"
 })
 public class LengthCharacteristic {
 
     @XmlElement(required = true)
-    protected ComparisonOperatorEnum comparisonOperator;
+    protected _ComparisonOperatorEnum comparisonOperator;
     protected float vehicleLength;
     @XmlElement(name = "_lengthCharacteristicExtension")
-    protected ExtensionType lengthCharacteristicExtension;
+    protected _ExtensionType _LengthCharacteristicExtension;
 
     /**
      * Gets the value of the comparisonOperator property.
      * 
      * @return
      *     possible object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public ComparisonOperatorEnum getComparisonOperator() {
+    public _ComparisonOperatorEnum getComparisonOperator() {
         return comparisonOperator;
     }
 
@@ -59,10 +59,10 @@ public class LengthCharacteristic {
      * 
      * @param value
      *     allowed object is
-     *     {@link ComparisonOperatorEnum }
+     *     {@link _ComparisonOperatorEnum }
      *     
      */
-    public void setComparisonOperator(ComparisonOperatorEnum value) {
+    public void setComparisonOperator(_ComparisonOperatorEnum value) {
         this.comparisonOperator = value;
     }
 
@@ -83,27 +83,27 @@ public class LengthCharacteristic {
     }
 
     /**
-     * Gets the value of the lengthCharacteristicExtension property.
+     * Gets the value of the _LengthCharacteristicExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getLengthCharacteristicExtension() {
-        return lengthCharacteristicExtension;
+    public _ExtensionType get_LengthCharacteristicExtension() {
+        return _LengthCharacteristicExtension;
     }
 
     /**
-     * Sets the value of the lengthCharacteristicExtension property.
+     * Sets the value of the _LengthCharacteristicExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setLengthCharacteristicExtension(ExtensionType value) {
-        this.lengthCharacteristicExtension = value;
+    public void set_LengthCharacteristicExtension(_ExtensionType value) {
+        this._LengthCharacteristicExtension = value;
     }
 
 }

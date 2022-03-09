@@ -38,8 +38,8 @@ import jakarta.xml.bind.annotation.XmlType;
 public class VmsPictogramDisplayArea {
 
     protected Boolean synchronizedSequencingWithTextPages;
-    protected List<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> vmsPictogram;
-    protected ExtensionType vmsPictogramDisplayAreaExtension;
+    protected List<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> vmsPictogram;
+    protected _ExtensionType vmsPictogramDisplayAreaExtension;
 
     /**
      * Gets the value of the synchronizedSequencingWithTextPages property.
@@ -83,13 +83,13 @@ public class VmsPictogramDisplayArea {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
+     * {@link _VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram }
      * 
      * 
      */
-    public List<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> getVmsPictogram() {
+    public List<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram> getVmsPictogram() {
         if (vmsPictogram == null) {
-            vmsPictogram = new ArrayList<VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram>();
+            vmsPictogram = new ArrayList<_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram>();
         }
         return this.vmsPictogram;
     }
@@ -99,10 +99,10 @@ public class VmsPictogramDisplayArea {
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getVmsPictogramDisplayAreaExtension() {
+    public _ExtensionType getVmsPictogramDisplayAreaExtension() {
         return vmsPictogramDisplayAreaExtension;
     }
 
@@ -111,10 +111,10 @@ public class VmsPictogramDisplayArea {
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setVmsPictogramDisplayAreaExtension(ExtensionType value) {
+    public void setVmsPictogramDisplayAreaExtension(_ExtensionType value) {
         this.vmsPictogramDisplayAreaExtension = value;
     }
 

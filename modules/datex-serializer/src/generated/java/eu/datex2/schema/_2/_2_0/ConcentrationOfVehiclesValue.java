@@ -41,7 +41,7 @@ public class ConcentrationOfVehiclesValue
     @XmlElement(required = true)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger concentrationOfVehicles;
-    protected ExtensionType concentrationOfVehiclesValueExtension;
+    protected _ExtensionType concentrationOfVehiclesValueExtension;
 
     /**
      * Gets the value of the concentrationOfVehicles property.
@@ -72,10 +72,10 @@ public class ConcentrationOfVehiclesValue
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getConcentrationOfVehiclesValueExtension() {
+    public _ExtensionType getConcentrationOfVehiclesValueExtension() {
         return concentrationOfVehiclesValueExtension;
     }
 
@@ -84,10 +84,10 @@ public class ConcentrationOfVehiclesValue
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setConcentrationOfVehiclesValueExtension(ExtensionType value) {
+    public void setConcentrationOfVehiclesValueExtension(_ExtensionType value) {
         this.concentrationOfVehiclesValueExtension = value;
     }
 

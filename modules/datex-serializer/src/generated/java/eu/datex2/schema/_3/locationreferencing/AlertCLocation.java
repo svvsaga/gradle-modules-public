@@ -1,8 +1,8 @@
 
 package eu.datex2.schema._3.locationreferencing;
 
-import eu.datex2.schema._3.common.ExtensionType;
 import eu.datex2.schema._3.common.MultilingualString;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "AlertCLocation", propOrder = {
     "alertCLocationName",
     "specificLocation",
-    "alertCLocationExtension"
+    "_AlertCLocationExtension"
 })
 public class AlertCLocation {
 
@@ -43,7 +43,7 @@ public class AlertCLocation {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int specificLocation;
     @XmlElement(name = "_alertCLocationExtension")
-    protected ExtensionType alertCLocationExtension;
+    protected _ExtensionType _AlertCLocationExtension;
 
     /**
      * Gets the value of the alertCLocationName property.
@@ -86,27 +86,27 @@ public class AlertCLocation {
     }
 
     /**
-     * Gets the value of the alertCLocationExtension property.
+     * Gets the value of the _AlertCLocationExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getAlertCLocationExtension() {
-        return alertCLocationExtension;
+    public _ExtensionType get_AlertCLocationExtension() {
+        return _AlertCLocationExtension;
     }
 
     /**
-     * Sets the value of the alertCLocationExtension property.
+     * Sets the value of the _AlertCLocationExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setAlertCLocationExtension(ExtensionType value) {
-        this.alertCLocationExtension = value;
+    public void set_AlertCLocationExtension(_ExtensionType value) {
+        this._AlertCLocationExtension = value;
     }
 
 }

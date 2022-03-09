@@ -4,7 +4,7 @@ package eu.datex2.schema._3.situation;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import eu.datex2.schema._3.common.ExtensionType;
+import eu.datex2.schema._3.common._ExtensionType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -37,15 +37,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "MaintenanceVehicles", propOrder = {
     "numberOfMaintenanceVehicles",
     "maintenanceVehicleActions",
-    "maintenanceVehiclesExtension"
+    "_MaintenanceVehiclesExtension"
 })
 public class MaintenanceVehicles {
 
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger numberOfMaintenanceVehicles;
-    protected List<MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
+    protected List<_MaintenanceVehicleActionsEnum> maintenanceVehicleActions;
     @XmlElement(name = "_maintenanceVehiclesExtension")
-    protected ExtensionType maintenanceVehiclesExtension;
+    protected _ExtensionType _MaintenanceVehiclesExtension;
 
     /**
      * Gets the value of the numberOfMaintenanceVehicles property.
@@ -89,39 +89,39 @@ public class MaintenanceVehicles {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MaintenanceVehicleActionsEnum }
+     * {@link _MaintenanceVehicleActionsEnum }
      * 
      * 
      */
-    public List<MaintenanceVehicleActionsEnum> getMaintenanceVehicleActions() {
+    public List<_MaintenanceVehicleActionsEnum> getMaintenanceVehicleActions() {
         if (maintenanceVehicleActions == null) {
-            maintenanceVehicleActions = new ArrayList<MaintenanceVehicleActionsEnum>();
+            maintenanceVehicleActions = new ArrayList<_MaintenanceVehicleActionsEnum>();
         }
         return this.maintenanceVehicleActions;
     }
 
     /**
-     * Gets the value of the maintenanceVehiclesExtension property.
+     * Gets the value of the _MaintenanceVehiclesExtension property.
      * 
      * @return
      *     possible object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public ExtensionType getMaintenanceVehiclesExtension() {
-        return maintenanceVehiclesExtension;
+    public _ExtensionType get_MaintenanceVehiclesExtension() {
+        return _MaintenanceVehiclesExtension;
     }
 
     /**
-     * Sets the value of the maintenanceVehiclesExtension property.
+     * Sets the value of the _MaintenanceVehiclesExtension property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExtensionType }
+     *     {@link _ExtensionType }
      *     
      */
-    public void setMaintenanceVehiclesExtension(ExtensionType value) {
-        this.maintenanceVehiclesExtension = value;
+    public void set_MaintenanceVehiclesExtension(_ExtensionType value) {
+        this._MaintenanceVehiclesExtension = value;
     }
 
 }

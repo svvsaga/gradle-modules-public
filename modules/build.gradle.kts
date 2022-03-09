@@ -19,7 +19,7 @@ val ktorVersion = "1.6.5"
 val arrowVersion = "1.0.1"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
-val serializationVersion = "1.3.1"
+val serializationVersion = "1.3.2"
 val functionsVersion = "1.0.4"
 val gcpLibrariesBomVersion = "24.0.0"
 
@@ -82,7 +82,7 @@ subprojects {
         testRuntimeOnly("org.junit.jupiter", "junit-jupiter-engine", jUnitVersion)
 
         constraints {
-            implementation("org.jetbrains.kotlin", "kotlin-reflect", kotlinVersion)
+            api("org.jetbrains.kotlin", "kotlin-reflect", kotlinVersion)
             api("org.jetbrains.kotlinx", "kotlinx-datetime", kotlinxDateTimeVersion)
             api("org.jetbrains.kotlinx", "kotlinx-coroutines-core", kotlinxCoroutinesVersion)
             api("org.jetbrains.kotlinx", "kotlinx-serialization-properties", serializationVersion)

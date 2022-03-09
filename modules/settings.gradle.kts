@@ -12,7 +12,6 @@ include("gcp-bigquery")
 include("gcp-functions")
 include("gcp-storage")
 include("testing-gcp")
-include("testing-datex")
 include("shared-testfactory")
 
 pluginManagement {

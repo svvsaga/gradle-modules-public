@@ -8,6 +8,7 @@ import arrow.core.right
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorContentOfExchangeElementNotComplete
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorDuplicateUniqueValue
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorNewStrekningerHasModelBaseVersion3
+import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorAngleInDegrees
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorExchangeInformationElementsLacksBaseVersion
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorTargetClassOfObjectReferenceIsNotValid
 import no.vegvesen.saga.modules.shared.Logging
@@ -40,6 +41,10 @@ object RecoverableDatex3ValidationExceptions {
     // Datex 3 files use a different namespace prefix for situation schema
     const val errorTargetClassOfObjectReferenceIsNotValid =
         "Attribute 'targetClass' has a fixed value of 'sit:SituationRecord'"
+
+    // Some Vegvær Datex 3 files use degrees of 360 while only 359 is supported
+    const val errorAngleInDegrees =
+        "cvc-maxInclusive-valid: Value '360' is not facet-valid with respect to maxInclusive '359' for type 'AngleInDegrees'"
 }
 
 class DatexValidator : Logging {
@@ -100,6 +105,7 @@ class DatexValidator : Logging {
             is SAXParseException -> when {
                 exception.localizedMessage.startsWith(errorExchangeInformationElementsLacksBaseVersion) -> DatexVersion.DATEX_3.right()
                 exception.localizedMessage.contains(errorTargetClassOfObjectReferenceIsNotValid) -> DatexVersion.DATEX_3.right()
+                exception.localizedMessage.startsWith(errorAngleInDegrees) -> DatexVersion.DATEX_3.right()
                 else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)
             }
             else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)

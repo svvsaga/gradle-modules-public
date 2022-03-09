@@ -6,10 +6,11 @@ import arrow.core.rightIfNotNull
 import no.vegvesen.saga.modules.shared.ContentType
 
 class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
-
     class File(val bytes: ByteArray, val metadata: FileMetadata)
 
-    val files = mutableMapOf<StoragePath, File>()
+    private val files = mutableMapOf<StoragePath, File>()
+
+    fun clearFiles() = files.clear()
 
     override suspend fun deleteFile(storagePath: StoragePath): Either<Throwable, Boolean> =
         (files.remove(storagePath) != null).right()
@@ -71,7 +72,7 @@ class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
             .map { files[to] = File(it.bytes.clone(), it.metadata); to }
 
     override suspend fun listFiles(bucket: String): Either<Throwable, List<FileMetadata>> =
-        files.values.map { it.metadata }.right()
+        files.filter { it.key.bucketName == bucket }.values.map { it.metadata }.right()
 
     override suspend fun getFileMetadata(storagePath: StoragePath): Either<BlobStorageError, FileMetadata> =
         files[storagePath]?.metadata.rightIfNotNull { BlobStorageError.BlobNotFound(storagePath) }

@@ -49,7 +49,9 @@ allprojects {
 catalog {
     versionCatalog {
         subprojects.forEach {
-            alias(it.name).to(it.group.toString(), it.name).version(modulesVersion)
+            library(it.name, it.group.toString(), it.name).version {
+                strictly(modulesVersion)
+            }
         }
     }
 }

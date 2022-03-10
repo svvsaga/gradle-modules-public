@@ -35,20 +35,18 @@ fun createResourceStorage(): BlobStorage {
     }
 }
 
-interface BlobStorageBrowserWriter : BlobStorage, BlobStorageBrowser
-
-fun BlobStorageBrowserWriter.withSuccessfulCopyFile(
+fun BlobStorage.withSuccessfulCopyFile(
     bucket: String = "some-bucket",
     path: String = "some-processed-file"
 ) {
     coEvery { copyFile(any(), any()) } returns StoragePath(bucket, path).right()
 }
 
-fun BlobStorageBrowserWriter.withSuccessfulDeleteFile() {
+fun BlobStorage.withSuccessfulDeleteFile() {
     coEvery { deleteFile(any()) } returns true.right()
 }
 
-private fun BlobStorageBrowserWriter.withFailingGetFileMetadata() {
+fun BlobStorageBrowser.withFailingGetFileMetadata() {
     coEvery { getFileMetadata(any()) } answers {
         BlobStorageError.BlobException(
             "Fetching metadata failed",
@@ -56,3 +54,5 @@ private fun BlobStorageBrowserWriter.withFailingGetFileMetadata() {
         ).left()
     }
 }
+
+interface BlobStorageBrowserWriter : BlobStorage, BlobStorageBrowser

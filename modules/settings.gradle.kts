@@ -27,3 +27,4 @@ pluginManagement {
 }
 include("datex-serializer")
 include("datex-schemas")
+include("datex-poller")

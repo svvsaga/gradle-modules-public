@@ -1,5 +1,15 @@
 // Touch to trigger build.
 
+buildscript {
+    repositories {
+        maven("https://oss.sonatype.org/content/repositories/snapshots")
+    }
+
+    dependencies {
+        classpath("io.arrow-kt.analysis.kotlin:io.arrow-kt.analysis.kotlin.gradle.plugin:2.0.2-SNAPSHOT")
+    }
+}
+
 plugins {
     kotlin("jvm") version "1.6.10"
     kotlin("plugin.serialization") version "1.6.10"
@@ -68,6 +78,7 @@ subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "kotlinx-serialization")
     apply(plugin = "com.adarshr.test-logger")
+    apply(plugin = "io.arrow-kt.analysis.kotlin")
 
     useIntegrationTests()
 

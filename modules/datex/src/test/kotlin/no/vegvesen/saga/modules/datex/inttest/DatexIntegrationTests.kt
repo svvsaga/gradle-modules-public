@@ -112,7 +112,7 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                     file.contentEncoding shouldBe "gzip"
                 }
 
-                test("when processor is created with gziped=false, deadletter files are not gzipped") {
+                test("when processor is created with gzipped=false, deadletter files are not gzipped") {
                     val mockHttpClient = HttpClient(MockEngine) {
                         engine {
                             addHandler {

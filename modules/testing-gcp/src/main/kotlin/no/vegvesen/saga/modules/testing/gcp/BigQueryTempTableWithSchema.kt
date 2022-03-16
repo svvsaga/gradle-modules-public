@@ -1,15 +1,15 @@
 package no.vegvesen.saga.modules.testing.gcp
 
 import com.google.cloud.bigquery.BigQuery
-import com.google.cloud.bigquery.TableId
+import com.google.cloud.bigquery.Schema
+import com.google.cloud.bigquery.StandardTableDefinition
+import com.google.cloud.bigquery.TableInfo
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
-import no.vegvesen.saga.modules.gcp.bigquery.copyTableSchema
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 
-@Deprecated("Use BigQueryTempTableClone instead")
-class BigQueryTempDatasetClone(
+class BigQueryTempTableWithSchema(
     bigQuery: BigQuery,
-    private val copyFromTableId: TableId,
+    private val schema: Schema,
     datasetPrefix: String = "temp",
     tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU
@@ -17,19 +17,19 @@ class BigQueryTempDatasetClone(
 
     constructor(
         projectId: String,
-        copyFromTableId: TableId,
+        schema: Schema,
         datasetPrefix: String = "temp",
         tablePrefix: String = "temp",
         location: BigQueryLocation = BigQueryLocation.EU
     ) : this(
         createBigQuery(projectId, location),
-        copyFromTableId,
+        schema,
         datasetPrefix,
         tablePrefix,
         location
     )
 
     override fun beforeTest() {
-        bigQuery.copyTableSchema(copyFromTableId, TableId.of(tempDataset, tempTable))
+        bigQuery.create(TableInfo.of(tableId, StandardTableDefinition.of(schema)))
     }
 }

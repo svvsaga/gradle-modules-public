@@ -6,8 +6,7 @@ import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
 import no.vegvesen.saga.modules.gcp.bigquery.copyTableSchema
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 
-@Deprecated("Use BigQueryTempTableClone instead")
-class BigQueryTempDatasetClone(
+class BigQueryTempTableClone(
     bigQuery: BigQuery,
     private val copyFromTableId: TableId,
     datasetPrefix: String = "temp",

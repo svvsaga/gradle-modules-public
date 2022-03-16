@@ -1,9 +1,6 @@
-repositories {
-    mavenCentral()
-}
 dependencies {
     api("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("ch.qos.logback:logback-classic:1.2.10")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
     implementation("org.jetbrains.kotlinx", "kotlinx-serialization-properties")
 
     testImplementation(project(":testing"))

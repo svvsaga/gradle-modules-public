@@ -1,10 +1,9 @@
-package no.vegvesen.saga.modules.shared.serializers.test
+package no.vegvesen.saga.modules.shared.serializers
 
 import io.kotest.matchers.shouldBe
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import no.vegvesen.saga.modules.shared.SqlPoint
-import no.vegvesen.saga.modules.shared.serializers.SqlPointSerializer
 import org.junit.jupiter.api.Test
 
 @ExperimentalSerializationApi

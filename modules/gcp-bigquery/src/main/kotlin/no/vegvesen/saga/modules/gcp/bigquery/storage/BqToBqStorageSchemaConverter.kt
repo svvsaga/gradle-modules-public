@@ -25,12 +25,16 @@ import com.google.common.collect.ImmutableMap
 
 /**
  * Converts structure from BigQuery client to BigQueryStorage client
+ * Copied from https://github.com/googleapis/java-bigquerystorage/blob/main/samples/snippets/src/main/java/com/example/bigquerystorage/BqToBqStorageSchemaConverter.java and converted to kotlin
  */
 object BqToBqStorageSchemaConverter {
     private val BQTableSchemaModeMap = ImmutableMap.of(
-        Field.Mode.NULLABLE, TableFieldSchema.Mode.NULLABLE,
-        Field.Mode.REPEATED, TableFieldSchema.Mode.REPEATED,
-        Field.Mode.REQUIRED, TableFieldSchema.Mode.REQUIRED
+        Field.Mode.NULLABLE,
+        TableFieldSchema.Mode.NULLABLE,
+        Field.Mode.REPEATED,
+        TableFieldSchema.Mode.REPEATED,
+        Field.Mode.REQUIRED,
+        TableFieldSchema.Mode.REQUIRED
     )
     private val BQTableSchemaTypeMap = ImmutableMap.Builder<StandardSQLTypeName, TableFieldSchema.Type>()
         .put(StandardSQLTypeName.BOOL, TableFieldSchema.Type.BOOL)
@@ -40,12 +44,12 @@ object BqToBqStorageSchemaConverter {
         .put(StandardSQLTypeName.FLOAT64, TableFieldSchema.Type.DOUBLE)
         .put(StandardSQLTypeName.GEOGRAPHY, TableFieldSchema.Type.GEOGRAPHY)
         .put(StandardSQLTypeName.INT64, TableFieldSchema.Type.INT64)
+        .put(StandardSQLTypeName.JSON, TableFieldSchema.Type.JSON)
         .put(StandardSQLTypeName.NUMERIC, TableFieldSchema.Type.NUMERIC)
         .put(StandardSQLTypeName.STRING, TableFieldSchema.Type.STRING)
         .put(StandardSQLTypeName.STRUCT, TableFieldSchema.Type.STRUCT)
         .put(StandardSQLTypeName.TIME, TableFieldSchema.Type.TIME)
-        .put(StandardSQLTypeName.TIMESTAMP, TableFieldSchema.Type.TIMESTAMP)
-        .build()
+        .put(StandardSQLTypeName.TIMESTAMP, TableFieldSchema.Type.TIMESTAMP).build()
 
     /**
      * Converts from BigQuery client Table Schema to bigquery storage API Table Schema.
@@ -73,9 +77,12 @@ object BqToBqStorageSchemaConverter {
         if (mutableField.mode == null) {
             mutableField = mutableField.toBuilder().setMode(Field.Mode.NULLABLE).build()
         }
-        result.mode = BQTableSchemaModeMap[mutableField.mode]
+        result.mode =
+            BQTableSchemaModeMap[mutableField.mode]
+                ?: throw Exception("Unexpected mode '${mutableField.mode}' for field '${field.name}'")
         result.name = mutableField.name
         result.type = BQTableSchemaTypeMap[mutableField.type.standardType]
+            ?: throw Exception("Unexpected type '${mutableField.type.standardType}' for field '${field.name}'")
         if (mutableField.description != null) {
             result.description = mutableField.description
         }

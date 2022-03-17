@@ -1,11 +1,9 @@
-package no.vegvesen.saga.modules.shared.serializers.test
+package no.vegvesen.saga.modules.shared.serializers
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import no.vegvesen.saga.modules.shared.serializers.replacePrimitive
-import no.vegvesen.saga.modules.shared.serializers.withoutNulls
 
 /**
 Note: these must be top level for now to workaround:

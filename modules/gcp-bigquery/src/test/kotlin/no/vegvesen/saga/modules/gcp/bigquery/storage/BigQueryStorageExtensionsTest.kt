@@ -15,13 +15,11 @@ import no.vegvesen.saga.modules.gcp.bigquery.fetchRowCount
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.gcp.BigQueryTempTableWithSchema
-import kotlin.time.ExperimentalTime
 
 @Serializable
 data class Row(val id: String)
 
 @ExperimentalSerializationApi
-@ExperimentalTime
 @Tags(IntegrationTest)
 class BigQueryStorageExtensionsTest : FunSpec({
 

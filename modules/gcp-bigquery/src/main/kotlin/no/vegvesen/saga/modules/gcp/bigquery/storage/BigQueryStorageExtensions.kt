@@ -19,12 +19,10 @@ import kotlinx.serialization.SerializationStrategy
 import kotlinx.serialization.protobuf.ProtoBuf
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryStreamException
 import no.vegvesen.saga.modules.shared.allLefts
-import kotlin.time.ExperimentalTime
 
 /**
  * Use BigQuery Storage Write API to write documents to the default stream.
  */
-@ExperimentalTime
 @ExperimentalSerializationApi
 suspend fun <T> BigQuery.writeDocumentsToDefaultStream(
     documents: Collection<T>,

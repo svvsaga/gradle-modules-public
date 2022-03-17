@@ -1,4 +1,4 @@
-package no.vegvesen.saga.modules.shared.serializers.test
+package no.vegvesen.saga.modules.shared.serializers
 
 import io.kotest.assertions.throwables.shouldThrowAny
 import io.kotest.core.spec.style.FunSpec

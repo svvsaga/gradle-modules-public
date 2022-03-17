@@ -9,6 +9,9 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlin.time.Duration.Companion.microseconds
+import kotlin.time.Duration.Companion.nanoseconds
+import kotlin.time.Duration.Companion.seconds
 
 /**
  * Serializes kotlinx.datetime.Instant to int64 of microseconds. Useful for BigQuery Storage Write API.
@@ -18,14 +21,14 @@ import kotlinx.serialization.encoding.Encoder
 object TimestampInstantSerializer : KSerializer<Instant> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("Instant", PrimitiveKind.LONG)
     override fun serialize(encoder: Encoder, value: Instant) {
-        val epochMicroSeconds = value.epochSeconds * 1_000_000 + value.nanosecondsOfSecond / 1000
-        encoder.encodeLong(epochMicroSeconds)
+        val duration = value.epochSeconds.seconds + value.nanosecondsOfSecond.nanoseconds
+        encoder.encodeLong(duration.inWholeMicroseconds)
     }
 
     override fun deserialize(decoder: Decoder): Instant {
-        val epochMicroSeconds = decoder.decodeLong()
-        val seconds = epochMicroSeconds / 1_000_000
-        val nanoSeconds = (epochMicroSeconds % 1_000_000) * 1000
+        val duration = decoder.decodeLong().microseconds
+        val seconds = duration.inWholeSeconds
+        val nanoSeconds = (duration - seconds.seconds).inWholeNanoseconds
         return Instant.fromEpochSeconds(seconds, nanoSeconds)
     }
 }

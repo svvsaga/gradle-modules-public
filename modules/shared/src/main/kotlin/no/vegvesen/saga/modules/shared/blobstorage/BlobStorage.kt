@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.shared.blobstorage
 
 import arrow.core.Either
+import arrow.core.flatMap
 import no.vegvesen.saga.modules.shared.ContentType
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
@@ -107,6 +108,9 @@ interface BlobStorage {
     suspend fun checkIfFileExists(storagePath: StoragePath): Either<Throwable, Boolean>
     suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath>
     suspend fun deleteFile(storagePath: StoragePath): Either<Throwable, Boolean>
+
+    suspend fun moveFile(from: StoragePath, to: StoragePath): Either<Throwable, Unit> =
+        copyFile(from, to).flatMap { deleteFile(from) }.map { }
 }
 
 fun Either<BlobStorageError, ByteArray>.mapBlobStorageErrorToThrowable(path: StoragePath) = this.mapLeft {

@@ -8,7 +8,6 @@ import io.kotest.core.spec.Spec
 import io.kotest.core.test.TestCase
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
-import org.testcontainers.shaded.org.bouncycastle.asn1.x500.style.RFC4519Style
 import java.util.UUID
 
 abstract class BigQueryTempTable(
@@ -39,7 +38,6 @@ abstract class BigQueryTempTable(
                 DatasetInfo.newBuilder(tempDataset).setLocation(location.name)
                     .setLabels(mapOf("temporary" to "true")).build()
             )
-            RFC4519Style.l
         }
     }
 

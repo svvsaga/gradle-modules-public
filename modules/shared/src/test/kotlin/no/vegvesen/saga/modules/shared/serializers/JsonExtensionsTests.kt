@@ -23,6 +23,9 @@ private data class Person(
 @Serializable
 private data class Product(val id: String)
 
+@Serializable
+private data class Numbers(val long: Long, val double: Double)
+
 class JsonExtensionsTests : StringSpec({
     val person = Person("Ola", "Normann", middleName = null, addresses = listOf(Address("Norgesvegen", null)))
     val encoded = Json.encodeToJsonElement(Person.serializer(), person)
@@ -45,6 +48,16 @@ class JsonExtensionsTests : StringSpec({
 
         encodedProduct.replacePrimitive() shouldBe mapOf(
             "id" to "01234"
+        )
+    }
+
+    "replaces long and double correctly" {
+        val encodedProduct =
+            Json.encodeToJsonElement(Numbers.serializer(), Numbers(123456789000000000, 123456789000000000.0))
+
+        encodedProduct.replacePrimitive() shouldBe mapOf(
+            "long" to 123456789000000000,
+            "double" to 123456789000000000.0
         )
     }
 })

@@ -23,7 +23,7 @@ fun JsonElement.replacePrimitive(): Any = when (this) {
     is JsonPrimitive -> if (isString) contentOrNull
         ?: throw Exception("Unsupported JsonPrimitive: $this")
     else
-        booleanOrNull ?: doubleOrNull ?: longOrNull ?: contentOrNull
+        booleanOrNull ?: longOrNull ?: doubleOrNull ?: contentOrNull
             ?: throw Exception("Unsupported JsonPrimitive: $this")
 }
 

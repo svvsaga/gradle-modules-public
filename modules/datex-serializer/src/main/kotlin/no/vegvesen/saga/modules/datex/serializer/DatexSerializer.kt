@@ -5,10 +5,12 @@ import eu.datex2.schema._2._2_0.D2LogicalModel
 import eu.datex2.schema._3.messagecontainer.MessageContainer
 import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.JAXBElement
+import kotlinx.datetime.Instant
 import no.vegvesen.saga.modules.datex.DatexVersion
 import no.vegvesen.saga.modules.datex.findDatexVersion
 import no.vegvesen.saga.modules.shared.XmlString
-import java.io.BufferedInputStream
+import no.vegvesen.saga.modules.shared.extensions.bufferAndPeek
+import no.vegvesen.saga.modules.shared.toKotlinInstant
 import java.io.InputStream
 
 class DatexSerializer {
@@ -20,35 +22,33 @@ class DatexSerializer {
 
         fun deserialize(stream: InputStream): Either<Throwable, DatexResult> = Either.catchAndFlatten {
 
-            val (bufferedStream, firstBytes) = bufferAndPeek(stream)
+            val (bufferedStream, firstBytes) = stream.bufferAndPeek()
             val xml = XmlString(firstBytes.toString(Charsets.UTF_8).trim())
 
-            findDatexVersion(xml).map {
-                when (it) {
+            findDatexVersion(xml).map { version ->
+                when (version) {
                     DatexVersion.DATEX_2 -> {
                         val result = datex2JAXBContext.createUnmarshaller().unmarshal(bufferedStream) as JAXBElement<*>
-                        Datex2Result(result.value as D2LogicalModel)
+                        (result.value as D2LogicalModel).let {
+                            Datex2Result(it, it.payloadPublication.publicationTime.toKotlinInstant())
+                        }
                     }
                     DatexVersion.DATEX_3 -> {
                         val result = datex3JAXBContext.createUnmarshaller().unmarshal(bufferedStream)
-                        Datex3Result(result as MessageContainer)
+                        (result as MessageContainer).let {
+                            Datex3Result(it, it.payload.first().publicationTime.toKotlinInstant())
+                        }
                     }
                 }
             }
         }
-
-        private fun bufferAndPeek(stream: InputStream, bytesToPeek: Int = 1024): Pair<BufferedInputStream, ByteArray> {
-            val buffered = BufferedInputStream(stream)
-            buffered.mark(bytesToPeek)
-            val firstBytes = buffered.readNBytes(bytesToPeek)
-            buffered.reset()
-            return Pair(buffered, firstBytes)
-        }
     }
 }
 
-sealed class DatexResult
+sealed class DatexResult {
+    abstract val publicationTime: Instant
+}
 
-data class Datex3Result(val root: MessageContainer) : DatexResult()
+data class Datex3Result(val root: MessageContainer, override val publicationTime: Instant) : DatexResult()
 
-data class Datex2Result(val root: D2LogicalModel) : DatexResult()
+data class Datex2Result(val root: D2LogicalModel, override val publicationTime: Instant) : DatexResult()

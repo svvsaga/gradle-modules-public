@@ -72,7 +72,7 @@ fun generateJsonSchemaForSimpleTypes() =
         .joinToString()
         .let { "[ $it ]" }
 
-private fun combineTypes(types: Array<StandardSQLTypeName>, modes: Array<SimpleMode>) = types // TODO: Filter
+private fun combineTypes(types: Array<StandardSQLTypeName>, modes: Array<SimpleMode>) = types
     .flatMap { type ->
         modes.map { mode ->
             Pair(type, mode)

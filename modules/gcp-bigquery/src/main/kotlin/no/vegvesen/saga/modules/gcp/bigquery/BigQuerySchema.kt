@@ -16,7 +16,7 @@ object BigQuerySchema {
 
     /**
      * This is used to fetch the non-public static method "fromPb" of the Schema class,
-     * which parses a TableSchema to a Schema (which is exactly what we need)
+     * which parses a TableSchema to a Schema (which is exactly what we need).
      */
     private val SCHEMA_FROM_PB: Method = Arrays.stream(Schema::class.java.declaredMethods)
         .filter { method -> "fromPb" == method.name }.findFirst().get()

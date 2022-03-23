@@ -6,8 +6,7 @@ import com.google.api.services.bigquery.model.TableSchema
 import com.google.cloud.bigquery.Schema
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Arrays
 
 // This functionality has been requested to the Google team: https://github.com/googleapis/google-cloud-java/issues/2753
 // which is also where this solution is taken from: https://github.com/googleapis/google-cloud-java/issues/2753#issuecomment-506387352

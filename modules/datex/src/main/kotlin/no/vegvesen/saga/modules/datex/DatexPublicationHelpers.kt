@@ -17,7 +17,7 @@ fun createProcessedPublicationPath(
 ): StoragePath = publicationTime.toLocalDateTime(TimeZone.UTC).let { utcTime ->
     StoragePath(
         processedBucket,
-        "$dataSource/${utcTime.year}_${utcTime.month.toString().padStart(2, '0')}/${
+        "$dataSource/${utcTime.year}_${utcTime.month.value.toString().padStart(2, '0')}/${
         utcTime.toString().replace(':', '-')
         }.xml"
     )

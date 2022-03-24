@@ -55,9 +55,7 @@ open class DatexClient(
                             )
                         }
                         .mapLeft {
-                            if (it is DatexError.MissingPublicationTimeError &&
-                                content.value.contains("<deliveryBreak>true</deliveryBreak>")
-                            )
+                            if (it is DatexError.MissingPublicationTimeError && containsDeliveryBreak(content))
                                 DatexError.DeliveryBreak
                             else
                                 it
@@ -78,6 +76,10 @@ open class DatexClient(
                 else -> ex
             }
         }
+
+    private fun containsDeliveryBreak(content: XmlString) =
+        content.value.contains(DeliveryBreakSubstrings.Datex2) ||
+            content.value.contains(DeliveryBreakSubstrings.Datex3)
 
     private suspend fun runHttpGetRequest(
         onlyModificationsSince: Instant?
@@ -118,5 +120,10 @@ open class DatexClient(
                         ).left()
                     }
                 }
+
+        object DeliveryBreakSubstrings {
+            const val Datex2 = "<deliveryBreak>true</deliveryBreak>"
+            const val Datex3 = """<value lang="en-us">Delivery break</value>"""
+        }
     }
 }

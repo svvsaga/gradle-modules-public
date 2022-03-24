@@ -140,9 +140,32 @@ class DatexClientTests : AnnotationSpec() {
     }
 
     @Test
-    suspend fun `fails with DeliveryBreak if deliveryBreak is returned from Datex`() {
+    suspend fun `fails with DeliveryBreak if deliveryBreak is returned from Datex II 2`() {
         val deliveryBreakXml = """
             <d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><deliveryBreak>true</deliveryBreak><supplierIdentification><country>no</country><nationalIdentifier>Statens Vegvesen</nationalIdentifier></supplierIdentification></exchange></d2LogicalModel>
+        """.trim()
+        val httpClient = HttpClient(MockEngine) {
+            engine {
+                addHandler {
+                    respond(deliveryBreakXml)
+                }
+            }
+        }
+        val testSubject = DatexClient(
+            httpClient,
+            DatexSettings(testUrl, testUsername, testPassword),
+            datexValidator
+        )
+
+        val result = testSubject.read()
+
+        result shouldBeLeft DatexError.DeliveryBreak
+    }
+
+    @Test
+    suspend fun `fails with DeliveryBreak if deliveryBreak is returned from Datex II 3`() {
+        val deliveryBreakXml = """
+            <ns2:messageContainer xmlns="http://datex2.eu/schema/3/common" xmlns:ns2="http://datex2.eu/schema/3/messageContainer" xmlns:ns3="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns4="http://datex2.eu/schema/3/informationManagement" xmlns:ns5="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns6="http://datex2.eu/schema/3/cctvExtension" xmlns:ns7="http://datex2.eu/schema/3/locationReferencing" xmlns:ns8="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns9="http://datex2.eu/schema/3/extension" xmlns:ns10="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns11="http://datex2.eu/schema/3/vms" xmlns:ns12="http://datex2.eu/schema/3/situation" modelBaseVersion="3"><ns2:exchangeInformation><ns3:dynamicInformation><ns3:exchangeStatus _extendedValue="online"/><ns3:returnInformation><ns3:returnStatus _extendedValue="fail"/><ns3:returnStatusReason><values><value lang="en-us">Delivery break</value></values></ns3:returnStatusReason></ns3:returnInformation></ns3:dynamicInformation></ns2:exchangeInformation></ns2:messageContainer>
         """.trim()
         val httpClient = HttpClient(MockEngine) {
             engine {

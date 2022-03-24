@@ -10,9 +10,7 @@ pluginManagement {
     }
 }
 
-enableFeaturePreview("VERSION_CATALOGS")
-
-val modulesVersion = "7.0.0"
+val modulesVersion = "16.7.5"
 
 dependencyResolutionManagement {
     repositories {

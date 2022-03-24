@@ -41,7 +41,7 @@ A new version will automatically be published when a push or PR merge is done wi
 ```kotlin
 // Temporary just to test new snapshot releases
 repositories {
-    mavenLocal()
+  mavenLocal()
 }
 ```
 
@@ -51,17 +51,17 @@ repositories {
 val modulesVersion = "1.3.0-SNAPSHOT" // Temporary while testing
 
 dependencyResolutionManagement {
-    repositories {
-        mavenLocal() // NOTE: only use for testing local snapshot versions during development
-        maven {
-            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-        }
+  repositories {
+    mavenLocal() // NOTE: only use for testing local snapshot versions during development
+    maven {
+      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
     }
-    versionCatalogs {
-        create("saga") {
-            from("no.vegvesen.saga.modules:modules:$modulesVersion")
-        }
+  }
+  versionCatalogs {
+    create("saga") {
+      from("no.vegvesen.saga.modules:modules:$modulesVersion")
     }
+  }
 }
 ```
 
@@ -83,13 +83,13 @@ In `settings.gradle.kts`:
 
 ```kotlin
 pluginManagement {
-    repositories {
-        maven {
-            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-        }
-        mavenCentral()
-        gradlePluginPortal()
+  repositories {
+    maven {
+      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
     }
+    mavenCentral()
+    gradlePluginPortal()
+  }
 }
 ```
 
@@ -97,11 +97,11 @@ In `build.gradle.kts`:
 
 ```kotlin
 plugins {
-    id("saga-build") version "1.3.10"
+  id("saga-build") version "7.0.0"
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.3.9")
+  implementation("no.vegvesen.saga.modules:shared:17.0.0")
 }
 ```
 
@@ -111,17 +111,17 @@ In `build.gradle.kts`:
 
 ```kotlin
 repositories {
-    maven {
-        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-    }
-    mavenCentral()
-    maven("https://oss.sonatype.org/content/repositories/snapshots")
-    maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
-    maven("https://jitpack.io")
+  maven {
+    url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+  }
+  mavenCentral()
+  maven("https://oss.sonatype.org/content/repositories/snapshots")
+  maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
+  maven("https://jitpack.io")
 }
 
 dependencies {
-    implementation("no.vegvesen.saga.modules:shared:1.3.9")
+  implementation("no.vegvesen.saga.modules:shared:17.0.0")
 }
 ```
 
@@ -135,16 +135,16 @@ your `settings.gradle.kts`:
 enableFeaturePreview("VERSION_CATALOGS")
 
 dependencyResolutionManagement {
-    repositories {
-        maven {
-            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-        }
+  repositories {
+    maven {
+      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
     }
-    versionCatalogs {
-        create("saga") {
-            from("no.vegvesen.saga.modules:modules:1.3.9")
-        }
+  }
+  versionCatalogs {
+    create("saga") {
+      from("no.vegvesen.saga.modules:modules:17.0.0")
     }
+  }
 }
 ```
 
@@ -152,8 +152,8 @@ Then you can add dependencies using the strongly typed `saga` extension:
 
 ```kotlin
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation(saga.shared)
+  implementation(kotlin("stdlib-jdk8"))
+  implementation(saga.shared)
 }
 ```
 
@@ -165,10 +165,10 @@ To refer to catalogs in the `subprojects` and `allprojects` block, you must pref
 
 ```kotlin
 subprojects {
-    dependencies {
-        implementation(rootProject.saga.shared)
-        testImplementation(rootProject.saga.testing)
-    }
+  dependencies {
+    implementation(rootProject.saga.shared)
+    testImplementation(rootProject.saga.testing)
+  }
 }
 ```
 

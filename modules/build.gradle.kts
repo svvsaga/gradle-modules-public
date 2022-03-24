@@ -48,8 +48,13 @@ allprojects {
 
 catalog {
     versionCatalog {
-        subprojects.forEach {
-            library(it.name, it.group.toString(), it.name).version {
+        subprojects.forEach { project ->
+            library(
+                // Eliminate nested levels (e.g. saga.gcp.functions), because IntelliJ can't handle it; instead we use saga.gcpfunctions
+                project.name.replace("-", ""),
+                project.group.toString(),
+                project.name
+            ).version {
                 strictly(modulesVersion)
             }
         }

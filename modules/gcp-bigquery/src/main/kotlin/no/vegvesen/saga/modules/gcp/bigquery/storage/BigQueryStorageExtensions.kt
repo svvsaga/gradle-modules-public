@@ -93,19 +93,22 @@ private suspend fun <T> BigQuery.writeJson(
         writer.writeJson(documents, serializer, chunkSize, parallelization)
     }
 
+data class ExponentialBackoffSettings(val duration: Duration, val limit: Duration)
+
 @ExperimentalTime
 suspend fun <T> JsonStreamWriter.writeJson(
     documents: Collection<T>,
     serializer: SerializationStrategy<T>,
     chunkSize: Int = 200,
     parallelization: Int = Runtime.getRuntime().availableProcessors(),
+    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 10.seconds),
     onRetry: (exception: ApiException, delay: Duration) -> Unit = { _, _ -> }
 ) = documents.chunked(chunkSize)
     .parTraverseN(Dispatchers.IO, parallelization) { chunk ->
         Either.catch {
-            Schedule.exponential<Throwable>(1.seconds)
+            Schedule.exponential<Throwable>(backoffSettings.duration)
                 .check { input: Throwable, output ->
-                    if (input is ApiException && input.isRetryable && output < 10.seconds) {
+                    if (input is ApiException && input.isRetryable && output < backoffSettings.limit) {
                         onRetry(input, output)
                         true
                     } else {

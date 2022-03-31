@@ -7,10 +7,12 @@ import com.google.cloud.bigquery.storage.v1.JsonStreamWriter
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.collections.shouldNotBeEmpty
 import io.mockk.every
 import io.mockk.mockk
 import no.vegvesen.saga.modules.testing.TestLogger
 import org.slf4j.LoggerFactory
+import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 
 @kotlinx.serialization.Serializable
@@ -40,5 +42,23 @@ class BigQueryStorageExtensionsTest : FunSpec({
         }.shouldBeEmpty()
 
         testLogger.events.filter { it.level == Level.WARN } shouldHaveSize 3
+    }
+
+    test("writeJson fails when time limit has been reached") {
+        val testSubject = mockk<JsonStreamWriter>()
+        val testLogger = TestLogger()
+
+        every { testSubject.append(any()).get() } throws exception
+
+        val result = testSubject.writeJson(
+            listOf(Foo(1)),
+            Foo.serializer(),
+            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 0.1.seconds)
+        ) { exception, delay ->
+            logger.warn("Failure, delaying $delay", exception)
+        }
+
+        result.shouldNotBeEmpty()
+        testLogger.events.shouldNotBeEmpty()
     }
 })

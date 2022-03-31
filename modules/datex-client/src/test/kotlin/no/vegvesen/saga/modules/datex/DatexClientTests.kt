@@ -70,12 +70,12 @@ class DatexClientTests : AnnotationSpec() {
         }
     }
 
+    private val validDatexSettings = DatexSettings(testUrl, testUsername, testPassword)
+
     @Test
     suspend fun `DatexRepository should always give Datex document when running read() without date param with correct auth`() {
         val repository = DatexClient(
-            ktorTestHttpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
+            ktorTestHttpClient, validDatexSettings, datexValidator
         )
         val result = repository.read()
 
@@ -87,9 +87,7 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `DatexRepository should return auth error when not authenticating correctly with Datex service`() {
         val repository = DatexClient(
-            ktorTestHttpClient,
-            DatexSettings(testUrl, "wrong username", "wrong password"),
-            datexValidator
+            ktorTestHttpClient, DatexSettings(testUrl, "wrong username", "wrong password"), datexValidator
         )
         val result = repository.read()
 
@@ -101,11 +99,8 @@ class DatexClientTests : AnnotationSpec() {
         val testDate = testDateLastModified.plusSeconds(10)
 
         val result = DatexClient(
-            ktorTestHttpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
-        )
-            .read(testDate)
+            ktorTestHttpClient, validDatexSettings, datexValidator
+        ).read(testDate)
 
         result.shouldBeLeft().shouldBeTypeOf<DatexError.NoNewDataAvailable>()
     }
@@ -115,11 +110,8 @@ class DatexClientTests : AnnotationSpec() {
         val testDate = testDateLastModified.minusSeconds(10)
 
         val result = DatexClient(
-            ktorTestHttpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
-        )
-            .read(testDate)
+            ktorTestHttpClient, validDatexSettings, datexValidator
+        ).read(testDate)
 
         result shouldBeRightAnd {
             it.document shouldBe testDatexDocument
@@ -129,9 +121,7 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `DatexRepository should give last modified date when header available`() {
         val result = DatexClient(
-            ktorTestHttpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
+            ktorTestHttpClient, validDatexSettings, datexValidator
         ).read()
 
         result shouldBeRightAnd {
@@ -144,17 +134,39 @@ class DatexClientTests : AnnotationSpec() {
         val deliveryBreakXml = """
             <d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><deliveryBreak>true</deliveryBreak><supplierIdentification><country>no</country><nationalIdentifier>Statens Vegvesen</nationalIdentifier></supplierIdentification></exchange></d2LogicalModel>
         """.trim()
-        val httpClient = HttpClient(MockEngine) {
-            engine {
-                addHandler {
-                    respond(deliveryBreakXml)
-                }
-            }
-        }
+        val httpClient = httpClientResponds(deliveryBreakXml)
         val testSubject = DatexClient(
-            httpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
+            httpClient, validDatexSettings, datexValidator
+        )
+
+        val result = testSubject.read()
+
+        result shouldBeLeft DatexError.DeliveryBreak
+    }
+
+    @Test
+    suspend fun `fails with DeliveryBreak no matter the namespace of the value in Datex v3`() {
+        val deliveryBreakXml = """
+            This XML file does not appear to have any style information associated with it. The document tree is shown below.
+            <ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns9="http://datex2.eu/schema/3/vms" xmlns:ns10="http://datex2.eu/schema/3/situation" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+            <ns11:exchangeInformation>
+            <dynamicInformation>
+            <exchangeStatus _extendedValue="online"/>
+            <returnInformation>
+            <returnStatus _extendedValue="fail"/>
+            <returnStatusReason>
+            <ns2:values>
+            <ns2:value lang="en-us">Delivery break</ns2:value>
+            </ns2:values>
+            </returnStatusReason>
+            </returnInformation>
+            </dynamicInformation>
+            </ns11:exchangeInformation>
+            </ns11:messageContainer>
+        """.trimIndent()
+        val httpClient = httpClientResponds(deliveryBreakXml)
+        val testSubject = DatexClient(
+            httpClient, validDatexSettings, datexValidator
         )
 
         val result = testSubject.read()
@@ -167,22 +179,22 @@ class DatexClientTests : AnnotationSpec() {
         val deliveryBreakXml = """
             <ns2:messageContainer xmlns="http://datex2.eu/schema/3/common" xmlns:ns2="http://datex2.eu/schema/3/messageContainer" xmlns:ns3="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns4="http://datex2.eu/schema/3/informationManagement" xmlns:ns5="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns6="http://datex2.eu/schema/3/cctvExtension" xmlns:ns7="http://datex2.eu/schema/3/locationReferencing" xmlns:ns8="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns9="http://datex2.eu/schema/3/extension" xmlns:ns10="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns11="http://datex2.eu/schema/3/vms" xmlns:ns12="http://datex2.eu/schema/3/situation" modelBaseVersion="3"><ns2:exchangeInformation><ns3:dynamicInformation><ns3:exchangeStatus _extendedValue="online"/><ns3:returnInformation><ns3:returnStatus _extendedValue="fail"/><ns3:returnStatusReason><values><value lang="en-us">Delivery break</value></values></ns3:returnStatusReason></ns3:returnInformation></ns3:dynamicInformation></ns2:exchangeInformation></ns2:messageContainer>
         """.trim()
-        val httpClient = HttpClient(MockEngine) {
-            engine {
-                addHandler {
-                    respond(deliveryBreakXml)
-                }
-            }
-        }
+        val httpClient = httpClientResponds(deliveryBreakXml)
         val testSubject = DatexClient(
-            httpClient,
-            DatexSettings(testUrl, testUsername, testPassword),
-            datexValidator
+            httpClient, validDatexSettings, datexValidator
         )
 
         val result = testSubject.read()
 
         result shouldBeLeft DatexError.DeliveryBreak
+    }
+
+    private fun httpClientResponds(deliveryBreakXml: String): HttpClient = HttpClient(MockEngine) {
+        engine {
+            addHandler {
+                respond(deliveryBreakXml)
+            }
+        }
     }
 
     @Test

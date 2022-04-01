@@ -32,11 +32,10 @@ class GcsFunctionTest : FunSpec({
     val testFilename = "testFilename"
     val testMetaGen = "testMetaGen"
     val testTimeCreated = Date()
-    val testTimeUpdated = testTimeCreated
 
     val testException = Exception("Process failed in test")
 
-    val testGcsEvent = GcsEvent(testBucket, testFilename, testMetaGen, testTimeCreated, testTimeUpdated)
+    val testGcsEvent = GcsEvent(testBucket, testFilename, testMetaGen, testTimeCreated, testTimeCreated)
     val testStorageEvent = StorageEvent(testBucket, testFilename)
 
     test("Should not throw exception when process not failing") {

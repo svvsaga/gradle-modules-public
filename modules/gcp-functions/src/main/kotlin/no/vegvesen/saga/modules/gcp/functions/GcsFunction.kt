@@ -46,6 +46,7 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
                             kv("payload", payload),
                             kv("exception", throwable)
                         )
+                        throw throwable
                     }
             }
         }

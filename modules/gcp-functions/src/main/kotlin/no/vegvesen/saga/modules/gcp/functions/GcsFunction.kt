@@ -6,7 +6,7 @@ import com.google.cloud.functions.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.Logging
-import no.vegvesen.saga.modules.shared.blobstorage.BlobStorageError
+import no.vegvesen.saga.modules.shared.blobstorage.handleBlobNotFound
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.functions.StorageEvent
 import no.vegvesen.saga.modules.shared.functions.StorageFunction
@@ -35,7 +35,7 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
                     log().info("File is folder and processing of folders is disabled")
                 } else
                     try {
-                        process(StorageEvent(payload.bucket, payload.name)).getOrThrow()
+                        process(StorageEvent(payload.bucket, payload.name)).handleBlobNotFound().getOrThrow()
                         log().info(
                             "Processing of GCS event was successful",
                             kv("payload", payload)
@@ -46,10 +46,6 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
                             kv("payload", payload),
                             kv("exception", throwable)
                         )
-                        if (throwable !is BlobStorageError.BlobNotFound) {
-                            // Throw to enable retrying function processing
-                            throw throwable
-                        }
                     }
             }
         }

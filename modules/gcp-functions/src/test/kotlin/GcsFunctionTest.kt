@@ -112,7 +112,7 @@ class GcsFunctionTest : FunSpec({
             gcsFunction.accept(testGcsEvent, null)
         }
 
-        testLogger.events.shouldHaveSingleElement { it.level == Level.ERROR }
+        testLogger.events.shouldHaveSingleElement { it.level == Level.WARN }
     }
 
     context("Handling folder notifications") {

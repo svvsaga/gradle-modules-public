@@ -1,6 +1,9 @@
 package no.vegvesen.saga.modules.datex.serializer
 
 import arrow.core.Either
+import arrow.core.flatMap
+import arrow.core.left
+import arrow.core.right
 import eu.datex2.schema._2._2_0.D2LogicalModel
 import eu.datex2.schema._3.messagecontainer.MessageContainer
 import jakarta.xml.bind.JAXBContext
@@ -12,6 +15,8 @@ import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.extensions.bufferAndPeek
 import no.vegvesen.saga.modules.shared.toKotlinInstant
 import java.io.InputStream
+
+data class DeliveryBreakError(val version: DatexVersion) : Throwable("DeliveryBreak encountered")
 
 class DatexSerializer {
     companion object {
@@ -25,18 +30,22 @@ class DatexSerializer {
             val (bufferedStream, firstBytes) = stream.bufferAndPeek()
             val xml = XmlString(firstBytes.toString(Charsets.UTF_8).trim())
 
-            findDatexVersion(xml).map { version ->
+            findDatexVersion(xml).flatMap { version ->
                 when (version) {
                     DatexVersion.DATEX_2 -> {
                         val result = datex2JAXBContext.createUnmarshaller().unmarshal(bufferedStream) as JAXBElement<*>
                         (result.value as D2LogicalModel).let {
-                            Datex2Result(it, it.payloadPublication?.publicationTime?.toKotlinInstant())
+                            it.payloadPublication?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
+                                Datex2Result(it, publicationTime).right()
+                            } ?: DeliveryBreakError(DatexVersion.DATEX_2).left()
                         }
                     }
                     DatexVersion.DATEX_3 -> {
                         val result = datex3JAXBContext.createUnmarshaller().unmarshal(bufferedStream)
                         (result as MessageContainer).let {
-                            Datex3Result(it, it.payload.firstOrNull()?.publicationTime?.toKotlinInstant())
+                            it.payload.firstOrNull()?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
+                                Datex3Result(it, publicationTime).right()
+                            } ?: DeliveryBreakError(DatexVersion.DATEX_3).left()
                         }
                     }
                 }

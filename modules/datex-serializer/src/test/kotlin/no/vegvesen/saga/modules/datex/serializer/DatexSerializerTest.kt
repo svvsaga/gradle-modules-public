@@ -4,6 +4,7 @@ import eu.datex2.schema._3.locationreferencing.IsoNamedArea
 import eu.datex2.schema._3.locationreferencing.LinearLocation
 import eu.datex2.schema._3.locationreferencing.LocationGroupByList
 import eu.datex2.schema._3.situation.SituationPublication
+import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
@@ -42,5 +43,39 @@ class DatexSerializerTest : FunSpec({
             namedArea.shouldBeTypeOf<IsoNamedArea>()
             namedArea.subdivisionCode shouldBe "34"
         }
+    }
+
+    test("handles deliverybreak for Datex 2") {
+        val deliveryBreakXml = """
+            <d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><deliveryBreak>true</deliveryBreak><supplierIdentification><country>no</country><nationalIdentifier>Statens Vegvesen</nationalIdentifier></supplierIdentification></exchange></d2LogicalModel>
+        """.trim()
+
+        val result = DatexSerializer.deserialize(deliveryBreakXml.toXmlString())
+
+        result.shouldBeRight()
+    }
+
+    test("handles deliverybreak for Datex 3") {
+        val deliveryBreakXml = """
+            <ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns9="http://datex2.eu/schema/3/vms" xmlns:ns10="http://datex2.eu/schema/3/situation" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+            <ns11:exchangeInformation>
+            <dynamicInformation>
+            <exchangeStatus _extendedValue="online"/>
+            <returnInformation>
+            <returnStatus _extendedValue="fail"/>
+            <returnStatusReason>
+            <ns2:values>
+            <ns2:value lang="en-us">Delivery break</ns2:value>
+            </ns2:values>
+            </returnStatusReason>
+            </returnInformation>
+            </dynamicInformation>
+            </ns11:exchangeInformation>
+            </ns11:messageContainer>
+        """.trimIndent()
+
+        val result = DatexSerializer.deserialize(deliveryBreakXml.toXmlString())
+
+        result.shouldBeRight()
     }
 })

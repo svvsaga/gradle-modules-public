@@ -1,0 +1,18 @@
+<ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation"
+                       xmlns:ns2="http://datex2.eu/schema/3/common"
+                       xmlns:ns11="http://datex2.eu/schema/3/messageContainer"
+                       modelBaseVersion="3">
+  <ns11:exchangeInformation>
+    <dynamicInformation>
+      <exchangeStatus _extendedValue="online"/>
+      <returnInformation>
+        <returnStatus _extendedValue="fail"/>
+        <returnStatusReason>
+          <ns2:values>
+            <ns2:value lang="en-us">Delivery break</ns2:value>
+          </ns2:values>
+        </returnStatusReason>
+      </returnInformation>
+    </dynamicInformation>
+  </ns11:exchangeInformation>
+</ns11:messageContainer>

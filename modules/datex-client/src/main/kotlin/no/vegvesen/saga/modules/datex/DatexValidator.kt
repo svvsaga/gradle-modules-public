@@ -36,7 +36,7 @@ object RecoverableDatex2ValidationExceptions {
 object RecoverableDatex3ValidationExceptions {
     // Some older Datex 3 files lack required modelBaseVersion for exchangeInformation
     const val errorExchangeInformationElementsLacksBaseVersion =
-        "cvc-complex-type.4: Attribute 'modelBaseVersion' must appear on element 'ns2:exchangeInformation'"
+        "cvc-complex-type.4: Attribute 'modelBaseVersion' must appear on element"
 
     // Datex 3 files use a different namespace prefix for situation schema
     const val errorTargetClassOfObjectReferenceIsNotValid =

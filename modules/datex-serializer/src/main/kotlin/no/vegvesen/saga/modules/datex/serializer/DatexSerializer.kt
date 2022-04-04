@@ -30,13 +30,13 @@ class DatexSerializer {
                     DatexVersion.DATEX_2 -> {
                         val result = datex2JAXBContext.createUnmarshaller().unmarshal(bufferedStream) as JAXBElement<*>
                         (result.value as D2LogicalModel).let {
-                            Datex2Result(it, it.payloadPublication.publicationTime.toKotlinInstant())
+                            Datex2Result(it, it.payloadPublication?.publicationTime?.toKotlinInstant())
                         }
                     }
                     DatexVersion.DATEX_3 -> {
                         val result = datex3JAXBContext.createUnmarshaller().unmarshal(bufferedStream)
                         (result as MessageContainer).let {
-                            Datex3Result(it, it.payload.first().publicationTime.toKotlinInstant())
+                            Datex3Result(it, it.payload.firstOrNull()?.publicationTime?.toKotlinInstant())
                         }
                     }
                 }
@@ -46,9 +46,9 @@ class DatexSerializer {
 }
 
 sealed class DatexResult {
-    abstract val publicationTime: Instant
+    abstract val publicationTime: Instant?
 }
 
-data class Datex3Result(val root: MessageContainer, override val publicationTime: Instant) : DatexResult()
+data class Datex3Result(val root: MessageContainer, override val publicationTime: Instant?) : DatexResult()
 
-data class Datex2Result(val root: D2LogicalModel, override val publicationTime: Instant) : DatexResult()
+data class Datex2Result(val root: D2LogicalModel, override val publicationTime: Instant?) : DatexResult()

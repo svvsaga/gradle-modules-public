@@ -147,7 +147,6 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `fails with DeliveryBreak no matter the namespace of the value in Datex v3`() {
         val deliveryBreakXml = """
-            This XML file does not appear to have any style information associated with it. The document tree is shown below.
             <ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns9="http://datex2.eu/schema/3/vms" xmlns:ns10="http://datex2.eu/schema/3/situation" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
             <ns11:exchangeInformation>
             <dynamicInformation>

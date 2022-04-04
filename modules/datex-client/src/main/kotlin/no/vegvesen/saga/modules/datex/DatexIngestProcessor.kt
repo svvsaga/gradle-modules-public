@@ -14,13 +14,12 @@ import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
 import java.time.Instant
 
 class DatexIngestProcessor(
-    private val datexClient: DatexClient,
-    private val datexStorage: DatexStorageRepository,
+    private val poller: DatexPoller,
     private val deadLetterStorage: DeadLetterStorage,
     private val gzipped: Boolean = true
 ) : SimpleProcessor, Logging {
     override suspend fun process(): Either<SimpleFunctionError, Unit> =
-        pollDatex(DatexPollerDeps(datexClient, datexStorage), gzipped).handleErrorWith { error ->
+        poller.pollDatex(gzipped).handleErrorWith { error ->
             when (error) {
                 is DatexError.DeliveryBreak -> {
                     log().warn("DeliveryBreak encountered")

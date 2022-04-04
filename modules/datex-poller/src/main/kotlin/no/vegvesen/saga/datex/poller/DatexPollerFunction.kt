@@ -2,6 +2,7 @@ package no.vegvesen.saga.datex.poller
 
 import no.vegvesen.saga.modules.datex.DatexClient
 import no.vegvesen.saga.modules.datex.DatexIngestProcessor
+import no.vegvesen.saga.modules.datex.DatexPoller
 import no.vegvesen.saga.modules.datex.DatexSettings
 import no.vegvesen.saga.modules.datex.DatexStorageRepository
 import no.vegvesen.saga.modules.datex.DatexValidator
@@ -65,7 +66,8 @@ abstract class DatexPollerFunction(
                 blobStorage
             )
             val deadLetterStorage = DeadLetterStorage(blobStorage, deadLetterBucket)
-            return DatexIngestProcessor(datexClient, datexStorage, deadLetterStorage)
+            val datexPoller = DatexPoller(datexClient, datexStorage)
+            return DatexIngestProcessor(datexPoller, deadLetterStorage)
         }
     }
 }

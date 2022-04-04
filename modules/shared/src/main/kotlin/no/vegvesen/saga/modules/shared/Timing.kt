@@ -3,7 +3,6 @@ package no.vegvesen.saga.modules.shared
 import org.slf4j.Logger
 
 object Timing {
-
     inline fun <T> withLoggingTimer(logger: Logger, description: String, fn: () -> T): T {
         val start = System.currentTimeMillis()
         logger.info("Timer: '$description', starting.")
@@ -18,4 +17,6 @@ object Timing {
         )
         return result
     }
+
+    inline fun <T> Logger.measureTime(description: String, fn: () -> T) = withLoggingTimer(this, description, fn)
 }

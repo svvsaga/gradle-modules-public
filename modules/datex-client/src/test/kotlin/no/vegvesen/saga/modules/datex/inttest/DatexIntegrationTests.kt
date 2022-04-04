@@ -16,6 +16,7 @@ import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
 import no.vegvesen.saga.modules.datex.DatexClient
 import no.vegvesen.saga.modules.datex.DatexIngestProcessor
+import no.vegvesen.saga.modules.datex.DatexPoller
 import no.vegvesen.saga.modules.datex.DatexSettings
 import no.vegvesen.saga.modules.datex.DatexStorageRepository
 import no.vegvesen.saga.modules.datex.DatexValidator
@@ -61,9 +62,11 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
 
             fun createProcessor(datexClient: DatexClient, gzipped: Boolean = true): DatexIngestProcessor =
                 DatexIngestProcessor(
-                    datexClient,
-                    DatexStorageRepository(
-                        ingestBucket, "datasource", kvStore, blobStorage
+                    DatexPoller(
+                        datexClient,
+                        DatexStorageRepository(
+                            ingestBucket, "datasource", kvStore, blobStorage
+                        )
                     ),
                     DeadLetterStorage(blobStorage, deadLetterBucket), gzipped = gzipped
                 )

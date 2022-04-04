@@ -6,54 +6,48 @@ import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
 import no.vegvesen.saga.modules.shared.ContentType
-import no.vegvesen.saga.modules.shared.Timing.withLoggingTimer
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import no.vegvesen.saga.modules.shared.Logging
+import no.vegvesen.saga.modules.shared.Timing.measureTime
+import no.vegvesen.saga.modules.shared.log
 
-data class DatexPollerDeps(
-    val datex: DatexClient,
-    val datexStorage: DatexStorageRepository,
-)
+class DatexPoller(
+    private val datexClient: DatexClient,
+    private val datexStorage: DatexStorageRepository,
+) : Logging {
+    val logger = log()
+    suspend fun pollDatex(gzipped: Boolean = false): Either<DatexPollerError, Unit> =
+        either<DatexPollerError, Unit> {
+            val lastModified = logger.measureTime("Fetching last modified") {
+                datexStorage.getLastModifiedTime()
+            }.bind()
 
-val logger: Logger = LoggerFactory.getLogger("DatexPoller")
+            logger.info("Polling Datex with lastModified: $lastModified")
+            val datexResponse = logger.measureTime("Fetching xml file from Datex") {
+                datexClient.read(lastModified)
+            }.bind()
 
-suspend fun pollDatex(deps: DatexPollerDeps, gzipped: Boolean = false): Either<DatexPollerError, Unit> =
-    either<DatexPollerError, Unit> {
-        val lastModified =
-            withLoggingTimer(logger, "Fetching last modified") { deps.datexStorage.getLastModifiedTime() }.bind()
+            val publicationTime = datexResponse.publicationTime
+            logger.info("Current Datex is published $publicationTime.")
 
-        logger.info("Polling Datex with lastModified: $lastModified")
-        val datexResponse =
-            withLoggingTimer(logger, "Fetching xml file from Datex") { deps.datex.read(lastModified) }.bind()
+            logger.info("Saving publication from $publicationTime.")
+            logger.measureTime("Saving Datex xml file") {
+                datexStorage.saveObject(datexResponse.document, publicationTime, gzipped, ContentType.Xml)
+            }.bind()
 
-        val publicationTime = datexResponse.publicationTime
-        logger.info("Current Datex is published $publicationTime.")
-
-        logger.info("Saving publication from $publicationTime.")
-        withLoggingTimer(logger, "Saving Datex xml file") {
-            deps.datexStorage.saveObject(
-                datexResponse.document,
-                publicationTime,
-                gzipped,
-                ContentType.Xml
-            )
-        }.bind()
-
-        if (datexResponse.lastModified != null) {
-            withLoggingTimer(
-                logger,
-                "Saving last modified time"
-            ) { deps.datexStorage.saveLastModifiedTime(datexResponse.lastModified) }.bind()
-        } else {
-            logger.error("No last modified time given.")
-            Unit.right().bind()
-        }
-    }.handleErrorWith { err ->
-        when (err) {
-            is DatexError.NoNewDataAvailable -> {
-                logger.info("No new document available")
-                Unit.right()
+            if (datexResponse.lastModified != null) {
+                logger.measureTime("Saving last modified time") {
+                    datexStorage.saveLastModifiedTime(datexResponse.lastModified)
+                }.bind()
+            } else {
+                logger.error("No last modified time given.")
             }
-            else -> err.left()
+        }.handleErrorWith { err ->
+            when (err) {
+                is DatexError.NoNewDataAvailable -> {
+                    logger.info("No new document available")
+                    Unit.right()
+                }
+                else -> err.left()
+            }
         }
-    }
+}

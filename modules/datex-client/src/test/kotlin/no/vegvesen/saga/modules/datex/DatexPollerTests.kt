@@ -26,11 +26,8 @@ class DatexPollerTests : AnnotationSpec(), Logging {
 
     private val datexMock = mockk<DatexClient>()
     private val datexStorageRepositoryMock = mockk<DatexStorageRepository>()
-    private val deps = DatexPollerDeps(datexMock, datexStorageRepositoryMock)
 
-    private val poller = suspend {
-        pollDatex(deps)
-    }
+    private val poller = DatexPoller(datexMock, datexStorageRepositoryMock)
 
     private fun addStdSuccessMock() {
         coEvery { datexMock.read() } returns Either.Right(
@@ -57,7 +54,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         addStdSuccessMock()
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(Either.Right(null))
 
-        poller()
+        poller.pollDatex()
 
         coVerify {
             datexMock.read()
@@ -70,7 +67,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         addStdSuccessMock()
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(Either.Right(null))
 
-        poller()
+        poller.pollDatex()
 
         coVerify {
             datexMock.read()
@@ -84,7 +81,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(testOldLastModifiedDate.right())
         coEvery { datexMock.read(testOldLastModifiedDate) } returns Either.Left(DatexError.NoNewDataAvailable)
 
-        poller()
+        poller.pollDatex()
 
         coVerify(inverse = true) {
             datexStorageRepositoryMock.saveObject(testDatexDocument, any(), any(), ContentType.Xml)
@@ -104,7 +101,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
             )
         )
 
-        poller()
+        poller.pollDatex()
 
         coVerify {
             datexMock.read(testOldLastModifiedDate)
@@ -116,7 +113,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(Either.Right(null))
         addStdSuccessMock()
 
-        poller()
+        poller.pollDatex()
 
         coVerify {
             datexMock.read(null)
@@ -130,7 +127,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         addStdSuccessMock()
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(testException.left())
 
-        val res = poller()
+        val res = poller.pollDatex()
 
         res.shouldBeLeft(testException)
     }
@@ -159,7 +156,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
         coEvery { datexStorageRepositoryMock.getLastModifiedTime() }.returns(Either.Right(null))
         coEvery { datexStorageRepositoryMock.saveLastModifiedTime(any()) } returns testException.left()
 
-        val res = poller()
+        val res = poller.pollDatex()
 
         res.shouldBeLeft(testException)
     }

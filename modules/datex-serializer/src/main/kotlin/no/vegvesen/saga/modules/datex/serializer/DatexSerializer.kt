@@ -55,9 +55,9 @@ class DatexSerializer {
 }
 
 sealed class DatexResult {
-    abstract val publicationTime: Instant?
+    abstract val publicationTime: Instant
 }
 
-data class Datex3Result(val root: MessageContainer, override val publicationTime: Instant?) : DatexResult()
+data class Datex3Result(val root: MessageContainer, override val publicationTime: Instant) : DatexResult()
 
-data class Datex2Result(val root: D2LogicalModel, override val publicationTime: Instant?) : DatexResult()
+data class Datex2Result(val root: D2LogicalModel, override val publicationTime: Instant) : DatexResult()

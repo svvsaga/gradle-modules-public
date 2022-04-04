@@ -82,4 +82,8 @@ class DatexValidatorTests : StringSpec({
     "valid Datex 3 situations is validated successfully" {
         fileIsValid("GetSituations_Datex3.xml", DatexVersion.DATEX_3)
     }
+
+    "Datex 3 deliverybreak is handled even though it fails schema" {
+        fileIsValid("GetSituations_Datex3_deliverybreak.xml", DatexVersion.DATEX_3)
+    }
 })

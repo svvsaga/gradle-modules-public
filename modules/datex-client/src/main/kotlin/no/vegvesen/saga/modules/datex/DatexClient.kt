@@ -80,9 +80,6 @@ open class DatexClient(
             }
         }
 
-    private fun containsDeliveryBreak(content: String) =
-        content.contains(DeliveryBreakSubstrings.Datex2) || DeliveryBreakSubstrings.Datex3Regex.containsMatchIn(content)
-
     private suspend fun runHttpGetRequest(
         onlyModificationsSince: Instant?
     ): Either<DatexError, HttpResponse> = Either.catch {
@@ -122,11 +119,5 @@ open class DatexClient(
                         ).left()
                     }
                 }
-
-        object DeliveryBreakSubstrings {
-            const val Datex2 = "<deliveryBreak>true</deliveryBreak>"
-            val Datex3Regex = Regex("""<\w*:?value lang="en-us">Delivery break</\w*:?value>""")
-            const val Datex3 = """<value lang="en-us">Delivery break</value>"""
-        }
     }
 }

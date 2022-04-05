@@ -10,13 +10,17 @@ import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.JAXBElement
 import kotlinx.datetime.Instant
 import no.vegvesen.saga.modules.datex.DatexVersion
+import no.vegvesen.saga.modules.datex.containsDeliveryBreak
 import no.vegvesen.saga.modules.datex.findDatexVersion
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.extensions.bufferAndPeek
 import no.vegvesen.saga.modules.shared.toKotlinInstant
 import java.io.InputStream
 
-data class DeliveryBreakError(val version: DatexVersion) : Throwable("DeliveryBreak encountered")
+data class DeliveryBreakError(val version: DatexVersion) : Exception("DeliveryBreak encountered")
+
+data class MissingPayloadError(val version: DatexVersion, val document: XmlString) :
+    Exception("Datex publication is missing payload")
 
 class DatexSerializer {
     companion object {
@@ -37,7 +41,8 @@ class DatexSerializer {
                         (result.value as D2LogicalModel).let {
                             it.payloadPublication?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
                                 Datex2Result(it, publicationTime).right()
-                            } ?: DeliveryBreakError(DatexVersion.DATEX_2).left()
+                            } ?: if (containsDeliveryBreak(xml.value)) DeliveryBreakError(DatexVersion.DATEX_2).left()
+                            else MissingPayloadError(DatexVersion.DATEX_2, xml).left()
                         }
                     }
                     DatexVersion.DATEX_3 -> {
@@ -45,7 +50,8 @@ class DatexSerializer {
                         (result as MessageContainer).let {
                             it.payload.firstOrNull()?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
                                 Datex3Result(it, publicationTime).right()
-                            } ?: DeliveryBreakError(DatexVersion.DATEX_3).left()
+                            } ?: if (containsDeliveryBreak(xml.value)) DeliveryBreakError(DatexVersion.DATEX_3).left()
+                            else MissingPayloadError(DatexVersion.DATEX_3, xml).left()
                         }
                     }
                 }

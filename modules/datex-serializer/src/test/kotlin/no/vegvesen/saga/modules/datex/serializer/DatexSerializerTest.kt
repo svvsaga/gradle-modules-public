@@ -79,4 +79,25 @@ class DatexSerializerTest : FunSpec({
 
         result.shouldBeLeftOfType<DeliveryBreakError>().version.shouldBe(DatexVersion.DATEX_3)
     }
+
+    test("fails on missing payload for Datex 2") {
+        val xml = """
+            <d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"></d2LogicalModel>
+        """.trim()
+
+        val result = DatexSerializer.deserialize(xml.toXmlString())
+
+        result.shouldBeLeftOfType<MissingPayloadError>().version.shouldBe(DatexVersion.DATEX_2)
+    }
+
+    test("fails on missing payload for Datex 3") {
+        val xml = """
+            <ns11:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/extension" xmlns:ns8="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns9="http://datex2.eu/schema/3/vms" xmlns:ns10="http://datex2.eu/schema/3/situation" xmlns:ns11="http://datex2.eu/schema/3/messageContainer" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+            </ns11:messageContainer>
+        """.trimIndent()
+
+        val result = DatexSerializer.deserialize(xml.toXmlString())
+
+        result.shouldBeLeftOfType<MissingPayloadError>().version.shouldBe(DatexVersion.DATEX_3)
+    }
 })

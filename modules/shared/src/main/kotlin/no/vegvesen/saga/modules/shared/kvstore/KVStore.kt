@@ -15,15 +15,16 @@ interface KVStore {
     suspend fun putString(key: String, value: String): Either<KVStoreError, Unit>
     suspend fun getString(key: String): Either<KVStoreError, String>
 
-    suspend fun getStringOrNull(key: String): Either<KVStoreError, String?> =
+    suspend fun getStringOrNull(key: String): Either<Throwable, String?> =
         getString(key).handleErrorWith {
             when (it) {
                 is KVStoreError.ValueNotFound -> null.right()
-                else -> it.left()
+                is KVStoreError.KVStoreException -> it.exception.left()
+                is KVStoreError.EmptyKey -> Exception("Invalid key").left()
             }
         }
 
-    suspend fun getStringOrDefault(key: String, default: String): Either<KVStoreError, String> =
+    suspend fun getStringOrDefault(key: String, default: String): Either<Throwable, String> =
         getStringOrNull(key).map { it ?: default }
 
     fun validateKey(key: String): Either<KVStoreError, String> =

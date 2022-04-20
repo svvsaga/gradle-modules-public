@@ -1,6 +1,7 @@
 package no.vegvesen.saga.modules.shared.kvstore
 
 import arrow.core.Either
+import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
 
@@ -13,6 +14,17 @@ sealed class KVStoreError {
 interface KVStore {
     suspend fun putString(key: String, value: String): Either<KVStoreError, Unit>
     suspend fun getString(key: String): Either<KVStoreError, String>
+
+    suspend fun getStringOrNull(key: String): Either<KVStoreError, String?> =
+        getString(key).handleErrorWith {
+            when (it) {
+                is KVStoreError.ValueNotFound -> null.right()
+                else -> it.left()
+            }
+        }
+
+    suspend fun getStringOrDefault(key: String, default: String): Either<KVStoreError, String> =
+        getStringOrNull(key).map { it ?: default }
 
     fun validateKey(key: String): Either<KVStoreError, String> =
         if (key.isEmpty()) KVStoreError.EmptyKey.left() else key.right()

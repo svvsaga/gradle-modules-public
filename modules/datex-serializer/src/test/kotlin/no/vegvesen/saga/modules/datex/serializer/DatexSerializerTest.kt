@@ -16,7 +16,6 @@ import no.vegvesen.saga.modules.testing.shouldBeLeftOfType
 import no.vegvesen.saga.modules.testing.shouldBeRightOfType
 
 class DatexSerializerTest : FunSpec({
-
     test("can deserialize Datex 2 document") {
         val datex2Xml = loadStringResourceOrThrow("datex2-sample.xml")
 

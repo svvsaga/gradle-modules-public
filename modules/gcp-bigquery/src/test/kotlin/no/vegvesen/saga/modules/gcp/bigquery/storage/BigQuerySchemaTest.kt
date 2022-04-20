@@ -8,7 +8,6 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.inspectors.shouldForAny
 import io.kotest.matchers.shouldBe
 import no.vegvesen.saga.modules.gcp.bigquery.BigQuerySchema
-import java.lang.IllegalArgumentException
 
 val jsonSchemaForStructsAndArrays = """
 [{
@@ -67,9 +66,8 @@ fun fieldJson(type: StandardSQLTypeName, mode: SimpleMode) = """
 
 fun generateJsonSchemaForSimpleTypes() =
     combineTypes(StandardSQLTypeName.values(), SimpleMode.values())
-        .filter { it.first != StandardSQLTypeName.ARRAY || it.first != StandardSQLTypeName.STRUCT }
-        .map { (type, mode) -> fieldJson(type, mode) }
-        .joinToString()
+        .filter { it.first != StandardSQLTypeName.ARRAY && it.first != StandardSQLTypeName.STRUCT }
+        .joinToString { (type, mode) -> fieldJson(type, mode) }
         .let { "[ $it ]" }
 
 private fun combineTypes(types: Array<StandardSQLTypeName>, modes: Array<SimpleMode>) = types
@@ -85,7 +83,7 @@ class BqQuerySchemaTest : FunSpec({
 
         val schema = BigQuerySchema.fromJsonSchema(jsonSchema)
 
-        schema.fields.size shouldBe 32
+        schema.fields.size shouldBe 28
         schema.fields.shouldForAny { it.mode == Field.Mode.REQUIRED && it.type == LegacySQLTypeName.STRING }
         schema.fields.shouldForAny { it.mode == Field.Mode.NULLABLE && it.type == LegacySQLTypeName.BOOLEAN }
     }

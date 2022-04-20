@@ -45,12 +45,12 @@ class BigQueryStorageExtensionsTest : FunSpec({
     }
 
     test("writeJson fails when time limit has been reached") {
-        val testSubject = mockk<JsonStreamWriter>()
+        val failingWriter = mockk<JsonStreamWriter>()
         val testLogger = TestLogger()
 
-        every { testSubject.append(any()).get() } throws exception
+        every { failingWriter.append(any()).get() } throws exception
 
-        val result = testSubject.writeJson(
+        val result = failingWriter.writeJson(
             listOf(Foo(1)),
             Foo.serializer(),
             backoffSettings = ExponentialBackoffSettings(0.1.seconds, 0.1.seconds)

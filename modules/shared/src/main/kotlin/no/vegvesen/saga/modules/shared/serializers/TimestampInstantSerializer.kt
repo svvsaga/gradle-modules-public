@@ -18,6 +18,7 @@ import kotlin.time.Duration.Companion.seconds
  */
 @ExperimentalSerializationApi
 @Serializer(forClass = Instant::class)
+@Deprecated("No longer necessary, as latest BQ Storage API supports writing timestamps as strings")
 object TimestampInstantSerializer : KSerializer<Instant> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("Instant", PrimitiveKind.LONG)
     override fun serialize(encoder: Encoder, value: Instant) {

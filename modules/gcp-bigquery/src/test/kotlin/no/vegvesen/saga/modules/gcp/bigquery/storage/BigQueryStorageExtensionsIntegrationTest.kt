@@ -1,6 +1,3 @@
-@file:Suppress("EXPERIMENTAL_API_USAGE") // Impossible to mark file annotations with annotations, so we ignore
-@file:UseSerializers(TimestampInstantSerializer::class)
-
 package no.vegvesen.saga.modules.gcp.bigquery.storage
 
 import com.google.cloud.bigquery.Field
@@ -14,14 +11,12 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.toJavaInstant
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.UseSerializers
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 import no.vegvesen.saga.modules.gcp.bigquery.fetchRowCount
 import no.vegvesen.saga.modules.gcp.bigquery.instantValue
 import no.vegvesen.saga.modules.gcp.bigquery.queryOf
 import no.vegvesen.saga.modules.shared.envOrThrow
-import no.vegvesen.saga.modules.shared.serializers.TimestampInstantSerializer
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.gcp.BigQueryTempTableWithSchema
 import kotlin.time.ExperimentalTime

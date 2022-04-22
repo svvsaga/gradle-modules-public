@@ -4,11 +4,12 @@ import arrow.core.Either
 import arrow.core.right
 import arrow.core.rightIfNotNull
 import no.vegvesen.saga.modules.shared.ContentType
+import java.util.concurrent.ConcurrentHashMap
 
 class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
     class File(val bytes: ByteArray, val metadata: FileMetadata)
 
-    private val files = mutableMapOf<StoragePath, File>()
+    private val files = ConcurrentHashMap<StoragePath, File>()
 
     fun clearFiles() = files.clear()
 

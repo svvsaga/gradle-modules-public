@@ -22,5 +22,5 @@ fun <T> parseQueryParameters(
 
 fun <T> parseJsonParameters(deserializer: DeserializationStrategy<T>, json: String): Either<Throwable, T> =
     Either.catch {
-        lenientJson.decodeFromString(deserializer, json)
+        lenientJson.decodeFromString(deserializer, json.let { it.ifBlank { "{}" } })
     }

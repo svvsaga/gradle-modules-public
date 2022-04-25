@@ -13,7 +13,7 @@
         </encoder>
     </appender>
     <appender name="test" class="no.vegvesen.saga.modules.testing.TestLogger"/>
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="test"/>
         <appender-ref ref="json"/>
     </root>

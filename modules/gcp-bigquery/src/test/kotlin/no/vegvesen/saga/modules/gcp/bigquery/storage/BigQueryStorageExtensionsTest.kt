@@ -53,12 +53,12 @@ class BigQueryStorageExtensionsTest : FunSpec({
         val result = failingWriter.writeJson(
             listOf(Foo(1)),
             Foo.serializer(),
-            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 0.1.seconds)
+            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 0.5.seconds)
         ) { exception, delay ->
             logger.warn("Failure, delaying $delay", exception)
         }
 
         result.shouldNotBeEmpty()
-        testLogger.events.shouldNotBeEmpty()
+        testLogger.events.filter { it.level == Level.WARN }.shouldNotBeEmpty()
     }
 })

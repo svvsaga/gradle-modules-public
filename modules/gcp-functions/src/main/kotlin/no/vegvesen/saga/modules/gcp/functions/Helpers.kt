@@ -11,7 +11,7 @@ import no.vegvesen.saga.modules.shared.kv
 import org.slf4j.Logger
 
 @ExperimentalSerializationApi
-fun <T> parseParameters(
+fun <T : Any> parseParameters(
     request: HttpRequest,
     deserializer: DeserializationStrategy<T>
 ): Either<ValidationException, T> =
@@ -29,6 +29,6 @@ fun Logger.httpRequest(request: HttpRequest) {
         kv("method", request.method),
         kv("uri", request.uri),
         kv("path", request.path),
-        kv("params", request.queryParameters)
+        kv("query", request.query)
     )
 }

@@ -12,13 +12,14 @@ import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.functions.UserInfo
 import no.vegvesen.saga.modules.shared.log
+import no.vegvesen.saga.modules.shared.v
 import java.net.HttpURLConnection.HTTP_BAD_REQUEST
 import java.net.HttpURLConnection.HTTP_FORBIDDEN
 import java.net.HttpURLConnection.HTTP_INTERNAL_ERROR
 import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 
 @ExperimentalSerializationApi
-abstract class GcpAuthenticatedHttpFunctionWithParams<T>(
+abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
     private val deserializer: DeserializationStrategy<T>,
     private val authenticator: GoogleUserAuthenticator = GoogleUserAuthenticator(),
     private val process: suspend (params: T, userInfo: UserInfo) -> Either<Throwable, Unit>
@@ -34,6 +35,7 @@ abstract class GcpAuthenticatedHttpFunctionWithParams<T>(
 
         either<Throwable, Unit> {
             val params = parseParameters(request, deserializer).bind()
+            log().info("Parameters parsed", v("params", params))
             val userInfo = authenticator.getAuthenticatedUserInfo(request).bind()
             Either.catchAndFlatten {
                 process(params, userInfo)

@@ -11,10 +11,11 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.log
+import no.vegvesen.saga.modules.shared.v
 import java.net.HttpURLConnection
 
 @ExperimentalSerializationApi
-abstract class GcpHttpFunctionWithParams<T>(
+abstract class GcpHttpFunctionWithParams<T : Any>(
     private val deserializer: DeserializationStrategy<T>,
     private val process: suspend (params: T) -> Either<Throwable, Unit>
 ) : HttpFunction, Logging {
@@ -28,6 +29,7 @@ abstract class GcpHttpFunctionWithParams<T>(
         log().httpRequest(request)
 
         parseParameters(request, deserializer).flatMap { params ->
+            log().info("Parameters parsed", v("params", params))
             Either.catchAndFlatten {
                 process(params)
             }

@@ -1,27 +1,27 @@
 // Touch to trigger build.
 
 plugins {
-    kotlin("jvm") version "1.6.10"
-    kotlin("plugin.serialization") version "1.6.10"
-    id("com.adarshr.test-logger") version "3.0.0"
+    kotlin("jvm") version "1.6.21"
+    kotlin("plugin.serialization") version "1.6.21"
+    id("com.adarshr.test-logger") version "3.2.0"
     id("saga-build")
     `maven-publish`
     `version-catalog`
     id("com.github.jk1.dependency-license-report") version "2.0"
     id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.4"
-    id("com.github.ben-manes.versions") version "0.39.0"
+    id("com.github.ben-manes.versions") version "0.42.0"
 }
 
-val kotlinVersion = "1.6.10"
-val kotlinxCoroutinesVersion = "1.6.0"
+val kotlinVersion = "1.6.21"
+val kotlinxCoroutinesVersion = "1.6.1"
 val kotlinxDateTimeVersion = "0.3.2"
-val ktorVersion = "1.6.5"
+val ktorVersion = "1.6.8"
 val arrowVersion = "1.0.1"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
 val serializationVersion = "1.3.2"
 val functionsVersion = "1.0.4"
-val gcpLibrariesBomVersion = "25.0.0"
+val gcpLibrariesBomVersion = "25.1.0"
 
 val modulesVersion =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)

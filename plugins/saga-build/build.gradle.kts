@@ -26,7 +26,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     }
 }
 
-val kotlinVersion = "1.6.10"
+val kotlinVersion = "1.6.21"
 
 dependencies {
     implementation("org.jetbrains.kotlin", "kotlin-gradle-plugin", kotlinVersion)

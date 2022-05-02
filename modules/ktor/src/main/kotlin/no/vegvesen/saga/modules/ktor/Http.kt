@@ -5,14 +5,14 @@ import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.HttpClientEngineConfig
 import io.ktor.client.engine.apache.Apache
 import io.ktor.client.engine.cio.CIO
-import io.ktor.client.features.compression.ContentEncoding
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
+import io.ktor.client.plugins.compression.ContentEncoding
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 fun HttpClientConfig<out HttpClientEngineConfig>.installKotlinxSerialization() {
-    install(JsonFeature) {
-        serializer = KotlinxSerializer(
+    install(ContentNegotiation) {
+        json(
             Json {
                 ignoreUnknownKeys = true
             }
@@ -20,10 +20,8 @@ fun HttpClientConfig<out HttpClientEngineConfig>.installKotlinxSerialization() {
     }
 }
 
-fun createCIOHttpClientWithKotlinxSerialization(): HttpClient {
-    return HttpClient(CIO) {
-        installKotlinxSerialization()
-    }
+fun createCIOHttpClientWithKotlinxSerialization(): HttpClient = HttpClient(CIO) {
+    installKotlinxSerialization()
 }
 
 fun createApacheHttpClient() = HttpClient(Apache) {

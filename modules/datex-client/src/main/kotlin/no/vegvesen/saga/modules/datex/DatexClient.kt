@@ -6,12 +6,12 @@ import arrow.core.left
 import arrow.core.right
 import arrow.core.rightIfNotNull
 import io.ktor.client.HttpClient
-import io.ktor.client.features.ResponseException
+import io.ktor.client.plugins.ResponseException
 import io.ktor.client.request.accept
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.statement.HttpResponse
-import io.ktor.client.statement.readText
+import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
@@ -44,7 +44,7 @@ open class DatexClient(
                         status.value
                     ).left()
                 else -> {
-                    val content = httpResponse.readText(Charsets.UTF_8).toXmlString()
+                    val content = httpResponse.bodyAsText().toXmlString()
                     validator.validateDatexDoc(content)
                         .flatMap { getPublicationTime(content) }
                         .map { publicationTime ->
@@ -83,7 +83,7 @@ open class DatexClient(
     private suspend fun runHttpGetRequest(
         onlyModificationsSince: Instant?
     ): Either<DatexError, HttpResponse> = Either.catch {
-        ktorHttpClient.get<HttpResponse>(settings.datexUrl) {
+        ktorHttpClient.get(settings.datexUrl) {
             val auth = Base64.getEncoder().encode(("${settings.username}:${settings.password}").toByteArray())
                 .toString(Charsets.UTF_8)
             header("Authorization", "Basic $auth")

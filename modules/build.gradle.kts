@@ -15,7 +15,7 @@ plugins {
 val kotlinVersion = "1.6.21"
 val kotlinxCoroutinesVersion = "1.6.1"
 val kotlinxDateTimeVersion = "0.3.2"
-val ktorVersion = "1.6.8"
+val ktorVersion = "2.0.1"
 val arrowVersion = "1.0.1"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
@@ -77,8 +77,9 @@ subprojects {
     useIntegrationTests()
 
     dependencies {
-        api(platform("com.google.cloud:libraries-bom:$gcpLibrariesBomVersion"))
         api(kotlin("stdlib-jdk8"))
+        api(platform("com.google.cloud:libraries-bom:$gcpLibrariesBomVersion"))
+        api(platform("io.ktor:ktor-bom:$ktorVersion"))
         api("org.jetbrains.kotlinx", "kotlinx-serialization-json", serializationVersion)
         api("io.arrow-kt", "arrow-core", arrowVersion)
         api("io.arrow-kt", "arrow-fx-coroutines", arrowVersion)
@@ -92,12 +93,6 @@ subprojects {
             api("org.jetbrains.kotlinx", "kotlinx-coroutines-core", kotlinxCoroutinesVersion)
             api("org.jetbrains.kotlinx", "kotlinx-serialization-properties", serializationVersion)
             api("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", serializationVersion)
-            api("io.ktor", "ktor-server-netty", ktorVersion)
-            api("io.ktor", "ktor-client-core-jvm", ktorVersion)
-            api("io.ktor", "ktor-client-serialization-jvm", ktorVersion)
-            api("io.ktor", "ktor-client-encoding", ktorVersion)
-            api("io.ktor", "ktor-client-apache", ktorVersion)
-            api("io.ktor", "ktor-client-cio", ktorVersion) // TODO: Phase out
 
             implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", jacksonVersion)
             implementation("com.fasterxml.jackson.core", "jackson-databind", jacksonVersion)

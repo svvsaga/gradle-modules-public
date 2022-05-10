@@ -11,6 +11,8 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.toJavaInstant
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 import no.vegvesen.saga.modules.gcp.bigquery.fetchRowCount
@@ -47,12 +49,7 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
 
     val timestamp = Instant.parse("2022-01-01T00:00:00Z")
 
-    test("can write documents to default stream") {
-        val documents = List(2000) {
-            Row(it.toString(), timestamp, Version.V1)
-        }
-        bigQuery.writeDocumentsToDefaultStream(documents, Row.serializer(), tempTable.tableId).shouldBeRight()
-
+    fun rowsShouldBeSaved() {
         bigQuery.fetchRowCount(tempTable.tableId) shouldBe 2000
         val first =
             bigQuery.queryOf("SELECT * FROM `${tempTable.tableId.dataset}`.`${tempTable.tableId.table}` ORDER BY id LIMIT 1")
@@ -60,6 +57,30 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
         first["id"].stringValue shouldBe "0"
         first["timestamp"].instantValue shouldBe timestamp.toJavaInstant()
         first["version"].stringValue shouldBe Version.V1.toString()
+    }
+
+    test("can write documents to default stream") {
+        val documents = List(2000) {
+            Row(it.toString(), timestamp, Version.V1)
+        }
+        bigQuery.writeDocumentsToDefaultStream(documents, Row.serializer(), tempTable.tableId).shouldBeRight()
+
+        rowsShouldBeSaved()
+    }
+
+    test("can write JsonObjects to default stream") {
+        val documents = List(2000) {
+            JsonObject(
+                mapOf(
+                    "id" to JsonPrimitive(it.toString()),
+                    "timestamp" to JsonPrimitive(timestamp.toString()),
+                    "version" to JsonPrimitive(Version.V1.toString())
+                )
+            )
+        }
+        bigQuery.writeDocumentsToDefaultStream(documents, tempTable.tableId).shouldBeRight()
+
+        rowsShouldBeSaved()
     }
 })
 

@@ -4,6 +4,7 @@ import com.google.cloud.bigquery.BigQuery
 import com.google.cloud.bigquery.TableId
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerializationStrategy
+import kotlinx.serialization.json.JsonObject
 import kotlin.time.ExperimentalTime
 
 /**
@@ -21,4 +22,9 @@ class BigQueryStreamingWriter(
         serializer: SerializationStrategy<T>,
         tableId: TableId
     ) = bigQuery.writeDocumentsToDefaultStream(documents, serializer, tableId, chunkSize, parallelization)
+
+    suspend fun streamDocuments(
+        documents: Collection<JsonObject>,
+        tableId: TableId
+    ) = bigQuery.writeDocumentsToDefaultStream(documents, tableId, chunkSize, parallelization)
 }

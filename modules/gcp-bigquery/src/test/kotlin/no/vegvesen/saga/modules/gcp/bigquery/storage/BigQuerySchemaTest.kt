@@ -9,7 +9,7 @@ import io.kotest.inspectors.shouldForAny
 import io.kotest.matchers.shouldBe
 import no.vegvesen.saga.modules.gcp.bigquery.BigQuerySchema
 
-val jsonSchemaForStructsAndArrays = """
+val jsonSchemaForRecordsAndArrays = """
 [{
     "name": "structField",
     "type": "RECORD",
@@ -32,6 +32,37 @@ val jsonSchemaForStructsAndArrays = """
                     "mode": "NULLABLE",
                     "type": "STRING",
                     "name": "stringField2",
+                    "description": "Description of field"
+                }
+            ]
+        }
+    ]
+}]
+""".trimIndent()
+
+val jsonSchemaForStructsAndArrays = """
+[{
+    "name": "structField",
+    "type": "STRUCT",
+    "description": "Description of field",
+    "mode": "REQUIRED",
+    "fields": [
+        {
+            "mode": "NULLABLE",
+            "type": "INT64",
+            "name": "int64Field",
+            "description": "Description of int64field"
+        },
+        {
+            "name": "structField2",
+            "type": "STRUCT",
+            "description": "Description of field",
+            "mode": "REPEATED",
+            "fields": [
+                {
+                    "mode": "NULLABLE",
+                    "type": "GEOGRAPHY",
+                    "name": "geoField",
                     "description": "Description of field"
                 }
             ]
@@ -88,8 +119,8 @@ class BqQuerySchemaTest : FunSpec({
         schema.fields.shouldForAny { it.mode == Field.Mode.NULLABLE && it.type == LegacySQLTypeName.BOOLEAN }
     }
 
-    test("schema for nested structs and arrays is correctly parsed") {
-        val jsonSchema = jsonSchemaForStructsAndArrays
+    test("schema for nested records and arrays is correctly parsed") {
+        val jsonSchema = jsonSchemaForRecordsAndArrays
 
         val schema = BigQuerySchema.fromJsonSchema(jsonSchema)
 
@@ -109,5 +140,12 @@ class BqQuerySchemaTest : FunSpec({
         shouldThrow<IllegalArgumentException> {
             BigQuerySchema.fromJsonSchema(jsonSchema)
         }
+    }
+
+    test("schema with Standard SQL is correctly parsed") {
+        val schema = BigQuerySchema.fromJsonSchema(jsonSchemaForStructsAndArrays)
+
+        schema.fields.size shouldBe 1
+        schema.fields["structField"].subFields["int64Field"].description shouldBe "Description of int64field"
     }
 })

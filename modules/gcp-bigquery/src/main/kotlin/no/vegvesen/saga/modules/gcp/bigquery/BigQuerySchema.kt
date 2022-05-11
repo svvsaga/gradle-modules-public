@@ -3,7 +3,9 @@ package no.vegvesen.saga.modules.gcp.bigquery
 import com.google.api.client.json.gson.GsonFactory
 import com.google.api.services.bigquery.model.TableFieldSchema
 import com.google.api.services.bigquery.model.TableSchema
+import com.google.cloud.bigquery.LegacySQLTypeName
 import com.google.cloud.bigquery.Schema
+import com.google.cloud.bigquery.StandardSQLTypeName
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.util.Arrays
@@ -21,20 +23,29 @@ object BigQuerySchema {
         .filter { method -> "fromPb" == method.name }.findFirst().get()
 
     fun fromJsonSchema(jsonText: String): Schema {
-        val tableSchema: TableSchema = TableSchema().setFields(
-            JsonFactory
-                .createJsonParser(jsonText)
-                .parseArray(
-                    ArrayList::class.java,
-                    TableFieldSchema::class.java
-                ).toMutableList()
-        )
+        val fields = JsonFactory
+            .createJsonParser(jsonText)
+            .parseArray(
+                ArrayList::class.java,
+                TableFieldSchema::class.java
+            ).toMutableList()
+        fields.forEach(::convertTypesToLegacySql)
+        val tableSchema: TableSchema = TableSchema().setFields(fields)
         return try {
             SCHEMA_FROM_PB.invoke(null, tableSchema) as Schema
         } catch (e: IllegalAccessException) {
             throw RuntimeException(e)
         } catch (e: InvocationTargetException) {
             throw e.targetException
+        }
+    }
+
+    private fun convertTypesToLegacySql(field: TableFieldSchema) {
+        StandardSQLTypeName.values().firstOrNull { it.name == field.type }?.let {
+            field.type = LegacySQLTypeName.legacySQLTypeName(it).name()
+        }
+        field.fields?.forEach {
+            convertTypesToLegacySql(it)
         }
     }
 

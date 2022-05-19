@@ -13,18 +13,20 @@ import kotlin.time.ExperimentalTime
 @ExperimentalTime
 @ExperimentalSerializationApi
 class BigQueryStreamingWriter(
-    private val bigQuery: BigQuery,
-    private val chunkSize: Int = 250,
-    private val parallelization: Int = 2
+    private val bigQuery: BigQuery
 ) {
     suspend fun <T> streamDocuments(
         documents: Collection<T>,
         serializer: SerializationStrategy<T>,
-        tableId: TableId
+        tableId: TableId,
+        chunkSize: Int = 250,
+        parallelization: Int = 2
     ) = bigQuery.writeDocumentsToDefaultStream(documents, serializer, tableId, chunkSize, parallelization)
 
     suspend fun streamDocuments(
         documents: Collection<JsonObject>,
-        tableId: TableId
+        tableId: TableId,
+        chunkSize: Int = 250,
+        parallelization: Int = 2
     ) = bigQuery.writeDocumentsToDefaultStream(documents, tableId, chunkSize, parallelization)
 }

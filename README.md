@@ -22,6 +22,103 @@ A new version will automatically be published when a push or PR merge is done wi
 1. If any commit in the push has a commit message containing `#patch`, a patch version will be published.
 1. Otherwise, no new tag is created.
 
+
+## Use packages with `saga-build`-plugin
+
+The `saga-build`-plugin will add repositories for the shared modules and dependencies.
+
+In `settings.gradle.kts`:
+
+```kotlin
+pluginManagement {
+  repositories {
+    mavenCentral()
+    gradlePluginPortal()
+    maven {
+        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+    }
+  }
+}
+```
+
+In `build.gradle.kts`:
+
+```kotlin
+plugins {
+  id("saga-build") version "21.0.0"
+}
+
+dependencies {
+  implementation("no.vegvesen.saga.modules:shared:24.0.0")
+}
+```
+
+### Use packages without `saga-build`-plugin
+
+In `build.gradle.kts`:
+
+```kotlin
+repositories {
+  mavenCentral()
+  maven("https://oss.sonatype.org/content/repositories/snapshots")
+  maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
+  maven("https://jitpack.io")
+  maven {
+    url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+  }
+}
+
+dependencies {
+  implementation("no.vegvesen.saga.modules:shared:24.0.0")
+}
+```
+
+## Version catalog
+
+To use our [version catalog](https://docs.gradle.org/current/userguide/platforms.html), add this to
+your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+  repositories {
+    maven {
+      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+    }
+  }
+  versionCatalogs {
+    create("saga") {
+      from("no.vegvesen.saga.modules:modules:24.0.0")
+    }
+  }
+}
+```
+
+Then you can add dependencies using the strongly typed `saga` extension:
+
+```kotlin
+dependencies {
+  implementation(kotlin("stdlib-jdk8"))
+  implementation(saga.shared)
+}
+```
+
+When updating, you only have to update the single version of the version catalog, not every dependency.
+
+### Usage in `subprojects` and `allprojects`
+
+To refer to catalogs in the `subprojects` and `allprojects` block, you must prefix the usage with `rootProject`:
+
+```kotlin
+subprojects {
+  dependencies {
+    implementation(rootProject.saga.shared)
+    testImplementation(rootProject.saga.testing)
+  }
+}
+```
+
+See https://github.com/gradle/gradle/issues/16634 for more info.
+
 ## Development
 
 ### Setup
@@ -75,101 +172,3 @@ catalog.
 To run integration tests, you must set the `SAGA_INT_TEST_PROJECT_ID` environment variable to a GCP project ID used for
 integration testing.
 
-## Use packages with `saga-build`-plugin
-
-The `saga-build`-plugin will add repositories for the shared modules and dependencies.
-
-In `settings.gradle.kts`:
-
-```kotlin
-pluginManagement {
-  repositories {
-    maven {
-      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-    }
-    mavenCentral()
-    gradlePluginPortal()
-  }
-}
-```
-
-In `build.gradle.kts`:
-
-```kotlin
-plugins {
-  id("saga-build") version "7.0.0"
-}
-
-dependencies {
-  implementation("no.vegvesen.saga.modules:shared:17.0.0")
-}
-```
-
-### Use packages without `saga-build`-plugin
-
-In `build.gradle.kts`:
-
-```kotlin
-repositories {
-  maven {
-    url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-  }
-  mavenCentral()
-  maven("https://oss.sonatype.org/content/repositories/snapshots")
-  maven("https://packages.confluent.io/maven") // Needed by beam-runners-google-cloud-dataflow-java
-  maven("https://jitpack.io")
-}
-
-dependencies {
-  implementation("no.vegvesen.saga.modules:shared:17.0.0")
-}
-```
-
-## Version catalog
-
-To use our [version catalog](https://docs.gradle.org/current/userguide/platforms.html), add this to
-your `settings.gradle.kts`:
-
-```kotlin
-
-enableFeaturePreview("VERSION_CATALOGS")
-
-dependencyResolutionManagement {
-  repositories {
-    maven {
-      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-    }
-  }
-  versionCatalogs {
-    create("saga") {
-      from("no.vegvesen.saga.modules:modules:17.0.0")
-    }
-  }
-}
-```
-
-Then you can add dependencies using the strongly typed `saga` extension:
-
-```kotlin
-dependencies {
-  implementation(kotlin("stdlib-jdk8"))
-  implementation(saga.shared)
-}
-```
-
-When updating, you only have to update the single version of the version catalog, not every dependency.
-
-### Usage in `subprojects` and `allprojects`
-
-To refer to catalogs in the `subprojects` and `allprojects` block, you must prefix the usage with `rootProject`:
-
-```kotlin
-subprojects {
-  dependencies {
-    implementation(rootProject.saga.shared)
-    testImplementation(rootProject.saga.testing)
-  }
-}
-```
-
-See https://github.com/gradle/gradle/issues/16634 for more info.

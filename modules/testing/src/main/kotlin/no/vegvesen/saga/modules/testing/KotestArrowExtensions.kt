@@ -28,7 +28,7 @@ inline fun <reified T : Any> Either<Any?, Any?>.shouldBeLeftOfType() = shouldBeL
 
 inline fun <reified T : Any> Either<Any?, Any?>.shouldBeRightOfType() = shouldBeRight().shouldBeTypeOf<T>()
 
-infix fun <T, B, L> MockKStubScope<Either<L, T>, B>.returns(returnValue: T) =
+infix fun <T, B, L> MockKStubScope<Either<L, T>, B>.returnsRight(returnValue: T) =
     answers(ConstantAnswer(returnValue.right()))
 
 infix fun <T, B, L> MockKStubScope<Either<L, T>, B>.returnsLeft(returnValue: L) =

@@ -6,10 +6,10 @@ import arrow.core.rightIfNotNull
 import no.vegvesen.saga.modules.shared.ContentType
 import java.util.concurrent.ConcurrentHashMap
 
-class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
+open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
     class File(val bytes: ByteArray, val metadata: FileMetadata)
 
-    private val files = ConcurrentHashMap<StoragePath, File>()
+    protected val files = ConcurrentHashMap<StoragePath, File>()
 
     fun clearFiles() = files.clear()
 

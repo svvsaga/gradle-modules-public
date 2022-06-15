@@ -14,7 +14,8 @@ abstract class BigQueryTempTable(
     val bigQuery: BigQuery,
     private val datasetPrefix: String = "temp",
     private val tablePrefix: String = "temp",
-    private val location: BigQueryLocation = BigQueryLocation.EU
+    private val location: BigQueryLocation = BigQueryLocation.EU,
+    private val overrideTableName: String? = null
 ) : TestListener {
 
     constructor(
@@ -57,7 +58,7 @@ abstract class BigQueryTempTable(
     abstract fun beforeTest()
 
     override suspend fun beforeTest(testCase: TestCase) {
-        tempTable = "${tablePrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
+        tempTable = overrideTableName ?: "${tablePrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
         beforeTest()
     }
 }

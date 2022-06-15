@@ -12,8 +12,9 @@ class BigQueryTempTableWithSchema(
     private val schema: Schema,
     datasetPrefix: String = "temp",
     tablePrefix: String = "temp",
-    location: BigQueryLocation = BigQueryLocation.EU
-) : BigQueryTempTable(bigQuery, datasetPrefix, tablePrefix, location) {
+    location: BigQueryLocation = BigQueryLocation.EU,
+    overrideTableName: String? = null
+) : BigQueryTempTable(bigQuery, datasetPrefix, tablePrefix, location, overrideTableName) {
 
     constructor(
         projectId: String,

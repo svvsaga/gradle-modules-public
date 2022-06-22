@@ -1,9 +1,7 @@
 package no.vegvesen.saga.modules.testing.gcp
 
 import com.google.cloud.bigquery.BigQuery
-import com.google.cloud.bigquery.DatasetInfo
 import com.google.cloud.bigquery.TableId
-import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.Spec
 import io.kotest.core.test.TestCase
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
@@ -11,59 +9,58 @@ import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 import java.util.UUID
 
 abstract class BigQueryTempTable(
-    val bigQuery: BigQuery,
-    private val datasetPrefix: String = "temp",
-    private val tablePrefix: String = "temp",
-    private val location: BigQueryLocation = BigQueryLocation.EU,
-    private val overrideTableName: String? = null
-) : TestListener {
-
+    bigQuery: BigQuery,
+    isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
+    datasetPrefix: String = "temp",
+    protected val tablePrefix: String = "temp",
+    location: BigQueryLocation = BigQueryLocation.EU,
+    overrideDatasetName: String? = null,
+    protected val overrideTableName: String? = null
+) : BigQueryTempDataset(bigQuery, isolationMode, datasetPrefix, location, overrideDatasetName) {
     constructor(
         projectId: String,
+        isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
         datasetPrefix: String = "temp",
         tablePrefix: String = "temp",
-        location: BigQueryLocation = BigQueryLocation.EU
+        location: BigQueryLocation = BigQueryLocation.EU,
+        overrideDatasetName: String? = null,
+        overrideTableName: String? = null
     ) : this(
         createBigQuery(projectId, location),
-        datasetPrefix,
-        tablePrefix,
-        location
+        isolationMode, datasetPrefix, tablePrefix, location, overrideDatasetName, overrideTableName
     )
-
-    lateinit var tempDataset: String
-
-    private fun createTempDataset() {
-        tempDataset = "${datasetPrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
-        if (bigQuery.getDataset(tempDataset).let { it == null || !it.exists() }) {
-            bigQuery.create(
-                DatasetInfo.newBuilder(tempDataset).setLocation(location.name)
-                    .setLabels(mapOf("temporary" to "true")).build()
-            )
-        }
-    }
-
-    override suspend fun afterSpec(spec: Spec) {
-        deleteTempDatasets()
-    }
-
-    private fun deleteTempDatasets() {
-        bigQuery.listDatasets(BigQuery.DatasetListOption.labelFilter("labels.temporary:true")).iterateAll()
-            .forEach {
-                it.delete(
-                    BigQuery.DatasetDeleteOption.deleteContents()
-                )
-            }
-    }
-
-    val tableId: TableId get() = TableId.of(bigQuery.options.projectId, tempDataset, tempTable)
 
     lateinit var tempTable: String
 
-    abstract fun beforeTest()
+    val tableId: TableId get() = TableId.of(bigQuery.options.projectId, tempDataset, tempTable)
 
-    override suspend fun beforeTest(testCase: TestCase) {
-        createTempDataset()
+    abstract fun createTempTableImplementation()
+
+    private fun createTempTable() {
         tempTable = overrideTableName ?: "${tablePrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
-        beforeTest()
+        if (bigQuery.getTable(tableId) == null) {
+            createTempTableImplementation()
+        }
+    }
+
+    override suspend fun beforeSpec(spec: Spec) {
+        super.beforeSpec(spec)
+        if (isolationMode == ResourceIsolationMode.PerSpec) {
+            createTempTable()
+        }
+    }
+
+    override suspend fun beforeContainer(testCase: TestCase) {
+        super.beforeContainer(testCase)
+        if (isolationMode == ResourceIsolationMode.PerContainer) {
+            createTempTable()
+        }
+    }
+
+    override suspend fun beforeEach(testCase: TestCase) {
+        super.beforeEach(testCase)
+        if (isolationMode == ResourceIsolationMode.PerTest) {
+            createTempTable()
+        }
     }
 }

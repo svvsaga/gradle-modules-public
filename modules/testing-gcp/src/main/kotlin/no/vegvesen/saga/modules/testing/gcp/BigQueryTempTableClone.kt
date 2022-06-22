@@ -9,27 +9,37 @@ import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 class BigQueryTempTableClone(
     bigQuery: BigQuery,
     private val copyFromTableId: TableId,
+    isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
     datasetPrefix: String = "temp",
     tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU,
+    overrideDatasetName: String? = null,
     overrideTableName: String? = null
-) : BigQueryTempTable(bigQuery, datasetPrefix, tablePrefix, location, overrideTableName) {
+) : BigQueryTempTable(
+    bigQuery,
+    isolationMode,
+    datasetPrefix,
+    tablePrefix,
+    location,
+    overrideDatasetName,
+    overrideTableName
+) {
 
     constructor(
         projectId: String,
         copyFromTableId: TableId,
+        isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
         datasetPrefix: String = "temp",
         tablePrefix: String = "temp",
-        location: BigQueryLocation = BigQueryLocation.EU
+        location: BigQueryLocation = BigQueryLocation.EU,
+        overrideDatasetName: String? = null,
+        overrideTableName: String? = null
     ) : this(
         createBigQuery(projectId, location),
-        copyFromTableId,
-        datasetPrefix,
-        tablePrefix,
-        location
+        copyFromTableId, isolationMode, datasetPrefix, tablePrefix, location, overrideDatasetName, overrideTableName
     )
 
-    override fun beforeTest() {
+    override fun createTempTableImplementation() {
         bigQuery.copyTableSchema(copyFromTableId, TableId.of(tempDataset, tempTable))
     }
 }

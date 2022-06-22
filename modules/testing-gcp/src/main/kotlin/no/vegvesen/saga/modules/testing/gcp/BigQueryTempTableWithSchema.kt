@@ -10,27 +10,37 @@ import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
 class BigQueryTempTableWithSchema(
     bigQuery: BigQuery,
     private val schema: Schema,
+    isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
     datasetPrefix: String = "temp",
     tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU,
+    overrideDatasetName: String? = null,
     overrideTableName: String? = null
-) : BigQueryTempTable(bigQuery, datasetPrefix, tablePrefix, location, overrideTableName) {
-
+) : BigQueryTempTable(
+    bigQuery,
+    isolationMode,
+    datasetPrefix,
+    tablePrefix,
+    location,
+    overrideDatasetName,
+    overrideTableName
+) {
     constructor(
         projectId: String,
         schema: Schema,
+        isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
         datasetPrefix: String = "temp",
         tablePrefix: String = "temp",
-        location: BigQueryLocation = BigQueryLocation.EU
+        location: BigQueryLocation = BigQueryLocation.EU,
+        overrideDatasetName: String? = null,
+        overrideTableName: String? = null
     ) : this(
         createBigQuery(projectId, location),
         schema,
-        datasetPrefix,
-        tablePrefix,
-        location
+        isolationMode, datasetPrefix, tablePrefix, location, overrideDatasetName, overrideTableName
     )
 
-    override fun beforeTest() {
+    override fun createTempTableImplementation() {
         bigQuery.create(TableInfo.of(tableId, StandardTableDefinition.of(schema)))
     }
 }

@@ -32,7 +32,7 @@ abstract class BigQueryTempTable(
 
     lateinit var tempDataset: String
 
-    override suspend fun beforeSpec(spec: Spec) {
+    private fun createTempDataset() {
         tempDataset = "${datasetPrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
         if (bigQuery.getDataset(tempDataset).let { it == null || !it.exists() }) {
             bigQuery.create(
@@ -43,6 +43,10 @@ abstract class BigQueryTempTable(
     }
 
     override suspend fun afterSpec(spec: Spec) {
+        deleteTempDatasets()
+    }
+
+    private fun deleteTempDatasets() {
         bigQuery.listDatasets(BigQuery.DatasetListOption.labelFilter("labels.temporary:true")).iterateAll()
             .forEach {
                 it.delete(
@@ -58,6 +62,7 @@ abstract class BigQueryTempTable(
     abstract fun beforeTest()
 
     override suspend fun beforeTest(testCase: TestCase) {
+        createTempDataset()
         tempTable = overrideTableName ?: "${tablePrefix}_${UUID.randomUUID().toString().replace('-', '_')}"
         beforeTest()
     }

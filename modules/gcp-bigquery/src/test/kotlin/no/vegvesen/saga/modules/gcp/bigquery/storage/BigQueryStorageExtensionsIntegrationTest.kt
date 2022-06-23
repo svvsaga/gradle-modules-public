@@ -21,6 +21,7 @@ import no.vegvesen.saga.modules.gcp.bigquery.queryOf
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.gcp.BigQueryTempTableWithSchema
+import no.vegvesen.saga.modules.testing.gcp.ResourceIsolationMode
 import kotlin.time.ExperimentalTime
 
 enum class Version {
@@ -45,7 +46,7 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
         createRequiredField("version", StandardSQLTypeName.STRING)
     )
 
-    val tempTable = listener(BigQueryTempTableWithSchema(bigQuery, schema))
+    val tempTable = listener(BigQueryTempTableWithSchema(bigQuery, schema, isolationMode = ResourceIsolationMode.PerTest))
 
     val timestamp = Instant.parse("2022-01-01T00:00:00Z")
 

@@ -1,8 +1,8 @@
 // Touch to trigger build.
 
 plugins {
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.serialization") version "1.6.21"
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.serialization") version "1.7.10"
     id("com.adarshr.test-logger") version "3.2.0"
     id("saga-build")
     `maven-publish`
@@ -12,14 +12,14 @@ plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
 }
 
-val kotlinVersion = "1.6.21"
-val kotlinxCoroutinesVersion = "1.6.1"
-val kotlinxDateTimeVersion = "0.3.2"
-val ktorVersion = "2.0.1"
-val arrowVersion = "1.0.1"
+val kotlinVersion = "1.7.10"
+val kotlinxCoroutinesVersion = "1.6.3"
+val kotlinxDateTimeVersion = "0.4.0"
+val ktorVersion = "2.0.3"
+val arrowVersion = "1.1.2"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
-val serializationVersion = "1.3.2"
+val serializationVersion = "1.3.3"
 val functionsVersion = "1.0.4"
 val gcpLibrariesBomVersion = "25.1.0"
 

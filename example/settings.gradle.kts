@@ -2,15 +2,15 @@ rootProject.name = "example"
 
 pluginManagement {
     repositories {
+        mavenCentral()
+        gradlePluginPortal()
         maven {
             url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
         }
-        mavenCentral()
-        gradlePluginPortal()
     }
 }
 
-val modulesVersion = "16.7.5"
+val modulesVersion = "27.0.0"
 
 dependencyResolutionManagement {
     repositories {

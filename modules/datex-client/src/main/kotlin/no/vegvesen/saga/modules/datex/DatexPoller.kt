@@ -1,7 +1,7 @@
 package no.vegvesen.saga.modules.datex
 
 import arrow.core.Either
-import arrow.core.computations.either
+import arrow.core.continuations.either
 import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
@@ -16,7 +16,7 @@ class DatexPoller(
 ) : Logging {
     val logger = log()
     suspend fun pollDatex(gzipped: Boolean = false): Either<DatexPollerError, Unit> =
-        either<DatexPollerError, Unit> {
+        either {
             val lastModified = logger.measureTime("Fetching last modified") {
                 datexStorage.getLastModifiedTime()
             }.bind()

@@ -22,7 +22,6 @@ A new version will automatically be published when a push or PR merge is done wi
 1. If any commit in the push has a commit message containing `#patch`, a patch version will be published.
 1. Otherwise, no new tag is created.
 
-
 ## Use packages with `saga-build`-plugin
 
 The `saga-build`-plugin will add repositories for the shared modules and dependencies.
@@ -35,7 +34,7 @@ pluginManagement {
     mavenCentral()
     gradlePluginPortal()
     maven {
-        url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
     }
   }
 }
@@ -45,11 +44,11 @@ In `build.gradle.kts`:
 
 ```kotlin
 plugins {
-  id("saga-build") version "21.0.0"
+  id("saga-build") version "28.0.0"
 }
 
 dependencies {
-  implementation("no.vegvesen.saga.modules:shared:24.0.0")
+  implementation("no.vegvesen.saga.modules:shared:27.0.0")
 }
 ```
 
@@ -69,7 +68,7 @@ repositories {
 }
 
 dependencies {
-  implementation("no.vegvesen.saga.modules:shared:24.0.0")
+  implementation("no.vegvesen.saga.modules:shared:27.0.0")
 }
 ```
 
@@ -87,7 +86,7 @@ dependencyResolutionManagement {
   }
   versionCatalogs {
     create("saga") {
-      from("no.vegvesen.saga.modules:modules:24.0.0")
+      from("no.vegvesen.saga.modules:modules:27.0.0")
     }
   }
 }

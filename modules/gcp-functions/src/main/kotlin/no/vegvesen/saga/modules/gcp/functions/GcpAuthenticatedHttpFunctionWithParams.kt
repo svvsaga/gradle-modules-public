@@ -1,7 +1,7 @@
 package no.vegvesen.saga.modules.gcp.functions
 
 import arrow.core.Either
-import arrow.core.computations.either
+import arrow.core.continuations.either
 import com.google.cloud.functions.HttpFunction
 import com.google.cloud.functions.HttpRequest
 import com.google.cloud.functions.HttpResponse
@@ -33,7 +33,7 @@ abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
     override fun service(request: HttpRequest, response: HttpResponse) = runBlocking {
         log().httpRequest(request)
 
-        either<Throwable, Unit> {
+        either {
             val params = parseParameters(request, deserializer).bind()
             log().info("Parameters parsed", v("params", params))
             val userInfo = authenticator.getAuthenticatedUserInfo(request).bind()

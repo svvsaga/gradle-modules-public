@@ -79,7 +79,6 @@ subprojects {
     dependencies {
         api(kotlin("stdlib-jdk8"))
         api(platform("com.google.cloud:libraries-bom:$gcpLibrariesBomVersion"))
-        api(platform("io.ktor:ktor-bom:$ktorVersion"))
         api("org.jetbrains.kotlinx", "kotlinx-serialization-json", serializationVersion)
         api("io.arrow-kt", "arrow-core", arrowVersion)
         api("io.arrow-kt", "arrow-fx-coroutines", arrowVersion)

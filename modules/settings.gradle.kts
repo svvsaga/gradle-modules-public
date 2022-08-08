@@ -28,3 +28,4 @@ pluginManagement {
 include("datex-serializer")
 include("datex-schemas")
 include("datex-poller")
+include("ktor-1")

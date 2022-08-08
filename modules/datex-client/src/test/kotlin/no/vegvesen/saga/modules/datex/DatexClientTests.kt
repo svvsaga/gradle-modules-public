@@ -16,17 +16,19 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.LastModifiedVersion
 import io.ktor.http.content.VersionCheckResult
 import io.ktor.http.headersOf
+import io.ktor.util.date.GMTDate
 import io.mockk.every
 import io.mockk.mockk
 import no.vegvesen.saga.modules.shared.XmlString
-import no.vegvesen.saga.modules.shared.toGMTDate
 import no.vegvesen.saga.modules.shared.toHttpDateString
 import no.vegvesen.saga.modules.shared.toXmlString
 import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
+import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import java.util.Base64
+import java.util.concurrent.TimeUnit
 
 class DatexClientTests : AnnotationSpec() {
     private val testUsername = "username"
@@ -56,14 +58,17 @@ class DatexClientTests : AnnotationSpec() {
                                 )
                                 respond(testDatexDocument.value, headers = responseHeaders)
                             }
+
                             VersionCheckResult.NOT_MODIFIED -> {
                                 respond("", HttpStatusCode.NotModified)
                             }
+
                             VersionCheckResult.PRECONDITION_FAILED -> {
                                 respondError(HttpStatusCode.PreconditionFailed)
                             }
                         }
                     } else respondError(HttpStatusCode.Unauthorized)
+
                     else -> error("Unhandled ${request.url}")
                 }
             }
@@ -211,3 +216,8 @@ class DatexClientTests : AnnotationSpec() {
         ) shouldBeRight ZonedDateTime.parse("2022-02-23T15:26:42+01:00").toInstant()
     }
 }
+
+fun Instant.toGMTDate(): GMTDate =
+    GMTDate(TimeUnit.SECONDS.toMillis(atZone(ZoneOffset.UTC).toEpochSecond()))
+
+fun kotlinx.datetime.Instant.toGMTDate() = GMTDate(this.toEpochMilliseconds())

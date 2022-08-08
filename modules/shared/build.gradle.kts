@@ -12,7 +12,7 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jsr310")
     // should not have be exposed ie. "implementation", see Kanbanize: #3507
     api("org.slf4j:slf4j-api:1.7.36")
-    api("net.logstash.logback:logstash-logback-encoder:7.0.1")
+    api("net.logstash.logback:logstash-logback-encoder:7.2")
     api("org.buildobjects:jproc:2.8.0")
 
     api("org.jetbrains.kotlinx", "kotlinx-datetime")

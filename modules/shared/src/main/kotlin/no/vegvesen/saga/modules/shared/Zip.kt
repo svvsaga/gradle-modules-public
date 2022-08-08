@@ -1,6 +1,5 @@
 package no.vegvesen.saga.modules.shared
 
-import io.ktor.utils.io.core.use
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.util.zip.GZIPInputStream

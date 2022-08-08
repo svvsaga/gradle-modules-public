@@ -15,7 +15,6 @@ plugins {
 val kotlinVersion = "1.7.10"
 val kotlinxCoroutinesVersion = "1.6.3"
 val kotlinxDateTimeVersion = "0.4.0"
-val ktorVersion = "2.0.3"
 val arrowVersion = "1.1.2"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
@@ -97,9 +96,6 @@ subprojects {
             implementation("com.fasterxml.jackson.core", "jackson-databind", jacksonVersion)
             implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jdk8", jacksonVersion)
             implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jsr310", jacksonVersion)
-
-            implementation("io.ktor", "ktor-client-mock-jvm", ktorVersion)
-            api("io.ktor", "ktor-client-mock-jvm", ktorVersion)
 
             implementation("com.google.cloud.functions", "functions-framework-api", functionsVersion)
             api("com.google.cloud.functions", "functions-framework-api", functionsVersion)

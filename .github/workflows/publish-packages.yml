@@ -57,7 +57,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Setup Google Cloud SDK
-        uses: svvsaga/github-actions/public/setup-gcloud@v11.0.0
+        uses: svvsaga/github-actions-public/setup-gcloud@v11.0.0
         with:
           service_account_key: ${{ secrets.GCP_SA_ARTIFACT_PUBLISHER }}
 

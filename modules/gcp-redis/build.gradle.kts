@@ -1,6 +1,6 @@
-val googleAuthVersion = "0.25.0"
-val googleApiClientVersion = "1.31.3"
-val googleApisVersion = "v1-rev20210308-1.31.0"
+val googleAuthVersion = "1.9.0"
+val googleApiClientVersion = "2.0.0"
+val googleApisVersion = "v1-rev20220518-2.0.0"
 val jedisVersion = "3.3.0"
 
 dependencies {

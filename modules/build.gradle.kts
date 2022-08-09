@@ -13,14 +13,14 @@ plugins {
 }
 
 val kotlinVersion = "1.7.10"
-val kotlinxCoroutinesVersion = "1.6.3"
+val kotlinxCoroutinesVersion = "1.6.4"
 val kotlinxDateTimeVersion = "0.4.0"
 val arrowVersion = "1.1.2"
 val jacksonVersion = "2.12.3"
 val jUnitVersion = "5.7.1"
 val serializationVersion = "1.3.3"
 val functionsVersion = "1.0.4"
-val gcpLibrariesBomVersion = "25.1.0"
+val gcpLibrariesBomVersion = "26.0.0"
 
 val modulesVersion =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)

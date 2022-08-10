@@ -4,5 +4,5 @@ dependencies {
     implementation(project(":gcp-functions"))
     implementation(project(":gcp-storage"))
     implementation(project(":gcp-datastore"))
-    implementation(project(":ktor"))
+    implementation(project(":ktor-client"))
 }

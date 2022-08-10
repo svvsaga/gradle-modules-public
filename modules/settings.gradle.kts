@@ -1,7 +1,7 @@
 rootProject.name = "modules"
 include("shared")
 include("testing")
-include("ktor")
+include("ktor-client")
 include("beam")
 include("geo")
 include("gcp-core")

@@ -1,4 +1,9 @@
 rootProject.name = "modules"
+
+pluginManagement {
+    includeBuild("../plugins/saga-build")
+}
+
 include("shared")
 include("testing")
 include("ktor-client")
@@ -13,19 +18,8 @@ include("gcp-functions")
 include("gcp-storage")
 include("testing-gcp")
 include("shared-testfactory")
-
-pluginManagement {
-    includeBuild("../plugins/saga-build")
-
-    repositories {
-        maven {
-            url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
-        }
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
 include("datex-serializer")
 include("datex-schemas")
 include("datex-poller")
-include("ktor-1")
+include("ktor-server-1")
+include("ktor-server")

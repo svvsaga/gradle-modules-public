@@ -9,5 +9,6 @@ value class ContentType(val value: String) {
         val Gzip = ContentType("application/gzip")
         val NdJson = ContentType("application/x-ndjson")
         val Json = ContentType("application/json")
+        fun custom(value: String) = ContentType(value)
     }
 }

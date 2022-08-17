@@ -7,16 +7,22 @@ import arrow.fx.coroutines.parTraverse
 import com.google.cloud.bigquery.BigQuery
 import com.google.cloud.bigquery.CopyJobConfiguration
 import com.google.cloud.bigquery.FieldValue
+import com.google.cloud.bigquery.FieldValueList
 import com.google.cloud.bigquery.FormatOptions
 import com.google.cloud.bigquery.InsertAllRequest
 import com.google.cloud.bigquery.JobId
 import com.google.cloud.bigquery.JobInfo
 import com.google.cloud.bigquery.QueryJobConfiguration
+import com.google.cloud.bigquery.QueryParameterValue
 import com.google.cloud.bigquery.TableDataWriteChannel
 import com.google.cloud.bigquery.TableId
 import com.google.cloud.bigquery.TableResult
 import com.google.cloud.bigquery.WriteChannelConfiguration
+import com.google.common.cache.Cache
+import com.google.common.cache.CacheBuilder
 import kotlinx.coroutines.Dispatchers
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.toKotlinInstant
 import kotlinx.serialization.SerializationStrategy
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
@@ -24,7 +30,9 @@ import no.vegvesen.saga.modules.shared.allLefts
 import no.vegvesen.saga.modules.shared.serializers.replacePrimitives
 import no.vegvesen.saga.modules.shared.serializers.withoutNulls
 import java.nio.ByteBuffer
+import java.time.Duration
 import java.time.Instant
+import java.util.Objects
 import java.util.concurrent.TimeUnit
 
 /**
@@ -111,8 +119,6 @@ fun BigQuery.fetchRowCount(tableId: TableId) =
 
 fun BigQuery.fetchScalar(query: String) = query(QueryJobConfiguration.of(query)).values.first()[0].longValue
 
-fun BigQuery.queryOf(query: String): TableResult = query(QueryJobConfiguration.of(query))
-
 val FieldValue.instantValue: Instant
     get() = Instant.ofEpochSecond(
         TimeUnit.MICROSECONDS.toSeconds(timestampValue),
@@ -168,4 +174,43 @@ fun tryParseTableIdFromResource(resourceId: String): TableId? = bigQueryRegex.ma
     val dataset = it.groups["dataset"]!!.value
     val table = it.groups["table"]!!.value
     TableId.of(project, dataset, table)
+}
+
+private val defaultCache: Cache<Int, TableResult> by lazy {
+    CacheBuilder.newBuilder()
+        .expireAfterAccess(Duration.ofMinutes(15))
+        .maximumWeight(10_000)
+        .weigher<Int, TableResult> { _, result -> result.totalRows.toInt() }
+        .build()
+}
+
+/** Do a query that is cached based on query and params; default shared cache will hold maximum of 10 000 rows for up to 15 minutes after access. */
+fun BigQuery.cachedQuery(
+    query: String,
+    params: Map<String, Any> = emptyMap(),
+    cache: Cache<Int, TableResult> = defaultCache
+): TableResult =
+    cache.get(Objects.hash(query, params)) {
+        queryOf(query, params)
+    }
+
+fun BigQuery.queryOf(query: String, params: Map<String, Any> = emptyMap()): TableResult {
+    val builder = QueryJobConfiguration.newBuilder(query)
+    for ((key, value) in params) {
+        builder.addNamedParameter(key, value.toQueryParameterValue())
+    }
+    return query(builder.build())
+}
+
+fun FieldValueList.getString(name: String): String = get(name).stringValue
+fun FieldValueList.getStringOrNull(name: String): String? =
+    get(name).let { if (it.isNull) null else it.stringValue }
+
+fun FieldValueList.getLong(name: String): Long = get(name).longValue
+fun FieldValueList.getDate(name: String): LocalDate = LocalDate.parse(get(name).stringValue)
+fun FieldValueList.getInstant(name: String): kotlinx.datetime.Instant = get(name).instantValue.toKotlinInstant()
+
+private fun Any.toQueryParameterValue(): QueryParameterValue = when (this) {
+    is String -> QueryParameterValue.string(this)
+    else -> throw IllegalArgumentException("Unsupported parameter type ${this.javaClass.name}")
 }

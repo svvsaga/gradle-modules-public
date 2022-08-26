@@ -31,4 +31,17 @@ class TimestampExtensionsTest : FunSpec({
     test("protobuf timestamp toKotlinInstant") {
         protobufTimestamp.toKotlinInstant() shouldBe kotlinInstant
     }
+
+    test("KotlinInstant to ProtobufTimestamp") {
+        kotlinInstant.toProtobufTimestamp() shouldBe protobufTimestamp
+    }
+    test("Instant to ProtobufTimestamp") {
+        instant.toProtobufTimestamp() shouldBe protobufTimestamp
+    }
+    test("KotlinInstant to CloudTimestamp") {
+        kotlinInstant.toCloudTimestamp() shouldBe cloudTimestamp
+    }
+    test("Instant to CloudTimestamp") {
+        instant.toCloudTimestamp() shouldBe cloudTimestamp
+    }
 })

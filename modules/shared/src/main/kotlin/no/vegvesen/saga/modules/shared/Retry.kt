@@ -13,6 +13,7 @@ object Retry : Logging {
 
     /** Retry with exponential backoff. */
     suspend fun <T> retry(
+        description: String,
         backoff: ExponentialBackoffSettings,
         onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit,
         retryable: suspend () -> T,
@@ -21,6 +22,10 @@ object Retry : Logging {
         return Either.catch {
             Schedule.exponential<Throwable>(backoff.duration)
                 .check { exception: Throwable, output ->
+                    log().warn(
+                        "$description failed, retry attempt $attempts/${backoff.maxAttempts}. Error: {}",
+                        v("error", exception.localizedMessage)
+                    )
                     onRetry(exception, output, attempts)
                     attempts++
                     attempts <= backoff.maxAttempts
@@ -31,25 +36,13 @@ object Retry : Logging {
         }
     }
 
-    /** Retry with exponential backoff. */
-    suspend fun <T> retry(description: String, backoff: ExponentialBackoffSettings, retryable: suspend () -> T) =
-        retry(backoff, loggingRetry(description, backoff), retryable)
-
     /** Retry with exponential backoff. Will retry on failed Eithers. */
     suspend fun <T> retryEither(
         description: String,
         backoff: ExponentialBackoffSettings,
-        onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = loggingRetry(description, backoff),
+        onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> },
         retryable: suspend () -> Either<Throwable, T>
-    ) = retry(backoff, onRetry) {
+    ) = retry(description, backoff, onRetry) {
         retryable().getOrThrow()
     }
-
-    private fun loggingRetry(description: String, backoff: ExponentialBackoffSettings) =
-        { exception: Throwable, _: Duration, attempts: Int ->
-            log().warn(
-                "$description failed, retry attempt $attempts/${backoff.maxAttempts}. Error: {}",
-                v("error", exception.localizedMessage)
-            )
-        }
 }

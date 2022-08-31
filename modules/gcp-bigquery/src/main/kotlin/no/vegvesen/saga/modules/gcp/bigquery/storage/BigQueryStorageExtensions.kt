@@ -3,11 +3,8 @@ package no.vegvesen.saga.modules.gcp.bigquery.storage
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import arrow.fx.coroutines.Schedule
 import arrow.fx.coroutines.parTraverse
 import arrow.fx.coroutines.parTraverseN
-import arrow.fx.coroutines.retry
-import com.google.api.gax.rpc.ApiException
 import com.google.cloud.bigquery.BigQuery
 import com.google.cloud.bigquery.TableDefinition
 import com.google.cloud.bigquery.TableId
@@ -26,6 +23,8 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.protobuf.ProtoBuf
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryStreamException
+import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
+import no.vegvesen.saga.modules.shared.Retry.retry
 import no.vegvesen.saga.modules.shared.allLefts
 import no.vegvesen.saga.modules.shared.serializers.replacePrimitives
 import no.vegvesen.saga.modules.shared.serializers.withoutNulls
@@ -137,12 +136,11 @@ suspend fun <T> JsonStreamWriter.writeJson(
     serializer: SerializationStrategy<T>,
     chunkSize: Int = 200,
     parallelization: Int = Runtime.getRuntime().availableProcessors(),
-    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 10.seconds),
-    onRetry: (exception: ApiException, delay: Duration) -> Unit = { _, _ -> }
+    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
 ) = documents.chunked(chunkSize)
     .parTraverseN(Dispatchers.IO, parallelization) { chunk ->
         val rows = chunk.toJSONArray(serializer)
-
         writeJsonChunk(rows, backoffSettings, onRetry)
     }.allLefts()
 
@@ -151,35 +149,23 @@ suspend fun JsonStreamWriter.writeJson(
     documents: Collection<JsonObject>,
     chunkSize: Int = 200,
     parallelization: Int = Runtime.getRuntime().availableProcessors(),
-    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 10.seconds),
-    onRetry: (exception: ApiException, delay: Duration) -> Unit = { _, _ -> }
+    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
 ) = documents.chunked(chunkSize)
     .parTraverseN(Dispatchers.IO, parallelization) { chunk ->
         val rows = chunk.toJSONArray()
-
         writeJsonChunk(rows, backoffSettings, onRetry)
     }.allLefts()
 
 @ExperimentalTime
 private suspend fun JsonStreamWriter.writeJsonChunk(
     rows: JSONArray,
-    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 10.seconds),
-    onRetry: (exception: ApiException, delay: Duration) -> Unit = { _, _ -> }
-) = Either.catch {
-    Schedule.exponential<Throwable>(backoffSettings.duration)
-        .check { input: Throwable, output ->
-            if (input is ApiException && input.isRetryable && output < backoffSettings.limit) {
-                onRetry(input, output)
-                true
-            } else {
-                false
-            }
-        }
-        .retry {
-            withContext(Dispatchers.IO) {
-                append(rows).get()
-            }
-        }
+    backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
+) = retry("JsonStreamWriter: Write json chunk", backoffSettings, onRetry) {
+    withContext(Dispatchers.IO) {
+        append(rows).get()
+    }
 }
 
 private fun BigQuery.createJsonStreamWriter(tableId: TableId): JsonStreamWriter {

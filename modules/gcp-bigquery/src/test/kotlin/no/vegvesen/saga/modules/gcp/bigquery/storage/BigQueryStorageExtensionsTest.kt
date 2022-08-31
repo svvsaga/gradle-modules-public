@@ -10,6 +10,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.collections.shouldNotBeEmpty
 import io.mockk.every
 import io.mockk.mockk
+import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
 import no.vegvesen.saga.modules.testing.TestLogger
 import org.slf4j.LoggerFactory
 import kotlin.time.Duration.Companion.seconds
@@ -37,8 +38,8 @@ class BigQueryStorageExtensionsTest : FunSpec({
     test("writeJson can retry") {
         val testLogger = TestLogger()
 
-        testSubject.writeJson(listOf(Foo(1)), Foo.serializer()) { exception, delay ->
-            logger.warn("Failure, delaying $delay", exception)
+        testSubject.writeJson(listOf(Foo(1)), Foo.serializer()) { exception, delay, attempts ->
+            logger.warn("Failure, delaying $delay, attempts: $attempts", exception)
         }.shouldBeEmpty()
 
         testLogger.events.filter { it.level == Level.WARN } shouldHaveSize 3
@@ -53,9 +54,9 @@ class BigQueryStorageExtensionsTest : FunSpec({
         val result = failingWriter.writeJson(
             listOf(Foo(1)),
             Foo.serializer(),
-            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 0.5.seconds)
-        ) { exception, delay ->
-            logger.warn("Failure, delaying $delay", exception)
+            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2)
+        ) { exception, delay, attempts ->
+            logger.warn("Failure, delaying $delay, attempts $attempts", exception)
         }
 
         result.shouldNotBeEmpty()

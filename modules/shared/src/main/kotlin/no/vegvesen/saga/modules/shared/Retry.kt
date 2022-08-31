@@ -4,9 +4,9 @@ import arrow.core.Either
 import arrow.fx.coroutines.Schedule
 import arrow.fx.coroutines.retry
 import kotlin.time.Duration
-import kotlin.time.ExperimentalTime
+import kotlin.time.Duration.Companion.nanoseconds
+import kotlin.time.DurationUnit.NANOSECONDS
 
-@ExperimentalTime
 object Retry : Logging {
 
     data class ExponentialBackoffSettings(val duration: Duration, val maxAttempts: Int)
@@ -27,13 +27,13 @@ object Retry : Logging {
     ): Either<Throwable, T> {
         var attempts = 1
         return Either.catch {
-            Schedule.exponential<Throwable>(backoff.duration)
+            Schedule.exponential<Throwable>(backoff.duration.toDouble(NANOSECONDS))
                 .check { exception: Throwable, output ->
                     log().warn(
                         "$description failed, retry attempt $attempts/${backoff.maxAttempts}. Error: {}",
                         v("error", exception.localizedMessage)
                     )
-                    onRetry(exception, output, attempts)
+                    onRetry(exception, output.nanoseconds, attempts)
                     attempts++
                     attempts <= backoff.maxAttempts
                 }

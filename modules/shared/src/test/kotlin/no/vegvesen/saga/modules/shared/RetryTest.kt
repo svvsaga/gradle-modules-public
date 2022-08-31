@@ -6,6 +6,8 @@ import arrow.core.right
 import io.kotest.assertions.arrow.core.shouldBeLeft
 import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.comparables.shouldBeGreaterThan
+import io.kotest.matchers.comparables.shouldBeLessThan
 import io.kotest.matchers.ints.shouldBeExactly
 import io.kotest.matchers.shouldBe
 import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
@@ -13,6 +15,7 @@ import no.vegvesen.saga.modules.shared.Retry.retry
 import no.vegvesen.saga.modules.shared.Retry.retryEither
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
+import kotlin.time.measureTime
 
 @ExperimentalTime
 class RetryTest : FunSpec({
@@ -47,5 +50,20 @@ class RetryTest : FunSpec({
         }
         result.shouldBeLeft()
         runs.shouldBe(2)
+    }
+
+    test("will retry in time") {
+        var runs = 0
+        val duration = measureTime {
+            retryEither("some-description", ExponentialBackoffSettings(1.seconds, 2)) {
+                if (runs++ == 0) {
+                    Exception("err").left()
+                } else {
+                    runs.right()
+                }
+            }
+        }
+        duration.shouldBeGreaterThan(1.seconds)
+        duration.shouldBeLessThan(3.seconds)
     }
 })

@@ -39,10 +39,12 @@ class BigQueryStorageExtensionsTest : FunSpec({
         val testLogger = TestLogger()
 
         testSubject.writeJson(listOf(Foo(1)), Foo.serializer()) { exception, delay, attempts ->
-            logger.warn("Failure, delaying $delay, attempts: $attempts", exception)
+            logger.warn("testlogging: Failure, delaying $delay, attempts: $attempts", exception)
         }.shouldBeEmpty()
 
-        testLogger.events.filter { it.level == Level.WARN } shouldHaveSize 3
+        testLogger.events
+            .filter { it.message.startsWith("testlogging") }
+            .filter { it.level == Level.WARN } shouldHaveSize 3
     }
 
     test("writeJson fails when time limit has been reached") {
@@ -56,10 +58,12 @@ class BigQueryStorageExtensionsTest : FunSpec({
             Foo.serializer(),
             backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2)
         ) { exception, delay, attempts ->
-            logger.warn("Failure, delaying $delay, attempts $attempts", exception)
+            logger.warn("testlogging: Failure, delaying $delay, attempts $attempts", exception)
         }
 
         result.shouldNotBeEmpty()
-        testLogger.events.filter { it.level == Level.WARN }.shouldNotBeEmpty()
+        testLogger.events
+            .filter { it.message.startsWith("testlogging") }
+            .filter { it.level == Level.WARN }.shouldNotBeEmpty()
     }
 })

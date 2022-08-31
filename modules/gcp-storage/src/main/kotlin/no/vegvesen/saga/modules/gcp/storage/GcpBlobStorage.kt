@@ -1,3 +1,4 @@
+
 package no.vegvesen.saga.modules.gcp.storage
 
 import arrow.core.Either
@@ -14,6 +15,8 @@ import com.google.cloud.storage.Storage
 import com.google.cloud.storage.StorageException
 import com.google.cloud.storage.StorageOptions
 import no.vegvesen.saga.modules.shared.ContentType
+import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
+import no.vegvesen.saga.modules.shared.Retry.retry
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorage
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorageBrowser
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorageError
@@ -26,6 +29,7 @@ import no.vegvesen.saga.modules.shared.gzipCompress
 import no.vegvesen.saga.modules.shared.gzipDecompress
 import java.nio.ByteBuffer
 import java.time.Instant
+import kotlin.time.Duration.Companion.seconds
 
 /**
 TODO: Consider adding stream-oriented methods,
@@ -46,6 +50,8 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
 
         private const val PRECONDITION_FAILED = 412
     }
+
+    private val backoffSettings = ExponentialBackoffSettings(1.seconds, 5)
 
     override suspend fun saveFile(
         storagePath: StoragePath,
@@ -72,7 +78,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             blobInfoBuilder.setMetadata(it)
         }
 
-        return Either.catch {
+        return retry("Saving blob '$storagePath' to GCS", backoffSettings) {
             storage.create(
                 blobInfoBuilder.build(),
                 if (options.gzipContent) gzipCompress(fileContent) else fileContent,

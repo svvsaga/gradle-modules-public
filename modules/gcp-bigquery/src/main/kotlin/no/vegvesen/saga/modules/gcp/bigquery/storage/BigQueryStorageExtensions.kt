@@ -53,7 +53,7 @@ suspend fun <T> BigQuery.writeDocumentsToDefaultStream(
         val errors = writeJson(documents, serializer, fullTableId, chunkSize, parallelization)
 
         if (errors.any()) {
-            BigQueryStreamException("Some rows were not inserted", errors.map { it.localizedMessage }).left()
+            BigQueryStreamException("Some rows were not inserted", errors.map { it.localizedMessage }, errors.first()).left()
         } else {
             Unit.right()
         }
@@ -81,7 +81,7 @@ suspend fun BigQuery.writeDocumentsToDefaultStream(
         val errors = writeJson(documents, fullTableId, chunkSize, parallelization)
 
         if (errors.any()) {
-            BigQueryStreamException("Some rows were not inserted", errors.map { it.localizedMessage }).left()
+            BigQueryStreamException("Some rows were not inserted", errors.map { it.localizedMessage }, errors.first()).left()
         } else {
             Unit.right()
         }

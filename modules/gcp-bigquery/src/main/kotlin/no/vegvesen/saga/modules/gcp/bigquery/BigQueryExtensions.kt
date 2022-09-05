@@ -203,12 +203,17 @@ fun BigQuery.queryOf(query: String, params: Map<String, Any> = emptyMap()): Tabl
 }
 
 fun FieldValueList.getString(name: String): String = get(name).stringValue
-fun FieldValueList.getStringOrNull(name: String): String? =
-    get(name).let { if (it.isNull) null else it.stringValue }
-
 fun FieldValueList.getLong(name: String): Long = get(name).longValue
 fun FieldValueList.getDate(name: String): LocalDate = LocalDate.parse(get(name).stringValue)
 fun FieldValueList.getInstant(name: String): kotlinx.datetime.Instant = get(name).instantValue.toKotlinInstant()
+
+fun FieldValueList.getStringOrNull(name: String): String? = get(name).let { if (it.isNull) null else it.stringValue }
+fun FieldValueList.getLongOrNull(name: String): Long? = get(name).let { if (it.isNull) null else it.longValue }
+fun FieldValueList.getDateOrNull(name: String): LocalDate? =
+    get(name).let { if (it.isNull) null else LocalDate.parse(it.stringValue) }
+
+fun FieldValueList.getInstantOrNull(name: String): kotlinx.datetime.Instant? =
+    get(name).let { if (it.isNull) null else it.instantValue.toKotlinInstant() }
 
 private fun Any.toQueryParameterValue(): QueryParameterValue = when (this) {
     is String -> QueryParameterValue.string(this)

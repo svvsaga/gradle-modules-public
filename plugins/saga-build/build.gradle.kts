@@ -3,7 +3,7 @@
 plugins {
     `kotlin-dsl`
     `maven-publish`
-    id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.4"
+    id("com.google.cloud.artifactregistry.gradle-plugin") version "2.1.5"
 }
 
 group = "no.vegvesen.saga"
@@ -22,7 +22,7 @@ gradlePlugin {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 

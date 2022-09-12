@@ -46,20 +46,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Cache Gradle packages
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
       - name: Setup Google Cloud SDK
         uses: svvsaga/github-actions-public/setup-gcloud@v11.0.0
         with:
           service_account_key: ${{ secrets.GCP_SA_ARTIFACT_PUBLISHER }}
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
 
       - name: Publish packages
         run: ./gradlew test publish -PreleaseVersion=${{ needs.find-module-changes.outputs.version }} --parallel

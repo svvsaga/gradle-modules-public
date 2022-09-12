@@ -16,7 +16,7 @@ class SagaBuildPlugin : Plugin<Project> {
                 }
                 maven("https://jitpack.io")
             }
-            useJvmTarget("11")
+            useJvmTarget("17")
         }
     }
 }

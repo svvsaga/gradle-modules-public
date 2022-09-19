@@ -45,7 +45,7 @@ class IapAuthenticationProvider(private val config: Config) :
             call.request.header(AuthenticatedUserEmailHeader)?.replace("accounts.google.com:", "")
                 ?: config.overrideEmail
 
-        if (userEmail == null) {
+        if (userEmail.isNullOrBlank()) {
             call.respond(HttpStatusCode.Unauthorized, "$AuthenticatedUserEmailHeader not set")
         } else {
             context.principal = UserEmailPrincipal(userEmail)

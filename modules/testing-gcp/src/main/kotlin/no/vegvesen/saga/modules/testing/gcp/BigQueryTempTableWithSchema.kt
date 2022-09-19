@@ -37,7 +37,12 @@ class BigQueryTempTableWithSchema(
     ) : this(
         createBigQuery(projectId, location),
         schema,
-        isolationMode, datasetPrefix, tablePrefix, location, overrideDatasetName, overrideTableName
+        isolationMode,
+        datasetPrefix,
+        tablePrefix,
+        location,
+        overrideDatasetName,
+        overrideTableName
     )
 
     override fun createTempTableImplementation() {

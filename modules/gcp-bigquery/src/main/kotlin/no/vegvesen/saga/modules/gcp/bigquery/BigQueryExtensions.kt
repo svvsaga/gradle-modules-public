@@ -55,8 +55,9 @@ fun BigQuery.writeNdJson(
     tableName: String,
     location: BigQueryLocation
 ) {
-    if (ndjson.isEmpty())
+    if (ndjson.isEmpty()) {
         return
+    }
 
     val tableId = TableId.of(datasetName, tableName)
     val writeChannelConfiguration =
@@ -70,8 +71,9 @@ fun BigQuery.writeNdJson(
 
     val job = writer.job.waitFor()
 
-    if (job.status.error != null)
+    if (job.status.error != null) {
         throw Exception("Unable to write data to BigQuery: ${job.status.executionErrors.last().message}")
+    }
 }
 
 fun BigQuery.truncateTable(datasetName: String, tableName: String): TableResult =

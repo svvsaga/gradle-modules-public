@@ -26,8 +26,11 @@ class GoogleIdTokenProcessor {
             Either.catch { internalVerifier.verify(idToken) }
                 .mapLeft { AuthenticationException("Failure during token verification", it) }
                 .flatMap { isValid ->
-                    if (isValid) idToken.right() else
+                    if (isValid) {
+                        idToken.right()
+                    } else {
                         AuthenticationException("Could not verify ID token").left()
+                    }
                 }
         }
 }

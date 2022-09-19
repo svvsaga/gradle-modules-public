@@ -30,7 +30,6 @@ class DatexSerializer {
         fun deserialize(xml: XmlString): Either<Throwable, DatexResult> = deserialize(xml.value.byteInputStream())
 
         fun deserialize(stream: InputStream): Either<Throwable, DatexResult> = Either.catchAndFlatten {
-
             val (bufferedStream, firstBytes) = stream.bufferAndPeek()
             val xml = XmlString(firstBytes.toString(Charsets.UTF_8).trim())
 
@@ -41,8 +40,11 @@ class DatexSerializer {
                         (result.value as D2LogicalModel).let {
                             it.payloadPublication?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
                                 Datex2Result(it, publicationTime).right()
-                            } ?: if (containsDeliveryBreak(xml.value)) DeliveryBreakError(DatexVersion.DATEX_2).left()
-                            else MissingPayloadError(DatexVersion.DATEX_2, xml).left()
+                            } ?: if (containsDeliveryBreak(xml.value)) {
+                                DeliveryBreakError(DatexVersion.DATEX_2).left()
+                            } else {
+                                MissingPayloadError(DatexVersion.DATEX_2, xml).left()
+                            }
                         }
                     }
                     DatexVersion.DATEX_3 -> {
@@ -50,8 +52,11 @@ class DatexSerializer {
                         (result as MessageContainer).let {
                             it.payload.firstOrNull()?.publicationTime?.toKotlinInstant()?.let { publicationTime ->
                                 Datex3Result(it, publicationTime).right()
-                            } ?: if (containsDeliveryBreak(xml.value)) DeliveryBreakError(DatexVersion.DATEX_3).left()
-                            else MissingPayloadError(DatexVersion.DATEX_3, xml).left()
+                            } ?: if (containsDeliveryBreak(xml.value)) {
+                                DeliveryBreakError(DatexVersion.DATEX_3).left()
+                            } else {
+                                MissingPayloadError(DatexVersion.DATEX_3, xml).left()
+                            }
                         }
                     }
                 }

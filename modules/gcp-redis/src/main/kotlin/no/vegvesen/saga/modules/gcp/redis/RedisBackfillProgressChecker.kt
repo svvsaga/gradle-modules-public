@@ -38,8 +38,9 @@ class RedisBackfillProgressChecker(private val jedis: Jedis) : BackfillProgressC
     companion object {
         fun createOrThrow(redisHost: String, redisIdentifier: String?): RedisBackfillProgressChecker {
             val jedis = Jedis(redisHost)
-            if (redisIdentifier != null)
+            if (redisIdentifier != null) {
                 jedis.authenticateInstance(redisIdentifier, "RedisBackfillProgressChecker")
+            }
             return RedisBackfillProgressChecker(jedis)
         }
     }

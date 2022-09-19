@@ -27,7 +27,12 @@ abstract class BigQueryTempTable(
         overrideTableName: String? = null
     ) : this(
         createBigQuery(projectId, location),
-        isolationMode, datasetPrefix, tablePrefix, location, overrideDatasetName, overrideTableName
+        isolationMode,
+        datasetPrefix,
+        tablePrefix,
+        location,
+        overrideDatasetName,
+        overrideTableName
     )
 
     lateinit var tempTable: String

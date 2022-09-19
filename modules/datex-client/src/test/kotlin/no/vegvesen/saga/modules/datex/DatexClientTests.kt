@@ -67,7 +67,9 @@ class DatexClientTests : AnnotationSpec() {
                                 respondError(HttpStatusCode.PreconditionFailed)
                             }
                         }
-                    } else respondError(HttpStatusCode.Unauthorized)
+                    } else {
+                        respondError(HttpStatusCode.Unauthorized)
+                    }
 
                     else -> error("Unhandled ${request.url}")
                 }
@@ -80,7 +82,9 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `DatexRepository should always give Datex document when running read() without date param with correct auth`() {
         val repository = DatexClient(
-            ktorTestHttpClient, validDatexSettings, datexValidator
+            ktorTestHttpClient,
+            validDatexSettings,
+            datexValidator
         )
         val result = repository.read()
 
@@ -92,7 +96,9 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `DatexRepository should return auth error when not authenticating correctly with Datex service`() {
         val repository = DatexClient(
-            ktorTestHttpClient, DatexSettings(testUrl, "wrong username", "wrong password"), datexValidator
+            ktorTestHttpClient,
+            DatexSettings(testUrl, "wrong username", "wrong password"),
+            datexValidator
         )
         val result = repository.read()
 
@@ -104,7 +110,9 @@ class DatexClientTests : AnnotationSpec() {
         val testDate = testDateLastModified.plusSeconds(10)
 
         val result = DatexClient(
-            ktorTestHttpClient, validDatexSettings, datexValidator
+            ktorTestHttpClient,
+            validDatexSettings,
+            datexValidator
         ).read(testDate)
 
         result.shouldBeLeft().shouldBeTypeOf<DatexError.NoNewDataAvailable>()
@@ -115,7 +123,9 @@ class DatexClientTests : AnnotationSpec() {
         val testDate = testDateLastModified.minusSeconds(10)
 
         val result = DatexClient(
-            ktorTestHttpClient, validDatexSettings, datexValidator
+            ktorTestHttpClient,
+            validDatexSettings,
+            datexValidator
         ).read(testDate)
 
         result shouldBeRightAnd {
@@ -126,7 +136,9 @@ class DatexClientTests : AnnotationSpec() {
     @Test
     suspend fun `DatexRepository should give last modified date when header available`() {
         val result = DatexClient(
-            ktorTestHttpClient, validDatexSettings, datexValidator
+            ktorTestHttpClient,
+            validDatexSettings,
+            datexValidator
         ).read()
 
         result shouldBeRightAnd {
@@ -141,7 +153,9 @@ class DatexClientTests : AnnotationSpec() {
         """.trim()
         val httpClient = httpClientResponds(deliveryBreakXml)
         val testSubject = DatexClient(
-            httpClient, validDatexSettings, datexValidator
+            httpClient,
+            validDatexSettings,
+            datexValidator
         )
 
         val result = testSubject.read()
@@ -170,7 +184,9 @@ class DatexClientTests : AnnotationSpec() {
         """.trimIndent()
         val httpClient = httpClientResponds(deliveryBreakXml)
         val testSubject = DatexClient(
-            httpClient, validDatexSettings, datexValidator
+            httpClient,
+            validDatexSettings,
+            datexValidator
         )
 
         val result = testSubject.read()
@@ -185,7 +201,9 @@ class DatexClientTests : AnnotationSpec() {
         """.trim()
         val httpClient = httpClientResponds(deliveryBreakXml)
         val testSubject = DatexClient(
-            httpClient, validDatexSettings, datexValidator
+            httpClient,
+            validDatexSettings,
+            datexValidator
         )
 
         val result = testSubject.read()

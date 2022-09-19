@@ -15,7 +15,7 @@ object Retry : Logging {
     suspend fun <T> retry(
         description: String,
         backoff: ExponentialBackoffSettings,
-        retryable: suspend () -> T,
+        retryable: suspend () -> T
     ): Either<Throwable, T> = retry(description, backoff, { _, _, _ -> }, retryable)
 
     /** Retry with exponential backoff. */
@@ -23,7 +23,7 @@ object Retry : Logging {
         description: String,
         backoff: ExponentialBackoffSettings,
         onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> },
-        retryable: suspend () -> T,
+        retryable: suspend () -> T
     ): Either<Throwable, T> {
         var attempts = 1
         return Either.catch {

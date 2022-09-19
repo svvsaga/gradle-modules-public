@@ -6,5 +6,5 @@ package no.vegvesen.saga.modules.gcp.functions
 data class GcpPubSubMessage(
     // Base64 encoded
     val data: String? = null,
-    val attributes: Map<String, String?>? = null,
+    val attributes: Map<String, String?>? = null
 )

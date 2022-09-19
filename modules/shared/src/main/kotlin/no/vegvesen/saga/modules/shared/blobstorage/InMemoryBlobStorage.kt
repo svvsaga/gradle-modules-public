@@ -48,11 +48,12 @@ open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
         options: SaveFileOptions
     ): Either<Throwable, Boolean> {
         val shouldAdd = !files.containsKey(storagePath)
-        if (shouldAdd)
+        if (shouldAdd) {
             files[storagePath] = File(
                 fileContent,
                 fileMetadata(storagePath, contentType, options)
             )
+        }
         return shouldAdd.right()
     }
 

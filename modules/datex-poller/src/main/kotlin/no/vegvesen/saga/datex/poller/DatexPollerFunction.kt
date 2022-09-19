@@ -28,7 +28,7 @@ abstract class DatexPollerFunction(
     private val datexEndpointUrl: String,
     private val dataSourceName: String,
     private val publicationsBucket: String,
-    private val deadLetterBucket: String,
+    private val deadLetterBucket: String
 ) : GcpHttpFunction(
     {
         createProcessor(
@@ -48,7 +48,7 @@ abstract class DatexPollerFunction(
             datexEndpointUrl: String,
             dataSourceName: String,
             publicationsBucket: String,
-            deadLetterBucket: String,
+            deadLetterBucket: String
         ): DatexIngestProcessor {
             val datexUsername = SecretManagerUtils.fetchSecretString(projectId, datexUsernameSecretKey)
             val datexPassword = SecretManagerUtils.fetchSecretString(projectId, datexUsernamePasswordKey)

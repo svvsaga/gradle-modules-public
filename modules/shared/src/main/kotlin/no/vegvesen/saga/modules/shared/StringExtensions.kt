@@ -18,6 +18,10 @@ fun requireNotEmpty(value: String?): String {
     return value
 }
 
-fun String.capitalized(): String = if (firstOrNull()?.isLowerCase() == true) this.replaceFirstChar {
-    it.titlecase(Locale.getDefault())
-} else this
+fun String.capitalized(): String = if (firstOrNull()?.isLowerCase() == true) {
+    this.replaceFirstChar {
+        it.titlecase(Locale.getDefault())
+    }
+} else {
+    this
+}

@@ -18,7 +18,7 @@ import no.vegvesen.saga.modules.shared.TransactionalDeduplicationStorage
 import no.vegvesen.saga.modules.shared.log
 
 data class DatastoreDeduplicationStorageOptions(
-    val kind: String = "deduplication",
+    val kind: String = "deduplication"
 )
 
 class DatastoreDeduplicationStorage(

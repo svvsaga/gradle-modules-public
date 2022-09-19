@@ -58,10 +58,11 @@ open class DatexClient(
                             if (it is DatexError.MissingPublicationTimeError && containsDeliveryBreak(
                                     content.value.take(2000)
                                 )
-                            )
+                            ) {
                                 DatexError.DeliveryBreak
-                            else
+                            } else {
                                 it
+                            }
                         }
                 }
             }

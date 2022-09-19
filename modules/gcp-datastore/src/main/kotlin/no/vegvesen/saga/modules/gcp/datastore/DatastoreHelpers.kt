@@ -6,8 +6,9 @@ import com.google.cloud.datastore.Query
 
 fun createDatastore(projectId: String, namespace: String = ""): Datastore =
     DatastoreOptions.newBuilder().setProjectId(projectId).also {
-        if (namespace.isNotBlank())
+        if (namespace.isNotBlank()) {
             it.setNamespace(namespace)
+        }
     }.build().service
 
 fun Datastore.deleteAllEntitiesOfKind(kind: String) {

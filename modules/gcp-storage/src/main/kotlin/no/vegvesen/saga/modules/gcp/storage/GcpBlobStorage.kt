@@ -60,7 +60,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
         options: SaveFileOptions
     ): Either<Throwable, Unit> {
         val createOptions = arrayOf(
-            if (options.noOverwrite) Storage.BlobTargetOption.doesNotExist() else null,
+            if (options.noOverwrite) Storage.BlobTargetOption.doesNotExist() else null
         ).filterNotNull().toTypedArray()
 
         val blobInfoBuilder = BlobInfo.newBuilder(storagePath.bucketName, storagePath.fileName)
@@ -98,9 +98,11 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             .handleErrorWith { ex ->
                 when (ex) {
                     is StorageException -> {
-                        if (ex.code == PRECONDITION_FAILED && ex.location == "If-Match")
+                        if (ex.code == PRECONDITION_FAILED && ex.location == "If-Match") {
                             return false.right()
-                        else ex.left()
+                        } else {
+                            ex.left()
+                        }
                     }
                     else -> ex.left()
                 }

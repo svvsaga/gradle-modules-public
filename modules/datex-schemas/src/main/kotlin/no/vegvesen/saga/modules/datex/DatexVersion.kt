@@ -11,6 +11,10 @@ enum class DatexVersion {
 }
 
 fun findDatexVersion(xml: XmlString): Either<Throwable, DatexVersion> =
-    if (xml.value.contains("http://datex2.eu/schema/2/")) DatexVersion.DATEX_2.right()
-    else if (xml.value.contains("http://datex2.eu/schema/3/")) DatexVersion.DATEX_3.right()
-    else Exception("Unknown DATEX version: $xml").left()
+    if (xml.value.contains("http://datex2.eu/schema/2/")) {
+        DatexVersion.DATEX_2.right()
+    } else if (xml.value.contains("http://datex2.eu/schema/3/")) {
+        DatexVersion.DATEX_3.right()
+    } else {
+        Exception("Unknown DATEX version: $xml").left()
+    }

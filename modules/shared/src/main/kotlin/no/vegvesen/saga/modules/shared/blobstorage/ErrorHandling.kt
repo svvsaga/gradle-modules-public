@@ -18,5 +18,7 @@ fun <A, B> Either<A, B>.handleBlobNotFound(): Either<A, Unit> = fold({
             kv("path", it.storagePath)
         )
         Unit.right()
-    } else it.left()
+    } else {
+        it.left()
+    }
 }, { Unit.right() })

@@ -35,8 +35,11 @@ class RetryTest : FunSpec({
     test("will retry on failed eithers") {
         var runs = 0
         val result = retryEither("some-description", ExponentialBackoffSettings(0.1.seconds, 42)) {
-            if (runs++ < 2) Exception("err").left()
-            else runs.right()
+            if (runs++ < 2) {
+                Exception("err").left()
+            } else {
+                runs.right()
+            }
         }
         result.shouldBeRight(3)
         runs.shouldBeExactly(3)

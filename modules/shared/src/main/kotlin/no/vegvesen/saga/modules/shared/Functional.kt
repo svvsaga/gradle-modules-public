@@ -50,12 +50,12 @@ fun <A, B> Iterable<Either<A, B>>.allLefts(): List<A> = this.mapNotNull { either
  * Run any number of suspend functions in parallel. If any of them fails, the rest are cancelled.
  */
 suspend inline fun par(
-    vararg funcs: suspend CoroutineScope.() -> Unit,
+    vararg funcs: suspend CoroutineScope.() -> Unit
 ): Unit = par(Dispatchers.Default, *funcs)
 
 suspend inline fun par(
     ctx: CoroutineContext = EmptyCoroutineContext,
-    vararg funcs: suspend CoroutineScope.() -> Unit,
+    vararg funcs: suspend CoroutineScope.() -> Unit
 ): Unit = coroutineScope {
     funcs.map { async(ctx) { it() } }.awaitAll()
 }

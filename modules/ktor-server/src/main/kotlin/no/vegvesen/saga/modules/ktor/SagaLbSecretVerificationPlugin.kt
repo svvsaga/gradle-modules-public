@@ -25,8 +25,9 @@ val SagaLbSecretVerificationPlugin =
         val sagaLbSecret = pluginConfig.sagaLbSecret ?: throw Exception("Missing sagaLbSecret")
         val ignorePaths = pluginConfig.ignorePaths
         onCall { call ->
-            if (ignorePaths.any { path -> call.request.path().startsWith(path) })
+            if (ignorePaths.any { path -> call.request.path().startsWith(path) }) {
                 return@onCall
+            }
 
             call.request.header(SagaLbSecretHeader).let { value ->
                 if (value == null) {

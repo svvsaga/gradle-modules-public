@@ -59,8 +59,9 @@ class SagaLbSecretVerification(configuration: Configuration) : Logging {
             configure: Configuration.() -> Unit
         ): SagaLbSecretVerification {
             val config = Configuration().apply(configure)
-            if (config.sagaLbSecret == null)
+            if (config.sagaLbSecret == null) {
                 throw Exception("Saga LB Secret must be set!")
+            }
             val feature = SagaLbSecretVerification(config)
             pipeline.intercept(ApplicationCallPipeline.Call) {
                 feature.intercept(this)

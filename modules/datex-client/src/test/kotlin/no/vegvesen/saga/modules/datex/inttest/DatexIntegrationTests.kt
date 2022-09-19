@@ -57,7 +57,9 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
             val blobStorage = InMemoryBlobStorage()
 
             fun createDatexClient(): DatexClient = DatexClient(
-                createApacheHttpClient(), datexSettings, DatexValidator()
+                createApacheHttpClient(),
+                datexSettings,
+                DatexValidator()
             )
 
             fun createProcessor(datexClient: DatexClient, gzipped: Boolean = true): DatexIngestProcessor =
@@ -65,10 +67,14 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                     DatexPoller(
                         datexClient,
                         DatexStorageRepository(
-                            ingestBucket, "datasource", kvStore, blobStorage
+                            ingestBucket,
+                            "datasource",
+                            kvStore,
+                            blobStorage
                         )
                     ),
-                    DeadLetterStorage(blobStorage, deadLetterBucket), gzipped = gzipped
+                    DeadLetterStorage(blobStorage, deadLetterBucket),
+                    gzipped = gzipped
                 )
 
             beforeEach {
@@ -106,7 +112,9 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                         }
                     }
                     val datexClient = DatexClient(
-                        mockHttpClient, datexSettings, DatexValidator()
+                        mockHttpClient,
+                        datexSettings,
+                        DatexValidator()
                     )
 
                     val result = createProcessor(datexClient).process()
@@ -124,7 +132,9 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                         }
                     }
                     val datexClient = DatexClient(
-                        mockHttpClient, datexSettings, DatexValidator()
+                        mockHttpClient,
+                        datexSettings,
+                        DatexValidator()
                     )
 
                     val result = createProcessor(datexClient, gzipped = false).process()

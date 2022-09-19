@@ -31,6 +31,9 @@ inline fun <reified T> Pipeline.fromElements(elements: Iterable<T>, name: String
     Create.of(elements)
         .withType(TypeDescriptor.of(T::class.java))
         .let { values ->
-            if (name != null) this.apply(name, values)
-            else this.apply(values)
+            if (name != null) {
+                this.apply(name, values)
+            } else {
+                this.apply(values)
+            }
         }

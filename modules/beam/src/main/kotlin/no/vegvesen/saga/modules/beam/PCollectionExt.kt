@@ -115,7 +115,6 @@ fun <TIn> PCollection<TIn>.filter(
 fun <TIn> PCollection<TIn>.countPerElement(
     name: String? = null
 ): PCollection<KV<TIn, Long>> {
-
     return this.apply(
         name ?: "count per element",
         Count.perElement<TIn>()

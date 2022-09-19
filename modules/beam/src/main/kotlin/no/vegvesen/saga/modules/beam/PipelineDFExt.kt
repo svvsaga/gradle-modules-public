@@ -17,7 +17,6 @@ inline fun <reified T> Pipeline.fromPubsub(
     subscription: String,
     idAttr: String = "uid"
 ): PCollection<T> {
-
     val klass = T::class
 
     // We have manually ensured every class is correctly cast. NB! Be aware of this when changing this code!

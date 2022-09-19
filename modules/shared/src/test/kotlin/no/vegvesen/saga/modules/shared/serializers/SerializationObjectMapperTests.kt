@@ -35,7 +35,7 @@ private data class TypeD(
     val a: String,
     val d: Short = 1,
     val b: Int,
-    val c: Boolean?,
+    val c: Boolean?
 )
 
 class SerializationObjectMapperTests : FunSpec({

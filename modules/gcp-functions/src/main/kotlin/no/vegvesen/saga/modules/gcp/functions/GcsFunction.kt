@@ -33,7 +33,7 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
 
                 if (payload.isFolder() && !processFolders) {
                     log().info("File is folder and processing of folders is disabled")
-                } else
+                } else {
                     try {
                         process(StorageEvent(payload.bucket, payload.name)).handleBlobNotFound().getOrThrow()
                         log().info(
@@ -48,6 +48,7 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
                         )
                         throw throwable
                     }
+                }
             }
         }
 

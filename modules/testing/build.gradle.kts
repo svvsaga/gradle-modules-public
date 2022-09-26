@@ -1,7 +1,7 @@
-val kotestVersion = "5.3.2"
-val mockkVersion = "1.12.4"
-val jUnitVersion = "5.8.2"
-val logbackVersion = "1.2.11"
+val kotestVersion = "5.4.2"
+val mockkVersion = "1.13.1"
+val jUnitVersion = "5.9.1"
+val logbackVersion = "1.4.1"
 
 dependencies {
     api(project(":shared"))

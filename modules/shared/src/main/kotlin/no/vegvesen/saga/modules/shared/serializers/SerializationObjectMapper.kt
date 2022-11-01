@@ -7,7 +7,7 @@ import kotlinx.serialization.properties.Properties
 
 object SerializationObjectMapper {
     /**
-     * Maps an object using ktolinx.serialization without using reflection
+     * Maps an object using kotlinx.serialization without using reflection
      */
     @OptIn(ExperimentalSerializationApi::class)
     fun <A, B> mapObject(fromSerializer: SerializationStrategy<A>, toDeserializer: DeserializationStrategy<B>, from: A): B =

@@ -11,6 +11,7 @@ import no.vegvesen.saga.modules.gcp.datastore.createDatastore
 import no.vegvesen.saga.modules.gcp.functions.GcpHttpFunction
 import no.vegvesen.saga.modules.gcp.secretmanager.SecretManagerUtils
 import no.vegvesen.saga.modules.gcp.storage.GcpBlobStorage
+import no.vegvesen.saga.modules.ktor.HttpTimeoutSettings
 import no.vegvesen.saga.modules.ktor.createApacheHttpClient
 import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
 
@@ -22,13 +23,14 @@ import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
  * @param publicationsBucket Name of the bucket in which to store ingested publications, without gs://-prefix
  * @param deadLetterBucket Name of the bucket in which to store ingested documents that do not validate, without gs://-prefix
  */
-abstract class DatexPollerFunction(
+class DatexPollerFunction(
     private val datexUsernameSecretKey: String,
     private val datexUsernamePasswordKey: String,
     private val datexEndpointUrl: String,
     private val dataSourceName: String,
     private val publicationsBucket: String,
-    private val deadLetterBucket: String
+    private val deadLetterBucket: String,
+    private val timeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings()
 ) : GcpHttpFunction(
     {
         createProcessor(
@@ -37,7 +39,8 @@ abstract class DatexPollerFunction(
             datexEndpointUrl,
             dataSourceName,
             publicationsBucket,
-            deadLetterBucket
+            deadLetterBucket,
+            timeoutSettings
         ).process()
     }
 ) {
@@ -48,13 +51,14 @@ abstract class DatexPollerFunction(
             datexEndpointUrl: String,
             dataSourceName: String,
             publicationsBucket: String,
-            deadLetterBucket: String
+            deadLetterBucket: String,
+            timeoutSettings: HttpTimeoutSettings
         ): DatexIngestProcessor {
             val datexUsername = SecretManagerUtils.fetchSecretString(projectId, datexUsernameSecretKey)
             val datexPassword = SecretManagerUtils.fetchSecretString(projectId, datexUsernamePasswordKey)
             val datexClient =
                 DatexClient(
-                    createApacheHttpClient(),
+                    createApacheHttpClient(timeoutSettings),
                     DatexSettings(datexEndpointUrl, datexUsername, datexPassword),
                     DatexValidator()
                 )

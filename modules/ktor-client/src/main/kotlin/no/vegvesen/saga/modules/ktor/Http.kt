@@ -24,11 +24,13 @@ fun createCIOHttpClientWithKotlinxSerialization(): HttpClient = HttpClient(CIO) 
     installKotlinxSerialization()
 }
 
-fun createApacheHttpClient() = HttpClient(Apache) {
+fun createApacheHttpClient(
+    httpTimeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings()
+) = HttpClient(Apache) {
     engine {
-        socketTimeout = 60 * 1000
-        connectionRequestTimeout = 60 * 1000
-        connectTimeout = 60 * 1000
+        socketTimeout = httpTimeoutSettings.socketTimeoutMillis
+        connectionRequestTimeout = httpTimeoutSettings.requestTimeoutMillis
+        connectTimeout = httpTimeoutSettings.connectTimeoutMillis
     }
 }
 
@@ -42,3 +44,12 @@ fun createApacheHttpClientWithKotlinxSerialization(useContentEncoding: Boolean =
             }
         }
     }
+
+data class HttpTimeoutSettings(
+    /* connectTimeoutMillis specifies a timeout for establishing a connection with a server. */
+    val connectTimeoutMillis: Int = 10_000,
+    /* requestTimeoutMillis specifies a timeout for a whole HTTP call, from sending a request to receiving a response. */
+    val requestTimeoutMillis: Int = 60_000,
+    /* socketTimeoutMillis specifies a timeout for the maximum time in between two data packets when exchanging data with a server. */
+    val socketTimeoutMillis: Int = 10_000
+)

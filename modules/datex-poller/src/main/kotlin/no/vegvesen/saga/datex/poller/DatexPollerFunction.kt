@@ -23,7 +23,7 @@ import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
  * @param publicationsBucket Name of the bucket in which to store ingested publications, without gs://-prefix
  * @param deadLetterBucket Name of the bucket in which to store ingested documents that do not validate, without gs://-prefix
  */
-class DatexPollerFunction(
+abstract class DatexPollerFunction(
     private val datexUsernameSecretKey: String,
     private val datexUsernamePasswordKey: String,
     private val datexEndpointUrl: String,

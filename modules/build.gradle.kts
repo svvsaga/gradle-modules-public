@@ -1,8 +1,8 @@
 // Touch to trigger build...
 
 plugins {
-    kotlin("jvm") version "1.7.10"
-    kotlin("plugin.serialization") version "1.7.10"
+    kotlin("jvm") version "1.7.20"
+    kotlin("plugin.serialization") version "1.7.20"
     id("com.adarshr.test-logger") version "3.2.0"
     id("saga-build")
     `maven-publish`
@@ -12,15 +12,15 @@ plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
 }
 
-val kotlinVersion = "1.7.10"
+val kotlinVersion = "1.7.20"
 val kotlinxCoroutinesVersion = "1.6.4"
 val kotlinxDateTimeVersion = "0.4.0"
-val arrowVersion = "1.1.2"
-val jacksonVersion = "2.12.3"
+val arrowVersion = "1.1.3"
+val jacksonVersion = "2.13.4"
 val jUnitVersion = "5.7.1"
-val serializationVersion = "1.3.3"
+val serializationVersion = "1.4.1"
 val functionsVersion = "1.0.4"
-val gcpLibrariesBomVersion = "26.0.0"
+val gcpLibrariesBomVersion = "26.1.4"
 
 val modulesVersion =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)
@@ -93,7 +93,7 @@ subprojects {
             api("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", serializationVersion)
 
             implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", jacksonVersion)
-            implementation("com.fasterxml.jackson.core", "jackson-databind", jacksonVersion)
+            implementation("com.fasterxml.jackson.core", "jackson-databind", "2.13.4.2")
             implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jdk8", jacksonVersion)
             implementation("com.fasterxml.jackson.datatype", "jackson-datatype-jsr310", jacksonVersion)
 

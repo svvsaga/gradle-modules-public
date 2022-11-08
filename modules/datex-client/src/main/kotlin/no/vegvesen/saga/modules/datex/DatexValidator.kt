@@ -92,7 +92,7 @@ class DatexValidator : Logging {
                 exception.localizedMessage.startsWith(errorNewStrekningerHasModelBaseVersion3) -> DatexVersion.DATEX_2.right()
                 exception.localizedMessage.startsWith(errorContentOfExchangeElementNotComplete) -> DatexVersion.DATEX_2.right()
                 exception.localizedMessage.startsWith(errorDuplicateUniqueValue) -> {
-                    log().warn("Found duplicate unique value in publication", exception)
+                    log().info("Found duplicate unique value in publication.", exception)
                     DatexVersion.DATEX_2.right()
                 }
                 else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_2)

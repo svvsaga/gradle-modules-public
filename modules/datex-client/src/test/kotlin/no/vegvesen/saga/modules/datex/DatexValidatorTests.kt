@@ -71,7 +71,7 @@ class DatexValidatorTests : StringSpec({
     "Datex 2 situations file with duplicates is validated successfully but warning is logged" {
         val testLogger = TestLogger()
         fileIsValid("GetSituations_with_duplicates.xml", DatexVersion.DATEX_2)
-        testLogger.events.shouldContainSingle { it.level == Level.WARN }
+        testLogger.events.shouldContainSingle { it.level == Level.INFO }
     }
 
     "invalid file fails validation" {

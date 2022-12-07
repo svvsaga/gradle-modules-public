@@ -31,7 +31,7 @@ object Retry : Logging {
                 .check { exception: Throwable, output ->
                     log().warn(
                         "$description failed, retry attempt $attempts/${backoff.maxAttempts}. Error: {}",
-                        v("error", exception.localizedMessage)
+                        v("error", exception.localizedMessage ?: "(no message)")
                     )
                     onRetry(exception, output.nanoseconds, attempts)
                     attempts++

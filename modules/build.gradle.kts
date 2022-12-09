@@ -20,7 +20,7 @@ val jacksonVersion = "2.13.4"
 val jUnitVersion = "5.7.1"
 val serializationVersion = "1.4.1"
 val functionsVersion = "1.0.4"
-val gcpLibrariesBomVersion = "26.1.4"
+val gcpLibrariesBomVersion = "26.1.5"
 
 val modulesVersion =
     (if (project.hasProperty("releaseVersion")) project.property("releaseVersion").toString() else null)

@@ -6,9 +6,9 @@ import kotlin.time.Duration
 /**
  * Create a memoized function that caches the result for the given duration.
  */
-fun <T : Any> memoizeWithDuration(
+inline fun <T : Any> memoizeWithDuration(
     duration: Duration,
-    loader: suspend () -> T
+    crossinline loader: suspend () -> T
 ): suspend () -> T {
     val cache: Cache<Unit, T> = Cache.Builder()
         .expireAfterWrite(duration)

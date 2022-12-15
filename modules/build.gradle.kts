@@ -99,8 +99,6 @@ subprojects {
 
             implementation("com.google.cloud.functions", "functions-framework-api", functionsVersion)
             api("com.google.cloud.functions", "functions-framework-api", functionsVersion)
-
-            implementation("com.google.api-client", "google-api-client", "1.35.2")
         }
     }
 

@@ -1,5 +1,5 @@
 dependencies {
-    api(platform("io.ktor:ktor-bom:2.1.1"))
+    api(platform("io.ktor:ktor-bom:2.2.1"))
     api("io.ktor", "ktor-server-core")
     api("io.ktor", "ktor-server-auth")
 

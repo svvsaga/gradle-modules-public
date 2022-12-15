@@ -2,8 +2,8 @@ package no.vegvesen.saga.modules.gcp.redis
 
 import arrow.core.Either
 import no.vegvesen.saga.modules.shared.DeduplicationStorage
-import redis.clients.jedis.BitOP
 import redis.clients.jedis.Jedis
+import redis.clients.jedis.args.BitOP
 import java.util.BitSet
 
 /**

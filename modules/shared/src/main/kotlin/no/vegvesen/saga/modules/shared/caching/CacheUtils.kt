@@ -28,15 +28,11 @@ fun <T : Any> createCache(duration: Duration): Cache<Unit, T> = Cache.Builder()
 class SingleCache<T : Any>(duration: Duration) {
     val cache: Cache<Unit, T> = createCache(duration)
 
-    suspend inline fun get(crossinline loader: suspend () -> T): T {
-        return cache.get(Unit) { loader() }
-    }
+    fun get(): T? = cache.get(Unit)
 
-    fun invalidate() {
-        cache.invalidateAll()
-    }
+    suspend inline fun get(crossinline loader: suspend () -> T): T = cache.get(Unit) { loader() }
 
-    fun put(value: T) {
-        cache.put(Unit, value)
-    }
+    fun invalidate() = cache.invalidateAll()
+
+    fun put(value: T) = cache.put(Unit, value)
 }

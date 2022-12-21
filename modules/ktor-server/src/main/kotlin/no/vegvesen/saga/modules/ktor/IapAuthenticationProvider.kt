@@ -17,11 +17,10 @@ const val AuthenticatedUserEmailHeader = "X-Goog-Authenticated-User-Email"
 
 fun AuthenticationConfig.iap(
     name: String? = null,
-    overrideEmail: String? = null,
     configure: IapAuthenticationProvider.Config.() -> Unit = {}
 ) {
     val provider =
-        IapAuthenticationProvider(IapAuthenticationProvider.Config(name, overrideEmail).apply(configure))
+        IapAuthenticationProvider(IapAuthenticationProvider.Config(name).apply(configure))
     register(provider)
 }
 
@@ -36,19 +35,24 @@ fun PipelineContext<Unit, ApplicationCall>.getUserEmail(): String =
 class IapAuthenticationProvider(private val config: Config) :
     AuthenticationProvider(config), Logging {
 
-    class Config internal constructor(name: String?, var overrideEmail: String? = null) :
+    class Config internal constructor(
+        name: String?,
+        var overrideEmail: AuthenticationContext.() -> String? = { null }
+    ) :
         AuthenticationProvider.Config(name)
 
     override suspend fun onAuthenticate(context: AuthenticationContext) {
         val call = context.call
         val userEmail: String? =
-            call.request.header(AuthenticatedUserEmailHeader)?.replace("accounts.google.com:", "")
-                ?: config.overrideEmail
+            (
+                call.request.header(AuthenticatedUserEmailHeader)
+                    ?: config.overrideEmail(context)
+                )?.replace("accounts.google.com:", "")
 
         if (userEmail.isNullOrBlank()) {
             call.respond(HttpStatusCode.Unauthorized, "$AuthenticatedUserEmailHeader not set")
         } else {
-            context.principal = UserEmailPrincipal(userEmail)
+            context.principal(UserEmailPrincipal(userEmail))
         }
     }
 }

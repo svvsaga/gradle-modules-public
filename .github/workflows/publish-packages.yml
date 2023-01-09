@@ -17,13 +17,13 @@ jobs:
           fetch-depth: 0
 
       - name: Bump semantic version
-        uses: svvsaga/github-actions-public/bump-semver-tag@v20.0.0
+        uses: svvsaga/github-actions-public/bump-semver-tag@v20.0.2
         id: bump-semver-tag
 
       - name: Find module changes
         id: find-module-changes
         if: ${{ steps.bump-semver-tag.outputs.tag != '' }}
-        uses: svvsaga/github-actions-public/find-gradle-module-changes@v20.0.0
+        uses: svvsaga/github-actions-public/find-gradle-module-changes@v20.0.2
         with:
           include_all: ${{ github.event.inputs.include_all }}
           ignore_modules: ./example,.
@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Google Cloud SDK
-        uses: svvsaga/github-actions-public/setup-gcloud@v20.0.0
+        uses: svvsaga/github-actions-public/setup-gcloud@v20.0.2
         with:
           service_account_key: ${{ secrets.GCP_SA_ARTIFACT_PUBLISHER }}
 

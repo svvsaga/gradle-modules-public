@@ -16,13 +16,16 @@ const val SagaLbSecretHeader = "X-Saga-LB-Secret"
 private val logger = LoggerFactory.getLogger("SagaLbSecretVerificationPlugin")
 
 class SagaLbSecretVerificationPluginConfiguration {
-    var sagaLbSecret: String? = null
+    var sagaLbSecrets: List<String> = emptyList()
     var ignorePaths = listOf("/_ah/")
 }
 
 val SagaLbSecretVerificationPlugin =
     createApplicationPlugin("SagaLbSecretVerificationPlugin", ::SagaLbSecretVerificationPluginConfiguration) {
-        val sagaLbSecret = pluginConfig.sagaLbSecret ?: throw Exception("Missing sagaLbSecret")
+        val sagaLbSecrets = pluginConfig.sagaLbSecrets
+        if (sagaLbSecrets.isEmpty()) {
+            throw Exception("SagaLbSecretVerificationPlugin: sagaLbSecrets must be non-empty")
+        }
         val ignorePaths = pluginConfig.ignorePaths
         onCall { call ->
             if (ignorePaths.any { path -> call.request.path().startsWith(path) }) {
@@ -33,10 +36,10 @@ val SagaLbSecretVerificationPlugin =
                 if (value == null) {
                     logger.warn(
                         "No Shared Saga Secret found in headers",
-                        v("headers", call.request.headers.toMap())
+                        v("headers", call.request.headers.toMap()),
                     )
                     call.respond(HttpStatusCode.Unauthorized)
-                } else if (value != sagaLbSecret) {
+                } else if (!sagaLbSecrets.contains(value)) {
                     logger.warn("Shared Saga Secret does not match!")
                     call.respond(HttpStatusCode.Forbidden)
                 }
@@ -44,8 +47,8 @@ val SagaLbSecretVerificationPlugin =
         }
     }
 
-fun Application.configureLoadBalancerSecret(sagaLbSecret: String) {
+fun Application.configureLoadBalancerSecret(vararg sagaLbSecrets: String) {
     install(SagaLbSecretVerificationPlugin) {
-        this.sagaLbSecret = sagaLbSecret
+        this.sagaLbSecrets = sagaLbSecrets.toList()
     }
 }

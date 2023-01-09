@@ -26,7 +26,7 @@ class BigQueryStorageExtensionsTest : FunSpec({
         "No resources",
         Exception(),
         mockk(),
-        true
+        true,
     )
 
     val logger = LoggerFactory.getLogger(BigQueryStorageExtensionsTest::class.java)
@@ -56,7 +56,7 @@ class BigQueryStorageExtensionsTest : FunSpec({
         val result = failingWriter.writeJson(
             listOf(Foo(1)),
             Foo.serializer(),
-            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2)
+            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2),
         ) { exception, delay, attempts ->
             logger.warn("testlogging: Failure, delaying $delay, attempts $attempts", exception)
         }

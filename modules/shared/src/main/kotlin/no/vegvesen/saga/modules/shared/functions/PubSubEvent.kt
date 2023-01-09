@@ -11,7 +11,7 @@ data class PubSubEvent(
     val utf8Payload: String,
     val messageId: String,
     val publishTime: Instant,
-    val attributes: Map<String, String?> = emptyMap()
+    val attributes: Map<String, String?> = emptyMap(),
 )
 
 sealed class PubSubError {

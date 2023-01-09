@@ -59,7 +59,7 @@ inline fun <T> PAssert.SingletonAssert<T>.satisfy(crossinline checker: (T) -> Un
 }
 
 inline fun <T> PAssert.IterableAssert<T>.satisfy(
-    crossinline checker: (Iterable<T>) -> Unit
+    crossinline checker: (Iterable<T>) -> Unit,
 ): PAssert.IterableAssert<T> {
     return this.satisfies {
         checker(it)

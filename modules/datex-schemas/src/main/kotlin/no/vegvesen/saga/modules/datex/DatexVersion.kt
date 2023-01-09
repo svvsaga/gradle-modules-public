@@ -7,7 +7,7 @@ import no.vegvesen.saga.modules.shared.XmlString
 
 enum class DatexVersion {
     DATEX_2,
-    DATEX_3
+    DATEX_3,
 }
 
 fun findDatexVersion(xml: XmlString): Either<Throwable, DatexVersion> =

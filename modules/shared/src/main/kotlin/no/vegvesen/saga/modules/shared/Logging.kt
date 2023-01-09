@@ -40,7 +40,7 @@ fun v(key: String, value: Any): StructuredArgument {
 
 inline fun <T> withMappedDiagnosticContext(
     vararg loggedProperties: Pair<String, String>,
-    func: () -> T
+    func: () -> T,
 ): T =
     try {
         loggedProperties.forEach {

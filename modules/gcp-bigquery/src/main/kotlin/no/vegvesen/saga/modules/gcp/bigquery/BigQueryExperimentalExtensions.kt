@@ -20,7 +20,7 @@ suspend fun <T> BigQuery.streamDocuments(
     chunkSize: Int = 500,
     historicDays: Int = FiveYearsInDays,
     clock: Clock = Clock.systemUTC(),
-    getInsertId: (t: T) -> String? = { null }
+    getInsertId: (t: T) -> String? = { null },
 ): Either<Throwable, Unit> = Instant.now(clock).minus(historicDays.toLong(), ChronoUnit.DAYS).let { fiveYearsAgo ->
     documents.partition { getPartitionTime(it).isAfter(fiveYearsAgo) }.let { (current, historic) ->
         streamDocuments(current, serializer, currentTableId, chunkSize, getInsertId).flatMap {

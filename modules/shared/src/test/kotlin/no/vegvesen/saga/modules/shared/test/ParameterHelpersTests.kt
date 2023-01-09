@@ -19,8 +19,8 @@ class ParameterHelpersTests : FunSpec({
                 "anInt" to listOf("3"),
                 "aString" to listOf("abc"),
                 "aDate" to listOf("2020-01-01"),
-                "aBool" to listOf("true")
-            )
+                "aBool" to listOf("true"),
+            ),
         )
 
         result shouldBeRight MyParams(3, "abc", LocalDate(2020, 1, 1), true)
@@ -39,8 +39,8 @@ class ParameterHelpersTests : FunSpec({
                 "anInt" to listOf("3", "5"),
                 "aString" to listOf("abc"),
                 "aDate" to listOf("2020-01-01"),
-                "aBool" to listOf("true")
-            )
+                "aBool" to listOf("true"),
+            ),
         )
 
         result shouldBeLeftAnd { it.message shouldStartWith "More than one query parameter" }
@@ -56,7 +56,7 @@ class ParameterHelpersTests : FunSpec({
         val result =
             parseJsonParameters(
                 MyParams.serializer(),
-                """{"anInt":1,"aString":"a","aDate":"2021-01-01","aBool":true}"""
+                """{"anInt":1,"aString":"a","aDate":"2021-01-01","aBool":true}""",
             )
 
         result shouldBeRight MyParams(1, "a", LocalDate(2021, 1, 1), true)

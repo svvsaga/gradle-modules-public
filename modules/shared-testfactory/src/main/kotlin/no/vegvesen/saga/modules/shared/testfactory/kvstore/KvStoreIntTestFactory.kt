@@ -31,7 +31,7 @@ fun kvStoreIntTests(kvStore: KVStore) = funSpec {
         checkAll<String, String, String>(
             aKVStoreKey,
             Arb.default(),
-            Arb.default()
+            Arb.default(),
         ) { testKey, testValue, testNewValue ->
             kvStore.putString(testKey, testValue).flatMap {
                 kvStore.getString(testKey)

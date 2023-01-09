@@ -16,7 +16,7 @@ import java.time.Instant
 class DatexIngestProcessor(
     private val poller: DatexPoller,
     private val deadLetterStorage: DeadLetterStorage,
-    private val gzipped: Boolean = true
+    private val gzipped: Boolean = true,
 ) : SimpleProcessor, Logging {
     override suspend fun process(): Either<SimpleFunctionError, Unit> =
         poller.pollDatex(gzipped).handleErrorWith { error ->
@@ -44,7 +44,7 @@ class DatexIngestProcessor(
             .flatMap {
                 SimpleFunctionError.UnexpectedError(
                     "Datex validation error for object ${deadLetterStorage.bucket}/$filename",
-                    error.message
+                    error.message,
                 ).left()
             }
     }

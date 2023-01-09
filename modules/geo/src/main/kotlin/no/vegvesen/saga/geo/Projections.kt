@@ -13,13 +13,13 @@ object Projections {
     val Epsg32633toEpsg4326: CoordinateTransform =
         coordinateTransformFactory.createTransform(
             factory.createFromName("EPSG:32633"),
-            factory.createFromName("EPSG:4326")
+            factory.createFromName("EPSG:4326"),
         )
 
     val Epsg25833toEpsg4326: CoordinateTransform =
         coordinateTransformFactory.createTransform(
             factory.createFromName("EPSG:25833"),
-            factory.createFromName("EPSG:4326")
+            factory.createFromName("EPSG:4326"),
         )
 }
 

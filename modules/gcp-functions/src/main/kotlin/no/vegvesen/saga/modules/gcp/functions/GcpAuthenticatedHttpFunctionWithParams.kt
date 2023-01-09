@@ -22,7 +22,7 @@ import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
     private val deserializer: DeserializationStrategy<T>,
     private val authenticator: GoogleUserAuthenticator = GoogleUserAuthenticator(),
-    private val process: suspend (params: T, userInfo: UserInfo) -> Either<Throwable, Unit>
+    private val process: suspend (params: T, userInfo: UserInfo) -> Either<Throwable, Unit>,
 ) : HttpFunction, Logging {
     private val functionName = javaClass.simpleName
 
@@ -68,7 +68,7 @@ abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
             ifRight = {
                 response.writer.write("Ok.")
                 response.writer.flush()
-            }
+            },
         )
     }
 }

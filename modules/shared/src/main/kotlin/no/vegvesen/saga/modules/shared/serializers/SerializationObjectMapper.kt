@@ -13,6 +13,6 @@ object SerializationObjectMapper {
     fun <A, B> mapObject(fromSerializer: SerializationStrategy<A>, toDeserializer: DeserializationStrategy<B>, from: A): B =
         Properties.decodeFromMap(
             toDeserializer,
-            Properties.encodeToMap(fromSerializer, from)
+            Properties.encodeToMap(fromSerializer, from),
         )
 }

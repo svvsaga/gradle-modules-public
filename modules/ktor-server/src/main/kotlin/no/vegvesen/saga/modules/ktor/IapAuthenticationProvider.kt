@@ -17,7 +17,7 @@ const val AuthenticatedUserEmailHeader = "X-Goog-Authenticated-User-Email"
 
 fun AuthenticationConfig.iap(
     name: String? = null,
-    configure: IapAuthenticationProvider.Config.() -> Unit = {}
+    configure: IapAuthenticationProvider.Config.() -> Unit = {},
 ) {
     val provider =
         IapAuthenticationProvider(IapAuthenticationProvider.Config(name).apply(configure))
@@ -37,7 +37,7 @@ class IapAuthenticationProvider(private val config: Config) :
 
     class Config internal constructor(
         name: String?,
-        var overrideEmail: AuthenticationContext.() -> String? = { null }
+        var overrideEmail: AuthenticationContext.() -> String? = { null },
     ) :
         AuthenticationProvider.Config(name)
 

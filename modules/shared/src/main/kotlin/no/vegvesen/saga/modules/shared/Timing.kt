@@ -13,7 +13,7 @@ object Timing {
             "Timer: '$description', took $timeSpent ms.",
             kv("unit", "ms"),
             kv("timer", description),
-            kv("timeSpent", timeSpent)
+            kv("timeSpent", timeSpent),
         )
         return result
     }

@@ -20,7 +20,7 @@ private fun fetchAuthString(redisIdentifier: String, applicationName: String): E
         CloudRedis.Builder(
             GoogleNetHttpTransport.newTrustedTransport(),
             GsonFactory(),
-            HttpCredentialsAdapter(GoogleCredentials.getApplicationDefault())
+            HttpCredentialsAdapter(GoogleCredentials.getApplicationDefault()),
         )
             .setApplicationName(applicationName)
             .build()
@@ -41,7 +41,7 @@ fun Jedis.authenticateInstance(redisIdentifier: String, applicationName: String)
                 is NoTokenReturned -> Exception("Redis: No auth token returned.")
                 is FetchingTokenFailed -> Exception(
                     "Redis: Fetching auth token failed.",
-                    it.exception
+                    it.exception,
                 )
             }
         }

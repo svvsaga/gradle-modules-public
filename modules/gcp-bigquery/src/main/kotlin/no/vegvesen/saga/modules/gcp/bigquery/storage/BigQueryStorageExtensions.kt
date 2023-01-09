@@ -43,7 +43,7 @@ suspend fun <T> BigQuery.writeDocumentsToDefaultStream(
     serializer: SerializationStrategy<T>,
     tableId: TableId,
     chunkSize: Int = 500,
-    parallelization: Int = Runtime.getRuntime().availableProcessors()
+    parallelization: Int = Runtime.getRuntime().availableProcessors(),
 ) = Either.catchAndFlatten {
     val fullTableId =
         if (tableId.project == null) TableId.of(options.projectId, tableId.dataset, tableId.table) else tableId
@@ -71,7 +71,7 @@ suspend fun BigQuery.writeDocumentsToDefaultStream(
     documents: Collection<JsonObject>,
     tableId: TableId,
     chunkSize: Int = 500,
-    parallelization: Int = Runtime.getRuntime().availableProcessors()
+    parallelization: Int = Runtime.getRuntime().availableProcessors(),
 ) = Either.catchAndFlatten {
     val fullTableId =
         if (tableId.project == null) TableId.of(options.projectId, tableId.dataset, tableId.table) else tableId
@@ -95,7 +95,7 @@ private suspend fun <T> BigQuery.writeProtoBuf(
     documents: Collection<T>,
     serializer: SerializationStrategy<T>,
     tableId: TableId,
-    chunkSize: Int
+    chunkSize: Int,
 ) = createStreamWriter(tableId)
     .use { writer ->
         documents.chunked(chunkSize)
@@ -113,7 +113,7 @@ suspend fun <T> BigQuery.writeJson(
     serializer: SerializationStrategy<T>,
     tableId: TableId,
     chunkSize: Int,
-    parallelization: Int
+    parallelization: Int,
 ): List<Throwable> = createJsonStreamWriter(tableId)
     .use { writer ->
         writer.writeJson(documents, serializer, chunkSize, parallelization)
@@ -124,7 +124,7 @@ suspend fun BigQuery.writeJson(
     documents: Collection<JsonObject>,
     tableId: TableId,
     chunkSize: Int,
-    parallelization: Int
+    parallelization: Int,
 ): List<Throwable> = createJsonStreamWriter(tableId)
     .use { writer ->
         writer.writeJson(documents, chunkSize, parallelization)
@@ -137,7 +137,7 @@ suspend fun <T> JsonStreamWriter.writeJson(
     chunkSize: Int = 200,
     parallelization: Int = Runtime.getRuntime().availableProcessors(),
     backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
-    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> },
 ) = documents.chunked(chunkSize)
     .parTraverseN(Dispatchers.IO, parallelization) { chunk ->
         val rows = chunk.toJSONArray(serializer)
@@ -150,7 +150,7 @@ suspend fun JsonStreamWriter.writeJson(
     chunkSize: Int = 200,
     parallelization: Int = Runtime.getRuntime().availableProcessors(),
     backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
-    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> },
 ) = documents.chunked(chunkSize)
     .parTraverseN(Dispatchers.IO, parallelization) { chunk ->
         val rows = chunk.toJSONArray()
@@ -161,7 +161,7 @@ suspend fun JsonStreamWriter.writeJson(
 private suspend fun JsonStreamWriter.writeJsonChunk(
     rows: JSONArray,
     backoffSettings: ExponentialBackoffSettings = ExponentialBackoffSettings(1.seconds, 5),
-    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> }
+    onRetry: (exception: Throwable, delay: Duration, attempts: Int) -> Unit = { _, _, _ -> },
 ) = retry("JsonStreamWriter: Write json chunk", backoffSettings, onRetry) {
     withContext(Dispatchers.IO) {
         append(rows).get()
@@ -189,7 +189,7 @@ private fun <T> Collection<T>.toJsonObjects(serializer: SerializationStrategy<T>
 @ExperimentalSerializationApi
 private fun <T> createProtoRows(
     documents: Collection<T>,
-    serializer: SerializationStrategy<T>
+    serializer: SerializationStrategy<T>,
 ): ProtoRows = documents
     .map { ProtoBuf.encodeToByteArray(serializer, it) }
     .map { ByteString.copyFrom(it) }

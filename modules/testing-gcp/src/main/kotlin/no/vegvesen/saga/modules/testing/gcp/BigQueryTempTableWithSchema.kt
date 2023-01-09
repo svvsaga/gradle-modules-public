@@ -15,7 +15,7 @@ class BigQueryTempTableWithSchema(
     tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU,
     overrideDatasetName: String? = null,
-    overrideTableName: String? = null
+    overrideTableName: String? = null,
 ) : BigQueryTempTable(
     bigQuery,
     isolationMode,
@@ -23,7 +23,7 @@ class BigQueryTempTableWithSchema(
     tablePrefix,
     location,
     overrideDatasetName,
-    overrideTableName
+    overrideTableName,
 ) {
     constructor(
         projectId: String,
@@ -33,7 +33,7 @@ class BigQueryTempTableWithSchema(
         tablePrefix: String = "temp",
         location: BigQueryLocation = BigQueryLocation.EU,
         overrideDatasetName: String? = null,
-        overrideTableName: String? = null
+        overrideTableName: String? = null,
     ) : this(
         createBigQuery(projectId, location),
         schema,
@@ -42,7 +42,7 @@ class BigQueryTempTableWithSchema(
         tablePrefix,
         location,
         overrideDatasetName,
-        overrideTableName
+        overrideTableName,
     )
 
     override fun createTempTableImplementation() {

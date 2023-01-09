@@ -60,8 +60,8 @@ class GcpBlobStorageIntegrationTests : FunSpec({
             SaveFileOptions(
                 gzipContent = true,
                 customTime = customTime,
-                customMetadata = customMetadata
-            )
+                customMetadata = customMetadata,
+            ),
         ).shouldBeRight()
 
         testSubject.rewriteFile(storagePath).shouldBeRight()
@@ -72,7 +72,7 @@ class GcpBlobStorageIntegrationTests : FunSpec({
             ContentType.Txt,
             customTime,
             "gzip",
-            customMetadata
+            customMetadata,
         )
     }
 
@@ -117,11 +117,11 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         val options = LoadFileOptions(gzipDecompressionBehaviour = GzipDecompressionBehaviour.NO)
         testSubject.loadFile(
             storageFilename1,
-            options
+            options,
         ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
         testSubject.loadFile(
             storageFilename2,
-            options
+            options,
         ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
     }
 
@@ -144,7 +144,7 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         testSubject.saveFile(
             storageFilename,
             textFile,
-            ContentType.Txt
+            ContentType.Txt,
         )
 
         val options = LoadFileOptions(gzipDecompressionBehaviour = GzipDecompressionBehaviour.AUTO)

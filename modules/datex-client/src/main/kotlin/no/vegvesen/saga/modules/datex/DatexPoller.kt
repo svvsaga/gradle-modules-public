@@ -12,7 +12,7 @@ import no.vegvesen.saga.modules.shared.log
 
 class DatexPoller(
     private val datexClient: DatexClient,
-    private val datexStorage: DatexStorageRepository
+    private val datexStorage: DatexStorageRepository,
 ) : Logging {
     val logger = log()
     suspend fun pollDatex(gzipped: Boolean = false): Either<DatexPollerError, Unit> =

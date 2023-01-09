@@ -8,7 +8,7 @@ import kotlin.time.Duration
  */
 inline fun <T : Any> memoizeWithDuration(
     duration: Duration,
-    crossinline loader: suspend () -> T
+    crossinline loader: suspend () -> T,
 ): suspend () -> T {
     val cache: Cache<Unit, T> = Cache.Builder()
         .expireAfterWrite(duration)

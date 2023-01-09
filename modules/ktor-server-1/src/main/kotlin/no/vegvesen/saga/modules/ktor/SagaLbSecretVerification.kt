@@ -56,7 +56,7 @@ class SagaLbSecretVerification(configuration: Configuration) : Logging {
 
         override fun install(
             pipeline: ApplicationCallPipeline,
-            configure: Configuration.() -> Unit
+            configure: Configuration.() -> Unit,
         ): SagaLbSecretVerification {
             val config = Configuration().apply(configure)
             if (config.sagaLbSecret == null) {

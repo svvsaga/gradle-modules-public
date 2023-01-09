@@ -40,12 +40,12 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
     companion object {
         fun create(
             connectTimeout: Int = 1000,
-            readTimeout: Int = 4000
+            readTimeout: Int = 4000,
         ): GcpBlobStorage = StorageOptions.newBuilder()
             .setTransportOptions(
                 HttpTransportOptions.newBuilder()
                     .setConnectTimeout(connectTimeout)
-                    .setReadTimeout(readTimeout).build()
+                    .setReadTimeout(readTimeout).build(),
             ).build().service.let(::GcpBlobStorage)
 
         private const val PRECONDITION_FAILED = 412
@@ -57,10 +57,10 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions
+        options: SaveFileOptions,
     ): Either<Throwable, Unit> {
         val createOptions = arrayOf(
-            if (options.noOverwrite) Storage.BlobTargetOption.doesNotExist() else null
+            if (options.noOverwrite) Storage.BlobTargetOption.doesNotExist() else null,
         ).filterNotNull().toTypedArray()
 
         val blobInfoBuilder = BlobInfo.newBuilder(storagePath.bucketName, storagePath.fileName)
@@ -82,7 +82,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             storage.create(
                 blobInfoBuilder.build(),
                 if (options.gzipContent) gzipCompress(fileContent) else fileContent,
-                *createOptions
+                *createOptions,
             )
         }
     }
@@ -91,7 +91,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions
+        options: SaveFileOptions,
     ): Either<Throwable, Boolean> {
         return saveFile(storagePath, fileContent, contentType, options.copy(noOverwrite = true))
             .map { true }
@@ -115,7 +115,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
      */
     override suspend fun loadFile(
         storagePath: StoragePath,
-        options: LoadFileOptions
+        options: LoadFileOptions,
     ): Either<BlobStorageError, ByteArray> =
         BlobId.of(storagePath.bucketName, storagePath.fileName).let { blobId ->
             Either.catch {
@@ -190,7 +190,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
             contentType = ContentType(blob.contentType),
             customTime = blob.customTime?.let(Instant::ofEpochMilli),
             contentEncoding = blob.contentEncoding,
-            customMetadata = blob.metadata
+            customMetadata = blob.metadata,
         )
 
     override suspend fun copyFile(from: StoragePath, to: StoragePath): Either<BlobStorageError, StoragePath> =
@@ -200,7 +200,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
                     fromBlob.copyTo(to.toBlobId()).result.let { toBlob ->
                         StoragePath(
                             toBlob.bucket,
-                            toBlob.name
+                            toBlob.name,
                         )
                     }
                 }.mapLeft { BlobStorageError.BlobException("Failed to copy file '$from' to '$to'", it) }

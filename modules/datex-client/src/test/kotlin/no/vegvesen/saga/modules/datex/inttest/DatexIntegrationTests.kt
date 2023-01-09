@@ -59,7 +59,7 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
             fun createDatexClient(): DatexClient = DatexClient(
                 createApacheHttpClient(),
                 datexSettings,
-                DatexValidator()
+                DatexValidator(),
             )
 
             fun createProcessor(datexClient: DatexClient, gzipped: Boolean = true): DatexIngestProcessor =
@@ -70,11 +70,11 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                             ingestBucket,
                             "datasource",
                             kvStore,
-                            blobStorage
-                        )
+                            blobStorage,
+                        ),
                     ),
                     DeadLetterStorage(blobStorage, deadLetterBucket),
-                    gzipped = gzipped
+                    gzipped = gzipped,
                 )
 
             beforeEach {
@@ -114,7 +114,7 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                     val datexClient = DatexClient(
                         mockHttpClient,
                         datexSettings,
-                        DatexValidator()
+                        DatexValidator(),
                     )
 
                     val result = createProcessor(datexClient).process()
@@ -134,7 +134,7 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                     val datexClient = DatexClient(
                         mockHttpClient,
                         datexSettings,
-                        DatexValidator()
+                        DatexValidator(),
                     )
 
                     val result = createProcessor(datexClient, gzipped = false).process()
@@ -143,14 +143,14 @@ private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {
                     file.contentEncoding shouldNotBe "gzip"
                 }
             }
-        }
+        },
     )
 }
 
 private suspend fun Either<SimpleFunctionError, Unit>.shouldBeStoredInDeadletter(
     storage: InMemoryBlobStorage,
     ingestBucket: String,
-    deadLetterBucket: String
+    deadLetterBucket: String,
 ): FileMetadata {
     shouldBeLeftOfType<SimpleFunctionError.UnexpectedError>()
     storage.listFiles(ingestBucket).shouldBeRightAnd { it shouldHaveSize 0 }

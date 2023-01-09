@@ -71,7 +71,7 @@ class DatexValidator : Logging {
             "/DatexII_3/DATEXII_3_Parking.xsd",
             "/DatexII_3/DATEXII_3_RoadTrafficData.xsd",
             "/DatexII_3/DATEXII_3_Situation.xsd",
-            "/DatexII_3/DATEXII_3_Vms.xsd"
+            "/DatexII_3/DATEXII_3_Vms.xsd",
         ).map { StreamSource(Companion::class.java.getResource(it)!!.toExternalForm()) }
             .toTypedArray()
     }

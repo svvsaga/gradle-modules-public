@@ -8,5 +8,5 @@ class AuthorizationException(override val message: String? = null, override val 
 
 class ValidationException(
     override val message: String? = "Input validation failed",
-    override val cause: Throwable? = null
+    override val cause: Throwable? = null,
 ) : Exception(message, cause)

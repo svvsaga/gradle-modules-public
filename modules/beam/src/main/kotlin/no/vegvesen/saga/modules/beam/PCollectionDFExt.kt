@@ -14,21 +14,21 @@ private fun createDefaultBQwriteTableRows(outputTable: ValueProvider<String>) = 
 
 fun PCollection<TableRow>.writeToBQTableBatch(
     outputTable: ValueProvider<String>,
-    name: String? = null
+    name: String? = null,
 ): WriteResult =
     this.apply(
         name ?: "Batch write to BigQuery table $outputTable",
         createDefaultBQwriteTableRows(outputTable)
-            .withMethod(BigQueryIO.Write.Method.FILE_LOADS)
+            .withMethod(BigQueryIO.Write.Method.FILE_LOADS),
     )
 
 fun PCollection<TableRow>.writeToBQTableStreaming(
     outputTable: ValueProvider<String>,
-    name: String? = null
+    name: String? = null,
 ): WriteResult =
     this.apply(
         name ?: "Streaming write to BigQuery table $outputTable",
         createDefaultBQwriteTableRows(outputTable)
             .withMethod(BigQueryIO.Write.Method.STREAMING_INSERTS)
-            .withoutValidation()
+            .withoutValidation(),
     )

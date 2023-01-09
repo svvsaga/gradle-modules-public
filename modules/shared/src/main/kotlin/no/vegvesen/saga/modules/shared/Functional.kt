@@ -17,7 +17,7 @@ inline fun <T> tryRunning(fn: () -> T) = Either.catch(fn)
 
 suspend inline fun <T> tryWithContext(
     dispatcher: CoroutineDispatcher,
-    crossinline fn: CoroutineScope.() -> T
+    crossinline fn: CoroutineScope.() -> T,
 ): Either<Exception, T> =
     withContext(dispatcher) {
         try {
@@ -33,7 +33,7 @@ suspend inline fun <T> tryWithContext(
  */
 suspend inline fun <T> tryFlatWithContext(
     dispatcher: CoroutineDispatcher,
-    crossinline fn: suspend CoroutineScope.() -> Either<Exception, T>
+    crossinline fn: suspend CoroutineScope.() -> Either<Exception, T>,
 ): Either<Exception, T> =
     withContext(dispatcher) {
         fn()
@@ -50,12 +50,12 @@ fun <A, B> Iterable<Either<A, B>>.allLefts(): List<A> = this.mapNotNull { either
  * Run any number of suspend functions in parallel. If any of them fails, the rest are cancelled.
  */
 suspend inline fun par(
-    vararg funcs: suspend CoroutineScope.() -> Unit
+    vararg funcs: suspend CoroutineScope.() -> Unit,
 ): Unit = par(Dispatchers.Default, *funcs)
 
 suspend inline fun par(
     ctx: CoroutineContext = EmptyCoroutineContext,
-    vararg funcs: suspend CoroutineScope.() -> Unit
+    vararg funcs: suspend CoroutineScope.() -> Unit,
 ): Unit = coroutineScope {
     funcs.map { async(ctx) { it() } }.awaitAll()
 }

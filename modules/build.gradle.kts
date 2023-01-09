@@ -52,7 +52,7 @@ catalog {
                 // Eliminate nested levels (e.g. saga.gcp.functions), because IntelliJ can't handle it; instead we use saga.gcpfunctions
                 project.name.replace("-", ""),
                 project.group.toString(),
-                project.name
+                project.name,
             ).version {
                 strictly(modulesVersion)
             }

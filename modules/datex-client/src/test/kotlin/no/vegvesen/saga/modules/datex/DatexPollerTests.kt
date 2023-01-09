@@ -34,8 +34,8 @@ class DatexPollerTests : AnnotationSpec(), Logging {
             DatexResponse(
                 testDatexDocument,
                 testPublicationTime,
-                testLastModifiedTime
-            )
+                testLastModifiedTime,
+            ),
         )
         every { datexStorageRepositoryMock.filePath(testPublicationTime) } returns testFilePath
         coEvery {
@@ -43,7 +43,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
                 testDatexDocument,
                 any(),
                 any(),
-                ContentType.Xml
+                ContentType.Xml,
             )
         } returns true.right()
         coEvery { datexStorageRepositoryMock.saveLastModifiedTime(testLastModifiedTime) } returns Unit.right()
@@ -97,8 +97,8 @@ class DatexPollerTests : AnnotationSpec(), Logging {
             DatexResponse(
                 testDatexDocument,
                 testPublicationTime,
-                testLastModifiedTime
-            )
+                testLastModifiedTime,
+            ),
         )
 
         poller.pollDatex()
@@ -140,8 +140,8 @@ class DatexPollerTests : AnnotationSpec(), Logging {
             DatexResponse(
                 testDatexDocument,
                 testPublicationTime,
-                testLastModifiedTime
-            )
+                testLastModifiedTime,
+            ),
         )
         every { datexStorageRepositoryMock.filePath(testPublicationTime) } returns testFilePath
         coEvery {
@@ -149,7 +149,7 @@ class DatexPollerTests : AnnotationSpec(), Logging {
                 testDatexDocument,
                 any(),
                 any(),
-                ContentType.Xml
+                ContentType.Xml,
             )
         } returns true.right()
 

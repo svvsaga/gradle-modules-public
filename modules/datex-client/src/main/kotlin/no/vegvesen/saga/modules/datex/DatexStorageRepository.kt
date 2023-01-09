@@ -22,7 +22,7 @@ class DatexStorageRepository(
     private val datexDataBucketName: String,
     private val dataSourceName: String,
     private val kvStore: KVStore,
-    private val storage: BlobStorage
+    private val storage: BlobStorage,
 ) : Logging {
 
     private val lastModifiedKey = "${dataSourceName}_last_modified"
@@ -41,13 +41,13 @@ class DatexStorageRepository(
         data: XmlString,
         publicationTime: Instant,
         gzipped: Boolean,
-        contentType: ContentType
+        contentType: ContentType,
     ): Either<DatexStorageError, Boolean> =
         storage.saveFileIfNotExisting(
             StoragePath(datexDataBucketName, filePath(publicationTime)),
             data.value,
             contentType,
-            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime)
+            SaveFileOptions(gzipContent = gzipped, customTime = publicationTime),
         )
             .mapLeft { ex -> DatexStorageError.Exception(ex.toString(), ex) }
 
@@ -74,7 +74,7 @@ class DatexStorageRepository(
                 when (it) {
                     is KVStoreError.KVStoreException -> DatexStorageError.Exception(
                         "Error getting last modified time" + it.message,
-                        it.exception
+                        it.exception,
                     )
                     else -> DatexStorageError.UnknownError("KVStore failed with unknown error", it)
                 }

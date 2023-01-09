@@ -32,7 +32,7 @@ data class DatexSettings(val datexUrl: String, val username: String, val passwor
 open class DatexClient(
     private val ktorHttpClient: HttpClient,
     private val settings: DatexSettings,
-    private val validator: DatexValidator
+    private val validator: DatexValidator,
 ) {
     open suspend fun read(onlyModificationsSince: Instant? = null): Either<DatexError, DatexResponse> =
         runHttpGetRequest(onlyModificationsSince).flatMap { httpResponse ->
@@ -41,7 +41,7 @@ open class DatexClient(
                 HttpStatusCode.Unauthorized, HttpStatusCode.Forbidden ->
                     DatexError.AuthError(
                         httpResponse.toString(),
-                        status.value
+                        status.value,
                     ).left()
                 else -> {
                     val content = httpResponse.bodyAsText().toXmlString()
@@ -51,12 +51,12 @@ open class DatexClient(
                             DatexResponse(
                                 content,
                                 publicationTime,
-                                httpResponse.headers[HttpHeaders.LastModified]?.toInstantFromHttpDateString()
+                                httpResponse.headers[HttpHeaders.LastModified]?.toInstantFromHttpDateString(),
                             )
                         }
                         .mapLeft {
                             if (it is DatexError.MissingPublicationTimeError && containsDeliveryBreak(
-                                    content.value.take(2000)
+                                    content.value.take(2000),
                                 )
                             ) {
                                 DatexError.DeliveryBreak
@@ -73,7 +73,7 @@ open class DatexClient(
                         HttpStatusCode.NotModified.value -> DatexError.NoNewDataAvailable
                         HttpStatusCode.Unauthorized.value, HttpStatusCode.Forbidden.value -> DatexError.AuthError(
                             ex.message,
-                            ex.httpCode
+                            ex.httpCode,
                         )
                         else -> ex
                     }
@@ -82,7 +82,7 @@ open class DatexClient(
         }
 
     private suspend fun runHttpGetRequest(
-        onlyModificationsSince: Instant?
+        onlyModificationsSince: Instant?,
     ): Either<DatexError, HttpResponse> = Either.catch {
         ktorHttpClient.get(settings.datexUrl) {
             val auth = Base64.getEncoder().encode(("${settings.username}:${settings.password}").toByteArray())
@@ -107,7 +107,7 @@ open class DatexClient(
                 .rightIfNotNull {
                     DatexError.MissingPublicationTimeError(
                         "The Datex message did not have any <publicationTime> element.",
-                        document
+                        document,
                     )
                 }
                 .flatMap {
@@ -116,7 +116,7 @@ open class DatexClient(
                     } catch (exception: DateTimeParseException) {
                         DatexError.MissingPublicationTimeError(
                             "The Datex message had an invalid <publicationTime> element.",
-                            document
+                            document,
                         ).left()
                     }
                 }

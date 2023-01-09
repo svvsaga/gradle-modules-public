@@ -28,7 +28,7 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
             withMappedDiagnosticContext("eventId" to (context?.eventId() ?: "Not found")) {
                 log().info(
                     "Incoming GCS event",
-                    kv("payload", payload)
+                    kv("payload", payload),
                 )
 
                 if (payload.isFolder() && !processFolders) {
@@ -38,13 +38,13 @@ abstract class GcsFunction(private val process: StorageFunction, private val pro
                         process(StorageEvent(payload.bucket, payload.name)).handleBlobNotFound().getOrThrow()
                         log().info(
                             "Processing of GCS event was successful",
-                            kv("payload", payload)
+                            kv("payload", payload),
                         )
                     } catch (throwable: Throwable) {
                         log().error(
                             "Error when processing GCS event",
                             kv("payload", payload),
-                            kv("exception", throwable)
+                            kv("exception", throwable),
                         )
                         throw throwable
                     }

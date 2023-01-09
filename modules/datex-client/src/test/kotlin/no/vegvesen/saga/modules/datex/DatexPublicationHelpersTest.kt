@@ -13,7 +13,7 @@ class DatexPublicationHelpersTest : FunSpec({
         createProcessedPublicationPath(
             processedBucket,
             "maaledata",
-            publicationTime
+            publicationTime,
         ) shouldBe StoragePath(processedBucket, "maaledata/2020_01/2020-01-02T12-13-14.456.xml")
     }
 })

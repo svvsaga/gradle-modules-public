@@ -15,7 +15,7 @@ abstract class BigQueryTempTable(
     protected val tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU,
     overrideDatasetName: String? = null,
-    protected val overrideTableName: String? = null
+    protected val overrideTableName: String? = null,
 ) : BigQueryTempDataset(bigQuery, isolationMode, datasetPrefix, location, overrideDatasetName) {
     constructor(
         projectId: String,
@@ -24,7 +24,7 @@ abstract class BigQueryTempTable(
         tablePrefix: String = "temp",
         location: BigQueryLocation = BigQueryLocation.EU,
         overrideDatasetName: String? = null,
-        overrideTableName: String? = null
+        overrideTableName: String? = null,
     ) : this(
         createBigQuery(projectId, location),
         isolationMode,
@@ -32,7 +32,7 @@ abstract class BigQueryTempTable(
         tablePrefix,
         location,
         overrideDatasetName,
-        overrideTableName
+        overrideTableName,
     )
 
     lateinit var tempTable: String

@@ -19,7 +19,7 @@ class MinimalWordCountTest {
         PAssert.that(res).containsInAnyOrder(
             KV.of("test1", 1),
             KV.of("test2", 2),
-            KV.of("test3", 1)
+            KV.of("test3", 1),
         )
 
         pipeline.run()
@@ -34,7 +34,7 @@ class MinimalWordCountTest {
         PAssert.that(res).containsInAnyOrder(
             KV.of("test1", 1),
             KV.of("test2", 2),
-            KV.of("test3", 1)
+            KV.of("test3", 1),
         )
 
         pipeline.run()

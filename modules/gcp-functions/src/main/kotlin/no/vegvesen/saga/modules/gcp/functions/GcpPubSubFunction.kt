@@ -39,7 +39,7 @@ abstract class GcpPubSubFunction(private val process: PubSubFunction) : Backgrou
                     "Received message with publishTime that could not be parsed",
                     kv("timestamp", it),
                     kv("exception", exception),
-                    kv("context", context)
+                    kv("context", context),
                 )
                 return
             }

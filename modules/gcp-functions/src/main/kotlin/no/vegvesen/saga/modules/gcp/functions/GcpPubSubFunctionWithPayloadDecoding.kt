@@ -28,13 +28,13 @@ private fun <T> decodeProtobufPayload(deserializer: DeserializationStrategy<T>, 
  */
 abstract class GcpPubSubFunctionWithProtobufPayload<T>(
     deserializer: DeserializationStrategy<T>,
-    process: suspend (params: T) -> Either<PubSubError, Unit>
+    process: suspend (params: T) -> Either<PubSubError, Unit>,
 ) : GcpPubSubFunctionWithPayloadDecoding<T>({ decodeProtobufPayload(deserializer, it) }, process)
 
 @ExperimentalSerializationApi
 abstract class GcpPubSubFunctionWithPayloadDecoding<T>(
     private val decode: (data: ByteArray) -> Either<Throwable, T>,
-    private val process: suspend (params: T) -> Either<PubSubError, Unit>
+    private val process: suspend (params: T) -> Either<PubSubError, Unit>,
 ) : BackgroundFunction<GcpPubSubMessage>, Logging {
     override fun accept(payload: GcpPubSubMessage, context: Context) {
         runBlocking {

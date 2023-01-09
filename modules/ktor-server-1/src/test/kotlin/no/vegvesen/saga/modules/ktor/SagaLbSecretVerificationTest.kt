@@ -34,7 +34,7 @@ class SagaLbSecretVerificationTest : FunSpec({
             with(
                 handleRequest(HttpMethod.Get, "/") {
                     addHeader(SagaLbSecretHeader, "wrong")
-                }
+                },
             ) {
                 response.status() shouldBe HttpStatusCode.Forbidden
             }
@@ -45,7 +45,7 @@ class SagaLbSecretVerificationTest : FunSpec({
             with(
                 handleRequest(HttpMethod.Get, "/") {
                     addHeader(SagaLbSecretHeader, "secret")
-                }
+                },
             ) {
                 response.status() shouldBe HttpStatusCode.OK
             }

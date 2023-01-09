@@ -26,7 +26,7 @@ private fun createStoragePath(bucket: String): StoragePath =
 
 fun <T> blobStorageBrowserIntegrationTests(
     testSubject: T,
-    testBucket: String
+    testBucket: String,
 ) where T : BlobStorage, T : BlobStorageBrowser = funSpec {
     val storagePath = createStoragePath(testBucket)
 
@@ -53,7 +53,7 @@ fun <T> blobStorageBrowserIntegrationTests(
         testSubject.saveFile(
             storagePath,
             "Testcontent",
-            ContentType.Txt
+            ContentType.Txt,
         )
 
         testSubject.getFileMetadata(storagePath).shouldBeRight().contentType.shouldBe(ContentType.Txt)
@@ -66,7 +66,7 @@ fun <T> blobStorageBrowserIntegrationTests(
             storagePath,
             "Testcontent",
             ContentType.Txt,
-            SaveFileOptions(customTime = testCustomTime)
+            SaveFileOptions(customTime = testCustomTime),
         )
 
         testSubject.getFileMetadata(storagePath)
@@ -94,7 +94,7 @@ fun <T> blobStorageBrowserIntegrationTests(
 
         test("for getFileMetadata") {
             testSubject.getFileMetadata(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(
-                invalidStoragePath
+                invalidStoragePath,
             )
         }
     }
@@ -108,7 +108,7 @@ fun <T> blobStorageBrowserIntegrationTests(
 
         test("for getFileMetadata") {
             testSubject.getFileMetadata(invalidStoragePath) shouldBeLeft BlobStorageError.BlobNotFound(
-                invalidStoragePath
+                invalidStoragePath,
             )
         }
     }
@@ -121,13 +121,13 @@ fun blobStorageIntegrationTests(testSubject: BlobStorage, testBucket: String, te
         val file = javaClass.getResourceAsStream("/blobTest.txt")?.readBytes() ?: throw Exception("Missing resource")
         val storageFilename = StoragePath(
             testBucket,
-            "$testFolder/blobTest.txt"
+            "$testFolder/blobTest.txt",
         )
 
         testSubject.saveFile(
             storageFilename,
             file,
-            ContentType.Txt
+            ContentType.Txt,
         )
 
         testSubject.loadFileAsString(storageFilename).shouldBeRight("Hello Blob!")

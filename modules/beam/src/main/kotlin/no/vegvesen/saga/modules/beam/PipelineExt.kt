@@ -23,7 +23,7 @@ object KPipe {
 fun Pipeline.fromTextFile(filename: String): PCollection<String> {
     return this.apply(
         "Reading lines from file with name $filename",
-        TextIO.read().from(filename)
+        TextIO.read().from(filename),
     )
 }
 

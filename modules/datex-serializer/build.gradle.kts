@@ -9,7 +9,7 @@ jaxb {
     javaGen {
         register("Datex3") {
             schema = file(
-                "../datex-schemas/src/main/resources/DatexII_3/DATEXII_3_MessageContainer.xsd"
+                "../datex-schemas/src/main/resources/DatexII_3/DATEXII_3_MessageContainer.xsd",
             )
             outputDir = file("src/generated/java")
             binding = file("../datex-schemas/src/main/resources/DatexII_3/binding.xjb")
@@ -18,7 +18,7 @@ jaxb {
         }
         register("Datex2") {
             schema = file(
-                "../datex-schemas/src/main/resources/DATEXIISchema_2_2_0.xsd"
+                "../datex-schemas/src/main/resources/DATEXIISchema_2_2_0.xsd",
             )
             outputDir = file("src/generated/java")
             header = false
@@ -36,14 +36,14 @@ tasks.register("postProcessDatex3") {
                 "sed",
                 "-i.bak",
                 "s/^public class MessageContainer/@jakarta\\.xml\\.bind\\.annotation\\.XmlRootElement public class MessageContainer/",
-                "src/generated/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java"
+                "src/generated/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java",
             )
         }
         exec {
             commandLine(
                 "rm",
                 "-f",
-                "src/generated/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java.bak"
+                "src/generated/java/eu/datex2/schema/_3/messagecontainer/MessageContainer.java.bak",
             )
         }
     }
@@ -56,7 +56,7 @@ tasks.withType<Jar> {
 
 tasks.register<Delete>("cleanGenerated") {
     delete(
-        fileTree("src/generated")
+        fileTree("src/generated"),
     )
 }
 

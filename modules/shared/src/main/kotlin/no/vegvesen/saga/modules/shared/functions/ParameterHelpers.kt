@@ -11,7 +11,7 @@ val lenientJson = Json { isLenient = true }
 @ExperimentalSerializationApi
 fun <T> parseQueryParameters(
     deserializer: DeserializationStrategy<T>,
-    queryParameters: Map<String, List<String>>
+    queryParameters: Map<String, List<String>>,
 ): Either<Throwable, T> =
     Either.catch {
         queryParameters.mapValues { (key, value) ->

@@ -4,5 +4,5 @@ class WktGeometryCollection(collection: List<WktGeometry>) :
     WktGeometry(
         collection.mapNotNull { it.round() }
             .joinToString(","),
-        "geometrycollection"
+        "geometrycollection",
     )

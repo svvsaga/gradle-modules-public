@@ -34,7 +34,7 @@ object BqToBqStorageSchemaConverter {
         Field.Mode.REPEATED,
         TableFieldSchema.Mode.REPEATED,
         Field.Mode.REQUIRED,
-        TableFieldSchema.Mode.REQUIRED
+        TableFieldSchema.Mode.REQUIRED,
     )
     private val BQTableSchemaTypeMap = ImmutableMap.Builder<StandardSQLTypeName, TableFieldSchema.Type>()
         .put(StandardSQLTypeName.BOOL, TableFieldSchema.Type.BOOL)

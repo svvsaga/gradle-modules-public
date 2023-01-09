@@ -21,7 +21,7 @@ data class SaveFileOptions(
     val gzipContent: Boolean = false,
     val noOverwrite: Boolean = false,
     val customTime: Instant? = null,
-    val customMetadata: Map<String, String>? = null
+    val customMetadata: Map<String, String>? = null,
 )
 
 enum class GzipDecompressionBehaviour {
@@ -41,7 +41,7 @@ data class FileMetadata(
     val contentType: ContentType,
     val customTime: Instant? = null,
     val contentEncoding: String? = null,
-    val customMetadata: Map<String, String>? = null
+    val customMetadata: Map<String, String>? = null,
 )
 
 interface BlobStorageBrowser {
@@ -59,7 +59,7 @@ interface BlobStorage {
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions = SaveFileOptions()
+        options: SaveFileOptions = SaveFileOptions(),
     ): Either<Throwable, Unit>
 
     /**
@@ -69,7 +69,7 @@ interface BlobStorage {
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions = SaveFileOptions()
+        options: SaveFileOptions = SaveFileOptions(),
     ): Either<Throwable, Boolean>
 
     /**
@@ -80,7 +80,7 @@ interface BlobStorage {
         fileContent: String,
         contentType: ContentType,
         options: SaveFileOptions = SaveFileOptions(),
-        charset: Charset = Charsets.UTF_8
+        charset: Charset = Charsets.UTF_8,
     ): Either<Throwable, Boolean> =
         this.saveFileIfNotExisting(storagePath, fileContent.toByteArray(charset), contentType, options)
 
@@ -89,18 +89,18 @@ interface BlobStorage {
         fileContent: String,
         contentType: ContentType,
         options: SaveFileOptions = SaveFileOptions(),
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = StandardCharsets.UTF_8,
     ): Either<Throwable, Unit> = this.saveFile(storagePath, fileContent.toByteArray(charset), contentType, options)
 
     suspend fun loadFile(
         storagePath: StoragePath,
-        options: LoadFileOptions = LoadFileOptions()
+        options: LoadFileOptions = LoadFileOptions(),
     ): Either<BlobStorageError, ByteArray>
 
     suspend fun loadFileAsString(
         storagePath: StoragePath,
         options: LoadFileOptions = LoadFileOptions(),
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = StandardCharsets.UTF_8,
     ): Either<BlobStorageError, String> = this.loadFile(storagePath, options).map { it.toString(charset) }
 
     suspend fun rewriteFile(storagePath: StoragePath): Either<BlobStorageError, Unit>
@@ -118,7 +118,7 @@ fun Either<BlobStorageError, ByteArray>.mapBlobStorageErrorToThrowable(path: Sto
         is BlobStorageError.BlobException -> it.cause
         is BlobStorageError.BlobNotFound -> Exception(
             "Did not find blob named ${path.fileName} in bucket ${path.bucketName}",
-            it.cause
+            it.cause,
         )
     }
 }

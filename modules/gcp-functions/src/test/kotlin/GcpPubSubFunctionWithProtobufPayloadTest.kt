@@ -48,7 +48,7 @@ class GcpPubSubFunctionWithProtobufPayloadTest : FunSpec({
         shouldThrowExactly<IllegalArgumentException> {
             function.accept(
                 GcpPubSubMessage(data = "invalid base64 data"),
-                mockk()
+                mockk(),
             )
         }
     }
@@ -87,8 +87,8 @@ class GcpPubSubFunctionWithProtobufPayloadTest : FunSpec({
                 .equals(
                     ObjectAppendingMarker(
                         "errorMessage",
-                        "gotcha"
-                    )
+                        "gotcha",
+                    ),
                 )
         }
     }

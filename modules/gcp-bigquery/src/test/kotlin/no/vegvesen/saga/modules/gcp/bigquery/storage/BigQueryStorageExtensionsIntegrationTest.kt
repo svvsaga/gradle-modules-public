@@ -43,7 +43,7 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
     val schema = Schema.of(
         createRequiredField("id", StandardSQLTypeName.STRING),
         createRequiredField("timestamp", StandardSQLTypeName.TIMESTAMP),
-        createRequiredField("version", StandardSQLTypeName.STRING)
+        createRequiredField("version", StandardSQLTypeName.STRING),
     )
 
     val tempTable = listener(BigQueryTempTableWithSchema(bigQuery, schema, isolationMode = ResourceIsolationMode.PerTest))
@@ -75,8 +75,8 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
                 mapOf(
                     "id" to JsonPrimitive(it.toString()),
                     "timestamp" to JsonPrimitive(timestamp.toString()),
-                    "version" to JsonPrimitive(Version.V1.toString())
-                )
+                    "version" to JsonPrimitive(Version.V1.toString()),
+                ),
             )
         }
         bigQuery.writeDocumentsToDefaultStream(documents, tempTable.tableId).shouldBeRight()

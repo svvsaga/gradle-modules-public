@@ -103,7 +103,7 @@ class GcsFunctionTest : FunSpec({
 
     test("should not retry function if file not found") {
         coEvery { storageFuncMock(any()) } returns BlobStorageError.BlobNotFound(
-            StoragePath(testBucket, testFilename)
+            StoragePath(testBucket, testFilename),
         ).left()
         val testLogger = TestLogger()
 

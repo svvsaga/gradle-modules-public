@@ -31,7 +31,7 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
             kv("method", request.method),
             kv("uri", request.uri),
             kv("path", request.path),
-            kv("params", request.queryParameters)
+            kv("params", request.queryParameters),
         )
         try {
             func()
@@ -42,12 +42,12 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
                 when (err) {
                     is SimpleFunctionError.Exception -> logger.error(
                         "Failed with exception during run of HTTP function $functionName",
-                        err.exception
+                        err.exception,
                     )
                     is SimpleFunctionError.UnexpectedError -> logger.error(
                         "Failed with unexpected error during run of HTTP function $functionName",
                         kv("msg", err.msg),
-                        kv("error", err.obj)
+                        kv("error", err.obj),
                     )
                 }
                 response.setStatusCode(HttpURLConnection.HTTP_INTERNAL_ERROR)
@@ -57,7 +57,7 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
             ifRight = {
                 response.writer.write("Ok.")
                 response.writer.flush()
-            }
+            },
         )
     }
 }

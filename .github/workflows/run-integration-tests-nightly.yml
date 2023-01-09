@@ -8,7 +8,7 @@ on:
 jobs:
   run-all-gradle-integration-tests-and-report-to-slack:
     name: Run all Gradle integration tests and report errors to Slack channel
-    uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v20.0.0
+    uses: svvsaga/github-actions-public/.github/workflows/run-all-gradle-integration-tests-and-report-to-slack.yml@v20.0.2
     with:
       ignore_modules: ./example,./plugins/saga-build
       build_and_inttest_cmd: SAGA_INT_TEST_PROJECT_ID="saga-int-testing-stm" ./gradlew inttest

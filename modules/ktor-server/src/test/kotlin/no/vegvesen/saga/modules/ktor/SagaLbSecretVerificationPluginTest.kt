@@ -15,7 +15,7 @@ import io.ktor.server.testing.testApplication
 fun withTestApp(test: suspend ApplicationTestBuilder.() -> Unit) {
     testApplication {
         application {
-            configureLoadBalancerSecret("secret")
+            configureLoadBalancerSecret("secret", "secret2")
         }
         routing {
             get("/") {
@@ -48,6 +48,13 @@ class SagaLbSecretVerificationPluginTest : FunSpec({
     webTest("if header is present and valid then 200 is returned") {
         val response = client.get("/") {
             header(SagaLbSecretHeader, "secret")
+        }
+        response.status shouldBe HttpStatusCode.OK
+        response.bodyAsText() shouldBe "OK"
+    }
+    webTest("if header is present and valid as second secret then 200 is returned") {
+        val response = client.get("/") {
+            header(SagaLbSecretHeader, "secret2")
         }
         response.status shouldBe HttpStatusCode.OK
         response.bodyAsText() shouldBe "OK"

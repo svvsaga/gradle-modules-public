@@ -16,7 +16,10 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.ifModifiedSince
+import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.XmlString
+import no.vegvesen.saga.modules.shared.kv
+import no.vegvesen.saga.modules.shared.log
 import no.vegvesen.saga.modules.shared.toInstantFromHttpDateString
 import no.vegvesen.saga.modules.shared.toXmlString
 import java.time.Instant
@@ -33,7 +36,7 @@ open class DatexClient(
     private val ktorHttpClient: HttpClient,
     private val settings: DatexSettings,
     private val validator: DatexValidator,
-) {
+) : Logging {
     open suspend fun read(onlyModificationsSince: Instant? = null): Either<DatexError, DatexResponse> =
         runHttpGetRequest(onlyModificationsSince).flatMap { httpResponse ->
             when (val status = httpResponse.status) {
@@ -83,20 +86,22 @@ open class DatexClient(
 
     private suspend fun runHttpGetRequest(
         onlyModificationsSince: Instant?,
-    ): Either<DatexError, HttpResponse> = Either.catch {
-        ktorHttpClient.get(settings.datexUrl) {
-            val auth = Base64.getEncoder().encode(("${settings.username}:${settings.password}").toByteArray())
-                .toString(Charsets.UTF_8)
-            header("Authorization", "Basic $auth")
-            accept(ContentType.Text.Xml)
-            onlyModificationsSince?.let(Date::from)?.also(::ifModifiedSince)
+    ): Either<DatexError, HttpResponse> =
+        Either.catch {
+            log().info("Fetching content from Datex", kv("url", settings.datexUrl))
+            ktorHttpClient.get(settings.datexUrl) {
+                val auth = Base64.getEncoder().encode(("${settings.username}:${settings.password}").toByteArray())
+                    .toString(Charsets.UTF_8)
+                header("Authorization", "Basic $auth")
+                accept(ContentType.Text.Xml)
+                onlyModificationsSince?.let(Date::from)?.also(::ifModifiedSince)
+            }
+        }.mapLeft { fe ->
+            when (fe) {
+                is ResponseException -> DatexError.HttpError(fe.toString(), fe.response.status.value)
+                else -> DatexError.Exception(fe.toString(), fe)
+            }
         }
-    }.mapLeft { fe ->
-        when (fe) {
-            is ResponseException -> DatexError.HttpError(fe.toString(), fe.response.status.value)
-            else -> DatexError.Exception(fe.toString(), fe)
-        }
-    }
 
     companion object {
         private val publicationTimeRegex =

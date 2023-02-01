@@ -35,16 +35,15 @@ import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 
 @Tags(ExternalTest)
 class DatexIntegrationTests : FunSpec({
+    // TODO remove the traffikkpublikasjon endpoint when we decommission veglogg_ingest_function using datex 2
     testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/trafikk/2/GetSituation")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/trafikk/3/GetSituation")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/reisetid/2/GetTravelTimeData")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/reisetid/3/GetTravelTimeData")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/reisetid/2/GetPredefinedTravelTimeLocations")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/reisetid/3/GetPredefinedTravelTimeLocations")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/2/GetMeasuredWeatherData")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/3/GetMeasuredWeatherData")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/2/GetMeasurementWeatherSiteTable")
-    testDatexEndpoint("https://www.vegvesen.no/ws/no/vegvesen/veg/trafikkpublikasjon/vaer/3/GetMeasurementWeatherSiteTable")
+    testDatexEndpoint("https://datex-server-get-v3-1.atlas.vegvesen.no/datexapi/GetSituation/pullsnapshotdata")
+
+    testDatexEndpoint("https://datex-server-get-v3-1.atlas.vegvesen.no/datexapi/GetTravelTimeData/pullsnapshotdata")
+    testDatexEndpoint("https://datex-server-get-v3-1.atlas.vegvesen.no/datexapi/GetPredefinedTravelTimeLocations/pullsnapshotdata")
+
+    testDatexEndpoint("https://datex-server-get-v3-1.atlas.vegvesen.no/datexapi/GetMeasuredWeatherData/pullsnapshotdata")
+    testDatexEndpoint("https://datex-server-get-v3-1.atlas.vegvesen.no/datexapi/GetMeasurementWeatherSiteTable/pullsnapshotdata")
 })
 
 private fun FunSpec.testDatexEndpoint(datexEndpoint: String) {

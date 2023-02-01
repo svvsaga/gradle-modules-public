@@ -4,6 +4,7 @@ import arrow.core.left
 import com.google.cloud.functions.HttpFunction
 import com.google.cloud.functions.HttpRequest
 import com.google.cloud.functions.HttpResponse
+import java.net.HttpURLConnection
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.functions.SimpleFunction
@@ -11,7 +12,6 @@ import no.vegvesen.saga.modules.shared.functions.SimpleFunctionError
 import no.vegvesen.saga.modules.shared.getClassForLogging
 import no.vegvesen.saga.modules.shared.getLogger
 import no.vegvesen.saga.modules.shared.kv
-import java.net.HttpURLConnection
 
 /**
  * Inherit from this class to create a GCP callable Http function
@@ -31,7 +31,7 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
             kv("method", request.method),
             kv("uri", request.uri),
             kv("path", request.path),
-            kv("params", request.queryParameters),
+            kv("params", request.queryParameters)
         )
         try {
             func()
@@ -42,12 +42,12 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
                 when (err) {
                     is SimpleFunctionError.Exception -> logger.error(
                         "Failed with exception during run of HTTP function $functionName",
-                        err.exception,
+                        err.exception
                     )
                     is SimpleFunctionError.UnexpectedError -> logger.error(
                         "Failed with unexpected error during run of HTTP function $functionName",
                         kv("msg", err.msg),
-                        kv("error", err.obj),
+                        kv("error", err.obj)
                     )
                 }
                 response.setStatusCode(HttpURLConnection.HTTP_INTERNAL_ERROR)
@@ -57,7 +57,7 @@ abstract class GcpHttpFunction(private val func: SimpleFunction) : HttpFunction 
             ifRight = {
                 response.writer.write("Ok.")
                 response.writer.flush()
-            },
+            }
         )
     }
 }

@@ -8,6 +8,7 @@ import eu.datex2.schema._2._2_0.D2LogicalModel
 import eu.datex2.schema._3.messagecontainer.MessageContainer
 import jakarta.xml.bind.JAXBContext
 import jakarta.xml.bind.JAXBElement
+import java.io.InputStream
 import kotlinx.datetime.Instant
 import no.vegvesen.saga.modules.datex.DatexVersion
 import no.vegvesen.saga.modules.datex.containsDeliveryBreak
@@ -15,7 +16,6 @@ import no.vegvesen.saga.modules.datex.findDatexVersion
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.extensions.bufferAndPeek
 import no.vegvesen.saga.modules.shared.toKotlinInstant
-import java.io.InputStream
 
 data class DeliveryBreakError(val version: DatexVersion) : Exception("DeliveryBreak encountered")
 

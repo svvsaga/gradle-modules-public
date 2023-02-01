@@ -9,14 +9,14 @@ import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
+import java.time.Instant
+import java.time.ZonedDateTime
 import no.vegvesen.saga.modules.datex.DatexStorageRepository.Companion.lastModifiedTimeToString
 import no.vegvesen.saga.modules.datex.DatexStorageRepository.Companion.stringToLastModifiedTime
 import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorage
 import no.vegvesen.saga.modules.shared.kvstore.KVStore
-import java.time.Instant
-import java.time.ZonedDateTime
 
 class DatexStorageRepositoryTests : AnnotationSpec() {
     override fun isolationMode() = IsolationMode.InstancePerLeaf // Same as JUnit
@@ -31,7 +31,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
     fun `correct file path`() {
         val xmlTime = ZonedDateTime.parse("2020-05-03T14:21:41+02:00").toInstant()
         repository.filePath(
-            xmlTime,
+            xmlTime
         ) shouldBe "$testDataSourceName/2020_05/2020-05-03T12-21-41Z.xml"
     }
 
@@ -40,7 +40,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
         val testDate = Instant.now()
 
         stringToLastModifiedTime(
-            lastModifiedTimeToString(testDate),
+            lastModifiedTimeToString(testDate)
         ) shouldBe testDate
     }
 
@@ -59,7 +59,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 any(),
                 ContentType.Xml,
                 any(),
-                any(),
+                any()
             )
         } returns true.right()
 
@@ -70,7 +70,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 any(),
                 testData.value,
                 ContentType.Xml,
-                withArg { it.gzipContent shouldBe false },
+                withArg { it.gzipContent shouldBe false }
             )
         }
     }
@@ -85,7 +85,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 any(),
                 ContentType.Xml,
                 any(),
-                any(),
+                any()
             )
         } returns true.right()
 
@@ -96,7 +96,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 any(),
                 testData.value,
                 ContentType.Xml,
-                withArg { it.gzipContent shouldBe true },
+                withArg { it.gzipContent shouldBe true }
             )
         }
     }
@@ -110,7 +110,7 @@ class DatexStorageRepositoryTests : AnnotationSpec() {
                 any(),
                 ContentType(any()),
                 any(),
-                any(),
+                any()
             )
         } returns true.right()
 

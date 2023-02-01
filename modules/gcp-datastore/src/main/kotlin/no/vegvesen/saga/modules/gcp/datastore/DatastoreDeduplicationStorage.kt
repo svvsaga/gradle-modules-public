@@ -18,12 +18,12 @@ import no.vegvesen.saga.modules.shared.TransactionalDeduplicationStorage
 import no.vegvesen.saga.modules.shared.log
 
 data class DatastoreDeduplicationStorageOptions(
-    val kind: String = "deduplication",
+    val kind: String = "deduplication"
 )
 
 class DatastoreDeduplicationStorage(
     private val datastore: Datastore,
-    private val options: DatastoreDeduplicationStorageOptions = DatastoreDeduplicationStorageOptions(),
+    private val options: DatastoreDeduplicationStorageOptions = DatastoreDeduplicationStorageOptions()
 ) : TransactionalDeduplicationStorage<String>, Logging {
     private val keyFactory = datastore.newKeyFactory().setKind(options.kind)
 
@@ -80,7 +80,7 @@ class DatastoreDeduplicationStorage(
 
     override suspend fun checkAndUpdateIdsInTransaction(
         ids: Collection<String>,
-        handleResult: (result: DuplicateCheckResult<String>) -> Either<Throwable, Unit>,
+        handleResult: (result: DuplicateCheckResult<String>) -> Either<Throwable, Unit>
     ): Either<Throwable, Unit> = Either.catch {
         datastore.newTransaction().let { transaction ->
             try {

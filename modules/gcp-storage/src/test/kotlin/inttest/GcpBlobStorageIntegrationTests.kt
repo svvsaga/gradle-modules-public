@@ -9,6 +9,9 @@ import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldNotStartWith
 import io.kotest.matchers.string.shouldStartWith
 import io.kotest.matchers.types.shouldBeTypeOf
+import java.time.Instant
+import java.time.temporal.ChronoUnit
+import java.util.zip.ZipException
 import no.vegvesen.saga.modules.gcp.storage.GcpBlobStorage
 import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorageError
@@ -25,9 +28,6 @@ import no.vegvesen.saga.modules.testing.SagaIntTestProject
 import no.vegvesen.saga.modules.testing.loadStringResourceOrThrow
 import no.vegvesen.saga.modules.testing.shouldBeLeftAnd
 import no.vegvesen.saga.modules.testing.shouldBeRightAnd
-import java.time.Instant
-import java.time.temporal.ChronoUnit
-import java.util.zip.ZipException
 
 private val testBucket = "${SagaIntTestProject}_gcp_blob-storage"
 private val testBucket2 = "${SagaIntTestProject}_gcp_blob-storage-2"
@@ -60,8 +60,8 @@ class GcpBlobStorageIntegrationTests : FunSpec({
             SaveFileOptions(
                 gzipContent = true,
                 customTime = customTime,
-                customMetadata = customMetadata,
-            ),
+                customMetadata = customMetadata
+            )
         ).shouldBeRight()
 
         testSubject.rewriteFile(storagePath).shouldBeRight()
@@ -72,7 +72,7 @@ class GcpBlobStorageIntegrationTests : FunSpec({
             ContentType.Txt,
             customTime,
             "gzip",
-            customMetadata,
+            customMetadata
         )
     }
 
@@ -117,11 +117,11 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         val options = LoadFileOptions(gzipDecompressionBehaviour = GzipDecompressionBehaviour.NO)
         testSubject.loadFile(
             storageFilename1,
-            options,
+            options
         ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
         testSubject.loadFile(
             storageFilename2,
-            options,
+            options
         ) shouldBeRightAnd { String(it) shouldNotStartWith loremIpsumStart }
     }
 
@@ -144,7 +144,7 @@ class GcpBlobStorageIntegrationTests : FunSpec({
         testSubject.saveFile(
             storageFilename,
             textFile,
-            ContentType.Txt,
+            ContentType.Txt
         )
 
         val options = LoadFileOptions(gzipDecompressionBehaviour = GzipDecompressionBehaviour.AUTO)

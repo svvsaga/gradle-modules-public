@@ -2,9 +2,9 @@ package no.vegvesen.saga.modules.shared.serializers
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import java.util.UUID
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import java.util.UUID
 
 @ExperimentalSerializationApi
 class UUIDSerializerTest : FunSpec({

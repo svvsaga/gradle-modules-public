@@ -5,6 +5,10 @@ import arrow.core.flatMap
 import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
+import javax.xml.transform.Source
+import javax.xml.transform.stream.StreamSource
+import javax.xml.validation.Schema
+import javax.xml.validation.SchemaFactory
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorContentOfExchangeElementNotComplete
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorDuplicateUniqueValue
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorNewStrekningerHasModelBaseVersion3
@@ -15,10 +19,6 @@ import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.log
 import org.xml.sax.SAXParseException
-import javax.xml.transform.Source
-import javax.xml.transform.stream.StreamSource
-import javax.xml.validation.Schema
-import javax.xml.validation.SchemaFactory
 
 object RecoverableDatex2ValidationExceptions {
     // New strekninger for some reason have modelBaseVersion="3"
@@ -71,7 +71,7 @@ class DatexValidator : Logging {
             "/DatexII_3/DATEXII_3_Parking.xsd",
             "/DatexII_3/DATEXII_3_RoadTrafficData.xsd",
             "/DatexII_3/DATEXII_3_Situation.xsd",
-            "/DatexII_3/DATEXII_3_Vms.xsd",
+            "/DatexII_3/DATEXII_3_Vms.xsd"
         ).map { StreamSource(Companion::class.java.getResource(it)!!.toExternalForm()) }
             .toTypedArray()
     }

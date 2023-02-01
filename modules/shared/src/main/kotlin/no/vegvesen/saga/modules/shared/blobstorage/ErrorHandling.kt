@@ -15,7 +15,7 @@ fun <A, B> Either<A, B>.handleBlobNotFound(): Either<A, Unit> = fold({
     if (it is BlobStorageError.BlobNotFound) {
         log.warn(
             "File not found, potentially already processed because of PubSub at-least-once semantics",
-            kv("path", it.storagePath),
+            kv("path", it.storagePath)
         )
         Unit.right()
     } else {

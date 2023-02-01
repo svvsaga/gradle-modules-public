@@ -8,13 +8,13 @@ import com.google.pubsub.v1.PullRequest
 import com.google.pubsub.v1.ReceivedMessage
 import com.google.pubsub.v1.SeekRequest
 import com.google.pubsub.v1.TopicName
-import org.threeten.bp.Duration
 import java.time.Instant
+import org.threeten.bp.Duration
 
 fun createPublisher(
     projectId: String,
     topic: String,
-    batchingSettings: BatchingSettings = BatchingSettings.newBuilder().build(),
+    batchingSettings: BatchingSettings = BatchingSettings.newBuilder().build()
 ): Publisher = Publisher.newBuilder(TopicName.of(projectId, topic))
     .setBatchingSettings(batchingSettings)
     .build()
@@ -22,7 +22,7 @@ fun createPublisher(
 fun createBatchingSettings(
     requestByteThreshold: Long = 8192,
     elementCountThreshold: Long = 1000,
-    delayThreshold: Duration = Duration.ofSeconds(1),
+    delayThreshold: Duration = Duration.ofSeconds(1)
 ): BatchingSettings {
     // Publish request get triggered based on request size, messages count & time since last
     // publish, whichever condition is met first.
@@ -52,7 +52,7 @@ fun GrpcSubscriberStub.purgeMessages(subscription: String) {
         SeekRequest.newBuilder()
             .setSubscription(subscription)
             .setTime(timestamp)
-            .build(),
+            .build()
     )
 }
 

@@ -1,17 +1,17 @@
 package no.vegvesen.saga.modules.shared.functions
 
 import arrow.core.Either
+import java.time.Instant
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
 import org.slf4j.event.Level
-import java.time.Instant
 
 data class PubSubEvent(
     val utf8Payload: String,
     val messageId: String,
     val publishTime: Instant,
-    val attributes: Map<String, String?> = emptyMap(),
+    val attributes: Map<String, String?> = emptyMap()
 )
 
 sealed class PubSubError {

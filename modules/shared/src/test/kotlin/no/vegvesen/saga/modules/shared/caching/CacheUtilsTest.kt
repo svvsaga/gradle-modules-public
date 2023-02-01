@@ -2,8 +2,8 @@ package no.vegvesen.saga.modules.shared.caching
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
-import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.delay
 
 class CacheUtilsTest : FunSpec({
     test("memoizeWithDuration") {

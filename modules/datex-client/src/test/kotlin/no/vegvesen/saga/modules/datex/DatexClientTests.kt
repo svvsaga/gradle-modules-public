@@ -19,16 +19,16 @@ import io.ktor.http.headersOf
 import io.ktor.util.date.GMTDate
 import io.mockk.every
 import io.mockk.mockk
-import no.vegvesen.saga.modules.shared.XmlString
-import no.vegvesen.saga.modules.shared.toHttpDateString
-import no.vegvesen.saga.modules.shared.toXmlString
-import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import java.util.Base64
 import java.util.concurrent.TimeUnit
+import no.vegvesen.saga.modules.shared.XmlString
+import no.vegvesen.saga.modules.shared.toHttpDateString
+import no.vegvesen.saga.modules.shared.toXmlString
+import no.vegvesen.saga.modules.testing.shouldBeRightAnd
 
 class DatexClientTests : AnnotationSpec() {
     private val testUsername = "username"
@@ -54,7 +54,7 @@ class DatexClientTests : AnnotationSpec() {
                             VersionCheckResult.OK -> {
                                 val responseHeaders = headersOf(
                                     HttpHeaders.ContentType to listOf(ContentType.Text.Xml.toString()),
-                                    HttpHeaders.LastModified to listOf(testDateLastModified.toHttpDateString()),
+                                    HttpHeaders.LastModified to listOf(testDateLastModified.toHttpDateString())
                                 )
                                 respond(testDatexDocument.value, headers = responseHeaders)
                             }
@@ -84,7 +84,7 @@ class DatexClientTests : AnnotationSpec() {
         val repository = DatexClient(
             ktorTestHttpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         )
         val result = repository.read()
 
@@ -98,7 +98,7 @@ class DatexClientTests : AnnotationSpec() {
         val repository = DatexClient(
             ktorTestHttpClient,
             DatexSettings(testUrl, "wrong username", "wrong password"),
-            datexValidator,
+            datexValidator
         )
         val result = repository.read()
 
@@ -112,7 +112,7 @@ class DatexClientTests : AnnotationSpec() {
         val result = DatexClient(
             ktorTestHttpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         ).read(testDate)
 
         result.shouldBeLeft().shouldBeTypeOf<DatexError.NoNewDataAvailable>()
@@ -125,7 +125,7 @@ class DatexClientTests : AnnotationSpec() {
         val result = DatexClient(
             ktorTestHttpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         ).read(testDate)
 
         result shouldBeRightAnd {
@@ -138,7 +138,7 @@ class DatexClientTests : AnnotationSpec() {
         val result = DatexClient(
             ktorTestHttpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         ).read()
 
         result shouldBeRightAnd {
@@ -155,7 +155,7 @@ class DatexClientTests : AnnotationSpec() {
         val testSubject = DatexClient(
             httpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         )
 
         val result = testSubject.read()
@@ -186,7 +186,7 @@ class DatexClientTests : AnnotationSpec() {
         val testSubject = DatexClient(
             httpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         )
 
         val result = testSubject.read()
@@ -203,7 +203,7 @@ class DatexClientTests : AnnotationSpec() {
         val testSubject = DatexClient(
             httpClient,
             validDatexSettings,
-            datexValidator,
+            datexValidator
         )
 
         val result = testSubject.read()
@@ -230,7 +230,7 @@ class DatexClientTests : AnnotationSpec() {
     <ns2:publicationCreator>
       <ns2:country>no</ns2:country>
       <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
-            """.toXmlString(),
+            """.toXmlString()
         ) shouldBeRight ZonedDateTime.parse("2022-02-23T15:26:42+01:00").toInstant()
     }
 }

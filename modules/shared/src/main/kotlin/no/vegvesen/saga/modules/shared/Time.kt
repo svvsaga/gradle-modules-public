@@ -1,7 +1,5 @@
 package no.vegvesen.saga.modules.shared
 
-import kotlinx.datetime.toJavaInstant
-import kotlinx.datetime.toKotlinInstant
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneId
@@ -10,6 +8,8 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.Temporal
 import java.util.Locale
 import javax.xml.datatype.XMLGregorianCalendar
+import kotlinx.datetime.toJavaInstant
+import kotlinx.datetime.toKotlinInstant
 
 val OsloZone: ZoneId = ZoneId.of("Europe/Oslo")
 

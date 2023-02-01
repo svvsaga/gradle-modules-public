@@ -9,7 +9,7 @@ import com.google.cloud.functions.HttpRequest
 import no.vegvesen.saga.modules.shared.functions.UserInfo
 
 class GoogleUserAuthenticator(
-    private val tokenProcessor: GoogleIdTokenProcessor = GoogleIdTokenProcessor(),
+    private val tokenProcessor: GoogleIdTokenProcessor = GoogleIdTokenProcessor()
 ) {
     private fun verifyIdToken(request: HttpRequest): Either<AuthenticationException, IdToken> {
         val maybeAuthHeader = request.getFirstHeader("Authorization")

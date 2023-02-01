@@ -1,10 +1,10 @@
 package no.vegvesen.saga.modules.gcp.redis
 
 import arrow.core.Either
+import java.util.BitSet
 import no.vegvesen.saga.modules.shared.DeduplicationStorage
 import redis.clients.jedis.Jedis
 import redis.clients.jedis.args.BitOP
-import java.util.BitSet
 
 /**
  * We perform deduplication by storing IDs as bits in Redis, divided into buckets of 2^20 (1_048_576)

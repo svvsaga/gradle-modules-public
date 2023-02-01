@@ -3,8 +3,8 @@ package no.vegvesen.saga.modules.shared.blobstorage
 import arrow.core.Either
 import arrow.core.right
 import arrow.core.rightIfNotNull
-import no.vegvesen.saga.modules.shared.ContentType
 import java.util.concurrent.ConcurrentHashMap
+import no.vegvesen.saga.modules.shared.ContentType
 
 open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
     class File(val bytes: ByteArray, val metadata: FileMetadata)
@@ -20,11 +20,11 @@ open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions,
+        options: SaveFileOptions
     ): Either<Throwable, Unit> {
         files[storagePath] = File(
             fileContent,
-            fileMetadata(storagePath, contentType, options),
+            fileMetadata(storagePath, contentType, options)
         )
         return Unit.right()
     }
@@ -32,26 +32,26 @@ open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
     private fun fileMetadata(
         storagePath: StoragePath,
         contentType: ContentType,
-        options: SaveFileOptions,
+        options: SaveFileOptions
     ) = FileMetadata(
         storagePath.fileName,
         contentType,
         options.customTime,
         if (options.gzipContent) "gzip" else null,
-        options.customMetadata,
+        options.customMetadata
     )
 
     override suspend fun saveFileIfNotExisting(
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
-        options: SaveFileOptions,
+        options: SaveFileOptions
     ): Either<Throwable, Boolean> {
         val shouldAdd = !files.containsKey(storagePath)
         if (shouldAdd) {
             files[storagePath] = File(
                 fileContent,
-                fileMetadata(storagePath, contentType, options),
+                fileMetadata(storagePath, contentType, options)
             )
         }
         return shouldAdd.right()
@@ -59,7 +59,7 @@ open class InMemoryBlobStorage : BlobStorage, BlobStorageBrowser {
 
     override suspend fun loadFile(
         storagePath: StoragePath,
-        options: LoadFileOptions,
+        options: LoadFileOptions
     ): Either<BlobStorageError, ByteArray> =
         files[storagePath]?.bytes.rightIfNotNull { BlobStorageError.BlobNotFound(storagePath) }
 

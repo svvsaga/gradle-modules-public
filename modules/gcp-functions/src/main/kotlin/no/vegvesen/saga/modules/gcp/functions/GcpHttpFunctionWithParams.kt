@@ -5,6 +5,7 @@ import arrow.core.flatMap
 import com.google.cloud.functions.HttpFunction
 import com.google.cloud.functions.HttpRequest
 import com.google.cloud.functions.HttpResponse
+import java.net.HttpURLConnection
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -12,12 +13,11 @@ import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.log
 import no.vegvesen.saga.modules.shared.v
-import java.net.HttpURLConnection
 
 @ExperimentalSerializationApi
 abstract class GcpHttpFunctionWithParams<T : Any>(
     private val deserializer: DeserializationStrategy<T>,
-    private val process: suspend (params: T) -> Either<Throwable, Unit>,
+    private val process: suspend (params: T) -> Either<Throwable, Unit>
 ) : HttpFunction, Logging {
     private val functionName = javaClass.simpleName
 
@@ -49,7 +49,7 @@ abstract class GcpHttpFunctionWithParams<T : Any>(
             ifRight = {
                 response.writer.write("Ok.")
                 response.writer.flush()
-            },
+            }
         )
     }
 }

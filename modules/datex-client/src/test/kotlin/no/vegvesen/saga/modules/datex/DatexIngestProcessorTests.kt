@@ -23,7 +23,7 @@ class DatexIngestProcessorTests : FunSpec({
         testLogger.events shouldHaveSingleElement {
             it.level == Level.WARN && it.formattedMessage.contains(
                 "deliverybreak",
-                true,
+                true
             )
         }
     }

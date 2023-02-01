@@ -2,6 +2,9 @@ package no.vegvesen.saga.modules.gcp.redis
 
 import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.matchers.shouldBe
+import kotlin.time.DurationUnit
+import kotlin.time.ExperimentalTime
+import kotlin.time.measureTime
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.DeduplicationStorage
 import no.vegvesen.saga.modules.testing.ExternalTest
@@ -12,9 +15,6 @@ import org.junit.jupiter.api.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import redis.clients.jedis.Jedis
-import kotlin.time.DurationUnit
-import kotlin.time.ExperimentalTime
-import kotlin.time.measureTime
 
 val logger: Logger = LoggerFactory.getLogger("DeduplicationStorageTests")
 

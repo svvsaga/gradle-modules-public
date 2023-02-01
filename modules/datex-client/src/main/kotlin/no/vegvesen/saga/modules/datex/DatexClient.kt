@@ -16,17 +16,17 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.ifModifiedSince
+import java.time.Instant
+import java.time.ZonedDateTime
+import java.time.format.DateTimeParseException
+import java.util.Base64
+import java.util.Date
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.XmlString
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
 import no.vegvesen.saga.modules.shared.toInstantFromHttpDateString
 import no.vegvesen.saga.modules.shared.toXmlString
-import java.time.Instant
-import java.time.ZonedDateTime
-import java.time.format.DateTimeParseException
-import java.util.Base64
-import java.util.Date
 
 data class DatexResponse(val document: XmlString, val publicationTime: Instant, val lastModified: Instant?)
 
@@ -35,7 +35,7 @@ data class DatexSettings(val datexUrl: String, val username: String, val passwor
 open class DatexClient(
     private val ktorHttpClient: HttpClient,
     private val settings: DatexSettings,
-    private val validator: DatexValidator,
+    private val validator: DatexValidator
 ) : Logging {
     open suspend fun read(onlyModificationsSince: Instant? = null): Either<DatexError, DatexResponse> =
         runHttpGetRequest(onlyModificationsSince).flatMap { httpResponse ->
@@ -44,7 +44,7 @@ open class DatexClient(
                 HttpStatusCode.Unauthorized, HttpStatusCode.Forbidden ->
                     DatexError.AuthError(
                         httpResponse.toString(),
-                        status.value,
+                        status.value
                     ).left()
                 else -> {
                     val content = httpResponse.bodyAsText().toXmlString()
@@ -54,12 +54,12 @@ open class DatexClient(
                             DatexResponse(
                                 content,
                                 publicationTime,
-                                httpResponse.headers[HttpHeaders.LastModified]?.toInstantFromHttpDateString(),
+                                httpResponse.headers[HttpHeaders.LastModified]?.toInstantFromHttpDateString()
                             )
                         }
                         .mapLeft {
                             if (it is DatexError.MissingPublicationTimeError && containsDeliveryBreak(
-                                    content.value.take(2000),
+                                    content.value.take(2000)
                                 )
                             ) {
                                 DatexError.DeliveryBreak
@@ -76,7 +76,7 @@ open class DatexClient(
                         HttpStatusCode.NotModified.value -> DatexError.NoNewDataAvailable
                         HttpStatusCode.Unauthorized.value, HttpStatusCode.Forbidden.value -> DatexError.AuthError(
                             ex.message,
-                            ex.httpCode,
+                            ex.httpCode
                         )
                         else -> ex
                     }
@@ -85,7 +85,7 @@ open class DatexClient(
         }
 
     private suspend fun runHttpGetRequest(
-        onlyModificationsSince: Instant?,
+        onlyModificationsSince: Instant?
     ): Either<DatexError, HttpResponse> =
         Either.catch {
             log().info("Fetching content from Datex", kv("url", settings.datexUrl))
@@ -112,7 +112,7 @@ open class DatexClient(
                 .rightIfNotNull {
                     DatexError.MissingPublicationTimeError(
                         "The Datex message did not have any <publicationTime> element.",
-                        document,
+                        document
                     )
                 }
                 .flatMap {
@@ -121,7 +121,7 @@ open class DatexClient(
                     } catch (exception: DateTimeParseException) {
                         DatexError.MissingPublicationTimeError(
                             "The Datex message had an invalid <publicationTime> element.",
-                            document,
+                            document
                         ).left()
                     }
                 }

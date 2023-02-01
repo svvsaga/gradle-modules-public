@@ -37,7 +37,7 @@ fun createResourceStorage(): BlobStorage {
 
 fun BlobStorage.withSuccessfulCopyFile(
     bucket: String = "some-bucket",
-    path: String = "some-processed-file",
+    path: String = "some-processed-file"
 ) {
     coEvery { copyFile(any(), any()) } returns StoragePath(bucket, path).right()
 }
@@ -50,7 +50,7 @@ fun BlobStorageBrowser.withFailingGetFileMetadata() {
     coEvery { getFileMetadata(any()) } answers {
         BlobStorageError.BlobException(
             "Fetching metadata failed",
-            Throwable(),
+            Throwable()
         ).left()
     }
 }

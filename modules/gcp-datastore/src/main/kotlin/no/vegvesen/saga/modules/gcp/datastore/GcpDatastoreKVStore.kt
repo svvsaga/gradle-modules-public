@@ -21,7 +21,7 @@ private const val ValueKey = "value"
  */
 class GcpDatastoreKVStore(
     private val kindName: String,
-    private val datastore: Datastore = DatastoreOptions.getDefaultInstance().service,
+    private val datastore: Datastore = DatastoreOptions.getDefaultInstance().service
 ) : KVStore {
 
     init {

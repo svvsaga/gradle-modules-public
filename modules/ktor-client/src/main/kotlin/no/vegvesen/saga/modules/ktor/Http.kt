@@ -15,7 +15,7 @@ fun HttpClientConfig<out HttpClientEngineConfig>.installKotlinxSerialization() {
         json(
             Json {
                 ignoreUnknownKeys = true
-            },
+            }
         )
     }
 }
@@ -25,7 +25,7 @@ fun createCIOHttpClientWithKotlinxSerialization(): HttpClient = HttpClient(CIO) 
 }
 
 fun createApacheHttpClient(
-    httpTimeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings(),
+    httpTimeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings()
 ) = HttpClient(Apache) {
     engine {
         socketTimeout = httpTimeoutSettings.socketTimeoutMillis
@@ -51,5 +51,5 @@ data class HttpTimeoutSettings(
     /* requestTimeoutMillis specifies a timeout for a whole HTTP call, from sending a request to receiving a response. */
     val requestTimeoutMillis: Int = 60_000,
     /* socketTimeoutMillis specifies a timeout for the maximum time in between two data packets when exchanging data with a server. */
-    val socketTimeoutMillis: Int = 10_000,
+    val socketTimeoutMillis: Int = 10_000
 )

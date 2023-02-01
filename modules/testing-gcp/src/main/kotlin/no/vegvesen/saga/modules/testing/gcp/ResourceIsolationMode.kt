@@ -8,5 +8,5 @@ enum class ResourceIsolationMode {
     PerContainer,
 
     /** Resource will be created once per leaf test. */
-    PerTest,
+    PerTest
 }

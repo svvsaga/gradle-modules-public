@@ -18,6 +18,6 @@ data class DuplicateCheckResult<T>(val duplicates: Set<T>, val nonDuplicates: Se
 interface TransactionalDeduplicationStorage<T> : DeduplicationStorage<T> {
     suspend fun checkAndUpdateIdsInTransaction(
         ids: Collection<T>,
-        handleResult: (result: DuplicateCheckResult<T>) -> Either<Throwable, Unit>,
+        handleResult: (result: DuplicateCheckResult<T>) -> Either<Throwable, Unit>
     ): Either<Throwable, Unit>
 }

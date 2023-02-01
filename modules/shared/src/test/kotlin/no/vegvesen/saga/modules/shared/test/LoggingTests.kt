@@ -24,7 +24,7 @@ class LoggingTests : StringSpec({
         val mdcValue2 = "321"
         withMappedDiagnosticContext(
             mdcKey to mdcValue,
-            mdcKey2 to mdcValue2,
+            mdcKey2 to mdcValue2
         ) {
             MDC.get(mdcKey) shouldBe mdcValue
             MDC.get(mdcKey2) shouldBe mdcValue2

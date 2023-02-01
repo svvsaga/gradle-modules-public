@@ -1,8 +1,8 @@
 package no.vegvesen.saga.modules.shared
 
+import java.util.HashMap
 import org.w3c.dom.CharacterData
 import org.w3c.dom.Node
-import java.util.HashMap
 
 fun extractChildElements(parent: Node?): HashMap<String, String> {
     var node = parent?.firstChild

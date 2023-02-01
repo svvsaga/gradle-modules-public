@@ -10,12 +10,12 @@ import io.kotest.matchers.comparables.shouldBeGreaterThan
 import io.kotest.matchers.comparables.shouldBeLessThan
 import io.kotest.matchers.ints.shouldBeExactly
 import io.kotest.matchers.shouldBe
-import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
-import no.vegvesen.saga.modules.shared.Retry.retry
-import no.vegvesen.saga.modules.shared.Retry.retryEither
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
+import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
+import no.vegvesen.saga.modules.shared.Retry.retry
+import no.vegvesen.saga.modules.shared.Retry.retryEither
 
 @ExperimentalTime
 class RetryTest : FunSpec({

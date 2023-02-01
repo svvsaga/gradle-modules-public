@@ -56,7 +56,7 @@ class DatexValidatorTests : StringSpec({
     "reisetid Datex 3 file with missing modelBaseVersion on exchangeInformation is validated successfully" {
         fileIsValid(
             "GetTravelTimeData_Datex3_without_modelBaseVersion_on_exchangeInformation.xml",
-            DatexVersion.DATEX_3,
+            DatexVersion.DATEX_3
         )
     }
 

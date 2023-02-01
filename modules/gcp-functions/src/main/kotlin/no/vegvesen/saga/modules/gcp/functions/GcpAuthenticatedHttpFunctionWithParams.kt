@@ -5,6 +5,10 @@ import arrow.core.continuations.either
 import com.google.cloud.functions.HttpFunction
 import com.google.cloud.functions.HttpRequest
 import com.google.cloud.functions.HttpResponse
+import java.net.HttpURLConnection.HTTP_BAD_REQUEST
+import java.net.HttpURLConnection.HTTP_FORBIDDEN
+import java.net.HttpURLConnection.HTTP_INTERNAL_ERROR
+import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -13,16 +17,12 @@ import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.shared.functions.UserInfo
 import no.vegvesen.saga.modules.shared.log
 import no.vegvesen.saga.modules.shared.v
-import java.net.HttpURLConnection.HTTP_BAD_REQUEST
-import java.net.HttpURLConnection.HTTP_FORBIDDEN
-import java.net.HttpURLConnection.HTTP_INTERNAL_ERROR
-import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 
 @ExperimentalSerializationApi
 abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
     private val deserializer: DeserializationStrategy<T>,
     private val authenticator: GoogleUserAuthenticator = GoogleUserAuthenticator(),
-    private val process: suspend (params: T, userInfo: UserInfo) -> Either<Throwable, Unit>,
+    private val process: suspend (params: T, userInfo: UserInfo) -> Either<Throwable, Unit>
 ) : HttpFunction, Logging {
     private val functionName = javaClass.simpleName
 
@@ -68,7 +68,7 @@ abstract class GcpAuthenticatedHttpFunctionWithParams<T : Any>(
             ifRight = {
                 response.writer.write("Ok.")
                 response.writer.flush()
-            },
+            }
         )
     }
 }

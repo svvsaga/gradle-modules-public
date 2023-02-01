@@ -2,6 +2,9 @@ package no.vegvesen.saga.modules.gcp.functions
 
 import com.google.cloud.functions.BackgroundFunction
 import com.google.cloud.functions.Context
+import java.time.Instant
+import java.time.format.DateTimeParseException
+import java.util.Base64
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import no.vegvesen.saga.modules.shared.Logging
@@ -11,9 +14,6 @@ import no.vegvesen.saga.modules.shared.functions.PubSubFunction
 import no.vegvesen.saga.modules.shared.functions.logOrThrow
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
-import java.time.Instant
-import java.time.format.DateTimeParseException
-import java.util.Base64
 
 abstract class GcpPubSubFunction(private val process: PubSubFunction) : BackgroundFunction<GcpPubSubMessage>, Logging {
     private val decoder = Base64.getDecoder()
@@ -39,7 +39,7 @@ abstract class GcpPubSubFunction(private val process: PubSubFunction) : Backgrou
                     "Received message with publishTime that could not be parsed",
                     kv("timestamp", it),
                     kv("exception", exception),
-                    kv("context", context),
+                    kv("context", context)
                 )
                 return
             }

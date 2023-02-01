@@ -11,6 +11,7 @@ import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
+import java.util.Base64.getEncoder
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.protobuf.ProtoBuf
@@ -19,7 +20,6 @@ import no.vegvesen.saga.modules.gcp.functions.GcpPubSubFunctionWithProtobufPaylo
 import no.vegvesen.saga.modules.gcp.functions.GcpPubSubMessage
 import no.vegvesen.saga.modules.shared.functions.PubSubError
 import no.vegvesen.saga.modules.testing.TestLogger
-import java.util.Base64.getEncoder
 
 @ExperimentalSerializationApi
 class GcpPubSubFunctionWithProtobufPayloadTest : FunSpec({
@@ -48,7 +48,7 @@ class GcpPubSubFunctionWithProtobufPayloadTest : FunSpec({
         shouldThrowExactly<IllegalArgumentException> {
             function.accept(
                 GcpPubSubMessage(data = "invalid base64 data"),
-                mockk(),
+                mockk()
             )
         }
     }
@@ -87,8 +87,8 @@ class GcpPubSubFunctionWithProtobufPayloadTest : FunSpec({
                 .equals(
                     ObjectAppendingMarker(
                         "errorMessage",
-                        "gotcha",
-                    ),
+                        "gotcha"
+                    )
                 )
         }
     }

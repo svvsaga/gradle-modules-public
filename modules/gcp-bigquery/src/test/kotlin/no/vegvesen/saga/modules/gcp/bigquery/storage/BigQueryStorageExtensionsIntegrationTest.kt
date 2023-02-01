@@ -7,6 +7,7 @@ import io.kotest.assertions.arrow.core.shouldBeRight
 import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import kotlin.time.ExperimentalTime
 import kotlinx.datetime.Instant
 import kotlinx.datetime.toJavaInstant
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -22,7 +23,6 @@ import no.vegvesen.saga.modules.shared.envOrThrow
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.gcp.BigQueryTempTableWithSchema
 import no.vegvesen.saga.modules.testing.gcp.ResourceIsolationMode
-import kotlin.time.ExperimentalTime
 
 enum class Version {
     V1, V2
@@ -43,7 +43,7 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
     val schema = Schema.of(
         createRequiredField("id", StandardSQLTypeName.STRING),
         createRequiredField("timestamp", StandardSQLTypeName.TIMESTAMP),
-        createRequiredField("version", StandardSQLTypeName.STRING),
+        createRequiredField("version", StandardSQLTypeName.STRING)
     )
 
     val tempTable = listener(BigQueryTempTableWithSchema(bigQuery, schema, isolationMode = ResourceIsolationMode.PerTest))
@@ -75,8 +75,8 @@ class BigQueryStorageExtensionsIntegrationTest : FunSpec({
                 mapOf(
                     "id" to JsonPrimitive(it.toString()),
                     "timestamp" to JsonPrimitive(timestamp.toString()),
-                    "version" to JsonPrimitive(Version.V1.toString()),
-                ),
+                    "version" to JsonPrimitive(Version.V1.toString())
+                )
             )
         }
         bigQuery.writeDocumentsToDefaultStream(documents, tempTable.tableId).shouldBeRight()

@@ -10,7 +10,7 @@ data class GcsEvent(
     val name: String,
     val metageneration: String,
     val timeCreated: Date,
-    val updated: Date,
+    val updated: Date
 ) {
     fun isFolder() = name.trim().endsWith("/")
 }

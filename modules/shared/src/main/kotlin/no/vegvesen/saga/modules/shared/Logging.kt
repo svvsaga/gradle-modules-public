@@ -1,11 +1,11 @@
 package no.vegvesen.saga.modules.shared
 
+import kotlin.reflect.full.companionObject
 import net.logstash.logback.argument.StructuredArgument
 import net.logstash.logback.argument.StructuredArguments
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MDC
-import kotlin.reflect.full.companionObject
 
 fun getLogger(forClass: Class<*>): Logger =
     LoggerFactory.getLogger(forClass)
@@ -40,7 +40,7 @@ fun v(key: String, value: Any): StructuredArgument {
 
 inline fun <T> withMappedDiagnosticContext(
     vararg loggedProperties: Pair<String, String>,
-    func: () -> T,
+    func: () -> T
 ): T =
     try {
         loggedProperties.forEach {

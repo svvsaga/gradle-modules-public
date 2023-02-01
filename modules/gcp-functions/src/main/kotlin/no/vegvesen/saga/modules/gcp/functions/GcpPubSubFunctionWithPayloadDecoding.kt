@@ -4,6 +4,7 @@ import arrow.core.Either
 import arrow.core.flatMap
 import com.google.cloud.functions.BackgroundFunction
 import com.google.cloud.functions.Context
+import java.util.Base64
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -14,7 +15,6 @@ import no.vegvesen.saga.modules.shared.functions.PubSubError
 import no.vegvesen.saga.modules.shared.functions.logOrThrow
 import no.vegvesen.saga.modules.shared.kv
 import no.vegvesen.saga.modules.shared.log
-import java.util.Base64
 
 @ExperimentalSerializationApi
 private fun <T> decodeProtobufPayload(deserializer: DeserializationStrategy<T>, data: ByteArray): Either<Throwable, T> =
@@ -28,13 +28,13 @@ private fun <T> decodeProtobufPayload(deserializer: DeserializationStrategy<T>, 
  */
 abstract class GcpPubSubFunctionWithProtobufPayload<T>(
     deserializer: DeserializationStrategy<T>,
-    process: suspend (params: T) -> Either<PubSubError, Unit>,
+    process: suspend (params: T) -> Either<PubSubError, Unit>
 ) : GcpPubSubFunctionWithPayloadDecoding<T>({ decodeProtobufPayload(deserializer, it) }, process)
 
 @ExperimentalSerializationApi
 abstract class GcpPubSubFunctionWithPayloadDecoding<T>(
     private val decode: (data: ByteArray) -> Either<Throwable, T>,
-    private val process: suspend (params: T) -> Either<PubSubError, Unit>,
+    private val process: suspend (params: T) -> Either<PubSubError, Unit>
 ) : BackgroundFunction<GcpPubSubMessage>, Logging {
     override fun accept(payload: GcpPubSubMessage, context: Context) {
         runBlocking {

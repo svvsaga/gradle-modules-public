@@ -5,18 +5,18 @@ import arrow.core.flatMap
 import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
+import java.time.Instant
 import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.functions.SimpleFunctionError
 import no.vegvesen.saga.modules.shared.functions.SimpleProcessor
 import no.vegvesen.saga.modules.shared.log
 import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
-import java.time.Instant
 
 class DatexIngestProcessor(
     private val poller: DatexPoller,
     private val deadLetterStorage: DeadLetterStorage,
-    private val gzipped: Boolean = true,
+    private val gzipped: Boolean = true
 ) : SimpleProcessor, Logging {
     override suspend fun process(): Either<SimpleFunctionError, Unit> =
         poller.pollDatex(gzipped).handleErrorWith { error ->
@@ -44,7 +44,7 @@ class DatexIngestProcessor(
             .flatMap {
                 SimpleFunctionError.UnexpectedError(
                     "Datex validation error for object ${deadLetterStorage.bucket}/$filename",
-                    error.message,
+                    error.message
                 ).left()
             }
     }

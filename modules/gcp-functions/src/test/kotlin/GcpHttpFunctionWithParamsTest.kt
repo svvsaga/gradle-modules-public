@@ -17,6 +17,9 @@ import io.mockk.every
 import io.mockk.just
 import io.mockk.mockk
 import io.mockk.runs
+import java.io.BufferedReader
+import java.io.StringReader
+import java.util.Optional
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
@@ -24,9 +27,6 @@ import kotlinx.serialization.json.Json
 import no.vegvesen.saga.modules.gcp.functions.GcpHttpFunctionWithParams
 import no.vegvesen.saga.modules.shared.ContentType
 import no.vegvesen.saga.modules.testing.TestLogger
-import java.io.BufferedReader
-import java.io.StringReader
-import java.util.Optional
 
 @ExperimentalSerializationApi
 class GcpHttpFunctionWithParamsTest : FunSpec({

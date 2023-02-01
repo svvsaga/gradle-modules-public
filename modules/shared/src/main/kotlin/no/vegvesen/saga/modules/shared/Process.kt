@@ -1,8 +1,8 @@
 package no.vegvesen.saga.modules.shared
 
+import java.io.File
 import org.buildobjects.process.ProcBuilder
 import org.buildobjects.process.ProcResult
-import java.io.File
 
 fun execute(commandWithArgs: String, workingDir: String): ProcResult =
     defaultProcBuilder(commandWithArgs)

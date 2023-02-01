@@ -27,7 +27,7 @@ object BigQuerySchema {
             .createJsonParser(jsonText)
             .parseArray(
                 ArrayList::class.java,
-                TableFieldSchema::class.java,
+                TableFieldSchema::class.java
             ).toMutableList()
         fields.forEach(::convertTypesToLegacySql)
         val tableSchema: TableSchema = TableSchema().setFields(fields)

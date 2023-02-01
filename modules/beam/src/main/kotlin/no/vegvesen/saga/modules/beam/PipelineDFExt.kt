@@ -2,6 +2,8 @@ package no.vegvesen.saga.modules.beam
 
 import com.google.api.services.bigquery.model.TableSchema
 import com.google.protobuf.Message
+import java.io.Serializable
+import kotlin.reflect.full.isSubclassOf
 import org.apache.avro.generic.GenericRecord
 import org.apache.beam.sdk.Pipeline
 import org.apache.beam.sdk.coders.SerializableCoder
@@ -9,13 +11,11 @@ import org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO
 import org.apache.beam.sdk.io.gcp.pubsub.PubsubIO
 import org.apache.beam.sdk.io.gcp.pubsub.PubsubMessage
 import org.apache.beam.sdk.values.PCollection
-import java.io.Serializable
-import kotlin.reflect.full.isSubclassOf
 
 inline fun <reified T> Pipeline.fromPubsub(
     projectId: String,
     subscription: String,
-    idAttr: String = "uid",
+    idAttr: String = "uid"
 ): PCollection<T> {
     val klass = T::class
 
@@ -34,24 +34,24 @@ inline fun <reified T> Pipeline.fromPubsub(
         "Reading ($subscription) from Pubsub",
         pubsubRead
             .fromSubscription("projects/$projectId/subscriptions/$subscription")
-            .withIdAttribute(idAttr),
+            .withIdAttribute(idAttr)
     )
 }
 
 inline fun <reified T : Serializable> Pipeline.readBQTable(
     inputTable: String,
-    crossinline parseFn: (TableSchema, GenericRecord) -> T,
+    crossinline parseFn: (TableSchema, GenericRecord) -> T
 ): PCollection<T> =
     this.apply(
         "Read from BQ table $inputTable",
         BigQueryIO.read { schemaAndRecord -> parseFn(schemaAndRecord.tableSchema, schemaAndRecord.record) }
             .withCoder(SerializableCoder.of(T::class.java))
-            .from(inputTable),
+            .from(inputTable)
     )
 
 inline fun <reified T : Serializable> Pipeline.readBQView(
     inputView: String,
-    crossinline parseFn: (TableSchema, GenericRecord) -> T,
+    crossinline parseFn: (TableSchema, GenericRecord) -> T
 ): PCollection<T> =
     this.apply(
         "Read from BQ view $inputView",
@@ -59,5 +59,5 @@ inline fun <reified T : Serializable> Pipeline.readBQView(
             .read { schemaAndRecord -> parseFn(schemaAndRecord.tableSchema, schemaAndRecord.record) }
             .withCoder(SerializableCoder.of(T::class.java))
             .fromQuery("SELECT * FROM `${inputView.replace(':', '.')}`")
-            .usingStandardSql(),
+            .usingStandardSql()
     )

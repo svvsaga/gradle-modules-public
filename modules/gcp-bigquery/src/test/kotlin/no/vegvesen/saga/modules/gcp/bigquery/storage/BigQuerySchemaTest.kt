@@ -83,7 +83,7 @@ val invalidJsonSchemaForStruct = """
 
 enum class SimpleMode {
     REQUIRED,
-    NULLABLE,
+    NULLABLE
 }
 
 fun fieldJson(type: StandardSQLTypeName, mode: SimpleMode) = """

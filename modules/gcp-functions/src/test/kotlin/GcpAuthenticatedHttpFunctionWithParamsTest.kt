@@ -42,7 +42,7 @@ class GcpAuthenticatedHttpFunctionWithParamsTest : FunSpec({
 
     fun createFunction(
         requestVerifier: GoogleUserAuthenticator,
-        process: suspend (params: MyParams, userInfo: UserInfo) -> Either<Throwable, Unit>,
+        process: suspend (params: MyParams, userInfo: UserInfo) -> Either<Throwable, Unit>
     ) = object : GcpAuthenticatedHttpFunctionWithParams<MyParams>(MyParams.serializer(), requestVerifier, process) {}
 
     fun createSuccessFunction(requestVerifier: GoogleUserAuthenticator) =

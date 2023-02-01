@@ -6,23 +6,23 @@ import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.Spec
 import io.kotest.core.test.TestCase
 import io.kotest.core.test.TestResult
+import java.util.UUID
 import no.vegvesen.saga.modules.gcp.bigquery.BigQueryLocation
 import no.vegvesen.saga.modules.gcp.bigquery.createBigQuery
-import java.util.UUID
 
 open class BigQueryTempDataset(
     val bigQuery: BigQuery,
     protected val isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
     protected val datasetPrefix: String = "temp",
     protected val location: BigQueryLocation = BigQueryLocation.EU,
-    protected val overrideDatasetName: String? = null,
+    protected val overrideDatasetName: String? = null
 ) : TestListener {
     constructor(
         projectId: String,
         isolationMode: ResourceIsolationMode = ResourceIsolationMode.PerSpec,
         datasetPrefix: String = "temp",
         location: BigQueryLocation = BigQueryLocation.EU,
-        overrideDatasetName: String? = null,
+        overrideDatasetName: String? = null
     ) : this(createBigQuery(projectId, location), isolationMode, datasetPrefix, location, overrideDatasetName)
 
     lateinit var tempDataset: String
@@ -32,7 +32,7 @@ open class BigQueryTempDataset(
         if (bigQuery.getDataset(tempDataset) == null) {
             bigQuery.create(
                 DatasetInfo.newBuilder(tempDataset).setLocation(location.name)
-                    .setLabels(mapOf("temporary" to "true")).build(),
+                    .setLabels(mapOf("temporary" to "true")).build()
             )
         }
     }
@@ -77,7 +77,7 @@ open class BigQueryTempDataset(
         bigQuery.listDatasets(BigQuery.DatasetListOption.labelFilter("labels.temporary:true")).iterateAll()
             .forEach {
                 it.delete(
-                    BigQuery.DatasetDeleteOption.deleteContents(),
+                    BigQuery.DatasetDeleteOption.deleteContents()
                 )
             }
     }

@@ -12,14 +12,14 @@ import io.kotest.property.arbitrary.map
 import io.kotest.property.arbitrary.next
 import io.kotest.property.arbitrary.string
 import io.kotest.property.checkAll
+import kotlin.random.Random
+import kotlin.random.nextUInt
 import no.vegvesen.saga.modules.gcp.datastore.GcpDatastoreKVStore
 import no.vegvesen.saga.modules.shared.kvstore.KVStoreError
 import no.vegvesen.saga.modules.shared.testfactory.kvstore.aKVStoreKey
 import no.vegvesen.saga.modules.shared.testfactory.kvstore.kvStoreIntTests
 import no.vegvesen.saga.modules.testing.IntegrationTest
 import no.vegvesen.saga.modules.testing.SagaIntTestProject
-import kotlin.random.Random
-import kotlin.random.nextUInt
 
 @Tags(IntegrationTest)
 @ExperimentalUnsignedTypes

@@ -2,15 +2,15 @@ package no.vegvesen.saga.modules.shared.serializers
 
 import io.kotest.assertions.throwables.shouldThrowAny
 import io.kotest.core.spec.style.FunSpec
+import kotlin.test.assertEquals
 import kotlinx.serialization.Serializable
 import no.vegvesen.saga.modules.shared.serializers.SerializationObjectMapper.mapObject
-import kotlin.test.assertEquals
 
 @Serializable
 private data class TypeA(
     val a: String,
     val b: Int,
-    val c: Boolean?,
+    val c: Boolean?
 )
 
 // Same structure as A
@@ -18,7 +18,7 @@ private data class TypeA(
 private data class TypeB(
     val a: String,
     val b: Int,
-    val c: Boolean? = null,
+    val c: Boolean? = null
 )
 
 // Same properties as A, but different types
@@ -26,7 +26,7 @@ private data class TypeB(
 private data class TypeC(
     val a: Int,
     val b: String,
-    val c: Boolean?,
+    val c: Boolean?
 )
 
 // Same as A with extra field
@@ -35,7 +35,7 @@ private data class TypeD(
     val a: String,
     val d: Short = 1,
     val b: Int,
-    val c: Boolean?,
+    val c: Boolean?
 )
 
 class SerializationObjectMapperTests : FunSpec({

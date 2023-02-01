@@ -36,7 +36,7 @@ val SagaLbSecretVerificationPlugin =
                 if (value == null) {
                     logger.warn(
                         "No Shared Saga Secret found in headers",
-                        v("headers", call.request.headers.toMap()),
+                        v("headers", call.request.headers.toMap())
                     )
                     call.respond(HttpStatusCode.Unauthorized)
                 } else if (!sagaLbSecrets.contains(value)) {

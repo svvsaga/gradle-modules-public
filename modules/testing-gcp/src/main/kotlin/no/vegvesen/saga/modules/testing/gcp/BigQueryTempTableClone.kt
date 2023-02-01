@@ -14,7 +14,7 @@ class BigQueryTempTableClone(
     tablePrefix: String = "temp",
     location: BigQueryLocation = BigQueryLocation.EU,
     overrideDatasetName: String? = null,
-    overrideTableName: String? = null,
+    overrideTableName: String? = null
 ) : BigQueryTempTable(
     bigQuery,
     isolationMode,
@@ -22,7 +22,7 @@ class BigQueryTempTableClone(
     tablePrefix,
     location,
     overrideDatasetName,
-    overrideTableName,
+    overrideTableName
 ) {
 
     constructor(
@@ -33,7 +33,7 @@ class BigQueryTempTableClone(
         tablePrefix: String = "temp",
         location: BigQueryLocation = BigQueryLocation.EU,
         overrideDatasetName: String? = null,
-        overrideTableName: String? = null,
+        overrideTableName: String? = null
     ) : this(
         createBigQuery(projectId, location),
         copyFromTableId,
@@ -42,7 +42,7 @@ class BigQueryTempTableClone(
         tablePrefix,
         location,
         overrideDatasetName,
-        overrideTableName,
+        overrideTableName
     )
 
     override fun createTempTableImplementation() {

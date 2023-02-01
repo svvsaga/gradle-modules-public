@@ -10,11 +10,11 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.collections.shouldNotBeEmpty
 import io.mockk.every
 import io.mockk.mockk
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.ExperimentalTime
 import no.vegvesen.saga.modules.shared.Retry.ExponentialBackoffSettings
 import no.vegvesen.saga.modules.testing.TestLogger
 import org.slf4j.LoggerFactory
-import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 
 @kotlinx.serialization.Serializable
 data class Foo(val bar: Int)
@@ -26,7 +26,7 @@ class BigQueryStorageExtensionsTest : FunSpec({
         "No resources",
         Exception(),
         mockk(),
-        true,
+        true
     )
 
     val logger = LoggerFactory.getLogger(BigQueryStorageExtensionsTest::class.java)
@@ -56,7 +56,7 @@ class BigQueryStorageExtensionsTest : FunSpec({
         val result = failingWriter.writeJson(
             listOf(Foo(1)),
             Foo.serializer(),
-            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2),
+            backoffSettings = ExponentialBackoffSettings(0.1.seconds, 2)
         ) { exception, delay, attempts ->
             logger.warn("testlogging: Failure, delaying $delay, attempts $attempts", exception)
         }

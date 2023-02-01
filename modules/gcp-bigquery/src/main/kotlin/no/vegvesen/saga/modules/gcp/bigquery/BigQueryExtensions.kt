@@ -20,6 +20,11 @@ import com.google.cloud.bigquery.TableResult
 import com.google.cloud.bigquery.WriteChannelConfiguration
 import com.google.common.cache.Cache
 import com.google.common.cache.CacheBuilder
+import java.nio.ByteBuffer
+import java.time.Duration
+import java.time.Instant
+import java.util.Objects
+import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.Dispatchers
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.toKotlinInstant
@@ -29,11 +34,6 @@ import kotlinx.serialization.json.JsonObject
 import no.vegvesen.saga.modules.shared.allLefts
 import no.vegvesen.saga.modules.shared.serializers.replacePrimitives
 import no.vegvesen.saga.modules.shared.serializers.withoutNulls
-import java.nio.ByteBuffer
-import java.time.Duration
-import java.time.Instant
-import java.util.Objects
-import java.util.concurrent.TimeUnit
 
 /**
  * Write a list of JSON as ndjson to BigQuery
@@ -42,7 +42,7 @@ fun BigQuery.writeData(
     jsons: List<String>,
     datasetName: String,
     tableName: String,
-    location: BigQueryLocation,
+    location: BigQueryLocation
 ) =
     this.writeNdJson(jsons.joinToString("\n"), datasetName, tableName, location)
 
@@ -53,7 +53,7 @@ fun BigQuery.writeNdJson(
     ndjson: String,
     datasetName: String,
     tableName: String,
-    location: BigQueryLocation,
+    location: BigQueryLocation
 ) {
     if (ndjson.isEmpty()) {
         return
@@ -89,7 +89,7 @@ fun BigQuery.copyTable(source: TableId, destination: TableId) {
     } else if (completedJob.status.error != null) {
         throw Exception(
             "BigQuery was unable to copy table `$source` to `$destination` because of an error: \n" +
-                completedJob.status.error,
+                completedJob.status.error
         )
     }
 }
@@ -99,23 +99,23 @@ fun BigQuery.copyTableSchema(source: TableId, destination: TableId) {
         """
         CREATE TABLE `${destination.dataset}.${destination.table}`
         AS SELECT * FROM `${source.dataset}.${source.table}` LIMIT 0
-        """.trimIndent(),
+        """.trimIndent()
     )
 }
 
 fun BigQuery.fetchRowCount(dataset: String, table: String) =
     this.query(
         QueryJobConfiguration.of(
-            "SELECT COUNT(*) FROM $dataset.$table",
-        ),
+            "SELECT COUNT(*) FROM $dataset.$table"
+        )
     )
         .values.first()[0].longValue
 
 fun BigQuery.fetchRowCount(tableId: TableId) =
     this.query(
         QueryJobConfiguration.of(
-            "SELECT COUNT(*) FROM `${if (tableId.project == null) "" else "${tableId.project}."}${tableId.dataset}.${tableId.table}`",
-        ),
+            "SELECT COUNT(*) FROM `${if (tableId.project == null) "" else "${tableId.project}."}${tableId.dataset}.${tableId.table}`"
+        )
     )
         .values.first()[0].longValue
 
@@ -124,7 +124,7 @@ fun BigQuery.fetchScalar(query: String) = query(QueryJobConfiguration.of(query))
 val FieldValue.instantValue: Instant
     get() = Instant.ofEpochSecond(
         TimeUnit.MICROSECONDS.toSeconds(timestampValue),
-        TimeUnit.MICROSECONDS.toNanos(Math.floorMod(timestampValue, TimeUnit.SECONDS.toMicros(1))),
+        TimeUnit.MICROSECONDS.toNanos(Math.floorMod(timestampValue, TimeUnit.SECONDS.toMicros(1)))
     )
 
 suspend fun <T> BigQuery.streamDocuments(
@@ -132,7 +132,7 @@ suspend fun <T> BigQuery.streamDocuments(
     serializer: SerializationStrategy<T>,
     tableId: TableId,
     chunkSize: Int = 500, // Set to 500 as a good starting point. 2000 segment time results is too much for 10MB payload limit.
-    getInsertId: (t: T) -> String? = { null },
+    getInsertId: (t: T) -> String? = { null }
 ) = Either.catchAndFlatten {
     if (documents.any()) {
         val errors = documents.map { document ->
@@ -190,7 +190,7 @@ private val defaultCache: Cache<Int, TableResult> by lazy {
 fun BigQuery.cachedQuery(
     query: String,
     params: Map<String, Any> = emptyMap(),
-    cache: Cache<Int, TableResult> = defaultCache,
+    cache: Cache<Int, TableResult> = defaultCache
 ): TableResult =
     cache.get(Objects.hash(query, params)) {
         queryOf(query, params)

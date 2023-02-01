@@ -30,7 +30,7 @@ abstract class DatexPollerFunction(
     private val dataSourceName: String,
     private val publicationsBucket: String,
     private val deadLetterBucket: String,
-    private val timeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings(),
+    private val timeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings()
 ) : GcpHttpFunction(
     {
         createProcessor(
@@ -40,9 +40,9 @@ abstract class DatexPollerFunction(
             dataSourceName,
             publicationsBucket,
             deadLetterBucket,
-            timeoutSettings,
+            timeoutSettings
         ).process()
-    },
+    }
 ) {
     companion object {
         fun createProcessor(
@@ -52,7 +52,7 @@ abstract class DatexPollerFunction(
             dataSourceName: String,
             publicationsBucket: String,
             deadLetterBucket: String,
-            timeoutSettings: HttpTimeoutSettings,
+            timeoutSettings: HttpTimeoutSettings
         ): DatexIngestProcessor {
             val datexUsername = SecretManagerUtils.fetchSecretString(projectId, datexUsernameSecretKey)
             val datexPassword = SecretManagerUtils.fetchSecretString(projectId, datexUsernamePasswordKey)
@@ -60,14 +60,14 @@ abstract class DatexPollerFunction(
                 DatexClient(
                     createApacheHttpClient(timeoutSettings),
                     DatexSettings(datexEndpointUrl, datexUsername, datexPassword),
-                    DatexValidator(),
+                    DatexValidator()
                 )
             val blobStorage = GcpBlobStorage.create()
             val datexStorage = DatexStorageRepository(
                 publicationsBucket,
                 dataSourceName,
                 GcpDatastoreKVStore(dataSourceName, createDatastore(projectId)),
-                blobStorage,
+                blobStorage
             )
             val deadLetterStorage = DeadLetterStorage(blobStorage, deadLetterBucket)
             val datexPoller = DatexPoller(datexClient, datexStorage)

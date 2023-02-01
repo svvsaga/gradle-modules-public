@@ -13,7 +13,7 @@ import org.slf4j.Logger
 @ExperimentalSerializationApi
 fun <T : Any> parseParameters(
     request: HttpRequest,
-    deserializer: DeserializationStrategy<T>,
+    deserializer: DeserializationStrategy<T>
 ): Either<ValidationException, T> =
     if (request.contentType.isPresent && request.contentType.get() == ContentType.Json.value) {
         parseJsonParameters(deserializer, request.reader.readText())
@@ -29,6 +29,6 @@ fun Logger.httpRequest(request: HttpRequest) {
         kv("method", request.method),
         kv("uri", request.uri),
         kv("path", request.path),
-        kv("query", request.query),
+        kv("query", request.query)
     )
 }

@@ -1,13 +1,32 @@
 root = true
 
-[*]
-indent_size = 2
-tab_width = 2
-charset = utf-8
-end_of_line = lf
-indent_style = space
-insert_final_newline = true
+[.editorconfig]
+ij_editorconfig_space_after_comma = false
 
-[*.{kt,kts,java}]
+[*.{kt,kts}]
+insert_final_newline = true
+ij_kotlin_imports_layout = *,^
+ij_kotlin_allow_trailing_comma = false
+ij_kotlin_allow_trailing_comma_on_call_site = false
+ij_kotlin_packages_to_use_import_on_demand = java.util.*
+# noinspection EditorConfigKeyCorrectness
+ktlint_ignore_back_ticked_identifier = false
+# noinspection EditorConfigKeyCorrectness
+ktlint_standard_enum-entry-name-case = disabled
+# noinspection EditorConfigKeyCorrectness
+ktlint_standard_no-wildcard-imports = disabled
+# noinspection EditorConfigKeyCorrectness
+ktlint_code_style = official
+indent_size = 4
+indent_style = space
+max_line_length = off
+
+[*.md]
+ij_markdown_wrap_text_if_long = false
+ij_markdown_wrap_text_inside_blockquotes = false
+indent_size = 4
+tab_width = 4
+
+[*.py]
 indent_size = 4
 tab_width = 4

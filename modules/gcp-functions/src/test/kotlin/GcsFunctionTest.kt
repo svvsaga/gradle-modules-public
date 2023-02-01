@@ -12,6 +12,7 @@ import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
+import java.util.Date
 import no.vegvesen.saga.modules.gcp.functions.GcsEvent
 import no.vegvesen.saga.modules.gcp.functions.GcsFunction
 import no.vegvesen.saga.modules.shared.blobstorage.BlobStorageError
@@ -19,7 +20,6 @@ import no.vegvesen.saga.modules.shared.blobstorage.StoragePath
 import no.vegvesen.saga.modules.shared.functions.StorageEvent
 import no.vegvesen.saga.modules.shared.functions.StorageFunction
 import no.vegvesen.saga.modules.testing.TestLogger
-import java.util.Date
 
 class GcsFunctionTest : FunSpec({
     isolationMode = IsolationMode.InstancePerLeaf // Same as JUnit
@@ -103,7 +103,7 @@ class GcsFunctionTest : FunSpec({
 
     test("should not retry function if file not found") {
         coEvery { storageFuncMock(any()) } returns BlobStorageError.BlobNotFound(
-            StoragePath(testBucket, testFilename),
+            StoragePath(testBucket, testFilename)
         ).left()
         val testLogger = TestLogger()
 

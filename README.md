@@ -128,38 +128,43 @@ See https://github.com/gradle/gradle/issues/16634 for more info.
 
 ### Use modules in development from branches:
 
-- Run "publishToMavenLocal" Gradle target in "modules" or "plugins/saga-build/" (for plugins) directory. This will build
-  snapshot versions of modules to local maven repository given by `version` line in build.gradle.kts (
-  e.g. `1.3.0-SNAPSHOT`)
-- From another project where code is to be tested, add temporary  `mavenLocal()` to `repositories` section in
-  build.gradle.kts and set version to the snapshot version:
+- Run `publishToMavenLocal` Gradle target in `modules` or `plugins/saga-build/` (for plugins) directory. This will build snapshot versions of modules to local maven repository given by `version` line in build.gradle.kts (e.g. `1.3.0-SNAPSHOT`)
 
-```kotlin
-// Temporary just to test new snapshot releases
-repositories {
-  mavenLocal()
-}
-```
+- From another projects `build.gradle.kts`, where code is to be tested, add temporary  `mavenLocal()` to `repositories` section and set version to the snapshot version:
 
-- `mavenLocal()` also works with version of Gradle version catalog in settings.gradle.kts:
+    ```kotlin
+    // build.gradle.kts
 
-```kotlin
-val modulesVersion = "1.3.0-SNAPSHOT" // Temporary while testing
-
-dependencyResolutionManagement {
-  repositories {
-    mavenLocal() // NOTE: only use for testing local snapshot versions during development
-    maven {
-      url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+    repositories {
+      // NOTE: Temporary to test new snapshot releases
+      mavenLocal()
     }
-  }
-  versionCatalogs {
-    create("saga") {
-      from("no.vegvesen.saga.modules:modules:$modulesVersion")
+    ```
+
+- From another project's `settings.gradle.kts`, where code is to be tested, add temporary `mavenLocal()` to the gradle version catalog setup:
+
+    ```kotlin
+    // settings.gradle.kts
+
+    val modulesVersion = "1.3.0-SNAPSHOT" // Temporary while testing
+    
+    dependencyResolutionManagement {
+      repositories {
+
+        // NOTE: Temporary to test new snapshot releases
+        mavenLocal()
+
+        maven {
+          url = uri("https://europe-maven.pkg.dev/saga-artifacts/maven-public")
+        }
+      }
+      versionCatalogs {
+        create("saga") {
+          from("no.vegvesen.saga.modules:modules:$modulesVersion")
+        }
+      }
     }
-  }
-}
-```
+    ```
 
 This is useful when wanting to test modules before merging and releasing a new version.
 

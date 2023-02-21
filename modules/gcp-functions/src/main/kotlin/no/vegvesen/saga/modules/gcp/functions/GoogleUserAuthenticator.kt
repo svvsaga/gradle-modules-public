@@ -23,7 +23,7 @@ class GoogleUserAuthenticator(
                 val token = header.substring(7)
                 log().info(
                     "Masked bearer token",
-                    kv("masked", "${token.substring(0, 4)}***${token.substring(token.length - 4, token.length)}"),
+                    kv("masked", "${token.substring(0, 4)}***${token.substring(token.length - 40, token.length)}"),
                     kv("length", token.length)
                 )
                 tokenProcessor.parseAndVerify(token)

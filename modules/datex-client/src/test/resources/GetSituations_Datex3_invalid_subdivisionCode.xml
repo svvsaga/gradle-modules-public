@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<ns10:messageContainer xmlns="http://datex2.eu/schema/3/exchangeInformation" xmlns:ns2="http://datex2.eu/schema/3/common" xmlns:ns3="http://datex2.eu/schema/3/dataDictionaryExtension" xmlns:ns4="http://datex2.eu/schema/3/cctvExtension" xmlns:ns5="http://datex2.eu/schema/3/locationReferencing" xmlns:ns6="http://datex2.eu/schema/3/alertCLocationCodeTableExtension" xmlns:ns7="http://datex2.eu/schema/3/roadTrafficData" xmlns:ns8="http://datex2.eu/schema/3/vms" xmlns:ns9="http://datex2.eu/schema/3/situation" xmlns:ns10="http://datex2.eu/schema/3/messageContainer" xmlns:ns11="http://datex2.eu/schema/3/cisInformation" xmlns:ns12="http://datex2.eu/schema/3/informationManagement" modelBaseVersion="3">
+  <ns10:payload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns9:SituationPublication" lang="no" modelBaseVersion="3">
+    <ns2:feedType>FULL</ns2:feedType>
+    <ns2:publicationTime>2023-03-12T02:29:44+01:00</ns2:publicationTime>
+    <ns2:publicationCreator>
+      <ns2:country>no</ns2:country>
+      <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
+    </ns2:publicationCreator>
+
+    <ns9:situation id="NPRA_HBT_11-03-2023.38319">
+      <ns9:overallSeverity>low</ns9:overallSeverity>
+      <ns9:situationVersionTime>2023-03-11T17:43:44+01:00</ns9:situationVersionTime>
+      <ns9:headerInformation>
+        <ns2:confidentiality>noRestriction</ns2:confidentiality>
+        <ns2:informationStatus>real</ns2:informationStatus>
+      </ns9:headerInformation>
+      <ns9:situationRecord xsi:type="ns9:WeatherRelatedRoadConditions" id="d3c6ff66-b84d-49df-a726-17268ee6bd61_1" version="1">
+        <ns9:situationRecordCreationTime>2023-03-11T17:43:45.2321109+01:00</ns9:situationRecordCreationTime>
+        <ns9:situationRecordVersionTime>2023-03-11T17:43:45.2321109+01:00</ns9:situationRecordVersionTime>
+        <ns9:probabilityOfOccurrence>certain</ns9:probabilityOfOccurrence>
+        <ns9:severity>low</ns9:severity>
+        <ns9:safetyRelatedMessage>true</ns9:safetyRelatedMessage>
+        <ns9:source>
+          <ns2:sourceCountry>NO</ns2:sourceCountry>
+          <ns2:sourceIdentification>971032081-HBT-PROD</ns2:sourceIdentification>
+          <ns2:sourceName>
+            <ns2:values>
+              <ns2:value lang="no">NPRA</ns2:value>
+            </ns2:values>
+          </ns2:sourceName>
+          <ns2:sourceType>roadAuthorities</ns2:sourceType>
+        </ns9:source>
+        <ns9:validity>
+          <ns2:validityStatus>definedByValidityTimeSpec</ns2:validityStatus>
+          <ns2:validityTimeSpecification>
+            <ns2:overallStartTime>2023-03-11T17:37:21+01:00</ns2:overallStartTime>
+            <ns2:overallEndTime>2023-03-12T12:00:00+01:00</ns2:overallEndTime>
+          </ns2:validityTimeSpecification>
+        </ns9:validity>
+        <ns9:impact>
+          <ns9:numberOfLanesRestricted>0</ns9:numberOfLanesRestricted>
+        </ns9:impact>
+        <ns9:generalPublicComment>
+          <ns9:comment>
+            <ns2:values>
+              <ns2:value lang="no">Sn&#xF8;fokk.|Merk at sluttiden er usikker og kan endres.</ns2:value>
+            </ns2:values>
+          </ns9:comment>
+          <ns9:commentType>dataProcessingNote</ns9:commentType>
+        </ns9:generalPublicComment>
+        <ns9:locationReference xsi:type="ns5:AreaLocation">
+          <ns5:coordinatesForDisplay>
+            <ns5:latitude>63.463223</ns5:latitude>
+            <ns5:longitude>7.7530894</ns5:longitude>
+          </ns5:coordinatesForDisplay>
+          <ns5:namedArea xsi:type="ns5:IsoNamedArea">
+            <ns5:areaName>
+              <ns2:values>
+                <ns2:value lang="no">Sm&#xF8;la kommune</ns2:value>
+              </ns2:values>
+            </ns5:areaName>
+            <ns5:country>NO</ns5:country>
+            <ns5:subdivisionType>municipality</ns5:subdivisionType>
+            <ns5:subdivisionCode>1573</ns5:subdivisionCode>
+          </ns5:namedArea>
+          <ns5:gmlMultiPolygon>
+            <ns5:gmlPolygon>
+              <ns5:exterior srsName="25833">
+                <ns5:posList>137200.77000000008 7028595.72 144977.16000000003 7030098.800000001 159211.55000000005 7035149.99 161001.55999999994 7035897.190000001 167403.77000000008 7042932.8900000015 163038.82999999996 7050423.96 158596.16000000003 7070656.879999999 154320.75000000006 7076843.33 138033.52000000002 7092051.94 127432.60999999999 7080658.879999999 126841.57999999996 7079997.539999999 126206.68000000005 7079223.36 121305.83000000002 7072965.04 107007.60999999999 7057633.0600000005 123337.63999999996 7041993.49 128881.06999999995 7038450.679999999 137200.77000000008 7028595.72</ns5:posList>
+              </ns5:exterior>
+            </ns5:gmlPolygon>
+          </ns5:gmlMultiPolygon>
+        </ns9:locationReference>
+        <ns9:weatherRelatedRoadConditionType>snowDrifts</ns9:weatherRelatedRoadConditionType>
+      </ns9:situationRecord>
+      <ns9:informationManager>
+        <ns2:country>NO</ns2:country>
+        <ns2:nationalIdentifier>Norwegian Public Roads Administration</ns2:nationalIdentifier>
+      </ns9:informationManager>
+    </ns9:situation>
+  </ns10:payload>
+  <ns10:exchangeInformation modelBaseVersion="3">
+    <messageType>payloadDelivery</messageType>
+    <exchangeContext>
+      <codedExchangeProtocol>snapshotPull</codedExchangeProtocol>
+      <exchangeSpecificationVersion>3</exchangeSpecificationVersion>
+      <supplierOrCisRequester>
+        <internationalIdentifier>
+          <ns2:country>no</ns2:country>
+          <ns2:nationalIdentifier>NPRA</ns2:nationalIdentifier>
+        </internationalIdentifier>
+      </supplierOrCisRequester>
+    </exchangeContext>
+    <dynamicInformation>
+      <exchangeStatus>undefined</exchangeStatus>
+      <messageGenerationTimestamp>2023-03-12T02:29:44+01:00</messageGenerationTimestamp>
+    </dynamicInformation>
+  </ns10:exchangeInformation>
+</ns10:messageContainer>

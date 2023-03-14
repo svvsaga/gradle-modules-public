@@ -14,6 +14,7 @@ import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.erro
 import no.vegvesen.saga.modules.datex.RecoverableDatex2ValidationExceptions.errorNewStrekningerHasModelBaseVersion3
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorAngleInDegrees
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorExchangeInformationElementsLacksBaseVersion
+import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorInvalidMunicipalityMaxLengthRegex
 import no.vegvesen.saga.modules.datex.RecoverableDatex3ValidationExceptions.errorTargetClassOfObjectReferenceIsNotValid
 import no.vegvesen.saga.modules.shared.Logging
 import no.vegvesen.saga.modules.shared.XmlString
@@ -45,6 +46,9 @@ object RecoverableDatex3ValidationExceptions {
     // Some Vegvær Datex 3 files use degrees of 360 while only 359 is supported
     const val errorAngleInDegrees =
         "cvc-maxInclusive-valid: Value '360' is not facet-valid with respect to maxInclusive '359' for type 'AngleInDegrees'"
+
+    const val errorInvalidMunicipalityMaxLengthRegex =
+        "cvc-maxLength-valid: Value '.*' with length = '4' is not facet-valid with respect to maxLength '3' for type 'SubdivisionCode'\\."
 }
 
 class DatexValidator : Logging {
@@ -106,6 +110,7 @@ class DatexValidator : Logging {
                 exception.localizedMessage.startsWith(errorExchangeInformationElementsLacksBaseVersion) -> DatexVersion.DATEX_3.right()
                 exception.localizedMessage.contains(errorTargetClassOfObjectReferenceIsNotValid) -> DatexVersion.DATEX_3.right()
                 exception.localizedMessage.startsWith(errorAngleInDegrees) -> DatexVersion.DATEX_3.right()
+                exception.localizedMessage.matches(Regex(errorInvalidMunicipalityMaxLengthRegex)) -> DatexVersion.DATEX_3.right()
                 else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)
             }
             else -> createError(doc, exception.localizedMessage, DatexVersion.DATEX_3)

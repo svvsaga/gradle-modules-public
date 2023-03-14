@@ -1,9 +1,7 @@
-
 package no.vegvesen.saga.modules.gcp.storage
 
 import arrow.core.Either
 import arrow.core.flatMap
-import arrow.core.handleErrorWith
 import arrow.core.left
 import arrow.core.right
 import arrow.core.rightIfNotNull
@@ -53,12 +51,13 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
 
     private val backoffSettings = ExponentialBackoffSettings(1.seconds, 5)
 
-    override suspend fun saveFile(
+    /** Saves file to storage. Will retry based on backoffSettings. */
+    private suspend fun internalSaveFile(
         storagePath: StoragePath,
         fileContent: ByteArray,
         contentType: ContentType,
         options: SaveFileOptions
-    ): Either<Throwable, Unit> {
+    ): Either<Throwable, Boolean> {
         val createOptions = arrayOf(
             if (options.noOverwrite) Storage.BlobTargetOption.doesNotExist() else null
         ).filterNotNull().toTypedArray()
@@ -79,12 +78,35 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
         }
 
         return retry("Saving blob '$storagePath' to GCS", backoffSettings) {
-            storage.create(
-                blobInfoBuilder.build(),
-                if (options.gzipContent) gzipCompress(fileContent) else fileContent,
-                *createOptions
-            )
+            try {
+                storage.create(
+                    blobInfoBuilder.build(),
+                    if (options.gzipContent) gzipCompress(fileContent) else fileContent,
+                    *createOptions
+                )
+                true
+            } catch (ex: Exception) {
+                when (ex) {
+                    // Don't retry if file exists, if configured to accept it
+                    is StorageException ->
+                        if (options.noOverwrite && ex.code == PRECONDITION_FAILED && ex.location == "If-Match") {
+                            false
+                        } else {
+                            throw ex
+                        }
+
+                    else -> throw ex
+                }
+            }
         }
+    }
+    override suspend fun saveFile(
+        storagePath: StoragePath,
+        fileContent: ByteArray,
+        contentType: ContentType,
+        options: SaveFileOptions
+    ): Either<Throwable, Unit> {
+        return internalSaveFile(storagePath, fileContent, contentType, options).void()
     }
 
     override suspend fun saveFileIfNotExisting(
@@ -93,20 +115,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
         contentType: ContentType,
         options: SaveFileOptions
     ): Either<Throwable, Boolean> {
-        return saveFile(storagePath, fileContent, contentType, options.copy(noOverwrite = true))
-            .map { true }
-            .handleErrorWith { ex ->
-                when (ex) {
-                    is StorageException -> {
-                        if (ex.code == PRECONDITION_FAILED && ex.location == "If-Match") {
-                            return false.right()
-                        } else {
-                            ex.left()
-                        }
-                    }
-                    else -> ex.left()
-                }
-            }
+        return internalSaveFile(storagePath, fileContent, contentType, options.copy(noOverwrite = true))
     }
 
     /**
@@ -127,6 +136,7 @@ class GcpBlobStorage(private val storage: Storage) : BlobStorage, BlobStorageBro
                             404 -> BlobStorageError.BlobNotFound(storagePath, ex)
                             else -> BlobStorageError.BlobException(ex.message ?: ex.toString(), ex)
                         }
+
                         else -> BlobStorageError.BlobException(ex.message ?: ex.toString(), ex)
                     }
                 }

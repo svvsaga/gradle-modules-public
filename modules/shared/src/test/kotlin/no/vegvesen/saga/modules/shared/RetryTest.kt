@@ -20,6 +20,15 @@ import no.vegvesen.saga.modules.shared.Retry.retryEither
 @ExperimentalTime
 class RetryTest : FunSpec({
 
+    test("will not retry on success") {
+        var runs = 0
+        val result = retry("some-description", ExponentialBackoffSettings(0.1.seconds, 42)) {
+            ++runs
+        }
+        result.shouldBeRight(1)
+        runs.shouldBeExactly(1)
+    }
+
     test("will retry on thrown exceptions") {
         var runs = 0
         val result = retry("some-description", ExponentialBackoffSettings(0.1.seconds, 42)) {

@@ -13,7 +13,9 @@ import no.vegvesen.saga.modules.gcp.secretmanager.SecretManagerUtils
 import no.vegvesen.saga.modules.gcp.storage.GcpBlobStorage
 import no.vegvesen.saga.modules.ktor.HttpTimeoutSettings
 import no.vegvesen.saga.modules.ktor.createApacheHttpClient
+import no.vegvesen.saga.modules.shared.Timing.withLoggingTimer
 import no.vegvesen.saga.modules.shared.services.DeadLetterStorage
+import org.slf4j.LoggerFactory
 
 /**
  * @param datexUsernamePasswordKey Name of the secret in GCP Secret Manager that holds the Datex username
@@ -33,15 +35,20 @@ abstract class DatexPollerFunction(
     private val timeoutSettings: HttpTimeoutSettings = HttpTimeoutSettings()
 ) : GcpHttpFunction(
     {
-        createProcessor(
-            datexUsernameSecretKey,
-            datexUsernamePasswordKey,
-            datexEndpointUrl,
-            dataSourceName,
-            publicationsBucket,
-            deadLetterBucket,
-            timeoutSettings
-        ).process()
+        val logger = LoggerFactory.getLogger("DatexPollerFunction-$dataSourceName")
+        withLoggingTimer(logger, "Function body") {
+            withLoggingTimer(logger, "Processor creation") {
+                createProcessor(
+                    datexUsernameSecretKey,
+                    datexUsernamePasswordKey,
+                    datexEndpointUrl,
+                    dataSourceName,
+                    publicationsBucket,
+                    deadLetterBucket,
+                    timeoutSettings
+                )
+            }.process()
+        }
     }
 ) {
     companion object {

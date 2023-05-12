@@ -1,5 +1,6 @@
 package no.vegvesen.saga.datex.poller
 
+import io.ktor.client.HttpClient
 import no.vegvesen.saga.modules.datex.DatexClient
 import no.vegvesen.saga.modules.datex.DatexIngestProcessor
 import no.vegvesen.saga.modules.datex.DatexPoller
@@ -37,17 +38,20 @@ abstract class DatexPollerFunction(
     {
         val logger = LoggerFactory.getLogger("DatexPollerFunction-$dataSourceName")
         withLoggingTimer(logger, "Function body") {
-            withLoggingTimer(logger, "Processor creation") {
-                createProcessor(
-                    datexUsernameSecretKey,
-                    datexUsernamePasswordKey,
-                    datexEndpointUrl,
-                    dataSourceName,
-                    publicationsBucket,
-                    deadLetterBucket,
-                    timeoutSettings
-                )
-            }.process()
+            val ktorHttpClient = createApacheHttpClient(timeoutSettings)
+            ktorHttpClient.use {
+                withLoggingTimer(logger, "Processor creation") {
+                    createProcessor(
+                        datexUsernameSecretKey,
+                        datexUsernamePasswordKey,
+                        datexEndpointUrl,
+                        dataSourceName,
+                        publicationsBucket,
+                        deadLetterBucket,
+                        ktorHttpClient
+                    )
+                }.process()
+            }
         }
     }
 ) {
@@ -59,13 +63,13 @@ abstract class DatexPollerFunction(
             dataSourceName: String,
             publicationsBucket: String,
             deadLetterBucket: String,
-            timeoutSettings: HttpTimeoutSettings
+            ktorHttpClient: HttpClient
         ): DatexIngestProcessor {
             val datexUsername = SecretManagerUtils.fetchSecretString(projectId, datexUsernameSecretKey)
             val datexPassword = SecretManagerUtils.fetchSecretString(projectId, datexUsernamePasswordKey)
             val datexClient =
                 DatexClient(
-                    createApacheHttpClient(timeoutSettings),
+                    ktorHttpClient,
                     DatexSettings(datexEndpointUrl, datexUsername, datexPassword),
                     DatexValidator()
                 )

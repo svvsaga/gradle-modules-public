@@ -1,3 +1,7 @@
+# Note: As of 2023-07 this repo is archived and new versions will not be published.
+
+--
+
 # Gradle modules
 
 Common Gradle modules for SVV Saga projects.
